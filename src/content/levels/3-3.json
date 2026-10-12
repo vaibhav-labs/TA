@@ -1,0 +1,87 @@
+{
+  "id": "3-3",
+  "title": "Cross It",
+  "world": 3,
+  "engine": "choice-story",
+  "concepts": [18, 21],
+  "source": { "book": "GPP", "chapter": 2, "quote": "communication is broken off when a crossed transaction occurs" },
+  "setting": "Monday, 9:40. Priya (team lead) and Arjun (developer) at a standing desk. The release slipped on Friday.",
+  "levels": {
+    "L1": {
+      "question": "Arjun, not looking up, says flatly, shoulders hunched: \"You're always on my case. Nothing I do is ever enough for you.\" Which ego state is Arjun speaking from?",
+      "cues": ["flat voice", "hunched shoulders", "\"always\" / \"never\""],
+      "options": [
+        { "text": "Parent", "feedback": "The content sounds like a standard he's judging her against, but content isn't the tell here." },
+        { "text": "Adult", "feedback": "Adult would be measured and specific, not \"always\" / \"never\" delivered flat and hunched." },
+        { "text": "Child", "feedback": "Right. The words \"always\" and \"never\", the flat tone, and the hunch are Child cues." }
+      ],
+      "answer": 2,
+      "lesson": "The words \"always\" and \"never\", the flat tone, the hunch are Child cues; the content (a complaint about standards) could sound Parental - diagnose from cues, not content."
+    },
+    "L2": {
+      "intro": "Priya wants Adult-Adult. Which line crosses Arjun's transaction without starting Uproar?",
+      "beats": [
+        {
+          "npc": "Arjun",
+          "line": "You're always on my case. Nothing I do is ever enough for you.",
+          "cues": ["flat", "hunched"],
+          "egoState": "C",
+          "options": [
+            {
+              "text": "Don't take that tone with me.",
+              "tag": "game-move",
+              "egoState": "P",
+              "outcome": "Arjun: \"See? Exactly.\" He turns back to his screen, door-slam energy. The scene ends there.",
+              "lesson": "Parent -> Child is complementary to his opening, so it continues the fight - complementary is not the same as healthy."
+            },
+            {
+              "text": "I'm not on your case, I just want the release to ship.",
+              "tag": "ok",
+              "egoState": "A",
+              "outcome": "Arjun shrugs. \"Sure. Whatever.\" He stays small.",
+              "lesson": "Adult words, but the \"I just\" is defensive; the cross is weak because the psychological level still answers his accusation."
+            },
+            {
+              "text": "Something's off this morning. What happened on Friday from where you sat?",
+              "tag": "best",
+              "egoState": "A",
+              "outcome": "A pause. Arjun looks up. \"The API spec changed Thursday night and nobody told us.\" Adult-Adult established.",
+              "lesson": "A crossed transaction (Adult -> Adult in reply to Child -> Parent) breaks the loop; Berne's rule 2 - communication stops until someone shifts; Karpman's options - you may answer from any state, not the one addressed."
+            },
+            {
+              "text": "Hey, it's okay, I know you're trying.",
+              "tag": "ok",
+              "egoState": "NP",
+              "outcome": "Arjun softens but stays small. \"Thanks... I'll try harder.\"",
+              "lesson": "Nurturing Parent -> Child is comforting and keeps him in Child; useful once, costly as a pattern (sets up Look How Hard I've Tried)."
+            }
+          ]
+        }
+      ]
+    },
+    "L3": {
+      "fields": [
+        {
+          "type": "vector",
+          "label": "Draw the vectors for Arjun's opening line, and for the best L2 response.",
+          "pairs": [
+            { "label": "Arjun's opening", "from": "C", "to": "P" },
+            { "label": "Best response", "from": "A", "to": "A" }
+          ]
+        },
+        {
+          "type": "text",
+          "label": "In under 60 words: why is \"Hey, it's okay, I know you're trying\" a complementary transaction, and why is that the problem?",
+          "maxWords": 60,
+          "rubric": ["Nurturing Parent", "Child", "complementary", "continues", "dependency", "symbiosis"]
+        }
+      ]
+    }
+  },
+  "echoAfterHours": 48,
+  "echo": {
+    "setting": "48 hours later: a WhatsApp message from a sibling.",
+    "line": "You never call.",
+    "shape": "same four-option shape as L2"
+  }
+}

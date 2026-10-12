@@ -1,0 +1,17 @@
+{
+  "concept": 18,
+  "name": "Crossed transaction",
+  "oneLine": "A reply that answers from a different ego state than the one the other person addressed, which stops the exchange until someone shifts.",
+  "whatYouDid": "You answered Arjun's Child complaint from Adult instead of from the Parent he was pulling for, which broke the loop instead of continuing it.",
+  "confusion": "People often think crossing a transaction is always bad; the tell is that it is the main therapeutic tool - it is how you get out of a fight, not how you start one.",
+  "fromBook": {
+    "book": "Games People Play",
+    "chapter": 2,
+    "quote": "communication is broken off when a crossed transaction occurs"
+  },
+  "expand": {
+    "definition": "Berne's rule 2: when a crossed transaction occurs, communication is broken off and one or both parties must shift ego states for it to resume.",
+    "otherFraming": "TA Today frames the same move as taking an \"option\" (Karpman): you may reply from any ego state, not only the one addressed - crossing is one way to exercise that choice.",
+    "tryThisToday": "Notice the next time someone's tone pulls for a Parent or Child reply from you, and answer from Adult instead."
+  }
+}

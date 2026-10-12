@@ -1,0 +1,107 @@
+[
+  {
+    "id": 1,
+    "theme": "Hunger",
+    "subtitle": "Strokes and time",
+    "unlocks": "Explain why a person keeps a bad relationship, count strokes in a greeting, spot a pastime",
+    "boss": "The Stroke Economy",
+    "levels": [
+      { "id": "1-1", "title": "Spinal Cord", "mechanic": "choice-story", "concepts": [1], "playsLike": "Spitz's infants, Levine's rats: the player runs a week with zero recognition and watches a mood meter fall; lesson: stroke hunger is biological" },
+      { "id": "1-2", "title": "Stroke Sorter", "mechanic": "sort-it", "concepts": [2, 3], "playsLike": "Lines fly in; drag each to positive/negative x conditional/unconditional; the twist round: \"which of these would you accept?\" (filter)" },
+      { "id": "1-3", "title": "Hi-Hi", "mechanic": "counter", "concepts": [6], "playsLike": "Mr C returns from vacation; the player builds the greeting to pay the ~30 strokes owed; too few = offence, too many = \"is he selling insurance?\"" },
+      { "id": "1-4", "title": "The Party", "mechanic": "floor-plan", "concepts": [5], "playsLike": "Six corners of a cocktail party; identify each as ritual / pastime / activity / game / intimacy / withdrawal from 3 lines of overheard talk" },
+      { "id": "1-5", "title": "PTA Three Ways", "mechanic": "choice-story", "concepts": [5, 7], "playsLike": "Same pastime at P-P (\"Juvenile Delinquency\"), A-A (\"PTA\"), C-C levels; player matches the level" },
+      { "id": "1-6", "title": "The Stroke Economy", "mechanic": "rule-breaker", "concepts": [4], "boss": true, "playsLike": "Steiner's five rules are the \"laws\" of a town; the player must break each one in a scene and feel the pushback; L3 argues why the rules exist (who benefits)" }
+    ]
+  },
+  {
+    "id": 2,
+    "theme": "Three Voices",
+    "subtitle": "Ego states",
+    "unlocks": "Diagnose P/A/C from voice, words, posture; tell contamination from Adult",
+    "boss": "The Contaminated Adult",
+    "levels": [
+      { "id": "2-1", "title": "Who Said That", "mechanic": "diagnose", "concepts": [7, 8], "playsLike": "A line, a tone, a posture: Parent, Adult or Child? Starts with easy archetypes, ends with mixed cues" },
+      { "id": "2-2", "title": "Five Faces", "mechanic": "diagnose", "concepts": [9, 10], "playsLike": "Functional model: CP / NP / A / FC / AC, each with a + and - side; the hard round shows negative NP (smothering) and positive CP (firm boundary)" },
+      { "id": "2-3", "title": "Egogram", "mechanic": "build", "concepts": [11], "playsLike": "Player draws their own egogram, then one for a character from a 10-line monologue; compares" },
+      { "id": "2-4", "title": "Four Ways to Know", "mechanic": "diagnose", "concepts": [12, 22], "playsLike": "Same ego-state call made from behaviour, from how others respond, from history, from the character's own sense; player must get 2 of 4 to agree" },
+      { "id": "2-5", "title": "Little Professor", "mechanic": "choice-story", "concepts": [15], "playsLike": "Second-order structure: Mike (age 3) at the dinner table from GPP; player plays the father and decides whether to break the game in statu nascendi" },
+      { "id": "2-6", "title": "The Contaminated Adult", "mechanic": "spot-the-leak", "concepts": [13, 14], "boss": true, "playsLike": "Ten \"Adult\" statements; some are Parent prejudice, some Child delusion, some double; L3 also flags exclusion" }
+    ]
+  },
+  {
+    "id": 3,
+    "theme": "Vectors",
+    "subtitle": "Transactions",
+    "unlocks": "Keep a conversation open, cross one on purpose, hear the ulterior level",
+    "boss": "The Salesman (angular transaction)",
+    "levels": [
+      { "id": "3-1", "title": "Draw the Arrow", "mechanic": "vector", "concepts": [16, 17, 20], "playsLike": "Two PAC stacks; player drags stimulus and response arrows; checks complementarity" },
+      { "id": "3-2", "title": "Keep It Going", "mechanic": "choice-story", "concepts": [17], "playsLike": "Pick the response that keeps a complementary chain alive for 6 turns - including an unhealthy P-C chain, to make the point" },
+      { "id": "3-3", "title": "Cross It", "mechanic": "choice-story", "concepts": [18, 21], "playsLike": "A Child-to-Parent whine arrives; player must cross it to reach Adult-Adult without starting Uproar; Karpman's options as the menu" },
+      { "id": "3-4", "title": "Cuff Links", "mechanic": "replay", "concepts": [18], "playsLike": "Berne's example, both crossings (Type I transference, Type II counter-transference); player causes each" },
+      { "id": "3-5", "title": "The Barn", "mechanic": "two-track", "concepts": [19], "playsLike": "Duplex transaction: the player writes both the social line and the psychological line for each turn of the cowboy scene" },
+      { "id": "3-6", "title": "The Salesman", "mechanic": "two-track", "concepts": [19], "boss": true, "playsLike": "Angular transaction: \"This one is better, but you can't afford it.\" Player must respond from Adult at both levels three times in a row" }
+    ]
+  },
+  {
+    "id": 4,
+    "theme": "The Thesaurus",
+    "subtitle": "Games",
+    "unlocks": "Name the game from the switch, refuse to play, write the full analysis",
+    "boss": "Why Don't You-Yes But (many-handed)",
+    "levels": [
+      { "id": "4-1", "title": "Is It a Game?", "mechanic": "diagnose", "concepts": [23], "playsLike": "Pastime, operation, manoeuvre or game? The tell: a payoff after a switch" },
+      { "id": "4-2", "title": "Formula G", "mechanic": "sequence", "concepts": [24, 25], "playsLike": "Scenes cut into 6 cards (Con, Gimmick, Response, Switch, Crossup, Payoff); order them; then tag which Drama Triangle role each player holds before and after the Switch" },
+      { "id": "4-3", "title": "Life Games", "mechanic": "choice-story", "concepts": [30, 27, 28], "playsLike": "Alcoholic (5-handed: player cycles through Persecutor, Rescuer, Patsy, Connection), Debtor, Kick Me, NIGYSOB, SWYMD; each with the 6 advantages to fill at L3" },
+      { "id": "4-4", "title": "Home Games", "mechanic": "choice-story", "concepts": [31, 29], "playsLike": "Corner, Courtroom, Harried, IWFY, LHHIT, Sweetheart; player must find the antithesis (e.g. \"Yes, honey!\" for Sweetheart; third-person ban for Courtroom)" },
+      { "id": "4-5", "title": "Room Games", "mechanic": "choice-story", "concepts": [32, 33, 34, 35], "playsLike": "Party, consulting-room, underworld and Good games; the Good-games round asks \"what makes this one good?\"" },
+      { "id": "4-6", "title": "Why Don't You-Yes But", "mechanic": "many-handed", "concepts": [32, 29], "boss": true, "playsLike": "The player is Black in a group of five; every suggestion gets a \"Yes, but\"; the only win is anti-ITHY: \"That's a difficult problem. What are you going to do about it?\" L3 writes the full GPP analysis" }
+    ]
+  },
+  {
+    "id": 5,
+    "theme": "Underneath",
+    "subtitle": "Rackets, discounts, passivity",
+    "unlocks": "Tell racket from real feeling, find the discount level, spot over-adaptation",
+    "boss": "The Discount Matrix",
+    "levels": [
+      { "id": "5-1", "title": "Real or Racket", "mechanic": "diagnose", "concepts": [36], "playsLike": "Feeling shown; is it authentic (resolves the situation) or racket (substitutes, never resolves)?" },
+      { "id": "5-2", "title": "Stamp Book", "mechanic": "collect", "concepts": [37], "playsLike": "Player watches a character collect grievances for a week and chooses the cash-in; lesson: stamps are the licence for the script payoff" },
+      { "id": "5-3", "title": "Four Levels", "mechanic": "ladder", "concepts": [39, 40], "playsLike": "A problem statement; player climbs the Discount Matrix: is the existence, significance, changeability or personal ability being discounted?" },
+      { "id": "5-4", "title": "Doing Nothing", "mechanic": "diagnose", "concepts": [41], "playsLike": "Four passive behaviours shown in an office; over-adaptation is the trap level" },
+      { "id": "5-5", "title": "Two Halves", "mechanic": "choice-story", "concepts": [42], "playsLike": "A symbiosis: one person carries Parent+Adult, the other Child; player must find the move that lets both use all three" },
+      { "id": "5-6", "title": "The Discount Matrix", "mechanic": "ladder", "concepts": [39, 40, 41, 42, 43], "boss": true, "playsLike": "A six-scene conversation with redefinitions; player must name the discount level and the tangential/blocking move at each turn" }
+    ]
+  },
+  {
+    "id": 6,
+    "theme": "The Plan",
+    "subtitle": "Scripts",
+    "unlocks": "Draw a script matrix from a life story, hear a driver, name the injunction",
+    "boss": "The Script Matrix",
+    "levels": [
+      { "id": "6-1", "title": "OK Corral", "mechanic": "sort-it", "concepts": [44], "playsLike": "Place 12 inner statements on the OK Corral; then track one character's position across a day" },
+      { "id": "6-2", "title": "Hear the Driver", "mechanic": "diagnose", "concepts": [51], "playsLike": "5-second behaviour clips in text; name the driver from the words/gestures Kahler listed" },
+      { "id": "6-3", "title": "Don't", "mechanic": "diagnose", "concepts": [47, 48], "playsLike": "Childhood scenes, mostly nonverbal; name the injunction a child would decode; then the permission that counters it" },
+      { "id": "6-4", "title": "Three Banal Scripts", "mechanic": "choice-story", "concepts": [53, 54, 55], "playsLike": "Steiner's Lovelessness, Mindlessness, Joylessness - play a day in each; the Pig Parent narrates" },
+      { "id": "6-5", "title": "Script Process", "mechanic": "match", "concepts": [50, 52], "playsLike": "Until / After / Never / Always / Almost / Open-ended: match six life stories, then spot the player's own" },
+      { "id": "6-6", "title": "The Script Matrix", "mechanic": "build", "concepts": [45, 46, 49, 56], "boss": true, "playsLike": "From a 25-line life story, drag injunctions, counter-injunctions and programme onto the matrix; L3 names the early decision and proposes a redecision" }
+    ]
+  },
+  {
+    "id": 7,
+    "theme": "Autonomy",
+    "subtitle": "Contracts, permission, intimacy",
+    "unlocks": "Write a contract, give permission, decline a Rescue, sustain a game-free exchange",
+    "boss": "After Games, What?",
+    "levels": [
+      { "id": "7-1", "title": "Help or Rescue", "mechanic": "diagnose", "concepts": [57], "playsLike": "Steiner's three Rescue rules; the player sorts 12 helping acts" },
+      { "id": "7-2", "title": "The Contract", "mechanic": "build", "concepts": [58], "playsLike": "Write a contract with a character; validator checks Berne's four requirements and Steiner's cooperative-contract clauses" },
+      { "id": "7-3", "title": "Three P's", "mechanic": "choice-story", "concepts": [59], "playsLike": "Give permission only with protection and potency behind it; giving permission without protection fails the level" },
+      { "id": "7-4", "title": "Despair to Laughter", "mechanic": "replay", "concepts": [29], "playsLike": "A game is refused; the player must hold the antithesis through the other player's escalation until \"There I go again!\"" },
+      { "id": "7-5", "title": "Awareness / Spontaneity / Intimacy", "mechanic": "choice-story", "concepts": [60], "playsLike": "Three scenes (eating an orange, a crossed conversation, a candid one); player chooses the autonomous move, not the scripted one" },
+      { "id": "7-6", "title": "After Games, What?", "mechanic": "open", "concepts": [61], "boss": true, "playsLike": "Six-turn candid exchange with a character who keeps offering game openings; sustain intimacy without rescuing, persecuting or withdrawing; L3 writes a reflection graded by rubric" }
+    ]
+  }
+]
