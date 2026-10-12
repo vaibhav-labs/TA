@@ -39,7 +39,7 @@
       { "id": "3-1", "title": "Draw the Arrow", "mechanic": "vector", "concepts": [16, 17, 20], "playsLike": "Two PAC stacks; player drags stimulus and response arrows; checks complementarity" },
       { "id": "3-2", "title": "Keep It Going", "mechanic": "choice-story", "concepts": [17], "playsLike": "Pick the response that keeps a complementary chain alive for 6 turns - including an unhealthy P-C chain, to make the point" },
       { "id": "3-3", "title": "Cross It", "mechanic": "choice-story", "concepts": [18, 21], "playsLike": "A Child-to-Parent whine arrives; player must cross it to reach Adult-Adult without starting Uproar; Karpman's options as the menu" },
-      { "id": "3-4", "title": "Cuff Links", "mechanic": "replay", "concepts": [18], "playsLike": "Berne's example, both crossings (Type I transference, Type II counter-transference); player causes each" },
+      { "id": "3-4", "title": "Why Did You Do That?", "mechanic": "replay", "concepts": [18], "playsLike": "Berne's own group-therapy scene (ch.9, Figs. 7-8): Camellia and Rosita give the real Type I crossing, Mr. Troy gives the real Type II; player reproduces both" },
       { "id": "3-5", "title": "The Barn", "mechanic": "two-track", "concepts": [19], "playsLike": "Duplex transaction: the player writes both the social line and the psychological line for each turn of the cowboy scene" },
       { "id": "3-6", "title": "The Salesman", "mechanic": "two-track", "concepts": [19], "boss": true, "playsLike": "Angular transaction: \"This one is better, but you can't afford it.\" Player must respond from Adult at both levels three times in a row" }
     ]
@@ -54,7 +54,7 @@
       { "id": "4-1", "title": "Is It a Game?", "mechanic": "diagnose", "concepts": [23], "playsLike": "Pastime, operation, manoeuvre or game? The tell: a payoff after a switch" },
       { "id": "4-2", "title": "Formula G", "mechanic": "sequence", "concepts": [24, 25], "playsLike": "Scenes cut into 6 cards (Con, Gimmick, Response, Switch, Crossup, Payoff); order them; then tag which Drama Triangle role each player holds before and after the Switch" },
       { "id": "4-3", "title": "Life Games", "mechanic": "choice-story", "concepts": [30, 27, 28], "playsLike": "Alcoholic (5-handed: player cycles through Persecutor, Rescuer, Patsy, Connection), Debtor, Kick Me, NIGYSOB, SWYMD; each with the 6 advantages to fill at L3" },
-      { "id": "4-4", "title": "Home Games", "mechanic": "choice-story", "concepts": [31, 29], "playsLike": "Corner, Courtroom, Harried, IWFY, LHHIT, Sweetheart; player must find the antithesis (e.g. \"Yes, honey!\" for Sweetheart; third-person ban for Courtroom)" },
+      { "id": "4-4", "title": "Home Games", "mechanic": "choice-story", "concepts": [31, 29], "playsLike": "Corner, Courtroom, Frigid Woman/Man, Harried, IWFY, LHHIT, Sweetheart; player must find the antithesis (e.g. \"Yes, honey!\" for Sweetheart; third-person ban for Courtroom)" },
       { "id": "4-5", "title": "Room Games", "mechanic": "choice-story", "concepts": [32, 33, 34, 35], "playsLike": "Party, consulting-room, underworld and Good games; the Good-games round asks \"what makes this one good?\"" },
       { "id": "4-6", "title": "Why Don't You-Yes But", "mechanic": "many-handed", "concepts": [32, 29], "boss": true, "playsLike": "The player is Black in a group of five; every suggestion gets a \"Yes, but\"; the only win is anti-ITHY: \"That's a difficult problem. What are you going to do about it?\" L3 writes the full GPP analysis" }
     ]

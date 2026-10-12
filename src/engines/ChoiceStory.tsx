@@ -1,17 +1,18 @@
 import { useState } from "react";
 import type { ChoiceStoryLevel, EgoState, Tag } from "../content/types";
 import { Button } from "../ui/Button";
-import { Bubble } from "../ui/Card";
+import { DialogueRow, Callout } from "../ui/Dialogue";
 
 interface ChoiceStoryProps {
   level: ChoiceStoryLevel;
+  playerName?: string;
   onComplete: (result: { score: number; tags: Tag[]; egoStates: EgoState[] }) => void;
 }
 
 const TAG_SCORE: Record<Tag, number> = { best: 100, ok: 50, "game-move": 0 };
 
-/** Choice-story engine (section 5): walk the beats, pick a line, read the consequence. */
-export function ChoiceStory({ level, onComplete }: ChoiceStoryProps) {
+/** Choice-story engine (section 5): a real back-and-forth — the player's own line becomes a bubble too. */
+export function ChoiceStory({ level, playerName = "You", onComplete }: ChoiceStoryProps) {
   const [beatIndex, setBeatIndex] = useState(0);
   const [chosen, setChosen] = useState<number | null>(null);
   const [tags, setTags] = useState<Tag[]>([]);
@@ -44,13 +45,20 @@ export function ChoiceStory({ level, onComplete }: ChoiceStoryProps) {
   }
 
   return (
-    <div className="flex flex-col gap-3">
-      {level.intro && <div className="text-[13px] leading-[18px] text-ta-grey">{level.intro}</div>}
-      <Bubble>
-        <span className="font-semibold">{beat.npc}:</span> {beat.line}
-      </Bubble>
+    <div className="flex flex-col gap-4">
+      {level.intro && (
+        <div className="text-[15px] leading-[21px] text-ta-grey border-l-2 border-ta-grey/40 pl-3">
+          {level.intro}
+        </div>
+      )}
+
+      <DialogueRow name={beat.npc} text={beat.line} expression={beat.expression} active={chosen === null} />
+
       {chosen === null && (
         <div className="flex flex-col gap-2">
+          <div className="text-[13px] leading-[18px] text-ta-grey uppercase tracking-wide px-1">
+            {playerName}&rsquo;s move
+          </div>
           {beat.options.map((opt, i) => (
             <Button key={i} onClick={() => pick(i)}>
               {opt.text}
@@ -58,13 +66,16 @@ export function ChoiceStory({ level, onComplete }: ChoiceStoryProps) {
           ))}
         </div>
       )}
+
       {option && (
-        <div className="ta-fade flex flex-col gap-2">
-          <Button variant={option.tag === "game-move" ? "game-move" : "selected"} disabled>
-            {option.text}
-          </Button>
-          <Bubble>{option.outcome}</Bubble>
-          <div className="text-[17px] leading-6 text-ta-white/90">{option.lesson}</div>
+        <div className="ta-fade flex flex-col gap-3">
+          <DialogueRow name={playerName} text={option.text} side="right" tone="player" active={false} />
+          <DialogueRow
+            name={beat.npc}
+            text={option.outcome}
+            expression={option.outcomeExpression ?? "neutral"}
+          />
+          <Callout label="Why">{option.lesson}</Callout>
           {!ended ? (
             <Button variant="ghost" onClick={advance}>
               Continue

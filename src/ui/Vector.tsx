@@ -52,10 +52,11 @@ export function Vector({ label, answer, onCheck }: VectorProps) {
           Check
         </button>
       ) : (
-        <div className={`mt-3 text-[17px] ${isCorrect ? "text-green-700" : "text-ta-red"}`}>
-          {isCorrect
-            ? "Correct vector."
-            : `Not quite — it runs ${correctFrom} → ${correctTo}.`}
+        <div className="mt-3 text-[17px] text-ta-black flex items-center gap-2">
+          <span aria-hidden="true" className="font-bold">
+            {isCorrect ? "✓" : "×"}
+          </span>
+          <span>{isCorrect ? "Correct vector." : `Not quite — it runs ${correctFrom} → ${correctTo}.`}</span>
         </div>
       )}
     </div>

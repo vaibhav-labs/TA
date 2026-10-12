@@ -4,6 +4,8 @@ export type EgoState = "P" | "A" | "C" | "CP" | "NP" | "FC" | "AC";
 
 export type Tag = "best" | "ok" | "game-move";
 
+export type Expression = "neutral" | "tense" | "open";
+
 export interface Concept {
   id: number;
   concept: string;
@@ -36,6 +38,10 @@ export interface DiagnoseOption {
 }
 
 export interface DiagnoseLevel {
+  /** The character delivering the line being diagnosed, if any (renders as a scene, not a bare question). */
+  npc?: string;
+  line?: string;
+  expression?: Expression;
   question: string;
   cues?: string[];
   options: DiagnoseOption[];
@@ -48,12 +54,15 @@ export interface ChoiceStoryOption {
   tag: Tag;
   egoState: EgoState;
   outcome: string;
+  /** The NPC's expression while delivering the outcome line. */
+  outcomeExpression?: Expression;
   lesson: string;
 }
 
 export interface ChoiceStoryBeat {
   npc: string;
   line: string;
+  expression?: Expression;
   cues?: string[];
   egoState?: EgoState;
   options: ChoiceStoryOption[];
@@ -97,6 +106,8 @@ export interface LevelContent {
   concepts: number[];
   source: { book: string; chapter: number; quote: string };
   setting: string;
+  /** Who the player is in this scene, e.g. "Priya, team lead" — answers "whose shoes am I in?" */
+  playAs?: string;
   levels: {
     L1?: DiagnoseLevel;
     L2?: ChoiceStoryLevel;

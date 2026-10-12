@@ -3,6 +3,7 @@ import {
   bestScore,
   computeConceptMastery,
   conceptsHeldCount,
+  gameFreeStreak,
   isBossUnlocked,
   isWorldUnlocked,
   kFor,
@@ -106,6 +107,27 @@ describe("boss / world unlock thresholds", () => {
     expect(isWorldUnlocked(results, "1-6", "L1")).toBe(true);
     expect(isWorldUnlocked(results, "1-1", "L1")).toBe(true);
     expect(isWorldUnlocked(results, "1-2", "L1")).toBe(false);
+  });
+});
+
+describe("gameFreeStreak", () => {
+  it("counts back from most recent while no game-move is hit", () => {
+    const results = [
+      { levelId: "a", level: "L2" as const, score: 100, tags: ["best" as const], egoStates: [], at: 1 },
+      { levelId: "b", level: "L2" as const, score: 0, tags: ["game-move" as const], egoStates: [], at: 2 },
+      { levelId: "c", level: "L2" as const, score: 100, tags: ["best" as const], egoStates: [], at: 3 },
+      { levelId: "d", level: "L2" as const, score: 50, tags: ["ok" as const], egoStates: [], at: 4 },
+    ];
+    expect(gameFreeStreak(results)).toBe(2);
+  });
+
+  it("ignores results with no tags (Diagnose/Fields) and is empty-safe", () => {
+    const results = [
+      { levelId: "a", level: "L1" as const, score: 100, tags: [], egoStates: [], at: 1 },
+      { levelId: "b", level: "L2" as const, score: 100, tags: ["best" as const], egoStates: [], at: 2 },
+    ];
+    expect(gameFreeStreak(results)).toBe(1);
+    expect(gameFreeStreak([])).toBe(0);
   });
 });
 

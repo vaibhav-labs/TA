@@ -1,7 +1,7 @@
 import { useState } from "react";
 import type { DiagnoseLevel } from "../content/types";
 import { Button } from "../ui/Button";
-import { Bubble } from "../ui/Card";
+import { DialogueRow, Callout } from "../ui/Dialogue";
 
 interface DiagnoseProps {
   level: DiagnoseLevel;
@@ -10,7 +10,7 @@ interface DiagnoseProps {
   onComplete: (result: { score: number; correct: boolean }) => void;
 }
 
-/** Diagnose engine (section 5): tap one option, see per-option feedback, then the lesson. */
+/** Diagnose engine (section 5): read the moment, tap one option, see per-option feedback, then the lesson. */
 export function Diagnose({ level, whyRubric, onComplete }: DiagnoseProps) {
   const [picked, setPicked] = useState<number | null>(null);
   const [why, setWhy] = useState("");
@@ -29,8 +29,17 @@ export function Diagnose({ level, whyRubric, onComplete }: DiagnoseProps) {
   }
 
   return (
-    <div className="flex flex-col gap-3">
-      <Bubble>{level.question}</Bubble>
+    <div className="flex flex-col gap-4">
+      {level.npc && level.line ? (
+        <DialogueRow name={level.npc} text={level.line} expression={level.expression} />
+      ) : (
+        <DialogueRow name="Scene" text={level.question} />
+      )}
+
+      {level.npc && (
+        <div className="text-[17px] leading-6 text-ta-white/90 px-1">{level.question}</div>
+      )}
+
       <div className="flex flex-col gap-2">
         {level.options.map((opt, i) => (
           <Button
@@ -43,11 +52,7 @@ export function Diagnose({ level, whyRubric, onComplete }: DiagnoseProps) {
           </Button>
         ))}
       </div>
-      {picked !== null && (
-        <div className="ta-fade text-[17px] leading-6 text-ta-white/90">
-          {level.options[picked].feedback}
-        </div>
-      )}
+      {picked !== null && <Callout label="Read">{level.options[picked].feedback}</Callout>}
       {picked !== null && needsWhy && !whySubmitted && (
         <div className="ta-fade flex flex-col gap-2">
           <textarea

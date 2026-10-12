@@ -3,6 +3,7 @@ import { useSession } from "../state/store";
 import { allResults } from "../state/db";
 import { worldById } from "../content/registry";
 import { isBossUnlocked } from "../state/mastery";
+import { WorldIcon } from "../ui/WorldIcon";
 
 export function World() {
   const { params, navigate, playerLevel } = useSession();
@@ -35,10 +36,15 @@ export function World() {
       <button className="text-ta-yellow text-[13px] self-start" onClick={() => navigate("home")}>
         &larr; Home
       </button>
-      <header>
-        <div className="text-[13px] leading-[18px] text-ta-grey">World {world.id}</div>
-        <h1 className="text-[28px] leading-8 font-bold">{world.theme}</h1>
-        <div className="text-[17px] leading-6 text-ta-grey">{world.unlocks}</div>
+      <header className="flex items-start gap-3">
+        <span className="text-ta-yellow shrink-0 mt-1">
+          <WorldIcon world={world.id} size={32} />
+        </span>
+        <span>
+          <span className="block text-[13px] leading-[18px] text-ta-grey">World {world.id}</span>
+          <span className="block text-[28px] leading-8 font-bold">{world.theme}</span>
+          <span className="block text-[17px] leading-6 text-ta-grey mt-1">{world.unlocks}</span>
+        </span>
       </header>
 
       <section className="flex flex-col gap-3">

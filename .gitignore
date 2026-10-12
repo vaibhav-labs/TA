@@ -18,6 +18,9 @@ dist-ssr
 # Original strategy doc lives here too; docs/STRATEGY.md is the tracked copy
 /TA Arena — Game-Based Learning Strategy (PWA).md
 
+# Claude Code harness-local state
+.claude/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

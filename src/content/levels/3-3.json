@@ -5,11 +5,15 @@
   "engine": "choice-story",
   "concepts": [18, 21],
   "source": { "book": "GPP", "chapter": 2, "quote": "communication is broken off when a crossed transaction occurs" },
-  "setting": "Monday, 9:40. Priya (team lead) and Arjun (developer) at a standing desk. The release slipped on Friday.",
+  "setting": "Monday, 9:40. The release slipped on Friday and the team is still feeling it. Arjun, a developer, is at the standing desk, not looking up.",
+  "playAs": "Priya, the team lead",
   "levels": {
     "L1": {
-      "question": "Arjun, not looking up, says flatly, shoulders hunched: \"You're always on my case. Nothing I do is ever enough for you.\" Which ego state is Arjun speaking from?",
+      "npc": "Arjun",
+      "expression": "tense",
+      "line": "You're always on my case. Nothing I do is ever enough for you.",
       "cues": ["flat voice", "hunched shoulders", "\"always\" / \"never\""],
+      "question": "He says it flatly, shoulders hunched, not looking up. Which ego state is Arjun speaking from?",
       "options": [
         { "text": "Parent", "feedback": "The content sounds like a standard he's judging her against, but content isn't the tell here." },
         { "text": "Adult", "feedback": "Adult would be measured and specific, not \"always\" / \"never\" delivered flat and hunched." },
@@ -19,10 +23,11 @@
       "lesson": "The words \"always\" and \"never\", the flat tone, the hunch are Child cues; the content (a complaint about standards) could sound Parental - diagnose from cues, not content."
     },
     "L2": {
-      "intro": "Priya wants Adult-Adult. Which line crosses Arjun's transaction without starting Uproar?",
+      "intro": "You (Priya) want this to land Adult-to-Adult, not turn into a slammed door. What do you say back?",
       "beats": [
         {
           "npc": "Arjun",
+          "expression": "tense",
           "line": "You're always on my case. Nothing I do is ever enough for you.",
           "cues": ["flat", "hunched"],
           "egoState": "C",
@@ -31,7 +36,8 @@
               "text": "Don't take that tone with me.",
               "tag": "game-move",
               "egoState": "P",
-              "outcome": "Arjun: \"See? Exactly.\" He turns back to his screen, door-slam energy. The scene ends there.",
+              "outcome": "\"See? Exactly.\" He turns back to his screen, door-slam energy. The scene ends there.",
+              "outcomeExpression": "tense",
               "lesson": "Parent -> Child is complementary to his opening, so it continues the fight - complementary is not the same as healthy."
             },
             {
@@ -39,6 +45,7 @@
               "tag": "ok",
               "egoState": "A",
               "outcome": "Arjun shrugs. \"Sure. Whatever.\" He stays small.",
+              "outcomeExpression": "neutral",
               "lesson": "Adult words, but the \"I just\" is defensive; the cross is weak because the psychological level still answers his accusation."
             },
             {
@@ -46,6 +53,7 @@
               "tag": "best",
               "egoState": "A",
               "outcome": "A pause. Arjun looks up. \"The API spec changed Thursday night and nobody told us.\" Adult-Adult established.",
+              "outcomeExpression": "open",
               "lesson": "A crossed transaction (Adult -> Adult in reply to Child -> Parent) breaks the loop; Berne's rule 2 - communication stops until someone shifts; Karpman's options - you may answer from any state, not the one addressed."
             },
             {
@@ -53,6 +61,7 @@
               "tag": "ok",
               "egoState": "NP",
               "outcome": "Arjun softens but stays small. \"Thanks... I'll try harder.\"",
+              "outcomeExpression": "neutral",
               "lesson": "Nurturing Parent -> Child is comforting and keeps him in Child; useful once, costly as a pattern (sets up Look How Hard I've Tried)."
             }
           ]

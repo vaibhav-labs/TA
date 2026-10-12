@@ -91,6 +91,21 @@ export function isWorldUnlocked(results: LevelResult[], bossLevelId: string, lev
   return bestScore(results, bossLevelId, level) >= BOSS_PASS_THRESHOLD;
 }
 
+/**
+ * "Game-free streak" (section 8): consecutive choice-story scenes, most recent first,
+ * with no game-move chosen. Only scenes that produced tags (choice-story results) count;
+ * Diagnose/Fields results neither extend nor break the streak.
+ */
+export function gameFreeStreak(results: LevelResult[]): number {
+  const storyResults = results.filter((r) => r.tags.length > 0).sort((a, b) => b.at - a.at);
+  let streak = 0;
+  for (const r of storyResults) {
+    if (r.tags.includes("game-move")) break;
+    streak += 1;
+  }
+  return streak;
+}
+
 /** The five functional ego states an egogram is built from (section 2, 8). */
 const FUNCTIONAL_STATES: EgoState[] = ["CP", "NP", "A", "FC", "AC"];
 
