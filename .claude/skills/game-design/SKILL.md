@@ -102,9 +102,13 @@ Deliverables:
    and flags (runaway, dead option, swingy, no ending).
 
 ```bash
-python scripts/economy_sim.py --example > design/econ.json   # then edit
-python scripts/economy_sim.py design/econ.json --runs 500 --steps 60 --csv design/econ_traj.csv
+python scripts/economy_sim.py --example > design/econ.json   # params + strategies; then edit
+python scripts/economy_sim.py design/econ.json --runs 500     # strategies side by side
+python scripts/economy_sim.py design/econ.json --sweep upkeep=0.25,0.5,1.0   # sensitivity
 ```
+Put every tunable number in `params` and every player policy in `strategies`, so tuning
+passes are `--set`/`--sweep` runs rather than new files. Log each pass (value, old → new,
+result) in the balance report.
 
 Gate: every displayed resource has a source and a drain; at least one meaningful player
 decision sits inside the core loop; no strategy dominates in simulation; the game ends in
@@ -156,8 +160,11 @@ Gate: run that system's checklist at the end of its reference file.
 python scripts/combat_sim.py --example > data/units.json          # edit units, tables, RPS counters
 python scripts/combat_sim.py data/units.json                      # win-rate matrix, fight length, flags
 python scripts/xp_curve.py --model power --base 100 --exp 1.8 --levels 30 --xp-per-minute 15 --xp-growth 1.08
-python scripts/economy_sim.py data/econ_rush.json && python scripts/economy_sim.py data/econ_boom.json
+python scripts/economy_sim.py data/econ.json --sweep threat_growth=0.9,1.0,1.1
 ```
+`combat_sim.py` checks stand-up duels from stats alone. For grid, squad or positional
+games, write a project-specific simulator that reads the same CSV tables (see
+`combat.md` §13), and keep `combat_sim.py` for quick stat sanity checks.
 Targets: no dominant or dominated unit or class (every row of the matrix loses
 somewhere); fight lengths per tier (trash quick, bosses long but not a slog); first level-up
 within minutes and no late-game grind cliff; income vs. price ladder per chapter; luck
@@ -260,7 +267,7 @@ updates or sequels.
 | `references/production-and-gdd.md` | Design data types, roles, preproduction to gold, GDD structure, milestone gates, scaling down |
 | `scripts/dice_odds.py` | Exact odds for dice expressions, keep-highest/lowest, binary sticks, d100 table validation |
 | `scripts/combat_sim.py` | Monte Carlo fights: win-rate matrix, fight length, dominant/dominated/slog flags |
-| `scripts/economy_sim.py` | Machinations-style economy runs with artificial players and runaway/dead/swingy flags |
+| `scripts/economy_sim.py` | Machinations-style economy runs: params, strategy comparison, sweeps, runaway/dead/swingy/dominant flags |
 | `scripts/xp_curve.py` | XP tables (doubling/power/exponential/linear/authored) with play-time pacing and grind checks |
 | `scripts/validate_tables.py` | Lint CSV data: duplicate ids, range coverage per group, % totals, cross-table references |
 | `assets/templates/` | Pitch, proposal, and GDD templates; starter CSV data tables |

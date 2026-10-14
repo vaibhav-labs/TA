@@ -258,6 +258,15 @@ python scripts/combat_sim.py --example > units.json   # edit units, tables, coun
 python scripts/combat_sim.py units.json               # matrix + pacing + findings
 python scripts/combat_sim.py units.json --duel knight archer --trials 20000
 ```
+Scope: `combat_sim.py` models stand-up duels using stats, tables and RPS counters only. It
+has no grid, range, movement, spells or team play. Use it for quick stat sanity checks
+(dominant stats, fight length, crit swing). For positional or squad games (tactics RPGs,
+RTS), write a game-specific simulator that **reads the same CSV data tables** and runs the
+GDD algorithm step for step, with simple scripted AI. Then report a squad round-robin,
+per-class contribution (win rate with vs. without the class), and duel triangles. Expect
+`combat_sim.py` to call ranged and caster classes "dominated" in such games; that is the
+missing positioning, not necessarily a real imbalance.
+
 Read: win % (row vs. column), rounds per fight (pacing: is the boss fight long enough?
 are trash fights quick?), HP left when winning (how close fights are), DOMINANT,
 DOMINATED, and SLOG flags. Add RPS bonuses through `counters`. Re-run after every value

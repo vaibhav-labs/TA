@@ -137,22 +137,33 @@ mine when gold ≥ 15") so you can run the diagram thousands of times without a 
 ## 7. Simulating with `economy_sim.py`
 
 ```
-python scripts/economy_sim.py --example > econ.json   # starter spec
-python scripts/economy_sim.py econ.json --runs 500 --steps 60 --csv traj.csv
+python scripts/economy_sim.py --example > econ.json        # starter spec (params + 3 strategies)
+python scripts/economy_sim.py econ.json --runs 500          # strategies compared side by side
+python scripts/economy_sim.py econ.json --strategy boom --csv traj.csv   # full report for one
+python scripts/economy_sim.py econ.json --set upkeep=0.8    # try a value without editing the file
+python scripts/economy_sim.py econ.json --sweep upkeep=0.25,0.5,1.0      # sensitivity sweep
 ```
-- **Pools** are your resources. **Flows** are sources and drains (from `source`, to
-  `drain`, or pool to pool) with rate expressions that can reference any pool. This is how
-  you express state connections and feedback (`"rate": "3*mines"` means mines feed gold).
-- **Converters** are your artificial player's choices (`when`, `consume`, `produce`,
-  `max_per_step`). Write one spec per strategy and compare outcomes.
+- **Pools** are resources. **Flows** are sources/drains (`source`, `drain`, or pool→pool)
+  whose rate expressions can reference any pool or param. This is how you express state
+  connections and feedback (`"rate": "3*mines"` = mines feed gold).
+- **Params** are named tuning knobs. Put every number you expect to tune here rather than
+  inline, so balance passes are `--set`/`--sweep` runs, not file edits.
+- **Converters** are the artificial player's choices (`when`, `consume`, `produce`,
+  `max_per_step`). Costs may be expressions, so a rising-cost **stopping mechanism** is
+  one line: `"consume": {"gold": "mine_cost*1.3**(mines-1)"}`.
+- **Strategies** are artificial players: each overrides `params`, `converters` or starting
+  `pools`. The comparison flags a strategy that wins far more often than all others
+  (**DOMINANT?**).
 - **End** conditions give outcome percentages and game length.
-- The script flags **ACCELERATING** (runaway positive feedback), **FLAT** (unconnected),
-  **SWINGY** (luck dominates), **DEAD OPTION** (converter never fires), and **NO
-  ENDING**.
+- Per-strategy flags: **ACCELERATING** (runaway positive feedback), **FLAT** (unconnected),
+  **SWINGY** (luck dominates), **DEAD OPTION** (converter never fires), **NO ENDING**.
+- If you need more than this format can express (card-level play, spatial rules), write a
+  game-specific simulator that reads the same data tables. Keep this one for fast
+  structural checks.
 
-Treat the output as evidence for a design decision, not as the final numbers. Re-check
-in an interactive prototype at the correct scale (Moore: the real values only settle
-once the game runs at runtime speed).
+Treat the output as evidence for a design decision, not as the final numbers. Re-check in
+an interactive prototype at the correct scale (Moore: the real values only settle once the
+game runs at runtime speed).
 
 ## 8. Worked example: RTS economy
 
