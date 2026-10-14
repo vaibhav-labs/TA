@@ -1,0 +1,7 @@
+id,name,type,role,av,dv,dex,luck,flee,hp,mana,cast_pct,spell1,spell1_pct,spell2,spell2_pct,spell3,spell3_pct,spell4,spell4_pct,ai_type,resistances,loot_table
+1,Wolf,Animal,minion,8,4,10,5,35,20,0,0,NA,0,NA,0,NA,0,NA,0,pack,,TT_forest_low
+2,Death wolf,Magic animal,minion,30,21,12,15,10,190,40,10,Bolt,90,Curse,10,NA,0,NA,0,pack,poison,TT_forest_mid
+3,Archer prince,Human,henchman,100,80,25,20,0,800,120,15,Bolt,80,Heal L1,20,NA,0,NA,0,kiter,,TT_henchman_1
+4,Dodo bird,Animal,minion,5,2,6,10,30,12,0,0,NA,0,NA,0,NA,0,NA,0,skittish,,TT_forest_low
+5,Rogue bandit,Human,minion,12,6,13,10,25,40,0,0,NA,0,NA,0,NA,0,NA,0,ranged,,TT_bandit
+6,Boar,Animal,minion,14,8,6,5,30,45,0,0,NA,0,NA,0,NA,0,NA,0,charger,,TT_forest_low

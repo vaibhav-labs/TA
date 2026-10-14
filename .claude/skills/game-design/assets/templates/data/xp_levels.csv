@@ -1,0 +1,4 @@
+level,xp_to_next,attribute_points,auto_damage,auto_mana,auto_hp,new_skill,new_spell,skill_points,spell_points
+1,9,0,0,0,0,,,0,0
+2,20,2,1,2,5,,Fire Ball,1,0
+3,45,2,1,2,5,Restore Mana,,1,1

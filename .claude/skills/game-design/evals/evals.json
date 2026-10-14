@@ -1,0 +1,51 @@
+{
+  "skill_name": "game-design",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I want to make a small roguelite deckbuilder where you're a lighthouse keeper defending the coast from sea monsters each night, and repairing/upgrading the lighthouse by day. Take me from this idea to a pitch, the core loop, and the day/night economy, and check the economy doesn't snowball or stall. Save everything as files.",
+      "expected_output": "High concept <=20 words, pitch, play-time budget, core loop, economy diagram with sources/drains/converters, feedback loop analysis, named patterns, and an actual simulation run with results and tuning changes.",
+      "files": [],
+      "assertions": [
+        "High concept stated in 20 words or fewer",
+        "Play-time budget given as percentages that sum to 100",
+        "Economy explicitly identifies sources, drains and converters (or equivalent) for each resource",
+        "Feedback loops identified and classified as positive or negative",
+        "Names at least one established design pattern / mechanism (e.g., engine, friction, stopping mechanism, escalating challenge)",
+        "An actual simulation or computation was run and its numeric results are reported",
+        "Reports a concrete tuning change made in response to a snowball or stall finding",
+        "Deliverables saved as multiple files (pitch + design/economy docs or data)"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Design the combat system for my turn-based grid tactics RPG. Four classes: warrior, archer, mage, cleric. I need the attributes, the exact formulas, a combat/damage table, how magic and healing work, and some evidence the classes are balanced against each other. Write it up as a GDD section with data tables.",
+      "expected_output": "Attribute list, initiative/AV/DV/damage formulas, numbered algorithm with worked example, validated combat table, magic+saving rules, flee/edge cases, data CSVs, and simulation evidence (win-rate matrix / fight lengths) with balance adjustments.",
+      "files": [],
+      "assertions": [
+        "Attribute list defined for the four classes with numeric values",
+        "Combat resolution given as a numbered step-by-step algorithm",
+        "Includes a worked numeric example of one attack",
+        "Damage/combat table ranges cover the full die range with no gaps (e.g. 1-100)",
+        "Magic and healing rules specified (cost/fuel and resolution)",
+        "Data tables delivered as CSV/JSON files separate from prose",
+        "Balance evidence from simulation, e.g. class-vs-class win rates or fight lengths with numbers",
+        "At least one value was adjusted based on the balance evidence"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Playtesters of my medieval city-builder say the late game is boring: gold piles up into the tens of thousands, every building is already unlocked, and nothing threatens the city after hour 3. Diagnose why structurally and give me concrete fixes with numbers I can drop into the game.",
+      "expected_output": "Structural diagnosis in feedback-loop terms (unchecked positive loop / missing drains / no escalation), named patterns as fixes (dynamic friction, stopping mechanism, escalating challenge, slow cycle, sinks), concrete parameter values, and a before/after simulation.",
+      "files": [],
+      "assertions": [
+        "Diagnosis framed in feedback-loop terms (e.g., unchecked positive feedback / missing negative feedback)",
+        "Identifies missing or weak gold drains / sinks as a cause",
+        "Proposes an escalating late-game threat or challenge",
+        "Proposes a stopping mechanism or rising costs / diminishing returns",
+        "Gives concrete numeric parameters ready to drop into the game",
+        "Shows before/after results from a simulation or calculation"
+      ]
+    }
+  ]
+}

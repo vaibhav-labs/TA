@@ -18,8 +18,10 @@ dist-ssr
 # Original strategy doc lives here too; docs/STRATEGY.md is the tracked copy
 /TA Arena — Game-Based Learning Strategy (PWA).md
 
-# Claude Code harness-local state
-.claude/
+# Claude Code harness-local state (project skills are tracked)
+.claude/*
+!.claude/skills/
+.claude/skills/**/__pycache__/
 
 # Editor directories and files
 .vscode/*

@@ -1,0 +1,6 @@
+map,low,high,singular,plural,min_count,random_extra,preferred_row,flee_value,xp_each,gold_base,gold_random,loot_pct,loot_table
+forest_1,1,20,Wolf,Wolves,1,0-2,front,35,15,2,0-2,20,TT_forest_low
+forest_1,21,40,Dodo bird,Dodo birds,1,0-2,front,30,10,1,0-1,15,TT_forest_low
+forest_1,41,60,Rogue bandit,Rogue bandits,1,0-1,back,25,20,5,0-5,25,TT_bandit
+forest_1,61,90,Boar,Boars,1,0-1,front,30,20,0,0-0,15,TT_forest_low
+forest_1,91,100,SPECIAL,SPECIAL,0,0,,0,0,0,0,0,roll special table

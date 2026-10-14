@@ -1,0 +1,8 @@
+terrain,class,infantry_move,cavalry_move,artillery_move,defense_modifier,blocks_los,notes
+road,open,1,0.5,1,0,no,
+open,open,2,1,2,0,no,
+light_woods,blocking_light,3,2,4,+1,partial,
+forest,blocking_heavy,4,NA,NA,+2,yes,NA = cannot enter
+ford,hexside,+2,+1,NA,-1 attacker,no,cost added to crossing
+river,hexside,NA,NA,NA,,no,impassable except at fords/bridges
+town,open,1,1,1,+2,yes,

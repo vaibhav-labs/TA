@@ -1,0 +1,7 @@
+low,high,result
+1,5,Miss (0%)
+6,15,Glancing (75%)
+16,65,Normal (100%)
+66,80,Heavy (125%)
+81,95,Very heavy (150%)
+96,100,Critical (roll crit table)

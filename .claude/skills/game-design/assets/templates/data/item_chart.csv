@@ -1,0 +1,4 @@
+id,name,category,subtype,tier,req_level,req_class,slot,attack_value,damage_type,range,reload,defense_value,attribute_mods,special_effect,effect_value,uses,weight,buy_price,sell_price,rarity,description
+1,Short sword,weapon,hand,1,1,any,main_hand,2,edged,1,0,0,,,,,3,20,8,common,A plain iron blade.
+2,Long sword,weapon,hand,2,4,knight|barbarian,main_hand,6,edged,1,0,0,STR+1,,,,5,120,45,uncommon,Balanced steel.
+3,Healing potion,consumable,potion,1,1,any,bag,,,,,,,heal_hp,25,1,0.5,15,5,common,Restores 25 HP.
