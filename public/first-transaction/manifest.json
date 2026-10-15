@@ -1,0 +1,14 @@
+{
+  "name": "First Transaction",
+  "short_name": "First Transaction",
+  "description": "A five-game introduction to Transactional Analysis for people who've never heard of it.",
+  "start_url": "/TA/first-transaction/index.html",
+  "scope": "/TA/first-transaction/",
+  "display": "standalone",
+  "background_color": "#171233",
+  "theme_color": "#171233",
+  "icons": [
+    { "src": "/TA/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/TA/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

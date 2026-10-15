@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<meta name="theme-color" content="#171233" />
+<meta name="description" content="Every exchange between two people's voices either flows on or breaks. Both are useful. Game 3 of 5 in the First Transaction series." />
+<link rel="manifest" href="./manifest.json" />
+<link rel="icon" type="image/svg+xml" href="/TA/favicon.svg" />
+<link rel="apple-touch-icon" href="/TA/icon-192.png" />
+<title>Keep It Going or Cross It</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #171233; --bg-2: #241c47;
+    --surface: #f2eefb; --surface-2: #e5ddf5; --surface-3: #d9cdf2;
+    --accent: #6c5fe0; --accent-deep: #4a3fa0;
+    --pink: #d9699f; --blue: #5b8fd9;
+    --ok: #1f7568; --wrong: #a8407a; --alt: #5c4fb0;
+    --text: #231c3f; --text-dim: #675f82;
+    --on-bg: #ece7fb; --on-bg-dim: #b4abd9;
+    --shadow: rgba(23, 18, 51, 0.28);
+    --parent: #7b5fe0; --adult: #4f8fd9; --childv: #d9699f;
+  }
+  * { box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    background-image:
+      radial-gradient(ellipse 820px 560px at 12% -8%, var(--bg-2), transparent),
+      radial-gradient(ellipse 680px 520px at 108% 12%, #2c1f4a, transparent),
+      radial-gradient(ellipse 600px 420px at 60% 110%, #2a1840, transparent);
+    color: var(--on-bg); font-family: "IBM Plex Sans", system-ui, sans-serif;
+    min-height: 100vh; margin: 0; display: flex; justify-content: center; padding: 28px 16px 56px;
+  }
+  .stage { width: 100%; max-width: 560px; }
+  .masthead { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 16px; padding: 0 4px; }
+  .series { font-family: "IBM Plex Mono", monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--pink); font-weight: 600; }
+  .series small { color: var(--on-bg-dim); font-weight: 500; letter-spacing: 0.08em; }
+  .tag { font-family: "IBM Plex Mono", monospace; font-size: 11px; color: var(--on-bg-dim); text-decoration: none; }
+  .tag:hover { color: var(--pink); }
+  .card { background: var(--surface); color: var(--text); border-radius: 22px; box-shadow: 0 24px 60px var(--shadow); padding: 32px 28px 28px; position: relative; }
+  .card-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; margin-bottom: 18px; }
+  h1 { font-family: "Fraunces", Georgia, serif; font-weight: 500; font-size: 26px; line-height: 1.2; margin: 0 0 6px; text-wrap: balance; letter-spacing: -0.01em; }
+  .deck { font-size: 14.5px; color: var(--text-dim); margin: 0; max-width: 40ch; line-height: 1.5; }
+  .case-no { font-family: "IBM Plex Mono", monospace; font-size: 11px; color: var(--text-dim); text-align: right; white-space: nowrap; padding-top: 4px; }
+  .progress { display: flex; gap: 5px; margin-bottom: 24px; }
+  .progress i { height: 5px; flex: 1; background: var(--surface-2); border-radius: 999px; overflow: hidden; position: relative; }
+  .progress i.done { background: linear-gradient(90deg, var(--accent), var(--pink)); }
+  .progress i.current::after { content: ""; position: absolute; inset: 0; width: 50%; background: var(--accent); opacity: .55; }
+  .round-label { font-family: "IBM Plex Mono", monospace; font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-dim); margin-bottom: 10px; }
+  .exchange { background: var(--surface-2); border-radius: 16px; padding: 14px 16px; margin: 0 0 18px; }
+  .exchange .line { font-size: 15.5px; line-height: 1.5; margin: 0 0 8px; }
+  .exchange .line .who { font-family: "IBM Plex Mono", monospace; font-size: 11px; color: var(--text-dim); display: block; margin-bottom: 2px; letter-spacing: 0.03em; }
+  .exchange .line:last-child { margin-bottom: 0; }
+  .vec { display: inline-block; font-family: "IBM Plex Mono", monospace; font-size: 10.5px; padding: 1px 8px; border-radius: 999px; margin-left: 6px; color: #fff; }
+  .vec.p { background: var(--parent); }
+  .vec.a { background: var(--adult); }
+  .vec.c { background: var(--childv); }
+  .choices { display: flex; flex-direction: column; gap: 10px; }
+  button.choice {
+    font-family: "IBM Plex Sans", sans-serif; font-size: 15px; font-weight: 500; text-align: left;
+    padding: 14px 17px; border-radius: 14px; border: none; background: var(--surface-2); color: var(--text);
+    cursor: pointer; transition: background 120ms, transform 80ms, box-shadow 120ms;
+  }
+  button.choice:hover { background: var(--surface-3); box-shadow: 0 6px 16px rgba(108,95,224,0.16); }
+  button.choice:active { transform: scale(0.99); }
+  button.choice:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  button.choice.correct { background: color-mix(in srgb, var(--ok) 20%, var(--surface)); box-shadow: 0 0 0 2px color-mix(in srgb, var(--ok) 45%, transparent) inset; }
+  button.choice.wrong { background: color-mix(in srgb, var(--wrong) 18%, var(--surface)); box-shadow: 0 0 0 2px color-mix(in srgb, var(--wrong) 40%, transparent) inset; }
+  button.choice.amber { background: color-mix(in srgb, var(--alt) 18%, var(--surface)); box-shadow: 0 0 0 2px color-mix(in srgb, var(--alt) 40%, transparent) inset; }
+  button.choice[disabled] { cursor: default; opacity: 0.6; }
+  button.choice.correct[disabled], button.choice.wrong[disabled], button.choice.amber[disabled] { opacity: 1; }
+  .stamp {
+    display: inline-flex; align-items: center; gap: 6px; font-family: "IBM Plex Mono", monospace; font-size: 12px; font-weight: 600;
+    letter-spacing: 0.04em; text-transform: uppercase; padding: 5px 12px; border-radius: 999px; margin-bottom: 12px; color: #fff;
+  }
+  .stamp.ok { background: var(--ok); } .stamp.cross { background: var(--wrong); } .stamp.amber { background: var(--alt); }
+  .why-box { border-radius: 16px; padding: 16px 18px 17px; margin: 0 0 18px; }
+  .why-box .stamp { margin-bottom: 10px; }
+  .why-box .feedback { margin: 0; }
+  .why-box.ok { background: color-mix(in srgb, var(--ok) 10%, var(--surface-2)); }
+  .why-box.cross { background: color-mix(in srgb, var(--wrong) 10%, var(--surface-2)); }
+  .why-box.amber { background: color-mix(in srgb, var(--alt) 10%, var(--surface-2)); }
+  .feedback { font-size: 16px; line-height: 1.6; color: var(--text); margin: 0 0 18px; padding-top: 2px; }
+  .feedback b { color: inherit; }
+  .nextbar { display: flex; justify-content: flex-end; }
+  button.next {
+    font-family: "IBM Plex Mono", monospace; font-size: 13px; font-weight: 600; letter-spacing: 0.03em;
+    background: linear-gradient(135deg, var(--accent), var(--pink)); color: #fff; border: none;
+    padding: 12px 20px; border-radius: 999px; cursor: pointer; box-shadow: 0 10px 24px rgba(108,95,224,0.35);
+  }
+  button.next:hover { filter: brightness(1.08); transform: translateY(-1px); }
+  .intro p { font-size: 15.5px; line-height: 1.65; margin: 0 0 14px; }
+  .intro .lede { font-size: 17.5px; font-weight: 500; font-family: "Fraunces", Georgia, serif; font-style: italic; color: var(--accent-deep); }
+  .rules-box { background: var(--surface-2); border-radius: 16px; padding: 16px 18px; margin: 18px 0; }
+  .rules-box .round-label { margin-bottom: 10px; }
+  .rules-list { margin: 0; padding-left: 0; list-style: none; display: flex; flex-direction: column; gap: 9px; }
+  .rules-list li { font-size: 14px; line-height: 1.45; display: flex; gap: 10px; color: var(--text); }
+  .rules-list .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); flex: none; margin-top: 7px; }
+  .end-badge { font-family: "IBM Plex Mono", monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ok); margin-bottom: 8px; }
+  .source { margin-top: 20px; padding: 14px 16px; border-radius: 14px; background: var(--surface-2); font-size: 12.5px; color: var(--text-dim); line-height: 1.5; }
+  .source b { color: var(--text); }
+  .reflect-tag {
+    font-family: "IBM Plex Mono", monospace; font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+    color: #fff; background: linear-gradient(135deg, var(--accent), var(--pink)); display: inline-block;
+    padding: 5px 12px; border-radius: 999px; margin-bottom: 14px;
+  }
+  textarea.reflect-box {
+    width: 100%; min-height: 120px; resize: vertical; font-family: "IBM Plex Sans", sans-serif; font-size: 15.5px; line-height: 1.55; color: var(--text);
+    background: var(--surface-2); border: none; border-radius: 16px; padding: 14px 16px; margin-bottom: 18px; box-shadow: 0 0 0 2px transparent inset;
+  }
+  textarea.reflect-box::placeholder { color: var(--text-dim); }
+  textarea.reflect-box:focus { outline: none; box-shadow: 0 0 0 2px var(--accent) inset; }
+  .foot-link { display: block; text-align: center; margin-top: 18px; font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--on-bg-dim); letter-spacing: 0.03em; }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+</style>
+</head>
+<body>
+
+<div class="stage">
+  <div class="masthead">
+    <div class="series">First Transaction <small>· Game 3 of 5</small></div>
+    <a class="tag" href="./index.html">← All games</a>
+  </div>
+  <div class="card" id="card"></div>
+  <div class="foot-link" id="footlink"></div>
+</div>
+
+<script>
+(function () {
+  function vec(k, label) { return `<span class="vec ${k}">${label}</span>`; }
+
+  const ROUND1 = {
+    label: "Round 1 · Does the reply keep it going, or cross it?",
+    items: [
+      { lines: [
+          { who: "You ask", text: `"What's the time?"` + vec("a","Adult") },
+          { who: "They reply", text: `"One o'clock."` + vec("a","→ Adult") },
+        ],
+        options: ["Keeps it going (complementary)", "Crosses it (crossed)"], answer: 0,
+        why: "You invited Adult, you got Adult back. The exchange lands exactly where it was aimed. That's <b>complementary</b>. These can run forever; it's why small talk never seems to end." },
+      { lines: [
+          { who: "Manager, growling", text: `"Late again! This won't do!"` + vec("p","Parent") },
+          { who: "Clerk, cowering", text: `"Sorry. I'll try not to do it again."` + vec("c","→ Child") },
+        ],
+        options: ["Keeps it going (complementary)", "Crosses it (crossed)"], answer: 0,
+        why: "Parent aimed at Child, Child answered right where it was aimed. Still <b>complementary</b>. The trap is assuming complementary means healthy. This exchange could repeat weekly and never once get better." },
+      { lines: [
+          { who: "You ask", text: `"What's the time?"` + vec("a","Adult") },
+          { who: "They yell", text: `"Don't ask ME about the time! You're late again!"` + vec("p","→ Parent, aimed at your Child") },
+        ],
+        options: ["Keeps it going (complementary)", "Crosses it (crossed)"], answer: 1,
+        why: "You asked Adult-to-Adult; the reply came back Parent-to-Child instead. The lines on the diagram would literally cross. That's <b>crossed</b>." },
+      { lines: [
+          { who: "Manager, growling", text: `"Late again! This won't do!"` + vec("p","Parent → Child") },
+          { who: "Clerk, level voice", text: `"I can hear you're angry. What do you want me to do about this right now?"` + vec("a","→ Adult, back to Adult") },
+        ],
+        options: ["Keeps it going (complementary)", "Crosses it (crossed)"], answer: 1,
+        why: "The clerk refused the invitation into Child and answered from Adult instead. Also <b>crossed</b>. Same mechanical result as the yelling example, completely different effect. Crossing isn't the villain; it's often the fix." },
+    ],
+    closing: {
+      stamp: "ok",
+      headline: "Two rules, and the twist in rule two.",
+      body: `<b>Rule one:</b> as long as a transaction stays complementary, the conversation can keep going, pleasantly or not. <b>Rule two:</b> when someone crosses it, the flow breaks and somebody has to shift. The common mistake is hearing "complementary" as "good" and "crossed" as "rude." It's the other way around often enough that crossing, done from Adult, is one of the main tools for actually changing a stuck pattern.`,
+    },
+  };
+
+  const ROUND2 = {
+    label: "Round 2 · Pick the clean cross",
+    intro: `Same idea, your move. Three ways to answer. Only one actually opens the conversation up.`,
+    scenarios: [
+      {
+        setup: [
+          { who: "Manager, growling, pointing at the clock", text: `"Late again! This just won't do!"` + vec("p","Parent → Child") },
+        ],
+        options: [
+          { text: `"Sorry. I'll try not to do it again."`, cls: "amber", label: "Stays stuck",
+            why: "Answers right where you were aimed: Child to Parent. Complementary, comfortable, and exactly how this fight goes every single time." },
+          { text: `"Oh yeah? You're always on my case about something!"`, cls: "wrong", label: "Crosses into a worse fight",
+            why: "Also crosses, but as a Parent-to-Parent counter-attack. You've matched their attack instead of changing the game. This is how arguments escalate, not resolve." },
+          { text: `"I hear you're frustrated. Traffic was bad &mdash; what do you need from me right now?"`, cls: "correct", label: "Clean Adult cross",
+            why: "Crosses the Parent-to-Child invitation by answering Adult-to-Adult: no cowering, no counter-attack, just the facts and a way forward." },
+        ],
+      },
+      {
+        setup: [
+          { who: "Partner, sarcastic, after you forgot something small", text: `"Oh sure, you NEVER forget anything, do you."` + vec("p","Parent → Child") },
+        ],
+        options: [
+          { text: `"I'm sorry, I'm just the worst, I always mess everything up."`, cls: "amber", label: "Stays stuck",
+            why: "Over-apologizing from Child answers exactly where the jab was aimed. Satisfying for no one, and it'll happen again." },
+          { text: `"Well YOU forgot my birthday last year!"`, cls: "wrong", label: "Crosses into a worse fight",
+            why: "A real cross, but a Parent counter-attack. Now there are two accusations in the air instead of one." },
+          { text: `"You're right, that was annoying. I'll set a reminder so it doesn't happen again."`, cls: "correct", label: "Clean Adult cross",
+            why: "Owns the fact without groveling and without returning fire. Crosses the jab cleanly from Adult." },
+        ],
+      },
+    ],
+  };
+
+  const REFLECT_PROMPT = `Think of a conversation in your life that keeps looping the same unhelpful way: with a parent, a partner, a coworker. What would a clean <b>Adult cross</b> actually sound like, in your own words, the next time it starts?`;
+  const REFLECT_KEY = "reflect-03-transactions";
+
+  const TOTAL = ROUND1.items.length + ROUND2.scenarios.length;
+  let r1idx = 0, r2idx = 0, doneCount = 0, answered = false;
+  const card = document.getElementById("card");
+
+  function progressHTML() {
+    let bars = "";
+    for (let i = 0; i < TOTAL; i++) bars += `<i class="${i < doneCount ? "done" : (i === doneCount ? "current" : "")}"></i>`;
+    return `<div class="progress">${bars}</div>`;
+  }
+
+  function linesHTML(lines) {
+    return `<div class="exchange">${lines.map(l => `<p class="line"><span class="who">${l.who}</span>${l.text}</p>`).join("")}</div>`;
+  }
+
+  function renderR1() {
+    answered = false;
+    const item = ROUND1.items[r1idx];
+    const introBlock = r1idx === 0 ? `<p class="deck" style="margin-bottom:16px;">Every time one person signals something and another replies, that's a <b>transaction</b>. Read the exchange, then call it.</p>` : "";
+    card.innerHTML = `
+      ${progressHTML()}
+      <div class="round-label">${ROUND1.label}</div>
+      ${introBlock}
+      ${linesHTML(item.lines)}
+      <div class="choices">${item.options.map((o, i) => `<button class="choice" data-i="${i}">${o}</button>`).join("")}</div>
+    `;
+    card.querySelectorAll("button.choice").forEach(btn => btn.addEventListener("click", () => selectR1(parseInt(btn.dataset.i, 10))));
+  }
+
+  function selectR1(i) {
+    if (answered) return;
+    answered = true;
+    const item = ROUND1.items[r1idx];
+    const correct = i === item.answer;
+    doneCount++;
+    card.querySelectorAll("button.choice").forEach((btn, idx) => {
+      btn.disabled = true;
+      if (idx === item.answer) btn.classList.add("correct");
+      else if (idx === i) btn.classList.add("wrong");
+    });
+    const whyClass = correct ? "ok" : "cross";
+    const box = document.createElement("div");
+    box.innerHTML = `<div class="why-box ${whyClass}"><div class="stamp ${whyClass}">${correct ? "✓ Right call" : "✗ Not quite"}</div>
+      <p class="feedback"><b>Why:</b> ${item.why}</p></div>
+      <div class="nextbar"><button class="next" id="nextBtn">Continue →</button></div>`;
+    card.appendChild(box);
+    document.getElementById("nextBtn").addEventListener("click", () => {
+      if (r1idx < ROUND1.items.length - 1) { r1idx++; renderR1(); }
+      else { renderClosing(ROUND1.closing, startR2); }
+    });
+  }
+
+  function renderClosing(closing, onNext) {
+    card.innerHTML = `
+      ${progressHTML()}
+      <div class="stamp ${closing.stamp}">Lesson</div>
+      <p class="feedback"><b>${closing.headline}</b></p>
+      <p class="feedback">${closing.body}</p>
+      <div class="nextbar"><button class="next" id="nextBtn">Continue →</button></div>
+    `;
+    document.getElementById("nextBtn").addEventListener("click", onNext);
+  }
+
+  function startR2() { renderR2(); }
+
+  function renderR2() {
+    answered = false;
+    const sc = ROUND2.scenarios[r2idx];
+    const introBlock = r2idx === 0 ? `<p class="deck" style="margin-bottom:16px;">${ROUND2.intro}</p>` : "";
+    card.innerHTML = `
+      ${progressHTML()}
+      <div class="round-label">${ROUND2.label}</div>
+      ${introBlock}
+      ${linesHTML(sc.setup)}
+      <div class="choices">${sc.options.map((o, i) => `<button class="choice" data-i="${i}">${o.text}</button>`).join("")}</div>
+    `;
+    card.querySelectorAll("button.choice").forEach(btn => btn.addEventListener("click", () => selectR2(parseInt(btn.dataset.i, 10))));
+  }
+
+  function selectR2(i) {
+    if (answered) return;
+    answered = true;
+    const sc = ROUND2.scenarios[r2idx];
+    const chosen = sc.options[i];
+    doneCount++;
+    card.querySelectorAll("button.choice").forEach((btn, idx) => {
+      btn.disabled = true;
+      if (idx === i) btn.classList.add(chosen.cls);
+    });
+    const stampClass = chosen.cls === "correct" ? "ok" : (chosen.cls === "wrong" ? "cross" : "amber");
+    const box = document.createElement("div");
+    box.innerHTML = `<div class="why-box ${stampClass}"><div class="stamp ${stampClass}">${chosen.label}</div>
+      <p class="feedback"><b>Why:</b> ${chosen.why}</p></div>
+      <div class="nextbar"><button class="next" id="nextBtn">Continue →</button></div>`;
+    card.appendChild(box);
+    document.getElementById("nextBtn").addEventListener("click", () => {
+      if (r2idx < ROUND2.scenarios.length - 1) { r2idx++; renderR2(); }
+      else { renderReflect(); }
+    });
+  }
+
+  function renderReflect() {
+    let saved = "";
+    try { saved = localStorage.getItem(REFLECT_KEY) || ""; } catch (e) {}
+    card.innerHTML = `
+      ${progressHTML()}
+      <div class="reflect-tag">Your turn</div>
+      <h1 style="font-size:21px;">What would your clean cross sound like?</h1>
+      <p class="feedback">${REFLECT_PROMPT}</p>
+      <textarea class="reflect-box" id="reflectBox" placeholder="A few lines is plenty. This stays on your device, and nobody else sees it."></textarea>
+      <div class="nextbar"><button class="next" id="nextBtn">Continue →</button></div>
+    `;
+    const box = document.getElementById("reflectBox");
+    box.value = saved;
+    box.addEventListener("input", () => { try { localStorage.setItem(REFLECT_KEY, box.value); } catch (e) {} });
+    document.getElementById("nextBtn").addEventListener("click", renderEnd);
+  }
+
+  function renderEnd() {
+    card.innerHTML = `
+      ${progressHTML()}
+      <div class="end-badge">Case closed</div>
+      <h1 style="font-size:22px;">Not every crossed wire is a mistake.</h1>
+      <p class="feedback">Most conflict advice says "stop crossing people." TA's version is sharper: notice <i>which</i> ego state is doing the crossing. A Parent counter-attack escalates. An Adult cross (calm, aimed at the real situation) is usually the only thing in the whole exchange that actually changes anything.</p>
+      <div class="source"><b>From:</b> Ian Stewart &amp; Vann Joines, <i>TA Today</i> (ch. 7, &ldquo;Transactions&rdquo;)</div>
+      <div class="nextbar" style="margin-top:18px;"><button class="next" id="nextBtn">Next game: Yes, But... →</button></div>
+    `;
+    document.getElementById("nextBtn").addEventListener("click", () => {
+      window.location.href = "./04-games.html";
+    });
+  }
+
+  function renderIntro() {
+    card.innerHTML = `
+      <div class="card-head">
+        <div>
+          <h1>Keep It Going or Cross It</h1>
+          <p class="deck">Every exchange between two people's voices either flows on or breaks. Both are useful. Learn to tell them apart.</p>
+        </div>
+        <div class="case-no">03<br>TRANSACTIONS</div>
+      </div>
+      <div class="intro">
+        <p class="lede">You say "Hi." I say "Hi." That's it. That's a transaction: one voice speaking, another voice replying.</p>
+        <p>In TA's shorthand, every transaction is drawn as an arrow from one person's voice (Parent, Adult or Child, see Game 2) to the other's. When the reply comes back from the voice it was aimed at, the exchange is <b>complementary</b>. It can keep going. When it doesn't, the exchange is <b>crossed</b>. Something breaks, and somebody has to shift.</p>
+      </div>
+      <div class="rules-box">
+        <div class="round-label">How this one works</div>
+        <ul class="rules-list">
+          <li><span class="dot"></span><span>Round 1: read 4 exchanges, call each one complementary or crossed</span></li>
+          <li><span class="dot"></span><span>Round 2: you're in the exchange. Pick your own reply, from three options</span></li>
+          <li><span class="dot"></span><span>Every pick gets an explanation, right or wrong</span></li>
+          <li><span class="dot"></span><span>About 5 minutes, start to finish</span></li>
+        </ul>
+      </div>
+      <div class="nextbar"><button class="next" id="startBtn">Start →</button></div>
+    `;
+    document.getElementById("startBtn").addEventListener("click", renderR1);
+  }
+
+  renderIntro();
+})();
+</script>
+
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => { navigator.serviceWorker.register('./sw.js'); });
+  }
+</script>
+</body>
+</html>

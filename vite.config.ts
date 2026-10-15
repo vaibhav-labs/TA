@@ -18,6 +18,10 @@ export default defineConfig({
       includeAssets: ["favicon.svg"],
       workbox: {
         globPatterns: ["**/*.{js,css,html,json,ico,png,svg,woff2}"],
+        // The First Transaction mini-game series (public/first-transaction/) is its own
+        // standalone PWA with its own manifest + service worker (scope /TA/first-transaction/).
+        // Excluded here so the two apps' service workers don't both try to control those pages.
+        globIgnores: ["first-transaction/**"],
       },
       manifest: {
         name: "TA Arena",

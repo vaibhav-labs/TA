@@ -1,0 +1,535 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<meta name="theme-color" content="#171233" />
+<meta name="description" content="A doing-game about why a little bit of attention, even bad attention, beats none at all. Game 1 of 5 in the First Transaction series." />
+<link rel="manifest" href="./manifest.json" />
+<link rel="icon" type="image/svg+xml" href="/TA/favicon.svg" />
+<link rel="apple-touch-icon" href="/TA/icon-192.png" />
+<title>Warm Fuzzy, Cold Prickly</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #171233; --bg-2: #241c47;
+    --surface: #f2eefb; --surface-2: #e5ddf5; --surface-3: #d9cdf2;
+    --accent: #6c5fe0; --accent-deep: #4a3fa0;
+    --pink: #d9699f; --blue: #5b8fd9;
+    --ok: #1f7568; --wrong: #a8407a; --alt: #5c4fb0;
+    --text: #231c3f; --text-dim: #675f82;
+    --on-bg: #ece7fb; --on-bg-dim: #b4abd9;
+    --shadow: rgba(23, 18, 51, 0.28);
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    background-image:
+      radial-gradient(ellipse 820px 560px at 12% -8%, var(--bg-2), transparent),
+      radial-gradient(ellipse 680px 520px at 108% 12%, #2c1f4a, transparent),
+      radial-gradient(ellipse 600px 420px at 60% 110%, #2a1840, transparent);
+    color: var(--on-bg);
+    font-family: "IBM Plex Sans", system-ui, sans-serif;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    padding: 28px 16px 56px;
+  }
+
+  .stage { width: 100%; max-width: 560px; }
+
+  .masthead {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    padding: 0 4px;
+  }
+
+  .series {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--pink);
+    font-weight: 600;
+  }
+
+  .series small { color: var(--on-bg-dim); font-weight: 500; letter-spacing: 0.08em; }
+
+  .tag {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 11px;
+    color: var(--on-bg-dim);
+    text-decoration: none;
+  }
+  .tag:hover { color: var(--pink); }
+
+  .card {
+    background: var(--surface);
+    color: var(--text);
+    border-radius: 22px;
+    box-shadow: 0 24px 60px var(--shadow);
+    padding: 32px 28px 28px;
+    position: relative;
+  }
+
+  .card-head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 14px;
+    margin-bottom: 18px;
+  }
+
+  h1 {
+    font-family: "Fraunces", Georgia, serif;
+    font-weight: 500;
+    font-size: 27px;
+    line-height: 1.2;
+    margin: 0 0 6px;
+    text-wrap: balance;
+    letter-spacing: -0.01em;
+  }
+
+  .deck { font-size: 14.5px; color: var(--text-dim); margin: 0; max-width: 38ch; line-height: 1.5; }
+
+  .case-no {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 11px;
+    color: var(--text-dim);
+    text-align: right;
+    white-space: nowrap;
+    padding-top: 4px;
+  }
+
+  .progress { display: flex; gap: 5px; margin-bottom: 24px; }
+  .progress i { height: 5px; flex: 1; background: var(--surface-2); border-radius: 999px; overflow: hidden; position: relative; }
+  .progress i.done { background: linear-gradient(90deg, var(--accent), var(--pink)); }
+  .progress i.current { background: var(--surface-2); }
+  .progress i.current::after { content: ""; position: absolute; inset: 0; width: 50%; background: var(--accent); opacity: .55; }
+
+  .round-label {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-dim);
+    margin-bottom: 10px;
+  }
+
+  .scene { font-size: 17.5px; line-height: 1.55; margin: 0 0 20px; min-height: 3.2em; }
+  .scene .who { font-weight: 600; color: var(--accent-deep); }
+
+  .choices { display: flex; flex-direction: column; gap: 10px; }
+
+  button.choice {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    text-align: left;
+    padding: 14px 17px;
+    border-radius: 14px;
+    border: none;
+    background: var(--surface-2);
+    color: var(--text);
+    cursor: pointer;
+    transition: background 120ms, transform 80ms, box-shadow 120ms;
+  }
+
+  button.choice:hover { background: var(--surface-3); box-shadow: 0 6px 16px rgba(108,95,224,0.16); }
+  button.choice:active { transform: scale(0.99); }
+  button.choice:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  button.choice.correct { background: color-mix(in srgb, var(--ok) 20%, var(--surface)); box-shadow: 0 0 0 2px color-mix(in srgb, var(--ok) 45%, transparent) inset; }
+  button.choice.wrong { background: color-mix(in srgb, var(--wrong) 18%, var(--surface)); box-shadow: 0 0 0 2px color-mix(in srgb, var(--wrong) 40%, transparent) inset; }
+  button.choice[disabled] { cursor: default; opacity: 0.6; }
+  button.choice.correct[disabled], button.choice.wrong[disabled] { opacity: 1; }
+
+  .stamp {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 5px 12px;
+    border-radius: 999px;
+    margin-bottom: 12px;
+    color: #fff;
+  }
+  .stamp.ok { background: var(--ok); }
+  .stamp.cross { background: var(--wrong); }
+
+  .why-box { border-radius: 16px; padding: 16px 18px 17px; margin: 0 0 18px; }
+  .why-box .stamp { margin-bottom: 10px; }
+  .why-box .feedback { margin: 0; }
+  .why-box.ok { background: color-mix(in srgb, var(--ok) 10%, var(--surface-2)); }
+  .why-box.cross { background: color-mix(in srgb, var(--wrong) 10%, var(--surface-2)); }
+  .why-box.amber { background: color-mix(in srgb, var(--alt) 10%, var(--surface-2)); }
+
+  .feedback { font-size: 16px; line-height: 1.6; color: var(--text); margin: 0 0 18px; padding-top: 2px; }
+  .feedback b { color: inherit; }
+
+  .nextbar { display: flex; justify-content: flex-end; }
+  button.next {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    background: linear-gradient(135deg, var(--accent), var(--pink));
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 999px;
+    cursor: pointer;
+    box-shadow: 0 10px 24px rgba(108,95,224,0.35);
+  }
+  button.next:hover { filter: brightness(1.08); transform: translateY(-1px); }
+
+  .intro p { font-size: 15.5px; line-height: 1.65; margin: 0 0 14px; }
+  .intro .lede { font-size: 17.5px; font-weight: 500; font-family: "Fraunces", Georgia, serif; font-style: italic; color: var(--accent-deep); }
+
+  .rules-box { background: var(--surface-2); border-radius: 16px; padding: 16px 18px; margin: 18px 0; }
+  .rules-box .round-label { margin-bottom: 10px; }
+  .rules-list { margin: 0; padding-left: 0; list-style: none; display: flex; flex-direction: column; gap: 9px; }
+  .rules-list li { font-size: 14px; line-height: 1.45; display: flex; gap: 10px; color: var(--text); }
+  .rules-list .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); flex: none; margin-top: 7px; }
+
+  .end-badge {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ok);
+    margin-bottom: 8px;
+  }
+
+  .source {
+    margin-top: 20px;
+    padding: 14px 16px;
+    border-radius: 14px;
+    background: var(--surface-2);
+    font-size: 12.5px;
+    color: var(--text-dim);
+    line-height: 1.5;
+  }
+  .source b { color: var(--text); }
+
+  .reflect-tag {
+    font-family: "IBM Plex Mono", monospace; font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+    color: #fff; background: linear-gradient(135deg, var(--accent), var(--pink)); display: inline-block;
+    padding: 5px 12px; border-radius: 999px; margin-bottom: 14px;
+  }
+  textarea.reflect-box {
+    width: 100%; min-height: 120px; resize: vertical;
+    font-family: "IBM Plex Sans", sans-serif; font-size: 15.5px; line-height: 1.55; color: var(--text);
+    background: var(--surface-2); border: none; border-radius: 16px; padding: 14px 16px;
+    margin-bottom: 18px; box-shadow: 0 0 0 2px transparent inset;
+  }
+  textarea.reflect-box::placeholder { color: var(--text-dim); }
+  textarea.reflect-box:focus { outline: none; box-shadow: 0 0 0 2px var(--accent) inset; }
+
+  .foot-link {
+    display: block;
+    text-align: center;
+    margin-top: 18px;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 12px;
+    color: var(--on-bg-dim);
+    letter-spacing: 0.03em;
+  }
+
+  .hidden { display: none !important; }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; animation: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<div class="stage">
+  <div class="masthead">
+    <div class="series">First Transaction <small>· Game 1 of 5</small></div>
+    <a class="tag" href="./index.html">← All games</a>
+  </div>
+
+  <div class="card" id="card">
+    <!-- content injected by JS -->
+  </div>
+
+  <div class="foot-link" id="footlink"></div>
+</div>
+
+<script>
+(function () {
+  const ROUNDS = [
+    {
+      label: "Round 1 · Spot the Stroke",
+      items: [
+        { scene: `<span class="who">A neighbor</span> passes you on the street, smiles, and says: "Nice day!"`,
+          options: ["Warm Fuzzy (positive stroke)", "Cold Prickly (negative stroke)", "Not even a stroke"],
+          answer: 0,
+          why: "A smile plus a friendly word is a <b>positive stroke</b>: a small unit of recognition that says “I see you.”" },
+        { scene: `Same neighbor, same street. Except today they <span class="who">walk straight past you like you're not there</span>.`,
+          options: ["Warm Fuzzy (positive stroke)", "Cold Prickly (negative stroke)", "Not even a stroke"],
+          answer: 2,
+          why: "No eye contact, no word, no nod. That's <b>zero strokes</b>, the one option with nothing in it at all, and most people find it the worst of the three." },
+        { scene: `You get a one-line email from a coworker: "Huh. <span class="who">It was a nice day until you showed up.</span>"`,
+          options: ["Warm Fuzzy (positive stroke)", "Cold Prickly (negative stroke)", "Not even a stroke"],
+          answer: 1,
+          why: "Painful, but it's still recognition: someone noticed you enough to say something. That makes it a <b>negative stroke</b>, not nothing." },
+        { scene: `<span class="who">The boss</span> slams the door, points at the clock, and snaps: "Late again! This won't do!"`,
+          options: ["Warm Fuzzy (positive stroke)", "Cold Prickly (negative stroke)"],
+          answer: 1,
+          why: "Unpleasant, pointed, personal: a classic <b>Cold Prickly</b>." },
+        { scene: `<span class="who">An old friend</span>, across the street, locks eyes with you for a second, then looks away and keeps walking, saying nothing.`,
+          options: ["Warm Fuzzy (positive stroke)", "Cold Prickly (negative stroke)", "Not even a stroke"],
+          answer: 2,
+          why: "Eye contact without any acknowledgment still lands as being ignored. <b>No stroke</b> changed hands." },
+      ],
+      closing: {
+        stamp: "ok",
+        headline: "The twist Eric Berne noticed:",
+        body: `Given the choice, most people would rather be snapped at than ignored. A <b>Cold Prickly is still food</b>. Babies who were fed and kept warm but never touched or talked to actually did worse than babies who got less care and more handling. Ren&eacute; Spitz tracked this in orphanages in the 1940s. We never outgrow needing <b>strokes</b>, Berne's word for any unit of recognition, verbal or not, kind or cruel.`,
+      },
+    },
+    {
+      label: "Round 2 · What kind of stroke is it?",
+      items: [
+        { scene: `"I love you."`,
+          options: ["Conditional (for something you did)", "Unconditional (for who you are)"],
+          answer: 1,
+          why: "Nothing earned it. It's about your <b>existence</b>, not your performance. That's <b>unconditional</b>." },
+        { scene: `"I love how you fixed that for me."`,
+          options: ["Conditional (for something you did)", "Unconditional (for who you are)"],
+          answer: 0,
+          why: "Tied directly to an action: <b>conditional</b>. Take away the fix, and the stroke might not have come." },
+        { scene: `"You're an idiot."`,
+          options: ["Conditional (for something you did)", "Unconditional (for who you are)"],
+          answer: 1,
+          why: "The trap: negative strokes can be unconditional too. This one isn't about a mistake; it's aimed at <b>who you supposedly are</b>." },
+        { scene: `"That was a careless way to handle it."`,
+          options: ["Conditional (for something you did)", "Unconditional (for who you are)"],
+          answer: 0,
+          why: "Criticizes the <b>act</b>, not the person. Still conditional, and much easier to hear and fix than the unconditional version." },
+      ],
+      closing: {
+        stamp: "ok",
+        headline: "Why the difference matters:",
+        body: `Conditional strokes ("good job on X") teach you what to repeat. Unconditional ones ("I love you" / "you're an idiot") land on identity itself, harder to shake off either way. Most people are fluent in handing out praise for performance and terrible at the unconditional kind, in both directions.`,
+      },
+    },
+    {
+      label: "Round 3 · The Witch's Rules",
+      intro: `Psychologist <b>Claude Steiner</b> told it as a fable: everyone used to carry a bottomless bag of Warm Fuzzies to give away free, until a witch convinced the town the bag might run dry. So the town quietly adopted five rules for rationing strokes. See if you can catch which rule each scene below is obeying.`,
+      items: [
+        { scene: `Someone says "you look great today." You reply: "Oh, this old thing? It's nothing."`,
+          options: ["Don't give strokes", "Don't ask for strokes", "Don't accept strokes you want", "Don't give yourself strokes"],
+          answer: 2,
+          why: "You wanted that stroke and deflected it anyway. That's <b>“Don't accept strokes if you want them.”</b>" },
+        { scene: `You finish a genuinely hard project. Alone at your desk, you think it, but won't let yourself say, even silently, "I did that well."`,
+          options: ["Don't give strokes", "Don't ask for strokes", "Don't reject unwanted strokes", "Don't give yourself strokes"],
+          answer: 3,
+          why: "Self-praise feels like bragging, so you skip it: <b>“Don't give yourself strokes.”</b>" },
+        { scene: `You're worn out and could really use a hand tonight. You say nothing and hope someone notices.`,
+          options: ["Don't give strokes", "Don't ask for strokes", "Don't accept strokes", "Don't give yourself strokes"],
+          answer: 1,
+          why: "Needing attention and not asking for it directly: <b>“Don't ask for strokes when you need them.”</b>" },
+      ],
+      closing: {
+        stamp: "cross",
+        headline: "The five rules of the stroke economy (Claude Steiner, 1974):",
+        rules: [
+          "Don't give strokes if you have them to give",
+          "Don't ask for strokes when you need them",
+          "Don't accept strokes if you want them",
+          "Don't reject strokes when you don't want them",
+          "Don't give yourself strokes",
+        ],
+        body: `None of this was ever a law of nature. It's a set of habits a lot of us learned so early we mistake them for manners. Try breaking just one, on purpose, today.`,
+      },
+    },
+  ];
+
+  const REFLECT_PROMPT = `Think of someone whose <b>silence</b> has stung you more than their criticism would have. Or think about which of the five rules above you follow without ever having agreed to it. Where does it show up?`;
+  const REFLECT_KEY = "reflect-01-strokes";
+
+  const TOTAL = ROUNDS.reduce((n, r) => n + r.items.length, 0);
+  let roundIdx = 0, itemIdx = 0, doneCount = 0, answered = false;
+
+  const card = document.getElementById("card");
+
+  function progressHTML() {
+    let bars = "";
+    for (let i = 0; i < TOTAL; i++) {
+      const cls = i < doneCount ? "done" : (i === doneCount ? "current" : "");
+      bars += `<i class="${cls}"></i>`;
+    }
+    return `<div class="progress">${bars}</div>`;
+  }
+
+  function renderItem() {
+    answered = false;
+    const round = ROUNDS[roundIdx];
+    const item = round.items[itemIdx];
+    const introBlock = (itemIdx === 0 && round.intro) ? `<p class="deck" style="margin-bottom:16px;">${round.intro}</p>` : "";
+    card.innerHTML = `
+      ${progressHTML()}
+      <div class="round-label">${round.label}</div>
+      ${introBlock}
+      <p class="scene">${item.scene}</p>
+      <div class="choices">
+        ${item.options.map((o, i) => `<button class="choice" data-i="${i}">${o}</button>`).join("")}
+      </div>
+    `;
+    card.querySelectorAll("button.choice").forEach(btn => {
+      btn.addEventListener("click", () => selectAnswer(parseInt(btn.dataset.i, 10)));
+    });
+  }
+
+  function selectAnswer(i) {
+    if (answered) return;
+    answered = true;
+    const round = ROUNDS[roundIdx];
+    const item = round.items[itemIdx];
+    const correct = i === item.answer;
+    doneCount++;
+
+    card.querySelectorAll("button.choice").forEach((btn, idx) => {
+      btn.disabled = true;
+      if (idx === item.answer) btn.classList.add("correct");
+      else if (idx === i) btn.classList.add("wrong");
+    });
+
+    const whyClass = correct ? "ok" : "cross";
+    const stampHTML = `<div class="stamp ${whyClass}">${correct ? "✓ Right call" : "✗ Not quite"}</div>`;
+    const feedback = document.createElement("div");
+    feedback.innerHTML = `<div class="why-box ${whyClass}">${stampHTML}<p class="feedback"><b>Why:</b> ${item.why}</p></div><div class="nextbar"><button class="next" id="nextBtn">Continue →</button></div>`;
+    card.appendChild(feedback);
+    document.getElementById("nextBtn").addEventListener("click", advance);
+    card.querySelector(".choices").style.marginBottom = "16px";
+  }
+
+  function advance() {
+    const round = ROUNDS[roundIdx];
+    if (itemIdx < round.items.length - 1) {
+      itemIdx++;
+      renderItem();
+    } else if (round.closing) {
+      renderClosing(round.closing);
+    } else {
+      nextRoundOrEnd();
+    }
+  }
+
+  function renderClosing(closing) {
+    let rulesHTML = "";
+    if (closing.rules) {
+      rulesHTML = `<ul class="rules-list" style="margin-bottom:16px;">${closing.rules.map((r, i) => `<li><span class="dot"></span><span>${r}</span></li>`).join("")}</ul>`;
+    }
+    card.innerHTML = `
+      ${progressHTML()}
+      <div class="stamp ${closing.stamp}">Lesson</div>
+      <p class="feedback"><b>${closing.headline}</b></p>
+      ${rulesHTML}
+      <p class="feedback">${closing.body}</p>
+      <div class="nextbar"><button class="next" id="nextBtn">Continue →</button></div>
+    `;
+    document.getElementById("nextBtn").addEventListener("click", nextRoundOrEnd);
+  }
+
+  function nextRoundOrEnd() {
+    if (roundIdx < ROUNDS.length - 1) {
+      roundIdx++;
+      itemIdx = 0;
+      renderItem();
+    } else {
+      renderReflect();
+    }
+  }
+
+  function renderReflect() {
+    let saved = "";
+    try { saved = localStorage.getItem(REFLECT_KEY) || ""; } catch (e) {}
+    card.innerHTML = `
+      ${progressHTML()}
+      <div class="reflect-tag">Your turn</div>
+      <h1 style="font-size:21px;">Where does this show up for you?</h1>
+      <p class="feedback">${REFLECT_PROMPT}</p>
+      <textarea class="reflect-box" id="reflectBox" placeholder="A few lines is plenty. This stays on your device, and nobody else sees it."></textarea>
+      <div class="nextbar"><button class="next" id="nextBtn">Continue →</button></div>
+    `;
+    const box = document.getElementById("reflectBox");
+    box.value = saved;
+    box.addEventListener("input", () => {
+      try { localStorage.setItem(REFLECT_KEY, box.value); } catch (e) {}
+    });
+    document.getElementById("nextBtn").addEventListener("click", renderEnd);
+  }
+
+  function renderEnd() {
+    card.innerHTML = `
+      ${progressHTML()}
+      <div class="end-badge">Case closed</div>
+      <h1 style="font-size:22px;">A stroke is just a unit of &ldquo;I see you.&rdquo;</h1>
+      <p class="feedback">Positive or negative, conditional or unconditional, it's still the thing we're all quietly rationed on. The skill isn't finding more strokes out in the world. It's noticing which of the five rules you're already following without having agreed to them.</p>
+      <div class="source"><b>From:</b> Ian Stewart &amp; Vann Joines, <i>TA Today</i> (ch. 8, &ldquo;Strokes&rdquo;) &middot; Claude Steiner, <i>Scripts People Live</i> (ch. 9, &ldquo;The Stroke Economy&rdquo;)</div>
+      <div class="nextbar" style="margin-top:18px;">
+        <button class="next" id="nextBtn">Next game: Who's Talking? →</button>
+      </div>
+    `;
+    document.getElementById("nextBtn").addEventListener("click", () => {
+      window.location.href = "./02-ego-states.html";
+    });
+  }
+
+  function renderIntro() {
+    card.innerHTML = `
+      <div class="card-head">
+        <div>
+          <h1>Warm Fuzzy, Cold Prickly</h1>
+          <p class="deck">A doing-game about why a little bit of attention, even bad attention, beats none at all.</p>
+        </div>
+        <div class="case-no">01<br>STROKES</div>
+      </div>
+      <div class="intro">
+        <p class="lede">Once upon a time, everyone carried a bottomless bag of Warm Fuzzies: soft little bits of attention, free to hand out all day.</p>
+        <p>People felt wonderful. Then a witch convinced the town the bag might one day run dry. So people started rationing: giving fewer fuzzies, accepting fewer, sometimes dyeing a spiky Cold Prickly white and fluffy and passing it off as the real thing, a Plastic Fuzzy.</p>
+        <p>Psychiatrist <b>Eric Berne</b> had a plainer name for all of it. A <b>stroke</b> is any unit of recognition from another person: a word, a glance, an insult, a hug. We never outgrow needing them.</p>
+      </div>
+      <div class="rules-box">
+        <div class="round-label">How this one works</div>
+        <ul class="rules-list">
+          <li><span class="dot"></span><span>Three short rounds, 12 scenes total. Pick an answer each time</span></li>
+          <li><span class="dot"></span><span>Every pick gets an explanation, right or wrong. There's no score to protect</span></li>
+          <li><span class="dot"></span><span>Ends with two minutes to reflect on your own life, privately on this screen</span></li>
+          <li><span class="dot"></span><span>About 5 minutes, start to finish</span></li>
+        </ul>
+      </div>
+      <div class="nextbar"><button class="next" id="startBtn">Start →</button></div>
+    `;
+    document.getElementById("startBtn").addEventListener("click", () => {
+      renderItem();
+    });
+  }
+
+  renderIntro();
+})();
+</script>
+
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => { navigator.serviceWorker.register('./sw.js'); });
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,523 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<meta name="theme-color" content="#171233" />
+<meta name="description" content="Everyone has three voices. Learn to hear which one is speaking, in them, and in you. Game 2 of 5 in the First Transaction series." />
+<link rel="manifest" href="./manifest.json" />
+<link rel="icon" type="image/svg+xml" href="/TA/favicon.svg" />
+<link rel="apple-touch-icon" href="/TA/icon-192.png" />
+<title>Who's Talking?</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #171233; --bg-2: #241c47;
+    --surface: #f2eefb; --surface-2: #e5ddf5; --surface-3: #d9cdf2;
+    --accent: #6c5fe0; --accent-deep: #4a3fa0;
+    --pink: #d9699f; --blue: #5b8fd9;
+    --ok: #1f7568; --wrong: #a8407a; --alt: #5c4fb0;
+    --text: #231c3f; --text-dim: #675f82;
+    --on-bg: #ece7fb; --on-bg-dim: #b4abd9;
+    --shadow: rgba(23, 18, 51, 0.28);
+    --parent: #7b5fe0; --adult: #4f8fd9; --childv: #d9699f;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    background-image:
+      radial-gradient(ellipse 820px 560px at 12% -8%, var(--bg-2), transparent),
+      radial-gradient(ellipse 680px 520px at 108% 12%, #2c1f4a, transparent),
+      radial-gradient(ellipse 600px 420px at 60% 110%, #2a1840, transparent);
+    color: var(--on-bg);
+    font-family: "IBM Plex Sans", system-ui, sans-serif;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    padding: 28px 16px 56px;
+  }
+
+  .stage { width: 100%; max-width: 560px; }
+
+  .masthead { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 16px; padding: 0 4px; }
+  .series { font-family: "IBM Plex Mono", monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--pink); font-weight: 600; }
+  .series small { color: var(--on-bg-dim); font-weight: 500; letter-spacing: 0.08em; }
+  .tag { font-family: "IBM Plex Mono", monospace; font-size: 11px; color: var(--on-bg-dim); text-decoration: none; }
+  .tag:hover { color: var(--pink); }
+
+  .card { background: var(--surface); color: var(--text); border-radius: 22px; box-shadow: 0 24px 60px var(--shadow); padding: 32px 28px 28px; position: relative; }
+
+  .card-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; margin-bottom: 18px; }
+
+  h1 { font-family: "Fraunces", Georgia, serif; font-weight: 500; font-size: 27px; line-height: 1.2; margin: 0 0 6px; text-wrap: balance; letter-spacing: -0.01em; }
+
+  .deck { font-size: 14.5px; color: var(--text-dim); margin: 0; max-width: 42ch; line-height: 1.5; }
+  .case-no { font-family: "IBM Plex Mono", monospace; font-size: 11px; color: var(--text-dim); text-align: right; white-space: nowrap; padding-top: 4px; }
+
+  .progress { display: flex; gap: 5px; margin-bottom: 24px; }
+  .progress i { height: 5px; flex: 1; background: var(--surface-2); border-radius: 999px; overflow: hidden; position: relative; }
+  .progress i.done { background: linear-gradient(90deg, var(--accent), var(--pink)); }
+  .progress i.current::after { content: ""; position: absolute; inset: 0; width: 50%; background: var(--accent); opacity: .55; }
+
+  .round-label { font-family: "IBM Plex Mono", monospace; font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-dim); margin-bottom: 10px; }
+
+  .scene { font-size: 18px; line-height: 1.55; margin: 0 0 8px; min-height: 2.2em; }
+  .cue { font-size: 14.5px; color: var(--text-dim); font-style: italic; margin: 0 0 18px; }
+
+  .choices { display: flex; flex-direction: column; gap: 10px; }
+
+  button.choice {
+    font-family: "IBM Plex Sans", sans-serif; font-size: 16px; font-weight: 500; text-align: left;
+    padding: 14px 17px; border-radius: 14px; border: none; background: var(--surface-2); color: var(--text);
+    cursor: pointer; transition: background 120ms, transform 80ms, box-shadow 120ms;
+  }
+  button.choice:hover { background: var(--surface-3); box-shadow: 0 6px 16px rgba(108,95,224,0.16); }
+  button.choice:active { transform: scale(0.99); }
+  button.choice:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  button.choice.correct { background: color-mix(in srgb, var(--ok) 20%, var(--surface)); box-shadow: 0 0 0 2px color-mix(in srgb, var(--ok) 45%, transparent) inset; }
+  button.choice.wrong { background: color-mix(in srgb, var(--wrong) 18%, var(--surface)); box-shadow: 0 0 0 2px color-mix(in srgb, var(--wrong) 40%, transparent) inset; }
+  button.choice[disabled] { cursor: default; opacity: 0.6; }
+  button.choice.correct[disabled], button.choice.wrong[disabled] { opacity: 1; }
+
+  .stamp {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: "IBM Plex Mono", monospace; font-size: 12px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase;
+    padding: 5px 12px; border-radius: 999px; margin-bottom: 12px; color: #fff;
+  }
+  .stamp.ok { background: var(--ok); }
+  .stamp.cross { background: var(--wrong); }
+
+  .why-box { border-radius: 16px; padding: 16px 18px 17px; margin: 0 0 14px; }
+  .why-box .stamp { margin-bottom: 10px; }
+  .why-box .feedback:last-child { margin-bottom: 0; }
+  .why-box.ok { background: color-mix(in srgb, var(--ok) 10%, var(--surface-2)); }
+  .why-box.cross { background: color-mix(in srgb, var(--wrong) 10%, var(--surface-2)); }
+  .why-box.neutral { background: var(--surface-2); }
+
+  .feedback { font-size: 16px; line-height: 1.6; color: var(--text); margin: 0 0 12px; padding-top: 2px; }
+  .feedback b { color: inherit; }
+
+  .example {
+    background: color-mix(in srgb, var(--accent) 10%, var(--surface));
+    border-radius: 16px; padding: 14px 16px 15px; margin: 0 0 18px; font-size: 15px; line-height: 1.55; color: var(--text);
+  }
+  .ex-label { font-family: "IBM Plex Mono", monospace; font-size: 10.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent-deep); margin-bottom: 6px; }
+
+  .nextbar { display: flex; justify-content: flex-end; }
+  button.next {
+    font-family: "IBM Plex Mono", monospace; font-size: 13px; font-weight: 600; letter-spacing: 0.03em;
+    background: linear-gradient(135deg, var(--accent), var(--pink)); color: #fff; border: none;
+    padding: 12px 20px; border-radius: 999px; cursor: pointer; box-shadow: 0 10px 24px rgba(108,95,224,0.35);
+  }
+  button.next:hover { filter: brightness(1.08); transform: translateY(-1px); }
+
+  .intro p { font-size: 16px; line-height: 1.65; margin: 0 0 14px; }
+  .intro .lede { font-size: 17.5px; font-weight: 500; font-family: "Fraunces", Georgia, serif; font-style: italic; color: var(--accent-deep); }
+
+  .rules-box { background: var(--surface-2); border-radius: 16px; padding: 16px 18px; margin: 18px 0; }
+  .rules-box .round-label { margin-bottom: 10px; }
+  .rules-list { margin: 0; padding-left: 0; list-style: none; display: flex; flex-direction: column; gap: 9px; }
+  .rules-list li { font-size: 14px; line-height: 1.45; display: flex; gap: 10px; color: var(--text); }
+  .rules-list .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); flex: none; margin-top: 7px; }
+
+  .voices { display: flex; gap: 10px; margin: 16px 0 18px; }
+  .voice { flex: 1; border-radius: 14px; padding: 12px 10px; text-align: center; background: var(--surface-2); }
+  .voice .dot { width: 10px; height: 10px; border-radius: 50%; margin: 0 auto 6px; }
+  .voice.p .dot { background: var(--parent); }
+  .voice.a .dot { background: var(--adult); }
+  .voice.c .dot { background: var(--childv); }
+  .voice b { display: block; font-family: "IBM Plex Mono", monospace; font-size: 12.5px; letter-spacing: 0.04em; margin-bottom: 3px; }
+  .voice span { font-size: 12px; color: var(--text-dim); line-height: 1.35; display: block; }
+
+  .pill {
+    display: inline-block; font-family: "IBM Plex Mono", monospace; font-size: 11.5px; font-weight: 600;
+    padding: 2px 10px; border-radius: 999px; letter-spacing: 0.03em; margin-right: 6px; color: #fff;
+  }
+  .pill.p { background: var(--parent); }
+  .pill.a { background: var(--adult); }
+  .pill.c { background: var(--childv); }
+
+  .end-badge { font-family: "IBM Plex Mono", monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ok); margin-bottom: 8px; }
+  .source { margin-top: 20px; padding: 14px 16px; border-radius: 14px; background: var(--surface-2); font-size: 12.5px; color: var(--text-dim); line-height: 1.5; }
+  .source b { color: var(--text); }
+
+  .reflect-tag {
+    font-family: "IBM Plex Mono", monospace; font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+    color: #fff; background: linear-gradient(135deg, var(--accent), var(--pink)); display: inline-block;
+    padding: 5px 12px; border-radius: 999px; margin-bottom: 14px;
+  }
+  textarea.reflect-box {
+    width: 100%; min-height: 120px; resize: vertical;
+    font-family: "IBM Plex Sans", sans-serif; font-size: 15.5px; line-height: 1.55; color: var(--text);
+    background: var(--surface-2); border: none; border-radius: 16px; padding: 14px 16px;
+    margin-bottom: 18px; box-shadow: 0 0 0 2px transparent inset;
+  }
+  textarea.reflect-box::placeholder { color: var(--text-dim); }
+  textarea.reflect-box:focus { outline: none; box-shadow: 0 0 0 2px var(--accent) inset; }
+
+  .foot-link { display: block; text-align: center; margin-top: 18px; font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--on-bg-dim); letter-spacing: 0.03em; }
+
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+</style>
+</head>
+<body>
+
+<div class="stage">
+  <div class="masthead">
+    <div class="series">First Transaction <small>· Game 2 of 5</small></div>
+    <a class="tag" href="./index.html">← All games</a>
+  </div>
+  <div class="card" id="card"></div>
+  <div class="foot-link" id="footlink"></div>
+</div>
+
+<script>
+(function () {
+  const TEACH = [
+    {
+      key: "p", name: "Parent",
+      lede: `<b>Parent</b> is any moment you're behaving, thinking or feeling like one of the big grown-ups from your childhood once did: a parent, a teacher, anyone whose voice got copied into your head. You're not being <i>a</i> parent. You're replaying <i>someone else's</i> old recording.`,
+      note: `It comes in two flavors: a <b>scolding, rule-setting</b> flavor, and a <b>warm, caretaking</b> flavor. Both are still Parent.`,
+      examples: [
+        { line: `"Don't forget your coat, it's cold out!"`, cue: "worried, protective: the caretaking flavor" },
+        { line: `"You should know better than that by now."`, cue: "stern, correcting: the rule-setting flavor" },
+      ],
+    },
+    {
+      key: "a", name: "Adult",
+      lede: `<b>Adult</b> is any moment you're dealing with what's actually in front of you, right now, using the judgment and information you have today, not a memory, not a reflex. Weighing options, stating facts, asking a genuine question.`,
+      note: `Adult isn't "the mature one" or "the best one." It's just the one in direct contact with today's reality.`,
+      examples: [
+        { line: `"The client confirmed 3pm. I've sent the agenda."`, cue: "flat, matter-of-fact" },
+        { line: `"Let's check the numbers before we decide."`, cue: "calm, weighing it up" },
+      ],
+    },
+    {
+      key: "c", name: "Child",
+      lede: `<b>Child</b> is any moment you're feeling or acting the way you did back when you actually were a kid: the unfiltered excitement, the fear, the sulking, the sudden joy. It's not an insult, and it's not immaturity. It's where your rawest, most honest reactions live.`,
+      note: `Everyone (CEOs, grandparents, you, this morning) still visits Child several times a day.`,
+      examples: [
+        { line: `"I don't want to! You can't make me!"`, cue: "stamping a foot" },
+        { line: `"Can I come too? Please? I'll be so good!"`, cue: "bouncing, hopeful" },
+      ],
+    },
+  ];
+  let teachIdx = 0;
+
+  function renderTeach() {
+    const t = TEACH[teachIdx];
+    const isLast = teachIdx === TEACH.length - 1;
+    card.innerHTML = `
+      <div class="round-label">Before you play &middot; voice ${teachIdx + 1} of 3</div>
+      <div class="voices" style="margin-bottom:18px;">
+        ${TEACH.map((tt, i) => `<div class="voice ${tt.key}" style="opacity:${i === teachIdx ? 1 : 0.4};"><div class="dot"></div><b>${tt.name}</b></div>`).join("")}
+      </div>
+      <h1 style="font-size:23px;">${t.name}</h1>
+      <p class="feedback" style="margin-top:8px;">${t.lede}</p>
+      <p class="feedback" style="color:var(--text-dim); font-size:15px;">${t.note}</p>
+      <div class="why-box neutral" style="margin-top:14px;">
+        <div class="round-label" style="margin-bottom:8px;">What it sounds like</div>
+        ${t.examples.map(e => `<p class="scene" style="font-size:16px; margin-bottom:4px;">${e.line}</p><p class="feedback" style="font-size:13.5px; font-style:italic; color:var(--text-dim); margin-bottom:12px;">&mdash; ${e.cue}</p>`).join("")}
+      </div>
+      <div class="nextbar"><button class="next" id="teachNextBtn">${isLast ? "I've got it, start the game →" : "Next voice →"}</button></div>
+    `;
+    document.getElementById("teachNextBtn").addEventListener("click", () => {
+      if (!isLast) { teachIdx++; renderTeach(); }
+      else { renderItem(); }
+    });
+  }
+
+  const ROUNDS = [
+    {
+      label: "Round 1 · The clear cases",
+      items: [
+        {
+          scene: `"Now don't forget your coat, it's cold out there!"`,
+          cue: "worried, finger half-raised",
+          options: [{t:"Parent",k:"p"},{t:"Adult",k:"a"},{t:"Child",k:"c"}],
+          answer: 0,
+          why: "Rules and warnings, handed down the way a caretaker once handed them to you. That's the <b>Parent</b> voice. The worry is the giveaway: it assumes you'll forget, so the speaker's old protective script is running.",
+          example: `Your flatmate catches you at the door before a job interview: &ldquo;Take an umbrella, and eat something first. You never do before these things.&rdquo;<br><br>She isn't checking the forecast. She's repeating how someone used to look after her.`,
+          traps: {
+            1: "Adult would be a fact about the weather, said as information: &ldquo;It's 4&deg; with wind after six, so you'll want a coat.&rdquo; This line adds a warning about <i>you</i> forgetting, which is an inherited script rather than a reading of the present.",
+            2: "Child would be on the receiving end: &ldquo;Ugh, fine, I'll wear the stupid coat.&rdquo; This line is someone instructing another person, so the speaker is in the caretaker role."
+          }
+        },
+        {
+          scene: `"The client confirmed 3pm. I've blocked the room and sent the agenda."`,
+          cue: "flat, matter-of-fact",
+          options: [{t:"Parent",k:"p"},{t:"Adult",k:"a"},{t:"Child",k:"c"}],
+          answer: 1,
+          why: "Dealing with what's actually happening, right now, with the facts at hand. That's <b>Adult</b>. There's no rule and no feeling in it, just status and action.",
+          example: `Team stand-up, Tuesday:<br>&ldquo;Client confirmed for 3pm. I've booked Room 4 and sent the agenda. Anything you need from me before then?&rdquo;<br><br>Nobody is being scolded, and nobody is being scared. It's a plan being updated.`,
+          traps: {
+            0: "Parent would sound like &ldquo;Make sure you're on time for this client, you know how they get.&rdquo; That's a rule and a judgment passed down. This speaker reports facts and actions with no should or always in it.",
+            2: "Child would be &ldquo;Oh no, the client again? I hope they don't make me present.&rdquo; That's a feeling and a reaction, not a status report."
+          }
+        },
+        {
+          scene: `"I don't want to! You can't make me!"`,
+          cue: "stamping a foot",
+          options: [{t:"Parent",k:"p"},{t:"Adult",k:"a"},{t:"Child",k:"c"}],
+          answer: 2,
+          why: "Raw, unfiltered reaction, exactly the way you'd have had it at six years old. That's <b>Child</b>. The protest is about wanting to avoid the thing, not about the thing itself.",
+          example: `A mandatory compliance training is announced in a team meeting. Dan folds his arms: &ldquo;I'm not doing it. You can't make me.&rdquo;<br><br>The words match a schoolyard standoff, which is why the voice is Child, even though Dan is 41 and has a mortgage.`,
+          traps: {
+            0: "Parent would be the authority enforcing the rule: &ldquo;Everyone attends. That's the policy, and I'm not going to argue about it.&rdquo; Here the speaker is the one refusing, not the one enforcing.",
+            1: "Adult would be a reasoned objection: &ldquo;I have a client call that day. Can I do the online version, or attend the 19th session?&rdquo; It names the conflict and offers options, without the defiance."
+          }
+        },
+        {
+          scene: `"Good job, sweetheart. I'm so proud of you."`,
+          cue: "warm, beaming",
+          options: [{t:"Parent",k:"p"},{t:"Adult",k:"a"},{t:"Child",k:"c"}],
+          answer: 0,
+          why: "Still <b>Parent</b>, just the warm, nurturing side of it rather than the rule-enforcing side. Parent isn't only scolding; comfort and praise also come from a parent-figure's script.",
+          example: `A manager at the end of a brutal launch week, to a designer: &ldquo;Good work this week, Ana. I know it was a rough one, and you held it together.&rdquo;<br><br>It's warm and caring, and it has the tone of someone who has been the one looking after people.`,
+          traps: {
+            1: "Adult would be praise based on the record: &ldquo;The launch conversion came in 20% above target, and your checkout fix is why.&rdquo; It's specific and grounded in facts, not a warm, caring tone.",
+            2: "Child would be on the receiving end: &ldquo;Really? Thank you! I didn't think I did well, I was so scared I'd mess it up.&rdquo; Here the speaker is the one being approved of, not the one giving the approval."
+          }
+        },
+        {
+          scene: `"Can I come too? Please? I'll be so good, I promise!"`,
+          cue: "bouncing on toes",
+          options: [{t:"Parent",k:"p"},{t:"Adult",k:"a"},{t:"Child",k:"c"}],
+          answer: 2,
+          why: "Pleading, hopeful, a little performative: recognizably <b>Child</b>. The promise to be good is a bargaining tool for getting a yes, which is what a child uses when they want something from an adult.",
+          example: `A junior colleague overhears that the partners are heading to a client dinner: &ldquo;Can I come too? Please? I'll barely say a word, I promise!&rdquo;<br><br>The eagerness and the bargaining give the voice away.`,
+          traps: {
+            0: "Parent would be the one granting or setting terms: &ldquo;You can come if you stay quiet and sit next to Mark.&rdquo; The speaker is in charge of the yes.",
+            1: "Adult would be a clear request with a reason: &ldquo;I'm handling the follow-up on that account. Would it be okay if I sat in on the second half?&rdquo; It's realistic and specific, with no begging and no promises."
+          }
+        }
+      ],
+      closing: {
+        stamp: "ok",
+        headline: "Three voices, not three types of person.",
+        body: `Psychiatrist <b>Eric Berne</b> noticed everyone slides between three recognizable modes all day: <b>Parent</b> (replaying a parent-figure's words or tone), <b>Adult</b> (responding to the here-and-now with your grown-up resources), and <b>Child</b> (replaying how you felt and acted as a kid). Capital letters, on purpose: Berne meant them as names for a mode, not a verdict on the person using it.`,
+      },
+    },
+    {
+      label: "Round 2 · Same word, different voice",
+      intro: `Here's the trap: you can't always tell the voice from the <i>words</i> alone. Tone and body do a lot of the talking.`,
+      items: [
+        {
+          scene: `"Fine."`,
+          cue: "arms crossed, won't meet your eyes, turns away, after being told no",
+          options: [{t:"Parent",k:"p"},{t:"Adult",k:"a"},{t:"Child",k:"c"}],
+          answer: 2,
+          why: "Same word as the next one, but the sulking and the avoided eye contact say <b>Child</b>, specifically the compliant-but-resentful kind TA calls the <i>Adapted Child</i>. The yes is given, yet the resentment is still running the show.",
+          example: `Manager: &ldquo;We're not moving the deadline.&rdquo;<br>Designer: &ldquo;Fine.&rdquo; (Arms folded, looks at the window, leaves the room.)<br><br>The word agrees. The body doesn't.`,
+          traps: {
+            0: "Parent would be a comeback with a verdict: &ldquo;Fine. But don't come crying to me when the release slips again.&rdquo; That's a lecture aimed at the other person, not a sulk.",
+            1: "Adult would be the same word with a neutral body: a nod and &ldquo;Okay, I'll rework the plan to hit Friday.&rdquo; The words are identical; the posture and the avoided eye contact are what make it Child."
+          }
+        },
+        {
+          scene: `"Fine."`,
+          cue: "brief nod, already reaching for the laptop to adjust the plan",
+          options: [{t:"Parent",k:"p"},{t:"Adult",k:"a"},{t:"Child",k:"c"}],
+          answer: 1,
+          why: "Identical word, completely different voice: practical, already moving on. That's <b>Adult</b>. This is why TA insists on reading tone and posture, not just transcripts.",
+          example: `Same meeting, two minutes later. The designer nods at her laptop: &ldquo;Fine. I'll move the review to Thursday and tell the client today.&rdquo;<br><br>Same word, but now it's the start of a plan.`,
+          traps: {
+            0: "Parent would be &ldquo;Fine. But this is exactly why we plan ahead. Next time, get it right the first time.&rdquo; The word leads into a lecture about the other person's habits.",
+            2: "Child would be &ldquo;Fine...&rdquo; with a sigh and a slumped shoulder. That's the reaction of someone who lost the argument and is still feeling it, not someone moving on."
+          }
+        },
+        {
+          scene: `"You should know better than that by now."`,
+          cue: "wagging a finger",
+          options: [{t:"Parent",k:"p"},{t:"Adult",k:"a"},{t:"Child",k:"c"}],
+          answer: 0,
+          why: "A verdict on someone's character, delivered like a lesson: <b>Parent</b>. &ldquo;Should&rdquo; and &ldquo;by now&rdquo; carry the authority, and the finger is the body doing the same job.",
+          example: `A senior engineer reviewing a pull request: &ldquo;You should know better than to push straight to main by now.&rdquo;<br><br>The comment is about the person's judgment, not the code.`,
+          traps: {
+            1: "Adult would name the event and the fix: &ldquo;This push skipped review, and the build broke at 9am. Next time, open a branch so QA can check it first.&rdquo; It's specific and forward-looking, with no verdict on the person.",
+            2: "Child would be the stung reaction: &ldquo;Ugh, I always mess things up. Sorry.&rdquo; Here the speaker is the one being told off, not the one doing the telling."
+          }
+        },
+        {
+          scene: `"I have no idea what's happening right now, and honestly, I'm a little scared."`,
+          cue: "genuinely open, no performance",
+          options: [{t:"Parent",k:"p"},{t:"Adult",k:"a"},{t:"Child",k:"c"}],
+          answer: 2,
+          why: "An authentic feeling, stated plainly. Still <b>Child</b>. Child isn't &ldquo;immature&rdquo;; it's where our rawest, most direct feelings live. The uncertainty on its own could be Adult, but the fear is Child content.",
+          example: `After an unannounced reorg, a colleague says at the back of the room: &ldquo;I have no idea what's happening right now, and honestly, I'm a little scared.&rdquo;<br><br>Nobody is performing. That raw honesty is the Child talking, and it's a healthy thing for it to do.`,
+          traps: {
+            0: "Parent would be &ldquo;Everyone needs to calm down. Nobody's losing their job, so stop panicking.&rdquo; It reassures from above and dismisses the feeling.",
+            1: "Adult would be &ldquo;We don't have the details yet. Let's list what we need from leadership and when we'll know.&rdquo; It handles the uncertainty with a plan and leaves the feeling out."
+          }
+        }
+      ],
+      closing: {
+        stamp: "cross",
+        headline: "The confusion this game is built to catch:",
+        body: `<b>Child does not mean childish, and Adult does not mean mature or best.</b> They're not a ladder with Adult on top. They're three different rooms in the same house, and healthy people walk in and out of all three, many times a day. A good negotiator can out-Parent a bully and still cry at a film in Child that evening.`,
+      },
+    },
+  ];
+
+  const REFLECT_PROMPT = `Think of your last real disagreement. Which voice were <i>you</i> speaking from: Parent, Adult, or Child? Which voice was the other person in? What might have shifted if you'd both been in Adult?`;
+  const REFLECT_KEY = "reflect-02-ego-states";
+
+  const TOTAL = ROUNDS.reduce((n, r) => n + r.items.length, 0);
+  let roundIdx = 0, itemIdx = 0, doneCount = 0, answered = false;
+  const card = document.getElementById("card");
+
+  function progressHTML() {
+    let bars = "";
+    for (let i = 0; i < TOTAL; i++) {
+      bars += `<i class="${i < doneCount ? "done" : (i === doneCount ? "current" : "")}"></i>`;
+    }
+    return `<div class="progress">${bars}</div>`;
+  }
+
+  function renderItem() {
+    answered = false;
+    const round = ROUNDS[roundIdx];
+    const item = round.items[itemIdx];
+    const introBlock = (itemIdx === 0 && round.intro) ? `<p class="deck" style="margin-bottom:16px;">${round.intro}</p>` : "";
+    card.innerHTML = `
+      ${progressHTML()}
+      <div class="round-label">${round.label}</div>
+      ${introBlock}
+      <p class="scene">${item.scene}</p>
+      <p class="cue">&mdash; ${item.cue}</p>
+      <div class="choices">
+        ${item.options.map((o, i) => `<button class="choice" data-i="${i}"><span class="pill ${o.k}">${o.t}</span></button>`).join("")}
+      </div>
+    `;
+    card.querySelectorAll("button.choice").forEach(btn => {
+      btn.addEventListener("click", () => selectAnswer(parseInt(btn.dataset.i, 10)));
+    });
+  }
+
+  function selectAnswer(i) {
+    if (answered) return;
+    answered = true;
+    const round = ROUNDS[roundIdx];
+    const item = round.items[itemIdx];
+    const correct = i === item.answer;
+    const whyClass = correct ? "ok" : "cross";
+    doneCount++;
+    card.querySelectorAll("button.choice").forEach((btn, idx) => {
+      btn.disabled = true;
+      if (idx === item.answer) btn.classList.add("correct");
+      else if (idx === i) btn.classList.add("wrong");
+    });
+    const stampHTML = `<div class="stamp ${whyClass}">${correct ? "✓ Right call" : "✗ Not quite"}</div>`;
+    const bodyHTML = correct
+      ? `<p class="feedback"><b>Why:</b> ${item.why}</p>`
+      : `<p class="feedback"><b>You picked ${item.options[i].t}.</b> ${item.traps[i]}</p>
+         <p class="feedback"><b>The right call is ${item.options[item.answer].t}.</b> ${item.why}</p>`;
+    const exampleHTML = `<div class="example"><div class="ex-label">Real conversation</div>${item.example}</div>`;
+    const feedback = document.createElement("div");
+    feedback.innerHTML = `<div class="why-box ${whyClass}">${stampHTML}${bodyHTML}</div>${exampleHTML}<div class="nextbar"><button class="next" id="nextBtn">Continue →</button></div>`;
+    card.appendChild(feedback);
+    document.getElementById("nextBtn").addEventListener("click", advance);
+  }
+
+  function advance() {
+    const round = ROUNDS[roundIdx];
+    if (itemIdx < round.items.length - 1) { itemIdx++; renderItem(); }
+    else if (round.closing) { renderClosing(round.closing); }
+    else { nextRoundOrEnd(); }
+  }
+
+  function renderClosing(closing) {
+    card.innerHTML = `
+      ${progressHTML()}
+      <div class="stamp ${closing.stamp}">Lesson</div>
+      <p class="feedback"><b>${closing.headline}</b></p>
+      <p class="feedback">${closing.body}</p>
+      <div class="nextbar"><button class="next" id="nextBtn">Continue →</button></div>
+    `;
+    document.getElementById("nextBtn").addEventListener("click", nextRoundOrEnd);
+  }
+
+  function nextRoundOrEnd() {
+    if (roundIdx < ROUNDS.length - 1) { roundIdx++; itemIdx = 0; renderItem(); }
+    else { renderReflect(); }
+  }
+
+  function renderReflect() {
+    let saved = "";
+    try { saved = localStorage.getItem(REFLECT_KEY) || ""; } catch (e) {}
+    card.innerHTML = `
+      ${progressHTML()}
+      <div class="reflect-tag">Your turn</div>
+      <h1 style="font-size:21px;">Which voice was running the show?</h1>
+      <p class="feedback">${REFLECT_PROMPT}</p>
+      <textarea class="reflect-box" id="reflectBox" placeholder="A few lines is plenty. This stays on your device, and nobody else sees it."></textarea>
+      <div class="nextbar"><button class="next" id="nextBtn">Continue →</button></div>
+    `;
+    const box = document.getElementById("reflectBox");
+    box.value = saved;
+    box.addEventListener("input", () => { try { localStorage.setItem(REFLECT_KEY, box.value); } catch (e) {} });
+    document.getElementById("nextBtn").addEventListener("click", renderEnd);
+  }
+
+  function renderEnd() {
+    card.innerHTML = `
+      ${progressHTML()}
+      <div class="end-badge">Case closed</div>
+      <h1 style="font-size:22px;">Three voices. One of them is talking right now.</h1>
+      <p class="feedback">Parent, Adult, Child: not a personality type, just which part of you has the floor at a given moment. Once you can hear the three voices in other people, the next game is about what happens when two voices try to talk to each other.</p>
+      <div class="source"><b>From:</b> Ian Stewart &amp; Vann Joines, <i>TA Today</i> (ch. 2&ndash;3, &ldquo;The Ego-State Model&rdquo; &amp; &ldquo;Functional Analysis&rdquo;)</div>
+      <div class="nextbar" style="margin-top:18px;"><button class="next" id="nextBtn">Next game: Keep It Going or Cross It →</button></div>
+    `;
+    document.getElementById("nextBtn").addEventListener("click", () => {
+      window.location.href = "./03-transactions.html";
+    });
+  }
+
+  function renderIntro() {
+    card.innerHTML = `
+      <div class="card-head">
+        <div>
+          <h1>Who's Talking?</h1>
+          <p class="deck">Everyone has three voices. Learn to hear which one is speaking, in them, and in you.</p>
+        </div>
+        <div class="case-no">02<br>EGO STATES</div>
+      </div>
+      <div class="intro">
+        <p class="lede">You already do this instinctively. TA just gives it names.</p>
+        <p>Psychiatrist Eric Berne noticed that at any moment, a person is speaking from one of three <b>ego states</b>: consistent little bundles of feeling, thought and behavior. Here's the one-line version of each; the next three screens walk through them properly, one at a time, with examples, before you're asked to call a single one yourself.</p>
+      </div>
+      <div class="voices">
+        <div class="voice p"><div class="dot"></div><b>Parent</b><span>Copying how a parent-figure once acted toward you</span></div>
+        <div class="voice a"><div class="dot"></div><b>Adult</b><span>Responding to right now, with grown-up resources</span></div>
+        <div class="voice c"><div class="dot"></div><b>Child</b><span>Replaying how you felt &amp; acted as a kid</span></div>
+      </div>
+      <div class="rules-box">
+        <div class="round-label">How this one works</div>
+        <ul class="rules-list">
+          <li><span class="dot"></span><span>Three quick lessons first, one per voice, then 9 lines across 2 rounds</span></li>
+          <li><span class="dot"></span><span>Every pick gets an explanation plus a real example, right or wrong</span></li>
+          <li><span class="dot"></span><span>Ends with two minutes to reflect on your own life, privately on this screen</span></li>
+          <li><span class="dot"></span><span>About 6 minutes, start to finish</span></li>
+        </ul>
+      </div>
+      <div class="nextbar"><button class="next" id="startBtn">Learn the three voices →</button></div>
+    `;
+    document.getElementById("startBtn").addEventListener("click", () => { teachIdx = 0; renderTeach(); });
+  }
+
+  renderIntro();
+})();
+</script>
+
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => { navigator.serviceWorker.register('./sw.js'); });
+  }
+</script>
+</body>
+</html>
