@@ -2,6 +2,7 @@ import { useState } from "react";
 import type { DiagnoseLevel } from "../content/types";
 import { Button } from "../ui/Button";
 import { DialogueRow, Callout } from "../ui/Dialogue";
+import { playGameMove, playSuccess } from "../ui/sound";
 
 interface DiagnoseProps {
   level: DiagnoseLevel;
@@ -10,7 +11,7 @@ interface DiagnoseProps {
   onComplete: (result: { score: number; correct: boolean }) => void;
 }
 
-/** Diagnose engine (section 5): read the moment, tap one option, see per-option feedback, then the lesson. */
+/** Diagnose engine: read the moment, tap one option, see per-option feedback, then the lesson. */
 export function Diagnose({ level, whyRubric, onComplete }: DiagnoseProps) {
   const [picked, setPicked] = useState<number | null>(null);
   const [why, setWhy] = useState("");
@@ -18,6 +19,15 @@ export function Diagnose({ level, whyRubric, onComplete }: DiagnoseProps) {
 
   const correct = picked === level.answer;
   const needsWhy = Boolean(whyRubric?.length);
+
+  function handlePick(i: number) {
+    setPicked(i);
+    if (i === level.answer) {
+      playSuccess();
+    } else {
+      playGameMove();
+    }
+  }
 
   function finish() {
     const whyHits = whyRubric
@@ -29,7 +39,8 @@ export function Diagnose({ level, whyRubric, onComplete }: DiagnoseProps) {
   }
 
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-5">
+      {/* Dialogue / Scene prompt */}
       {level.npc && level.line ? (
         <DialogueRow name={level.npc} text={level.line} expression={level.expression} />
       ) : (
@@ -37,39 +48,84 @@ export function Diagnose({ level, whyRubric, onComplete }: DiagnoseProps) {
       )}
 
       {level.npc && (
-        <div className="text-[17px] leading-6 text-ta-white/90 px-1">{level.question}</div>
+        <div className="rounded-xl bg-slate-900/80 border border-white/10 p-3.5 text-[15px] leading-relaxed text-slate-200">
+          <span className="text-ta-yellow font-bold mr-1">&bull;</span>
+          {level.question}
+        </div>
       )}
 
-      <div className="flex flex-col gap-2">
-        {level.options.map((opt, i) => (
-          <Button
-            key={i}
-            variant={picked === null ? "option" : i === picked ? "selected" : "option"}
-            disabled={picked !== null}
-            onClick={() => setPicked(i)}
-          >
-            {opt.text}
-          </Button>
-        ))}
+      {/* Options */}
+      <div className="flex flex-col gap-2.5">
+        <div className="text-[12px] font-mono uppercase tracking-wider text-ta-grey px-1">
+          Diagnose the Ego State
+        </div>
+
+        {level.options.map((opt, i) => {
+          const isSelected = picked === i;
+          const isCorrect = i === level.answer;
+          let variant: "option" | "selected" | "game-move" = "option";
+
+          if (picked !== null) {
+            if (isSelected) {
+              variant = isCorrect ? "selected" : "game-move";
+            }
+          }
+
+          return (
+            <Button
+              key={i}
+              variant={variant}
+              disabled={picked !== null}
+              onClick={() => handlePick(i)}
+              className="relative"
+            >
+              <span>{opt.text}</span>
+              {picked !== null && isSelected && (
+                <span
+                  className={`text-xs font-mono font-bold px-2 py-0.5 rounded-full ${
+                    isCorrect
+                      ? "bg-emerald-500/20 text-emerald-300 border border-emerald-400/30"
+                      : "bg-rose-500/20 text-rose-300 border border-rose-400/30"
+                  }`}
+                >
+                  {isCorrect ? "Correct ✓" : "Incorrect ×"}
+                </span>
+              )}
+            </Button>
+          );
+        })}
       </div>
-      {picked !== null && <Callout label="Read">{level.options[picked].feedback}</Callout>}
+
+      {/* Per-option feedback callout */}
+      {picked !== null && (
+        <Callout label={correct ? "Insight" : "Tell"}>
+          {level.options[picked].feedback}
+        </Callout>
+      )}
+
+      {/* L3 free-text why */}
       {picked !== null && needsWhy && !whySubmitted && (
-        <div className="ta-fade flex flex-col gap-2">
+        <div className="ta-fade rounded-2xl bg-slate-900/90 border border-white/10 p-4 flex flex-col gap-3 shadow-xl">
+          <div className="text-[14px] font-semibold text-slate-200">
+            Explain your diagnosis (under 60 words):
+          </div>
           <textarea
-            className="w-full rounded-lg p-3 text-ta-black text-[17px]"
+            className="w-full rounded-xl p-3 text-slate-100 bg-black/50 border border-slate-700 focus:border-ta-yellow focus:outline-none text-[15px] leading-relaxed resize-none"
             rows={3}
-            placeholder="Why? (under 60 words)"
+            placeholder="Identify the behavioral cues and psychological level..."
             value={why}
             onChange={(e) => setWhy(e.target.value)}
           />
           <Button variant="ghost" onClick={() => setWhySubmitted(true)}>
-            Submit
+            Submit Analysis
           </Button>
         </div>
       )}
+
+      {/* Continue */}
       {picked !== null && (!needsWhy || whySubmitted) && (
-        <Button variant="ghost" onClick={finish}>
-          Continue
+        <Button variant="primary" onClick={finish} className="mt-2">
+          Continue &rarr;
         </Button>
       )}
     </div>

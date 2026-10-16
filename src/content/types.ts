@@ -2,6 +2,13 @@ export type Difficulty = "L1" | "L2" | "L3";
 
 export type EgoState = "P" | "A" | "C" | "CP" | "NP" | "FC" | "AC";
 
+/** Reduces a functional/structural EgoState tag to the structural circle it lights up. */
+export function structuralOf(state: EgoState): "P" | "A" | "C" {
+  if (state === "CP" || state === "NP" || state === "P") return "P";
+  if (state === "FC" || state === "AC" || state === "C") return "C";
+  return "A";
+}
+
 export type Tag = "best" | "ok" | "game-move";
 
 export type Expression = "neutral" | "tense" | "open";

@@ -2,60 +2,180 @@
 
 :root {
   --ta-yellow: #fffc00;
-  --ta-black: #000000;
+  --ta-amber: #ffb800;
+  --ta-black: #080a10;
+  --ta-dark: #0f131f;
+  --ta-surface-dark: #151a2a;
+  --ta-surface-elevated: #1e243b;
+  --ta-border: rgba(255, 255, 255, 0.12);
   --ta-white: #ffffff;
-  --ta-grey: #8e8e93;
+  --ta-grey: #94a3b8;
   --ta-red: #ff3b30;
+  --ta-emerald: #10b981;
+  --ta-cyan: #06b6d4;
+  --ta-purple: #a855f7;
 
   --ta-bg: var(--ta-black);
-  --ta-surface: var(--ta-white);
-  --ta-text-on-bg: var(--ta-white);
-  --ta-text-on-surface: var(--ta-black);
+  --ta-surface: var(--ta-surface-dark);
+  --ta-text-on-bg: #f8fafc;
+  --ta-text-on-surface: #ffffff;
+  
+  --w1-color: #ff9500;
+  --w2-color: #00e5ff;
+  --w3-color: #a855f7;
+  --w4-color: #f43f5e;
+  --w5-color: #06b6d4;
+  --w6-color: #10b981;
+  --w7-color: #f59e0b;
 }
 
 [data-theme="light"] {
-  --ta-bg: var(--ta-white);
-  --ta-surface: var(--ta-white);
-  --ta-text-on-bg: var(--ta-black);
-  --ta-text-on-surface: var(--ta-black);
+  --ta-bg: #f4f6fa;
+  --ta-surface: #ffffff;
+  --ta-text-on-bg: #090d16;
+  --ta-text-on-surface: #090d16;
 }
 
 @theme {
   --color-ta-yellow: #fffc00;
-  --color-ta-black: #000000;
+  --color-ta-amber: #ffb800;
+  --color-ta-black: #080a10;
+  --color-ta-dark: #0f131f;
+  --color-ta-surface-dark: #151a2a;
+  --color-ta-surface-elevated: #1e243b;
   --color-ta-white: #ffffff;
-  --color-ta-grey: #8e8e93;
+  --color-ta-grey: #94a3b8;
   --color-ta-red: #ff3b30;
-  --font-sans: Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --color-ta-emerald: #10b981;
+  --color-ta-cyan: #06b6d4;
+  --color-ta-purple: #a855f7;
+  --font-sans: Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 }
 
 html,
 body,
 #root {
-  height: 100%;
+  min-height: 100%;
 }
 
 body {
   margin: 0;
-  background: var(--ta-bg);
+  background-color: var(--ta-bg);
+  background-image: 
+    radial-gradient(circle at 50% 0%, rgba(255, 252, 0, 0.05), transparent 45%),
+    radial-gradient(circle at 100% 50%, rgba(168, 85, 247, 0.04), transparent 35%),
+    radial-gradient(circle at 0% 100%, rgba(6, 182, 212, 0.04), transparent 35%);
+  background-attachment: fixed;
   color: var(--ta-text-on-bg);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
+/* Animations & Visual Juice */
 .ta-fade {
-  animation: ta-fade-in 150ms ease-out;
+  animation: ta-fade-in 220ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.ta-pop {
+  animation: ta-pop-in 260ms cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.ta-pulse-glow {
+  animation: ta-glow 2.5s ease-in-out infinite alternate;
+}
+
+.ta-shake {
+  animation: ta-shake-effect 400ms cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+.ta-float {
+  animation: ta-floating 3s ease-in-out infinite;
 }
 
 @keyframes ta-fade-in {
   from {
     opacity: 0;
+    transform: translateY(6px);
   }
   to {
     opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes ta-pop-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.92) translateY(8px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes ta-glow {
+  0% {
+    filter: drop-shadow(0 0 6px rgba(255, 252, 0, 0.25));
+  }
+  100% {
+    filter: drop-shadow(0 0 16px rgba(255, 252, 0, 0.65));
+  }
+}
+
+@keyframes ta-floating {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+@keyframes ta-shake-effect {
+  10%, 90% { transform: translate3d(-1px, 0, 0); }
+  20%, 80% { transform: translate3d(2px, 0, 0); }
+  30%, 50%, 70% { transform: translate3d(-3px, 0, 0); }
+  40%, 60% { transform: translate3d(3px, 0, 0); }
+}
+
+@keyframes ta-laser {
+  from {
+    stroke-dashoffset: 24;
+  }
+  to {
+    stroke-dashoffset: 0;
   }
 }
 
 .ta-tap {
   min-height: 44px;
+  touch-action: manipulation;
+  user-select: none;
+}
+
+/* Glassmorphism surfaces */
+.ta-glass {
+  background: rgba(21, 26, 42, 0.82);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.ta-glass-hover {
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ta-glass-hover:hover {
+  background: rgba(28, 35, 56, 0.9);
+  border-color: rgba(255, 255, 255, 0.22);
+  transform: translateY(-1.5px);
+  box-shadow: 0 8px 24px -4px rgba(0, 0, 0, 0.5), 0 0 16px -2px rgba(255, 252, 0, 0.1);
+}
+
+/* Laser vector animated stroke */
+.ta-laser-flow {
+  stroke-dasharray: 6 3;
+  animation: ta-laser 0.8s linear infinite;
 }
