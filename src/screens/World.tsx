@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useSession } from "../state/store";
 import { allResults } from "../state/db";
-import { worldById } from "../content/registry";
+import { worldById, levels as levelContent } from "../content/registry";
 import { isBossUnlocked } from "../state/mastery";
 import { WorldIcon } from "../ui/WorldIcon";
 import { playTap } from "../ui/sound";
@@ -106,6 +106,7 @@ export function World() {
           const prevAttempted = i === 0 || attempted.has(world.levels[i - 1].id);
           const isCompleted = attempted.has(l.id);
           const unlocked = isBoss ? bossReady : prevAttempted;
+          const hasContent = Boolean(levelContent[l.id]);
 
           // Boss Level card: dramatic high-stakes visual
           if (isBoss) {
@@ -188,13 +189,17 @@ export function World() {
               </div>
 
               <div className="shrink-0">
-                {unlocked ? (
+                {!unlocked ? (
+                  <span className="text-xs font-mono text-slate-600">🔒</span>
+                ) : hasContent ? (
                   <span className="text-xs font-mono text-ta-yellow flex items-center gap-1 font-bold">
                     <span>PLAY</span>
                     <span>&rarr;</span>
                   </span>
                 ) : (
-                  <span className="text-xs font-mono text-slate-600">🔒</span>
+                  <span className="text-[10px] font-mono text-slate-500 border border-slate-700 rounded-full px-2 py-0.5">
+                    NOT BUILT YET
+                  </span>
                 )}
               </div>
             </button>

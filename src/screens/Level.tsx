@@ -189,18 +189,50 @@ export function Level() {
         </div>
       )}
 
-      {/* Coming Soon Preview for unfinished levels */}
+      {/* Honest placeholder for unfinished levels — never show stub.playsLike here,
+          it's an internal design note ("the player runs a week...") written for
+          building the level, not for a player reading it. */}
       {!content && (
-        <div className="ta-fade rounded-3xl bg-slate-900/80 border border-white/10 p-6 flex flex-col gap-3 shadow-xl backdrop-blur-md">
+        <div className="ta-fade rounded-3xl bg-slate-900/80 border border-white/10 p-6 flex flex-col gap-4 shadow-xl backdrop-blur-md">
           <div className="flex items-center gap-2 text-ta-yellow font-bold text-base">
             <span>🚧</span>
-            <span>Scenario In Development</span>
+            <span>This level isn't built yet</span>
           </div>
+
           <div className="text-[15px] leading-relaxed text-slate-200">
-            {stub.playsLike}
+            TA Arena is still early: only one level, <span className="font-bold text-white">3-3 &ldquo;Cross It&rdquo;</span>,
+            is fully playable right now. The rest of the map is the plan for what's coming, not something you can play yet.
           </div>
-          <div className="text-xs font-mono text-slate-400 border-t border-white/10 pt-3 mt-1">
-            Engine: <span className="text-ta-yellow font-bold">{stub.mechanic}</span> &bull; Concepts: {stub.concepts.join(", ")}
+
+          {stub.concepts.length > 0 && (
+            <div className="text-[13px] leading-relaxed text-slate-300">
+              <span className="text-slate-400">This level will teach: </span>
+              {stub.concepts
+                .map((cid) => conceptById(cid)?.concept)
+                .filter(Boolean)
+                .join(" · ")}
+            </div>
+          )}
+
+          <div className="flex flex-col gap-2 pt-1">
+            <button
+              className="ta-tap rounded-xl bg-ta-yellow text-slate-950 font-bold text-sm py-2.5 px-4"
+              onClick={() => {
+                playTap();
+                navigate("level", { worldId: 3, levelId: "3-3" });
+              }}
+            >
+              Play the finished level instead &rarr;
+            </button>
+            <button
+              className="ta-tap rounded-xl bg-slate-800 text-slate-200 font-semibold text-sm py-2.5 px-4"
+              onClick={() => {
+                playTap();
+                navigate("world", { worldId: world.id });
+              }}
+            >
+              Back to {world.theme}
+            </button>
           </div>
         </div>
       )}
