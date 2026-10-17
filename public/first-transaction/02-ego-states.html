@@ -15,7 +15,7 @@
 <style>
   :root {
     --bg: #171233; --bg-2: #241c47;
-    --surface: #f2eefb; --surface-2: #e5ddf5; --surface-3: #d9cdf2;
+    --surface: #f2eefb; --surface-2: #c9b8e6; --surface-3: #bda8e2;
     --accent: #6c5fe0; --accent-deep: #4a3fa0;
     --pink: #d9699f; --blue: #5b8fd9;
     --ok: #1f7568; --wrong: #a8407a; --alt: #5c4fb0;
@@ -92,19 +92,20 @@
   .stamp.ok { background: var(--ok); }
   .stamp.cross { background: var(--wrong); }
 
-  .why-box { border-radius: 16px; padding: 16px 18px 17px; margin: 0 0 14px; }
+  .why-box { border-radius: 16px; padding: 16px 18px 17px 20px; margin: 0 0 14px; border-left: 5px solid transparent; box-shadow: 0 8px 22px rgba(23,18,51,0.12); }
   .why-box .stamp { margin-bottom: 10px; }
   .why-box .feedback:last-child { margin-bottom: 0; }
-  .why-box.ok { background: color-mix(in srgb, var(--ok) 10%, var(--surface-2)); }
-  .why-box.cross { background: color-mix(in srgb, var(--wrong) 10%, var(--surface-2)); }
-  .why-box.neutral { background: var(--surface-2); }
+  .why-box.ok { background: color-mix(in srgb, var(--ok) 45%, white); border-left-color: var(--ok); }
+  .why-box.cross { background: color-mix(in srgb, var(--wrong) 42%, white); border-left-color: var(--wrong); }
+  .why-box.neutral { background: color-mix(in srgb, var(--accent) 22%, white); border-left-color: var(--accent); }
 
   .feedback { font-size: 16px; line-height: 1.6; color: var(--text); margin: 0 0 12px; padding-top: 2px; }
   .feedback b { color: inherit; }
 
   .example {
-    background: color-mix(in srgb, var(--accent) 10%, var(--surface));
-    border-radius: 16px; padding: 14px 16px 15px; margin: 0 0 18px; font-size: 15px; line-height: 1.55; color: var(--text);
+    background: color-mix(in srgb, var(--accent) 38%, white);
+    border-left: 5px solid var(--accent); border-radius: 16px; padding: 14px 16px 15px 18px; margin: 0 0 18px; font-size: 15px; line-height: 1.55; color: var(--text);
+    box-shadow: 0 8px 22px rgba(23,18,51,0.10);
   }
   .ex-label { font-family: "IBM Plex Mono", monospace; font-size: 10.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent-deep); margin-bottom: 6px; }
 

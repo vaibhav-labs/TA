@@ -15,7 +15,7 @@
 <style>
   :root {
     --bg: #171233; --bg-2: #241c47;
-    --surface: #f2eefb; --surface-2: #e5ddf5; --surface-3: #d9cdf2;
+    --surface: #f2eefb; --surface-2: #c9b8e6; --surface-3: #bda8e2;
     --accent: #6c5fe0; --accent-deep: #4a3fa0;
     --pink: #d9699f; --blue: #5b8fd9;
     --ok: #1f7568; --wrong: #a8407a; --alt: #5c4fb0;
@@ -73,12 +73,12 @@
     letter-spacing: 0.04em; text-transform: uppercase; padding: 5px 12px; border-radius: 999px; margin-bottom: 12px; color: #fff;
   }
   .stamp.ok { background: var(--ok); } .stamp.cross { background: var(--wrong); } .stamp.amber { background: var(--alt); }
-  .why-box { border-radius: 16px; padding: 16px 18px 17px; margin: 0 0 18px; }
+  .why-box { border-radius: 16px; padding: 16px 18px 17px 20px; margin: 0 0 18px; border-left: 5px solid transparent; box-shadow: 0 8px 22px rgba(23,18,51,0.12); }
   .why-box .stamp { margin-bottom: 10px; }
   .why-box .feedback { margin: 0; }
-  .why-box.ok { background: color-mix(in srgb, var(--ok) 10%, var(--surface-2)); }
-  .why-box.cross { background: color-mix(in srgb, var(--wrong) 10%, var(--surface-2)); }
-  .why-box.amber { background: color-mix(in srgb, var(--alt) 10%, var(--surface-2)); }
+  .why-box.ok { background: color-mix(in srgb, var(--ok) 45%, white); border-left-color: var(--ok); }
+  .why-box.cross { background: color-mix(in srgb, var(--wrong) 42%, white); border-left-color: var(--wrong); }
+  .why-box.amber { background: color-mix(in srgb, var(--alt) 40%, white); border-left-color: var(--alt); }
   .feedback { font-size: 16px; line-height: 1.6; color: var(--text); margin: 0 0 18px; padding-top: 2px; }
   .feedback b { color: inherit; }
   .nextbar { display: flex; justify-content: flex-end; }
