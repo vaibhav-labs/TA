@@ -1,4 +1,7 @@
-const CACHE = "first-transaction-v1";
+// Bump this version string on every deploy that changes page content.
+// Service workers only get re-checked when this file's own bytes change,
+// so an unchanged version here means installed/cached clients never see updates.
+const CACHE = "first-transaction-v2";
 const ASSETS = [
   "./index.html",
   "./01-strokes.html",
@@ -25,23 +28,25 @@ self.addEventListener("activate", (event) => {
   self.clients.claim();
 });
 
+// Network-first: always try to serve the latest page when online, and only
+// fall back to the cached copy if the network is unavailable (true offline
+// use). A cache-first strategy here was the bug: it could silently freeze
+// a visitor on the exact snapshot that existed the first time they opened
+// the page, with no way for them to tell anything was stale.
 self.addEventListener("fetch", (event) => {
   const req = event.request;
   if (req.method !== "GET") return;
   if (new URL(req.url).origin !== self.location.origin) return;
 
   event.respondWith(
-    caches.match(req).then((cached) => {
-      const network = fetch(req)
-        .then((resp) => {
-          if (resp && resp.ok) {
-            const copy = resp.clone();
-            caches.open(CACHE).then((cache) => cache.put(req, copy));
-          }
-          return resp;
-        })
-        .catch(() => cached);
-      return cached || network;
-    })
+    fetch(req)
+      .then((resp) => {
+        if (resp && resp.ok) {
+          const copy = resp.clone();
+          caches.open(CACHE).then((cache) => cache.put(req, copy));
+        }
+        return resp;
+      })
+      .catch(() => caches.match(req))
   );
 });
