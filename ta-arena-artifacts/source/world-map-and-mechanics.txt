@@ -1,0 +1,357 @@
+Coverage check: Berne 1961 feeds 11 rows, GPP 24, Steiner 11, TA Today 31 (rows overlap). Every chapter of each book with teachable content is represented; the chapters dropped are Berne 1961's clinical case appendices and Steiner's chapters on 1970s radical-therapy politics, which are referenced in lesson cards but not gamified.
+[H2] 4. The world map
+Seven worlds, six games each, 42 games, played in order. Each world unlocks when the previous world's boss is beaten at the player's level. The order is the dependency order of the theory: you cannot diagnose a game (World 4) until you can read a transaction (World 3), which needs ego states (World 2), which only matter once you feel why people transact at all (World 1). Scripts (World 6) come late because they are the reason for the games, and the reason only lands after the player has caught themselves playing a few.
+World
+Theme
+What the player can do after it
+Boss
+1 Hunger
+Strokes and time
+Explain why a person keeps a bad relationship, count strokes in a greeting, spot a pastime
+The Stroke Economy
+2 Three Voices
+Ego states
+Diagnose P/A/C from voice, words, posture; tell contamination from Adult
+The Contaminated Adult
+3 Vectors
+Transactions
+Keep a conversation open, cross one on purpose, hear the ulterior level
+The Salesman (angular transaction)
+4 The Thesaurus
+Games
+Name the game from the switch, refuse to play, write the full analysis
+Why Don't You–Yes But (many-handed)
+5 Underneath
+Rackets, discounts, passivity
+Tell racket from real feeling, find the discount level, spot over-adaptation
+The Discount Matrix
+6 The Plan
+Scripts
+Draw a script matrix from a life story, hear a driver, name the injunction
+The Script Matrix
+7 Autonomy
+Contracts, permission, intimacy
+Write a contract, give permission, decline a Rescue, sustain a game-free exchange
+After Games, What?
+[H3] World 1 — Hunger (strokes and time structuring)
+#
+Game
+Mechanic (sec. 5)
+Concepts
+Plays like
+1.1
+Spinal Cord
+Choice-story
+1
+Spitz's infants, Levine's rats: the player runs a week with zero recognition and watches a mood meter fall; lesson: stroke hunger is biological
+1.2
+Stroke Sorter
+Sort-it
+2, 3
+Lines fly in; drag each to positive/negative × conditional/unconditional; the twist round: "which of these would you accept?" (filter)
+1.3
+Hi–Hi
+Counter
+6
+Mr C returns from vacation; the player builds the greeting to pay the ~30 strokes owed; too few = offence, too many = "is he selling insurance?"
+1.4
+The Party
+Floor-plan
+5
+Six corners of a cocktail party; identify each as ritual / pastime / activity / game / intimacy / withdrawal from 3 lines of overheard talk
+1.5
+PTA Three Ways
+Choice-story
+5, 7 (preview)
+Same pastime at P–P ("Juvenile Delinquency"), A–A ("PTA"), C–C levels; player matches the level
+1.6
+Boss: The Stroke Economy
+Rule-breaker
+4
+Steiner's five rules are the "laws" of a town; the player must break each one in a scene and feel the pushback; L3 argues why the rules exist (who benefits)
+[H3] World 2 — Three Voices (ego states)
+#
+Game
+Mechanic
+Concepts
+Plays like
+2.1
+Who Said That
+Diagnose
+7, 8
+A line, a tone, a posture: Parent, Adult or Child? Starts with easy archetypes, ends with mixed cues
+2.2
+Five Faces
+Diagnose
+9, 10
+Functional model: CP / NP / A / FC / AC, each with a + and − side; the hard round shows negative NP (smothering) and positive CP (firm boundary)
+2.3
+Egogram
+Build
+11
+Player draws their own egogram, then one for a character from a 10-line monologue; compares
+2.4
+Four Ways to Know
+Diagnose
+12, 22
+Same ego-state call made from behaviour, from how others respond, from history, from the character's own sense; player must get 2 of 4 to agree
+2.5
+Little Professor
+Choice-story
+15
+Second-order structure: Mike (age 3) at the dinner table from GPP; player plays the father and decides whether to break the game in statu nascendi
+2.6
+Boss: The Contaminated Adult
+Spot-the-leak
+13, 14
+Ten "Adult" statements; some are Parent prejudice, some Child delusion, some double; L3 also flags exclusion
+[H3] World 3 — Vectors (transactions)
+#
+Game
+Mechanic
+Concepts
+Plays like
+3.1
+Draw the Arrow
+Vector
+16, 17, 20
+Two PAC stacks; player drags stimulus and response arrows; checks complementarity
+3.2
+Keep It Going
+Choice-story
+17
+Pick the response that keeps a complementary chain alive for 6 turns — including an unhealthy P–C chain, to make the point
+3.3
+Cross It
+Choice-story
+18, 21
+A Child-to-Parent whine arrives; player must cross it to reach Adult–Adult without starting Uproar; Karpman's options as the menu
+3.4
+Cuff Links
+Replay
+18
+Berne's example, both crossings (Type I transference, Type II counter-transference); player causes each
+3.5
+The Barn
+Two-track
+19
+Duplex transaction: the player writes both the social line and the psychological line for each turn of the cowboy scene
+3.6
+Boss: The Salesman
+Two-track
+19
+Angular transaction: "This one is better, but you can't afford it." Player must respond from Adult at both levels three times in a row
+[H3] World 4 — The Thesaurus (games)
+#
+Game
+Mechanic
+Concepts
+Plays like
+4.1
+Is It a Game?
+Diagnose
+23
+Pastime, operation, manoeuvre or game? The tell: a payoff after a switch
+4.2
+Formula G
+Sequence
+24, 25
+Scenes cut into 6 cards (Con, Gimmick, Response, Switch, Crossup, Payoff); order them; then tag which Drama Triangle role each player holds before and after the Switch
+4.3
+Life Games
+Choice-story
+30, 27, 28
+Alcoholic (5-handed: player cycles through Persecutor, Rescuer, Patsy, Connection), Debtor, Kick Me, NIGYSOB, SWYMD; each with the 6 advantages to fill at L3
+4.4
+Home Games
+Choice-story
+31, 29
+Corner, Courtroom, Harried, IWFY, LHHIT, Sweetheart; player must find the antithesis (e.g. "Yes, honey!" for Sweetheart; third-person ban for Courtroom)
+4.5
+Room Games
+Choice-story
+32–35
+Party, consulting-room, underworld and Good games; the Good-games round asks "what makes this one good?"
+4.6
+Boss: Why Don't You–Yes But
+Many-handed
+32, 29
+The player is Black in a group of five; every suggestion gets a "Yes, but"; the only win is anti-ITHY: "That's a difficult problem. What are you going to do about it?" L3 writes the full GPP analysis
+[H3] World 5 — Underneath (rackets, discounts, passivity)
+#
+Game
+Mechanic
+Concepts
+Plays like
+5.1
+Real or Racket
+Diagnose
+36
+Feeling shown; is it authentic (resolves the situation) or racket (substitutes, never resolves)?
+5.2
+Stamp Book
+Collect
+37
+Player watches a character collect grievances for a week and chooses the cash-in; lesson: stamps are the licence for the script payoff
+5.3
+Four Levels
+Ladder
+39, 40
+A problem statement; player climbs the Discount Matrix: is the existence, significance, changeability or personal ability being discounted?
+5.4
+Doing Nothing
+Diagnose
+41
+Four passive behaviours shown in an office; over-adaptation is the trap level
+5.5
+Two Halves
+Choice-story
+42
+A symbiosis: one person carries Parent+Adult, the other Child; player must find the move that lets both use all three
+5.6
+Boss: The Discount Matrix
+Ladder
+39–43
+A six-scene conversation with redefinitions; player must name the discount level and the tangential/blocking move at each turn
+[H3] World 6 — The Plan (scripts)
+#
+Game
+Mechanic
+Concepts
+Plays like
+6.1
+OK Corral
+Quadrant
+44
+Place 12 inner statements on the OK Corral; then track one character's position across a day
+6.2
+Hear the Driver
+Diagnose
+51
+5-second behaviour clips in text; name the driver from the words/gestures Kahler listed
+6.3
+Don't
+Diagnose
+47, 48
+Childhood scenes, mostly nonverbal; name the injunction a child would decode; then the permission that counters it
+6.4
+Three Banal Scripts
+Choice-story
+53, 54, 55
+Steiner's Lovelessness, Mindlessness, Joylessness — play a day in each; the Pig Parent narrates
+6.5
+Script Process
+Match
+50, 52
+Until / After / Never / Always / Almost / Open-ended: match six life stories, then spot the player's own
+6.6
+Boss: The Script Matrix
+Build
+45, 46, 49, 56
+From a 25-line life story, drag injunctions, counter-injunctions and programme onto the matrix; L3 names the early decision and proposes a redecision
+[H3] World 7 — Autonomy (contracts, permission, intimacy)
+#
+Game
+Mechanic
+Concepts
+Plays like
+7.1
+Help or Rescue
+Diagnose
+57
+Steiner's three Rescue rules; the player sorts 12 helping acts
+7.2
+The Contract
+Build
+58
+Write a contract with a character; validator checks Berne's four requirements and Steiner's cooperative-contract clauses
+7.3
+Three P's
+Choice-story
+59
+Give permission only with protection and potency behind it; giving permission without protection fails the level
+7.4
+Despair to Laughter
+Replay
+29
+A game is refused; the player must hold the antithesis through the other player's escalation until "There I go again!"
+7.5
+Awareness / Spontaneity / Intimacy
+Choice-story
+60
+Three scenes (eating an orange, a crossed conversation, a candid one); player chooses the autonomous move, not the scripted one
+7.6
+Boss: After Games, What?
+Open
+61
+Six-turn candid exchange with a character who keeps offering game openings; sustain intimacy without rescuing, persecuting or withdrawing; L3 writes a reflection graded by rubric
+Side quests (optional, unlock at World 4+): a "Game of the Day" drawn from the thesaurus; "Colloquialisms" — match Berne's phrases ("waiting for Santa Claus", "rigor mortis", "sweatshirt") to meanings; "Book Trail" — a reading map that shows which chapter each completed level came from.
+[H2] 5. Game mechanics catalogue
+Twelve reusable engines cover all 42 games, so Claude Code builds twelve components and the rest is JSON content. Each engine is a React component that takes a level object (schema in section 10) and emits a result (score, choices, time).
+Engine
+Input shape
+Player action
+Scoring
+Used by
+Diagnose
+One stimulus (text + optional tone/posture tags), 2–5 options, one correct, per-option feedback
+Tap an option
+Correct = 1; at L3 a second field "why" graded by keyword rubric
+2.1, 2.2, 2.4, 4.1, 5.1, 5.4, 6.2, 6.3, 7.1
+Choice-story
+Scene of 3–8 beats; at each beat 2–4 lines the player can say; each line has an outcome beat and a tag (best / ok / game-move)
+Tap a line, read the consequence, continue
+Sum of tags; a game-move ends the scene early with its payoff shown
+1.1, 1.5, 2.5, 3.2, 3.3, 4.3, 4.4, 4.5, 5.5, 6.4, 7.3, 7.5
+Sort-it
+8–16 items, 2–4 bins (or a 2×2)
+Drag or tap-to-assign
+Per-item correct; a timer only at L1 for pace
+1.2, 6.1 (quadrant variant)
+Counter
+A target number (strokes owed), a palette of lines each worth N
+Build a sequence until the meter hits the band
+Within ±2 of target = full; under = "offended", over = "selling insurance"
+1.3
+Floor-plan
+6 labelled zones, each with 3 lines of talk
+Tap a zone, assign a time-structure type
+Per-zone
+1.4
+Rule-breaker
+A list of rules; scenes where each rule can be broken
+Choose the rule-breaking line, read the social pushback
+Each rule broken once = pass; L3 writes who benefits from the rule
+1.6
+Build (egogram / matrix / contract)
+A template with slots; a source text; a bank of draggable items
+Fill the slots
+Validator function per template (egogram: five bars sum check; matrix: each item in its correct row; contract: four Berne requirements present)
+2.3, 6.6, 7.2
+Spot-the-leak
+8–12 statements; some contaminated
+Flag each as Adult / Parent-leak / Child-leak / double / exclusion
+Per-statement; penalty for over-flagging to teach that real Adult exists
+2.6
+Vector
+Two PAC stacks side by side; draggable arrow endpoints
+Draw stimulus then response
+Geometric check: parallel = complementary, crossed = crossed
+3.1
+Replay
+A canonical scene from a book that the player must reproduce or steer to a named end state
+Choose lines
+End state reached = pass
+3.4, 7.4
+Two-track
+Each turn has a social line and a psychological line; the player writes or selects both
+Select for L1/L2, free-text for L3
+Both tracks correct; L3 free text graded by rubric of required ego-state words
+3.5, 3.6
+Sequence / Ladder / Match / Collect / Many-handed / Open
+Variants of Diagnose and Choice-story with a different board: cards to order (4.2), a 4-rung ladder (5.3, 5.6), six-to-six matching (6.5), a stamp album that fills (5.2), a 5-NPC ring where each NPC responds to the player's line (4.6), a free dialogue with an LLM-graded rubric (7.6, L3 only)
+Per board
+Per board
+as listed
+NPC behaviour is scripted, not generated, except in 7.6 (L3) where the Anthropic API in the artifact may run the counterpart; everything else is deterministic so levels are testable.
+Universal controls: a Lesson button (opens the lesson card early, costs nothing), a Book button (shows the chapter the level comes from, with a one-line quote under 15 words), Replay, and a Why button after any wrong answer that shows the correct ego-state reading of the moment.

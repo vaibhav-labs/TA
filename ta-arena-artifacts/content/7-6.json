@@ -1,0 +1,359 @@
+{
+  "slot": "7.6",
+  "title": "After Games, What?",
+  "world": 7,
+  "worldName": "Autonomy",
+  "week": 7,
+  "weekName": "Your Own Person",
+  "mechanic": "Open",
+  "concept": "After this one you can keep a candid conversation real for six turns, without rescuing anyone or blaming them.",
+  "plainWord": "after the traps",
+  "bookTerm": "After games",
+  "bookIdea": "Berne's last chapter closes his bleak picture of life as a wait filled with pastimes and games by saying that, for some people, awareness, spontaneity and an intimacy more rewarding than any game lift them above it, though all three can be frightening and even risky for someone unprepared, so his hope is for individuals who get ready.",
+  "bookSource": "Games People Play, ch. 18",
+  "opener": {
+    "setting": "Sunday, 5:40pm, The Corner Table, the back table. The group has gone home. Nadia has two cups of tea and no notes.",
+    "lines": [
+      { "who": "Nadia", "text": "“Sit down. I've got the tea, and I've got nothing written down.”", "cue": "pushing one cup across the table, not smiling yet" }
+    ],
+    "ask": "Can you keep this conversation real for six turns, without rescuing anyone or blaming them?"
+  },
+  "rounds": [
+    {
+      "level": "Spot",
+      "label": "Spot, round 1",
+      "intro": "Nadia's lines can hook you. Tap what each one is doing, and listen for the one with no hook in it.",
+      "items": [
+        {
+          "type": "pick",
+          "who": "Nadia",
+          "text": "“You're the only one who really gets it, aren't you?”",
+          "cue": "smiling into her cup",
+          "options": ["A hook: flattery to keep you in the chair", "A real question", "A joke about the tea"],
+          "answer": 0,
+          "why": "She is handing you a compliment that makes you the one who gets it. Taking it means you stop looking at your own part.",
+          "traps": {
+            "1": "A real question. It sounds like one, but it asks for your opinion of yourself, which is the hook again.",
+            "2": "A joke about the tea. It is light, and it sidesteps the question. But it is the same move: it gives the hook a laugh and leaves it in place."
+          },
+          "example": "Football club, Saturday.<br>Coach: “You're the only player who listens to me. The rest are hopeless.”<br>You: “The rest are learning. I'm still learning too.”"
+        },
+        {
+          "type": "pick",
+          "who": "Nadia",
+          "text": "“Sam will be fine, won't he? I'd hate to think it's on you if he isn't.”",
+          "cue": "turning her cup slowly, not looking up",
+          "options": ["A real question about Sam", "A hook: she is handing you his rent", "A plain answer about the flat"],
+          "answer": 1,
+          "why": "Her question puts Sam's future on your shoulders. If you answer it, you take the saviour's chair for someone who is not even at the table.",
+          "traps": {
+            "0": "A real question about Sam. It sounds fair, but it asks you to forecast his life. That is the same chair with a different label.",
+            "2": "A plain answer about the flat. It sounds sensible, but it accepts her frame, that his lateness is yours to fix, and answers inside it."
+          },
+          "example": "Neighbourhood cricket nets, Saturday.<br>Captain: “Will Ian's team turn up? It's on you if they don't.”<br>You: “Ask Ian. He has a phone.”"
+        },
+        {
+          "type": "pick",
+          "who": "Nadia",
+          "text": "“Daniel's been unbearable this year. Anyone would have walked out by now, wouldn't they?”",
+          "cue": "pen tapping the table, waiting",
+          "options": ["A plain feeling you can name", "A question about the schedule", "Joining in: the blamer's chair"],
+          "answer": 2,
+          "why": "She is asking you to agree and add a charge, so the case against Daniel grows. That is the blamer's chair, and this boss is built to test it.",
+          "traps": {
+            "0": "A plain feeling you can name. It is honest, but here the line is asking for a verdict, and a feeling is not a verdict.",
+            "1": "A question about the schedule. It sounds like a way to change the subject, but the subject still goes back to Daniel in five minutes."
+          },
+          "example": "Tea stall, by the bus stop, 6:45pm.<br>Man: “The conductor's useless. Everyone says so, don't they?”<br>You: “I haven't ridden with him. Did you get your tea yet?”"
+        },
+        {
+          "type": "pick",
+          "who": "Nadia",
+          "text": "“I'm not fishing, and I'm not going to fix anything for you. I'd like to hear how the term actually went.”",
+          "cue": "both hands round the cup, looking straight at you",
+          "options": ["Small talk to fill the time", "A hook: she wants you to need her", "A plain question with no game in it"],
+          "answer": 2,
+          "why": "She says what she wants and leaves the answer to you. There is no compliment to grab, no rescue to accept and no one to blame. This is what a conversation sounds like once the traps are gone.",
+          "traps": {
+            "0": "Small talk to fill the time. It is quiet and friendly, but small talk wouldn't ask for the actual answer. She is asking for the real one.",
+            "1": "A hook: she wants you to need her. She has said she won't fix anything, so there is no rescue on offer and nothing to lean on."
+          },
+          "example": "Hospital corridor, 4:15pm.<br>Nurse: “I can't promise it will be quick. I can tell you what I know, if you'd like.”<br>Visitor: “Yes, please.”<br>Nothing is being sold, and nobody is rescuing."
+        }
+      ]
+    },
+    {
+      "level": "Play",
+      "label": "Play, the week in motion",
+      "intro": "Two short conversations with Nadia, three turns each. She leaves doors open. Some lead somewhere useful, and some lead back to the old chairs.",
+      "items": [
+        {
+          "type": "scene",
+          "title": "Sunday, 5:40pm, the back table",
+          "setting": "The Corner Table. The chairs are stacked by the door, and the only light is the one over the counter. Nadia's notebook is still shut.",
+          "meters": { "you": 50, "them": 50 },
+          "beats": [
+            {
+              "who": "Nadia",
+              "text": "“So. Tell me one thing you did this term that you're proud of, and one you aren't. No jokes.”",
+              "cue": "not smiling yet, a notebook still closed",
+              "lines": [
+                {
+                  "text": "“The deal with Maya. And I still fix things nobody asked me to fix, so I'm not finished.”",
+                  "tag": "best",
+                  "you": 4,
+                  "them": 3,
+                  "outcome": "Nadia nods once. “Good. That's the honest version. Keep it.”",
+                  "why": "You name the win and the old habit in one breath. Candid means saying both halves, the win and the bruise."
+                },
+                {
+                  "text": "“The deal with Maya, and I'm not sure about the rest.”",
+                  "tag": "ok",
+                  "you": 1,
+                  "them": 1,
+                  "outcome": "She waits for the rest, and the rest doesn't come.",
+                  "why": "This is honest but thin. You gave one half, and the silence after it is where the test is."
+                },
+                {
+                  "text": "“I'm proud of most of it. You'd know, you've been watching me all term.”",
+                  "tag": "ok",
+                  "you": -4,
+                  "them": -4,
+                  "outcome": "Nadia says “Mm,” and the answer she wanted goes unsaid.",
+                  "why": "This asks her to approve of you. It trades a real answer for her praise, and that keeps you looking for the praise instead of the answer."
+                }
+              ]
+            },
+            {
+              "who": "Nadia",
+              "text": "“Sam will be fine, won't he? I'd hate to think it's on you if he isn't.”",
+              "cue": "turning the cup, not looking at you",
+              "lines": [
+                {
+                  "text": "“He's a grown man. If his share is late, that's his to sort out. I'm not covering it.”",
+                  "tag": "best",
+                  "you": 4,
+                  "them": 2,
+                  "outcome": "Nadia's mouth twitches. “Good. Say that to him, not to me.”",
+                  "why": "You leave Sam's share with Sam and refuse the rescue out loud. The rent stays in his lap."
+                },
+                {
+                  "text": "“I hope he is. I'll try to help where I can.”",
+                  "tag": "ok",
+                  "you": -2,
+                  "them": 0,
+                  "outcome": "She nods, and the words “where I can” sit on the table between you.",
+                  "why": "This sounds kind, but “where I can” is a promise to keep rescuing. It is the saviour's chair in a soft voice."
+                },
+                {
+                  "text": "“It's totally Sam's fault, isn't it. He never pays.”",
+                  "tag": "ok",
+                  "you": -5,
+                  "them": -6,
+                  "outcome": "Nadia says, “There it is,” and writes nothing down.",
+                  "why": "This takes the blamer's chair and hands it to Sam. It sounds like agreement, and it locks you both into the same story."
+                }
+              ]
+            },
+            {
+              "who": "Nadia",
+              "text": "“You've made this look easy, you know. Some of us find it harder.”",
+              "cue": "a smile, not quite warm",
+              "lines": [
+                {
+                  "text": "“It isn't easy. I got it wrong with Omar on Tuesday, and I'm still learning. Is it hard for you too?”",
+                  "tag": "best",
+                  "you": 3,
+                  "them": 4,
+                  "outcome": "Nadia's smile loosens. “Some weeks, yes. Thank you for asking me that.”",
+                  "why": "You turn down the compliment without making a show of it, then hand the question back to her as one adult to another."
+                },
+                {
+                  "text": "“Thanks. I've had good teachers.”",
+                  "tag": "ok",
+                  "you": 0,
+                  "them": 1,
+                  "outcome": "She nods and does not write anything down.",
+                  "why": "It is a polite thank you. There is no hook in it, and it gives her nothing real either."
+                },
+                {
+                  "text": "“I think I'm finally the one who gets it, Nadia. Better than anyone here.”",
+                  "tag": "ok",
+                  "you": -6,
+                  "them": -6,
+                  "outcome": "Nadia picks up her cup and looks at the door.",
+                  "why": "You have accepted the praise and made it a rank. Now you need someone to be below you, and that is the old game."
+                }
+              ]
+            }
+          ],
+          "fallout": {
+            "them": "Nadia finishes her tea in two swallows, says she has to lock up early, and leaves before you can answer."
+          }
+        },
+        {
+          "type": "scene",
+          "title": "Sunday, 6:10pm, the same table",
+          "setting": "The Corner Table. The second round of tea has come, and Nadia has finally opened the notebook. The light over the counter hums.",
+          "meters": { "you": 55, "them": 50 },
+          "beats": [
+            {
+              "who": "Nadia",
+              "text": "“Have you seen how Daniel talks to you? You should go to HR. I'm on your side here, and so is everyone who has watched him.”",
+              "cue": "leaning in, lowering her voice to the table",
+              "lines": [
+                {
+                  "text": "“That sounded like you're on my side against him. I'd rather decide what to do about Daniel myself.”",
+                  "tag": "best",
+                  "you": 4,
+                  "them": 4,
+                  "outcome": "Nadia sits back and looks at you for a long moment. “Thank you. That's the one I almost did.”",
+                  "why": "You catch her almost playing the saviour's chair for you, against him, and you say so plainly. She thanks you because the move she nearly made would have trapped you both."
+                },
+                {
+                  "text": "“Maybe. I'll think about HR.”",
+                  "tag": "ok",
+                  "you": -2,
+                  "them": 0,
+                  "outcome": "She says, “Do,” and her voice goes back to its usual pitch.",
+                  "why": "You don't join the case, but you don't catch it either. The almost-game passes, and the lesson passes with it."
+                },
+                {
+                  "text": "“Yes, he's a nightmare. Let's get him.”",
+                  "tag": "ok",
+                  "you": -6,
+                  "them": -6,
+                  "outcome": "Nadia's pen starts moving, and she writes a list of Daniel's charges.",
+                  "why": "You take her invitation and add a charge. Now the case has two people on it, and the room will feel it on Monday."
+                }
+              ]
+            },
+            {
+              "who": "Nadia",
+              "text": "“You never ask Gran for anything, do you? Why's that?”",
+              "cue": "tilting her head, the way Gran does when she is listening for a lie",
+              "lines": [
+                {
+                  "text": "“Because if I ask, she'll say yes, and then I'll owe her for the rest of my life. I'd rather ask her straight, next time.”",
+                  "tag": "best",
+                  "you": 3,
+                  "them": 4,
+                  "outcome": "Nadia nods. “Then ask her straight. Let's see what she does with a straight question.”",
+                  "why": "You name the hidden cost, then choose the direct ask. A plain request is the way out of waiting."
+                },
+                {
+                  "text": "“She's too old for all that now. Let her be.”",
+                  "tag": "ok",
+                  "you": -1,
+                  "them": -1,
+                  "outcome": "Nadia says, “Is that what you think, or what she told you?”",
+                  "why": "A kind excuse. It keeps the wish buried, and it speaks for Gran, which is a rescue in its own right."
+                },
+                {
+                  "text": "“Because she'd make me feel guilty for wanting anything, like always.”",
+                  "tag": "ok",
+                  "you": -5,
+                  "them": -6,
+                  "outcome": "Nadia says, “Mm,” and turns the cup a quarter turn on the table.",
+                  "why": "This makes Gran the villain, so you can stay the one who waits and suffers. It keeps asking out of the picture."
+                }
+              ]
+            },
+            {
+              "who": "Nadia",
+              "text": "“Last one, and then the tea's cold. What will you stop doing this week, and who will you tell?”",
+              "cue": "pen in her hand now",
+              "lines": [
+                {
+                  "text": "“I'll stop covering Sam's share, and I'll tell him on Friday, out loud, with the number.”",
+                  "tag": "best",
+                  "you": 4,
+                  "them": 4,
+                  "outcome": "Nadia writes it down. “Good. That's a promise you can hold him to.”",
+                  "why": "You stop the rescue, and you name the person and the day. Letting him feel the cost is the way out for someone who keeps saving."
+                },
+                {
+                  "text": "“I'll drop the Daniel file, and I'll sit down with him on Monday and go through the sums.”",
+                  "tag": "best",
+                  "you": 4,
+                  "them": 4,
+                  "outcome": "Nadia nods slowly. “Monday. Bring the sums, not the file.”",
+                  "why": "You let go of the case and take the talk to the one person it is about. That is the way out for someone who keeps blaming."
+                },
+                {
+                  "text": "“I'll ask Gran what she wants for the holiday weekend, straight out, and I won't wait for her to offer.”",
+                  "tag": "best",
+                  "you": 4,
+                  "them": 4,
+                  "outcome": "Nadia smiles, properly this time. “Then you'll know what she wants. And she'll know you asked.”",
+                  "why": "You stop waiting to be offered, and you ask. That is the way out for someone who keeps suffering, and it turns the wait into a request."
+                },
+                {
+                  "text": "“Nothing, really. Who would I tell? Nobody listens.”",
+                  "tag": "ok",
+                  "you": -6,
+                  "them": -7,
+                  "outcome": "Nadia closes the notebook without writing anything in it.",
+                  "why": "This is the old routine in one line: a verdict on everyone else, and nobody to tell. It keeps the week exactly as it was."
+                }
+              ]
+            }
+          ],
+          "fallout": {
+            "them": "Nadia stands, says the group starts at seven next week, and leaves before you can answer."
+          }
+        }
+      ]
+    },
+    {
+      "level": "Analyse",
+      "label": "Analyse, explain it",
+      "intro": "Two to read back. Name the chair in the first, and say what Berne's last chapter makes of the wobble in the second.",
+      "items": [
+        {
+          "type": "pick",
+          "who": "Nadia",
+          "text": "“Have you seen how Daniel talks to you? I'm on your side here.”",
+          "cue": "Which explanation fits?",
+          "options": [
+            "Sincere concern, and nothing more. She just wants you to be safe at work.",
+            "A saviour's move for you that doubles as a blamer's move against Daniel. It asks you to sign the case. Karpman's drama triangle, which Steiner calls the rescue triangle, has exactly these seats, and people swap between them.",
+            "A test of your mood, to see if you'll get upset. It has no trap in it."
+          ],
+          "answer": 1,
+          "why": "She offered to rescue you by going after Daniel. The saviour's chair and the blamer's chair are both in the line, and the swap is the trap. Steiner's rescue triangle, taken from Karpman's drama triangle, is these three seats with people moving between them.",
+          "traps": {
+            "0": "Sincere concern. It sounds caring, and she may be partly sincere. But the line asks you to join a case against him, and that is the trap, whatever her heart is doing.",
+            "2": "A test of your mood. It sounds like a good guess, but the line has a clear hook: a case and a rescue, with you as the one who signs."
+          },
+          "example": "Society meeting, Sunday, 6:30pm.<br>Neighbour: “The treasurer's been useless. I'm on your side, just say it.”<br>You: “I'll talk to the treasurer myself, thanks.”"
+        },
+        {
+          "type": "pick",
+          "who": "You",
+          "text": "Walking home, you feel wobbly. Saying true things out loud felt risky, and a small voice says the old chairs were safer.",
+          "cue": "What does Berne's last chapter say about that?",
+          "options": [
+            "Life after games is easy once you know the moves, so the wobble means you did something wrong.",
+            "Awareness, spontaneity and intimacy can be frightening and even risky for someone unprepared. His hope is for individuals who get ready, so a wobble is normal.",
+            "Once enough people drop their games, the whole human race will follow, so the wobble will pass on its own."
+          ],
+          "answer": 1,
+          "why": "Berne ends the book by saying that for some people there is more than the bleak picture of life as a wait filled with pastimes and games. He also warns that the way out can be frightening and even perilous to the unprepared. His hope rests with individuals, and of the human race as a whole he is doubtful.",
+          "traps": {
+            "0": "Easy once you know the moves. It would be comforting, but Berne says the opposite: the way past games can be frightening, so a wobble is no sign of a mistake.",
+            "2": "The whole human race will follow. Berne is not that hopeful. He says there may be no hope for the human race as a whole, but there is hope for individual people."
+          },
+          "example": "Climbing wall, Saturday, 11:00am.<br>Beginner: “My legs are shaking, so I must be doing it wrong.”<br>Instructor: “First time on the high wall? Shaking means you're doing something new. Rest a minute, then go on.”"
+        }
+      ]
+    }
+  ],
+  "debrief": {
+    "nadia": "The tea is cold and nobody played anything. That is what it sounds like on the other side of the traps: a few plain sentences, one real request, and a bit of a wobble afterwards. The wobble is normal. Keep going, and get ready for each true thing the way you would for anything new.",
+    "bookTerm": "After games",
+    "bookNote": "The books call this life after games. Berne's last chapter says there is something more rewarding than games, but that awareness, spontaneity and intimacy can be frightening and even risky for the unprepared, so he offers hope to individuals."
+  },
+  "reflection": { "prompt": "Which of your own games do you recognise now that you didn't see in week 1, and what would stepping out of it look like this week?" },
+  "next": null
+}

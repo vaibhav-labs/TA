@@ -1,0 +1,1090 @@
+[
+  {
+    "slot": "1-1",
+    "file": "out/1-1.html",
+    "passed": true,
+    "reached_end": true,
+    "items": 8,
+    "trap_probe": {
+      "item": "item 1 (pick: “Name?”)",
+      "wrong_option": "A warm nod",
+      "feedback_shown": true,
+      "feedback_nonempty": true,
+      "trap_text": "A warm nod would mean she was glad you came. Her eyes never left the screen, so calling it warm has you waiting for a smile that won't come.",
+      "matches_content": true
+    },
+    "game_probe": {
+      "skipped": "no scene has a game line"
+    },
+    "debrief_bookterm_shown": true,
+    "problems": [],
+    "console_errors": [],
+    "page_errors": [],
+    "network_failures": [],
+    "external_font_errors_not_counted": []
+  },
+  {
+    "slot": "1-2",
+    "file": "out/1-2.html",
+    "passed": true,
+    "reached_end": true,
+    "items": 7,
+    "trap_probe": {
+      "item": "item 1 (pick: “Oh, yeah! Sam. Sorry, mornings.”)",
+      "wrong_option": "Cold",
+      "feedback_shown": true,
+      "feedback_nonempty": true,
+      "trap_text": "Cold would need him to brush you off. He pulled an earbud out to talk to you, so cold misreads the moment.",
+      "matches_content": true
+    },
+    "game_probe": {
+      "skipped": "no scene has a game line"
+    },
+    "debrief_bookterm_shown": true,
+    "problems": [],
+    "console_errors": [],
+    "page_errors": [],
+    "network_failures": [],
+    "external_font_errors_not_counted": []
+  },
+  {
+    "slot": "1-3",
+    "file": "out/1-3.html",
+    "passed": true,
+    "reached_end": true,
+    "items": 6,
+    "trap_probe": {
+      "item": "item 1 (pick: “Cool.”)",
+      "wrong_option": "He's pleased with the greeting",
+      "feedback_shown": true,
+      "feedback_nonempty": true,
+      "trap_text": "Pleased would sound like “Oh, lovely!” Cool is flat, so calling it pleasure gets the message wrong.",
+      "matches_content": true
+    },
+    "game_probe": {
+      "skipped": "no scene has a game line"
+    },
+    "debrief_bookterm_shown": true,
+    "problems": [],
+    "console_errors": [],
+    "page_errors": [],
+    "network_failures": [],
+    "external_font_errors_not_counted": []
+  },
+  {
+    "slot": "1-4",
+    "file": "out/1-4.html",
+    "passed": true,
+    "reached_end": true,
+    "items": 6,
+    "trap_probe": {
+      "item": "item 1 (pick: “Did you see the match last night?” “Only the)",
+      "wrong_option": "Alone",
+      "feedback_shown": true,
+      "feedback_nonempty": true,
+      "trap_text": "Alone would mean nobody is talking. Two people are talking, so the hour isn't alone.",
+      "matches_content": true
+    },
+    "game_probe": {
+      "skipped": "no scene has a game line"
+    },
+    "debrief_bookterm_shown": true,
+    "problems": [],
+    "console_errors": [],
+    "page_errors": [],
+    "network_failures": [],
+    "external_font_errors_not_counted": []
+  },
+  {
+    "slot": "1-5",
+    "file": "out/1-5.html",
+    "passed": true,
+    "reached_end": true,
+    "items": 6,
+    "trap_probe": {
+      "item": "item 1 (pick: “Nobody says thank you any more, does anybody)",
+      "wrong_option": "Sharing",
+      "feedback_shown": true,
+      "feedback_nonempty": true,
+      "trap_text": "Sharing would tell a story about the person saying it. This line only complains about how people behave now.",
+      "matches_content": true
+    },
+    "game_probe": {
+      "skipped": "no scene has a game line"
+    },
+    "debrief_bookterm_shown": true,
+    "problems": [],
+    "console_errors": [],
+    "page_errors": [],
+    "network_failures": [],
+    "external_font_errors_not_counted": []
+  },
+  {
+    "slot": "1-6",
+    "file": "out/1-6.html",
+    "passed": true,
+    "reached_end": true,
+    "items": 7,
+    "trap_probe": {
+      "item": "item 1 (pick: “We don't do compliments here.”)",
+      "wrong_option": "Don't ask for nods you need",
+      "feedback_shown": true,
+      "feedback_nonempty": true,
+      "trap_text": "Don't ask would be about you asking for something. Peter is talking about what other people may give, not what you may want.",
+      "matches_content": true
+    },
+    "game_probe": {
+      "skipped": "no scene has a game line"
+    },
+    "debrief_bookterm_shown": true,
+    "problems": [],
+    "console_errors": [],
+    "page_errors": [],
+    "network_failures": [],
+    "external_font_errors_not_counted": []
+  },
+  {
+    "slot": "2-1",
+    "file": "out/2-1.html",
+    "passed": true,
+    "reached_end": true,
+    "items": 6,
+    "trap_probe": {
+      "item": "item 1 (pick: “Oh for god's sake, can't you do anything rig)",
+      "wrong_option": "The Pilot",
+      "feedback_shown": true,
+      "feedback_nonempty": true,
+      "trap_text": "The Pilot would say “Is anyone near it? Mind your feet.” That talks about the floor and calms the room. This line talks about you, so it cannot be the Pilot.",
+      "matches_content": true
+    },
+    "game_probe": {
+      "skipped": "no scene has a game line"
+    },
+    "debrief_bookterm_shown": true,
+    "problems": [],
+    "console_errors": [],
+    "page_errors": [],
+    "network_failures": [],
+    "external_font_errors_not_counted": []
+  },
+  {
+    "slot": "2-2",
+    "file": "out/2-2.html",
+    "passed": true,
+    "reached_end": true,
+    "items": 8,
+    "trap_probe": {
+      "item": "item 1 (pick: “We don't miss deadlines on my team.”)",
+      "wrong_option": "The Pilot",
+      "feedback_shown": true,
+      "feedback_nonempty": true,
+      "trap_text": "The Pilot would give the plan: “The deadline is Thursday, here's what's left.” This line has no facts in it, only a standard about everyone.",
+      "matches_content": true
+    },
+    "game_probe": {
+      "skipped": "no scene has a game line"
+    },
+    "debrief_bookterm_shown": true,
+    "problems": [],
+    "console_errors": [],
+    "page_errors": [],
+    "network_failures": [],
+    "external_font_errors_not_counted": []
+  },
+  {
+    "slot": "2-3",
+    "file": "out/2-3.html",
+    "passed": true,
+    "reached_end": true,
+    "items": 8,
+    "trap_probe": {
+      "item": "item 4 (pick: “I ate, I'm fine, everyone's fine.”)",
+      "wrong_option": "The Strict Boss",
+      "feedback_shown": true,
+      "feedback_nonempty": true,
+      "trap_text": "The Strict Boss would be a ruling: “Mum, enough, I'm fine, end of.” That is an order, and it ends the call harder than it needs to.",
+      "matches_content": true
+    },
+    "game_probe": {
+      "skipped": "no scene has a game line"
+    },
+    "debrief_bookterm_shown": true,
+    "problems": [],
+    "console_errors": [],
+    "page_errors": [],
+    "network_failures": [],
+    "external_font_errors_not_counted": []
+  },
+  {
+    "slot": "2-4",
+    "file": "out/2-4.html",
+    "passed": true,
+    "reached_end": true,
+    "items": 9,
+    "trap_probe": {
+      "item": "item 1 (pick: Daniel folds his arms and taps the table twic)",
+      "wrong_option": "How people answer",
+      "feedback_shown": true,
+      "feedback_nonempty": true,
+      "trap_text": "How people answer would be the room's reply, such as Clara going quiet. Here the clue is his own posture, before anyone has replied.",
+      "matches_content": true
+    },
+    "game_probe": {
+      "skipped": "no scene has a game line"
+    },
+    "debrief_bookterm_shown": true,
+    "problems": [],
+    "console_errors": [],
+    "page_errors": [],
+    "network_failures": [],
+    "external_font_errors_not_counted": []
+  },
+  {
+    "slot": "2-5",
+    "file": "out/2-5.html",
+    "passed": true,
+    "reached_end": true,
+    "items": 6,
+    "trap_probe": {
+      "item": "item 1 (pick: “Oh! Come, lie down, I'll make you a herbal d)",
+      "wrong_option": "A cold nod, for doing wrong",
+      "feedback_shown": true,
+      "feedback_nonempty": true,
+      "trap_text": "A cold nod would be a telling-off, like “Stop making a fuss.” Gran did the opposite, and warmly.",
+      "matches_content": true
+    },
+    "game_probe": {
+      "scene": "Saturday, 16:10, Gran's kitchen",
+      "beat": 1,
+      "line": "“Oh no, poor Leo, no bitter gourd for him.”",
+      "payoff_in_content": true,
+      "payoff_shown": true,
+      "payoff_text": "HOW IT ENDS Gran gives him an extra spoon of herbal drink, and the trap has set one notch. Grace notices and says nothing."
+    },
+    "debrief_bookterm_shown": true,
+    "problems": [],
+    "console_errors": [],
+    "page_errors": [],
+    "network_failures": [],
+    "external_font_errors_not_counted": []
+  },
+  {
+    "slot": "2-6",
+    "file": "out/2-6.html",
+    "passed": true,
+    "reached_end": true,
+    "items": 7,
+    "trap_probe": {
+      "item": "item 1 (pick: “Let's be rational. Bigger room, more rent, s)",
+      "wrong_option": "A clean Pilot",
+      "feedback_shown": true,
+      "feedback_nonempty": true,
+      "trap_text": "A clean Pilot would be the numbers alone, such as “A bigger room costs more rent.” This line adds “simple”, which rules out what the group is for.",
+      "matches_content": true
+    },
+    "game_probe": {
+      "skipped": "no scene has a game line"
+    },
+    "debrief_bookterm_shown": true,
+    "problems": [],
+    "console_errors": [],
+    "page_errors": [],
+    "network_failures": [],
+    "external_font_errors_not_counted": []
+  },
+  {
+    "slot": "3-1",
+    "file": "out/3-1.html",
+    "passed": true,
+    "reached_end": true,
+    "items": 8,
+    "trap_probe": {
+      "item": "item 1 (pick: Which voice does the reply come from?)",
+      "wrong_option": "The Boss",
+      "feedback_shown": true,
+      "feedback_nonempty": true,
+      "trap_text": "The Boss would sound like “Don't tell me how to live, I'm the one who pays.” That is a lecture thrown back at you. Your line was aimed at the part of him that gets told what to do, so a Boss reply would come from a different voice and cut t",
+      "matches_content": true
+    },
+    "game_probe": {
+      "skipped": "no scene has a game line"
+    },
+    "debrief_bookterm_shown": true,
+    "problems": [],
+    "console_errors": [],
+    "page_errors": [],
+    "network_failures": [],
+    "external_font_errors_not_counted": []
+  },
+  {
+    "slot": "3-2",
+    "file": "out/3-2.html",
+    "passed": true,
+    "reached_end": true,
+    "items": 8,
+    "trap_probe": {
+      "item": "item 1 (pick: “Build's red again. Third time since Friday, )",
+      "wrong_option": "The Boss",
+      "feedback_shown": true,
+      "feedback_nonempty": true,
+      "trap_text": "A Boss reply would be “Then it's the platform team's problem, and you can leave it there.” That is a ruling on the fact, so Omar has nothing left to say and the talk drops.",
+      "matches_content": true
+    },
+    "game_probe": {
+      "scene": "Tuesday, 13:00, Halden canteen, the table by the window",
+      "beat": 2,
+      "line": "“Oh, poor you. Leave the box with me, I'll take it. Go and lie down.”",
+      "payoff_in_content": true,
+      "payoff_shown": true,
+      "payoff_text": "HOW IT ENDS Omar takes the tray back to his desk, a job lighter. By Thursday the staging box is yours, and so is the next one, and he has stopped sitting at your table."
+    },
+    "debrief_bookterm_shown": true,
+    "problems": [],
+    "console_errors": [],
+    "page_errors": [],
+    "network_failures": [],
+    "external_font_errors_not_counted": []
+  },
+  {
+    "slot": "3-3",
+    "file": "out/3-3.html",
+    "passed": true,
+    "reached_end": true,
+    "items": 7,
+    "trap_probe": {
+      "item": "item 1 (pick: “Dad won't pick up, and nobody else rings. Am)",
+      "wrong_option": "The Boss",
+      "feedback_shown": true,
+      "feedback_nonempty": true,
+      "trap_text": "The Boss would say “You never ring, and you know it's your own fault.” That is a verdict, so the call turns into a telling-off and the hurt never gets heard.",
+      "matches_content": true
+    },
+    "game_probe": {
+      "scene": "Sunday, 21:20, your room in apartment 3B",
+      "beat": 1,
+      "line": "“I'll ring every night, Mum, I promise. I'll fix everything this month.”",
+      "payoff_in_content": true,
+      "payoff_shown": true,
+      "payoff_text": "HOW IT ENDS The call ends early with the whine still on the line. Mum keeps the score, and next Sunday she starts from the last thing you said."
+    },
+    "debrief_bookterm_shown": true,
+    "problems": [],
+    "console_errors": [],
+    "page_errors": [],
+    "network_failures": [],
+    "external_font_errors_not_counted": []
+  },
+  {
+    "slot": "3-4",
+    "file": "out/3-4.html",
+    "passed": true,
+    "reached_end": true,
+    "items": 7,
+    "trap_probe": {
+      "item": "item 1 (pick: “Son, you're always too busy for your Mum. Ju)",
+      "wrong_option": "Mum talks to you as the grown-up you are now",
+      "feedback_shown": true,
+      "feedback_nonempty": true,
+      "trap_text": "A grown-up would hear your week and ask about it. Mum is asking about a lunch box, so she is not talking to the person on the balcony.",
+      "matches_content": true
+    },
+    "game_probe": {
+      "scene": "Sunday, 21:34, apartment 3B, the balcony",
+      "beat": 2,
+      "line": "“You're right, Mum. I owe you. I'll make it up to you.”",
+      "payoff_in_content": true,
+      "payoff_shown": true,
+      "payoff_text": "HOW IT ENDS Mum reads the bill again and calls you her boy until the call ends. The lunch box stays pinned to you for another week."
+    },
+    "debrief_bookterm_shown": true,
+    "problems": [],
+    "console_errors": [],
+    "page_errors": [],
+    "network_failures": [],
+    "external_font_errors_not_counted": []
+  },
+  {
+    "slot": "3-5",
+    "file": "out/3-5.html",
+    "passed": true,
+    "reached_end": true,
+    "items": 7,
+    "trap_probe": {
+      "item": "item 1 (pick: On top, two Pilots are sorting out horses. Wh)",
+      "wrong_option": "Clara and Daniel: each of us wants the better horse",
+      "feedback_shown": true,
+      "feedback_nonempty": true,
+      "trap_text": "Nothing in either voice is about which horse is better. They end up side by side by choice, which fits company better than competition.",
+      "matches_content": true
+    },
+    "game_probe": {
+      "skipped": "no scene has a game line"
+    },
+    "debrief_bookterm_shown": true,
+    "problems": [],
+    "console_errors": [],
+    "page_errors": [],
+    "network_failures": [],
+    "external_font_errors_not_counted": []
+  },
+  {
+    "slot": "3-6",
+    "file": "out/3-6.html",
+    "passed": true,
+    "reached_end": true,
+    "items": 7,
+    "trap_probe": {
+      "item": "item 1 (pick: “This one is better, sir. You can't afford it)",
+      "wrong_option": "The Pilot, the part that checks the facts",
+      "feedback_shown": true,
+      "feedback_nonempty": true,
+      "trap_text": "The Pilot is where the top line lands, the camera and the screen. The sting is aimed somewhere else, so the Pilot is only half the target.",
+      "matches_content": true
+    },
+    "game_probe": {
+      "scene": "Sunday, 15:05, The Corner Table, the back room",
+      "beat": 1,
+      "line": "“You're right, I can't afford it, so I'll take the big one to prove you wrong.”",
+      "payoff_in_content": true,
+      "payoff_shown": true,
+      "payoff_text": "HOW IT ENDS The card reader beeps. You go home with a phone you cannot afford, and the first bill is already on its way."
+    },
+    "debrief_bookterm_shown": true,
+    "problems": [],
+    "console_errors": [],
+    "page_errors": [],
+    "network_failures": [],
+    "external_font_errors_not_counted": []
+  },
+  {
+    "slot": "4-1",
+    "file": "out/4-1.html",
+    "passed": true,
+    "reached_end": true,
+    "items": 6,
+    "trap_probe": {
+      "item": "item 1 (pick: “Did you see the rain this morning? Took ages)",
+      "wrong_option": "a job",
+      "feedback_shown": true,
+      "feedback_nonempty": true,
+      "trap_text": "It would sound like “Can you send me the rain report by ten?” Nobody asked for a report, so the chat would turn into a task that never got requested.",
+      "matches_content": true
+    },
+    "game_probe": {
+      "skipped": "no scene has a game line"
+    },
+    "debrief_bookterm_shown": true,
+    "problems": [],
+    "console_errors": [],
+    "page_errors": [],
+    "network_failures": [],
+    "external_font_errors_not_counted": []
+  },
+  {
+    "slot": "4-2",
+    "file": "out/4-2.html",
+    "passed": true,
+    "reached_end": true,
+    "items": 6,
+    "trap_probe": {
+      "skipped": "no pick item in this game"
+    },
+    "game_probe": {
+      "skipped": "no scene has a game line"
+    },
+    "debrief_bookterm_shown": true,
+    "problems": [],
+    "console_errors": [],
+    "page_errors": [],
+    "network_failures": [],
+    "external_font_errors_not_counted": []
+  },
+  {
+    "slot": "4-3",
+    "file": "out/4-3.html",
+    "passed": true,
+    "reached_end": true,
+    "items": 6,
+    "trap_probe": {
+      "item": "item 1 (pick: “I'll pay you the milk money on Friday, I swe)",
+      "wrong_option": "the gotcha",
+      "feedback_shown": true,
+      "feedback_nonempty": true,
+      "trap_text": "It would sound like “Ah, late with the money again. I knew you would be.” That is a pounce on a slip, and Sam has not slipped yet. He is arranging to be chased, which is a different move.",
+      "matches_content": true
+    },
+    "game_probe": {
+      "scene": "Friday, the office terrace",
+      "beat": 1,
+      "line": "“Give me the bottles. You're in no state, I'll sort the whole night for you.”",
+      "payoff_in_content": true,
+      "payoff_shown": true,
+      "payoff_text": "HOW IT ENDS The scene stops, and the terrace splits: some people are cross with Sam, and some are cross with you. By eleven, nobody can remember who started the round."
+    },
+    "debrief_bookterm_shown": true,
+    "problems": [],
+    "console_errors": [],
+    "page_errors": [],
+    "network_failures": [],
+    "external_font_errors_not_counted": []
+  },
+  {
+    "slot": "4-4",
+    "file": "out/4-4.html",
+    "passed": true,
+    "reached_end": true,
+    "items": 9,
+    "trap_probe": {
+      "item": "item 1 (pick: “Don't sit, I'll do it. The bins, the rice, t)",
+      "wrong_option": "the court",
+      "feedback_shown": true,
+      "feedback_nonempty": true,
+      "trap_text": "This would be the court if she were building a case against someone who isn't in the room. Here nobody is accused. She is only tired and busy.",
+      "matches_content": true
+    },
+    "game_probe": {
+      "scene": "Wednesday, 9:50pm, the kitchen",
+      "beat": 1,
+      "line": "“Sam, you really are the worst. Did you hear what she said?”",
+      "payoff_in_content": true,
+      "payoff_shown": true,
+      "payoff_text": "HOW IT ENDS The court ends with you as the judge, and both of them are sure you picked a side. The milk stays on the counter, and the bins go out on Thursday without anyone saying so."
+    },
+    "debrief_bookterm_shown": true,
+    "problems": [],
+    "console_errors": [],
+    "page_errors": [],
+    "network_failures": [],
+    "external_font_errors_not_counted": []
+  },
+  {
+    "slot": "4-5",
+    "file": "out/4-5.html",
+    "passed": true,
+    "reached_end": true,
+    "items": 9,
+    "trap_probe": {
+      "item": "item 1 (pick: “Oops, sorry, sorry! Have one on me, it's the)",
+      "wrong_option": "the clinic",
+      "feedback_shown": true,
+      "feedback_nonempty": true,
+      "trap_text": "This would be the clinic if the talk were about a symptom and a plan for treatment. Here nobody is being treated. They are only being offered a drink.",
+      "matches_content": true
+    },
+    "game_probe": {
+      "scene": "Friday, 9:05pm, the birthday",
+      "beat": 1,
+      "line": "“Sam, you ruin everything you touch.”",
+      "payoff_in_content": true,
+      "payoff_shown": true,
+      "payoff_text": "HOW IT ENDS Maya and Sam spend the rest of the party on the balcony, and you are left with the cake and the shirt. The dry cleaning is still unpaid, and nobody has said sorry to you properly."
+    },
+    "debrief_bookterm_shown": true,
+    "problems": [],
+    "console_errors": [],
+    "page_errors": [],
+    "network_failures": [],
+    "external_font_errors_not_counted": []
+  },
+  {
+    "slot": "4-6",
+    "file": "out/4-6.html",
+    "passed": true,
+    "reached_end": true,
+    "items": 8,
+    "trap_probe": {
+      "item": "item 1 (pick: “Why don't you just tell him no, Clara? Say i)",
+      "wrong_option": "a yes, but",
+      "feedback_shown": true,
+      "feedback_nonempty": true,
+      "trap_text": "This would be a yes, but if Clara had just turned down a fix and Omar were answering her. Here Omar has heard no reason yet, he is only offering one.",
+      "matches_content": true
+    },
+    "game_probe": {
+      "scene": "Sunday, 7:24pm, the long table",
+      "beat": 1,
+      "line": "“I'm only trying to help you, Clara. Why do you keep saying no?”",
+      "payoff_in_content": true,
+      "payoff_shown": true,
+      "payoff_text": "HOW IT ENDS Clara picks up her bag and says she will sort it out alone. The table goes quiet, and the problem goes home with her, still unanswered."
+    },
+    "debrief_bookterm_shown": true,
+    "problems": [],
+    "console_errors": [],
+    "page_errors": [],
+    "network_failures": [],
+    "external_font_errors_not_counted": []
+  },
+  {
+    "slot": "5-1",
+    "file": "out/5-1.html",
+    "passed": true,
+    "reached_end": true,
+    "items": 7,
+    "trap_probe": {
+      "item": "item 1 (pick: “Ha, it's my fault, obviously. I'm useless at)",
+      "wrong_option": "A real feeling: it finishes something",
+      "feedback_shown": true,
+      "feedback_nonempty": true,
+      "trap_text": "Taking the laugh at face value would send the talk straight to the fix. Nobody would ask what the joke is covering, so the scared feeling would never get a hearing and the stand-in would stay in charge.",
+      "matches_content": true
+    },
+    "game_probe": {
+      "skipped": "no scene has a game line"
+    },
+    "debrief_bookterm_shown": true,
+    "problems": [],
+    "console_errors": [],
+    "page_errors": [],
+    "network_failures": [],
+    "external_font_errors_not_counted": []
+  },
+  {
+    "slot": "5-2",
+    "file": "out/5-2.html",
+    "passed": true,
+    "reached_end": true,
+    "items": 7,
+    "trap_probe": {
+      "item": "item 1 (pick: “The bathroom tap's dripping. Can someone loo)",
+      "wrong_option": "A grudge coupon: kept back, to be cashed in later",
+      "feedback_shown": true,
+      "feedback_nonempty": true,
+      "trap_text": "Reading it as a coupon would treat a simple request as a bill. Sam would feel counted, the tap would keep dripping, and the next request would arrive carrying this one along with it.",
+      "matches_content": true
+    },
+    "game_probe": {
+      "scene": "Monday to Sunday, 9:00pm, the phone",
+      "beat": 1,
+      "line": "“You've got a cousin who rings every Sunday. Maybe ask her why she has time.”",
+      "payoff_in_content": true,
+      "payoff_shown": true,
+      "payoff_text": "HOW IT ENDS Sunday, 9:40pm. Mum cashes the whole book in at once: every coupon since Monday, read out in order. The call ends before anyone can answer the last one."
+    },
+    "debrief_bookterm_shown": true,
+    "problems": [],
+    "console_errors": [],
+    "page_errors": [],
+    "network_failures": [],
+    "external_font_errors_not_counted": []
+  },
+  {
+    "slot": "5-3",
+    "file": "out/5-3.html",
+    "passed": true,
+    "reached_end": true,
+    "items": 7,
+    "trap_probe": {
+      "item": "item 1 (pick: “There's no problem with the deck. The client)",
+      "wrong_option": "The problem can't be changed",
+      "feedback_shown": true,
+      "feedback_nonempty": true,
+      "trap_text": "'The problem can't be changed' would sound like a shrug over a deck that has already gone out. It treats the mistake as fixed in place, so nobody checks the numbers, and the next client gets the same slip.",
+      "matches_content": true
+    },
+    "game_probe": {
+      "skipped": "no scene has a game line"
+    },
+    "debrief_bookterm_shown": true,
+    "problems": [],
+    "console_errors": [],
+    "page_errors": [],
+    "network_failures": [],
+    "external_font_errors_not_counted": []
+  },
+  {
+    "slot": "5-4",
+    "file": "out/5-4.html",
+    "passed": true,
+    "reached_end": true,
+    "items": 8,
+    "trap_probe": {
+      "item": "item 1 (pick: Daniel asks him why the build broke. Omar loo)",
+      "wrong_option": "Fidget",
+      "feedback_shown": true,
+      "feedback_nonempty": true,
+      "trap_text": "A fidget would show small restless moves, like tapping or shuffling papers. Omar's hands are flat and still, so the picture is stillness, not restlessness.",
+      "matches_content": true
+    },
+    "game_probe": {
+      "skipped": "no scene has a game line"
+    },
+    "debrief_bookterm_shown": true,
+    "problems": [],
+    "console_errors": [],
+    "page_errors": [],
+    "network_failures": [],
+    "external_font_errors_not_counted": []
+  },
+  {
+    "slot": "5-5",
+    "file": "out/5-5.html",
+    "passed": true,
+    "reached_end": true,
+    "items": 7,
+    "trap_probe": {
+      "item": "item 1 (pick: She reads the week's jobs off the fridge shee)",
+      "wrong_option": "the Pilot",
+      "feedback_shown": true,
+      "feedback_nonempty": true,
+      "trap_text": "The Pilot deals with what is in front of you, and the bins and the gas are that kind of fact. But the Pilot would not say “don't argue,” so the words here are more than facts.",
+      "matches_content": true
+    },
+    "game_probe": {
+      "scene": "Monday, 22:30, the kitchen",
+      "beat": 1,
+      "line": "“You always say sorry and then nothing happens. We all know how this goes.”",
+      "payoff_in_content": true,
+      "payoff_shown": true,
+      "payoff_text": "HOW IT ENDS Monday, 22:50. The milk is still on the counter, and the sheet on the fridge has not been checked."
+    },
+    "debrief_bookterm_shown": true,
+    "problems": [],
+    "console_errors": [],
+    "page_errors": [],
+    "network_failures": [],
+    "external_font_errors_not_counted": []
+  },
+  {
+    "slot": "5-6",
+    "file": "out/5-6.html",
+    "passed": true,
+    "reached_end": true,
+    "items": 8,
+    "trap_probe": {
+      "item": "item 1 (pick: Clara laughs before anyone else can. “It was )",
+      "wrong_option": "It isn't there",
+      "feedback_shown": true,
+      "feedback_nonempty": true,
+      "trap_text": "It isn't there would mean the crash never happened. Clara describes it in full, so she is not denying it, only making it small.",
+      "matches_content": true
+    },
+    "game_probe": {
+      "scene": "Sunday, 17:20, the back table",
+      "beat": 1,
+      "line": "“Nobody's going to notice? The client already has. You should have checked.”",
+      "payoff_in_content": true,
+      "payoff_shown": true,
+      "payoff_text": "HOW IT ENDS Sunday, 6:10pm. The tea is cold, the sync job is still broken, and Nadia closes the notebook. “Once more,” she says, “and this time count the shrinking.”"
+    },
+    "debrief_bookterm_shown": true,
+    "problems": [],
+    "console_errors": [],
+    "page_errors": [],
+    "network_failures": [],
+    "external_font_errors_not_counted": []
+  },
+  {
+    "slot": "6-1",
+    "file": "out/6-1.html",
+    "passed": true,
+    "reached_end": true,
+    "items": 6,
+    "trap_probe": {
+      "item": "item 4 (pick: “That's on me. I should have checked the deck)",
+      "wrong_option": "I'm OK, you're OK",
+      "feedback_shown": true,
+      "feedback_nonempty": true,
+      "trap_text": "It would sound like “Three errors, fair catch. I'll fix them before ten, and we can check the rest together.” That owns the miss without a verdict on himself, and his team lead would get a plan.",
+      "matches_content": true
+    },
+    "game_probe": {
+      "skipped": "no scene has a game line"
+    },
+    "debrief_bookterm_shown": true,
+    "problems": [],
+    "console_errors": [],
+    "page_errors": [],
+    "network_failures": [],
+    "external_font_errors_not_counted": []
+  },
+  {
+    "slot": "6-2",
+    "file": "out/6-2.html",
+    "passed": true,
+    "reached_end": true,
+    "items": 6,
+    "trap_probe": {
+      "item": "item 1 (pick: “Two commas. Fix them before it goes out.”)",
+      "wrong_option": "Please others",
+      "feedback_shown": true,
+      "feedback_nonempty": true,
+      "trap_text": "It would sound like “Whatever you think is best, go ahead.” Nothing in the clip is about being liked. The team would hear a boss who has stopped checking and is handing the email over.",
+      "matches_content": true
+    },
+    "game_probe": {
+      "skipped": "no scene has a game line"
+    },
+    "debrief_bookterm_shown": true,
+    "problems": [],
+    "console_errors": [],
+    "page_errors": [],
+    "network_failures": [],
+    "external_font_errors_not_counted": []
+  },
+  {
+    "slot": "6-3",
+    "file": "out/6-3.html",
+    "passed": true,
+    "reached_end": true,
+    "items": 6,
+    "trap_probe": {
+      "item": "item 1 (pick: He holds up a drawing of a bus with twelve wh)",
+      "wrong_option": "Don't feel",
+      "feedback_shown": true,
+      "feedback_nonempty": true,
+      "trap_text": "It would be read as don't feel. A child told not to feel would be crying into the newspaper, and this clip has no tears. The drawing is what gets hidden.",
+      "matches_content": true
+    },
+    "game_probe": {
+      "skipped": "no scene has a game line"
+    },
+    "debrief_bookterm_shown": true,
+    "problems": [],
+    "console_errors": [],
+    "page_errors": [],
+    "network_failures": [],
+    "external_font_errors_not_counted": []
+  },
+  {
+    "slot": "6-4",
+    "file": "out/6-4.html",
+    "passed": true,
+    "reached_end": true,
+    "items": 7,
+    "trap_probe": {
+      "item": "item 1 (pick: “Good morning? No need. Start with the number)",
+      "wrong_option": "the blur day",
+      "feedback_shown": true,
+      "feedback_nonempty": true,
+      "trap_text": "This would be the blur day if someone had noticed something and been talked out of it. Nobody here is arguing a point, only refusing to say hello.",
+      "matches_content": true
+    },
+    "game_probe": {
+      "scene": "Monday, the cold day",
+      "beat": 2,
+      "line": "“Right, I'm the problem again. Everyone else is always right, aren't they?”",
+      "payoff_in_content": true,
+      "payoff_shown": true,
+      "payoff_text": "HOW IT ENDS Daniel gives the appendix to Clara before lunch, and the meeting ends. You were right about the room, and the room stayed cold."
+    },
+    "debrief_bookterm_shown": true,
+    "problems": [],
+    "console_errors": [],
+    "page_errors": [],
+    "network_failures": [],
+    "external_font_errors_not_counted": []
+  },
+  {
+    "slot": "6-5",
+    "file": "out/6-5.html",
+    "passed": true,
+    "reached_end": true,
+    "items": 7,
+    "trap_probe": {
+      "item": "item 1 (pick: “Once the bad year is over, we'll talk about )",
+      "wrong_option": "after this, the price",
+      "feedback_shown": true,
+      "feedback_nonempty": true,
+      "trap_text": "This would be 'after this, the price' if he were having a treat now and paying for it later. Nothing pleasant is happening here. The house conversation is simply put off.",
+      "matches_content": true
+    },
+    "game_probe": {
+      "skipped": "no scene has a game line"
+    },
+    "debrief_bookterm_shown": true,
+    "problems": [],
+    "console_errors": [],
+    "page_errors": [],
+    "network_failures": [],
+    "external_font_errors_not_counted": []
+  },
+  {
+    "slot": "6-6",
+    "file": "out/6-6.html",
+    "passed": true,
+    "reached_end": true,
+    "items": 8,
+    "trap_probe": {
+      "item": "item 2 (pick: “Gran, you're so strong.”)",
+      "wrong_option": "Hurry up",
+      "feedback_shown": true,
+      "feedback_nonempty": true,
+      "trap_text": "This would be hurry up if the praise were about speed, as in 'you get everything done so fast'. Nobody praises her for speed in the story, only for holding on.",
+      "matches_content": true
+    },
+    "game_probe": {
+      "scene": "Saturday, the pudding and the list",
+      "beat": 1,
+      "line": "“Oh Gran, you've carried everyone. Sit down, I'll finish the pudding. You've done enough.”",
+      "payoff_in_content": true,
+      "payoff_shown": true,
+      "payoff_text": "HOW IT ENDS Gran sits, and the pudding goes cold. The old line wins again: I'll live once the children are settled. You helped it win by doing the work for her."
+    },
+    "debrief_bookterm_shown": true,
+    "problems": [],
+    "console_errors": [],
+    "page_errors": [],
+    "network_failures": [],
+    "external_font_errors_not_counted": []
+  },
+  {
+    "slot": "7-1",
+    "file": "out/7-1.html",
+    "passed": true,
+    "reached_end": true,
+    "items": 9,
+    "trap_probe": {
+      "item": "item 1 (pick: “Sam's share of the electricity is short agai)",
+      "wrong_option": "Helping",
+      "feedback_shown": true,
+      "feedback_nonempty": true,
+      "trap_text": "Helping. It sounds kind, and the bill is paid. But nobody asked her to pay, and Sam never learns there was a bill, so the gap comes back next month.",
+      "matches_content": true
+    },
+    "game_probe": {
+      "skipped": "no scene has a game line"
+    },
+    "debrief_bookterm_shown": true,
+    "problems": [],
+    "console_errors": [],
+    "page_errors": [],
+    "network_failures": [],
+    "external_font_errors_not_counted": []
+  },
+  {
+    "slot": "7-2",
+    "file": "out/7-2.html",
+    "passed": true,
+    "reached_end": true,
+    "items": 8,
+    "trap_probe": {
+      "item": "item 1 (pick: “Say it back to me. Your share, into my accou)",
+      "wrong_option": "Something each way",
+      "feedback_shown": true,
+      "feedback_nonempty": true,
+      "trap_text": "Something each way. It sounds like a swap, but only Sam's side is named. Maya gives nothing in this line, so the exchange is still missing.",
+      "matches_content": true
+    },
+    "game_probe": {
+      "skipped": "no scene has a game line"
+    },
+    "debrief_bookterm_shown": true,
+    "problems": [],
+    "console_errors": [],
+    "page_errors": [],
+    "network_failures": [],
+    "external_font_errors_not_counted": []
+  },
+  {
+    "slot": "7-3",
+    "file": "out/7-3.html",
+    "passed": true,
+    "reached_end": true,
+    "items": 7,
+    "trap_probe": {
+      "item": "item 1 (pick: “Yes, run the Thursday demo on your own. You )",
+      "wrong_option": "The safety net",
+      "feedback_shown": true,
+      "feedback_nonempty": true,
+      "trap_text": "The safety net. Nothing in the line says what happens if the demo goes wrong. It gives a yes and a reason.",
+      "matches_content": true
+    },
+    "game_probe": {
+      "scene": "Wednesday, 6:50pm, the third floor",
+      "beat": 1,
+      "line": "“Yes. Go on, it's yours.”",
+      "payoff_in_content": true,
+      "payoff_shown": true,
+      "payoff_text": "HOW IT ENDS Thursday, 11:20am. Clara runs the demo with no plan B. When the client asks about pricing she has nothing to point at, and Daniel answers for her in the room. She doesn't speak again until the end."
+    },
+    "debrief_bookterm_shown": true,
+    "problems": [],
+    "console_errors": [],
+    "page_errors": [],
+    "network_failures": [],
+    "external_font_errors_not_counted": []
+  },
+  {
+    "slot": "7-4",
+    "file": "out/7-4.html",
+    "passed": true,
+    "reached_end": true,
+    "items": 7,
+    "trap_probe": {
+      "item": "item 1 (pick: “I'm useless. Go on, tell me I'm useless. I d)",
+      "wrong_option": "A real question",
+      "feedback_shown": true,
+      "feedback_nonempty": true,
+      "trap_text": "A real question. It sounds like one, but he hasn't asked anything about the milk. He is asking you to say something about him.",
+      "matches_content": true
+    },
+    "game_probe": {
+      "scene": "Monday, 7:50am, the kitchen",
+      "beat": 1,
+      "line": "“Don't worry, I'll mop it. You're hopeless with spills.”",
+      "payoff_in_content": true,
+      "payoff_shown": true,
+      "payoff_text": "HOW IT ENDS Monday, 8:10am. The milk spreads under the fridge while the two of you trade lines. Sam leaves for the office without saying sorry, and the Friday rent stays unsaid."
+    },
+    "debrief_bookterm_shown": true,
+    "problems": [],
+    "console_errors": [],
+    "page_errors": [],
+    "network_failures": [],
+    "external_font_errors_not_counted": []
+  },
+  {
+    "slot": "7-5",
+    "file": "out/7-5.html",
+    "passed": true,
+    "reached_end": true,
+    "items": 8,
+    "trap_probe": {
+      "item": "item 1 (pick: “Hang on, Gran. Smell that. It's sharp and co)",
+      "wrong_option": "Choosing fresh",
+      "feedback_shown": true,
+      "feedback_nonempty": true,
+      "trap_text": "Choosing fresh. It sounds like a new reply, but the line only describes the orange. Nothing was picked against a habit.",
+      "matches_content": true
+    },
+    "game_probe": {
+      "scene": "Saturday, 10:15am, the balcony",
+      "beat": 1,
+      "line": "“You always do this. Now I owe you, and you'll keep telling me so.”",
+      "payoff_in_content": true,
+      "payoff_shown": true,
+      "payoff_text": "HOW IT ENDS Saturday, 10:40am. The orange goes soft on the step, and Gran brings up the debt at lunch and again at dinner."
+    },
+    "debrief_bookterm_shown": true,
+    "problems": [],
+    "console_errors": [],
+    "page_errors": [],
+    "network_failures": [],
+    "external_font_errors_not_counted": []
+  },
+  {
+    "slot": "7-6",
+    "file": "out/7-6.html",
+    "passed": true,
+    "reached_end": true,
+    "items": 8,
+    "trap_probe": {
+      "item": "item 1 (pick: “You're the only one who really gets it, aren)",
+      "wrong_option": "A real question",
+      "feedback_shown": true,
+      "feedback_nonempty": true,
+      "trap_text": "A real question. It sounds like one, but it asks for your opinion of yourself, which is the hook again.",
+      "matches_content": true
+    },
+    "game_probe": {
+      "skipped": "no scene has a game line"
+    },
+    "debrief_bookterm_shown": true,
+    "problems": [],
+    "console_errors": [],
+    "page_errors": [],
+    "network_failures": [],
+    "external_font_errors_not_counted": []
+  }
+]

@@ -1,0 +1,803 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Home Games · TA Arena</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    color-scheme: light;
+    --bg: #171233; --bg-2: #241c47;
+    --surface: #f2eefb; --surface-2: #c9b8e6; --surface-3: #bda8e2;
+    --accent: #6c5fe0; --accent-deep: #4a3fa0;
+    --pink: #d9699f; --blue: #5b8fd9;
+    --ok: #1f7568; --wrong: #a8407a; --alt: #5c4fb0;
+    --text: #231c3f; --text-dim: #675f82;
+    --on-bg: #ece7fb; --on-bg-dim: #b4abd9;
+    --shadow: rgba(23, 18, 51, 0.28);
+    --parent: #7b5fe0; --adult: #4f8fd9; --childv: #d9699f;
+  }
+  [hidden] { display: none !important; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    background-image:
+      radial-gradient(ellipse 820px 560px at 12% -8%, var(--bg-2), transparent),
+      radial-gradient(ellipse 680px 520px at 108% 12%, #2c1f4a, transparent),
+      radial-gradient(ellipse 600px 420px at 60% 110%, #2a1840, transparent);
+    color: var(--on-bg);
+    font-family: "IBM Plex Sans", system-ui, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 28px 16px 56px;
+  }
+  .stage { width: 100%; max-width: 580px; min-width: 0; }
+
+  .masthead { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 16px; padding: 0 4px; }
+  .series { font-family: "IBM Plex Mono", monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--pink); font-weight: 600; }
+  .series small { color: var(--on-bg-dim); font-weight: 500; letter-spacing: 0.08em; }
+  .tag { font-family: "IBM Plex Mono", monospace; font-size: 11px; color: var(--on-bg-dim); text-decoration: none; white-space: nowrap; }
+  .tag:hover { color: var(--pink); }
+  a:focus-visible, button:focus-visible, textarea:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  .card { background: var(--surface); color: var(--text); border-radius: 22px; box-shadow: 0 24px 60px var(--shadow); padding: 32px 28px 28px; position: relative; min-width: 0; overflow-wrap: anywhere; }
+  .card:focus { outline: none; }
+  .card-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; margin-bottom: 18px; }
+  .card-head > div:first-child { min-width: 0; }
+  h1 { font-family: "Fraunces", Georgia, serif; font-weight: 500; font-size: 27px; line-height: 1.2; margin: 0 0 6px; text-wrap: balance; letter-spacing: -0.01em; }
+  h1.h2 { font-size: 21px; margin: 0 0 12px; }
+  .deck { font-size: 14.5px; color: var(--text-dim); margin: 0; max-width: 40ch; line-height: 1.5; }
+  .case-no { font-family: "IBM Plex Mono", monospace; font-size: 11px; color: var(--text-dim); text-align: right; white-space: nowrap; padding-top: 4px; }
+  .tagline { display: inline-block; font-family: "IBM Plex Mono", monospace; font-size: 11px; color: var(--text-dim); background: var(--surface-2); border-radius: 999px; padding: 4px 12px; margin: 0 0 16px; letter-spacing: 0.03em; }
+  .kicker { font-family: "IBM Plex Mono", monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-dim); margin: 0 0 10px; }
+
+  .progress { display: flex; gap: 5px; margin-bottom: 24px; }
+  .progress i { height: 5px; flex: 1; background: var(--surface-2); border-radius: 999px; overflow: hidden; position: relative; }
+  .progress i.done { background: linear-gradient(90deg, var(--accent), var(--pink)); }
+  .progress i.current::after { content: ""; position: absolute; inset: 0; width: 50%; background: var(--accent); opacity: .55; }
+
+  .round-label { font-family: "IBM Plex Mono", monospace; font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-dim); margin-bottom: 10px; }
+  .round-intro { font-size: 15px; line-height: 1.55; color: var(--text-dim); margin: 0 0 16px; }
+
+  .exchange { background: var(--surface-2); border-radius: 16px; padding: 14px 16px; margin: 0 0 18px; }
+  .exchange .line { font-size: 15.5px; line-height: 1.5; margin: 0 0 8px; }
+  .exchange .line:last-child { margin-bottom: 0; }
+  .exchange .who { font-family: "IBM Plex Mono", monospace; font-size: 11px; color: var(--text-dim); display: block; margin-bottom: 2px; letter-spacing: 0.03em; }
+  .exchange .cue { font-size: 13.5px; color: var(--text-dim); font-style: italic; margin: 6px 0 12px; }
+  .exchange .cue:last-child { margin-bottom: 0; }
+
+  .lede { font-family: "Fraunces", Georgia, serif; font-size: 17.5px; font-weight: 500; font-style: italic; color: var(--accent-deep); line-height: 1.5; margin: 0 0 14px; }
+  .prompt { font-size: 16.5px; line-height: 1.55; margin: 0 0 18px; font-weight: 500; }
+  .setting { font-size: 15px; line-height: 1.55; color: var(--text-dim); font-style: italic; margin: 0 0 16px; }
+  .scene-title { font-family: "Fraunces", Georgia, serif; font-size: 19px; font-weight: 500; line-height: 1.3; margin: 0 0 6px; }
+
+  .choices { display: flex; flex-direction: column; gap: 10px; }
+  button.choice {
+    font-family: "IBM Plex Sans", sans-serif; font-size: 15px; font-weight: 500; text-align: left;
+    padding: 14px 17px; min-height: 44px; border-radius: 14px; border: none; background: var(--surface-2); color: var(--text);
+    cursor: pointer; transition: background 120ms, transform 80ms, box-shadow 120ms; line-height: 1.4;
+  }
+  button.choice:hover { background: var(--surface-3); box-shadow: 0 6px 16px rgba(108,95,224,0.16); }
+  button.choice:active { transform: scale(0.99); }
+  button.choice.correct { background: color-mix(in srgb, var(--ok) 20%, var(--surface)); box-shadow: 0 0 0 2px color-mix(in srgb, var(--ok) 45%, transparent) inset; }
+  button.choice.wrong { background: color-mix(in srgb, var(--wrong) 18%, var(--surface)); box-shadow: 0 0 0 2px color-mix(in srgb, var(--wrong) 40%, transparent) inset; }
+  button.choice.amber { background: color-mix(in srgb, var(--alt) 18%, var(--surface)); box-shadow: 0 0 0 2px color-mix(in srgb, var(--alt) 40%, transparent) inset; }
+  button.choice[disabled] { cursor: default; opacity: 0.6; }
+  button.choice[disabled]:hover { background: var(--surface-2); box-shadow: none; }
+  button.choice.correct[disabled], button.choice.wrong[disabled], button.choice.amber[disabled] { opacity: 1; }
+  button.choice.pal { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+
+  .pill { display: inline-block; max-width: 100%; font-family: "IBM Plex Mono", monospace; font-size: 11.5px; font-weight: 600; padding: 3px 10px; border-radius: 999px; color: #fff; letter-spacing: 0.02em; background: var(--accent); overflow-wrap: anywhere; }
+  .pill.p { background: var(--parent); }
+  .pill.a { background: var(--adult); }
+  .pill.c { background: var(--childv); }
+
+  .stamp { display: inline-flex; align-items: center; gap: 6px; font-family: "IBM Plex Mono", monospace; font-size: 12px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; padding: 5px 12px; border-radius: 999px; margin-bottom: 12px; color: #fff; }
+  .stamp.ok { background: var(--ok); }
+  .stamp.cross { background: var(--wrong); }
+  .stamp.amber { background: var(--alt); }
+
+  .why-box { border-radius: 16px; padding: 16px 18px 17px 20px; margin: 0 0 16px; border-left: 5px solid transparent; box-shadow: 0 8px 22px rgba(23,18,51,0.12); }
+  .why-box .stamp { margin-bottom: 10px; }
+  .why-box .feedback { margin: 0 0 12px; }
+  .why-box .feedback:last-child { margin-bottom: 0; }
+  .why-box.ok { background: color-mix(in srgb, var(--ok) 45%, white); border-left-color: var(--ok); }
+  .why-box.cross { background: color-mix(in srgb, var(--wrong) 42%, white); border-left-color: var(--wrong); }
+  .why-box.amber { background: color-mix(in srgb, var(--alt) 40%, white); border-left-color: var(--alt); }
+  .why-box.neutral { background: color-mix(in srgb, var(--accent) 22%, white); border-left-color: var(--accent); }
+
+  .feedback { font-size: 16px; line-height: 1.6; color: var(--text); margin: 0 0 14px; padding-top: 2px; }
+  .feedback b { color: inherit; }
+
+  .example { background: color-mix(in srgb, var(--accent) 38%, white); border-left: 5px solid var(--accent); border-radius: 16px; padding: 14px 16px 15px 18px; margin: 0 0 18px; font-size: 15px; line-height: 1.55; color: var(--text); box-shadow: 0 8px 22px rgba(23,18,51,0.10); }
+  .ex-label { font-family: "IBM Plex Mono", monospace; font-size: 10.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent-deep); margin-bottom: 6px; }
+
+  .nextbar { display: flex; justify-content: flex-end; align-items: center; gap: 10px; flex-wrap: wrap; margin-top: 4px; }
+  button.next, a.next {
+    font-family: "IBM Plex Mono", monospace; font-size: 13px; font-weight: 600; letter-spacing: 0.03em;
+    background: linear-gradient(135deg, var(--accent), var(--pink)); color: #fff; border: none; text-decoration: none;
+    padding: 12px 20px; min-height: 44px; border-radius: 999px; cursor: pointer; box-shadow: 0 10px 24px rgba(108,95,224,0.35);
+    display: inline-flex; align-items: center; justify-content: center; text-align: center;
+  }
+  button.next:hover, a.next:hover { filter: brightness(1.08); transform: translateY(-1px); }
+  button.next[disabled] { opacity: .45; cursor: default; box-shadow: none; transform: none; filter: none; }
+  .next-soon { font-size: 14px; color: var(--text-dim); margin: 0; }
+
+  .meters { display: flex; flex-direction: column; gap: 10px; margin: 0 0 18px; }
+  .meter { display: grid; grid-template-columns: 52px 1fr 40px; align-items: center; gap: 10px; font-family: "IBM Plex Mono", monospace; font-size: 12px; }
+  .meter .name { color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.08em; font-size: 11px; }
+  .meter .track { height: 10px; border-radius: 999px; background: var(--surface-2); overflow: hidden; }
+  .meter .fill { display: block; height: 100%; width: 0; border-radius: 999px; background: linear-gradient(90deg, var(--accent), var(--pink)); transition: width 300ms ease; }
+  .meter.them .fill { background: linear-gradient(90deg, var(--blue), var(--accent)); }
+  .meter.empty .fill { background: var(--wrong); }
+  .meter .num { text-align: right; color: var(--text); font-weight: 600; }
+
+  .total { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 12px; font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--text-dim); margin: 0 0 8px; }
+  .total b { font-family: "Fraunces", Georgia, serif; font-size: 28px; font-weight: 500; color: var(--text); }
+  .band { position: relative; height: 10px; border-radius: 999px; background: var(--surface-2); overflow: hidden; margin: 0 0 8px; }
+  .band .fill { position: absolute; left: 0; top: 0; bottom: 0; width: 0; background: linear-gradient(90deg, var(--accent), var(--pink)); transition: width 300ms ease; }
+  .band .fill.over { background: var(--wrong); }
+  .val { flex: none; font-family: "IBM Plex Mono", monospace; font-size: 12.5px; font-weight: 600; color: #fff; background: var(--accent-deep); border-radius: 999px; padding: 3px 10px; white-space: nowrap; }
+  .counter-actions { display: flex; justify-content: flex-end; gap: 10px; flex-wrap: wrap; margin-top: 16px; }
+  button.ghost { font-family: "IBM Plex Mono", monospace; font-size: 13px; font-weight: 600; letter-spacing: 0.03em; background: transparent; color: var(--text); border: 2px solid var(--surface-3); padding: 10px 18px; min-height: 44px; border-radius: 999px; cursor: pointer; }
+  button.ghost[disabled] { opacity: .45; cursor: default; }
+  .counter-fb:empty, .order-fb:empty { display: none; }
+
+  .sort-item { margin: 0 0 16px; }
+  .sort-item + .sort-item { padding-top: 16px; border-top: 1px solid var(--surface-2); }
+  .sort-item .exchange { margin-bottom: 12px; }
+  .seq { list-style: none; margin: 0 0 16px; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+  .seq:empty { display: none; }
+  .seq li { display: grid; grid-template-columns: 28px 1fr; gap: 10px; background: var(--surface-2); border-radius: 14px; padding: 12px 14px; }
+  .seq .n { font-family: "IBM Plex Mono", monospace; font-weight: 600; color: var(--accent-deep); }
+  .seq .ct { display: block; font-size: 15px; line-height: 1.5; }
+  .seq .why { display: block; font-size: 14px; line-height: 1.5; color: var(--text-dim); margin-top: 6px; }
+  .pool { margin: 0 0 14px; }
+
+  .intro-list { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 9px; }
+  .rules-box { background: var(--surface-2); border-radius: 16px; padding: 16px 18px; margin: 18px 0; }
+  .rules-box .round-label { margin-bottom: 10px; }
+  .rules-list { margin: 0; padding-left: 0; list-style: none; display: flex; flex-direction: column; gap: 9px; }
+  .rules-list li { font-size: 14px; line-height: 1.45; display: flex; gap: 10px; color: var(--text); }
+  .rules-list .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); flex: none; margin-top: 7px; }
+  .ask { background: var(--bg-2); color: var(--on-bg); border-radius: 16px; padding: 14px 16px 15px; margin: 0 0 18px; }
+  .ask .kicker { color: var(--on-bg-dim); margin-bottom: 6px; }
+  .ask p { font-family: "Fraunces", Georgia, serif; font-size: 17px; line-height: 1.45; margin: 0; }
+
+  .end-badge { font-family: "IBM Plex Mono", monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ok); margin-bottom: 8px; }
+  .source { margin-top: 20px; padding: 14px 16px; border-radius: 14px; background: var(--surface-2); font-size: 12.5px; color: var(--text-dim); line-height: 1.5; }
+  .source b { color: var(--text); }
+  .end-nav { margin-top: 18px; }
+
+  .reflect-tag { font-family: "IBM Plex Mono", monospace; font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #fff; background: linear-gradient(135deg, var(--accent), var(--pink)); display: inline-block; padding: 5px 12px; border-radius: 999px; margin-bottom: 14px; }
+  textarea.reflect-box { display: block; width: 100%; min-height: 120px; resize: vertical; font-family: "IBM Plex Sans", sans-serif; font-size: 15.5px; line-height: 1.55; color: var(--text); background: var(--surface-2); border: none; border-radius: 16px; padding: 14px 16px; margin-bottom: 18px; box-shadow: 0 0 0 2px transparent inset; }
+  textarea.reflect-box::placeholder { color: var(--text-dim); }
+  textarea.reflect-box:focus { outline: none; box-shadow: 0 0 0 2px var(--accent) inset; }
+
+  @media (max-width: 480px) {
+    body { padding: 20px 12px 40px; }
+    .card { padding: 26px 18px 22px; }
+    h1 { font-size: 24px; }
+    h1.h2 { font-size: 20px; }
+    .meter { grid-template-columns: 44px 1fr 36px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
+  }
+</style>
+</head>
+<body>
+
+<div class="stage">
+  <div class="masthead">
+    <div class="series" id="series">TA Arena</div>
+    <a class="tag" id="hubLink" href="#" hidden>← All games</a>
+  </div>
+  <main class="card" id="card" tabindex="-1">
+    <p class="deck">Loading the game.</p>
+    <noscript><p class="deck">This game needs JavaScript to run.</p></noscript>
+  </main>
+</div>
+
+<script>window.TA_GAME = {"slot":"4.4","title":"Home Games","world":4,"worldName":"The Thesaurus","week":4,"weekName":"Traps","mechanic":"Choice-story","concept":"After this one you can name the home traps that run in a flat or on the phone to home, and step out of one without taking the blame or the judge's chair.","plainWord":"a home trap","bookTerm":"Marital games","bookIdea":"Marital games are the games that grow into their fullest form in marriage and family living. The book describes seven: Corner, Courtroom, Frigid Woman and Frigid Man, Harried, If It Weren't for You, Look How Hard I've Tried, and Sweetheart.","bookSource":"Games People Play, ch. 7","opener":{"setting":"Monday, 9:40pm. Hawthorn Court, apartment 3B, the kitchen. A pot of rice is soaking, and the milk carton has a note on it in Sam's handwriting: \u201cFriday, promise.\u201d","lines":[{"who":"Maya","text":"\u201cSit, eat. Don't say no, I can see it on your face.\u201d","cue":"already at the sink, drying her hands on her shirt"},{"who":"Sam","text":"\u201cSorry, sorry, the milk is on my tab again. I'm working on it. Look at this sheet.\u201d","cue":"holding his phone up with a spreadsheet on the screen"}],"ask":"Name the home trap that is running, and find the one reply that steps out of it without starting a fight."},"rounds":[{"level":"Spot","label":"Spot, round 1","intro":"Each home trap has a plain name. Tap the one that is running in the line.","items":[{"type":"pick","who":"Maya","text":"\u201cDon't sit, I'll do it. The bins, the rice, the rent list. Nobody else is free, so it's me, as usual.\u201d","cue":"wiping her hands, already reaching for the bin bag","options":["the rush","the court","sweetheart"],"answer":0,"why":"She is too busy to stop, and the busyness is the bait. She takes on everything that comes and even asks for more, so the list of jobs only grows. In the book the day ends in a collapse where nothing gets done, and she blames herself for it. That is the rush.","traps":{"1":"This would be the court if she were building a case against someone who isn't in the room. Here nobody is accused. She is only tired and busy.","2":"This would be sweetheart if the line ended with a pet name and a jab hidden inside. There is no endearment here, just a list of jobs that nobody offered to share."},"example":"A school parents' group, Thursday. One mother replies to every message within a minute, collects the bake-sale money, and says \u201cI'll do the lot, nobody else is free\u201d before the meeting has started."},{"type":"pick","who":"Mum","text":"\u201cThe neighbour's boy sends his mother money from Canada every month. Some of us don't even ring home, do we, sweetheart?\u201d","cue":"phone on speaker, a pot clinking on her stove","options":["the corner","sweetheart","look how hard I've tried"],"answer":1,"why":"The jab sits in the middle of the story and the pet name sits at the end. Mum points at you through the neighbour's son, then softens the point with a loving word, so you cannot easily object without seeming sulky. The sting is hidden inside the endearment.","traps":{"0":"This would be the corner if every reply you could give were wrong. Mum has not set two doors. She has one story with one jab, and you can answer it directly.","2":"This would be look how hard I've tried if the speaker were pointing at their own effort. Mum is pointing at yours, and she is using the neighbour's son as her proof."},"example":"A family group chat, Sunday night. An uncle writes \u201cSuch a clever girl, sweetheart. Some of us finish our degrees and still need help with the rent.\u201d"},{"type":"pick","who":"Sam","text":"\u201cI've tried so hard this month. I made the sheet, I deleted the shopping app, I even skipped the cab. And you still look at me like that.\u201d","cue":"scrolling the sheet with his thumb, not looking up","options":["the court","look how hard I've tried","the rush"],"answer":1,"why":"He shows you the effort and says nothing about the rent. The effort is a shield: whatever happens next, he can say he tried, and it is hard to argue with trying. Meanwhile the milk money is still owed.","traps":{"0":"This would be the court if he were building a case against a third person. Sam accuses nobody. He is asking you to admire the trying.","2":"This would be the rush if he were too busy to stop. Sam has plenty of time to show you the spreadsheet, which is the point."},"example":"A cousin at a wedding, Saturday. \u201cI've tried so hard with the diet, I've even stopped the sweets, and you still say I'm not serious.\u201d The plate of sweets is on the table behind him."},{"type":"pick","who":"Gran","text":"\u201cIf it weren't for your uncle and his rules, I'd be at the market every morning. He says the road is too busy, so I stay in with the radio.\u201d","cue":"the letter open on her lap, her glasses on her forehead","options":["if it weren't for you","the corner","sweetheart"],"answer":0,"why":"She blames someone else's rule for what she is not doing, and the complaint is the point. In the book the rule she complains about also keeps her away from something that frightens her, so she complains about it and never tests it. As long as he is the cause, nothing has to change at her end.","traps":{"1":"This would be the corner if every answer you gave left you stuck. Gran offers no second door. She is putting the whole problem on someone who isn't in the room.","2":"This would be sweetheart if the sentence ended on a pet name with a sting in it. Gran's sting sits in the blame alone."},"example":"A neighbour at the lift, Tuesday. \u201cIf it weren't for my husband's shifts, I'd have joined the choir years ago.\u201d<br>The shifts get the blame, and the choir is never tried."}]},{"level":"Play","label":"Play, the week in motion","intro":"Three home scenes. Keep both meters above half at the end of each one, and watch for the moment someone hands you a chair you didn't ask for.","items":[{"type":"scene","title":"Wednesday, 9:50pm, the kitchen","setting":"Apartment 3B. The rice pot is soaking, and the milk carton is on the counter with its note. Maya has the stool by the fridge. Sam is on the sofa with his shoes still on. <i>The Heckler, in your head: \u201cPick a side and get it over with.\u201d<\/i>","meters":{"you":60,"them":50},"beats":[{"who":"Maya","text":"\u201cLet me tell you what Sam did this week. The milk and the bins, all week. You're the fair one, so you tell him.\u201d","cue":"arms folded, looking at you, not at the sofa","lines":[{"text":"\u201cTell him, Maya, not me. He's right there and he can answer.\u201d","tag":"best","you":4,"them":3,"outcome":"She turns to the sofa. \u201cSam, the milk.\u201d He sits up, surprised to be asked straight, and the room gets a little quieter.","why":"A court runs on talk about someone, not to them. Speaking to the person directly stops the court before the first witness."},{"text":"\u201cAlright, I'm the judge. Go on, what did he do?\u201d","tag":"ok","you":-2,"them":2,"outcome":"She tells you the whole week, the milk and the bin bags that never went out.","why":"You took the stool without being asked. The court now has its judge, and the case gets longer while Sam listens from the sofa."},{"text":"\u201cSam, you really are the worst. Did you hear what she said?\u201d","tag":"game","you":2,"them":-4,"outcome":"Sam gets up without a word and goes to his room. Maya says, \u201cThank you,\u201d as though you had both agreed.","why":"A trap move: you joined the case against him, so the court has two sides against one defendant. The scene ends early, and the flat stays split."}]},{"who":"Sam","text":"\u201cSorry, sorry, I owe her. But the transfer was late, so the rent was late. I did the milk on Friday, I swear.\u201d","cue":"from the sofa, one hand over his eyes","lines":[{"text":"\u201cThen tell her the day, Sam. Say it to her, not to me.\u201d","tag":"best","you":4,"them":3,"outcome":"He sits up and looks at Maya. \u201cFriday for the milk, and the rent by the tenth. Promise.\u201d","why":"You send the answer back to the person who owes it. A date said to the right person is the only defence a court cannot argue with."},{"text":"\u201cFine, I'll rule it's Friday, and that's the end of it.\u201d","tag":"ok","you":-1,"them":1,"outcome":"Sam nods. Maya says, \u201cI asked you to tell him, not to rule on it.\u201d","why":"A verdict can end the argument for a minute, but it keeps you in the chair. Maya has learned that the court still works, so she will come back to it."},{"text":"\u201cMaya's right, you are always late. It's your fault.\u201d","tag":"game","you":2,"them":-5,"outcome":"Sam says, \u201cOkay, okay,\u201d and the sorry turns into a sulk. The scene stops on the sofa.","why":"You picked the prosecution's side and gave the sentence. The sorry is gone, and Sam has his proof that everyone is against him."}]},{"who":"Maya","text":"\u201cSee? He does this every time. So you'll talk to him about the bins as well, won't you?\u201d","cue":"already moving the bin bag towards the door","lines":[{"text":"\u201cSay the bins to him, Maya. Look at him, and say the whole thing.\u201d","tag":"best","you":3,"them":4,"outcome":"She stops with the bag in her hand, looks at Sam, and says, \u201cThe bins, Sam. Every Thursday, and I'm sick of it.\u201d He says, \u201cOkay.\u201d","why":"The case moves back to the room. What was about him becomes what is between the two of them, and that is the only version that can get settled."},{"text":"\u201cSure, I'll sort out the bins with him.\u201d","tag":"ok","you":-2,"them":1,"outcome":"Maya says, \u201cThanks,\u201d and you have just taken on a second case without a single witness.","why":"You agreed to carry a complaint for someone else. It sounds helpful, but the court is still running, and now you are its messenger."},{"text":"\u201cMaya, have you ever once asked him for the bins? Out loud?\u201d","tag":"game","you":1,"them":-3,"outcome":"She puts the bag down. \u201cWhose side are you on?\u201d The room goes flat, and nobody is on either side.","why":"A trap move: a question that hides a verdict, so the case flips and you become the defendant. It ends the scene early with nothing settled."}]},{"who":"Sam","text":"\u201cSo what's the verdict, then? You're the one who always has one.\u201d","cue":"grinning now, the spreadsheet still open on his phone","lines":[{"text":"\u201cNo verdict. You two settle the day now, in front of me.\u201d","tag":"best","you":4,"them":4,"outcome":"\u201cFriday,\u201d Sam says. Maya nods once. The milk is back on the counter, with the date written on the carton.","why":"You hand the decision back to the two people who have the debt and the relationship. The court closes because nobody is waiting for a judge any more."},{"text":"\u201cFriday for the milk, and I'll bring it up myself.\u201d","tag":"ok","you":-1,"them":1,"outcome":"Sam says, \u201cHa, the judge brings the milk,\u201d and Maya laughs for the first time tonight.","why":"A fair ruling, and the mood lifts, but you are still the one with the verdict. Next week, somebody will ask you again."},{"text":"\u201cGuilty. You're covering the milk for a month, Sam.\u201d","tag":"game","you":2,"them":-6,"outcome":"\u201cThat's not fair,\u201d Sam says. Maya says, \u201cSee, he never listens,\u201d and both of them stop talking to you.","why":"You sentenced him from the stool, and the sentence closed the case with no agreement. Both of them are now speaking about you, which is the court's favourite place to be."}]}],"payoff":"The court ends with you as the judge, and both of them are sure you picked a side. The milk stays on the counter, and the bins go out on Thursday without anyone saying so.","fallout":{"them":"Maya takes the bin bag and goes to bed without a word. The milk is still unpaid, and the stool by the fridge stays empty for the rest of the week."},"example":"A committee meeting in a housing society, Thursday. Two members fight about a lift repair, and the chair keeps being asked to rule. The chair says, \u201cAsk the other member directly,\u201d and the repair gets booked."},{"type":"scene","title":"Friday, 7:15pm, the sofa","setting":"Apartment 3B. The film is paused on the TV, and Sam is already in his jacket with the keys in his hand. <i>The Heckler, in your head: \u201cSay no first, so you can't be the one who lets him down.\u201d<\/i>","meters":{"you":50,"them":50},"beats":[{"who":"Sam","text":"\u201cCome on, the chase scene is the best bit. Oh, forget it. You never come to anything with me.\u201d","cue":"keys swinging, looking at the door","lines":[{"text":"\u201cI'll come. Give me five minutes, and you can pick the snacks.\u201d","tag":"best","you":4,"them":4,"outcome":"He stops swinging the keys and grins. \u201cFive minutes. Don't bring the sad face.\u201d","why":"You drop the refusal and reach out with a yes that has a time and a job attached. In the book the way out is to change your mind and go along with a smile, so a warm yes with a time and a job attached takes away the wall."},{"text":"\u201cI'm not sure, I've had a long week.\u201d","tag":"ok","you":-1,"them":-1,"outcome":"He nods too quickly. \u201cSure, stay in, then.\u201d The keys go back on the hook.","why":"A maybe leaves the door half shut. Nothing bad happens, but he gets to play the one who was let down."},{"text":"\u201cFine, I'll come, but only because you've made me feel like the bad guy again.\u201d","tag":"game","you":-4,"them":-5,"outcome":"He sighs, takes his jacket off, and sits two cushions away. The film starts without a word.","why":"A trap move: you said yes and then made it his fault. Both answers lose in a corner, and this one keeps you both on the same wall."}]},{"who":"Sam","text":"\u201cOh, you're coming now? Only because I said you wouldn't. Right, I'll go, then.\u201d","cue":"half out of the chair, turning back to the TV","lines":[{"text":"\u201cI want to come. Tell me the bit you're most excited about, and we can argue about it at the interval.\u201d","tag":"best","you":4,"them":4,"outcome":"He sits back down. \u201cThe chase. Obviously. Watch the bus, it's ridiculous.\u201d","why":"You answer the plan and leave the label alone. He gets to be excited about something, which is what the corner was hiding."},{"text":"\u201cOkay, you're right, I never come. I'll try next time.\u201d","tag":"ok","you":-2,"them":-1,"outcome":"\u201cNext time, then,\u201d he says flatly, and the keys go on the table.","why":"You accepted the label, so the corner is now yours to live in. A promise for next time is a way of staying in it."},{"text":"\u201cYes, I never come, because every time I do you make it a fight.\u201d","tag":"game","you":-3,"them":-6,"outcome":"He takes his keys and goes out, and the door closes harder than it needs to.","why":"A trap move: you agreed to the label and then gave him the reason. Both of you have now said the corner out loud, and that is where it stays."}]},{"who":"Sam","text":"\u201cThe film's on, if you want it. I'm not going to beg.\u201d","cue":"standing by the sofa with his jacket still on","lines":[{"text":"\u201cThanks. I'll take the left side, and you can tell me when the bus jumps.\u201d","tag":"best","you":3,"them":4,"outcome":"He sits on the right, the film starts, and he says, \u201cWatch the bus. Watch it now.\u201d","why":"You join in warmly, with a small plan of your own. The corner offered a sulky yes or a no, and you gave neither."},{"text":"\u201cI'm sorry, I'm not in the mood.\u201d","tag":"ok","you":-1,"them":-2,"outcome":"\u201cFair enough,\u201d he says, and turns the film on by himself.","why":"A calm no is better than a sulk, but it still closes the plan. You are now on opposite sides of the screen."},{"text":"\u201cBegging is your thing, Sam. I'm not watching you do it.\u201d","tag":"game","you":-4,"them":-6,"outcome":"He laughs once, not kindly, and goes to bed.","why":"A trap move: you turned his request into a verdict on him. The corner closes, and the film runs without either of you."}]}],"payoff":"The corner closes on both of you. Sam watches the chase alone and goes to bed, and the snacks go stale on the counter.","example":"A neighbour invites you to a wedding dinner, then says, \u201cYou never come to these, so I won't bother asking.\u201d You say, \u201cI'll come, and I'll save you a seat.\u201d"},{"type":"scene","title":"Sunday, 8:30pm, the bed","setting":"Apartment 3B. Mum is on speaker, and Dad is somewhere behind her with the television on mute. <i>The Heckler, in your head: \u201cIf she is upset, fixing it is your job.\u201d<\/i>","meters":{"you":60,"them":50},"beats":[{"who":"Mum","text":"\u201cIf it weren't for your father's back, I'd be at my sister's for the festival already. He won't even drive me to the bus.\u201d","cue":"the pot clinking, her voice loud enough for the room behind her","lines":[{"text":"\u201cThat's a hard spot, Mum. If it were only you deciding, what would you do?\u201d","tag":"best","you":4,"them":3,"outcome":"A long pause. \u201cGo to my sister's, I suppose. But I'd have to ask him.\u201d It is the first plan of the call.","why":"The blame needs somewhere to go. You hand the choice back to the one who holds it, so the \u201cif it weren't for\u201d has to become a decision."},{"text":"\u201cI know, Mum. Dad's always been like that.\u201d","tag":"ok","you":-2,"them":-1,"outcome":"\u201cAlways,\u201d she says, and the complaint grows a second paragraph about the car.","why":"You agreed that Dad is the cause. The blame stays on him, and your agreement gives Mum the second witness she wanted."},{"text":"\u201cIt's his fault, then. I'll tell him myself.\u201d","tag":"game","you":-4,"them":-5,"outcome":"\u201cWould you? Good,\u201d Mum says, and the phone goes quiet behind her, with a door shutting.","why":"A trap move: you took the Saviour's chair and promised to fix Dad for her. The blame now has a messenger, and the call ends early."}]},{"who":"Dad","text":"\u201cI heard that. I drove her to the bus last month.\u201d","cue":"from the background, the television clicking off","lines":[{"text":"\u201cThen tell her that yourself, Dad. You don't have to say it through me.\u201d","tag":"best","you":4,"them":3,"outcome":"A pause. \u201cYes,\u201d he says, and the television stays off.","why":"You send the message back to the person who can say it to Mum directly. Dad's \u201cwe're fine\u201d wall is easier to lean on when the words come from him."},{"text":"\u201cYou two sort it out. I'm just the phone.\u201d","tag":"ok","you":-1,"them":-1,"outcome":"\u201cWe're fine,\u201d Dad says, and the line goes quiet for a while.","why":"Neutral and harmless, but it leaves Dad's \u201cfine\u201d in place and Mum's blame where it was."},{"text":"\u201cDad, you never listen. You just say we're fine.\u201d","tag":"game","you":-3,"them":-6,"outcome":"Mum says, \u201cSee? Even the boy agrees with me,\u201d and Dad's voice disappears from the room.","why":"You joined the case against him, so the phone turns into a court with you as the witness. The call ends early."}]},{"who":"Mum","text":"\u201cSee, he doesn't even talk to me. And if it weren't for you being so far away, he'd have someone to drive me. So you tell me, what would you do?\u201d","cue":"quieter now, pleased to have a witness","lines":[{"text":"\u201cI'm not the reason, Mum. Ask him for Thursday, straight out, and I'll ring you Wednesday to hear how it went.\u201d","tag":"best","you":4,"them":4,"outcome":"She is silent, then says, \u201cThursday. Straight out. Hmm.\u201d It is the second plan of the call.","why":"You refuse the blame you were handed, then give Mum a specific ask she can make herself. Asking straight is the way out of the \u201cif it weren't for\u201d line."},{"text":"\u201cMaybe ring your sister and ask her to come to you.\u201d","tag":"ok","you":-1,"them":0,"outcome":"\u201cMy sister has her own knees, love.\u201d The blame moves a little further along the line.","why":"A kind suggestion, but it is still you running the plan and Mum turning it down. You have become the one who has to fix it."},{"text":"\u201cI suppose it's me, then. I'm sorry I'm so much trouble.\u201d","tag":"game","you":-5,"them":-6,"outcome":"\u201cNo, no, love, you're a good boy,\u201d she says, and asks whether you have eaten.","why":"A trap move: you took the blame and asked to be forgiven for it. The question about the bus is never asked, and the blame moves into your pocket."}]}],"payoff":"Mum hangs up, sure that everyone is against Dad, and the bus for Thursday stays unbooked.","example":"A cousin on a video call, Sunday. \u201cIf it weren't for my husband's shifts, we'd have gone to the coast by now.\u201d You say, \u201cAnd if the shifts were his problem to solve, what would you do?\u201d"}]},{"level":"Analyse","label":"Analyse, explain it","intro":"Two questions. Pick the reply that matches what happened, and why it worked.","items":[{"type":"pick","who":"Maya","text":"\u201cLet me tell you what he did.\u201d Which reply stops the case from running?","cue":"the case is open and you are the one on the stool","options":["Give Maya the verdict now, so she can stop talking.","Tell Maya to say it to Sam, since he is in the room.","Ask Sam to explain himself to you, the judge."],"answer":1,"why":"When someone talks about a person who is in the room, the talk is aimed at you as the judge, and the person it is about is left out. Turning the talk to that person directly removes the judge. The court has nowhere to sit.","traps":{"0":"A verdict ends the talk for a minute, but the case stays open. Maya will bring the next one to the same stool, because you have just shown her where the judge sits.","2":"This still puts you in the middle. Sam now speaks to the judge, and the case becomes a hearing with better manners. The room is the same, and only the seating has moved."},"example":"A friend on a train, Sunday. \u201cLet me tell you what my brother did about the flat.\u201d You say, \u201cTell him, he's on the phone. Put him on speaker.\u201d"},{"type":"pick","who":"Sam","text":"\u201cYou never come to anything, so forget it. I'll go alone, like always.\u201d Which reply steps out of the corner?","cue":"keys already in his hand, the film paused on the screen","options":["I'll come, and I'll be annoyed that you made it a fight.","I'll come, and let's pick the film together.","I'm not coming, because you always make it hard."],"answer":1,"why":"The corner has two doors, and both lead to the same wall. Coming means you came only because you were pushed, and staying means you never come. The way out is to drop the refusal and join in warmly on the plan.","traps":{"0":"This goes through the first door. You come, but you bring the sulk with you, so the label \u201cnever comes\u201d is still on the table and he gets to say he was right.","2":"This goes through the second door. The refusal confirms the label, and the corner closes behind you. He can now say, with a straight face, that you never come."},"example":"A group chat about a cricket match, Saturday. One friend writes, \u201cYou never turn up, so I've booked the nets without you.\u201d You reply, \u201cCount me in, and I'll bring the drinks.\u201d"}]}],"debrief":{"nadia":"Several home traps came up in one week, and each had a way out that sounded too simple. Say the thing to the person in the room, or hand the choice back. Try one of them this week.","bookTerm":"Marital games","bookNote":"The books call these marital games: games that grow into their fullest form in marriage and family living. Berne lists Corner, Courtroom, Frigid Woman and Frigid Man, Harried, If It Weren't for You, Look How Hard I've Tried, and Sweetheart, and notes that some of them also appear in children and in whole families."},"reflection":{"prompt":"Which home trap ran in your flat or on the phone this week, and what would stepping out of it have sounded like?"},"next":"4.5"};</script>
+<script>window.TA_NAV = {"hub":"https://claude.ai/artifact/FzdEytVBojsBteGVMXXV4K","next":{"slot":"4.5","title":"Room Games","url":"https://claude.ai/artifact/CiZTLP1gdtjsKkXr7uuvrk"}};</script>
+<script>
+(function () {
+  "use strict";
+
+  var GAME = window.TA_GAME;
+  var NAV = window.TA_NAV || { hub: null, next: null };
+  var card = document.getElementById("card");
+  var STORE_KEY = "ta-arena-reflect-" + (GAME ? GAME.slot : "");
+
+  // Content fields may carry <b>, <i> and <br> only. Other tags are dropped, and open
+  // tags are closed at the end of the field, so markup cannot leak into the card.
+  function rich(s) {
+    if (s === undefined || s === null) return "";
+    var open = [];
+    var out = String(s).replace(/<[^<>]*>|</g, function (tok) {
+      if (tok === "<") return "&lt;";
+      var m = /^<\s*(\/?)\s*([a-zA-Z]+)\s*(\/?)\s*>$/.exec(tok);
+      if (!m) return "";
+      var name = m[2].toLowerCase();
+      var closing = m[1] === "/";
+      if (name === "br") return closing ? "" : "<br>";
+      if (name !== "b" && name !== "i") return "";
+      if (closing) {
+        if (open[open.length - 1] === name) { open.pop(); return "</" + name + ">"; }
+        return "";
+      }
+      if (m[3]) return "";
+      open.push(name);
+      return "<" + name + ">";
+    });
+    while (open.length) out += "</" + open.pop() + ">";
+    return out;
+  }
+
+  function esc(s) {
+    return String(s === undefined || s === null ? "" : s)
+      .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;").replace(/'/g, "&#39;");
+  }
+
+  function clamp(v) { return Math.max(0, Math.min(100, v)); }
+
+  function safeUrl(u) {
+    return typeof u === "string" && /^https?:\/\//i.test(u) ? u : null;
+  }
+
+  var VOICE = { parent: "p", adult: "a", child: "c" };
+  function pill(label) {
+    var key = String(label).trim().toLowerCase();
+    var cls = Object.prototype.hasOwnProperty.call(VOICE, key) ? VOICE[key] : "x";
+    return '<span class="pill ' + cls + '">' + rich(label) + '</span>';
+  }
+
+  function exchange(who, text, cue) {
+    return '<div class="exchange"><p class="line"><span class="who">' + rich(who) + '</span>' +
+      rich(text) + '</p>' + (cue ? '<p class="cue">' + rich(cue) + '</p>' : '') + '</div>';
+  }
+
+  function exampleBox(text) {
+    return text ? '<div class="example"><div class="ex-label">Real example</div>' + rich(text) + '</div>' : "";
+  }
+
+  function nextbar(label) {
+    return '<div class="nextbar"><button class="next" type="button">' + label + '</button></div>';
+  }
+
+  function bindNext(fn) {
+    var b = card.querySelector(".nextbar button.next");
+    if (b) b.addEventListener("click", function () { fn(); });
+  }
+
+  function shuffled(n) {
+    var idx = [], i, j, t, attempt;
+    for (i = 0; i < n; i++) idx.push(i);
+    for (attempt = 0; attempt < 20; attempt++) {
+      for (i = n - 1; i > 0; i--) {
+        j = Math.floor(Math.random() * (i + 1));
+        t = idx[i]; idx[i] = idx[j]; idx[j] = t;
+      }
+      if (idx.some(function (v, p) { return v !== p; })) break;
+    }
+    return idx;
+  }
+
+  // Flat list of items across the three rounds; one progress segment each.
+  var ITEMS = [];
+  ((GAME && GAME.rounds) || []).forEach(function (round) {
+    (round.items || []).forEach(function (item, i) {
+      ITEMS.push({ round: round, item: item, first: i === 0 });
+    });
+  });
+  var TOTAL = ITEMS.length;
+
+  function progressHTML(done, current) {
+    var bars = "";
+    for (var i = 0; i < TOTAL; i++) {
+      bars += '<i class="' + (i < done ? "done" : (i === current ? "current" : "")) + '"></i>';
+    }
+    return '<div class="progress" role="progressbar" aria-label="Progress" aria-valuemin="0" aria-valuemax="' +
+      TOTAL + '" aria-valuenow="' + done + '">' + bars + '</div>';
+  }
+
+  function paintProgress(done, current) {
+    var old = card.querySelector(".progress");
+    if (old) old.outerHTML = progressHTML(done, current);
+  }
+
+  function frame(k, body, showIntro) {
+    var rec = ITEMS[k];
+    var intro = showIntro && rec.round.intro ? '<p class="round-intro">' + rich(rec.round.intro) + '</p>' : "";
+    return progressHTML(k, k) + '<div class="round-label">' + rich(rec.round.label) + '</div>' + intro + body;
+  }
+
+  // ---------- flow ----------
+
+  var state = { screen: "intro", k: 0 };
+
+  function settle() {
+    if (card.getBoundingClientRect().top < 0) card.scrollIntoView({ block: "start" });
+    card.focus({ preventScroll: true });
+  }
+
+  function render() {
+    if (state.screen === "intro") renderIntro();
+    else if (state.screen === "item") renderItem(state.k);
+    else if (state.screen === "debrief") renderDebrief();
+    else if (state.screen === "reflect") renderReflect();
+    else renderEnd();
+    settle();
+  }
+
+  function advance() {
+    if (state.screen === "intro") {
+      state.screen = "item"; state.k = 0;
+    } else if (state.screen === "item") {
+      if (state.k + 1 < TOTAL) state.k += 1;
+      else state.screen = "debrief";
+    } else if (state.screen === "debrief") {
+      state.screen = "reflect";
+    } else if (state.screen === "reflect") {
+      state.screen = "end";
+    }
+    render();
+  }
+
+  function renderItem(k) {
+    var it = ITEMS[k].item;
+    if (it.type === "pick") renderPick(k, it);
+    else if (it.type === "scene") renderScene(k, it);
+    else if (it.type === "sort") { if (it.order === true) renderOrder(k, it); else renderBins(k, it); }
+    else if (it.type === "counter") renderCounter(k, it);
+    else advance();
+  }
+
+  function renderIntro() {
+    var op = GAME.opener || {};
+    var lines = (op.lines || []).map(function (ln) {
+      return '<p class="line"><span class="who">' + rich(ln.who) + '</span>' + rich(ln.text) + '</p>' +
+        (ln.cue ? '<p class="cue">' + rich(ln.cue) + '</p>' : "");
+    }).join("");
+    var rounds = (GAME.rounds || []).map(function (r) {
+      var n = (r.items || []).length;
+      return '<li><span class="dot"></span><span><b>' + rich(r.level) + '</b>, ' + n +
+        (n === 1 ? ' item' : ' items') + '</span></li>';
+    }).join("");
+    card.innerHTML =
+      '<div class="tagline">TA Arena · World ' + esc(GAME.world) + ', ' + rich(GAME.worldName) +
+      ' · Game ' + esc(GAME.slot) + '</div>' +
+      '<div class="card-head"><div><h1>' + rich(GAME.title) + '</h1>' +
+      '<p class="deck">' + rich(GAME.concept) + '</p></div>' +
+      '<div class="case-no">' + esc(GAME.slot) + '<br>' + rich(GAME.weekName) + '</div></div>' +
+      '<p class="lede"><i>' + rich(op.setting) + '</i></p>' +
+      '<div class="exchange">' + lines + '</div>' +
+      '<div class="ask"><div class="kicker">The question</div><p>' + rich(op.ask) + '</p></div>' +
+      '<div class="rules-box"><div class="round-label">How this one works</div>' +
+      '<ul class="rules-list">' + rounds +
+      '<li><span class="dot"></span><span>Feedback follows every answer, with a real example</span></li>' +
+      '</ul></div>' +
+      nextbar("Start the game →");
+    bindNext(advance);
+  }
+
+  // ---------- pick ----------
+
+  function renderPick(k, it) {
+    var labels = it.options;
+    card.innerHTML = frame(k,
+      exchange(it.who, it.text, it.cue) +
+      '<p class="prompt">' + rich(it.prompt || "Which one is it?") + '</p>' +
+      '<div class="choices">' + labels.map(function (lab, i) {
+        return '<button class="choice" type="button" data-i="' + i + '">' + pill(lab) + '</button>';
+      }).join("") + '</div>', ITEMS[k].first);
+    var buttons = card.querySelectorAll("button.choice");
+    var answered = false;
+    buttons.forEach(function (btn) {
+      btn.addEventListener("click", function () { choose(parseInt(btn.getAttribute("data-i"), 10)); });
+    });
+    function choose(i) {
+      if (answered) return;
+      answered = true;
+      var right = i === it.answer;
+      buttons.forEach(function (b) { b.disabled = true; });
+      buttons[it.answer].classList.add("correct");
+      if (!right) buttons[i].classList.add("wrong");
+      var body = right
+        ? '<div class="why-box ok"><div class="stamp ok">✓ Right call</div>' +
+          '<p class="feedback"><b>Why:</b> ' + rich(it.why) + '</p></div>'
+        : '<div class="why-box cross"><div class="stamp cross">✗ Not quite</div>' +
+          '<p class="feedback"><b>You picked ' + rich(labels[i]) + '.</b> ' +
+          rich((it.traps || {})[String(i)]) + '</p>' +
+          '<p class="feedback"><b>The right call is ' + rich(labels[it.answer]) + '.</b> ' +
+          rich(it.why) + '</p></div>';
+      var fb = document.createElement("div");
+      fb.innerHTML = body + exampleBox(it.example) + nextbar("Continue →");
+      card.appendChild(fb);
+      paintProgress(k + 1, -1);
+      bindNext(advance);
+    }
+  }
+
+  // ---------- scene ----------
+
+  var TAG_LABEL = { best: "Best move", ok: "Fair move", game: "Trap move" };
+  var TAG_CLASS = { best: "ok", ok: "amber", game: "cross" };
+  var TAG_PICK = { best: "correct", ok: "amber", game: "wrong" };
+  var DEFAULT_FALLOUT = {
+    you: "You have nothing left to give in this exchange, so the scene stops here.",
+    them: "The other person has shut the conversation down, so the scene stops here."
+  };
+
+  function meterRow(key, label, v) {
+    return '<div class="meter ' + key + (v <= 0 ? " empty" : "") + '">' +
+      '<span class="name">' + label + '</span>' +
+      '<span class="track"><span class="fill" data-m="' + key + '" style="width:' + v + '%"></span></span>' +
+      '<span class="num" data-n="' + key + '">' + v + '</span></div>';
+  }
+
+  function meterHTML(m) {
+    return '<div class="meters">' + meterRow("you", "You", m.you) + meterRow("them", "Them", m.them) + '</div>';
+  }
+
+  function setMeters(m) {
+    ["you", "them"].forEach(function (key) {
+      var fill = card.querySelector('.fill[data-m="' + key + '"]');
+      var num = card.querySelector('.num[data-n="' + key + '"]');
+      var row = card.querySelector(".meter." + key);
+      if (fill) fill.style.width = m[key] + "%";
+      if (num) num.textContent = String(m[key]);
+      if (row) row.classList.toggle("empty", m[key] <= 0);
+    });
+  }
+
+  function renderScene(k, sc) {
+    var rec = ITEMS[k];
+    var meters = { you: clamp(Number(sc.meters.you)), them: clamp(Number(sc.meters.them)) };
+    var beats = sc.beats || [];
+    var bi = 0;
+
+    function drawBeat() {
+      var b = beats[bi];
+      card.innerHTML = frame(k,
+        '<h2 class="scene-title">' + rich(sc.title) + '</h2>' +
+        '<p class="setting">' + rich(sc.setting) + '</p>' +
+        meterHTML(meters) +
+        '<p class="kicker">Beat ' + (bi + 1) + ' of ' + beats.length + '</p>' +
+        exchange(b.who, b.text, b.cue) +
+        '<div class="choices">' + b.lines.map(function (ln, i) {
+          return '<button class="choice" type="button" data-i="' + i + '">' + rich(ln.text) + '</button>';
+        }).join("") + '</div>', rec.first && bi === 0);
+      var buttons = card.querySelectorAll("button.choice");
+      buttons.forEach(function (btn) {
+        btn.addEventListener("click", function () { pick(parseInt(btn.getAttribute("data-i"), 10), buttons); });
+      });
+    }
+
+    function pick(i, buttons) {
+      if (buttons[0].disabled) return;
+      var ln = beats[bi].lines[i];
+      buttons.forEach(function (x) { x.disabled = true; });
+      buttons[i].classList.add(TAG_PICK[ln.tag] || "amber");
+      meters.you = clamp(meters.you + ln.you);
+      meters.them = clamp(meters.them + ln.them);
+      setMeters(meters);
+      var dead = [];
+      if (meters.you <= 0) dead.push("you");
+      if (meters.them <= 0) dead.push("them");
+      var ends = ln.tag === "game" || dead.length > 0;
+      var cls = TAG_CLASS[ln.tag] || "amber";
+      var html = '<div class="why-box ' + cls + '"><div class="stamp ' + cls + '">' +
+        (TAG_LABEL[ln.tag] || "Move") + '</div>' +
+        '<p class="feedback">' + rich(ln.outcome) + '</p>' +
+        '<p class="feedback"><b>Why:</b> ' + rich(ln.why) + '</p></div>';
+      if (ln.tag === "game") {
+        html += '<div class="example"><div class="ex-label">How it ends</div>' + rich(sc.payoff) + '</div>';
+      }
+      if (dead.length) {
+        var fo = sc.fallout || {};
+        var lines = [];
+        if (dead.indexOf("them") >= 0) lines.push(fo.them || DEFAULT_FALLOUT.them);
+        if (dead.indexOf("you") >= 0) lines.push(fo.you || DEFAULT_FALLOUT.you);
+        html += '<div class="example"><div class="ex-label">How it ends</div>' +
+          lines.map(function (t) { return rich(t); }).join("<br><br>") + '</div>';
+      }
+      var last = ends || bi === beats.length - 1;
+      var fb = document.createElement("div");
+      fb.innerHTML = html + nextbar("Continue →");
+      card.appendChild(fb);
+      bindNext(function () {
+        if (last) { sceneOver(); return; }
+        bi += 1;
+        drawBeat();
+        settle();
+      });
+    }
+
+    function sceneOver() {
+      card.innerHTML = frame(k,
+        '<h2 class="scene-title">' + rich(sc.title) + '</h2>' +
+        '<p class="kicker">Scene over</p>' +
+        meterHTML(meters) +
+        exampleBox(sc.example) +
+        nextbar("Continue →"), false);
+      paintProgress(k + 1, -1);
+      bindNext(advance);
+    }
+
+    drawBeat();
+  }
+
+  // ---------- sort: bins (each card goes in a bin, one after another) ----------
+
+  function renderBins(k, sc) {
+    var items = sc.items || [];
+    var bins = sc.bins || [];
+    var list;
+
+    function finish() {
+      var end = document.createElement("div");
+      end.innerHTML = exampleBox(sc.example) + nextbar("Continue →");
+      card.appendChild(end);
+      paintProgress(k + 1, -1);
+      bindNext(advance);
+    }
+
+    function addCard(i) {
+      var c = items[i];
+      var wrap = document.createElement("div");
+      wrap.className = "sort-item";
+      wrap.innerHTML = '<div class="exchange"><p class="line">' + rich(c.text) + '</p></div>' +
+        '<div class="choices">' + bins.map(function (label, bi) {
+          return '<button class="choice" type="button" data-i="' + bi + '">' + rich(label) + '</button>';
+        }).join("") + '</div>';
+      list.appendChild(wrap);
+      var buttons = wrap.querySelectorAll("button.choice");
+      buttons.forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          if (buttons[0].disabled) return;
+          choose(parseInt(btn.getAttribute("data-i"), 10));
+        });
+      });
+
+      function choose(pick) {
+        buttons.forEach(function (x) { x.disabled = true; });
+        var right = pick === c.answer;
+        buttons[c.answer].classList.add("correct");
+        if (!right) buttons[pick].classList.add("wrong");
+        var fb = document.createElement("div");
+        fb.innerHTML = right
+          ? '<div class="why-box ok"><div class="stamp ok">✓ Right call</div>' +
+            '<p class="feedback"><b>Why:</b> ' + rich(c.why) + '</p></div>'
+          : '<div class="why-box cross"><div class="stamp cross">✗ Not quite</div>' +
+            '<p class="feedback"><b>You picked ' + rich(bins[pick]) + '.</b> It belongs in ' +
+            rich(bins[c.answer]) + '.</p>' +
+            '<p class="feedback"><b>Why:</b> ' + rich(c.why) + '</p></div>';
+        wrap.appendChild(fb);
+        if (i + 1 < items.length) {
+          addCard(i + 1);
+          list.lastElementChild.scrollIntoView({ block: "nearest" });
+        } else {
+          finish();
+        }
+      }
+    }
+
+    card.innerHTML = frame(k, '<p class="prompt">' + rich(sc.prompt) + '</p><div class="sort-list"></div>',
+      ITEMS[k].first);
+    list = card.querySelector(".sort-list");
+    if (items.length) addCard(0);
+  }
+
+  // ---------- sort: order (tap the cards in sequence) ----------
+
+  function renderOrder(k, sc) {
+    var items = sc.items || [];
+    var placed = 0;
+    card.innerHTML = frame(k,
+      '<p class="prompt">' + rich(sc.prompt) + '</p>' +
+      '<ol class="seq" aria-label="Placed so far"></ol>' +
+      '<div class="pool choices">' + shuffled(items.length).map(function (idx) {
+        return '<button class="choice" type="button" data-i="' + idx + '">' + rich(items[idx].text) + '</button>';
+      }).join("") + '</div>' +
+      '<div class="order-fb"></div>', ITEMS[k].first);
+    var seq = card.querySelector(".seq");
+    var fbBox = card.querySelector(".order-fb");
+
+    card.querySelectorAll(".pool button.choice").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        tap(parseInt(btn.getAttribute("data-i"), 10), btn);
+      });
+    });
+
+    function tap(idx, btn) {
+      if (idx === placed) {
+        var li = document.createElement("li");
+        li.innerHTML = '<span class="n">' + (placed + 1) + '</span><span><span class="ct">' +
+          rich(items[idx].text) + '</span><span class="why">' + rich(items[idx].why) + '</span></span>';
+        seq.appendChild(li);
+        placed += 1;
+        btn.remove();
+        fbBox.innerHTML = "";
+        if (placed === items.length) {
+          fbBox.innerHTML = exampleBox(sc.example) + nextbar("Continue →");
+          paintProgress(k + 1, -1);
+          bindNext(advance);
+        }
+      } else {
+        fbBox.innerHTML = '<div class="why-box amber"><div class="stamp amber">Not yet</div>' +
+          '<p class="feedback">' + rich(items[placed].why) + '</p></div>';
+      }
+    }
+  }
+
+  // ---------- counter ----------
+
+  function renderCounter(k, c) {
+    var palette = c.palette || [];
+    var used = palette.map(function () { return false; });
+    var total = 0, picks = 0, sent = false;
+
+    card.innerHTML = frame(k,
+      '<p class="prompt">' + rich(c.prompt) + '</p>' +
+      '<div class="total"><span>Total</span><b data-total>0</b>' +
+      '<span>Target ' + esc(c.target) + ', within ' + esc(c.tolerance) + '</span></div>' +
+      '<div class="band" aria-hidden="true"><span class="fill" data-fill></span></div>' +
+      '<p class="kicker">Picks used: <span data-picks>0</span> of ' + esc(c.maxPicks) + '</p>' +
+      '<div class="choices">' + palette.map(function (p, i) {
+        return '<button class="choice pal" type="button" data-i="' + i + '"><span>' + rich(p.text) +
+          '</span><span class="val">+' + esc(p.value) + '</span></button>';
+      }).join("") + '</div>' +
+      '<div class="counter-actions"><button class="ghost" type="button" data-reset>Reset</button>' +
+      '<button class="next" type="button" data-send>Send</button></div>' +
+      '<div class="counter-fb"></div>', ITEMS[k].first);
+
+    var totalEl = card.querySelector("[data-total]");
+    var fillEl = card.querySelector("[data-fill]");
+    var picksEl = card.querySelector("[data-picks]");
+    var sendBtn = card.querySelector("[data-send]");
+    var resetBtn = card.querySelector("[data-reset]");
+    var palBtns = card.querySelectorAll("button.pal");
+
+    function paint() {
+      totalEl.textContent = String(total);
+      picksEl.textContent = String(picks);
+      fillEl.style.width = Math.min(100, Math.round(total / c.target * 100)) + "%";
+      fillEl.classList.toggle("over", total > c.target + c.tolerance);
+      palBtns.forEach(function (b, i) {
+        b.disabled = sent || used[i] || picks >= c.maxPicks;
+      });
+      sendBtn.disabled = sent || picks < 1;
+      resetBtn.disabled = sent || picks < 1;
+    }
+
+    palBtns.forEach(function (b) {
+      b.addEventListener("click", function () {
+        var i = parseInt(b.getAttribute("data-i"), 10);
+        if (sent || used[i] || picks >= c.maxPicks) return;
+        used[i] = true;
+        picks += 1;
+        total += palette[i].value;
+        paint();
+      });
+    });
+
+    resetBtn.addEventListener("click", function () {
+      if (sent) return;
+      used = palette.map(function () { return false; });
+      total = 0;
+      picks = 0;
+      paint();
+    });
+
+    sendBtn.addEventListener("click", function () {
+      if (sent || picks < 1) return;
+      sent = true;
+      paint();
+      var hit = Math.abs(total - c.target) <= c.tolerance;
+      var under = !hit && total < c.target;
+      var msg = hit ? c.hitMsg : (under ? c.underMsg : c.overMsg);
+      var cls = hit ? "ok" : (under ? "amber" : "cross");
+      var fb = document.createElement("div");
+      fb.innerHTML = '<div class="why-box ' + cls + '"><div class="stamp ' + cls + '">' +
+        (hit ? "✓ Right call" : "✗ Not quite") + '</div>' +
+        '<p class="feedback">' + rich(msg) + '</p>' +
+        '<p class="feedback"><b>Why:</b> ' + rich(c.why) + '</p></div>' +
+        nextbar("Continue →");
+      card.querySelector(".counter-fb").appendChild(fb);
+      paintProgress(k + 1, -1);
+      bindNext(advance);
+    });
+
+    paint();
+  }
+
+  // ---------- debrief, reflection, end ----------
+
+  function renderDebrief() {
+    var d = GAME.debrief || {};
+    card.innerHTML = progressHTML(TOTAL, -1) +
+      '<div class="round-label">Debrief</div>' +
+      '<h1 class="h2">What Nadia would say</h1>' +
+      '<p class="feedback">' + rich(d.nadia) + '</p>' +
+      '<div class="why-box neutral"><p class="feedback"><b>' +
+      rich(d.bookTerm || GAME.bookTerm) + '</b></p>' +
+      '<p class="feedback">' + rich(d.bookNote || GAME.bookIdea) + '</p></div>' +
+      nextbar("Continue →");
+    bindNext(advance);
+  }
+
+  // Storage can be blocked or missing, so every access is guarded.
+  function readStore() {
+    try { return window.localStorage.getItem(STORE_KEY) || ""; } catch (e) { return ""; }
+  }
+
+  function writeStore(value) {
+    try { window.localStorage.setItem(STORE_KEY, value); } catch (e) { /* blocked: the page still works */ }
+  }
+
+  function renderReflect() {
+    var r = GAME.reflection || {};
+    card.innerHTML = progressHTML(TOTAL, -1) +
+      '<div class="reflect-tag">Your turn</div>' +
+      '<p class="prompt">' + rich(r.prompt) + '</p>' +
+      '<textarea class="reflect-box" aria-label="Your reflection" ' +
+      'placeholder="A few lines is plenty. This stays on your device, and nobody else sees it."></textarea>' +
+      nextbar("Continue →");
+    var box = card.querySelector("textarea");
+    box.value = readStore();
+    box.addEventListener("input", function () { writeStore(box.value); });
+    bindNext(advance);
+  }
+
+  function renderEnd() {
+    var hub = safeUrl(NAV.hub);
+    var nxt = NAV.next || null;
+    var links = hub ? '<a class="next" href="' + esc(hub) + '">All games</a>' : "";
+    if (nxt) {
+      var nxtUrl = safeUrl(nxt.url);
+      links += nxtUrl
+        ? '<a class="next" href="' + esc(nxtUrl) + '">Next game: ' +
+          rich(nxt.title || ("Game " + nxt.slot)) + ' →</a>'
+        : '<p class="next-soon">Next game opens soon</p>';
+    }
+    card.innerHTML = progressHTML(TOTAL, -1) +
+      '<div class="end-badge">Case closed</div>' +
+      '<h1 class="h2">Game ' + esc(GAME.slot) + ' is done.</h1>' +
+      '<p class="feedback">' + rich(GAME.concept) + '</p>' +
+      '<div class="source"><b>From:</b> ' + rich(GAME.bookSource) + '</div>' +
+      '<div class="nextbar end-nav">' + links + '</div>';
+  }
+
+  // ---------- start ----------
+
+  function init() {
+    var series = document.getElementById("series");
+    var hubLink = document.getElementById("hubLink");
+    if (!GAME || !GAME.rounds) {
+      series.textContent = "TA Arena";
+      card.innerHTML = '<h1 class="h2">This game could not load.</h1>';
+      return;
+    }
+    series.innerHTML = 'TA Arena <small>· World ' + esc(GAME.world) + ' · Game ' + esc(GAME.slot) + '</small>';
+    var hub = safeUrl(NAV.hub);
+    if (hub) {
+      hubLink.setAttribute("href", hub);
+      hubLink.hidden = false;
+    }
+    render();
+  }
+
+  init();
+})();
+</script>
+
+</body>
+</html>

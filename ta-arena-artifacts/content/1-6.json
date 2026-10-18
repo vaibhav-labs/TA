@@ -1,0 +1,371 @@
+{
+  "slot": "1.6",
+  "title": "Boss: The Stroke Economy",
+  "world": 1,
+  "worldName": "Hunger",
+  "week": 1,
+  "weekName": "Invisible",
+  "mechanic": "Rule-breaker",
+  "concept": "After this one you can break each of the five Nod Rules in a live scene, and say who benefits from them.",
+  "plainWord": "the Nod Rules",
+  "bookTerm": "Stroke economy",
+  "bookIdea": "Five rules taught in childhood keep nods artificially scarce: people hold back nods they have, hold back from asking for nods they need, turn away nods they want, swallow nods they do not want, and never praise themselves. The scarcity serves whoever controls the supply.",
+  "bookSource": "Scripts People Live, ch. 8",
+  "opener": {
+    "setting": "Sunday, 16:00. The Corner Table. Your first session. Six people around two pushed-together tables, and Nadia at the end.",
+    "lines": [
+      { "who": "Nadia", "text": "“New face. Good. House rule: nobody explains anything until something has happened.”", "cue": "two tables, six people, the tea going cold" },
+      { "who": "Nadia", "text": "“So let's make something happen.”", "cue": "puts a card face down in front of you" }
+    ],
+    "ask": "Can you break all five of the room's unwritten rules before the tea goes cold?"
+  },
+  "rounds": [
+    {
+      "level": "Spot",
+      "label": "Spot, round 1",
+      "intro": "Three lines from the room. Tap which unwritten rule each one is enforcing.",
+      "items": [
+        {
+          "type": "pick",
+          "who": "Peter",
+          "text": "“We don't do compliments here.”",
+          "cue": "to the table, not to you, over his tea",
+          "options": ["Don't give nods you have", "Don't ask for nods you need", "Don't refuse nods you don't want"],
+          "answer": 0,
+          "why": "Don't give nods you have. Peter says the rule out loud, so the room doesn't have to. A compliment is a nod, and the room keeps them scarce.",
+          "traps": {
+            "1": "Don't ask would be about you asking for something. Peter is talking about what other people may give, not what you may want.",
+            "2": "Don't refuse is about turning down nods you don't want. Nobody has offered you one yet, so there is nothing to refuse."
+          },
+          "example": "A school staff room.<br>“We don't praise the new teachers, they'll get ideas.”<br>Nobody is told to be unkind. The praise just doesn't get given."
+        },
+        {
+          "type": "pick",
+          "who": "Ruby",
+          "text": "“Nobody asks for that here, you know.”",
+          "cue": "after you say you're having a rough week",
+          "options": ["Don't give nods you have", "Don't ask for nods you need", "Don't give yourself nods"],
+          "answer": 1,
+          "why": "Don't ask for nods you need. Asking for recognition in this room is a breach, so the reply is a warning, not a comfort.",
+          "traps": {
+            "0": "Don't give nods would be about the room handing out praise. Ruby is talking about you asking for something back.",
+            "2": "Don't give yourself nods is about praising yourself. She is reacting to a request, not to a boast."
+          },
+          "example": "A family kitchen at a wedding.<br>“Nobody asks for help with the dishes, you just do them.”<br>Asking gets a look, and the look is the rule."
+        },
+        {
+          "type": "pick",
+          "who": "You",
+          "text": "“Oh, it was nothing, really.”",
+          "cue": "said after someone praised your work",
+          "options": ["Don't give yourself nods", "Don't refuse nods you don't want", "Don't accept nods you want"],
+          "answer": 2,
+          "why": "Don't accept nods you want. The praise came, and you waved it away. That is the bounce, and it is the rule that keeps a wanted nod from landing.",
+          "traps": {
+            "0": "Don't give yourself nods would be praising your own work. You shrank the praise instead, which is the other way round.",
+            "1": "Don't refuse nods you don't want is about turning away a nod that felt wrong. This one was praise you could have used, and you batted it away before it could land."
+          },
+          "example": "A friend who says “You made a brilliant cake.”<br>“Oh, it was just the recipe.”<br>The cake was praised, and the praise went nowhere."
+        }
+      ]
+    },
+    {
+      "level": "Play",
+      "label": "Play, the Sunday session",
+      "intro": "Five rules, one each. Break them, and hold steady when the room pushes back.",
+      "items": [
+        {
+          "type": "scene",
+          "title": "Sunday, 16:00, the Nod Rules",
+          "setting": "Nadia at the end of the table. Peter, Hannah, Joseph and Ruby are here, and Omar is at the far end. You have twelve seconds a line.",
+          "meters": { "you": 60, "them": 50 },
+          "beats": [
+            {
+              "who": "Nadia",
+              "text": "“Five things. Do all five before the tea's cold. I won't tell you what they are.”",
+              "cue": "Omar, across the table, nods at you and looks back at the table",
+              "lines": [
+                {
+                  "text": "Nod back at Omar.",
+                  "tag": "best",
+                  "you": 2,
+                  "them": 2,
+                  "outcome": "Omar looks at the table again, then back at you. Nobody else has noticed.",
+                  "why": "You returned the nod, which is what a room of people does with each other. Omar is here, and he has done the first small thing.",
+                  "flags": ["omar_at_group"]
+                },
+                {
+                  "text": "“Tea's cold already, I think.”",
+                  "tag": "ok",
+                  "you": -2,
+                  "them": -1,
+                  "outcome": "Nadia: “It's always cold by four. Get on with it.”",
+                  "why": "A joke about the tea is a way of buying time. It keeps the room comfortable and keeps you out of the five things.",
+                  "flags": ["omar_at_group"]
+                },
+                {
+                  "text": "Look at the card and say nothing.",
+                  "tag": "ok",
+                  "you": -3,
+                  "them": 0,
+                  "outcome": "Nadia: “Good. Silence is allowed. Five things, though.”",
+                  "why": "Silence is a way of making yourself small in the room. Nadia lets it pass, once.",
+                  "flags": ["omar_at_group"]
+                }
+              ]
+            },
+            {
+              "who": "Hannah",
+              "text": "“The client wants the whole thing redone by Monday. Which is a fine plan, if you enjoy being lied to.”",
+              "cue": "sharp, to the table. Peter is watching you.",
+              "lines": [
+                {
+                  "text": "“That was a really clear way to put it.”",
+                  "tag": "best",
+                  "you": 8,
+                  "them": -3,
+                  "outcome": "Hannah blinks. “…Thanks. People don't usually say.” Peter: “We don't do compliments here. Nadia will think you're buttering her up.”",
+                  "why": "Rule one broken. You gave a compliment, which is a nod, and the room saw it. The dip in the room's warmth is real, and it recovers if you hold steady.",
+                  "flags": ["rule_1_broken"]
+                },
+                {
+                  "text": "“Mm.”",
+                  "tag": "ok",
+                  "you": -2,
+                  "them": 0,
+                  "outcome": "Hannah sighs and moves on. The rule holds, and you feel a little lower for it.",
+                  "why": "A grunt is the safe move. It keeps the room flat and keeps you out of the way."
+                },
+                {
+                  "text": "“Clients, eh.”",
+                  "tag": "ok",
+                  "you": -2,
+                  "them": 0,
+                  "outcome": "Joseph laughs into his tea. Nothing happens, which is exactly what the rule wants.",
+                  "why": "A shrug about the client is safe, and it gives nothing. The rule stays in place because you didn't test it."
+                }
+              ]
+            },
+            {
+              "who": "Nadia",
+              "text": "“Say one thing that went right this week. Your turn.”",
+              "cue": "the table waits. Everyone is looking at you.",
+              "lines": [
+                {
+                  "text": "“I'd actually like to know. Do I come across as standoffish? Nobody at work talks to me and I can't tell.”",
+                  "tag": "best",
+                  "you": 10,
+                  "them": 4,
+                  "outcome": "Silence. Then Joseph: “Not standoffish. Careful.” Ruby: “You looked terrified walking in, if that helps.” Laughter.",
+                  "why": "Rule two broken. You asked the room for a nod, and nobody asks for one here, so the question landed like a stone and the answer came back warm.",
+                  "flags": ["rule_2_broken"]
+                },
+                {
+                  "text": "“I finished my first PR.”",
+                  "tag": "ok",
+                  "you": 1,
+                  "them": 0,
+                  "outcome": "Nadia: “And?”",
+                  "why": "A plain fact is safe, and it is a nod for doing. The room waits for the rest, and you don't give it."
+                },
+                {
+                  "text": "“Nothing much. Same as always.”",
+                  "tag": "ok",
+                  "you": -2,
+                  "them": -2,
+                  "outcome": "Nadia: “Mm.” The table moves on to Peter.",
+                  "why": "The small, easy answer asks for nothing and gives nothing. It keeps the rule, and you stay on the edge of the table."
+                }
+              ]
+            },
+            {
+              "who": "Joseph",
+              "text": "“You listen well, for a new person.”",
+              "cue": "leaning back in his chair, meaning it",
+              "lines": [
+                {
+                  "text": "“Thank you. I'll take that.”",
+                  "tag": "best",
+                  "you": 8,
+                  "them": 5,
+                  "outcome": "Joseph nods, pleased. Nadia, aside: “Did everyone see that? He kept it.”",
+                  "why": "Rule three broken. You took a warm nod without shrinking it, and the bounce did not happen. The room's warmth comes back, because you held steady.",
+                  "flags": ["rule_3_broken"]
+                },
+                {
+                  "text": "“Oh, I'm just quiet.”",
+                  "tag": "ok",
+                  "you": -6,
+                  "them": 0,
+                  "outcome": "Joseph's smile closes a little. “Right. Well.”",
+                  "why": "This is the bounce, the most common way of keeping rule three. The nod goes back across the table and leaves him owed."
+                },
+                {
+                  "text": "“That's kind of you. I'm really not that good.”",
+                  "tag": "ok",
+                  "you": -5,
+                  "them": 0,
+                  "outcome": "Joseph shrugs and turns to the teapot. The nod goes back across the table.",
+                  "why": "It sounds modest and kind, but it still bounces the nod. Kind-sounding bounces keep the rule running, and they are hard to spot for that reason."
+                }
+              ]
+            }
+          ],
+          "example": "A team meeting.<br>“Your slides were great.”<br>“Oh, they're just the template.”<br>The compliment was for the work, and it went back across the table."
+        },
+        {
+          "type": "pick",
+          "who": "Nadia",
+          "text": "“Stop. What just happened when Joseph said you listen well?”",
+          "options": ["He was being polite", "I nearly bounced it", "He was asking for something"],
+          "answer": 1,
+          "why": "You nearly bounced it. Joseph's nod was warm and meant, and the reflex to wave it off is exactly what the rules protect.",
+          "traps": {
+            "0": "Nadia: “Look again.” The line plays back. Joseph meant it, and a polite nod still counts, so you were about to bounce a real one.",
+            "2": "Nadia: “Look again.” The line plays back. Joseph wanted nothing back. He only gave a nod."
+          },
+          "example": "A friend says, “You always know what to say.”<br>Your first move is “Oh, no, I just got lucky.”<br>The compliment was meant for you, and it went back across the table."
+        },
+        {
+          "type": "scene",
+          "title": "Sunday, 17:10, the walk out",
+          "setting": "Rules four and five, then the stairs. Peter is kind, and unbearable. Nadia is smiling at the end of the table.",
+          "meters": { "you": 60, "them": 50 },
+          "beats": [
+            {
+              "who": "Peter",
+              "text": "“You remind me of my nephew. Same lost look. He's doing very well now, you know. You'll be fine, these things take time. When I was your age…”",
+              "cue": "kindly, and unbearably, one arm along the back of your chair",
+              "lines": [
+                {
+                  "text": "“Peter, I appreciate it. I don't want to be anyone's nephew today. Can I just be new?”",
+                  "tag": "best",
+                  "you": 10,
+                  "them": -4,
+                  "outcome": "Peter, after a beat: “…Fair.” Nadia smiles, and the arm comes off your chair.",
+                  "why": "Rule four broken. You turned down a nod you didn't want, politely and out loud. The rule says you swallow it, and you didn't. Warmth in the room dips, and it comes back if you hold steady.",
+                  "flags": ["rule_4_broken"]
+                },
+                {
+                  "text": "“Thanks, Peter.”",
+                  "tag": "ok",
+                  "you": -5,
+                  "them": 0,
+                  "outcome": "Peter pats your hand. “That's the spirit.”",
+                  "why": "You swallowed a nod you didn't want. The rule holds, and it costs you steadiness. This is what the rule asks for, and you pay for it."
+                },
+                {
+                  "text": "“Ha. Yes. These things take time.”",
+                  "tag": "ok",
+                  "you": -2,
+                  "them": 0,
+                  "outcome": "Peter beams, and the nephew story runs on for another minute.",
+                  "why": "Agreeing to be the nephew keeps the peace. It looks kind, but the story now has you in it, and the rule keeps running."
+                }
+              ]
+            },
+            {
+              "who": "Nadia",
+              "text": "“One thing you did well today. Out loud. Yes, about yourself.”",
+              "cue": "the closing round, every face turned your way",
+              "lines": [
+                {
+                  "text": "“I asked a room of strangers if I was standoffish. That took something.”",
+                  "tag": "best",
+                  "you": 10,
+                  "them": 6,
+                  "outcome": "Ruby: “It did.”",
+                  "why": "Rule five broken. You gave yourself a nod for doing, out loud, and the room accepted it. The warmth that was dipping comes back.",
+                  "flags": ["rule_5_broken", "self_nod"]
+                },
+                {
+                  "text": "“I… showed up?”",
+                  "tag": "ok",
+                  "you": 2,
+                  "them": 0,
+                  "outcome": "Nadia: “That's a dodge. Try again.” It is the only time she pushes you.",
+                  "why": "Showing up is true, but it is a shrug. Rule five asks you to name the specific thing you did, with your own name on it."
+                },
+                {
+                  "text": "“Oh, I'm nothing special. You're all very kind.”",
+                  "tag": "ok",
+                  "you": -3,
+                  "them": 0,
+                  "outcome": "Hannah: “Nobody asked you to be special. Just to say one thing.”",
+                  "why": "It looks kind, because it praises the room. Still, it is a bounce, and it hands the nod back to them so you never have to take it."
+                }
+              ]
+            },
+            {
+              "who": "Omar",
+              "text": "“Didn't know you came here.”",
+              "cue": "on the stairs, falling into step beside you, no one else close",
+              "lines": [
+                {
+                  "text": "“First time.”",
+                  "tag": "best",
+                  "you": 4,
+                  "them": 5,
+                  "outcome": "“Yeah. Don't… mention it at work.”",
+                  "why": "A warm nod for being, from a man who has forbidden himself to give them. You took it plainly, and that counts for more than it looks."
+                },
+                {
+                  "text": "Say nothing, and nod back.",
+                  "tag": "ok",
+                  "you": 1,
+                  "them": 2,
+                  "outcome": "He nods, once, and walks on towards the car park.",
+                  "why": "A nod back without words is fine, but it leaves him to decide what it meant."
+                },
+                {
+                  "text": "“Have you been coming long?”",
+                  "tag": "ok",
+                  "you": -2,
+                  "them": -3,
+                  "outcome": "“Long enough. Don't… mention it at work.”",
+                  "why": "A question about how long he has been here is a small probe. It asks him to account for himself, which is the thing he is avoiding."
+                }
+              ]
+            }
+          ],
+          "fallout": {
+            "you": "Your steadiness runs out. You apologise to the whole table, and Nadia says, “Same card next Sunday.”"
+          },
+          "example": "A reunion dinner.<br>Your cousin says, “You've done so well, you must be proud.”<br>You say, “Oh, it was all luck,” and the evening moves on without the praise."
+        }
+      ]
+    },
+    {
+      "level": "Analyse",
+      "label": "Analyse, explain it",
+      "items": [
+        {
+          "type": "pick",
+          "who": "You",
+          "text": "The five rules keep nods scarce. Who gains when nods are scarce?",
+          "options": [
+            "Whoever controls how they are handed out",
+            "The people who are short of them",
+            "Nobody, the rules are only manners"
+          ],
+          "answer": 0,
+          "why": "Scarce nods keep the power with whoever controls the supply, and they suit a world that wants obedient people. The people short of nods pay for the rules.",
+          "traps": {
+            "1": "People short of nods are the ones who lose. The rules don't help them, they just keep them hungry.",
+            "2": "Manners would be kind and cost nothing. These rules cost the people who need nods, so they are more than manners."
+          },
+          "example": "A workplace where the manager never says well done.<br>The team works just as hard, and the manager's own praise is worth more because it is rare."
+        }
+      ]
+    }
+  ],
+  "debrief": {
+    "nadia": "Five rules nobody wrote down keep nods scarce: don't give them when you have them, don't ask for them when you need them, don't accept them when you want them, don't refuse the ones you don't want, and don't give them to yourself. They feel like modesty, but they're a diet somebody put you on, and whoever controls the supply of nods benefits. Watch this week for every time you say “it was nothing”.",
+    "bookTerm": "Stroke economy",
+    "bookNote": "The books call this the stroke economy, Claude Steiner's name for five rules taught in childhood that keep recognition scarce. He argues that the scarcity serves whoever controls the supply of nods, and an order that relies on obedient people."
+  },
+  "reflection": {
+    "prompt": "This week, how many times did you say “it was nothing”, and what did the other person do next?"
+  },
+  "next": "2.1"
+}

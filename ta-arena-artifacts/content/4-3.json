@@ -1,0 +1,208 @@
+{
+  "slot": "4.3",
+  "title": "Life Games",
+  "world": 4,
+  "worldName": "The Thesaurus",
+  "week": 4,
+  "weekName": "Traps",
+  "mechanic": "Choice-story",
+  "concept": "After this one you can name a long-running trap from its opening line and say what it keeps paying the person who runs it.",
+  "plainWord": "the long traps",
+  "bookTerm": "Life games",
+  "bookIdea": "Life games are the games with the most scope for a lifelong career, and they often draw in innocent bystanders. The book lists Alcoholic, Debtor, Kick Me, Now I've Got You You SOB, and See What You Made Me Do, and players learn their games as children.",
+  "bookSource": "Games People Play, ch. 6",
+  "opener": {
+    "setting": "Saturday, 7:30pm. Hawthorn Court, apartment 3B, the sitting room. The fan is on one speed, and Sam has a bottle in each hand.",
+    "lines": [
+      { "who": "Sam", "text": "“Have a drink with me. Just the one. You've been working since Tuesday, you need it.”", "cue": "holding a bottle out across the sofa" },
+      { "who": "Maya", "text": "“I'm on a six o'clock shift. Thanks, though.”", "cue": "still in her coat, not sitting down" },
+      { "who": "Sam", "text": "“Fine. I'll drink alone, then, like a man in a flat with nobody to talk to.”", "cue": "already opening the bottle" }
+    ],
+    "ask": "Find the long trap that is running here, and the line that steps out of it without making anyone the villain."
+  },
+  "rounds": [
+    {
+      "level": "Spot",
+      "label": "Spot, round 1",
+      "intro": "Three short moments. Each one is a long-running trap, and each one has a line that gives it away. Tap the trap it is.",
+      "items": [
+        {
+          "type": "pick",
+          "who": "Sam",
+          "text": "“I'll pay you the milk money on Friday, I swear. But if you start chasing me for it, I'll know what sort of flatmate you really are.”",
+          "cue": "leaning on the fridge, a smile that does not move",
+          "options": ["the gotcha", "try and collect", "the spill and sorry"],
+          "answer": 1,
+          "why": "He sets it up so that he wins either way. If you let it slide he keeps the milk, and if you chase him he gets to be the injured one, with a reason to be angry at you. That is the long trap of owing money and daring you to collect, where the chase turns into his chance to blame you.",
+          "traps": {
+            "0": "It would sound like “Ah, late with the money again. I knew you would be.” That is a pounce on a slip, and Sam has not slipped yet. He is arranging to be chased, which is a different move.",
+            "2": "It would sound like “Sorry, I'm hopeless with money. Go on, say it.” That asks you for a telling-off. Sam is asking you not to chase him, and that is a different request."
+          },
+          "example": "A family WhatsApp group, a cousin's engagement. “I'll send my share of the venue on Friday. But if anyone nags me, I'll remember who it was.”<br>Nobody pays, and nobody dares to ask."
+        },
+        {
+          "type": "pick",
+          "who": "Daniel",
+          "text": "“Ah, the sheet. I was wondering when this one would slip. Thought so.”",
+          "cue": "not looking up from his laptop, one eyebrow lifting",
+          "options": ["the gotcha", "have one", "try and collect"],
+          "answer": 0,
+          "why": "He has been waiting for a slip, and when it arrives he pounces. The line makes you look careless and makes him look sharp, both at once. That is the gotcha, a trap that only works when someone has just been caught out.",
+          "traps": {
+            "1": "It would sound like “Come on, one more, the sheet can wait.” That invites you to put the work down and join in, which is the have one offer. Nothing has slipped, so there is nothing for it to catch.",
+            "2": "It would sound like “I'll get you the sheet on Friday, but don't chase me for it.” That dares you to come and collect. Here Daniel is the one waiting, and the line is a pounce on a slip that has already happened."
+          },
+          "example": "A cricket group chat, Monday. “Did you bring the bat?”<br>“I think so.”<br>“Ah. So you didn't. I was wondering when you'd forget.”"
+        },
+        {
+          "type": "pick",
+          "who": "Omar",
+          "text": "“I had the deploy half done and you had to ask about lunch. Now I've run it on the wrong server. Look what you made me do.”",
+          "cue": "laptop open, the cursor still blinking on the wrong line",
+          "options": ["have one", "the gotcha", "look what you made me do"],
+          "answer": 2,
+          "why": "He was absorbed in his work, got interrupted, and the slip that followed came from his own irritation. The line hands that slip to you, and that is the whole trap: his mistake, your fault.",
+          "traps": {
+            "0": "It would sound like “Come on, one drink, you've earned it after the release.” That is an invitation to cheers and a round, and there is no slip to blame on anyone.",
+            "1": "It would sound like “Ah, the wrong server. I was wondering when you would slip.” That is a pounce on your mistake. Here the mistake is his, and he is handing the blame to you."
+          },
+          "example": "A garage, Saturday. A father is bent over the engine when his daughter asks about dinner. He drops a bolt and says: “Look what you made me do. Now I'll be here till dark.”<br>The slip came from his own irritation, and the blame lands on her."
+        }
+      ]
+    },
+    {
+      "level": "Play",
+      "label": "Play, the week in motion",
+      "intro": "Two scenes, and each one runs a long trap with the same cast. Each line is a move. Some lines steady the room and some keep the trap running, and one kind ends the scene early.",
+      "items": [
+        {
+          "type": "scene",
+          "title": "Friday, the office terrace",
+          "setting": "Friday, 8:40pm. Halden's terrace by the station. Paper cups and a speaker that is too loud. Sam is at the cooler with a bottle in each hand.",
+          "meters": { "you": 60, "them": 50 },
+          "beats": [
+            {
+              "who": "Sam",
+              "text": "“Have one. Come on, you're not driving. One more and I'll tell you about my ex.”",
+              "cue": "holding a bottle out, grinning too wide",
+              "lines": [
+                { "text": "“Not for me, Sam. I'll have a lemon soda, and you can tell me the ex story sober.”", "tag": "best", "you": 4, "them": 3, "outcome": "He laughs and puts one bottle back in the cooler. “Fair. Lemon soda, legend,” he says. The offer is still in the air, but it has been turned down without a fight.", "why": "A plain no to the drink and a plain yes to him. You step out of the have one loop without scolding him, so there is nothing for anyone to rescue." },
+                { "text": "“Go on, then, one. It's a party.”", "tag": "ok", "you": -2, "them": 2, "outcome": "He cheers and pours, and the next offer comes before the first bottle is empty.", "why": "You went along because it felt easier than saying no. That is the one who goes along, and the loop gets its next round." },
+                { "text": "“Give me the bottles. You're in no state, I'll sort the whole night for you.”", "tag": "game", "you": 2, "them": -5, "outcome": "He hands them over, but within the hour he is cross with you, because you are now the one who keeps him in check.", "why": "A rescue, and it feels helpful. It gives the trap a new part to play, so the offers carry on, and this time they are aimed at you." }
+              ]
+            },
+            {
+              "who": "Daniel",
+              "text": "“Sam, that's enough. Some of us have a deck to present on Monday.”",
+              "cue": "not looking up, arms folded on the rail",
+              "lines": [
+                { "text": "“Sam, come and walk with me. I want to hear the ex story.”", "tag": "best", "you": 3, "them": 4, "outcome": "Sam shrugs and takes the walk, and the terrace gets a little quieter.", "why": "You don't defend the drink and you don't join the scolding. You give Sam a choice that is not a bottle, so the scene does not turn into a fight between him and Daniel." },
+                { "text": "“He's fine, Daniel. Relax, it's a party.”", "tag": "ok", "you": -1, "them": -2, "outcome": "Daniel shrugs and says, “Fine, but it's your problem now.” Sam is left in the middle, with the bottle still in his hand.", "why": "You defend Sam without offering him anything. The argument moves to you and Daniel, and Sam stays in the middle, where the trap pays out." },
+                { "text": "“You're embarrassing yourself, Sam. Daniel's right.”", "tag": "game", "you": 1, "them": -6, "outcome": "Sam's grin drops. He turns away, and the group goes quiet for a second.", "why": "A scolding, and it takes Daniel's side. It feels like a clean answer, but it gives Sam the cold nod the trap counts on, and the room splits." }
+              ]
+            },
+            {
+              "who": "Sam",
+              "text": "“Okay, okay. One for the road, though. You'll be my driver, won't you?”",
+              "cue": "already reaching for the cooler, a bottle half out",
+              "lines": [
+                { "text": "“I'll walk you to the cab stand, Sam. You book it on your phone, and I'll wait with you.”", "tag": "best", "you": 4, "them": 4, "outcome": "He sighs and closes the cooler, then books the cab with his thumb. It is slow, and it is his job.", "why": "You give him one practical job, and he does it himself. Nobody has to drive him or cover for him, and that is the way out of the loop." },
+                { "text": "“Fine. One for the road, and then that's the end of it.”", "tag": "ok", "you": -2, "them": 1, "outcome": "He cheers and pours. “You're the best, you know that?” he says. The road turns out to be longer than one drink.", "why": "A bargain that ends with another drink. It sounds firm, but it hands the trap the last bottle, and the next round will break the promise." }
+              ]
+            },
+            {
+              "who": "Clara",
+              "text": "“Cheers, Sam! Best night, this. You're the only one who makes Halden fun.”",
+              "cue": "raising a plastic cup over the rail",
+              "lines": [
+                { "text": "“Thanks, Clara. Sam, you were about to show me the cab app. Want to?”", "tag": "best", "you": 3, "them": 3, "outcome": "Clara blinks, then laughs and says, “Oh, go on, then.” Sam opens the app and shows you the nearest rank.", "why": "You thank her and keep the focus on the practical job. A warm word can stay warm without cheering the drink, and the night stays honest." },
+                { "text": "“Cheers! You're right, it's the best night ever.”", "tag": "ok", "you": -2, "them": 2, "outcome": "Everyone raises a cup, and the bottles come back out of the cooler.", "why": "A cheer for the trap. On its own it does no harm, yet it makes the night look like a success, and the next round follows without anyone deciding it." }
+              ]
+            }
+          ],
+          "payoff": "The scene stops, and the terrace splits: some people are cross with Sam, and some are cross with you. By eleven, nobody can remember who started the round.",
+          "example": "A cousin's birthday dinner, Saturday. An uncle keeps topping up the glasses. When someone says no he jokes. The table turns to scold him, and he settles back in his chair, happy to be at the centre of it."
+        },
+        {
+          "type": "scene",
+          "title": "Monday, the kitchen in 3B",
+          "setting": "Monday, 7:20am. Hawthorn Court, apartment 3B, the kitchen. The jam jar has gone over on the counter, and the cloth is under the sink.",
+          "meters": { "you": 60, "them": 50 },
+          "beats": [
+            {
+              "who": "Sam",
+              "text": "“Oops. Sorry, sorry. I've tipped the whole jar. I'm hopeless, aren't I? Go on, say it.”",
+              "cue": "holding the empty jar up, apologising to it",
+              "lines": [
+                { "text": "“It's a spill, Sam. The cloth is under the sink. You wipe, and I'll get the bin.”", "tag": "best", "you": 4, "them": 4, "outcome": "He laughs and grabs the cloth. The floor is clear in a minute, and nobody has been told off.", "why": "You name the spill and give him a job. He is wearing the sign that says please don't kick me, and “go on, say it” is the invitation. A plain task gives him somewhere to go that isn't the kick." },
+                { "text": "“It's fine, don't worry. I'll sort it.”", "tag": "ok", "you": -3, "them": 2, "outcome": "He says, “You're the best,” and you spend ten minutes on your knees. The spill is now yours.", "why": "A kind rescue. It feels generous, and it hands him the spill, so the next one will come sooner." },
+                { "text": "“Hopeless is right. Every morning it's something with you.”", "tag": "game", "you": 1, "them": -4, "outcome": "He hangs his head and says, “Yeah, I know,” and the jar stays on the floor.", "why": "A telling-off, and it is exactly what the sign asked for. The trap is complete, because you have kicked him, and he can now say that this always happens to him." }
+              ]
+            },
+            {
+              "who": "Maya",
+              "text": "“Sam, you'll be late. And I'm not cleaning it again. I've been on nights.”",
+              "cue": "already at the door with her bag on one shoulder",
+              "lines": [
+                { "text": "“Go on, Maya. Sam and I will do the floor, and I'll text you when it's done.”", "tag": "best", "you": 3, "them": 3, "outcome": "She stops at the door and says “Thanks.” The floor is shining by the time she is on the bus.", "why": "You take a fair share and say so. It keeps Maya out of the rescue, and nobody is doing her part without being told." },
+                { "text": "“Fine, I'll do it. Again.”", "tag": "ok", "you": -2, "them": 1, "outcome": "She nods, and the “again” hangs in the room for longer than the floor takes to dry.", "why": "You agree, but with a sigh in it. It is not harmful, and it still leaves the job on the same person it always lands on." }
+              ]
+            },
+            {
+              "who": "Sam",
+              "text": "“You don't mind, do you? You're so good at all of this. I'd be lost without you.”",
+              "cue": "mug in hand, leaning on the doorframe",
+              "lines": [
+                { "text": "“I'd like you to clean the next one yourself, Sam. Deal?”", "tag": "best", "you": 4, "them": 2, "outcome": "He pulls a face, then nods. “Deal. Next time it's all me.” He means it, mostly.", "why": "A plain limit, said with a yes at the end. You don't punish him and you don't disappear, so the next spill has a plan." },
+                { "text": "“Ha, sure. Whatever you need.”", "tag": "ok", "you": -3, "them": 2, "outcome": "He grins, and your “whatever you need” is now in his pocket for the next time.", "why": "A nice answer that leaves the praise doing the work. You become the one he can count on, which is the job the trap was hoping for." }
+              ]
+            },
+            {
+              "who": "Sam",
+              "text": "“Deal. I'll pay you back for the jar on Friday. Promise.”",
+              "cue": "already halfway out the door",
+              "lines": [
+                { "text": "“Good. Friday, then. Have a good day.”", "tag": "best", "you": 3, "them": 4, "outcome": "He says, “Friday, promise,” and goes, a little lighter than he came.", "why": "You accept the date and let him go with it. A small, real time for a repayment is the one part of this exchange that can actually close." },
+                { "text": "“Yeah, sure. Whatever.”", "tag": "ok", "you": -1, "them": -2, "outcome": "He nods and is gone, and the promise is one more thing hanging in the air.", "why": "Not harmful, and not closing anything either. The loose promise will come back and ring the bell next week." }
+              ]
+            }
+          ],
+          "payoff": "Sam says “Yeah, I know,” and leaves the jar where it is. You both go to work with the same bad feeling, and the next spill is already set up for Wednesday.",
+          "example": "A parents' group, Thursday. A father drops the snack box for the third time and says, “Sorry, I'm hopeless.” A friend says, “Don't be silly, I'll get it.” Nobody remembers that he could have picked it up himself."
+        }
+      ]
+    },
+    {
+      "level": "Analyse",
+      "label": "Analyse, explain it",
+      "intro": "One question about the payoff. Pick the reason the trap keeps coming back, even after a no.",
+      "items": [
+        {
+          "type": "pick",
+          "who": "Nadia",
+          "text": "“Sam keeps offering the drink, even after you've said no. What is the trap paying him?”",
+          "cue": "turning her cup on its saucer, watching the window",
+          "options": [
+            "The drink he really wants, and nothing more.",
+            "A win either way: if you join in he gets licence to have more, and if you refuse he is entitled to feel insulted, and the scolding or rescue that follows keeps him in the middle of the room.",
+            "A quick way to end the night, so he can go home unseen."
+          ],
+          "answer": 1,
+          "why": "The drink is only the bait. If you join in, he has licence to have more. If you refuse, he is entitled to feel insulted, and the scolding or rescue that follows puts him in the middle of the room. Either way he wins something, so a single no does not end it.",
+          "traps": {
+            "0": "If someone heard this, they would hand him a better drink and call it sorted. The drinks problem would look solved, and the offer would come back at the next party, because the drink was never what he was after.",
+            "2": "If someone heard this, they would talk about getting him home early. But he is staying on the terrace and wants to be looked after, so the answer misses where his attention really is."
+          },
+          "example": "A school reunion, Saturday. A classmate keeps bringing up the trip nobody went on. Each time someone says let's move on, the table stops to argue with him, and he is pleased to be the centre of the argument."
+        }
+      ]
+    }
+  ],
+  "debrief": {
+    "nadia": "These traps are long, so they start to feel normal. Each one gives itself away in an opening line, and each one can be stepped out of without a telling-off. Look for the offer that keeps coming back, and ask what the room gives the person who keeps making it.",
+    "bookTerm": "Life games",
+    "bookNote": "The books call these life games: the games with the most scope for a lifelong career, which often draw in innocent bystanders. The thesaurus lists Alcoholic, Debtor, Kick Me, Now I've Got You You SOB, and See What You Made Me Do. Players tend to learn their games as children."
+  },
+  "reflection": { "prompt": "Which long trap showed up for you this week, and what was the first line that gave it away?" },
+  "next": "4.4"
+}

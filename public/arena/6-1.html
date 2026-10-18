@@ -1,0 +1,811 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>OK Corral · TA Arena</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    color-scheme: light;
+    --bg: #171233; --bg-2: #241c47;
+    --surface: #f2eefb; --surface-2: #c9b8e6; --surface-3: #bda8e2;
+    --accent: #6c5fe0; --accent-deep: #4a3fa0;
+    --pink: #d9699f; --blue: #5b8fd9;
+    --ok: #1f7568; --wrong: #a8407a; --alt: #5c4fb0;
+    --text: #231c3f; --text-dim: #675f82;
+    --on-bg: #ece7fb; --on-bg-dim: #b4abd9;
+    --shadow: rgba(23, 18, 51, 0.28);
+    --parent: #7b5fe0; --adult: #4f8fd9; --childv: #d9699f;
+  }
+  [hidden] { display: none !important; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    background-image:
+      radial-gradient(ellipse 820px 560px at 12% -8%, var(--bg-2), transparent),
+      radial-gradient(ellipse 680px 520px at 108% 12%, #2c1f4a, transparent),
+      radial-gradient(ellipse 600px 420px at 60% 110%, #2a1840, transparent);
+    color: var(--on-bg);
+    font-family: "IBM Plex Sans", system-ui, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 28px 16px 56px;
+  }
+  .stage { width: 100%; max-width: 580px; min-width: 0; }
+
+  .masthead { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 16px; padding: 0 4px; }
+  .series { font-family: "IBM Plex Mono", monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--pink); font-weight: 600; }
+  .series small { color: var(--on-bg-dim); font-weight: 500; letter-spacing: 0.08em; }
+  .tag { font-family: "IBM Plex Mono", monospace; font-size: 11px; color: var(--on-bg-dim); text-decoration: none; white-space: nowrap; }
+  .tag:hover { color: var(--pink); }
+  a:focus-visible, button:focus-visible, textarea:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  .card { background: var(--surface); color: var(--text); border-radius: 22px; box-shadow: 0 24px 60px var(--shadow); padding: 32px 28px 28px; position: relative; min-width: 0; overflow-wrap: anywhere; }
+  .card:focus { outline: none; }
+  .card-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; margin-bottom: 18px; }
+  .card-head > div:first-child { min-width: 0; }
+  h1 { font-family: "Fraunces", Georgia, serif; font-weight: 500; font-size: 27px; line-height: 1.2; margin: 0 0 6px; text-wrap: balance; letter-spacing: -0.01em; }
+  h1.h2 { font-size: 21px; margin: 0 0 12px; }
+  .deck { font-size: 14.5px; color: var(--text-dim); margin: 0; max-width: 40ch; line-height: 1.5; }
+  .case-no { font-family: "IBM Plex Mono", monospace; font-size: 11px; color: var(--text-dim); text-align: right; white-space: nowrap; padding-top: 4px; }
+  .tagline { display: inline-block; font-family: "IBM Plex Mono", monospace; font-size: 11px; color: var(--text-dim); background: var(--surface-2); border-radius: 999px; padding: 4px 12px; margin: 0 0 16px; letter-spacing: 0.03em; }
+  .kicker { font-family: "IBM Plex Mono", monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-dim); margin: 0 0 10px; }
+
+  .progress { display: flex; gap: 5px; margin-bottom: 24px; }
+  .progress i { height: 5px; flex: 1; background: var(--surface-2); border-radius: 999px; overflow: hidden; position: relative; }
+  .progress i.done { background: linear-gradient(90deg, var(--accent), var(--pink)); }
+  .progress i.current::after { content: ""; position: absolute; inset: 0; width: 50%; background: var(--accent); opacity: .55; }
+
+  .round-label { font-family: "IBM Plex Mono", monospace; font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-dim); margin-bottom: 10px; }
+  .round-intro { font-size: 15px; line-height: 1.55; color: var(--text-dim); margin: 0 0 16px; }
+
+  .exchange { background: var(--surface-2); border-radius: 16px; padding: 14px 16px; margin: 0 0 18px; }
+  .exchange .line { font-size: 15.5px; line-height: 1.5; margin: 0 0 8px; }
+  .exchange .line:last-child { margin-bottom: 0; }
+  .exchange .who { font-family: "IBM Plex Mono", monospace; font-size: 11px; color: var(--text-dim); display: block; margin-bottom: 2px; letter-spacing: 0.03em; }
+  .exchange .cue { font-size: 13.5px; color: var(--text-dim); font-style: italic; margin: 6px 0 12px; }
+  .exchange .cue:last-child { margin-bottom: 0; }
+
+  .lede { font-family: "Fraunces", Georgia, serif; font-size: 17.5px; font-weight: 500; font-style: italic; color: var(--accent-deep); line-height: 1.5; margin: 0 0 14px; }
+  .prompt { font-size: 16.5px; line-height: 1.55; margin: 0 0 18px; font-weight: 500; }
+  .setting { font-size: 15px; line-height: 1.55; color: var(--text-dim); font-style: italic; margin: 0 0 16px; }
+  .scene-title { font-family: "Fraunces", Georgia, serif; font-size: 19px; font-weight: 500; line-height: 1.3; margin: 0 0 6px; }
+
+  .choices { display: flex; flex-direction: column; gap: 10px; }
+  button.choice {
+    font-family: "IBM Plex Sans", sans-serif; font-size: 15px; font-weight: 500; text-align: left;
+    padding: 14px 17px; min-height: 44px; border-radius: 14px; border: none; background: var(--surface-2); color: var(--text);
+    cursor: pointer; transition: background 120ms, transform 80ms, box-shadow 120ms; line-height: 1.4;
+  }
+  button.choice:hover { background: var(--surface-3); box-shadow: 0 6px 16px rgba(108,95,224,0.16); }
+  button.choice:active { transform: scale(0.99); }
+  button.choice.correct { background: color-mix(in srgb, var(--ok) 20%, var(--surface)); box-shadow: 0 0 0 2px color-mix(in srgb, var(--ok) 45%, transparent) inset; }
+  button.choice.wrong { background: color-mix(in srgb, var(--wrong) 18%, var(--surface)); box-shadow: 0 0 0 2px color-mix(in srgb, var(--wrong) 40%, transparent) inset; }
+  button.choice.amber { background: color-mix(in srgb, var(--alt) 18%, var(--surface)); box-shadow: 0 0 0 2px color-mix(in srgb, var(--alt) 40%, transparent) inset; }
+  button.choice[disabled] { cursor: default; opacity: 0.6; }
+  button.choice[disabled]:hover { background: var(--surface-2); box-shadow: none; }
+  button.choice.correct[disabled], button.choice.wrong[disabled], button.choice.amber[disabled] { opacity: 1; }
+  button.choice.pal { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+
+  .pill { display: inline-block; max-width: 100%; font-family: "IBM Plex Mono", monospace; font-size: 11.5px; font-weight: 600; padding: 3px 10px; border-radius: 999px; color: #fff; letter-spacing: 0.02em; background: var(--accent); overflow-wrap: anywhere; }
+  .pill.p { background: var(--parent); }
+  .pill.a { background: var(--adult); }
+  .pill.c { background: var(--childv); }
+
+  .stamp { display: inline-flex; align-items: center; gap: 6px; font-family: "IBM Plex Mono", monospace; font-size: 12px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; padding: 5px 12px; border-radius: 999px; margin-bottom: 12px; color: #fff; }
+  .stamp.ok { background: var(--ok); }
+  .stamp.cross { background: var(--wrong); }
+  .stamp.amber { background: var(--alt); }
+
+  .why-box { border-radius: 16px; padding: 16px 18px 17px 20px; margin: 0 0 16px; border-left: 5px solid transparent; box-shadow: 0 8px 22px rgba(23,18,51,0.12); }
+  .why-box .stamp { margin-bottom: 10px; }
+  .why-box .feedback { margin: 0 0 12px; }
+  .why-box .feedback:last-child { margin-bottom: 0; }
+  .why-box.ok { background: color-mix(in srgb, var(--ok) 45%, white); border-left-color: var(--ok); }
+  .why-box.cross { background: color-mix(in srgb, var(--wrong) 42%, white); border-left-color: var(--wrong); }
+  .why-box.amber { background: color-mix(in srgb, var(--alt) 40%, white); border-left-color: var(--alt); }
+  .why-box.neutral { background: color-mix(in srgb, var(--accent) 22%, white); border-left-color: var(--accent); }
+
+  .feedback { font-size: 16px; line-height: 1.6; color: var(--text); margin: 0 0 14px; padding-top: 2px; }
+  .feedback b { color: inherit; }
+
+  .example { background: color-mix(in srgb, var(--accent) 38%, white); border-left: 5px solid var(--accent); border-radius: 16px; padding: 14px 16px 15px 18px; margin: 0 0 18px; font-size: 15px; line-height: 1.55; color: var(--text); box-shadow: 0 8px 22px rgba(23,18,51,0.10); }
+  .ex-label { font-family: "IBM Plex Mono", monospace; font-size: 10.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent-deep); margin-bottom: 6px; }
+
+  .nextbar { display: flex; justify-content: flex-end; align-items: center; gap: 10px; flex-wrap: wrap; margin-top: 4px; }
+  button.next, a.next {
+    font-family: "IBM Plex Mono", monospace; font-size: 13px; font-weight: 600; letter-spacing: 0.03em;
+    background: linear-gradient(135deg, var(--accent), var(--pink)); color: #fff; border: none; text-decoration: none;
+    padding: 12px 20px; min-height: 44px; border-radius: 999px; cursor: pointer; box-shadow: 0 10px 24px rgba(108,95,224,0.35);
+    display: inline-flex; align-items: center; justify-content: center; text-align: center;
+  }
+  button.next:hover, a.next:hover { filter: brightness(1.08); transform: translateY(-1px); }
+  button.next[disabled] { opacity: .45; cursor: default; box-shadow: none; transform: none; filter: none; }
+  .next-soon { font-size: 14px; color: var(--text-dim); margin: 0; }
+
+  .meters { display: flex; flex-direction: column; gap: 10px; margin: 0 0 18px; }
+  .meter { display: grid; grid-template-columns: 52px 1fr 40px; align-items: center; gap: 10px; font-family: "IBM Plex Mono", monospace; font-size: 12px; }
+  .meter .name { color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.08em; font-size: 11px; }
+  .meter .track { height: 10px; border-radius: 999px; background: var(--surface-2); overflow: hidden; }
+  .meter .fill { display: block; height: 100%; width: 0; border-radius: 999px; background: linear-gradient(90deg, var(--accent), var(--pink)); transition: width 300ms ease; }
+  .meter.them .fill { background: linear-gradient(90deg, var(--blue), var(--accent)); }
+  .meter.empty .fill { background: var(--wrong); }
+  .meter .num { text-align: right; color: var(--text); font-weight: 600; }
+
+  .total { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 12px; font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--text-dim); margin: 0 0 8px; }
+  .total b { font-family: "Fraunces", Georgia, serif; font-size: 28px; font-weight: 500; color: var(--text); }
+  .band { position: relative; height: 10px; border-radius: 999px; background: var(--surface-2); overflow: hidden; margin: 0 0 8px; }
+  .band .fill { position: absolute; left: 0; top: 0; bottom: 0; width: 0; background: linear-gradient(90deg, var(--accent), var(--pink)); transition: width 300ms ease; }
+  .band .fill.over { background: var(--wrong); }
+  .val { flex: none; font-family: "IBM Plex Mono", monospace; font-size: 12.5px; font-weight: 600; color: #fff; background: var(--accent-deep); border-radius: 999px; padding: 3px 10px; white-space: nowrap; }
+  .counter-actions { display: flex; justify-content: flex-end; gap: 10px; flex-wrap: wrap; margin-top: 16px; }
+  button.ghost { font-family: "IBM Plex Mono", monospace; font-size: 13px; font-weight: 600; letter-spacing: 0.03em; background: transparent; color: var(--text); border: 2px solid var(--surface-3); padding: 10px 18px; min-height: 44px; border-radius: 999px; cursor: pointer; }
+  button.ghost[disabled] { opacity: .45; cursor: default; }
+  .counter-fb:empty, .order-fb:empty { display: none; }
+
+  .sort-item { margin: 0 0 16px; }
+  .sort-item + .sort-item { padding-top: 16px; border-top: 1px solid var(--surface-2); }
+  .sort-item .exchange { margin-bottom: 12px; }
+  .seq { list-style: none; margin: 0 0 16px; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+  .seq:empty { display: none; }
+  .seq li { display: grid; grid-template-columns: 28px 1fr; gap: 10px; background: var(--surface-2); border-radius: 14px; padding: 12px 14px; }
+  .seq .n { font-family: "IBM Plex Mono", monospace; font-weight: 600; color: var(--accent-deep); }
+  .seq .ct { display: block; font-size: 15px; line-height: 1.5; }
+  .seq .why { display: block; font-size: 14px; line-height: 1.5; color: var(--text-dim); margin-top: 6px; }
+  .pool { margin: 0 0 14px; }
+
+  .intro-list { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 9px; }
+  .rules-box { background: var(--surface-2); border-radius: 16px; padding: 16px 18px; margin: 18px 0; }
+  .rules-box .round-label { margin-bottom: 10px; }
+  .rules-list { margin: 0; padding-left: 0; list-style: none; display: flex; flex-direction: column; gap: 9px; }
+  .rules-list li { font-size: 14px; line-height: 1.45; display: flex; gap: 10px; color: var(--text); }
+  .rules-list .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); flex: none; margin-top: 7px; }
+  .ask { background: var(--bg-2); color: var(--on-bg); border-radius: 16px; padding: 14px 16px 15px; margin: 0 0 18px; }
+  .ask .kicker { color: var(--on-bg-dim); margin-bottom: 6px; }
+  .ask p { font-family: "Fraunces", Georgia, serif; font-size: 17px; line-height: 1.45; margin: 0; }
+
+  .end-badge { font-family: "IBM Plex Mono", monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ok); margin-bottom: 8px; }
+  .source { margin-top: 20px; padding: 14px 16px; border-radius: 14px; background: var(--surface-2); font-size: 12.5px; color: var(--text-dim); line-height: 1.5; }
+  .source b { color: var(--text); }
+  .end-nav { margin-top: 18px; }
+
+  .reflect-tag { font-family: "IBM Plex Mono", monospace; font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #fff; background: linear-gradient(135deg, var(--accent), var(--pink)); display: inline-block; padding: 5px 12px; border-radius: 999px; margin-bottom: 14px; }
+  textarea.reflect-box { display: block; width: 100%; min-height: 120px; resize: vertical; font-family: "IBM Plex Sans", sans-serif; font-size: 15.5px; line-height: 1.55; color: var(--text); background: var(--surface-2); border: none; border-radius: 16px; padding: 14px 16px; margin-bottom: 18px; box-shadow: 0 0 0 2px transparent inset; }
+  textarea.reflect-box::placeholder { color: var(--text-dim); }
+  textarea.reflect-box:focus { outline: none; box-shadow: 0 0 0 2px var(--accent) inset; }
+
+  @media (max-width: 480px) {
+    body { padding: 20px 12px 40px; }
+    .card { padding: 26px 18px 22px; }
+    h1 { font-size: 24px; }
+    h1.h2 { font-size: 20px; }
+    .meter { grid-template-columns: 44px 1fr 36px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
+  }
+</style>
+<link rel="manifest" href="/TA/arena/manifest.json">
+<meta name="theme-color" content="#171233">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="TA Arena">
+<link rel="icon" href="/TA/favicon.svg">
+<link rel="apple-touch-icon" href="/TA/icon-192.png">
+</head>
+<body>
+
+<div class="stage">
+  <div class="masthead">
+    <div class="series" id="series">TA Arena</div>
+    <a class="tag" id="hubLink" href="#" hidden>← All games</a>
+  </div>
+  <main class="card" id="card" tabindex="-1">
+    <p class="deck">Loading the game.</p>
+    <noscript><p class="deck">This game needs JavaScript to run.</p></noscript>
+  </main>
+</div>
+
+<script>window.TA_GAME = {"slot":"6.1","title":"OK Corral","world":6,"worldName":"The Plan","week":6,"weekName":"The Plan","mechanic":"Quadrant","concept":"After this one you can hear the verdict inside a line, say which of the four corners it belongs to, and follow one person through the corners across a day.","plainWord":"your verdict","bookTerm":"Life positions","bookIdea":"A life position is the verdict a person settles early about themselves and about other people, and it is the corner they tend to return to under pressure.","bookSource":"TA Today, ch. 12; Scripts People Live, ch. 5 and 6","opener":{"setting":"Sunday, 9:40am. The Corner Table, the back table. Nadia has laid four paper squares in a row, each one labelled with a corner.","lines":[{"who":"Nadia","text":"\u201cEverybody carries a verdict. About themselves, and about the people in front of them. There are four corners, and that's the whole map.\u201d","cue":"tapping the squares one at a time"},{"who":"Clara","text":"\u201cSo I get to be in all four? Brilliant. I'm very good at everything, apparently.\u201d","cue":"laughing before anyone else can"}],"ask":"Which corner does each inner line belong in, and where does one person end up by the end of the day?"},"rounds":[{"level":"Spot","label":"Spot, round 1","intro":"Each line is what someone says to themselves. Find the corner that matches the verdict it carries. Three boards, four lines each.","items":[{"type":"sort","prompt":"Gran, 6:30am, the kitchen, the cooker whistling. Put each line in its corner.","bins":["I'm OK, you're OK","I'm not OK, you're OK","I'm OK, you're not OK","I'm not OK, you're not OK"],"items":[{"text":"\u201cMy knees are bad, and the children have their own lives. I'll manage, like I always do.\u201d","answer":1,"why":"She puts herself last and counts the others as fine. 'I'll manage' is the not OK part, and 'they have their own lives' is the OK part. That is the corner where you are the one who doesn't count."},{"text":"\u201cAfter everything I did for them, not one of them rings on a Sunday.\u201d","answer":2,"why":"The sting is 'after everything I did'. In her own book she is fine, and the children are the ones letting her down. That is I'm OK, you're not OK."},{"text":"\u201cMy knees are bad today, so I'll ask Maya for the rice. She'll help, and asking is fine.\u201d","answer":0,"why":"She can ask for help without apology, and Maya is allowed to say yes. Both halves are fine: that is I'm OK, you're OK."},{"text":"\u201cNo point asking them. Nobody listens, and at my age I'm just the furniture.\u201d","answer":3,"why":"She is furniture, and the household is not listening. Both halves are down, which is I'm not OK, you're not OK, where asking feels pointless."}]},{"type":"sort","prompt":"Halden, the standup. Daniel and Clara, two lines each.","bins":["I'm OK, you're OK","I'm not OK, you're OK","I'm OK, you're not OK","I'm not OK, you're not OK"],"items":[{"text":"\u201cThe numbers are fine, and so is the team. We'll get there by Friday.\u201d","answer":0,"why":"Both halves are fine here. The numbers can be fixed, and the team is not the problem. This is the healthy corner, and Daniel sounds like this only on the days he forgets to keep score."},{"text":"\u201cI always get the small things wrong. Everyone else seems to know what they're doing.\u201d","answer":1,"why":"Clara puts herself down and puts everyone else up. She laughs first, so nobody else gets to make the joke. The verdict underneath is I'm not OK, you're OK."},{"text":"\u201cThe numbers are wrong again, and this team can't read a spec. I'll check every line myself.\u201d","answer":2,"why":"He is sure of his own reading and sure the team is short of it. That is I'm OK, you're not OK, the corner he keeps returning to when the numbers slip."},{"text":"\u201cWhatever I touch breaks, so what's the point? None of us will get this release over the line.\u201d","answer":3,"why":"Clara has put herself down and written off the release too. Both halves are down, which is I'm not OK, you're not OK."}]},{"type":"sort","prompt":"Omar, Halden, the day after a failed release. Put each line in its corner.","bins":["I'm OK, you're OK","I'm not OK, you're OK","I'm OK, you're not OK","I'm not OK, you're not OK"],"items":[{"text":"\u201cI've seen this before. Nothing I say changes it, so I'm not wasting my breath.\u201d","answer":3,"why":"Omar has written off his own pull on things, and he has written off the room as a place where nothing moves. Both halves are down. That is I'm not OK, you're not OK, the corner with no way out."},{"text":"\u201cFine, I'll take the on-call again. Nobody else here can even read the database.\u201d","answer":2,"why":"The verdict sits on 'nobody else'. He is the one who can do it and they can't, so he is OK and they are not. That is I'm OK, you're not OK."},{"text":"\u201cThat release broke at the cache step. We'll look at it together tomorrow, and I'll take the first pass.\u201d","answer":0,"why":"He names the fault without blaming anyone, and he brings the team in as partners. That is I'm OK, you're OK."},{"text":"\u201cI missed the cache warning, and you all flagged it. My fault, I should have listened.\u201d","answer":1,"why":"He puts the miss on himself and gives the team credit for spotting it. That is I'm not OK, you're OK, the corner where the other person got it right."}]}]},{"level":"Play","label":"Play, the week in motion","intro":"<b>Sam, one Thursday.<\/b><br>7:40am, the kitchen. Tea over the milk tin. \u201cSorry, sorry, I'm hopeless. You're too good to put up with me.\u201d<br>1:15pm, the fintech office. His team lead finds three errors in his deck. \u201cMe. Sorry. My fault entirely.\u201d<br>9:50pm, apartment 3B. Maya says he owes her for the milk again. He goes quiet and doesn't argue.","items":[{"type":"pick","who":"Sam, the fintech office, 1:15pm","text":"\u201cThat's on me. I should have checked the deck twice. I'll redo all of it.\u201d","cue":"the printout in his hand, three errors circled in red","options":["I'm OK, you're OK","I'm not OK, you're OK","I'm OK, you're not OK","I'm not OK, you're not OK"],"answer":1,"why":"'That's on me' and 'I should have checked' put the fault on him, and 'I'll redo all of it' makes him carry the fix. He still treats his team lead as the one who caught it right, so the team lead stays OK. That is I'm not OK, you're OK, his usual corner, the one he keeps returning to.","traps":{"0":"It would sound like \u201cThree errors, fair catch. I'll fix them before ten, and we can check the rest together.\u201d That owns the miss without a verdict on himself, and his team lead would get a plan.","2":"It would sound like \u201cThree errors? The template was yours too. Mark them before I see them next time.\u201d He would point across the table, and lunch would turn into a row about a template.","3":"It would sound like \u201cThree errors. Nothing I touch in this place lands right, so there's no point redoing it.\u201d That is the slide, and his team lead would be left with a deck and a man who has given up on it."},"example":"A cricket club group chat, Sunday night. The scorer posts the wrong total for the second innings, and types, \u201cMy fault, I should have added it twice. Sorry, I'll redo the sheet.\u201d<br>The captain replies with a thumbs up, and the corrected card goes up before dinner.<br>Nobody is told they are bad at cricket."},{"type":"pick","who":"Sam","text":"\u201cFine. I'm the mess. And she's keeping score, so nothing I say matters. Night.\u201d","cue":"10:50pm, his door shut, the light still on under it","options":["I'm OK, you're OK","I'm not OK, you're OK","I'm OK, you're not OK","I'm not OK, you're not OK"],"answer":3,"why":"'I'm the mess' puts him down, and 'she's keeping score' puts Maya down too, so both halves are down by bedtime. The breakfast apology still said you're OK. After a bad day, 'nothing I say matters' drops everything, which is the corner with no way out.","traps":{"0":"It would sound like \u201cMaya's right, I'll sort it on Friday.\u201d That is a grown-up line, but it isn't where he is at ten to eleven. She would hear a promise he doesn't believe yet.","1":"It would sound like the breakfast apology: \u201cSorry, I'm hopeless, you're too good for me.\u201d That is his usual corner, the one people mistake for his whole self. Maya would get another apology and nothing she could use.","2":"It would sound like \u201cYou always count the milk, Maya. Not everyone is a bank.\u201d He would point at her, and the night would become a fight about milk."},"example":"A school gate, Monday, 8:20am. A father fills in the trip form wrong and says, \u201cSorry, I'm hopeless with these.\u201d<br>The teacher says it's fine and he can fix it on Friday.<br>By Wednesday, after a second letter, he says, \u201cNobody in this school reads anything. What's the point?\u201d"}]},{"level":"Analyse","label":"Analyse, explain it","items":[{"type":"pick","who":"Nadia","text":"\u201cSam went through two corners in one day. Which reading helps him most?\u201d","cue":"tapping the squares, then pointing at his empty chair","options":["The breakfast apology was the real Sam, and the night is a mood that means nothing.","His life position is the verdict he tends to return to under pressure. The slide shows where the pressure takes him, and that is what to watch.","His corners are his personality, so one day tells you nothing new about him."],"answer":1,"why":"The books call this life positions. A basic position is the verdict a person settles early and tends to come back to under pressure. Sam's breakfast and lunch sit in I'm not OK, you're OK, his usual corner. The night shows the slide when the apology stops working, and the slide is the thing to watch.","traps":{"0":"Sam would agree and stop looking. Maya would hear 'it's just a mood' and carry the milk problem into next week alone.","2":"Nadia would be right that a person is more than a corner, but the line closes the day down. Nobody learns the slide, and Sam gets filed as a type."},"example":"A family WhatsApp group, Tuesday: \u201cSorry, I'm hopeless at forwards, ignore me.\u201d<br>Thursday, after nobody answers his question about the party times: \u201cFine. Nobody needs me in this group anyway.\u201d<br>The first line is his usual corner. The second is the slide."}]}],"debrief":{"nadia":"Sam's breakfast was the usual him, and his night was the slide. Many people have a corner they go back to when they are tired. Watch the slide, because it shows you where the pressure lands, and that tells you more than a label does.","bookTerm":"Life positions","bookNote":"The books call this life positions, the four corners of the OK Corral: the basic verdict a person settles early and tends to return to under pressure."},"reflection":{"prompt":"Which corner did you sit in most this week, and who was in the room when you got there?"},"next":"6.2"};</script>
+<script>window.TA_NAV = {"hub":"https://vaibhav-labs.github.io/TA/arena/","next":{"slot":"6.2","title":"Hear the Driver","url":"https://vaibhav-labs.github.io/TA/arena/6-2.html"}};</script>
+<script>
+(function () {
+  "use strict";
+
+  var GAME = window.TA_GAME;
+  var NAV = window.TA_NAV || { hub: null, next: null };
+  var card = document.getElementById("card");
+  var STORE_KEY = "ta-arena-reflect-" + (GAME ? GAME.slot : "");
+
+  // Content fields may carry <b>, <i> and <br> only. Other tags are dropped, and open
+  // tags are closed at the end of the field, so markup cannot leak into the card.
+  function rich(s) {
+    if (s === undefined || s === null) return "";
+    var open = [];
+    var out = String(s).replace(/<[^<>]*>|</g, function (tok) {
+      if (tok === "<") return "&lt;";
+      var m = /^<\s*(\/?)\s*([a-zA-Z]+)\s*(\/?)\s*>$/.exec(tok);
+      if (!m) return "";
+      var name = m[2].toLowerCase();
+      var closing = m[1] === "/";
+      if (name === "br") return closing ? "" : "<br>";
+      if (name !== "b" && name !== "i") return "";
+      if (closing) {
+        if (open[open.length - 1] === name) { open.pop(); return "</" + name + ">"; }
+        return "";
+      }
+      if (m[3]) return "";
+      open.push(name);
+      return "<" + name + ">";
+    });
+    while (open.length) out += "</" + open.pop() + ">";
+    return out;
+  }
+
+  function esc(s) {
+    return String(s === undefined || s === null ? "" : s)
+      .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;").replace(/'/g, "&#39;");
+  }
+
+  function clamp(v) { return Math.max(0, Math.min(100, v)); }
+
+  function safeUrl(u) {
+    return typeof u === "string" && /^https?:\/\//i.test(u) ? u : null;
+  }
+
+  var VOICE = { parent: "p", adult: "a", child: "c" };
+  function pill(label) {
+    var key = String(label).trim().toLowerCase();
+    var cls = Object.prototype.hasOwnProperty.call(VOICE, key) ? VOICE[key] : "x";
+    return '<span class="pill ' + cls + '">' + rich(label) + '</span>';
+  }
+
+  function exchange(who, text, cue) {
+    return '<div class="exchange"><p class="line"><span class="who">' + rich(who) + '</span>' +
+      rich(text) + '</p>' + (cue ? '<p class="cue">' + rich(cue) + '</p>' : '') + '</div>';
+  }
+
+  function exampleBox(text) {
+    return text ? '<div class="example"><div class="ex-label">Real example</div>' + rich(text) + '</div>' : "";
+  }
+
+  function nextbar(label) {
+    return '<div class="nextbar"><button class="next" type="button">' + label + '</button></div>';
+  }
+
+  function bindNext(fn) {
+    var b = card.querySelector(".nextbar button.next");
+    if (b) b.addEventListener("click", function () { fn(); });
+  }
+
+  function shuffled(n) {
+    var idx = [], i, j, t, attempt;
+    for (i = 0; i < n; i++) idx.push(i);
+    for (attempt = 0; attempt < 20; attempt++) {
+      for (i = n - 1; i > 0; i--) {
+        j = Math.floor(Math.random() * (i + 1));
+        t = idx[i]; idx[i] = idx[j]; idx[j] = t;
+      }
+      if (idx.some(function (v, p) { return v !== p; })) break;
+    }
+    return idx;
+  }
+
+  // Flat list of items across the three rounds; one progress segment each.
+  var ITEMS = [];
+  ((GAME && GAME.rounds) || []).forEach(function (round) {
+    (round.items || []).forEach(function (item, i) {
+      ITEMS.push({ round: round, item: item, first: i === 0 });
+    });
+  });
+  var TOTAL = ITEMS.length;
+
+  function progressHTML(done, current) {
+    var bars = "";
+    for (var i = 0; i < TOTAL; i++) {
+      bars += '<i class="' + (i < done ? "done" : (i === current ? "current" : "")) + '"></i>';
+    }
+    return '<div class="progress" role="progressbar" aria-label="Progress" aria-valuemin="0" aria-valuemax="' +
+      TOTAL + '" aria-valuenow="' + done + '">' + bars + '</div>';
+  }
+
+  function paintProgress(done, current) {
+    var old = card.querySelector(".progress");
+    if (old) old.outerHTML = progressHTML(done, current);
+  }
+
+  function frame(k, body, showIntro) {
+    var rec = ITEMS[k];
+    var intro = showIntro && rec.round.intro ? '<p class="round-intro">' + rich(rec.round.intro) + '</p>' : "";
+    return progressHTML(k, k) + '<div class="round-label">' + rich(rec.round.label) + '</div>' + intro + body;
+  }
+
+  // ---------- flow ----------
+
+  var state = { screen: "intro", k: 0 };
+
+  function settle() {
+    if (card.getBoundingClientRect().top < 0) card.scrollIntoView({ block: "start" });
+    card.focus({ preventScroll: true });
+  }
+
+  function render() {
+    if (state.screen === "intro") renderIntro();
+    else if (state.screen === "item") renderItem(state.k);
+    else if (state.screen === "debrief") renderDebrief();
+    else if (state.screen === "reflect") renderReflect();
+    else renderEnd();
+    settle();
+  }
+
+  function advance() {
+    if (state.screen === "intro") {
+      state.screen = "item"; state.k = 0;
+    } else if (state.screen === "item") {
+      if (state.k + 1 < TOTAL) state.k += 1;
+      else state.screen = "debrief";
+    } else if (state.screen === "debrief") {
+      state.screen = "reflect";
+    } else if (state.screen === "reflect") {
+      state.screen = "end";
+    }
+    render();
+  }
+
+  function renderItem(k) {
+    var it = ITEMS[k].item;
+    if (it.type === "pick") renderPick(k, it);
+    else if (it.type === "scene") renderScene(k, it);
+    else if (it.type === "sort") { if (it.order === true) renderOrder(k, it); else renderBins(k, it); }
+    else if (it.type === "counter") renderCounter(k, it);
+    else advance();
+  }
+
+  function renderIntro() {
+    var op = GAME.opener || {};
+    var lines = (op.lines || []).map(function (ln) {
+      return '<p class="line"><span class="who">' + rich(ln.who) + '</span>' + rich(ln.text) + '</p>' +
+        (ln.cue ? '<p class="cue">' + rich(ln.cue) + '</p>' : "");
+    }).join("");
+    var rounds = (GAME.rounds || []).map(function (r) {
+      var n = (r.items || []).length;
+      return '<li><span class="dot"></span><span><b>' + rich(r.level) + '</b>, ' + n +
+        (n === 1 ? ' item' : ' items') + '</span></li>';
+    }).join("");
+    card.innerHTML =
+      '<div class="tagline">TA Arena · World ' + esc(GAME.world) + ', ' + rich(GAME.worldName) +
+      ' · Game ' + esc(GAME.slot) + '</div>' +
+      '<div class="card-head"><div><h1>' + rich(GAME.title) + '</h1>' +
+      '<p class="deck">' + rich(GAME.concept) + '</p></div>' +
+      '<div class="case-no">' + esc(GAME.slot) + '<br>' + rich(GAME.weekName) + '</div></div>' +
+      '<p class="lede"><i>' + rich(op.setting) + '</i></p>' +
+      '<div class="exchange">' + lines + '</div>' +
+      '<div class="ask"><div class="kicker">The question</div><p>' + rich(op.ask) + '</p></div>' +
+      '<div class="rules-box"><div class="round-label">How this one works</div>' +
+      '<ul class="rules-list">' + rounds +
+      '<li><span class="dot"></span><span>Feedback follows every answer, with a real example</span></li>' +
+      '</ul></div>' +
+      nextbar("Start the game →");
+    bindNext(advance);
+  }
+
+  // ---------- pick ----------
+
+  function renderPick(k, it) {
+    var labels = it.options;
+    card.innerHTML = frame(k,
+      exchange(it.who, it.text, it.cue) +
+      '<p class="prompt">' + rich(it.prompt || "Which one is it?") + '</p>' +
+      '<div class="choices">' + labels.map(function (lab, i) {
+        return '<button class="choice" type="button" data-i="' + i + '">' + pill(lab) + '</button>';
+      }).join("") + '</div>', ITEMS[k].first);
+    var buttons = card.querySelectorAll("button.choice");
+    var answered = false;
+    buttons.forEach(function (btn) {
+      btn.addEventListener("click", function () { choose(parseInt(btn.getAttribute("data-i"), 10)); });
+    });
+    function choose(i) {
+      if (answered) return;
+      answered = true;
+      var right = i === it.answer;
+      buttons.forEach(function (b) { b.disabled = true; });
+      buttons[it.answer].classList.add("correct");
+      if (!right) buttons[i].classList.add("wrong");
+      var body = right
+        ? '<div class="why-box ok"><div class="stamp ok">✓ Right call</div>' +
+          '<p class="feedback"><b>Why:</b> ' + rich(it.why) + '</p></div>'
+        : '<div class="why-box cross"><div class="stamp cross">✗ Not quite</div>' +
+          '<p class="feedback"><b>You picked ' + rich(labels[i]) + '.</b> ' +
+          rich((it.traps || {})[String(i)]) + '</p>' +
+          '<p class="feedback"><b>The right call is ' + rich(labels[it.answer]) + '.</b> ' +
+          rich(it.why) + '</p></div>';
+      var fb = document.createElement("div");
+      fb.innerHTML = body + exampleBox(it.example) + nextbar("Continue →");
+      card.appendChild(fb);
+      paintProgress(k + 1, -1);
+      bindNext(advance);
+    }
+  }
+
+  // ---------- scene ----------
+
+  var TAG_LABEL = { best: "Best move", ok: "Fair move", game: "Trap move" };
+  var TAG_CLASS = { best: "ok", ok: "amber", game: "cross" };
+  var TAG_PICK = { best: "correct", ok: "amber", game: "wrong" };
+  var DEFAULT_FALLOUT = {
+    you: "You have nothing left to give in this exchange, so the scene stops here.",
+    them: "The other person has shut the conversation down, so the scene stops here."
+  };
+
+  function meterRow(key, label, v) {
+    return '<div class="meter ' + key + (v <= 0 ? " empty" : "") + '">' +
+      '<span class="name">' + label + '</span>' +
+      '<span class="track"><span class="fill" data-m="' + key + '" style="width:' + v + '%"></span></span>' +
+      '<span class="num" data-n="' + key + '">' + v + '</span></div>';
+  }
+
+  function meterHTML(m) {
+    return '<div class="meters">' + meterRow("you", "You", m.you) + meterRow("them", "Them", m.them) + '</div>';
+  }
+
+  function setMeters(m) {
+    ["you", "them"].forEach(function (key) {
+      var fill = card.querySelector('.fill[data-m="' + key + '"]');
+      var num = card.querySelector('.num[data-n="' + key + '"]');
+      var row = card.querySelector(".meter." + key);
+      if (fill) fill.style.width = m[key] + "%";
+      if (num) num.textContent = String(m[key]);
+      if (row) row.classList.toggle("empty", m[key] <= 0);
+    });
+  }
+
+  function renderScene(k, sc) {
+    var rec = ITEMS[k];
+    var meters = { you: clamp(Number(sc.meters.you)), them: clamp(Number(sc.meters.them)) };
+    var beats = sc.beats || [];
+    var bi = 0;
+
+    function drawBeat() {
+      var b = beats[bi];
+      card.innerHTML = frame(k,
+        '<h2 class="scene-title">' + rich(sc.title) + '</h2>' +
+        '<p class="setting">' + rich(sc.setting) + '</p>' +
+        meterHTML(meters) +
+        '<p class="kicker">Beat ' + (bi + 1) + ' of ' + beats.length + '</p>' +
+        exchange(b.who, b.text, b.cue) +
+        '<div class="choices">' + b.lines.map(function (ln, i) {
+          return '<button class="choice" type="button" data-i="' + i + '">' + rich(ln.text) + '</button>';
+        }).join("") + '</div>', rec.first && bi === 0);
+      var buttons = card.querySelectorAll("button.choice");
+      buttons.forEach(function (btn) {
+        btn.addEventListener("click", function () { pick(parseInt(btn.getAttribute("data-i"), 10), buttons); });
+      });
+    }
+
+    function pick(i, buttons) {
+      if (buttons[0].disabled) return;
+      var ln = beats[bi].lines[i];
+      buttons.forEach(function (x) { x.disabled = true; });
+      buttons[i].classList.add(TAG_PICK[ln.tag] || "amber");
+      meters.you = clamp(meters.you + ln.you);
+      meters.them = clamp(meters.them + ln.them);
+      setMeters(meters);
+      var dead = [];
+      if (meters.you <= 0) dead.push("you");
+      if (meters.them <= 0) dead.push("them");
+      var ends = ln.tag === "game" || dead.length > 0;
+      var cls = TAG_CLASS[ln.tag] || "amber";
+      var html = '<div class="why-box ' + cls + '"><div class="stamp ' + cls + '">' +
+        (TAG_LABEL[ln.tag] || "Move") + '</div>' +
+        '<p class="feedback">' + rich(ln.outcome) + '</p>' +
+        '<p class="feedback"><b>Why:</b> ' + rich(ln.why) + '</p></div>';
+      if (ln.tag === "game") {
+        html += '<div class="example"><div class="ex-label">How it ends</div>' + rich(sc.payoff) + '</div>';
+      }
+      if (dead.length) {
+        var fo = sc.fallout || {};
+        var lines = [];
+        if (dead.indexOf("them") >= 0) lines.push(fo.them || DEFAULT_FALLOUT.them);
+        if (dead.indexOf("you") >= 0) lines.push(fo.you || DEFAULT_FALLOUT.you);
+        html += '<div class="example"><div class="ex-label">How it ends</div>' +
+          lines.map(function (t) { return rich(t); }).join("<br><br>") + '</div>';
+      }
+      var last = ends || bi === beats.length - 1;
+      var fb = document.createElement("div");
+      fb.innerHTML = html + nextbar("Continue →");
+      card.appendChild(fb);
+      bindNext(function () {
+        if (last) { sceneOver(); return; }
+        bi += 1;
+        drawBeat();
+        settle();
+      });
+    }
+
+    function sceneOver() {
+      card.innerHTML = frame(k,
+        '<h2 class="scene-title">' + rich(sc.title) + '</h2>' +
+        '<p class="kicker">Scene over</p>' +
+        meterHTML(meters) +
+        exampleBox(sc.example) +
+        nextbar("Continue →"), false);
+      paintProgress(k + 1, -1);
+      bindNext(advance);
+    }
+
+    drawBeat();
+  }
+
+  // ---------- sort: bins (each card goes in a bin, one after another) ----------
+
+  function renderBins(k, sc) {
+    var items = sc.items || [];
+    var bins = sc.bins || [];
+    var list;
+
+    function finish() {
+      var end = document.createElement("div");
+      end.innerHTML = exampleBox(sc.example) + nextbar("Continue →");
+      card.appendChild(end);
+      paintProgress(k + 1, -1);
+      bindNext(advance);
+    }
+
+    function addCard(i) {
+      var c = items[i];
+      var wrap = document.createElement("div");
+      wrap.className = "sort-item";
+      wrap.innerHTML = '<div class="exchange"><p class="line">' + rich(c.text) + '</p></div>' +
+        '<div class="choices">' + bins.map(function (label, bi) {
+          return '<button class="choice" type="button" data-i="' + bi + '">' + rich(label) + '</button>';
+        }).join("") + '</div>';
+      list.appendChild(wrap);
+      var buttons = wrap.querySelectorAll("button.choice");
+      buttons.forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          if (buttons[0].disabled) return;
+          choose(parseInt(btn.getAttribute("data-i"), 10));
+        });
+      });
+
+      function choose(pick) {
+        buttons.forEach(function (x) { x.disabled = true; });
+        var right = pick === c.answer;
+        buttons[c.answer].classList.add("correct");
+        if (!right) buttons[pick].classList.add("wrong");
+        var fb = document.createElement("div");
+        fb.innerHTML = right
+          ? '<div class="why-box ok"><div class="stamp ok">✓ Right call</div>' +
+            '<p class="feedback"><b>Why:</b> ' + rich(c.why) + '</p></div>'
+          : '<div class="why-box cross"><div class="stamp cross">✗ Not quite</div>' +
+            '<p class="feedback"><b>You picked ' + rich(bins[pick]) + '.</b> It belongs in ' +
+            rich(bins[c.answer]) + '.</p>' +
+            '<p class="feedback"><b>Why:</b> ' + rich(c.why) + '</p></div>';
+        wrap.appendChild(fb);
+        if (i + 1 < items.length) {
+          addCard(i + 1);
+          list.lastElementChild.scrollIntoView({ block: "nearest" });
+        } else {
+          finish();
+        }
+      }
+    }
+
+    card.innerHTML = frame(k, '<p class="prompt">' + rich(sc.prompt) + '</p><div class="sort-list"></div>',
+      ITEMS[k].first);
+    list = card.querySelector(".sort-list");
+    if (items.length) addCard(0);
+  }
+
+  // ---------- sort: order (tap the cards in sequence) ----------
+
+  function renderOrder(k, sc) {
+    var items = sc.items || [];
+    var placed = 0;
+    card.innerHTML = frame(k,
+      '<p class="prompt">' + rich(sc.prompt) + '</p>' +
+      '<ol class="seq" aria-label="Placed so far"></ol>' +
+      '<div class="pool choices">' + shuffled(items.length).map(function (idx) {
+        return '<button class="choice" type="button" data-i="' + idx + '">' + rich(items[idx].text) + '</button>';
+      }).join("") + '</div>' +
+      '<div class="order-fb"></div>', ITEMS[k].first);
+    var seq = card.querySelector(".seq");
+    var fbBox = card.querySelector(".order-fb");
+
+    card.querySelectorAll(".pool button.choice").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        tap(parseInt(btn.getAttribute("data-i"), 10), btn);
+      });
+    });
+
+    function tap(idx, btn) {
+      if (idx === placed) {
+        var li = document.createElement("li");
+        li.innerHTML = '<span class="n">' + (placed + 1) + '</span><span><span class="ct">' +
+          rich(items[idx].text) + '</span><span class="why">' + rich(items[idx].why) + '</span></span>';
+        seq.appendChild(li);
+        placed += 1;
+        btn.remove();
+        fbBox.innerHTML = "";
+        if (placed === items.length) {
+          fbBox.innerHTML = exampleBox(sc.example) + nextbar("Continue →");
+          paintProgress(k + 1, -1);
+          bindNext(advance);
+        }
+      } else {
+        fbBox.innerHTML = '<div class="why-box amber"><div class="stamp amber">Not yet</div>' +
+          '<p class="feedback">' + rich(items[placed].why) + '</p></div>';
+      }
+    }
+  }
+
+  // ---------- counter ----------
+
+  function renderCounter(k, c) {
+    var palette = c.palette || [];
+    var used = palette.map(function () { return false; });
+    var total = 0, picks = 0, sent = false;
+
+    card.innerHTML = frame(k,
+      '<p class="prompt">' + rich(c.prompt) + '</p>' +
+      '<div class="total"><span>Total</span><b data-total>0</b>' +
+      '<span>Target ' + esc(c.target) + ', within ' + esc(c.tolerance) + '</span></div>' +
+      '<div class="band" aria-hidden="true"><span class="fill" data-fill></span></div>' +
+      '<p class="kicker">Picks used: <span data-picks>0</span> of ' + esc(c.maxPicks) + '</p>' +
+      '<div class="choices">' + palette.map(function (p, i) {
+        return '<button class="choice pal" type="button" data-i="' + i + '"><span>' + rich(p.text) +
+          '</span><span class="val">+' + esc(p.value) + '</span></button>';
+      }).join("") + '</div>' +
+      '<div class="counter-actions"><button class="ghost" type="button" data-reset>Reset</button>' +
+      '<button class="next" type="button" data-send>Send</button></div>' +
+      '<div class="counter-fb"></div>', ITEMS[k].first);
+
+    var totalEl = card.querySelector("[data-total]");
+    var fillEl = card.querySelector("[data-fill]");
+    var picksEl = card.querySelector("[data-picks]");
+    var sendBtn = card.querySelector("[data-send]");
+    var resetBtn = card.querySelector("[data-reset]");
+    var palBtns = card.querySelectorAll("button.pal");
+
+    function paint() {
+      totalEl.textContent = String(total);
+      picksEl.textContent = String(picks);
+      fillEl.style.width = Math.min(100, Math.round(total / c.target * 100)) + "%";
+      fillEl.classList.toggle("over", total > c.target + c.tolerance);
+      palBtns.forEach(function (b, i) {
+        b.disabled = sent || used[i] || picks >= c.maxPicks;
+      });
+      sendBtn.disabled = sent || picks < 1;
+      resetBtn.disabled = sent || picks < 1;
+    }
+
+    palBtns.forEach(function (b) {
+      b.addEventListener("click", function () {
+        var i = parseInt(b.getAttribute("data-i"), 10);
+        if (sent || used[i] || picks >= c.maxPicks) return;
+        used[i] = true;
+        picks += 1;
+        total += palette[i].value;
+        paint();
+      });
+    });
+
+    resetBtn.addEventListener("click", function () {
+      if (sent) return;
+      used = palette.map(function () { return false; });
+      total = 0;
+      picks = 0;
+      paint();
+    });
+
+    sendBtn.addEventListener("click", function () {
+      if (sent || picks < 1) return;
+      sent = true;
+      paint();
+      var hit = Math.abs(total - c.target) <= c.tolerance;
+      var under = !hit && total < c.target;
+      var msg = hit ? c.hitMsg : (under ? c.underMsg : c.overMsg);
+      var cls = hit ? "ok" : (under ? "amber" : "cross");
+      var fb = document.createElement("div");
+      fb.innerHTML = '<div class="why-box ' + cls + '"><div class="stamp ' + cls + '">' +
+        (hit ? "✓ Right call" : "✗ Not quite") + '</div>' +
+        '<p class="feedback">' + rich(msg) + '</p>' +
+        '<p class="feedback"><b>Why:</b> ' + rich(c.why) + '</p></div>' +
+        nextbar("Continue →");
+      card.querySelector(".counter-fb").appendChild(fb);
+      paintProgress(k + 1, -1);
+      bindNext(advance);
+    });
+
+    paint();
+  }
+
+  // ---------- debrief, reflection, end ----------
+
+  function renderDebrief() {
+    var d = GAME.debrief || {};
+    card.innerHTML = progressHTML(TOTAL, -1) +
+      '<div class="round-label">Debrief</div>' +
+      '<h1 class="h2">What Nadia would say</h1>' +
+      '<p class="feedback">' + rich(d.nadia) + '</p>' +
+      '<div class="why-box neutral"><p class="feedback"><b>' +
+      rich(d.bookTerm || GAME.bookTerm) + '</b></p>' +
+      '<p class="feedback">' + rich(d.bookNote || GAME.bookIdea) + '</p></div>' +
+      nextbar("Continue →");
+    bindNext(advance);
+  }
+
+  // Storage can be blocked or missing, so every access is guarded.
+  function readStore() {
+    try { return window.localStorage.getItem(STORE_KEY) || ""; } catch (e) { return ""; }
+  }
+
+  function writeStore(value) {
+    try { window.localStorage.setItem(STORE_KEY, value); } catch (e) { /* blocked: the page still works */ }
+  }
+
+  function renderReflect() {
+    var r = GAME.reflection || {};
+    card.innerHTML = progressHTML(TOTAL, -1) +
+      '<div class="reflect-tag">Your turn</div>' +
+      '<p class="prompt">' + rich(r.prompt) + '</p>' +
+      '<textarea class="reflect-box" aria-label="Your reflection" ' +
+      'placeholder="A few lines is plenty. This stays on your device, and nobody else sees it."></textarea>' +
+      nextbar("Continue →");
+    var box = card.querySelector("textarea");
+    box.value = readStore();
+    box.addEventListener("input", function () { writeStore(box.value); });
+    bindNext(advance);
+  }
+
+  function renderEnd() {
+    var hub = safeUrl(NAV.hub);
+    var nxt = NAV.next || null;
+    var links = hub ? '<a class="next" href="' + esc(hub) + '">All games</a>' : "";
+    if (nxt) {
+      var nxtUrl = safeUrl(nxt.url);
+      links += nxtUrl
+        ? '<a class="next" href="' + esc(nxtUrl) + '">Next game: ' +
+          rich(nxt.title || ("Game " + nxt.slot)) + ' →</a>'
+        : '<p class="next-soon">Next game opens soon</p>';
+    }
+    card.innerHTML = progressHTML(TOTAL, -1) +
+      '<div class="end-badge">Case closed</div>' +
+      '<h1 class="h2">Game ' + esc(GAME.slot) + ' is done.</h1>' +
+      '<p class="feedback">' + rich(GAME.concept) + '</p>' +
+      '<div class="source"><b>From:</b> ' + rich(GAME.bookSource) + '</div>' +
+      '<div class="nextbar end-nav">' + links + '</div>';
+  }
+
+  // ---------- start ----------
+
+  function init() {
+    var series = document.getElementById("series");
+    var hubLink = document.getElementById("hubLink");
+    if (!GAME || !GAME.rounds) {
+      series.textContent = "TA Arena";
+      card.innerHTML = '<h1 class="h2">This game could not load.</h1>';
+      return;
+    }
+    series.innerHTML = 'TA Arena <small>· World ' + esc(GAME.world) + ' · Game ' + esc(GAME.slot) + '</small>';
+    var hub = safeUrl(NAV.hub);
+    if (hub) {
+      hubLink.setAttribute("href", hub);
+      hubLink.hidden = false;
+    }
+    render();
+  }
+
+  init();
+})();
+</script>
+
+<script>if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('sw.js',{scope:'/TA/arena/'}).catch(function(){});});}</script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+{
+  "slot": "6.1",
+  "title": "OK Corral",
+  "world": 6,
+  "worldName": "The Plan",
+  "week": 6,
+  "weekName": "The Plan",
+  "mechanic": "Quadrant",
+  "concept": "After this one you can hear the verdict inside a line, say which of the four corners it belongs to, and follow one person through the corners across a day.",
+  "plainWord": "your verdict",
+  "bookTerm": "Life positions",
+  "bookIdea": "A life position is the verdict a person settles early about themselves and about other people, and it is the corner they tend to return to under pressure.",
+  "bookSource": "TA Today, ch. 12; Scripts People Live, ch. 5 and 6",
+  "opener": {
+    "setting": "Sunday, 9:40am. The Corner Table, the back table. Nadia has laid four paper squares in a row, each one labelled with a corner.",
+    "lines": [
+      { "who": "Nadia", "text": "“Everybody carries a verdict. About themselves, and about the people in front of them. There are four corners, and that's the whole map.”", "cue": "tapping the squares one at a time" },
+      { "who": "Clara", "text": "“So I get to be in all four? Brilliant. I'm very good at everything, apparently.”", "cue": "laughing before anyone else can" }
+    ],
+    "ask": "Which corner does each inner line belong in, and where does one person end up by the end of the day?"
+  },
+  "rounds": [
+    {
+      "level": "Spot",
+      "label": "Spot, round 1",
+      "intro": "Each line is what someone says to themselves. Find the corner that matches the verdict it carries. Three boards, four lines each.",
+      "items": [
+        {
+          "type": "sort",
+          "prompt": "Gran, 6:30am, the kitchen, the cooker whistling. Put each line in its corner.",
+          "bins": ["I'm OK, you're OK", "I'm not OK, you're OK", "I'm OK, you're not OK", "I'm not OK, you're not OK"],
+          "items": [
+            { "text": "“My knees are bad, and the children have their own lives. I'll manage, like I always do.”", "answer": 1, "why": "She puts herself last and counts the others as fine. 'I'll manage' is the not OK part, and 'they have their own lives' is the OK part. That is the corner where you are the one who doesn't count." },
+            { "text": "“After everything I did for them, not one of them rings on a Sunday.”", "answer": 2, "why": "The sting is 'after everything I did'. In her own book she is fine, and the children are the ones letting her down. That is I'm OK, you're not OK." },
+            { "text": "“My knees are bad today, so I'll ask Maya for the rice. She'll help, and asking is fine.”", "answer": 0, "why": "She can ask for help without apology, and Maya is allowed to say yes. Both halves are fine: that is I'm OK, you're OK." },
+            { "text": "“No point asking them. Nobody listens, and at my age I'm just the furniture.”", "answer": 3, "why": "She is furniture, and the household is not listening. Both halves are down, which is I'm not OK, you're not OK, where asking feels pointless." }
+          ]
+        },
+        {
+          "type": "sort",
+          "prompt": "Halden, the standup. Daniel and Clara, two lines each.",
+          "bins": ["I'm OK, you're OK", "I'm not OK, you're OK", "I'm OK, you're not OK", "I'm not OK, you're not OK"],
+          "items": [
+            { "text": "“The numbers are fine, and so is the team. We'll get there by Friday.”", "answer": 0, "why": "Both halves are fine here. The numbers can be fixed, and the team is not the problem. This is the healthy corner, and Daniel sounds like this only on the days he forgets to keep score." },
+            { "text": "“I always get the small things wrong. Everyone else seems to know what they're doing.”", "answer": 1, "why": "Clara puts herself down and puts everyone else up. She laughs first, so nobody else gets to make the joke. The verdict underneath is I'm not OK, you're OK." },
+            { "text": "“The numbers are wrong again, and this team can't read a spec. I'll check every line myself.”", "answer": 2, "why": "He is sure of his own reading and sure the team is short of it. That is I'm OK, you're not OK, the corner he keeps returning to when the numbers slip." },
+            { "text": "“Whatever I touch breaks, so what's the point? None of us will get this release over the line.”", "answer": 3, "why": "Clara has put herself down and written off the release too. Both halves are down, which is I'm not OK, you're not OK." }
+          ]
+        },
+        {
+          "type": "sort",
+          "prompt": "Omar, Halden, the day after a failed release. Put each line in its corner.",
+          "bins": ["I'm OK, you're OK", "I'm not OK, you're OK", "I'm OK, you're not OK", "I'm not OK, you're not OK"],
+          "items": [
+            { "text": "“I've seen this before. Nothing I say changes it, so I'm not wasting my breath.”", "answer": 3, "why": "Omar has written off his own pull on things, and he has written off the room as a place where nothing moves. Both halves are down. That is I'm not OK, you're not OK, the corner with no way out." },
+            { "text": "“Fine, I'll take the on-call again. Nobody else here can even read the database.”", "answer": 2, "why": "The verdict sits on 'nobody else'. He is the one who can do it and they can't, so he is OK and they are not. That is I'm OK, you're not OK." },
+            { "text": "“That release broke at the cache step. We'll look at it together tomorrow, and I'll take the first pass.”", "answer": 0, "why": "He names the fault without blaming anyone, and he brings the team in as partners. That is I'm OK, you're OK." },
+            { "text": "“I missed the cache warning, and you all flagged it. My fault, I should have listened.”", "answer": 1, "why": "He puts the miss on himself and gives the team credit for spotting it. That is I'm not OK, you're OK, the corner where the other person got it right." }
+          ]
+        }
+      ]
+    },
+    {
+      "level": "Play",
+      "label": "Play, the week in motion",
+      "intro": "<b>Sam, one Thursday.</b><br>7:40am, the kitchen. Tea over the milk tin. “Sorry, sorry, I'm hopeless. You're too good to put up with me.”<br>1:15pm, the fintech office. His team lead finds three errors in his deck. “Me. Sorry. My fault entirely.”<br>9:50pm, apartment 3B. Maya says he owes her for the milk again. He goes quiet and doesn't argue.",
+      "items": [
+        {
+          "type": "pick",
+          "who": "Sam, the fintech office, 1:15pm",
+          "text": "“That's on me. I should have checked the deck twice. I'll redo all of it.”",
+          "cue": "the printout in his hand, three errors circled in red",
+          "options": ["I'm OK, you're OK", "I'm not OK, you're OK", "I'm OK, you're not OK", "I'm not OK, you're not OK"],
+          "answer": 1,
+          "why": "'That's on me' and 'I should have checked' put the fault on him, and 'I'll redo all of it' makes him carry the fix. He still treats his team lead as the one who caught it right, so the team lead stays OK. That is I'm not OK, you're OK, his usual corner, the one he keeps returning to.",
+          "traps": {
+            "0": "It would sound like “Three errors, fair catch. I'll fix them before ten, and we can check the rest together.” That owns the miss without a verdict on himself, and his team lead would get a plan.",
+            "2": "It would sound like “Three errors? The template was yours too. Mark them before I see them next time.” He would point across the table, and lunch would turn into a row about a template.",
+            "3": "It would sound like “Three errors. Nothing I touch in this place lands right, so there's no point redoing it.” That is the slide, and his team lead would be left with a deck and a man who has given up on it."
+          },
+          "example": "A cricket club group chat, Sunday night. The scorer posts the wrong total for the second innings, and types, “My fault, I should have added it twice. Sorry, I'll redo the sheet.”<br>The captain replies with a thumbs up, and the corrected card goes up before dinner.<br>Nobody is told they are bad at cricket."
+        },
+        {
+          "type": "pick",
+          "who": "Sam",
+          "text": "“Fine. I'm the mess. And she's keeping score, so nothing I say matters. Night.”",
+          "cue": "10:50pm, his door shut, the light still on under it",
+          "options": ["I'm OK, you're OK", "I'm not OK, you're OK", "I'm OK, you're not OK", "I'm not OK, you're not OK"],
+          "answer": 3,
+          "why": "'I'm the mess' puts him down, and 'she's keeping score' puts Maya down too, so both halves are down by bedtime. The breakfast apology still said you're OK. After a bad day, 'nothing I say matters' drops everything, which is the corner with no way out.",
+          "traps": {
+            "0": "It would sound like “Maya's right, I'll sort it on Friday.” That is a grown-up line, but it isn't where he is at ten to eleven. She would hear a promise he doesn't believe yet.",
+            "1": "It would sound like the breakfast apology: “Sorry, I'm hopeless, you're too good for me.” That is his usual corner, the one people mistake for his whole self. Maya would get another apology and nothing she could use.",
+            "2": "It would sound like “You always count the milk, Maya. Not everyone is a bank.” He would point at her, and the night would become a fight about milk."
+          },
+          "example": "A school gate, Monday, 8:20am. A father fills in the trip form wrong and says, “Sorry, I'm hopeless with these.”<br>The teacher says it's fine and he can fix it on Friday.<br>By Wednesday, after a second letter, he says, “Nobody in this school reads anything. What's the point?”"
+        }
+      ]
+    },
+    {
+      "level": "Analyse",
+      "label": "Analyse, explain it",
+      "items": [
+        {
+          "type": "pick",
+          "who": "Nadia",
+          "text": "“Sam went through two corners in one day. Which reading helps him most?”",
+          "cue": "tapping the squares, then pointing at his empty chair",
+          "options": [
+            "The breakfast apology was the real Sam, and the night is a mood that means nothing.",
+            "His life position is the verdict he tends to return to under pressure. The slide shows where the pressure takes him, and that is what to watch.",
+            "His corners are his personality, so one day tells you nothing new about him."
+          ],
+          "answer": 1,
+          "why": "The books call this life positions. A basic position is the verdict a person settles early and tends to come back to under pressure. Sam's breakfast and lunch sit in I'm not OK, you're OK, his usual corner. The night shows the slide when the apology stops working, and the slide is the thing to watch.",
+          "traps": {
+            "0": "Sam would agree and stop looking. Maya would hear 'it's just a mood' and carry the milk problem into next week alone.",
+            "2": "Nadia would be right that a person is more than a corner, but the line closes the day down. Nobody learns the slide, and Sam gets filed as a type."
+          },
+          "example": "A family WhatsApp group, Tuesday: “Sorry, I'm hopeless at forwards, ignore me.”<br>Thursday, after nobody answers his question about the party times: “Fine. Nobody needs me in this group anyway.”<br>The first line is his usual corner. The second is the slide."
+        }
+      ]
+    }
+  ],
+  "debrief": {
+    "nadia": "Sam's breakfast was the usual him, and his night was the slide. Many people have a corner they go back to when they are tired. Watch the slide, because it shows you where the pressure lands, and that tells you more than a label does.",
+    "bookTerm": "Life positions",
+    "bookNote": "The books call this life positions, the four corners of the OK Corral: the basic verdict a person settles early and tends to return to under pressure."
+  },
+  "reflection": { "prompt": "Which corner did you sit in most this week, and who was in the room when you got there?" },
+  "next": "6.2"
+}

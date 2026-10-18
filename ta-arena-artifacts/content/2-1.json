@@ -1,0 +1,135 @@
+{
+  "slot": "2.1",
+  "title": "Who Said That",
+  "world": 2,
+  "worldName": "Three Voices",
+  "week": 2,
+  "weekName": "Three Voices",
+  "mechanic": "Diagnose",
+  "concept": "After this one you can name which of your three voices is talking, from the words, the tone and the posture.",
+  "plainWord": "the voice",
+  "bookTerm": "Ego state",
+  "bookIdea": "Each person carries three ego states, Parent, Adult and Child, which are real, observable ways of feeling, thinking and acting rather than roles people play.",
+  "bookSource": "Games People Play, ch. 1; Transactional Analysis in Psychotherapy, ch. 2; TA Today, ch. 2",
+  "opener": {
+    "setting": "Monday, 20:00, 3B kitchen, Hawthorn Court. A glass has just hit the tiles and burst.",
+    "lines": [
+      { "who": "Maya", "text": "“Don't move, you'll cut your feet. Stay there, I've got the broom.”", "cue": "in the doorway, tea towel over one shoulder, watching you" }
+    ],
+    "ask": "Which of your three voices is talking here, and what in the words or the tone tells you?"
+  },
+  "rounds": [
+    {
+      "level": "Spot",
+      "label": "Spot, round 1",
+      "intro": "<b>How this one works:</b> you hear a line and name the voice behind it. Tap the one that fits. The cue, in the words or the tone, is what gives it away.",
+      "items": [
+        {
+          "type": "pick",
+          "who": "You, a second after the glass",
+          "text": "“Oh for god's sake, can't you do anything right.”",
+          "cue": "flat and hard, the words of a telling-off",
+          "options": ["The Boss", "The Pilot", "The Kid"],
+          "answer": 0,
+          "why": "This is a rule passed down as a verdict on the person. It tells you what you are, and says nothing about what happened. That is the Boss, the voice you copied from the grown-ups who raised you.",
+          "traps": {
+            "1": "The Pilot would say “Is anyone near it? Mind your feet.” That talks about the floor and calms the room. This line talks about you, so it cannot be the Pilot.",
+            "2": "The Kid would sound like “Sorry, sorry, I'm so stupid.” That makes you the one who needs comforting, and the room turns to soothe you instead of clearing the glass."
+          },
+          "example": "A school gate, a mother to her son who forgot his lunchbox: “Can't you remember one thing? One thing.”<br>The words end the conversation. The boy is now the one who can't do anything right."
+        },
+        {
+          "type": "pick",
+          "who": "You, a second after the glass",
+          "text": "“Oh no, is anyone near it? Mind your feet.”",
+          "cue": "quick and practical, eyes on the floor",
+          "options": ["The Boss", "The Pilot", "The Kid"],
+          "answer": 1,
+          "why": "It deals with what is in front of you: who is near and what to do next. That is the Pilot, the voice that handles the actual situation.",
+          "traps": {
+            "0": "The Boss would turn it into blame: “Look what you've done now.” The room would become about who was careless, and the glass would be forgotten.",
+            "2": "The Kid would add “sorry” and “I'm useless” to the same warning. Then the floor stops being the subject, and you become the one needing help."
+          },
+          "example": "A family WhatsApp group, a sister to her brother who posted the wrong link: “Delete it, then post the right one. Done.”<br>The message fixes the problem, and nobody has to be the villain."
+        },
+        {
+          "type": "pick",
+          "who": "You, a second after the glass",
+          "text": "“I'm so stupid, I'm so stupid, sorry, sorry.”",
+          "cue": "small and fast, apologising before anyone has spoken",
+          "options": ["The Boss", "The Pilot", "The Kid"],
+          "answer": 2,
+          "why": "The Kid says sorry before anyone is upset, and it calls itself names. It is the part of you that was there first, and it feels small when something goes wrong.",
+          "traps": {
+            "0": "The Boss would scold the mess in a grown-up voice, something like “you should know better”. That is a telling-off, with no flood of apology, so the room would hear a rule instead of a plea.",
+            "1": "The Pilot would name the fact, “the glass is broken, I'll sort it”, and get on with it. Nothing in this line is about the glass, so the Pilot would have dropped the self-blame and kept the broom."
+          },
+          "example": "A train platform, a young man who missed the train by seconds: “Sorry, sorry, I'm hopeless, I'm always late.”<br>Nobody on the platform asked for that apology. It is a plea for reassurance."
+        }
+      ]
+    },
+    {
+      "level": "Play",
+      "label": "Play, the week in motion",
+      "items": [
+        {
+          "type": "pick",
+          "who": "Maya, later, pulling the bin bag out",
+          "text": "“Fine, I'll sort the bins. You never think about the bins, do you.”",
+          "cue": "tight voice, yanking the bag, not looking at you",
+          "options": ["The Boss", "The Pilot", "The Kid"],
+          "answer": 0,
+          "why": "The words start like a plan, but “you never think” is a verdict on you. A tight voice and a sharp pull on the bag give it away. That is the Boss. It uses a practical sentence to deliver a judgement.",
+          "traps": {
+            "1": "The Pilot would say only the plan: “I'll sort the bins, it's on my list.” The “you never think” part is not about the bins, so the Pilot would have dropped it and kept the room calm.",
+            "2": "The Kid would sound like “Fine, sorry, I'll do it”, small and sulky. Maya's line is not small. It is a verdict with “never” in it."
+          },
+          "example": "A bus stop, a son to his father who is slow getting on: “Fine, I'll wait. You never hurry, do you.”<br>The plan is in the first half. The judgement is in the second, and it is the bit that stings."
+        },
+        {
+          "type": "pick",
+          "who": "You, at the door of 1A, holding an empty bowl",
+          "text": "“Is it okay if I have the last of the flattened rice? Only if it's okay. Sorry.”",
+          "cue": "asks, then asks again, a small voice at the end",
+          "options": ["The Boss", "The Pilot", "The Kid"],
+          "answer": 2,
+          "why": "The question is a plan, but “only if it's okay” and the sorry make it small. Asking twice and apologising for asking are the Kid. It wants permission before anyone has refused.",
+          "traps": {
+            "0": "The Boss would sound like a house rule: “The last one goes to whoever cooked it.” That is a ruling, and it would shut the conversation down.",
+            "1": "The Pilot would ask once, hear the answer, and take it or leave it. Without the “only if” and the sorry, it is a simple question that Gran can answer in one breath."
+          },
+          "example": "A shop counter, a customer who asks twice whether the sale ends today: “Only if it's still on, sorry, I know you said it already.”<br>The customer is asking for a pat on the head, not for the price."
+        }
+      ]
+    },
+    {
+      "level": "Analyse",
+      "label": "Analyse, explain it",
+      "items": [
+        {
+          "type": "pick",
+          "who": "You, a second after the glass",
+          "text": "“Oh for god's sake, can't you do anything right.” This voice did not start with you. It was learned from someone who said it first.",
+          "cue": "the words are a recording, played back at full volume",
+          "options": ["The Boss", "The Pilot", "The Kid"],
+          "answer": 0,
+          "why": "This is the Boss: a recording of a grown-up's verdict, played back as if it were a plain fact about you. It was installed by someone else, which is why it feels so certain.",
+          "traps": {
+            "1": "The Pilot would look at the situation as it is now: the glass on the floor and who is near. This line does none of that. It hands out a verdict on who you are, which is a recording from the past.",
+            "2": "The Kid would be the feeling itself: “I'm so stupid”, a small voice wanting to be forgiven. This line does not beg. It criticises, so the copied voice is the one talking."
+          },
+          "example": "A shop counter, a shopkeeper to a customer who asked twice about the price: “Can't you read the board? It's written right there.”<br>The shopkeeper learned that line from someone, and it comes out in the same flat tone every time."
+        }
+      ]
+    }
+  ],
+  "debrief": {
+    "nadia": "The Boss is a borrowed voice, and here and now belongs to the Pilot. The Kid was there first, and it is nothing to be ashamed of. The Boss and the Kid are both old recordings, and the Pilot is the one reading the room as it is. You need all three. Notice which one talked first when the glass broke.",
+    "bookTerm": "Ego state",
+    "bookNote": "The books call these ego states, Parent, Adult and Child, and treat them as real, observable states rather than roles. The Parent is copied from the people who raised you, the Child is left over from your own early years, and the Adult reads what is in front of you."
+  },
+  "reflection": {
+    "prompt": "Think of a sentence you said this week that came out sounding like a telling-off. Which of your three voices was it, and who did you first hear say it?"
+  },
+  "next": "2.2"
+}

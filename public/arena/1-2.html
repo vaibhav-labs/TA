@@ -1,0 +1,811 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Stroke Sorter · TA Arena</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    color-scheme: light;
+    --bg: #171233; --bg-2: #241c47;
+    --surface: #f2eefb; --surface-2: #c9b8e6; --surface-3: #bda8e2;
+    --accent: #6c5fe0; --accent-deep: #4a3fa0;
+    --pink: #d9699f; --blue: #5b8fd9;
+    --ok: #1f7568; --wrong: #a8407a; --alt: #5c4fb0;
+    --text: #231c3f; --text-dim: #675f82;
+    --on-bg: #ece7fb; --on-bg-dim: #b4abd9;
+    --shadow: rgba(23, 18, 51, 0.28);
+    --parent: #7b5fe0; --adult: #4f8fd9; --childv: #d9699f;
+  }
+  [hidden] { display: none !important; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    background-image:
+      radial-gradient(ellipse 820px 560px at 12% -8%, var(--bg-2), transparent),
+      radial-gradient(ellipse 680px 520px at 108% 12%, #2c1f4a, transparent),
+      radial-gradient(ellipse 600px 420px at 60% 110%, #2a1840, transparent);
+    color: var(--on-bg);
+    font-family: "IBM Plex Sans", system-ui, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 28px 16px 56px;
+  }
+  .stage { width: 100%; max-width: 580px; min-width: 0; }
+
+  .masthead { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 16px; padding: 0 4px; }
+  .series { font-family: "IBM Plex Mono", monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--pink); font-weight: 600; }
+  .series small { color: var(--on-bg-dim); font-weight: 500; letter-spacing: 0.08em; }
+  .tag { font-family: "IBM Plex Mono", monospace; font-size: 11px; color: var(--on-bg-dim); text-decoration: none; white-space: nowrap; }
+  .tag:hover { color: var(--pink); }
+  a:focus-visible, button:focus-visible, textarea:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  .card { background: var(--surface); color: var(--text); border-radius: 22px; box-shadow: 0 24px 60px var(--shadow); padding: 32px 28px 28px; position: relative; min-width: 0; overflow-wrap: anywhere; }
+  .card:focus { outline: none; }
+  .card-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; margin-bottom: 18px; }
+  .card-head > div:first-child { min-width: 0; }
+  h1 { font-family: "Fraunces", Georgia, serif; font-weight: 500; font-size: 27px; line-height: 1.2; margin: 0 0 6px; text-wrap: balance; letter-spacing: -0.01em; }
+  h1.h2 { font-size: 21px; margin: 0 0 12px; }
+  .deck { font-size: 14.5px; color: var(--text-dim); margin: 0; max-width: 40ch; line-height: 1.5; }
+  .case-no { font-family: "IBM Plex Mono", monospace; font-size: 11px; color: var(--text-dim); text-align: right; white-space: nowrap; padding-top: 4px; }
+  .tagline { display: inline-block; font-family: "IBM Plex Mono", monospace; font-size: 11px; color: var(--text-dim); background: var(--surface-2); border-radius: 999px; padding: 4px 12px; margin: 0 0 16px; letter-spacing: 0.03em; }
+  .kicker { font-family: "IBM Plex Mono", monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-dim); margin: 0 0 10px; }
+
+  .progress { display: flex; gap: 5px; margin-bottom: 24px; }
+  .progress i { height: 5px; flex: 1; background: var(--surface-2); border-radius: 999px; overflow: hidden; position: relative; }
+  .progress i.done { background: linear-gradient(90deg, var(--accent), var(--pink)); }
+  .progress i.current::after { content: ""; position: absolute; inset: 0; width: 50%; background: var(--accent); opacity: .55; }
+
+  .round-label { font-family: "IBM Plex Mono", monospace; font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-dim); margin-bottom: 10px; }
+  .round-intro { font-size: 15px; line-height: 1.55; color: var(--text-dim); margin: 0 0 16px; }
+
+  .exchange { background: var(--surface-2); border-radius: 16px; padding: 14px 16px; margin: 0 0 18px; }
+  .exchange .line { font-size: 15.5px; line-height: 1.5; margin: 0 0 8px; }
+  .exchange .line:last-child { margin-bottom: 0; }
+  .exchange .who { font-family: "IBM Plex Mono", monospace; font-size: 11px; color: var(--text-dim); display: block; margin-bottom: 2px; letter-spacing: 0.03em; }
+  .exchange .cue { font-size: 13.5px; color: var(--text-dim); font-style: italic; margin: 6px 0 12px; }
+  .exchange .cue:last-child { margin-bottom: 0; }
+
+  .lede { font-family: "Fraunces", Georgia, serif; font-size: 17.5px; font-weight: 500; font-style: italic; color: var(--accent-deep); line-height: 1.5; margin: 0 0 14px; }
+  .prompt { font-size: 16.5px; line-height: 1.55; margin: 0 0 18px; font-weight: 500; }
+  .setting { font-size: 15px; line-height: 1.55; color: var(--text-dim); font-style: italic; margin: 0 0 16px; }
+  .scene-title { font-family: "Fraunces", Georgia, serif; font-size: 19px; font-weight: 500; line-height: 1.3; margin: 0 0 6px; }
+
+  .choices { display: flex; flex-direction: column; gap: 10px; }
+  button.choice {
+    font-family: "IBM Plex Sans", sans-serif; font-size: 15px; font-weight: 500; text-align: left;
+    padding: 14px 17px; min-height: 44px; border-radius: 14px; border: none; background: var(--surface-2); color: var(--text);
+    cursor: pointer; transition: background 120ms, transform 80ms, box-shadow 120ms; line-height: 1.4;
+  }
+  button.choice:hover { background: var(--surface-3); box-shadow: 0 6px 16px rgba(108,95,224,0.16); }
+  button.choice:active { transform: scale(0.99); }
+  button.choice.correct { background: color-mix(in srgb, var(--ok) 20%, var(--surface)); box-shadow: 0 0 0 2px color-mix(in srgb, var(--ok) 45%, transparent) inset; }
+  button.choice.wrong { background: color-mix(in srgb, var(--wrong) 18%, var(--surface)); box-shadow: 0 0 0 2px color-mix(in srgb, var(--wrong) 40%, transparent) inset; }
+  button.choice.amber { background: color-mix(in srgb, var(--alt) 18%, var(--surface)); box-shadow: 0 0 0 2px color-mix(in srgb, var(--alt) 40%, transparent) inset; }
+  button.choice[disabled] { cursor: default; opacity: 0.6; }
+  button.choice[disabled]:hover { background: var(--surface-2); box-shadow: none; }
+  button.choice.correct[disabled], button.choice.wrong[disabled], button.choice.amber[disabled] { opacity: 1; }
+  button.choice.pal { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+
+  .pill { display: inline-block; max-width: 100%; font-family: "IBM Plex Mono", monospace; font-size: 11.5px; font-weight: 600; padding: 3px 10px; border-radius: 999px; color: #fff; letter-spacing: 0.02em; background: var(--accent); overflow-wrap: anywhere; }
+  .pill.p { background: var(--parent); }
+  .pill.a { background: var(--adult); }
+  .pill.c { background: var(--childv); }
+
+  .stamp { display: inline-flex; align-items: center; gap: 6px; font-family: "IBM Plex Mono", monospace; font-size: 12px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; padding: 5px 12px; border-radius: 999px; margin-bottom: 12px; color: #fff; }
+  .stamp.ok { background: var(--ok); }
+  .stamp.cross { background: var(--wrong); }
+  .stamp.amber { background: var(--alt); }
+
+  .why-box { border-radius: 16px; padding: 16px 18px 17px 20px; margin: 0 0 16px; border-left: 5px solid transparent; box-shadow: 0 8px 22px rgba(23,18,51,0.12); }
+  .why-box .stamp { margin-bottom: 10px; }
+  .why-box .feedback { margin: 0 0 12px; }
+  .why-box .feedback:last-child { margin-bottom: 0; }
+  .why-box.ok { background: color-mix(in srgb, var(--ok) 45%, white); border-left-color: var(--ok); }
+  .why-box.cross { background: color-mix(in srgb, var(--wrong) 42%, white); border-left-color: var(--wrong); }
+  .why-box.amber { background: color-mix(in srgb, var(--alt) 40%, white); border-left-color: var(--alt); }
+  .why-box.neutral { background: color-mix(in srgb, var(--accent) 22%, white); border-left-color: var(--accent); }
+
+  .feedback { font-size: 16px; line-height: 1.6; color: var(--text); margin: 0 0 14px; padding-top: 2px; }
+  .feedback b { color: inherit; }
+
+  .example { background: color-mix(in srgb, var(--accent) 38%, white); border-left: 5px solid var(--accent); border-radius: 16px; padding: 14px 16px 15px 18px; margin: 0 0 18px; font-size: 15px; line-height: 1.55; color: var(--text); box-shadow: 0 8px 22px rgba(23,18,51,0.10); }
+  .ex-label { font-family: "IBM Plex Mono", monospace; font-size: 10.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent-deep); margin-bottom: 6px; }
+
+  .nextbar { display: flex; justify-content: flex-end; align-items: center; gap: 10px; flex-wrap: wrap; margin-top: 4px; }
+  button.next, a.next {
+    font-family: "IBM Plex Mono", monospace; font-size: 13px; font-weight: 600; letter-spacing: 0.03em;
+    background: linear-gradient(135deg, var(--accent), var(--pink)); color: #fff; border: none; text-decoration: none;
+    padding: 12px 20px; min-height: 44px; border-radius: 999px; cursor: pointer; box-shadow: 0 10px 24px rgba(108,95,224,0.35);
+    display: inline-flex; align-items: center; justify-content: center; text-align: center;
+  }
+  button.next:hover, a.next:hover { filter: brightness(1.08); transform: translateY(-1px); }
+  button.next[disabled] { opacity: .45; cursor: default; box-shadow: none; transform: none; filter: none; }
+  .next-soon { font-size: 14px; color: var(--text-dim); margin: 0; }
+
+  .meters { display: flex; flex-direction: column; gap: 10px; margin: 0 0 18px; }
+  .meter { display: grid; grid-template-columns: 52px 1fr 40px; align-items: center; gap: 10px; font-family: "IBM Plex Mono", monospace; font-size: 12px; }
+  .meter .name { color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.08em; font-size: 11px; }
+  .meter .track { height: 10px; border-radius: 999px; background: var(--surface-2); overflow: hidden; }
+  .meter .fill { display: block; height: 100%; width: 0; border-radius: 999px; background: linear-gradient(90deg, var(--accent), var(--pink)); transition: width 300ms ease; }
+  .meter.them .fill { background: linear-gradient(90deg, var(--blue), var(--accent)); }
+  .meter.empty .fill { background: var(--wrong); }
+  .meter .num { text-align: right; color: var(--text); font-weight: 600; }
+
+  .total { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 12px; font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--text-dim); margin: 0 0 8px; }
+  .total b { font-family: "Fraunces", Georgia, serif; font-size: 28px; font-weight: 500; color: var(--text); }
+  .band { position: relative; height: 10px; border-radius: 999px; background: var(--surface-2); overflow: hidden; margin: 0 0 8px; }
+  .band .fill { position: absolute; left: 0; top: 0; bottom: 0; width: 0; background: linear-gradient(90deg, var(--accent), var(--pink)); transition: width 300ms ease; }
+  .band .fill.over { background: var(--wrong); }
+  .val { flex: none; font-family: "IBM Plex Mono", monospace; font-size: 12.5px; font-weight: 600; color: #fff; background: var(--accent-deep); border-radius: 999px; padding: 3px 10px; white-space: nowrap; }
+  .counter-actions { display: flex; justify-content: flex-end; gap: 10px; flex-wrap: wrap; margin-top: 16px; }
+  button.ghost { font-family: "IBM Plex Mono", monospace; font-size: 13px; font-weight: 600; letter-spacing: 0.03em; background: transparent; color: var(--text); border: 2px solid var(--surface-3); padding: 10px 18px; min-height: 44px; border-radius: 999px; cursor: pointer; }
+  button.ghost[disabled] { opacity: .45; cursor: default; }
+  .counter-fb:empty, .order-fb:empty { display: none; }
+
+  .sort-item { margin: 0 0 16px; }
+  .sort-item + .sort-item { padding-top: 16px; border-top: 1px solid var(--surface-2); }
+  .sort-item .exchange { margin-bottom: 12px; }
+  .seq { list-style: none; margin: 0 0 16px; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+  .seq:empty { display: none; }
+  .seq li { display: grid; grid-template-columns: 28px 1fr; gap: 10px; background: var(--surface-2); border-radius: 14px; padding: 12px 14px; }
+  .seq .n { font-family: "IBM Plex Mono", monospace; font-weight: 600; color: var(--accent-deep); }
+  .seq .ct { display: block; font-size: 15px; line-height: 1.5; }
+  .seq .why { display: block; font-size: 14px; line-height: 1.5; color: var(--text-dim); margin-top: 6px; }
+  .pool { margin: 0 0 14px; }
+
+  .intro-list { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 9px; }
+  .rules-box { background: var(--surface-2); border-radius: 16px; padding: 16px 18px; margin: 18px 0; }
+  .rules-box .round-label { margin-bottom: 10px; }
+  .rules-list { margin: 0; padding-left: 0; list-style: none; display: flex; flex-direction: column; gap: 9px; }
+  .rules-list li { font-size: 14px; line-height: 1.45; display: flex; gap: 10px; color: var(--text); }
+  .rules-list .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); flex: none; margin-top: 7px; }
+  .ask { background: var(--bg-2); color: var(--on-bg); border-radius: 16px; padding: 14px 16px 15px; margin: 0 0 18px; }
+  .ask .kicker { color: var(--on-bg-dim); margin-bottom: 6px; }
+  .ask p { font-family: "Fraunces", Georgia, serif; font-size: 17px; line-height: 1.45; margin: 0; }
+
+  .end-badge { font-family: "IBM Plex Mono", monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ok); margin-bottom: 8px; }
+  .source { margin-top: 20px; padding: 14px 16px; border-radius: 14px; background: var(--surface-2); font-size: 12.5px; color: var(--text-dim); line-height: 1.5; }
+  .source b { color: var(--text); }
+  .end-nav { margin-top: 18px; }
+
+  .reflect-tag { font-family: "IBM Plex Mono", monospace; font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #fff; background: linear-gradient(135deg, var(--accent), var(--pink)); display: inline-block; padding: 5px 12px; border-radius: 999px; margin-bottom: 14px; }
+  textarea.reflect-box { display: block; width: 100%; min-height: 120px; resize: vertical; font-family: "IBM Plex Sans", sans-serif; font-size: 15.5px; line-height: 1.55; color: var(--text); background: var(--surface-2); border: none; border-radius: 16px; padding: 14px 16px; margin-bottom: 18px; box-shadow: 0 0 0 2px transparent inset; }
+  textarea.reflect-box::placeholder { color: var(--text-dim); }
+  textarea.reflect-box:focus { outline: none; box-shadow: 0 0 0 2px var(--accent) inset; }
+
+  @media (max-width: 480px) {
+    body { padding: 20px 12px 40px; }
+    .card { padding: 26px 18px 22px; }
+    h1 { font-size: 24px; }
+    h1.h2 { font-size: 20px; }
+    .meter { grid-template-columns: 44px 1fr 36px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
+  }
+</style>
+<link rel="manifest" href="/TA/arena/manifest.json">
+<meta name="theme-color" content="#171233">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="TA Arena">
+<link rel="icon" href="/TA/favicon.svg">
+<link rel="apple-touch-icon" href="/TA/icon-192.png">
+</head>
+<body>
+
+<div class="stage">
+  <div class="masthead">
+    <div class="series" id="series">TA Arena</div>
+    <a class="tag" id="hubLink" href="#" hidden>← All games</a>
+  </div>
+  <main class="card" id="card" tabindex="-1">
+    <p class="deck">Loading the game.</p>
+    <noscript><p class="deck">This game needs JavaScript to run.</p></noscript>
+  </main>
+</div>
+
+<script>window.TA_GAME = {"slot":"1.2","title":"Stroke Sorter","world":1,"worldName":"Hunger","week":1,"weekName":"Invisible","mechanic":"Sort-it","concept":"After this one you can sort the nods you get into warm or cold, and for doing or for being, and you can catch yourself batting one away.","plainWord":"the bounce","bookTerm":"Stroke filter","bookIdea":"Some people wave away warm recognition before it can land, so the good nods never register.","bookSource":"Scripts People Live, ch. 8 and 22; TA Today, ch. 8","opener":{"setting":"Tuesday, 19:00. The 3B balcony. Maya is back from a twelve-hour shift, feet up on the railing.","lines":[{"who":"Maya","text":"\u201cSo how's Halden? Sam said you looked like a kicked puppy last night.\u201d","cue":"first proper talk of the week"},{"who":"Maya","text":"\u201c...\u201d","cue":"waits, not pushing"}],"ask":"Which of the nods you got this week did you actually let in, and which did you wave away?"},"rounds":[{"level":"Spot","label":"Spot, round 1","intro":"Each card is one line from earlier this week. Tap what kind of nod it was.","items":[{"type":"pick","who":"Sam","text":"\u201cOh, yeah! Sam. Sorry, mornings.\u201d","cue":"Monday, 7:50, one earbud out","options":["Warm","Cold"],"answer":0,"why":"Warm. He gave you his name and pulled out an earbud to do it. The nod is for being, not for anything you did.","traps":{"1":"Cold would need him to brush you off. He pulled an earbud out to talk to you, so cold misreads the moment."},"example":"A neighbour at the lift.<br>\u201cOh, hi! Sorry, I'm always in a rush. I'm Rosa.\u201d<br>She tells you her name, and nothing you did made her do it."},{"type":"pick","who":"Mum","text":"\u201cI told him you know what you're doing.\u201d","cue":"Monday night, the phone, talking about you to your father","options":["For being","For doing"],"answer":1,"why":"For doing. She is praising how you handle things, which is something you do. It is warm, and it is the kind you can lose if you stop doing the thing.","traps":{"0":"For being would mean she praises who you are. She praises how you handle things, and that difference matters when you want to keep the nod."},"example":"A coach at the end of a match.<br>\u201cYou read the play well today.\u201d<br>He is praising how you read it, not who you are."},{"type":"pick","who":"Gran","text":"\u201cSaturday it is. And eat something!\u201d","cue":"Monday, the stairwell, after you said you'd come for the flattened rice","options":["Cold","Warm"],"answer":1,"why":"Warm. She is keeping a plate for you and reminding you to eat. That is a nod for being, and she would give it whatever you had done.","traps":{"0":"Cold would mean she is brushing you off. She is planning Saturday around you, so cold gets her wrong."},"example":"A neighbour at the gate.<br>\u201cCome to ours for lunch on Sunday. Bring nothing.\u201d<br>She wants you there, and she asks nothing back."}]},{"level":"Play","label":"Play, the week in motion","intro":"Maya has the list. Sort it, then tell her which nods you took in.","items":[{"type":"scene","title":"Tuesday, 19:00, the balcony","setting":"Maya, feet up after a twelve-hour shift. She wants the whole day, line by line.","meters":{"you":60,"them":50},"beats":[{"who":"Maya","text":"\u201cSo how's Halden? Sam said you looked like a kicked puppy last night.\u201d","cue":"feet up on the railing","lines":[{"text":"\u201cHe's not wrong.\u201d","tag":"best","you":0,"them":5,"outcome":"She laughs, and it's a real laugh. \u201cPoor you. Okay, tell me about it.\u201d","why":"Admitting something true lets her in. You gave her a real answer, and she can work with a real answer."},{"text":"\u201cIt's fine, really.\u201d","tag":"ok","you":-4,"them":0,"outcome":"\u201cMm. That's my line.\u201d","why":"Saying it's fine closes the door on the one person offering to listen. Maya knows that line well, and she says so."}]},{"who":"Maya","text":"\u201cOkay, tell me the day. Everything anyone said to you. I'll tell you which ones were real.\u201d","cue":"sets her phone face-up on the railing, notes app open","lines":[{"text":"\u201cGo on, then.\u201d","tag":"best","you":2,"them":3,"outcome":"She opens a blank note and waits for the first line.","why":"Saying yes to a list of your day lets you see which nods you have been carrying. Checking them is the whole point of the sort."},{"text":"\u201cCan we eat first?\u201d","tag":"ok","you":-2,"them":-2,"outcome":"\u201cSoup first. Then the list. Don't think I've forgotten.\u201d","why":"Asking to skip it is reasonable, but it only moves the sorting later. She still wants the day, and so do you."}]},{"who":"Maya","text":"\u201cTwelve lines from Monday and Tuesday. Warm or cold, for doing or for being. Drag each one into its corner.\u201d","cue":"phone propped against the flowerpot","lines":[{"text":"\u201cRight. Let's do it.\u201d","tag":"best","you":2,"them":2,"outcome":"The first card slides in. Your day is on the screen, one line at a time.","why":"Looking at each line as data, not as a verdict on you, keeps the sort fair. That is what the next minute is for."},{"text":"\u201cCan't I just say it was fine?\u201d","tag":"ok","you":-4,"them":-2,"outcome":"\u201cIt was fine, you said. Sort them.\u201d","why":"A quick \u201cit was fine\u201d is the bounce in another form. Maya won't take the summary, so you get the list instead."}]}],"example":"A family group chat.<br>Aunt: \u201cGood luck today!\u201d<br>You reply \u201cIt's nothing.\u201d The good luck is still there, and it has nowhere to land."},{"type":"sort","prompt":"Put each line in its corner. Warm or cold, for doing or for being.","bins":["Warm, for doing","Warm, for being","Cold, for doing","Cold, for being"],"items":[{"text":"\u201cName?\u201d","answer":3,"why":"The receptionist registered you and asked nothing back. Cold, and it is for being there at all."},{"text":"\u201cDon't be late to it, I hate that.\u201d","answer":2,"why":"Daniel is talking about one thing you did, your timing, and he said it with no warmth. Cold, for doing."},{"text":"\u201cNobody reads the incident log.\u201d (said after you asked)","answer":0,"why":"He is pleased you asked about his work. Warm, and aimed at something you did."},{"text":"\u201cOh thank god, someone newer than me.\u201d","answer":1,"why":"Clara is glad you are here, and that needs nothing from you. Warm, for being."},{"text":"\u201cOh, new boy! You're too thin.\u201d","answer":1,"why":"The complaint is the affection. Gran cares that you are here and fed. Warm, for being."},{"text":"\u201cDid you eat?\u201d","answer":1,"why":"She asks because you are on her mind, not because you earned it. Warm, for being."},{"text":"Sam nods at the cereal, not at you.","answer":3,"why":"Small and cold, but it reaches you as a person, and it asks nothing of you. Cold, for being."},{"text":"\u201cYour PR's got three lint errors.\u201d","answer":2,"why":"A correction about your work. Cold, and aimed at what you did."},{"text":"\u201c...but the logic's right, which is more than I expected.\u201d","answer":0,"why":"Warm, and aimed at your work. It is praise for doing, the kind most people run on."},{"text":"The security guard raises his hand as you walk in.","answer":1,"why":"He lifted his hand because you were there. Warm, for being."},{"text":"\u201cOh. You're the new one.\u201d (said to the monitor)","answer":3,"why":"Daniel registered that you exist and put no warmth into it. The line is about who you are, the new one, and not about anything you did. Cold, for being."},{"text":"\u201cOkay, tell me the day.\u201d","answer":1,"why":"She is asking for your day, which is interest in you and not in anything you did. Warm, for being."}],"example":"A Sunday family group chat.<br>\u201cNice photo!\u201d gets three hearts.<br>\u201cWho's coming Thursday?\u201d gets silence."},{"type":"scene","title":"Tuesday, 19:30, the balcony","setting":"The list is sorted. Maya wants to know which nods you let in, then she goes to make a lentil stew.","meters":{"you":60,"them":50},"beats":[{"who":"Maya","text":"\u201cNow. Which of those did you actually let in?\u201d","cue":"phone face-up again, the warm lines reappearing","lines":[{"text":"\u201cOmar's logic one. And the guard's. I took both.\u201d","tag":"ok","you":2,"them":3,"outcome":"She nods, slowly. \u201cGood. Keep those.\u201d","why":"Taking a warm nod in is the fix. Two of them is a start, and it shows you can let one land."},{"text":"\u201cI bounced most of them. I'll own that.\u201d","tag":"best","you":6,"them":4,"outcome":"She doesn't smile. Still, she holds your eye. \u201cRight. Let's go through them.\u201d","why":"Naming the bounce is what breaks it. A warm nod you can see is a warm nod you can take.","flags":["bounce_count_w1"]},{"text":"\u201cNone of them. Those don't count.\u201d","tag":"ok","you":-6,"them":-4,"outcome":"\u201cThen they'll keep being nothing to you,\u201d she says, and turns the phone over.","why":"Ruling out every warm nod keeps the day cold. The nods were there, and you decided they didn't count."}]},{"who":"Maya","text":"\u201cOmar said your logic was right, and you said it was mostly copied from the docs. That's a bounce. Clara was glad to see you, and you said you were hiding from the big table. Bounce.\u201d","cue":"reading back from the list, one line at a time","lines":[{"text":"\u201cOkay. I see it. The next one is mine to take.\u201d","tag":"best","you":3,"them":3,"outcome":"She smiles. \u201cThat's the fix. Noticing it.\u201d","why":"Seeing a bounce while it happens is most of the fix. The next nod has a chance to land."},{"text":"\u201cIt was mostly the docs, though.\u201d","tag":"ok","you":-4,"them":-2,"outcome":"\u201cThere it goes again.\u201d","why":"That is the same bounce with a new excuse. The nod goes back across the table, and the other person feels brushed off."},{"text":"\u201cCan we talk about the stew?\u201d","tag":"ok","you":-3,"them":-1,"outcome":"\u201cSoup in two minutes. You're still doing homework.\u201d","why":"Changing the subject is a bounce too. It works, but it stops the nod before you can look at it."}]},{"who":"Maya","text":"\u201cRight, I'm making a lentil stew, and you're eating it.\u201d","cue":"stands up, already halfway to the stove","lines":[{"text":"\u201cYou've just done twelve hours. Let me.\u201d","tag":"best","you":4,"them":4,"outcome":"She stops. \u201c\u2026Nobody says that.\u201d","why":"Offering to do something for her, when she is the one who is tired, gives her a nod she rarely gets. It is real, and it lands.","flags":["maya_offered_1"]},{"text":"\u201cThanks, Maya, you're a star.\u201d","tag":"ok","you":0,"them":2,"outcome":"She's already in the kitchen and doesn't hear it.","why":"A warm nod for doing, handed to someone who is drowning in those. It is kind, but she can't take it in from the stove."},{"text":"Sit and wait for it.","tag":"ok","you":-3,"them":-2,"outcome":"The stew arrives in silence.","why":"Letting her do everything without an offer keeps her in the same chair, which is where she already sits."}]}],"example":"A flatmate who always cooks.<br>\u201cSit, I'll do it.\u201d<br>The offer that comes back is the one that changes the evening."}]},{"level":"Analyse","label":"Analyse, explain it","items":[{"type":"pick","who":"You","text":"Omar said the logic was right, and you said it was copied from the docs. Why does batting that away cost you?","options":["It sends the nod back before it lands, so the giver feels brushed off and you stay short","It shows you're modest, so nobody can hold it against you","It only matters when the person giving the nod is your boss"],"answer":0,"why":"The bounce is waving a warm nod away before it lands. You say \u201cit was nothing\u201d, and the nod never registers. The giver feels brushed off, and you stay short of the nod you needed.","traps":{"1":"Modesty feels safe, but nobody is holding anything against you. The bounce is what stops the nod sinking in, and modesty doesn't change that.","2":"The bounce works the same whoever gives the nod. Omar is not your boss, and his praise still bounced."},"example":"A friend's birthday message.<br>\u201cYou're the best, thank you for everything.\u201d<br>You reply \u201cOh, it was nothing,\u201d and the message has nowhere to land."}]}],"debrief":{"nadia":"There are four kinds of nod: warm or cold, and for doing or for being. It is easy to live on the two for doing and go short on the two for being. A complaint can be a warm nod, as with \u201cyou're too thin\u201d, and a flat \u201cName?\u201d is still a nod, only a cold one. The bounce is what you do when a warm nod comes and you wave it away, so noticing it is the fix.","bookTerm":"Stroke filter","bookNote":"TA writers call this a stroke filter: the habit of screening out the warm nods that come your way. Steiner describes the same habit in Scripts People Live. A nod needs a few seconds to soak in, and people often wave it off with a shrug or a quick thank you."},"reflection":{"prompt":"This week, when someone said something warm, what did you say back?"},"next":"1.3"};</script>
+<script>window.TA_NAV = {"hub":"https://vaibhav-labs.github.io/TA/arena/","next":{"slot":"1.3","title":"Hi\u2013Hi","url":"https://vaibhav-labs.github.io/TA/arena/1-3.html"}};</script>
+<script>
+(function () {
+  "use strict";
+
+  var GAME = window.TA_GAME;
+  var NAV = window.TA_NAV || { hub: null, next: null };
+  var card = document.getElementById("card");
+  var STORE_KEY = "ta-arena-reflect-" + (GAME ? GAME.slot : "");
+
+  // Content fields may carry <b>, <i> and <br> only. Other tags are dropped, and open
+  // tags are closed at the end of the field, so markup cannot leak into the card.
+  function rich(s) {
+    if (s === undefined || s === null) return "";
+    var open = [];
+    var out = String(s).replace(/<[^<>]*>|</g, function (tok) {
+      if (tok === "<") return "&lt;";
+      var m = /^<\s*(\/?)\s*([a-zA-Z]+)\s*(\/?)\s*>$/.exec(tok);
+      if (!m) return "";
+      var name = m[2].toLowerCase();
+      var closing = m[1] === "/";
+      if (name === "br") return closing ? "" : "<br>";
+      if (name !== "b" && name !== "i") return "";
+      if (closing) {
+        if (open[open.length - 1] === name) { open.pop(); return "</" + name + ">"; }
+        return "";
+      }
+      if (m[3]) return "";
+      open.push(name);
+      return "<" + name + ">";
+    });
+    while (open.length) out += "</" + open.pop() + ">";
+    return out;
+  }
+
+  function esc(s) {
+    return String(s === undefined || s === null ? "" : s)
+      .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;").replace(/'/g, "&#39;");
+  }
+
+  function clamp(v) { return Math.max(0, Math.min(100, v)); }
+
+  function safeUrl(u) {
+    return typeof u === "string" && /^https?:\/\//i.test(u) ? u : null;
+  }
+
+  var VOICE = { parent: "p", adult: "a", child: "c" };
+  function pill(label) {
+    var key = String(label).trim().toLowerCase();
+    var cls = Object.prototype.hasOwnProperty.call(VOICE, key) ? VOICE[key] : "x";
+    return '<span class="pill ' + cls + '">' + rich(label) + '</span>';
+  }
+
+  function exchange(who, text, cue) {
+    return '<div class="exchange"><p class="line"><span class="who">' + rich(who) + '</span>' +
+      rich(text) + '</p>' + (cue ? '<p class="cue">' + rich(cue) + '</p>' : '') + '</div>';
+  }
+
+  function exampleBox(text) {
+    return text ? '<div class="example"><div class="ex-label">Real example</div>' + rich(text) + '</div>' : "";
+  }
+
+  function nextbar(label) {
+    return '<div class="nextbar"><button class="next" type="button">' + label + '</button></div>';
+  }
+
+  function bindNext(fn) {
+    var b = card.querySelector(".nextbar button.next");
+    if (b) b.addEventListener("click", function () { fn(); });
+  }
+
+  function shuffled(n) {
+    var idx = [], i, j, t, attempt;
+    for (i = 0; i < n; i++) idx.push(i);
+    for (attempt = 0; attempt < 20; attempt++) {
+      for (i = n - 1; i > 0; i--) {
+        j = Math.floor(Math.random() * (i + 1));
+        t = idx[i]; idx[i] = idx[j]; idx[j] = t;
+      }
+      if (idx.some(function (v, p) { return v !== p; })) break;
+    }
+    return idx;
+  }
+
+  // Flat list of items across the three rounds; one progress segment each.
+  var ITEMS = [];
+  ((GAME && GAME.rounds) || []).forEach(function (round) {
+    (round.items || []).forEach(function (item, i) {
+      ITEMS.push({ round: round, item: item, first: i === 0 });
+    });
+  });
+  var TOTAL = ITEMS.length;
+
+  function progressHTML(done, current) {
+    var bars = "";
+    for (var i = 0; i < TOTAL; i++) {
+      bars += '<i class="' + (i < done ? "done" : (i === current ? "current" : "")) + '"></i>';
+    }
+    return '<div class="progress" role="progressbar" aria-label="Progress" aria-valuemin="0" aria-valuemax="' +
+      TOTAL + '" aria-valuenow="' + done + '">' + bars + '</div>';
+  }
+
+  function paintProgress(done, current) {
+    var old = card.querySelector(".progress");
+    if (old) old.outerHTML = progressHTML(done, current);
+  }
+
+  function frame(k, body, showIntro) {
+    var rec = ITEMS[k];
+    var intro = showIntro && rec.round.intro ? '<p class="round-intro">' + rich(rec.round.intro) + '</p>' : "";
+    return progressHTML(k, k) + '<div class="round-label">' + rich(rec.round.label) + '</div>' + intro + body;
+  }
+
+  // ---------- flow ----------
+
+  var state = { screen: "intro", k: 0 };
+
+  function settle() {
+    if (card.getBoundingClientRect().top < 0) card.scrollIntoView({ block: "start" });
+    card.focus({ preventScroll: true });
+  }
+
+  function render() {
+    if (state.screen === "intro") renderIntro();
+    else if (state.screen === "item") renderItem(state.k);
+    else if (state.screen === "debrief") renderDebrief();
+    else if (state.screen === "reflect") renderReflect();
+    else renderEnd();
+    settle();
+  }
+
+  function advance() {
+    if (state.screen === "intro") {
+      state.screen = "item"; state.k = 0;
+    } else if (state.screen === "item") {
+      if (state.k + 1 < TOTAL) state.k += 1;
+      else state.screen = "debrief";
+    } else if (state.screen === "debrief") {
+      state.screen = "reflect";
+    } else if (state.screen === "reflect") {
+      state.screen = "end";
+    }
+    render();
+  }
+
+  function renderItem(k) {
+    var it = ITEMS[k].item;
+    if (it.type === "pick") renderPick(k, it);
+    else if (it.type === "scene") renderScene(k, it);
+    else if (it.type === "sort") { if (it.order === true) renderOrder(k, it); else renderBins(k, it); }
+    else if (it.type === "counter") renderCounter(k, it);
+    else advance();
+  }
+
+  function renderIntro() {
+    var op = GAME.opener || {};
+    var lines = (op.lines || []).map(function (ln) {
+      return '<p class="line"><span class="who">' + rich(ln.who) + '</span>' + rich(ln.text) + '</p>' +
+        (ln.cue ? '<p class="cue">' + rich(ln.cue) + '</p>' : "");
+    }).join("");
+    var rounds = (GAME.rounds || []).map(function (r) {
+      var n = (r.items || []).length;
+      return '<li><span class="dot"></span><span><b>' + rich(r.level) + '</b>, ' + n +
+        (n === 1 ? ' item' : ' items') + '</span></li>';
+    }).join("");
+    card.innerHTML =
+      '<div class="tagline">TA Arena · World ' + esc(GAME.world) + ', ' + rich(GAME.worldName) +
+      ' · Game ' + esc(GAME.slot) + '</div>' +
+      '<div class="card-head"><div><h1>' + rich(GAME.title) + '</h1>' +
+      '<p class="deck">' + rich(GAME.concept) + '</p></div>' +
+      '<div class="case-no">' + esc(GAME.slot) + '<br>' + rich(GAME.weekName) + '</div></div>' +
+      '<p class="lede"><i>' + rich(op.setting) + '</i></p>' +
+      '<div class="exchange">' + lines + '</div>' +
+      '<div class="ask"><div class="kicker">The question</div><p>' + rich(op.ask) + '</p></div>' +
+      '<div class="rules-box"><div class="round-label">How this one works</div>' +
+      '<ul class="rules-list">' + rounds +
+      '<li><span class="dot"></span><span>Feedback follows every answer, with a real example</span></li>' +
+      '</ul></div>' +
+      nextbar("Start the game →");
+    bindNext(advance);
+  }
+
+  // ---------- pick ----------
+
+  function renderPick(k, it) {
+    var labels = it.options;
+    card.innerHTML = frame(k,
+      exchange(it.who, it.text, it.cue) +
+      '<p class="prompt">' + rich(it.prompt || "Which one is it?") + '</p>' +
+      '<div class="choices">' + labels.map(function (lab, i) {
+        return '<button class="choice" type="button" data-i="' + i + '">' + pill(lab) + '</button>';
+      }).join("") + '</div>', ITEMS[k].first);
+    var buttons = card.querySelectorAll("button.choice");
+    var answered = false;
+    buttons.forEach(function (btn) {
+      btn.addEventListener("click", function () { choose(parseInt(btn.getAttribute("data-i"), 10)); });
+    });
+    function choose(i) {
+      if (answered) return;
+      answered = true;
+      var right = i === it.answer;
+      buttons.forEach(function (b) { b.disabled = true; });
+      buttons[it.answer].classList.add("correct");
+      if (!right) buttons[i].classList.add("wrong");
+      var body = right
+        ? '<div class="why-box ok"><div class="stamp ok">✓ Right call</div>' +
+          '<p class="feedback"><b>Why:</b> ' + rich(it.why) + '</p></div>'
+        : '<div class="why-box cross"><div class="stamp cross">✗ Not quite</div>' +
+          '<p class="feedback"><b>You picked ' + rich(labels[i]) + '.</b> ' +
+          rich((it.traps || {})[String(i)]) + '</p>' +
+          '<p class="feedback"><b>The right call is ' + rich(labels[it.answer]) + '.</b> ' +
+          rich(it.why) + '</p></div>';
+      var fb = document.createElement("div");
+      fb.innerHTML = body + exampleBox(it.example) + nextbar("Continue →");
+      card.appendChild(fb);
+      paintProgress(k + 1, -1);
+      bindNext(advance);
+    }
+  }
+
+  // ---------- scene ----------
+
+  var TAG_LABEL = { best: "Best move", ok: "Fair move", game: "Trap move" };
+  var TAG_CLASS = { best: "ok", ok: "amber", game: "cross" };
+  var TAG_PICK = { best: "correct", ok: "amber", game: "wrong" };
+  var DEFAULT_FALLOUT = {
+    you: "You have nothing left to give in this exchange, so the scene stops here.",
+    them: "The other person has shut the conversation down, so the scene stops here."
+  };
+
+  function meterRow(key, label, v) {
+    return '<div class="meter ' + key + (v <= 0 ? " empty" : "") + '">' +
+      '<span class="name">' + label + '</span>' +
+      '<span class="track"><span class="fill" data-m="' + key + '" style="width:' + v + '%"></span></span>' +
+      '<span class="num" data-n="' + key + '">' + v + '</span></div>';
+  }
+
+  function meterHTML(m) {
+    return '<div class="meters">' + meterRow("you", "You", m.you) + meterRow("them", "Them", m.them) + '</div>';
+  }
+
+  function setMeters(m) {
+    ["you", "them"].forEach(function (key) {
+      var fill = card.querySelector('.fill[data-m="' + key + '"]');
+      var num = card.querySelector('.num[data-n="' + key + '"]');
+      var row = card.querySelector(".meter." + key);
+      if (fill) fill.style.width = m[key] + "%";
+      if (num) num.textContent = String(m[key]);
+      if (row) row.classList.toggle("empty", m[key] <= 0);
+    });
+  }
+
+  function renderScene(k, sc) {
+    var rec = ITEMS[k];
+    var meters = { you: clamp(Number(sc.meters.you)), them: clamp(Number(sc.meters.them)) };
+    var beats = sc.beats || [];
+    var bi = 0;
+
+    function drawBeat() {
+      var b = beats[bi];
+      card.innerHTML = frame(k,
+        '<h2 class="scene-title">' + rich(sc.title) + '</h2>' +
+        '<p class="setting">' + rich(sc.setting) + '</p>' +
+        meterHTML(meters) +
+        '<p class="kicker">Beat ' + (bi + 1) + ' of ' + beats.length + '</p>' +
+        exchange(b.who, b.text, b.cue) +
+        '<div class="choices">' + b.lines.map(function (ln, i) {
+          return '<button class="choice" type="button" data-i="' + i + '">' + rich(ln.text) + '</button>';
+        }).join("") + '</div>', rec.first && bi === 0);
+      var buttons = card.querySelectorAll("button.choice");
+      buttons.forEach(function (btn) {
+        btn.addEventListener("click", function () { pick(parseInt(btn.getAttribute("data-i"), 10), buttons); });
+      });
+    }
+
+    function pick(i, buttons) {
+      if (buttons[0].disabled) return;
+      var ln = beats[bi].lines[i];
+      buttons.forEach(function (x) { x.disabled = true; });
+      buttons[i].classList.add(TAG_PICK[ln.tag] || "amber");
+      meters.you = clamp(meters.you + ln.you);
+      meters.them = clamp(meters.them + ln.them);
+      setMeters(meters);
+      var dead = [];
+      if (meters.you <= 0) dead.push("you");
+      if (meters.them <= 0) dead.push("them");
+      var ends = ln.tag === "game" || dead.length > 0;
+      var cls = TAG_CLASS[ln.tag] || "amber";
+      var html = '<div class="why-box ' + cls + '"><div class="stamp ' + cls + '">' +
+        (TAG_LABEL[ln.tag] || "Move") + '</div>' +
+        '<p class="feedback">' + rich(ln.outcome) + '</p>' +
+        '<p class="feedback"><b>Why:</b> ' + rich(ln.why) + '</p></div>';
+      if (ln.tag === "game") {
+        html += '<div class="example"><div class="ex-label">How it ends</div>' + rich(sc.payoff) + '</div>';
+      }
+      if (dead.length) {
+        var fo = sc.fallout || {};
+        var lines = [];
+        if (dead.indexOf("them") >= 0) lines.push(fo.them || DEFAULT_FALLOUT.them);
+        if (dead.indexOf("you") >= 0) lines.push(fo.you || DEFAULT_FALLOUT.you);
+        html += '<div class="example"><div class="ex-label">How it ends</div>' +
+          lines.map(function (t) { return rich(t); }).join("<br><br>") + '</div>';
+      }
+      var last = ends || bi === beats.length - 1;
+      var fb = document.createElement("div");
+      fb.innerHTML = html + nextbar("Continue →");
+      card.appendChild(fb);
+      bindNext(function () {
+        if (last) { sceneOver(); return; }
+        bi += 1;
+        drawBeat();
+        settle();
+      });
+    }
+
+    function sceneOver() {
+      card.innerHTML = frame(k,
+        '<h2 class="scene-title">' + rich(sc.title) + '</h2>' +
+        '<p class="kicker">Scene over</p>' +
+        meterHTML(meters) +
+        exampleBox(sc.example) +
+        nextbar("Continue →"), false);
+      paintProgress(k + 1, -1);
+      bindNext(advance);
+    }
+
+    drawBeat();
+  }
+
+  // ---------- sort: bins (each card goes in a bin, one after another) ----------
+
+  function renderBins(k, sc) {
+    var items = sc.items || [];
+    var bins = sc.bins || [];
+    var list;
+
+    function finish() {
+      var end = document.createElement("div");
+      end.innerHTML = exampleBox(sc.example) + nextbar("Continue →");
+      card.appendChild(end);
+      paintProgress(k + 1, -1);
+      bindNext(advance);
+    }
+
+    function addCard(i) {
+      var c = items[i];
+      var wrap = document.createElement("div");
+      wrap.className = "sort-item";
+      wrap.innerHTML = '<div class="exchange"><p class="line">' + rich(c.text) + '</p></div>' +
+        '<div class="choices">' + bins.map(function (label, bi) {
+          return '<button class="choice" type="button" data-i="' + bi + '">' + rich(label) + '</button>';
+        }).join("") + '</div>';
+      list.appendChild(wrap);
+      var buttons = wrap.querySelectorAll("button.choice");
+      buttons.forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          if (buttons[0].disabled) return;
+          choose(parseInt(btn.getAttribute("data-i"), 10));
+        });
+      });
+
+      function choose(pick) {
+        buttons.forEach(function (x) { x.disabled = true; });
+        var right = pick === c.answer;
+        buttons[c.answer].classList.add("correct");
+        if (!right) buttons[pick].classList.add("wrong");
+        var fb = document.createElement("div");
+        fb.innerHTML = right
+          ? '<div class="why-box ok"><div class="stamp ok">✓ Right call</div>' +
+            '<p class="feedback"><b>Why:</b> ' + rich(c.why) + '</p></div>'
+          : '<div class="why-box cross"><div class="stamp cross">✗ Not quite</div>' +
+            '<p class="feedback"><b>You picked ' + rich(bins[pick]) + '.</b> It belongs in ' +
+            rich(bins[c.answer]) + '.</p>' +
+            '<p class="feedback"><b>Why:</b> ' + rich(c.why) + '</p></div>';
+        wrap.appendChild(fb);
+        if (i + 1 < items.length) {
+          addCard(i + 1);
+          list.lastElementChild.scrollIntoView({ block: "nearest" });
+        } else {
+          finish();
+        }
+      }
+    }
+
+    card.innerHTML = frame(k, '<p class="prompt">' + rich(sc.prompt) + '</p><div class="sort-list"></div>',
+      ITEMS[k].first);
+    list = card.querySelector(".sort-list");
+    if (items.length) addCard(0);
+  }
+
+  // ---------- sort: order (tap the cards in sequence) ----------
+
+  function renderOrder(k, sc) {
+    var items = sc.items || [];
+    var placed = 0;
+    card.innerHTML = frame(k,
+      '<p class="prompt">' + rich(sc.prompt) + '</p>' +
+      '<ol class="seq" aria-label="Placed so far"></ol>' +
+      '<div class="pool choices">' + shuffled(items.length).map(function (idx) {
+        return '<button class="choice" type="button" data-i="' + idx + '">' + rich(items[idx].text) + '</button>';
+      }).join("") + '</div>' +
+      '<div class="order-fb"></div>', ITEMS[k].first);
+    var seq = card.querySelector(".seq");
+    var fbBox = card.querySelector(".order-fb");
+
+    card.querySelectorAll(".pool button.choice").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        tap(parseInt(btn.getAttribute("data-i"), 10), btn);
+      });
+    });
+
+    function tap(idx, btn) {
+      if (idx === placed) {
+        var li = document.createElement("li");
+        li.innerHTML = '<span class="n">' + (placed + 1) + '</span><span><span class="ct">' +
+          rich(items[idx].text) + '</span><span class="why">' + rich(items[idx].why) + '</span></span>';
+        seq.appendChild(li);
+        placed += 1;
+        btn.remove();
+        fbBox.innerHTML = "";
+        if (placed === items.length) {
+          fbBox.innerHTML = exampleBox(sc.example) + nextbar("Continue →");
+          paintProgress(k + 1, -1);
+          bindNext(advance);
+        }
+      } else {
+        fbBox.innerHTML = '<div class="why-box amber"><div class="stamp amber">Not yet</div>' +
+          '<p class="feedback">' + rich(items[placed].why) + '</p></div>';
+      }
+    }
+  }
+
+  // ---------- counter ----------
+
+  function renderCounter(k, c) {
+    var palette = c.palette || [];
+    var used = palette.map(function () { return false; });
+    var total = 0, picks = 0, sent = false;
+
+    card.innerHTML = frame(k,
+      '<p class="prompt">' + rich(c.prompt) + '</p>' +
+      '<div class="total"><span>Total</span><b data-total>0</b>' +
+      '<span>Target ' + esc(c.target) + ', within ' + esc(c.tolerance) + '</span></div>' +
+      '<div class="band" aria-hidden="true"><span class="fill" data-fill></span></div>' +
+      '<p class="kicker">Picks used: <span data-picks>0</span> of ' + esc(c.maxPicks) + '</p>' +
+      '<div class="choices">' + palette.map(function (p, i) {
+        return '<button class="choice pal" type="button" data-i="' + i + '"><span>' + rich(p.text) +
+          '</span><span class="val">+' + esc(p.value) + '</span></button>';
+      }).join("") + '</div>' +
+      '<div class="counter-actions"><button class="ghost" type="button" data-reset>Reset</button>' +
+      '<button class="next" type="button" data-send>Send</button></div>' +
+      '<div class="counter-fb"></div>', ITEMS[k].first);
+
+    var totalEl = card.querySelector("[data-total]");
+    var fillEl = card.querySelector("[data-fill]");
+    var picksEl = card.querySelector("[data-picks]");
+    var sendBtn = card.querySelector("[data-send]");
+    var resetBtn = card.querySelector("[data-reset]");
+    var palBtns = card.querySelectorAll("button.pal");
+
+    function paint() {
+      totalEl.textContent = String(total);
+      picksEl.textContent = String(picks);
+      fillEl.style.width = Math.min(100, Math.round(total / c.target * 100)) + "%";
+      fillEl.classList.toggle("over", total > c.target + c.tolerance);
+      palBtns.forEach(function (b, i) {
+        b.disabled = sent || used[i] || picks >= c.maxPicks;
+      });
+      sendBtn.disabled = sent || picks < 1;
+      resetBtn.disabled = sent || picks < 1;
+    }
+
+    palBtns.forEach(function (b) {
+      b.addEventListener("click", function () {
+        var i = parseInt(b.getAttribute("data-i"), 10);
+        if (sent || used[i] || picks >= c.maxPicks) return;
+        used[i] = true;
+        picks += 1;
+        total += palette[i].value;
+        paint();
+      });
+    });
+
+    resetBtn.addEventListener("click", function () {
+      if (sent) return;
+      used = palette.map(function () { return false; });
+      total = 0;
+      picks = 0;
+      paint();
+    });
+
+    sendBtn.addEventListener("click", function () {
+      if (sent || picks < 1) return;
+      sent = true;
+      paint();
+      var hit = Math.abs(total - c.target) <= c.tolerance;
+      var under = !hit && total < c.target;
+      var msg = hit ? c.hitMsg : (under ? c.underMsg : c.overMsg);
+      var cls = hit ? "ok" : (under ? "amber" : "cross");
+      var fb = document.createElement("div");
+      fb.innerHTML = '<div class="why-box ' + cls + '"><div class="stamp ' + cls + '">' +
+        (hit ? "✓ Right call" : "✗ Not quite") + '</div>' +
+        '<p class="feedback">' + rich(msg) + '</p>' +
+        '<p class="feedback"><b>Why:</b> ' + rich(c.why) + '</p></div>' +
+        nextbar("Continue →");
+      card.querySelector(".counter-fb").appendChild(fb);
+      paintProgress(k + 1, -1);
+      bindNext(advance);
+    });
+
+    paint();
+  }
+
+  // ---------- debrief, reflection, end ----------
+
+  function renderDebrief() {
+    var d = GAME.debrief || {};
+    card.innerHTML = progressHTML(TOTAL, -1) +
+      '<div class="round-label">Debrief</div>' +
+      '<h1 class="h2">What Nadia would say</h1>' +
+      '<p class="feedback">' + rich(d.nadia) + '</p>' +
+      '<div class="why-box neutral"><p class="feedback"><b>' +
+      rich(d.bookTerm || GAME.bookTerm) + '</b></p>' +
+      '<p class="feedback">' + rich(d.bookNote || GAME.bookIdea) + '</p></div>' +
+      nextbar("Continue →");
+    bindNext(advance);
+  }
+
+  // Storage can be blocked or missing, so every access is guarded.
+  function readStore() {
+    try { return window.localStorage.getItem(STORE_KEY) || ""; } catch (e) { return ""; }
+  }
+
+  function writeStore(value) {
+    try { window.localStorage.setItem(STORE_KEY, value); } catch (e) { /* blocked: the page still works */ }
+  }
+
+  function renderReflect() {
+    var r = GAME.reflection || {};
+    card.innerHTML = progressHTML(TOTAL, -1) +
+      '<div class="reflect-tag">Your turn</div>' +
+      '<p class="prompt">' + rich(r.prompt) + '</p>' +
+      '<textarea class="reflect-box" aria-label="Your reflection" ' +
+      'placeholder="A few lines is plenty. This stays on your device, and nobody else sees it."></textarea>' +
+      nextbar("Continue →");
+    var box = card.querySelector("textarea");
+    box.value = readStore();
+    box.addEventListener("input", function () { writeStore(box.value); });
+    bindNext(advance);
+  }
+
+  function renderEnd() {
+    var hub = safeUrl(NAV.hub);
+    var nxt = NAV.next || null;
+    var links = hub ? '<a class="next" href="' + esc(hub) + '">All games</a>' : "";
+    if (nxt) {
+      var nxtUrl = safeUrl(nxt.url);
+      links += nxtUrl
+        ? '<a class="next" href="' + esc(nxtUrl) + '">Next game: ' +
+          rich(nxt.title || ("Game " + nxt.slot)) + ' →</a>'
+        : '<p class="next-soon">Next game opens soon</p>';
+    }
+    card.innerHTML = progressHTML(TOTAL, -1) +
+      '<div class="end-badge">Case closed</div>' +
+      '<h1 class="h2">Game ' + esc(GAME.slot) + ' is done.</h1>' +
+      '<p class="feedback">' + rich(GAME.concept) + '</p>' +
+      '<div class="source"><b>From:</b> ' + rich(GAME.bookSource) + '</div>' +
+      '<div class="nextbar end-nav">' + links + '</div>';
+  }
+
+  // ---------- start ----------
+
+  function init() {
+    var series = document.getElementById("series");
+    var hubLink = document.getElementById("hubLink");
+    if (!GAME || !GAME.rounds) {
+      series.textContent = "TA Arena";
+      card.innerHTML = '<h1 class="h2">This game could not load.</h1>';
+      return;
+    }
+    series.innerHTML = 'TA Arena <small>· World ' + esc(GAME.world) + ' · Game ' + esc(GAME.slot) + '</small>';
+    var hub = safeUrl(NAV.hub);
+    if (hub) {
+      hubLink.setAttribute("href", hub);
+      hubLink.hidden = false;
+    }
+    render();
+  }
+
+  init();
+})();
+</script>
+
+<script>if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('sw.js',{scope:'/TA/arena/'}).catch(function(){});});}</script>
+</body>
+</html>

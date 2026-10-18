@@ -1,0 +1,141 @@
+{
+  "slot": "1.1",
+  "title": "Sample Sort and Count",
+  "world": 1,
+  "worldName": "Hunger",
+  "week": 1,
+  "weekName": "Invisible",
+  "mechanic": "Diagnose, Sort-it, Counter",
+  "concept": "Test game: pick the move, sort the lines into bins, then build a greeting that pays a stroke debt.",
+  "plainWord": "a nod",
+  "bookTerm": "Stroke",
+  "bookIdea": "Every person needs recognition from others, and it can come in many forms, good or bad.",
+  "bookSource": "Games People Play",
+  "opener": {
+    "setting": "Monday, 7:50am. Kesari Heights, flat 3B, the kitchen.",
+    "lines": [
+      { "who": "Tanvi", "text": "“Morning. Did you sleep at all?”", "cue": "leaning on the counter, mug in both hands" },
+      { "who": "Rohan", "text": "“Not really. The neighbours had a party till two.”", "cue": "not looking up from his phone" }
+    ],
+    "ask": "Which voice is talking, and what does each line give the other person?"
+  },
+  "rounds": [
+    {
+      "level": "Spot",
+      "label": "Spot, round 1",
+      "intro": "Three quick reads. <b>Listen to the words</b> and the cue together.",
+      "items": [
+        {
+          "type": "pick",
+          "who": "Tanvi",
+          "text": "“Morning. Did you sleep at all?”",
+          "cue": "leaning on the counter, mug in both hands",
+          "prompt": "Which voice is Tanvi using?",
+          "options": ["Parent", "Adult", "Child"],
+          "answer": 1,
+          "why": "She asks a plain question about last night, with nothing copied from anyone and nothing sulky in it. That is the Adult voice.",
+          "traps": {
+            "0": "Parent would sound like “You should go to bed earlier, you know.” It passes a rule about bedtime that nobody asked for.",
+            "2": "Child would sound like “Ugh, I did not sleep either, I hate mornings.” That is a feeling and a complaint, not a question."
+          },
+          "example": "On a train platform: “Did you get the 7:40 or the 8:05?”<br>A plain question about what happened, with no advice and no mood in it."
+        },
+        {
+          "type": "pick",
+          "who": "Dana",
+          "text": "“I'll take the dishes, you do the bins.”",
+          "cue": "already moving to the sink",
+          "prompt": "Which kind of move is this?",
+          "options": ["Complementary", "Crossed"],
+          "answer": 0,
+          "why": "Dana asks for a task and expects the reply to come from the same level. Both people are talking about the flat, so the lines run straight across.",
+          "traps": {
+            "1": "Crossed would be a reply like “Why are you always on the dishes?”, which answers a feeling nobody mentioned. The conversation would switch level and stop being about the bins."
+          },
+          "example": "Team stand-up:<br>“I'll take the report, you chase the client.”<br>“Fine, I'll chase them after lunch.”<br>Each line is answered at the level it was asked."
+        },
+        {
+          "type": "pick",
+          "who": "Vikram",
+          "text": "“Sorry, sorry, you're right, it's my fault again. I'm hopeless with the bins.”",
+          "cue": "hands up, half smiling",
+          "prompt": "Which of these is it?",
+          "options": ["Ritual", "Pastime", "Game"],
+          "answer": 2,
+          "why": "The apology is big and the ending is a put-down of himself. It invites Tanvi to reassure him, and the bins never get fixed. That is a game.",
+          "traps": {
+            "0": "Ritual would be the same apology said as a set phrase every Monday, with nothing hidden under it.",
+            "1": "Pastime would be a chat about bins and bin days, with both people enjoying the talk and nothing being won or lost."
+          },
+          "example": "Family WhatsApp:<br>“Sorry, I forgot the milk again, I'm useless.”<br>“Don't be silly, here's the list.”<br>The second person is now doing the first person's job of reassuring."
+        }
+      ]
+    },
+    {
+      "level": "Play",
+      "label": "Play, the week in motion",
+      "items": [
+        {
+          "type": "sort",
+          "prompt": "Put each line in the right bin.",
+          "bins": ["Stroke", "Time", "Neither"],
+          "items": [
+            { "text": "“Nice shirt. It suits you.”", "answer": 0, "why": "A compliment recognises the person, so it is a positive stroke." },
+            { "text": "“Can we talk about the bins at seven?”", "answer": 1, "why": "Arranging a time is structuring time, not a stroke." },
+            { "text": "“The weather is turning, I think.”", "answer": 2, "why": "A remark about the weather gives no recognition and no plan." },
+            { "text": "“Good morning, Mr C.”", "answer": 0, "why": "A greeting is a small stroke, and it is the cheapest one going." }
+          ],
+          "example": "At the school gate: “Lovely day for it.” A small stroke, given and taken in a moment."
+        },
+        {
+          "type": "counter",
+          "prompt": "Greet Mr C. He is owed about 10 strokes. Build a greeting that pays them.",
+          "target": 10,
+          "tolerance": 1,
+          "maxPicks": 3,
+          "palette": [
+            { "text": "“Mr C! Back from holiday, I hope?”", "value": 2, "tag": "warm" },
+            { "text": "“Good morning.”", "value": 1, "tag": "flat" },
+            { "text": "“Mr C, the roses on your balcony are wonderful.”", "value": 3, "tag": "warm" },
+            { "text": "“You're looking well, Mr C.”", "value": 5, "tag": "warm" },
+            { "text": "“Mr C.”", "value": 4, "tag": "cold" }
+          ],
+          "underMsg": "Under the band. Mr C is still owed some strokes, so he leaves the lift a little cool.",
+          "overMsg": "Over the band. That is more than a greeting, and Mr C can tell he is being handled.",
+          "hitMsg": "In the band. Mr C leaves the lift smiling, and his balance is paid.",
+          "why": "Each line carries a value. The aim is to pay the amount owed, within a small margin, in no more than three lines."
+        }
+      ]
+    },
+    {
+      "level": "Analyse",
+      "label": "Analyse, explain it",
+      "items": [
+        {
+          "type": "pick",
+          "who": "Meera",
+          "text": "“So which of those greetings was the warm one, and which one only paid the debt?”",
+          "cue": "tapping the table once",
+          "prompt": "Which word names the warm greeting?",
+          "options": ["Stroke", "Trade", "Game"],
+          "answer": 0,
+          "why": "A warm greeting is a stroke. It recognises the other person, and the count is what the greeting pays out.",
+          "traps": {
+            "1": "Trade is the word for a whole exchange, with a request and an answer. A single greeting is one unit, not a deal.",
+            "2": "Game would mean the greeting hides a second message. Here the greeting says what it says, so nothing is hidden."
+          },
+          "example": "A neighbour on the stairs: “You're up early, good to see you.”<br>That is a stroke. Nothing about the stairs or the time is being negotiated."
+        }
+      ]
+    }
+  ],
+  "debrief": {
+    "meera": "Three things to keep. Tanvi's question was a plain Adult question. Vikram's apology was a game with a hook at the end. And a greeting pays its stroke debt when it is warm and short.",
+    "bookTerm": "Stroke",
+    "bookNote": "The books call this a stroke, a unit of recognition that people give and take all day."
+  },
+  "reflection": {
+    "prompt": "Think of one stroke you gave or got this week. Did it feel like a plain greeting, or like a payment for something?"
+  },
+  "next": "1.2"
+}

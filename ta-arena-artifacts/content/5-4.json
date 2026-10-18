@@ -1,0 +1,176 @@
+{
+  "slot": "5.4",
+  "title": "Doing Nothing",
+  "world": 5,
+  "worldName": "Underneath",
+  "week": 5,
+  "weekName": "Underneath",
+  "mechanic": "Diagnose",
+  "concept": "After this one you can name which of the four ways of not solving a problem someone is using, even when their words say yes.",
+  "plainWord": "the four ways of not solving a problem",
+  "bookTerm": "Passivity",
+  "bookIdea": "Passivity is acting in ways that do not solve the problem in front of you, and it comes in four forms: doing nothing, overadaptation, agitation, and incapacitation or violence.",
+  "bookSource": "TA Today, ch. 17; Scripts People Live, ch. 9",
+  "opener": {
+    "setting": "Tuesday, 11:20am. Halden, by the station, the third-floor room with the glass wall. The release call has been running for twenty minutes.",
+    "lines": [
+      { "who": "Daniel", "text": "“So who takes the Friday release? Somebody has to own it.”", "cue": "arms folded, looking round the table" },
+      { "who": "Omar", "text": "“Hm.”", "cue": "eyes on his laptop, one hand on the mouse" },
+      { "who": "Clara", "text": "“I can, I think. Yes. Whatever you need.”", "cue": "already writing her name on the board" }
+    ],
+    "ask": "Which of the four ways of not solving a problem is each person in the room using, and which one looks like help?"
+  },
+  "rounds": [
+    {
+      "level": "Spot",
+      "label": "Spot, round 1",
+      "intro": "Each person in this room is dodging the problem in one way or another. Tap the way that fits what they do with their body and their hands, not only their words.",
+      "items": [
+        {
+          "type": "pick",
+          "who": "Omar",
+          "text": "<i>Daniel asks him why the build broke. Omar looks at the screen, the cursor blinks, and he keeps his hands flat on the desk. Nothing comes out for eight seconds.</i>",
+          "cue": "Tuesday, 11:24am, the glass room",
+          "options": ["Do nothing", "Fidget", "Break down or lash out"],
+          "answer": 0,
+          "why": "He stops. No words, no moving the hands, nothing on the screen changes. The pause is complete, and that is doing nothing, the plainest of the four ways of not solving a problem.",
+          "traps": {
+            "1": "A fidget would show small restless moves, like tapping or shuffling papers. Omar's hands are flat and still, so the picture is stillness, not restlessness.",
+            "2": "Breaking down or lashing out would show distress or a flash of temper, a shaking voice or a hard word. Nothing in the clip is upset, only silent."
+          },
+          "example": "A school assembly, Monday. The head teacher asks which pupil broke the hall window. The class stares at the stage, nobody speaks, and the silence lasts until the bell."
+        },
+        {
+          "type": "pick",
+          "who": "Clara",
+          "text": "<i>Daniel says the Friday release needs one more person on the rota. Clara says “Yes, of course, whatever you need,” and adds her name to the board. Her own task list on the other screen has eleven open items. She does not look at it.</i>",
+          "cue": "Tuesday, 11:31am, the whiteboard",
+          "options": ["Over-comply", "Do nothing", "Fidget"],
+          "answer": 0,
+          "why": "She says yes before she has checked her own load, and the yes is for Daniel's need, not hers. She has handed the choice to whoever is asking, which is over-complying. It looks like a team player, and it still means nobody chose.",
+          "traps": {
+            "1": "Doing nothing would be silence. Clara speaks at once and writes her name, so she is not stuck. The problem is what she says yes to.",
+            "2": "A fidget would be busy moves that go nowhere. She makes one clear move, the name on the board, and that move is the yes."
+          },
+          "example": "A family group chat, Sunday. Your aunt asks who will have everyone over for the holiday weekend this year. You reply “I can, whatever's easiest for everyone,” and you spend the next week cooking for forty people.<br>Your flat is still full of boxes, and nobody asked you about that part."
+        },
+        {
+          "type": "pick",
+          "who": "Omar",
+          "text": "<i>He picks up his tea and puts it down. He opens a second tab, then a third, and closes the first. He says “Let me just check a few things,” and checks nothing for twelve minutes. The call goes on around him.</i>",
+          "cue": "Tuesday, 11:42am, the desk by the window",
+          "options": ["Fidget", "Over-comply", "Do nothing"],
+          "answer": 0,
+          "why": "Every move is small and busy, and none of them decides anything. Tabs open and close, the tea moves, and the checking never starts. That restless motion without a result is a fidget, the way of looking busy instead of solving anything.",
+          "traps": {
+            "1": "Over-complying would show a yes to someone else's request. Omar is not agreeing to anything. He is shuffling around the decision he is avoiding.",
+            "2": "Doing nothing would be stillness. Omar's hands and eyes never stop moving, so the stillness is not there."
+          },
+          "example": "A bus stop, Thursday, 8:15am. A man checks his phone, reads the same notice twice, takes his keys out and puts them back, and the bus leaves without him."
+        }
+      ]
+    },
+    {
+      "level": "Play",
+      "label": "Play, the week in motion",
+      "intro": "These are harder. Each person's words and body point in different directions. Look at what the person does next, not at the first thing they say.",
+      "items": [
+        {
+          "type": "pick",
+          "who": "Clara",
+          "text": "<i>After the call, Daniel asks if she can also cover the client email. She says “Sure, I'll look at it,” and nods. Her shoulders drop, and she turns to the screen, but the email stays unopened for the rest of the morning.</i>",
+          "cue": "Tuesday, 12:05pm, the desk, a slow nod",
+          "options": ["Over-comply", "Do nothing", "Fidget", "Break down or lash out"],
+          "answer": 1,
+          "why": "The words sound like a yes, but nothing follows the yes. The email never opens, and her whole body has stopped. The words are a reflex that ends the question, and the stopping is what the clip shows. That is doing nothing, with a yes laid over the top.",
+          "traps": {
+            "0": "Over-complying is the trap here, because the nod and the words look like a helpful team member. But she has not taken the email on. The email is still unopened, so she has agreed in words only.",
+            "2": "A fidget needs busy motion. Her screen is open, but she is not moving anything on it, so there is no restless movement to point to.",
+            "3": "Breaking down or lashing out would be distress or a flare of temper. She is calm and composed. The problem is that she has stopped, not that she has broken."
+          },
+          "example": "A school open evening, Thursday. The teacher asks if you can come back on Monday for a longer talk. You say “Sure, Monday's fine,” and then you sit in the car for twenty minutes, not starting the engine."
+        },
+        {
+          "type": "pick",
+          "who": "Daniel",
+          "text": "<i>Clara tries to explain the failing release for the third time. Daniel says “Right. Let's be clear, we need a plan,” and taps the table twice. He looks at her, then at the window, then at his phone. He has asked nothing and decided nothing.</i>",
+          "cue": "Wednesday, 3:18pm, the glass room, a sigh",
+          "options": ["Fidget", "Break down or lash out", "Over-comply", "Do nothing"],
+          "answer": 0,
+          "why": "Daniel is never still. He taps, looks, shifts and checks his phone, and he never picks a next step. The restless moves look like management, but they are a fidget, a busy way of not deciding. The clue is that the room ends with nothing done.",
+          "traps": {
+            "1": "Breaking down or lashing out would need distress or a flash of temper. Daniel is level and tidy, so nothing breaks and nothing blows up.",
+            "2": "Over-complying would be agreeing to whatever Clara needs. Daniel is not agreeing to anything, he is pressing on the table.",
+            "3": "Doing nothing would be stillness. Daniel moves the whole time, and that movement is the thing the clip shows."
+          },
+          "example": "A school bake sale, Friday. The organiser keeps checking the cash tin, rearranging the cake table, and asking if anyone has seen the float. No one is asked to do anything, and the money is still on the table at the end."
+        },
+        {
+          "type": "pick",
+          "who": "Clara",
+          "text": "<i>Daniel's tapping goes on while she starts the explanation a fourth time. Her voice goes thin. She says “I can't do this,” shuts the laptop hard, says “Fine, you all sort it, then,” and walks out with the door left open behind her.</i>",
+          "cue": "Wednesday, 3:40pm, the glass room, the laptop lid slammed",
+          "options": ["Fidget", "Break down or lash out", "Do nothing", "Over-comply"],
+          "answer": 1,
+          "why": "Her words say she is unable, and the slam and the exit hand the mess to everyone else. The failing release has not moved an inch. Breaking down and lashing out are both ways of leaving the problem unsolved, and both are loud.",
+          "traps": {
+            "0": "A fidget is small busy moves that fill the time. Clara makes one big move that stops the meeting, so there is nothing small and restless to point to.",
+            "2": "Doing nothing would be stillness and silence. Clara is fast and loud, and the sound of the lid is what the room remembers.",
+            "3": "Over-complying would be a yes to Daniel. Clara says the opposite and leaves, so there is nobody she is agreeing with."
+          },
+          "example": "A school staff meeting, Thursday. The head raises the timetable for the third time. A teacher says “I can't do this,” drops her folder on the table, and says “Fine, you sort it, then.” The timetable is still wrong at the next meeting."
+        }
+      ]
+    },
+    {
+      "level": "Analyse",
+      "label": "Analyse, explain it",
+      "intro": "Two questions to explain back. You can use the book words now.",
+      "items": [
+        {
+          "type": "pick",
+          "who": "Nadia",
+          "text": "“Clara said yes, whatever you need, and nothing else changed. Why is that passivity, and not a real yes?”",
+          "cue": "turning her cup, not looking up",
+          "options": [
+            "She handed the choice to the person asking, so no decision was made. That is overadaptation, a passive behaviour that looks like cooperation.",
+            "She agreed quickly, so she is being efficient. Speed is never passive.",
+            "She said yes because she is tired and needs a holiday. Tiredness is the whole problem, so passivity doesn't apply."
+          ],
+          "answer": 0,
+          "why": "A real yes names what you will do and what you won't. Clara's yes names nothing, so Daniel's need decided the answer and her own load never got a say. Overadaptation is one of the four passive behaviours, and it passes for help while the problem stays unsolved.",
+          "traps": {
+            "1": "Speed would look efficient, and that is why it fools people. But a fast yes that checks nothing is still a yes handed away, so the speed is not the measure.",
+            "2": "Tiredness would be a fair reason to decline. But the clip is about the yes itself, and tiredness does not explain why the yes was given to someone else."
+          },
+          "example": "A flat-share meeting, Sunday. Sam says “Sure, I'll sort the bins, whatever suits everyone.” Nobody writes it down, the bins stay full all week, and the other two flatmates decide it must be fine.<br>A real yes would be “I'll do the bins on Tuesday, and Maya takes Thursday.”"
+        },
+        {
+          "type": "pick",
+          "who": "Nadia",
+          "text": "“Of the passive behaviours in this room, which one is easiest for an office to mistake for being helpful?”",
+          "cue": "pen in hand, waiting",
+          "options": [
+            "Overadaptation, because it looks like team spirit while the person has stopped choosing.",
+            "Doing nothing, because a silent person looks calm and in control.",
+            "Agitation, because a busy person looks like they are making progress."
+          ],
+          "answer": 0,
+          "why": "Overadaptation looks like the most generous of the four, since it says yes to everyone and nobody argues. But the person has given their choice away, and the other person's need now runs the day. That is passivity dressed as a team player.",
+          "traps": {
+            "1": "Doing nothing is easy to spot as stuck, because the silence is visible and awkward. People see it and step in, so it rarely passes for help.",
+            "2": "Agitation can look productive, and that is a real trap. But a busy person with no result is easier to notice than a person who has agreed to everything."
+          },
+          "example": "An office retro, Friday, 4:30pm. Everyone agrees to every action item, and the list reads well. Two weeks later, nothing on it is done, and the people who said yes are the ones who are most tired."
+        }
+      ]
+    }
+  ],
+  "debrief": {
+    "nadia": "Four ways of not solving a problem turned up in one room, and Clara's yes was the one that looked best. Watch for the yes that gives the decision away, because it is the hardest of the four to see.",
+    "bookTerm": "Passivity",
+    "bookNote": "The books call this passivity: behaviour that does not solve the problem in front of you. It has four forms, doing nothing, overadaptation, agitation, and incapacitation or violence."
+  },
+  "reflection": { "prompt": "Where did you say yes this week without choosing it, or go quiet instead of deciding, and what would the first real choice have been?" },
+  "next": "5.5"
+}

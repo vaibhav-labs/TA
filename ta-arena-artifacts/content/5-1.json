@@ -1,0 +1,147 @@
+{
+  "slot": "5.1",
+  "title": "Real or Racket",
+  "world": 5,
+  "worldName": "Underneath",
+  "week": 5,
+  "weekName": "Underneath",
+  "mechanic": "Diagnose",
+  "concept": "After this one you can tell a real feeling, which finishes something, from a stand-in feeling, which never fixes anything.",
+  "plainWord": "a stand-in feeling",
+  "bookTerm": "Racket feeling",
+  "bookIdea": "A racket feeling is a substitute feeling, learned in childhood, that you show in place of the real one, and it never resolves the situation it turns up in.",
+  "bookSource": "TA Today, ch. 1 and 21; Scripts People Live, ch. 1",
+  "opener": {
+    "setting": "Monday, 8:40am. Halden, by the station, the team room. Clara's laptop is open on a red screen.",
+    "lines": [
+      { "who": "Clara", "text": "“Ha. I broke the build again. I'm the worst. Ha.”", "cue": "laughing, eyes bright, already opening the fix" },
+      { "who": "Omar", "text": "“Same as last release. Fire drill, again.”", "cue": "shoulders up, not looking at either of you" }
+    ],
+    "ask": "Which feelings in this room finish something, and which ones only go round?"
+  },
+  "rounds": [
+    {
+      "level": "Spot",
+      "label": "Spot, round 1",
+      "intro": "Each feeling is shown in one line. Decide whether it finishes something, or whether it is a stand-in that fixes nothing.",
+      "items": [
+        {
+          "type": "pick",
+          "who": "Clara",
+          "text": "“Ha, it's my fault, obviously. I'm useless at this. Ha.”",
+          "cue": "laughing before anyone else can speak, already opening the fix",
+          "options": ["A real feeling: it finishes something", "A stand-in feeling: it fixes nothing"],
+          "answer": 1,
+          "why": "The laugh comes first, before anyone else can say it, and it covers a scared feeling about being found out. Real scared finishes something: it asks for a check or for help. This one stays put after the joke, so it is a stand-in.",
+          "traps": {
+            "0": "Taking the laugh at face value would send the talk straight to the fix. Nobody would ask what the joke is covering, so the scared feeling would never get a hearing and the stand-in would stay in charge."
+          },
+          "example": "A school sports day, Saturday.<br>Girl: “Ha, I'm rubbish at this. Ha.”<br>She runs to the back of the line and does not look up for the rest of the race."
+        },
+        {
+          "type": "pick",
+          "who": "Maya",
+          "text": "“I'm angry, Sam. The milk on the floor again. I want the rent by Friday, in my account, not in your pocket.”",
+          "cue": "standing in the doorway, arms folded, voice level",
+          "options": ["A real feeling: it finishes something", "A stand-in feeling: it fixes nothing"],
+          "answer": 0,
+          "why": "The anger names one thing, the milk and the rent, and asks for one change by a date. Once Sam answers, the feeling has done its work. That is what a real feeling does: it fits the event and it finishes.",
+          "traps": {
+            "1": "Calling it a stand-in would file her anger as noise. Sam would hear that nothing needs to change, and the milk would be back on the floor by next week, with the rent still late."
+          },
+          "example": "A school gate, Thursday.<br>Mum: “I'm angry that the bus was late three times. I want a call from the office by Monday.”<br>Office: “We'll ring you on Monday, I promise.”"
+        },
+        {
+          "type": "pick",
+          "who": "Omar",
+          "text": "“I'm sick of it. Every release, the same fire drill, and nobody ever changes anything. I've said it before.”",
+          "cue": "slamming the laptop lid, eyes on the screen",
+          "options": ["A real feeling: it finishes something", "A stand-in feeling: it fixes nothing"],
+          "answer": 1,
+          "why": "The anger goes round the same loop: every release, the same fire drill, said before. It asks for no change, so nothing finishes. Under it sits a sad feeling about being unheard, and that is the feeling nobody asks about.",
+          "traps": {
+            "0": "Taking the anger as real would give Omar a hearing for the fire drill, and the talk would turn to whose fault the drill is. The loop would run on, and Omar would leave sure that nobody listens, which is what he has already said."
+          },
+          "example": "A family WhatsApp group, Sunday night.<br>Uncle: “I'm sick of this group. Same photos, same jokes, every Sunday. Nothing changes.”<br>Nobody replies, and the next Sunday the same message comes in."
+        },
+        {
+          "type": "pick",
+          "who": "Mum",
+          "text": "“After you rang off, love, I cried. I didn't want you to hear. Missing you is hard, and now I've said it. Tell me about your week.”",
+          "cue": "voice thick, the kitchen light off at her end of the line",
+          "options": ["A real feeling: it finishes something", "A stand-in feeling: it fixes nothing"],
+          "answer": 0,
+          "why": "The sadness fits the thing it is about, which is the call ending and a child who is far away. She names it in one line and then turns to your week. Once said, the feeling has done its work, so it is a real feeling.",
+          "traps": {
+            "1": "Calling this a stand-in would treat her tears as a bid for a call. You would start managing her tears instead of answering the missing, the talk would turn to whether she means it, and she would stop saying the true thing."
+          },
+          "example": "A hospital canteen, Friday.<br>Nurse: “I was scared on that ward tonight. I don't want to talk about it now. Tell me about your daughter's school play.”<br>Her friend: “Sure. Go on, all of it.”"
+        }
+      ]
+    },
+    {
+      "level": "Play",
+      "label": "Play, the week in motion",
+      "intro": "Harder now. The two feelings in each line look alike, so ask whether anything finishes once the line is said.",
+      "items": [
+        {
+          "type": "pick",
+          "who": "Daniel",
+          "text": "“I'm furious. Furious. Who signed off those sums? Let's stay calm about it. I'm completely calm.”",
+          "cue": "voice rising on every word, one hand flat on the printout, the other in a fist",
+          "options": ["A real feeling: anger about the sums, and it finishes once they are checked", "A stand-in feeling: anger that covers a fear of looking bad, and it goes round without the sums being checked"],
+          "answer": 1,
+          "why": "The sums can be checked, and a real anger would stop there. This anger keeps going after the check, and the word calm comes out through a clenched fist. The fear of looking bad in front of the client is what it covers, so it is a stand-in.",
+          "traps": {
+            "0": "The sums really were wrong, so the anger can look real. Checking them would feel like the end of it. Next week the same fury would come back over the next sheet, and the fear of looking bad would stay hidden under the table."
+          },
+          "example": "A cricket club committee, Sunday.<br>Treasurer: “I'm livid about the bill. Livid. But I'm perfectly calm, obviously.”<br>Nobody checks the bill, and the same row starts again at the next meeting."
+        },
+        {
+          "type": "pick",
+          "who": "Gran",
+          "text": "“My knees, my knees. That's the third time I've told you this week. Nobody comes down to see me, but I'm not complaining. I'll tell you again tomorrow.”",
+          "cue": "turning the tap off, then on again, not looking round",
+          "options": ["A real feeling: scared of the stairs, and it finishes once someone helps her up them", "A stand-in feeling: the same sorry tune, repeated, so no visit ever gets arranged"],
+          "answer": 1,
+          "why": "The knees are real, but the line has been said three times and it asks for nothing. Real fear would ask for a hand on the stairs, and then it would be finished. This tune goes round, and nobody gets to the visit it is pointing at.",
+          "traps": {
+            "0": "A fear of the stairs fits the knees, so the line can sound true. If you took it that way, you would offer to carry the shopping up. The tune would stop for one afternoon and start again on Tuesday, with you as the one who came up the stairs."
+          },
+          "example": "A WhatsApp group for the building, Tuesday.<br>Neighbour: “The lift is broken again. Third time this month. Nobody tells us anything.”<br>Next week, the same message, with the same photo of the sign."
+        }
+      ]
+    },
+    {
+      "level": "Analyse",
+      "label": "Analyse, explain it",
+      "items": [
+        {
+          "type": "pick",
+          "who": "Nadia",
+          "text": "“Omar says he's sick of it every release, and nothing changes. Which reading fits, and what would a real version of that anger do?”",
+          "cue": "turning her cup, not looking up from it",
+          "options": [
+            "A racket feeling: anger shown in place of a real one, which never finishes anything. Real anger here would name one change and ask for it by a date.",
+            "An authentic feeling: anger is a real feeling, so it counts as real as long as it is strong enough to be heard.",
+            "A racket feeling, because Omar is a difficult colleague. The feeling itself has nothing to do with it."
+          ],
+          "answer": 0,
+          "why": "Plain words first: this is a stand-in that fixes nothing. The books call it a racket feeling, and the test is whether the anger finishes the situation. Omar's anger repeats every release and asks for nothing, so it never finishes.",
+          "traps": {
+            "1": "Strength is the wrong test. Real anger can be loud and still finish, and this anger can be loud and still go round. Calling it authentic would take the volume for the answer, and the fire drill would stay as it is.",
+            "2": "Blaming Omar's character sends the talk to a person, not to the feeling. Omar would hear that he is the problem, and the anger would stay in charge with nothing asked of anyone."
+          },
+          "example": "A school staffroom, Monday.<br>Teacher: “I'm sick of the photocopier. Every term, the same jam, and nobody fixes it.”<br>Another teacher: “Put the request in by Friday, then. The form is in the office drawer.”"
+        }
+      ]
+    }
+  ],
+  "debrief": {
+    "nadia": "Real feelings fit the event, and they ease once it has been dealt with. A stand-in comes back every release in the same coat, and the release never gets any better. The quick test is simple: did anything finish?",
+    "bookTerm": "Racket feeling",
+    "bookNote": "The books call this a racket feeling: a feeling you learned to show in place of the real one, which never resolves the situation it appears in."
+  },
+  "reflection": { "prompt": "Which feeling did you show this week that finished nothing, and what was the real one under it?" },
+  "next": "5.2"
+}

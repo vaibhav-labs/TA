@@ -1,0 +1,141 @@
+{
+  "slot": "4.1",
+  "title": "Is It a Game?",
+  "world": 4,
+  "worldName": "The Thesaurus",
+  "week": 4,
+  "weekName": "Traps",
+  "mechanic": "Diagnose",
+  "concept": "After this one you can tell small talk, a job, a one-off angle and a trap apart by listening for the switch and what it pays.",
+  "plainWord": "a trap",
+  "bookTerm": "Game",
+  "bookIdea": "A game is a series of ulterior moves with a snare in them, heading for a well-defined and predictable payoff. It recurs, its motive is concealed, and it always includes a switch, a moment when something unexpected and uncomfortable happens. Both players end up with the same kind of bad feeling.",
+  "bookSource": "Games People Play, ch. 5; TA Today, ch. 1",
+  "opener": {
+    "setting": "Monday, 8:10am. Hawthorn Court, apartment 3B, the kitchen. The milk is on the counter, and nobody has put it away.",
+    "lines": [
+      { "who": "Sam", "text": "“Morning! Did you see the match? Unreal finish in the last over.”", "cue": "pouring the last of the tea, one shoe on" },
+      { "who": "Maya", "text": "“I saw the scores. I've been on nights all week, so I missed it.”", "cue": "in her scrubs, a bowl already in her hand" },
+      { "who": "Sam", "text": "“Ha, sorry. Of course you did. Oh, and you're not going to like this, but the milk money is late again.”", "cue": "eyes on the fridge, not on her" }
+    ],
+    "ask": "Sort each exchange into small talk, a job, a one-off angle or a trap, and listen for the switch that turns a friendly line into a sting."
+  },
+  "rounds": [
+    {
+      "level": "Spot",
+      "label": "Spot, round 1",
+      "intro": "Three short exchanges, one of each kind you will meet most. Tap the kind it is.",
+      "items": [
+        {
+          "type": "pick",
+          "who": "Sam",
+          "text": "“Did you see the rain this morning? Took ages to get the bus.”",
+          "cue": "shaking an umbrella out by the lift",
+          "options": ["small talk", "a job", "a trap"],
+          "answer": 0,
+          "why": "Nothing is asked for and nothing is held back. Rain and buses are the stuff of a hallway chat, and either person can stop whenever they like. That is small talk, and it doesn't need a hidden reason.",
+          "traps": {
+            "1": "It would sound like “Can you send me the rain report by ten?” Nobody asked for a report, so the chat would turn into a task that never got requested.",
+            "2": "It would sound like “Typical. You always leave the bus till last, and I always end up waiting.” The line has a hook but no switch and no sting, so calling it a trap would make a friendly remark sound sinister."
+          },
+          "example": "A train platform, 7am. “Crowded again.”<br>“Every morning. Still, it's only four stops.”<br>Neither of them looks at the other, and neither needs to."
+        },
+        {
+          "type": "pick",
+          "who": "Daniel",
+          "text": "“The client wants the revised numbers by four. Can you send them before I leave?”",
+          "cue": "already standing, laptop under one arm",
+          "options": ["small talk", "a job", "a trap"],
+          "answer": 1,
+          "why": "It names a deadline and the thing to send, and it ends with a question that has a clear yes or no. A job is finished when the numbers arrive. Nobody is checking how the sender feels about it.",
+          "traps": {
+            "0": "It would sound like “Lovely weather for a client call, isn't it?” Nothing would get sent, the numbers would stay in the inbox, and the client would ring again before four.",
+            "2": "It would sound like “You always leave it to the last minute, so here we go again.” The numbers would become a complaint, and the tone would matter more than the figures."
+          },
+          "example": "A school gate, Tuesday. A parent says, “Can you take the blue bag home? I'm at the dentist until five.” The bag gets taken home, and that is the end of it."
+        },
+        {
+          "type": "pick",
+          "who": "Clara",
+          "text": "“Could you look at my cell? Sorry, I'm useless with these.”<br>“Sure, give me a minute.”<br>“Oh, you've changed the whole column. Forget it, I'll ask someone else.”",
+          "cue": "turning her screen towards you, then away again",
+          "options": ["small talk", "a job", "a trap"],
+          "answer": 2,
+          "why": "She offers herself as the useless one, which invites a reply. The helper takes the offer and fixes the cell, and then she turns on the help with “forget it”. That turn is the switch. The sting is the guilt that both of them now carry into the rest of the afternoon.",
+          "traps": {
+            "0": "It would sound like “Ha, spreadsheets, eh? Always a mess.” That would be a light remark, but she has asked for help, taken it, and then thrown it back, which is not small talk.",
+            "1": "It would sound like a plain request to look at a cell, answered and finished. Here the help is taken and then thrown back with “forget it”, so the job is never finished and the room is uneasy."
+          },
+          "example": "A WhatsApp group for a cousin's wedding. “Can someone check the seating? I'm hopeless at this.” “Done, I've moved the aunts.” “You moved the aunts? Never mind, I'll redo it.” The helper sulks and so does the first person."
+        }
+      ]
+    },
+    {
+      "level": "Play",
+      "label": "Play, the week in motion",
+      "intro": "These are harder. The lines look alike, and each one has an angle. Ask what the person is trying to get, and whether the exchange ends when they get it.",
+      "items": [
+        {
+          "type": "pick",
+          "who": "Sam",
+          "text": "“Maya, you're the only one the landlady listens to. Ask her about the deposit for me? She'd never say no to you.”",
+          "cue": "smiling too wide, holding the bin bag for her",
+          "options": ["a job", "a one-off angle", "a trap"],
+          "answer": 1,
+          "why": "The praise is doing the work. It gets Maya to say yes by making her feel chosen, and once the deposit is sorted the exchange is over. Nothing turns on her afterwards, so it is a one-off angle, a single move with one result, no switch and no sting.",
+          "traps": {
+            "0": "It would sound like “Can you ask the landlady about the deposit?” A plain request would say what is needed and when. This one picks Maya for her charm, which is the angle, and a plain job would miss that.",
+            "2": "It would sound like the same complaint about the deposit that Sam makes every month, with Maya pulled into it. That would need a switch and a sting, and this line has neither. Once the deposit is sorted, the matter closes."
+          },
+          "example": "A neighbour at a housing society meeting: “You're the only one the secretary takes seriously. Could you raise the lift repair for me? Thanks, you're a star.” The lift gets raised, and the praise is never mentioned again."
+        },
+        {
+          "type": "pick",
+          "who": "Daniel",
+          "text": "“Clara, the client loved your slides. Do the same for the second client deck by Thursday? You're the only one who gets it right first time.”<br>“I'm not sure I'm the only one. Ask Omar, he has done more than me.”<br>“Right. Forget it, I'll ask someone who can cope.”",
+          "cue": "already turning back to his screen",
+          "options": ["a job", "a one-off angle", "a trap"],
+          "answer": 2,
+          "why": "The praise sets the bait, and Clara bites by saying she isn't the only one. Daniel then flips and turns the request into a dismissal of her. The “forget it” stings both of them: she feels she has failed a test, and he has a deck that still has no owner.",
+          "traps": {
+            "0": "It would sound like a straight request for the second client deck by Thursday. It would be a job if the story stopped after the first line, but Clara's reply and his “forget it” turn it into something else.",
+            "1": "It would sound like flattery used to get the deck done, and it would be a one-off angle if it ended at the first line. The second and third lines are where the switch and the sting happen, so the angle has turned into a trap."
+          },
+          "example": "A cricket club, Saturday. “You're the only one who can field at cover. Play tomorrow?” “I'm not that good.” “Fine, we'll get someone who is.” Both players remember the dropped catch for a month."
+        }
+      ]
+    },
+    {
+      "level": "Analyse",
+      "label": "Analyse, explain it",
+      "intro": "Name the tell, then say why the other kinds of exchange would not have fitted.",
+      "items": [
+        {
+          "type": "pick",
+          "who": "Nadia",
+          "text": "“In the last exchange, what makes it a trap and not a one-off angle? Choose the part that does the work.”",
+          "cue": "stirring her tea, watching the window",
+          "options": [
+            "The praise at the start, because flattery is always a lie.",
+            "The switch when Daniel turns a request into a dismissal, and the sting that both of them carry afterwards.",
+            "The deadline, because a deadline always makes a job into a trap."
+          ],
+          "answer": 1,
+          "why": "A trap needs a hook and a switch, and the sting is what it leaves behind. The praise is only bait. The switch is where the request turns into a dismissal, and the sting is what the whole thing pays out: the same bad feeling for both of them, which stays after the screen goes back on. A one-off angle would have ended once the deck was sent.",
+          "traps": {
+            "0": "If someone heard this as the tell, they would start asking whether compliments are honest, and the talk would drift to Clara's self-esteem. The praise is the bait, but nothing in it would have caught her without the switch that follows.",
+            "2": "If someone heard this, they would argue about whether the deadline is fair, and the talk would go to the calendar. A deadline turns up in jobs all the time, and it doesn't explain why the exchange stung."
+          },
+          "example": "A school trip WhatsApp group. “You're the only one who can count the kids on the bus.” “Ok, I'll try.” “Forget it, I'll ask a parent.” Everyone sees the sting, and nobody can say where it started."
+        }
+      ]
+    }
+  ],
+  "debrief": {
+    "nadia": "Small talk ends with the chat. A job ends once the thing is done, and so does a one-off angle. A trap is the one that comes round again, with a sudden turn in the middle and the same sting for both of you at the end. Check the moment the friendly line turns, and then check whether anything is left over after the screen goes back on.",
+    "bookTerm": "Game",
+    "bookNote": "The books call this a game: a series of ulterior moves with a snare, heading for a well-defined payoff. It recurs, the motive is concealed, and there is always a switch, so both players end up with the same kind of bad feeling."
+  },
+  "reflection": { "prompt": "Think of one exchange this week that felt like small talk at the time. Did it have a switch in it, and what was the sting you carried away from it?" },
+  "next": "4.2"
+}

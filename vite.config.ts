@@ -21,7 +21,7 @@ export default defineConfig({
         // The First Transaction mini-game series (public/first-transaction/) is its own
         // standalone PWA with its own manifest + service worker (scope /TA/first-transaction/).
         // Excluded here so the two apps' service workers don't both try to control those pages.
-        globIgnores: ["first-transaction/**"],
+        globIgnores: ["first-transaction/**", "arena/**"],
       },
       manifest: {
         name: "TA Arena",

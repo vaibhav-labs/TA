@@ -1,0 +1,276 @@
+{
+  "slot": "1.2",
+  "title": "Sample Scenes and Order",
+  "world": 1,
+  "worldName": "Hunger",
+  "week": 1,
+  "weekName": "Invisible",
+  "mechanic": "Choice-story, Sequence",
+  "concept": "Test game: read the move in a scene, keep the meters up, and put the steps of a clean apology in order.",
+  "plainWord": "the bounce",
+  "bookTerm": "Game",
+  "bookIdea": "A game is a set of covert moves that end in a bad feeling, and it can be spotted from the moves alone.",
+  "bookSource": "Games People Play",
+  "opener": {
+    "setting": "Tuesday, 6:40pm. The school gate, Kothrud, the cold part of the evening.",
+    "lines": [
+      { "who": "Aai", "text": "“You didn't ring me back on Sunday. Again.”", "cue": "arms folded at the gate" },
+      { "who": "Rohan", "text": "“I know. I said I would. Things got in the way.”", "cue": "looking at the pavement" }
+    ],
+    "ask": "In each scene, which line keeps the meters up, and which line starts a game?"
+  },
+  "rounds": [
+    {
+      "level": "Spot",
+      "label": "Spot, round 1",
+      "items": [
+        {
+          "type": "pick",
+          "who": "Aai",
+          "text": "“You didn't ring me back on Sunday. Again.”",
+          "cue": "arms folded at the gate",
+          "options": ["Stroke", "Trade"],
+          "answer": 0,
+          "why": "Aai names a missed call and a repeat. She is giving Rohan a clear sting, which is a negative stroke for a repeated slip.",
+          "traps": {
+            "1": "Trade would be a proposal with a request and an answer built in. Aai has not offered anything yet, so this is a complaint, not a deal."
+          },
+          "example": "Family group chat: “You forgot the bins again.”<br>That is one small sting, and it is about the bins, not about a deal."
+        },
+        {
+          "type": "pick",
+          "who": "Rohan",
+          "text": "“I know. I said I would. Things got in the way.”",
+          "cue": "looking at the pavement",
+          "prompt": "Which voice is this?",
+          "options": ["Parent", "Adult", "Child"],
+          "answer": 2,
+          "why": "The line is a small, sorry apology said to the pavement. It sounds like a child caught out, not like a parent or a grown-up with a plan.",
+          "traps": {
+            "0": "Parent would sound like “You should know better than to miss a call.” It sets a rule about the other person's habits.",
+            "1": "Adult would give a plan: “I'll ring you tonight at eight.” It names a time, which this line does not."
+          },
+          "example": "A teacher at parents' evening: “You know the rules, so please be on time.”<br>That is the Parent voice, handing down a rule."
+        },
+        {
+          "type": "pick",
+          "who": "Aai",
+          "text": "“So what do you want me to do with that, then?”",
+          "cue": "voice rising",
+          "prompt": "What is the move in this line?",
+          "options": ["Ritual", "Game"],
+          "answer": 1,
+          "why": "The line opens a fight the other person is meant to answer, with the same tone pushing back. That pattern marks it as the start of a game.",
+          "traps": {
+            "0": "Ritual would be the same question asked at the same time every week, with a set answer that both people know by heart."
+          },
+          "example": "At a bus stop: “So you're going to be late again, then?”<br>The question is a hook, and the answer is what the hook is for."
+        }
+      ]
+    },
+    {
+      "level": "Play",
+      "label": "Play, the week in motion",
+      "intro": "Each scene runs a few beats. Pick a line at each beat and watch the meters.",
+      "items": [
+        {
+          "type": "scene",
+          "title": "Tuesday, 6:40pm, the school gate",
+          "setting": "Aai is cold and Rohan is late. The two of them need to agree on the call.",
+          "meters": { "you": 60, "them": 50 },
+          "beats": [
+            {
+              "who": "Aai",
+              "text": "“Sorry, sorry, I owe you for the call. Again.”",
+              "cue": "already reaching for her bag",
+              "lines": [
+                {
+                  "text": "“It's fine. Forget it.”",
+                  "tag": "ok",
+                  "you": -2,
+                  "them": 3,
+                  "outcome": "Aai takes the out, and the call never gets scheduled.",
+                  "why": "A quick pardon keeps the peace for a minute but keeps the old loop running."
+                },
+                {
+                  "text": "“You owe me for the call and the last two weeks. Ring me Friday.”",
+                  "tag": "best",
+                  "you": 4,
+                  "them": -2,
+                  "outcome": "Aai goes quiet, then nods and says Friday.",
+                  "why": "A clear, specific ask keeps the exchange honest and gives the other person a way to pay."
+                }
+              ]
+            },
+            {
+              "who": "Rohan",
+              "text": "“Can we not do this before work?”",
+              "cue": "keys already in his hand",
+              "lines": [
+                {
+                  "text": "“Fine, we'll talk later.”",
+                  "tag": "best",
+                  "you": 3,
+                  "them": 2,
+                  "outcome": "Rohan leaves on time, and the subject waits until Friday.",
+                  "why": "Naming a time for the talk keeps both of you honest."
+                },
+                {
+                  "text": "“Right. This is the last time I cover for you. Done.”",
+                  "tag": "game",
+                  "you": 2,
+                  "them": -4,
+                  "outcome": "Rohan stops with the car door open and says nothing for a while.",
+                  "why": "The line seems to end the matter, but it sets up a point to win. It is a game move, so the scene stops here."
+                },
+                {
+                  "text": "“Okay. Then tell me what you need from me this week.”",
+                  "tag": "ok",
+                  "you": 1,
+                  "them": 2,
+                  "outcome": "Rohan softens and names two things he can do.",
+                  "why": "A question that asks for information is fair, though it is not the cleanest move."
+                }
+              ]
+            },
+            {
+              "who": "Aai",
+              "text": "“So, Friday? You'll tell me the number?”",
+              "cue": "hopeful, a little too fast",
+              "lines": [
+                {
+                  "text": "“Friday. Write it on the fridge so we both see it.”",
+                  "tag": "best",
+                  "you": 3,
+                  "them": 2,
+                  "outcome": "Aai laughs and writes it on the fridge.",
+                  "why": "A written note turns a promise into a shared fact."
+                },
+                {
+                  "text": "“Friday, sure. Don't worry about it.”",
+                  "tag": "ok",
+                  "you": -1,
+                  "them": 1,
+                  "outcome": "The promise drifts, and the number is never said.",
+                  "why": "A vague yes gives the other person nothing to check on."
+                }
+              ]
+            }
+          ],
+          "payoff": "Aai takes the silence as a yes. The call stays unpaid, and the same argument starts again on Friday.",
+          "fallout": {
+            "them": "Rohan is already in the car, and the scene has nothing left to say.",
+            "you": "You have run out of things to say, so the scene stops here."
+          }
+        },
+        {
+          "type": "scene",
+          "title": "Tuesday, 6:55pm, the same gate",
+          "setting": "A second try at the same call. The gate is emptying.",
+          "meters": { "you": 40, "them": 20 },
+          "beats": [
+            {
+              "who": "Aai",
+              "text": "“You didn't ring me back on Sunday. Again.”",
+              "cue": "arms folded",
+              "lines": [
+                {
+                  "text": "“I'm sorry. I'll ring you tonight at eight, and I mean it.”",
+                  "tag": "best",
+                  "you": 2,
+                  "them": 3,
+                  "outcome": "Aai nods, a little less stiff.",
+                  "why": "An apology that names a time gives the other person something to check."
+                },
+                {
+                  "text": "“Don't start, I'm tired.”",
+                  "tag": "ok",
+                  "you": -4,
+                  "them": -10,
+                  "outcome": "Aai says nothing and turns to the gate.",
+                  "why": "A short brush-off is not cruel, but it spends the other person's patience."
+                }
+              ]
+            },
+            {
+              "who": "Aai",
+              "text": "“So what do you want me to do with that, then?”",
+              "cue": "voice rising",
+              "lines": [
+                {
+                  "text": "“Tell me what you need from me, and I'll try to do it.”",
+                  "tag": "best",
+                  "you": 2,
+                  "them": 2,
+                  "outcome": "Aai softens and starts listing things.",
+                  "why": "An open question hands the next move back to the other person."
+                },
+                {
+                  "text": "“Nothing. Forget I asked.”",
+                  "tag": "ok",
+                  "you": -3,
+                  "them": -10,
+                  "outcome": "The gate door opens and Aai walks in without a word.",
+                  "why": "Withdrawing ends the scene quietly, and it costs both of you."
+                }
+              ]
+            },
+            {
+              "who": "Aai",
+              "text": "“Ring me tonight, then.”",
+              "cue": "already walking",
+              "lines": [
+                {
+                  "text": "“Eight o'clock. I'll be on the balcony.”",
+                  "tag": "best",
+                  "you": 3,
+                  "them": 3,
+                  "outcome": "Aai waves over her shoulder and says, see you then.",
+                  "why": "A place and a time turn a promise into a plan."
+                },
+                {
+                  "text": "“Okay.”",
+                  "tag": "ok",
+                  "you": 0,
+                  "them": 2,
+                  "outcome": "Aai leaves, and the call is still only a word.",
+                  "why": "A flat yes is fine, but it leaves nothing to check."
+                }
+              ]
+            }
+          ],
+          "fallout": {
+            "them": "Aai has gone in, and the call at eight will not happen."
+          }
+        }
+      ]
+    },
+    {
+      "level": "Analyse",
+      "label": "Analyse, explain it",
+      "items": [
+        {
+          "type": "sort",
+          "prompt": "Put these steps of a clean apology in order.",
+          "order": true,
+          "items": [
+            { "text": "“I was late, and I didn't tell you.”", "why": "Name what happened first, with no excuse in front of it." },
+            { "text": "“That left you waiting at the gate for twenty minutes.”", "why": "Then say what it cost the other person, in plain words." },
+            { "text": "“Next time I'll message you from the bus.”", "why": "Name a specific fix that the speaker can actually do." },
+            { "text": "“Is that alright with you?”", "why": "End by asking, so the other person can answer and the matter can close." }
+          ],
+          "example": "Team stand-up: “I missed the nine o'clock call. I'll message the group from now on. Does that work for you?”"
+        }
+      ]
+    }
+  ],
+  "debrief": {
+    "meera": "One move at a time is how these scenes run. Aai's question was the hook to watch: a plain answer keeps the meters up, and a withdrawal costs both of you. The steps of a clean apology are short, and the last one is a question you can answer.",
+    "bookTerm": "Game",
+    "bookNote": "The books call this a game, a set of covert moves that ends in a bad feeling for everyone at the table."
+  },
+  "reflection": {
+    "prompt": "Think of a time this week when a small apology stopped a fight, or started one. What was the second line?"
+  },
+  "next": "1.3"
+}

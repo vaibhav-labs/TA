@@ -1,0 +1,139 @@
+{
+  "slot": "6.3",
+  "title": "Don't",
+  "world": 6,
+  "worldName": "The Plan",
+  "week": 6,
+  "weekName": "The Plan",
+  "mechanic": "Diagnose",
+  "concept": "After this one you can read a childhood scene for the Don't a child would take from it, and say which permission would counter it.",
+  "plainWord": "the Don'ts",
+  "bookTerm": "Injunctions",
+  "bookIdea": "Injunctions are Don'ts that come from the parent's own Child, often through what the parent does rather than what they say, and each one needs its own permission to counter it.",
+  "bookSource": "Scripts People Live, ch. 4, 6, 7 and 21; TA Today, ch. 14",
+  "opener": {
+    "setting": "Saturday, 10:30am. Hawthorn Court, apartment 1A, Gran's kitchen. Leo is on the stool by the window with a pencil.",
+    "lines": [
+      { "who": "Gran", "text": "“Sit there and draw. Don't touch the cooker, it's hot. It's always hot.”", "cue": "not turning round" },
+      { "who": "Leo", "text": "“It has twelve wheels. Nobody counts them.”", "cue": "holding the paper up to the window light" }
+    ],
+    "ask": "Name the Don't a child would decode from each scene. Most of these scenes have only a few words."
+  },
+  "rounds": [
+    {
+      "level": "Spot",
+      "label": "Spot, round 1",
+      "intro": "Each scene is from a childhood. Most of them have only a few words. Name the Don't the child is taking from the grown-up's hands and timing.",
+      "items": [
+        {
+          "type": "pick",
+          "who": "Leo, 8",
+          "text": "<i>He holds up a drawing of a bus with twelve wheels. Gran is at the pressure cooker and does not turn round. He folds the drawing in four and slides it under the newspaper.</i>",
+          "cue": "Saturday, 11:40am, apartment 1A, the kitchen",
+          "options": ["Don't be important", "Don't feel", "Don't be close"],
+          "answer": 0,
+          "why": "Nobody looks at the drawing, so he takes it back. There is no shouting and no crying. What he decides is that what he makes doesn't count, and that is don't be important. The permission that counters it is 'you may be important, and what you make can be looked at'.",
+          "traps": {
+            "1": "It would be read as don't feel. A child told not to feel would be crying into the newspaper, and this clip has no tears. The drawing is what gets hidden.",
+            "2": "It would be read as don't be close. He is not moving away from Gran at all. What moves is the drawing, out from the table and under the newspaper."
+          },
+          "example": "An art wall at a school, Friday. A girl's painting is pinned at the bottom of the corridor, under three others. The next week she stops bringing her sketchbook in."
+        },
+        {
+          "type": "pick",
+          "who": "A boy, six",
+          "text": "<i>He comes off his bicycle at the gate and grazes his knee. His lip shakes. Then his father picks the bicycle up, says “Up you get,” and checks the chain. The boy stops the lip.</i>",
+          "cue": "Thursday, 3:10pm, the school gate",
+          "options": ["Don't feel", "Don't succeed", "Don't be close"],
+          "answer": 0,
+          "why": "Nobody asks about the knee, and the lip is the first thing the boy stops. What he decides is that the feeling must not show, so the feeling goes. The permission that counters it is 'you may feel, and a grown-up can notice it with you'.",
+          "traps": {
+            "1": "It would be read as don't succeed. Nothing in the clip is about a race or a win, only a fall and a chain that needs checking. Picking this sends the story somewhere the scene never goes.",
+            "2": "It would be read as don't be close. The father stands near enough to speak, so distance is not the message. The message is about the knee and the lip."
+          },
+          "example": "A cricket net, Sunday. A boy takes a ball on the shin and bites his lip. He says “It's nothing, play on,” and the coach says nothing, so he bats on with a stiff leg."
+        },
+        {
+          "type": "pick",
+          "who": "A girl, seven",
+          "text": "<i>She climbs onto the bus-stop bench and reaches for her mother's arm. Her mother holds the phone up, says “Not now, I'm on a call,” and turns her shoulder. The girl's arms come back down.</i>",
+          "cue": "Tuesday, 6:50pm, the bus stop by the market",
+          "options": ["Don't belong", "Don't be close", "Don't be a child"],
+          "answer": 1,
+          "why": "The reach is met with a turned shoulder, and the arms come down. The child decides that closeness isn't available right now, and she may decide it for good. That is don't be close. The permission that counters it is 'you may be close, and you can ask for it'.",
+          "traps": {
+            "0": "It would be read as don't belong. The mother is only pulling away from the phone call, and nothing in the clip puts the girl outside the family.",
+            "2": "It would be read as don't be a child. The girl is not asked to be grown up. She is simply not held, and that is a different message."
+          },
+          "example": "A cookery class, Saturday. A boy asks the teacher to check his dough. She says “Five minutes, I'm dealing with the ovens,” and he stops asking for help for the rest of the class."
+        }
+      ]
+    },
+    {
+      "level": "Play",
+      "label": "Play, the week in motion",
+      "intro": "These are harder. The options sit close together, and the grown-up's words and actions point different ways. Ask what the child would take from the last thing that happened.",
+      "items": [
+        {
+          "type": "pick",
+          "who": "You, at six",
+          "text": "<i>You swing your school bag onto your back. Mum lifts it off and carries it on her own shoulder. You walk to the bus with nothing on your back, and she does not give it back.</i>",
+          "cue": "Monday, 7:20am, the lane outside the old house",
+          "options": ["Don't grow up", "Don't be a child", "Don't be important"],
+          "answer": 0,
+          "why": "Mum is not cross and she is not unkind. She is keeping you the size of a child, which is what the Don't says: don't grow up. Her worry is real, and the child decides that growing up is risky. The permission that counters it is 'you may grow up, and the bag is yours to carry'.",
+          "traps": {
+            "1": "It would be read as don't be a child. This clip pulls the other way: you are being kept small, and nobody pushes you to grow up. Picking this would put the lesson on the wrong side of the bag.",
+            "2": "It would be read as don't be important. Mum is paying you close attention. The bag is taken because you are worth carrying for."
+          },
+          "example": "A group photo at a wedding, Sunday. An aunt takes a child's sandal off his foot and says “Stand still, you'll trip,” every time he moves toward the cake."
+        },
+        {
+          "type": "pick",
+          "who": "A girl, nine",
+          "text": "<i>She wins the ribbon at the science fair and is handed it in front of the class. It goes into her pocket before she looks up. Then she asks her teacher, in a small voice, whether it was only a small project.</i>",
+          "cue": "Friday, 1:30pm, the school hall",
+          "options": ["Don't be important", "Don't succeed", "Don't think"],
+          "answer": 1,
+          "why": "The win is real, and within a minute she has taken it back. The ribbon goes in the pocket and the project becomes 'only small'. The child decides that a success isn't safe to keep. The permission that counters it is 'you may succeed, and keep what you have won'.",
+          "traps": {
+            "0": "It would be read as don't be important. She is being noticed, and she is the one who shrinks the moment. The clip is only about the win being undone. Nobody overlooks her.",
+            "2": "It would be read as don't think. Her teacher takes the project seriously, and nothing in the clip tells her to stop working things out. What goes wrong is her own decision to give the win back."
+          },
+          "example": "A running race, Saturday. A boy comes second, shakes the winner's hand, and says, “Lucky, really. He's faster on a bad day anyway.” Then he gives his medal to his brother."
+        }
+      ]
+    },
+    {
+      "level": "Analyse",
+      "label": "Analyse, explain it",
+      "items": [
+        {
+          "type": "pick",
+          "who": "Nadia",
+          "text": "“Leo decided don't be important, and his drawing went under the newspaper. Which permission would counter that Don't?”",
+          "cue": "turning her cup, looking at the window",
+          "options": [
+            "You may be important, and what you make can be looked at.",
+            "You may be important, so long as you're the good one and don't make a fuss.",
+            "Don't be important, but be useful to Gran."
+          ],
+          "answer": 0,
+          "why": "The books call these injunctions. A permission is the answering message: a caring grown-up says you may do what the Don't forbade. The second option is a Must in disguise: it makes being important depend on being good. The third keeps the Don't and only adds a job for Gran.",
+          "traps": {
+            "1": "Leo would hear that being important is a prize for being good and quiet. He would learn to hide his drawings until they were perfect, and the Don't would stay, with a condition on top.",
+            "2": "Leo would hear that his drawing doesn't count and that he can be useful instead. Gran would get a helper, and the bus with twelve wheels would stay under the newspaper."
+          },
+          "example": "A family WhatsApp group, Tuesday. A cousin posts a poem, and her mother replies, “Lovely, now do your homework.” Nobody mentions the poem again. A real permission would be a reply that asks her to read it aloud."
+        }
+      ]
+    }
+  ],
+  "debrief": {
+    "nadia": "Most of those scenes had only a few words, and the child still got the message. A child reads the hands, the turned shoulder and the pause before the answer. The Don't is what the child decided it meant, and a permission is what could answer it later.",
+    "bookTerm": "Injunctions",
+    "bookNote": "The books call these injunctions: Don'ts that come from the parent's own Child, often without a word said, and each one needs its own permission to counter it."
+  },
+  "reflection": { "prompt": "Which Don't did you act on this week, and which grown-up did it sound like?" },
+  "next": "6.4"
+}

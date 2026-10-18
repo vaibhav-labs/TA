@@ -1,0 +1,178 @@
+{
+  "slot": "3.1",
+  "title": "Draw the Arrow",
+  "world": 3,
+  "worldName": "Vectors",
+  "week": 3,
+  "weekName": "Volleys",
+  "mechanic": "Vector",
+  "concept": "After this one you can draw the arrow for any line, from the voice that sends it to the voice that gets it, and say whether the reply matches it or cuts it.",
+  "plainWord": "a volley",
+  "bookTerm": "Transaction",
+  "bookIdea": "A transaction is one line and its reply. It is complementary when the reply comes from the ego state that was addressed and goes back to the one that spoke, and crossed when it does not.",
+  "bookSource": "Games People Play, ch. 2; TA Today, ch. 7",
+  "opener": {
+    "setting": "Monday, 19:30, the kitchen in apartment 3B, Hawthorn Court. Maya has her phone propped against the fruit bowl.",
+    "lines": [
+      { "who": "Maya", "text": "“Sit down. I want to show you something you said to Sam last night.”", "cue": "scrolling her notes app with one thumb" },
+      { "who": "Maya", "text": "“Every line in a conversation is an arrow. It starts with the voice that sends it and lands on the voice that gets it.”", "cue": "drawing a line on the back of a takeaway menu with her finger" }
+    ],
+    "ask": "For each line, which voice sends it, and does the reply come back from the voice that was spoken to?"
+  },
+  "rounds": [
+    {
+      "level": "Spot",
+      "label": "Spot, round 1",
+      "intro": "<b>How this one works:</b> you see a line and the reply to it. Work out which voice the reply comes from. If it comes from the voice that was spoken to, the volley is <b>matched</b> and keeps going. A reply from a different voice is a <b>cut</b>, and the conversation stops.",
+      "items": [
+        {
+          "type": "pick",
+          "who": "Sam, last night, replying to you",
+          "text": "“Ugh, you sound like my mum.”",
+          "cue": "flat, not looking up from his phone",
+          "prompt": "Which voice does the reply come from?",
+          "options": ["The Boss", "The Pilot", "The Kid"],
+          "answer": 2,
+          "why": "The reply is sulky and childish, a complaint about being told off. That is the Kid answering. Your line was aimed at the part of him that gets told what to do, and that part has answered.",
+          "traps": {
+            "0": "The Boss would sound like “Don't tell me how to live, I'm the one who pays.” That is a lecture thrown back at you. Your line was aimed at the part of him that gets told what to do, so a Boss reply would come from a different voice and cut the volley.",
+            "1": "The Pilot would say “Fair point, I'll sort the rent by Friday.” That is calm and practical, and it is not what this line sounds like."
+          },
+          "example": "A family WhatsApp group, a brother to his sister after she told him to clear the table: “Ugh, you sound like Mum.”<br>He is answering from the part of him that was told off, so the reply comes back from the Kid."
+        },
+        {
+          "type": "pick",
+          "who": "Clara, in the Halden canteen, replying to you",
+          "text": "“It was mostly the library.”",
+          "cue": "shrugging, a bit too quick",
+          "prompt": "Which voice does her reply come from?",
+          "options": ["The Boss", "The Pilot", "The Kid"],
+          "answer": 2,
+          "why": "She is quick and a bit small, shrugging your compliment off, so it is the Kid. You spoke to her Pilot, and the reply came from a different voice, so the volley is cut.",
+          "traps": {
+            "0": "The Boss would sound like “Well, somebody has to check the work.” That is a verdict on your code, and the reply would come from a different voice from the one you spoke to.",
+            "1": "The Pilot would give the facts and keep the work in front of you: “It was mostly the library, and the cache reset did the rest.” The words alone could pass for a Pilot's, but the quick shrug gives it away as the Kid. A real Pilot reply answers from the voice you spoke to, so the volley would stay matched."
+          },
+          "example": "A school gate, a mother to another mother about the science fair: “Your poster was lovely.”<br>“Oh, I'm useless at posters, sorry.” The reply comes from a different voice than the one the praise was aimed at, so the talk about the fair stops there."
+        },
+        {
+          "type": "pick",
+          "who": "Daniel, in the Halden corridor, replying to you",
+          "text": "“Let's keep this simple. Send me the numbers by noon.”",
+          "cue": "already walking away",
+          "prompt": "Which voice does his reply come from?",
+          "options": ["The Boss", "The Pilot", "The Kid"],
+          "answer": 0,
+          "why": "A clipped order with a deadline is the Boss, the voice that sets the rules for the room. You spoke to the Boss in him, and the Boss answered, so the volley is matched and can keep running.",
+          "traps": {
+            "1": "The Pilot would say “Noon works, but what do you need from me first?” That is a plan about the numbers, not an order, so the line would sound like a question you could answer.",
+            "2": "The Kid would sound like “Okay, okay, I'll try.” That is small and eager to please, so his order would sound like a favour you could refuse."
+          },
+          "example": "A bus stop, a father to a teenager who asked if she could go to the mall: “Home by six. Let's keep this simple.”<br>The reply comes from the voice that set the rule, so the volley runs on."
+        }
+      ]
+    },
+    {
+      "level": "Play",
+      "label": "Play, the week in motion",
+      "items": [
+        {
+          "type": "pick",
+          "who": "You, to Clara, on a Tuesday",
+          "text": "“Your auth code was clean.”",
+          "cue": "warm, meant as praise",
+          "prompt": "Which voice of Clara's should answer?",
+          "options": ["The Boss", "The Pilot", "The Kid"],
+          "answer": 1,
+          "why": "You spoke to her Pilot, the voice that handles the work, so a matched reply comes back from the Pilot. Your praise is about the code, and the Pilot is the voice that can take it as information.",
+          "traps": {
+            "0": "The Boss would answer “Of course it was clean, I checked it twice.” That is a claim of authority, and it would be a cut: her Boss answering your Pilot's compliment.",
+            "2": "The Kid would answer “Really? Thanks, I didn't think anyone noticed.” That is warm, but it is a cut, because the reply came from a voice you did not speak to."
+          },
+          "example": "A family WhatsApp group, a cousin to a cousin about a cake: “Your cake looked fine.”<br>“Thanks, I used less sugar this time.” The reply comes from the same calm voice the line was sent to, so the thread keeps going."
+        },
+        {
+          "type": "pick",
+          "who": "Sam, to you, in 3B, on Monday night",
+          "text": "“You sound like my mum. Can we not do this?”",
+          "cue": "arms folded, standing by the fridge",
+          "prompt": "You want this to stop and still get the rent sorted. Which of your voices answers?",
+          "options": ["The Boss", "The Pilot", "The Kid"],
+          "answer": 1,
+          "why": "His line came from his Kid and was aimed at your Boss. To stop the loop you answer from a different voice, so the arrows cross. The Pilot does that, and it still deals with the rent: “Fair enough. Let's talk about the rent on Friday.”",
+          "traps": {
+            "0": "The Boss would answer “Don't tell me what to do, Sam, you owe me.” That keeps the same Boss-to-Kid loop going, so it is matched, and it can run on and on.",
+            "2": "The Kid would answer “Sorry, sorry, I know, I'm the worst.” That is a cut too, since Sam's line was aimed at your Boss. It stops the fight, but only because you gave in, and the rent talk never happens."
+          },
+          "example": "A kitchen at midnight, a son to his father after a row: “You sound like Mum.”<br>“Fair enough, the bins can wait till Sunday.” The reply comes from a different voice than the one the line was aimed at, so the argument stops instead of going round again."
+        },
+        {
+          "type": "pick",
+          "who": "Omar, in the Halden kitchen, after you asked about the release",
+          "text": "“It'll go out when it goes out.”",
+          "cue": "tired, not turning round",
+          "prompt": "Which voice does his reply come from?",
+          "options": ["The Boss", "The Pilot", "The Kid"],
+          "answer": 0,
+          "why": "A flat ruling that closes the question is the Boss. You asked him in your Pilot, so a matched reply would have come back from his Pilot. His Boss answered instead, so the volley is cut and the talk stops there.",
+          "traps": {
+            "1": "The Pilot would say “Tuesday, I think. I'll check the build and tell you.” That is a real answer from the voice you asked, so the volley would stay matched and the talk would keep going.",
+            "2": "The Kid would say “I don't know, sorry, I'm not sure.” That is an apology, not a ruling, and it leaves your question hanging."
+          },
+          "example": "A train platform, a young woman asks an old man when the next train comes. He says: “It comes when it comes.”<br>She asked from her Pilot and he answered from his Boss, so the exchange goes nowhere."
+        }
+      ]
+    },
+    {
+      "level": "Analyse",
+      "label": "Analyse, explain it",
+      "items": [
+        {
+          "type": "pick",
+          "who": "Your line to Clara, then her reply, both on the Halden chat",
+          "text": "You sent: “Your auth code was clean.” She replied: “It was mostly the library.” The arrows cross. Why did the conversation stop there?",
+          "prompt": "What is the best explanation?",
+          "options": [
+            "Her reply came from a different voice than the one you spoke to, so the volley was cut.",
+            "You both spoke as the Pilot, and two Pilots always stall each other.",
+            "Her reply was too short, so the volley could not keep running."
+          ],
+          "answer": 0,
+          "why": "You spoke to her Pilot, but her reply came from a different voice, so the arrows went across each other and the volley stopped. The reply came from the wrong voice, which is why it felt like it did not land.",
+          "traps": {
+            "1": "Two Pilots can keep a volley running for a long time. Your line was aimed at her Pilot, but her Pilot did not answer: the reply came from another voice, so the stall came from her reply.",
+            "2": "Length has nothing to do with it. A one-word reply from the right voice would have kept the volley matched, and a long reply from the wrong voice would still cut it."
+          },
+          "example": "A family WhatsApp group, a sister to her brother about a school form: “Done, I sent it.” He replies with a sulky “Whatever, I'll do it later.”<br>The second message comes from a different voice than the one she spoke to, so the thread goes quiet."
+        },
+        {
+          "type": "pick",
+          "who": "You, on the Monday night, after Sam's “You sound like my mum”",
+          "text": "Sam's line came from his Kid and landed on your Boss. You want the loop to stop.",
+          "prompt": "Which reply is a cut?",
+          "options": [
+            "The Boss: “You owe me for the milk, so don't start.”",
+            "The Pilot: “Fair enough, let's talk about the rent on Friday.”",
+            "The Boss, kindly: “I know you're tired, but the milk is still owed.”"
+          ],
+          "answer": 1,
+          "why": "A nasty matched volley keeps running as long as each reply comes from the voice that was addressed. Your Pilot is a different voice from the one he addressed, so the reply is a cut, and the loop stops without anyone giving in.",
+          "traps": {
+            "0": "The Boss reply is matched. It answers from the same voice Sam addressed, so it hands him a new line to answer from his Kid, and the loop runs on.",
+            "2": "The kind Boss reply is still matched. It answers from the voice Sam addressed, so it sounds gentle and keeps the loop running."
+          },
+          "example": "A school gate, a mother to a neighbour after a loud argument about the parking space: “Fair enough, let's sort the parking on Friday.”<br>The reply comes from a different voice than the one that was spoken to, so the fight stops instead of running on."
+        }
+      ]
+    }
+  ],
+  "debrief": {
+    "nadia": "Maya drew the arrows, and then you drew one yourself. A matched volley can run on and on, even the nasty ones. A cut stops it, and you get to choose which one you want to keep going. Notice which voice answers the next time someone speaks to you.",
+    "bookTerm": "Transaction",
+    "bookNote": "The books call a line and its reply a transaction: complementary when the reply comes from the voice that was spoken to and goes back to the voice that spoke, and crossed when it does not. While transactions stay complementary, the talk can go on indefinitely."
+  },
+  "reflection": {
+    "prompt": "Think of a conversation this week that kept going round and round. Which voice did you answer from each time, and which voice would have cut it?"
+  },
+  "next": "3.2"
+}

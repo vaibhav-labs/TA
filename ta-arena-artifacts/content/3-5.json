@@ -1,0 +1,157 @@
+{
+  "slot": "3.5",
+  "title": "The Barn",
+  "world": 3,
+  "worldName": "Vectors",
+  "week": 3,
+  "weekName": "Volleys",
+  "mechanic": "Two-track",
+  "concept": "After this one you can hear a second chat running under a friendly one, two Kids talking beneath two Pilots, and answer both in one reply.",
+  "plainWord": "double-talk",
+  "bookTerm": "Duplex transaction",
+  "bookIdea": "A duplex ulterior transaction involves four ego states: an Adult conversation on the social level and a Child conversation on the psychological level. The outcome is determined by the Child.",
+  "bookSource": "Games People Play, ch. 2",
+  "opener": {
+    "setting": "Saturday, 19:30, the barn at a farm stay two hours outside the city. Tin roof, hay bales, a fire pit in the yard, and a cowboy hat the owner lent to Daniel.",
+    "lines": [
+      { "who": "Daniel", "text": "“Right, cowboys. Who wants the last horse? Nobody? Fine, I'll take him.”", "cue": "adjusting the borrowed hat in the barn doorway" }
+    ],
+    "ask": "Can you hear the plain chat on top and the second chat underneath, and answer both in one reply?"
+  },
+  "rounds": [
+    {
+      "level": "Spot",
+      "label": "Spot, round 1",
+      "intro": "<b>How this one works:</b> you read a short chat between two people. On top, two Pilots are talking about something plain. Some chats have a second chat running underneath, one Kid talking to another. Tap what the underneath chat is saying, or say there is none.",
+      "items": [
+        {
+          "type": "pick",
+          "who": "Clara and Daniel, at the barn door",
+          "text": "Clara: “Is that the last horse? I'll take him if nobody else wants him.” Daniel: “Then I'll take the one next to him. Last two, side by side.”",
+          "cue": "she is smiling at the floor, he is straightening the borrowed hat",
+          "prompt": "On top, two Pilots are sorting out horses. What are the two Kids saying underneath?",
+          "options": ["Clara: I expect to be left over. Daniel: I'll make sure you are not.", "Clara and Daniel: each of us wants the better horse", "Daniel: that horse is dangerous. Clara: I do not care"],
+          "answer": 0,
+          "why": "On top it is a plain chat about horses. Underneath, Clara's Kid says she expects to be the one nobody picks, and Daniel's Kid answers that he will pick her. Four voices are at work, and the two underneath are the ones that decide how the evening goes.",
+          "traps": {
+            "1": "Nothing in either voice is about which horse is better. They end up side by side by choice, which fits company better than competition.",
+            "2": "Neither of them mentions danger, and a smile at the floor is not about risk. The warning reading mixes up the animal and the person."
+          },
+          "example": "A wedding buffet, two cousins at a table: “There's a spare chair by the window.” “Then I'll take the one next to it.”<br>On top it is about chairs. Underneath, two Kids are telling each other they are glad of the company."
+        },
+        {
+          "type": "pick",
+          "who": "Omar and you, by the hay bales",
+          "text": "Omar: “Shall I hold the torch while you look for your phone?” You: “Please. I'd lose it in the dark without you.”",
+          "cue": "the torch is on and pointed at your shoes, and neither of you has started looking",
+          "prompt": "On top, two Pilots are sorting out a torch. What are the two Kids saying underneath?",
+          "options": ["Hurry up, you are slow.", "Nothing, it is only a torch.", "Stay close, neither of us wants to be out here alone."],
+          "answer": 2,
+          "why": "The top chat is a torch and a phone. Underneath, Omar's Kid asks you to stay near and your Kid says yes, which is why neither of you has started looking. Two Kids are keeping company under two Pilots.",
+          "traps": {
+            "0": "Nobody is pushing. Omar's voice is warm and your reply is a thank-you, so a hurry-up would fit neither side.",
+            "1": "The torch is real, and it does not explain why the phone has not been found yet. The chat is doing a second job underneath."
+          },
+          "example": "A petrol pump at night, one passenger to another: “Shall I hold the bag while you check the tyre?” “Please, I'd drop it on my own.”<br>On top it is a bag. Underneath, both would rather not be alone on a dark road."
+        },
+        {
+          "type": "pick",
+          "who": "Daniel and Clara, by the fire pit",
+          "text": "Daniel: “Which way to the fire pit from here?” Clara: “Left past the water trough. You'll smell the smoke.”",
+          "cue": "both looking straight ahead at the yard, neither one lingering",
+          "prompt": "Is a second chat running under this one?",
+          "options": ["Yes, two Kids are flirting under the directions.", "No, it is two Pilots swapping directions and nothing else.", "Yes, a Boss is ordering Clara around."],
+          "answer": 1,
+          "why": "Daniel asks for a fact and Clara gives one. Nothing in the voices points to a second chat, so it is a plain matched volley between two Pilots. Hearing a second chat in every line would be a mistake of its own.",
+          "traps": {
+            "0": "Nothing in the cue or the words leans that way. Both are looking at the yard, and the exchange ends when the directions do.",
+            "2": "Clara is not being ordered about. Daniel asked, and she answered in the same flat, easy voice."
+          },
+          "example": "A train platform, one passenger to another: “Is this the platform for the morning train?” “Yes, it's due in five.”<br>The question is a question and the answer is an answer. There is no second chat to hear."
+        }
+      ]
+    },
+    {
+      "level": "Play",
+      "label": "Play, the week in motion",
+      "intro": "<b>Now you answer.</b> When a second chat is running underneath, pick the reply that answers the plain top line and the Kid under it. When nothing is underneath, a plain answer is the whole job.",
+      "items": [
+        {
+          "type": "pick",
+          "who": "Clara, at the barn door",
+          "text": "“Is that the last horse? I'll take him if nobody else wants him.”",
+          "cue": "still smiling at the floor",
+          "prompt": "On top it is a horse. Underneath, Clara's Kid is saying she expects to be left over. Which reply answers both?",
+          "options": ["You're not the leftover, so don't take the one nobody wants.", "He's the gentle one, Clara. Take him, and I'll take the one beside him so we ride together.", "Ha, you'd look good on any horse, you're a natural."],
+          "answer": 1,
+          "why": "The top line gets a plain answer about the horse, and the underneath gets a reply from your Kid: you will be right beside her, so she is not the one left over. Both tracks are answered in one reply, and neither is argued with.",
+          "traps": {
+            "0": "That answers only the underneath, and it argues with it. Clara never said she felt left over, so she has to defend herself while the horse question hangs.",
+            "2": "Flattery answers neither track. Clara will bat the compliment away, and the horse question and the wish for company are both still open."
+          },
+          "example": "A cricket club, a junior who says: “I'll bat last, I don't mind.”<br>“Okay, you bat at six, and I'll pad up beside you.” The first part answers the order and the second part keeps him company."
+        },
+        {
+          "type": "pick",
+          "who": "Omar, by the hay bales",
+          "text": "“Shall I hold the torch while you find your phone?”",
+          "cue": "leaning on a bale, the torch already on and pointed at your shoes",
+          "prompt": "On top it is a torch. Underneath, Omar's Kid is asking you to stay close. Which reply answers both?",
+          "options": ["I'm fine, I've got my own torch.", "You don't have to wait, Omar. Go and sit by the fire.", "Yes please. Hold it steady, and stay there till I've found it."],
+          "answer": 2,
+          "why": "The top line gets a plain yes about the torch, and the underneath gets a reply from your Kid: stay where you are. Both tracks are answered, and Omar is not left standing in the dark.",
+          "traps": {
+            "0": "That turns down the torch and the company in one go, so Omar's offer comes back to him untouched, top and underneath.",
+            "1": "It sounds kind, and the top line is handled. It sends the underneath away, so Omar is left standing in the yard by himself."
+          },
+          "example": "A railway bridge at dusk, a colleague who says: “Shall I wait while you find your keys?”<br>“Yes please, I'd rather not be last out.” The first part answers the keys and the second part answers the wish not to be left."
+        },
+        {
+          "type": "pick",
+          "who": "Daniel, at the fire pit",
+          "text": "“Is there any tea left in the flask?”",
+          "cue": "holding the empty cup up to the firelight",
+          "prompt": "Nothing is underneath this one. Which reply fits?",
+          "options": ["Half a cup. Here you go.", "You sound like you want company. Sit by me and talk.", "You always ask for tea when you want to dodge the conversation."],
+          "answer": 0,
+          "why": "The question is only a question, so a plain answer from the Pilot is the right size. Reading a second chat into it would answer something Daniel never said.",
+          "traps": {
+            "1": "That answers a feeling Daniel has not shown. A plain question can stay plain, and hunting for a second chat in it makes the exchange awkward.",
+            "2": "That is a verdict on Daniel, built from nothing in the line. It starts a row over a cup of tea."
+          },
+          "example": "A school gate, a dad asks: “Is that your bag on the bench?”<br>“Yes, thanks for checking.” The question is a question, so the plain answer is the whole of it."
+        }
+      ]
+    },
+    {
+      "level": "Analyse",
+      "label": "Analyse, explain it",
+      "intro": "<b>Count the voices.</b> Pick the description that fits the first barn chat, the one about the last horse.",
+      "items": [
+        {
+          "type": "pick",
+          "who": "Nadia, after the barn",
+          "text": "“Count the voices in the horse chat. On top, two Pilots. Underneath, two Kids. How many voices are talking, and which ones decide where the evening goes?”",
+          "cue": "counting on her fingers",
+          "options": ["Four voices, and the two Kids underneath decide", "Three voices, and the Pilots on top decide", "Two voices, since the underneath is never said out loud"],
+          "answer": 0,
+          "why": "Both people are speaking twice at once: a plain Pilot chat on top and a Kid-to-Kid chat underneath. That makes four voices. The Pilots seem to be in charge, but it is the Kids who decide what happens, and that is what makes it double-talk on both sides.",
+          "traps": {
+            "1": "Three voices is the other kind of double-talk, where only one side has a hidden message. Here Clara and Daniel both have one, so the count is four.",
+            "2": "Not being said out loud does not make it absent. The underneath chat keeps going, and it is the reason the two of them end up side by side."
+          },
+          "example": "A wedding buffet, two cousins: “There's a spare chair by the window.” “Then I'll take the one next to it.”<br>Two Pilots on top, two Kids underneath, four voices. The chair talk is only the surface."
+        }
+      ]
+    }
+  ],
+  "debrief": {
+    "nadia": "Half the barn talk was double-talk, and in the two big ones both people were doing it: a plain chat about horses and torches on top, and two Kids keeping each other company underneath. The underneath chat is the one that decides where the evening goes. Answer the top line plainly and let your reply carry the underneath too. Not every line has a second chat, though. The fire-pit directions were only directions.",
+    "bookTerm": "Duplex transaction",
+    "bookNote": "The books call this a duplex transaction: it involves four ego states, with an Adult conversation on the social level and a Child conversation on the psychological level. Berne's example is a flirtation, a talk about barns on top and a Child exchange underneath, and he notes that the outcome is determined by the Child."
+  },
+  "reflection": {
+    "prompt": "Think of a friendly chat this week with a second chat running under it. What was each side really saying underneath, and which chat decided how it ended?"
+  },
+  "next": "3.6"
+}

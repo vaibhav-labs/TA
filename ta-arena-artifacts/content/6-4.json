@@ -1,0 +1,262 @@
+{
+  "slot": "6.4",
+  "title": "Three Banal Scripts",
+  "world": 6,
+  "worldName": "The Plan",
+  "week": 6,
+  "weekName": "The Plan",
+  "mechanic": "Choice-story",
+  "concept": "After this one you can name the three everyday banal scripts, play one whole day in each, and say which one is built on talking a child out of what she sees and thinks.",
+  "plainWord": "the Plan",
+  "bookTerm": "Banal scripts",
+  "bookIdea": "Banal scripts are the ordinary, unnoticed scripts, and the books name three: Lovelessness, built on rules that ration strokes; Mindlessness, built on discounting and messages against thinking; and Joylessness, built on cutting a child off from the body.",
+  "bookSource": "Scripts People Live, ch. 6 to 10",
+  "opener": {
+    "setting": "Sunday, 9:15am. The Corner Table, the window table. Nadia lays three paper cards in a row, each with a day written on it.",
+    "lines": [
+      { "who": "Nadia", "text": "“Three kinds of day. You have lived all three this week, most of them before breakfast.”", "cue": "turning each card face up" },
+      { "who": "Omar", "text": "“I've had all three this month, and one of them was a Tuesday.”", "cue": "tired, arms folded, not smiling" }
+    ],
+    "ask": "Spot the day from a single moment, then play one whole day in each. Watch what the day does to the people in it, and to you."
+  },
+  "rounds": [
+    {
+      "level": "Spot",
+      "label": "Spot, round 1",
+      "intro": "Three short moments. Each one belongs to one of the three days. The cold day holds back the nods. The blur day talks away what you notice and leaves no room to think. The flat day switches off pleasure and the body's signals.",
+      "items": [
+        {
+          "type": "pick",
+          "who": "Daniel",
+          "text": "“Good morning? No need. Start with the numbers.”",
+          "cue": "rain on the glass, nobody else says a word",
+          "options": ["the cold day", "the blur day", "the flat day"],
+          "answer": 0,
+          "why": "Nobody is greeted and nothing is offered. The room has no warm nods at all, and the work is the only thing on the table. That is the cold day.",
+          "traps": {
+            "1": "This would be the blur day if someone had noticed something and been talked out of it. Nobody here is arguing a point, only refusing to say hello.",
+            "2": "This would be the flat day if the colour had gone out of things and nobody minded. Daniel is not dull. He is handing out work and withholding everything else."
+          },
+          "example": "A county office, Monday. The clerk never looks up from the counter and says “Next” before you have finished the form."
+        },
+        {
+          "type": "pick",
+          "who": "Maya",
+          "text": "“Eat, eat. No, don't sit, I'll put it in a bowl. And nothing's wrong with the rota, you're imagining it.”",
+          "cue": "you asked about the new rota a moment ago, the bus already at the stop, her phone buzzing on the counter",
+          "options": ["the cold day", "the blur day", "the flat day"],
+          "answer": 1,
+          "why": "You noticed something about the rota, and the answer talks it away before there is time to look. The food and the hurry cover the gap. What you saw is argued out of existence, which is the blur day: the day where noticing and thinking never get a turn.",
+          "traps": {
+            "0": "This would be the cold day if the room had gone silent and nobody had offered anything. Here food is being pushed across the counter, which is a kind of warmth. What goes missing is the room to think about what you saw.",
+            "2": "This would be the flat day if the pleasure had gone out of the morning. Maya is moving fast and the morning is full, and the problem is that what you noticed gets waved off."
+          },
+          "example": "A garage, Saturday. A woman says the car pulls to the left. The mechanic says “It's fine, you're imagining it,” and she drives away not sure."
+        },
+        {
+          "type": "pick",
+          "who": "Dad",
+          "text": "“We're fine. Nothing to report. Back's a bit sore, so I've had a tablet and a strong coffee.”",
+          "cue": "the television on mute, a building society letter unopened on the table",
+          "options": ["the cold day", "the blur day", "the flat day"],
+          "answer": 2,
+          "why": "Nothing is wrong enough to fix, and nothing is good enough to enjoy. The sore back gets a tablet instead of a look, the coffee is for getting through, and the letter stays shut. That is the flat day, where the body's signals, pleasant or not, are switched off.",
+          "traps": {
+            "0": "This would be the cold day if the call were hostile or pointed. Dad is not pushing anyone away. He is just not offering anything to look at.",
+            "1": "This would be the blur day if Dad were talking you out of something you had noticed. Nobody is arguing here, only a quiet that goes on for a while."
+          },
+          "example": "A grandmother on a Sunday call: “The tea is fine. The knees are fine. Nothing to say.” The cricket is on mute, and it is the same afternoon as last week."
+        }
+      ]
+    },
+    {
+      "level": "Play",
+      "label": "Play, the week in motion",
+      "intro": "Play each day through, in order. The Heckler talks in italics, in your head. You can hear it, and you don't have to do what it says.",
+      "items": [
+        {
+          "type": "scene",
+          "title": "Monday, the cold day",
+          "setting": "Monday, 9:10am. Halden, by the station, the glass room on the fourth floor, rain on the window. <i>The Heckler, in your head: 'Nobody in here does warm. Get on with the job.'</i>",
+          "meters": { "you": 60, "them": 50 },
+          "beats": [
+            {
+              "who": "Daniel",
+              "text": "“You've got the client numbers? Put them up. I don't need to know how your weekend was.”",
+              "cue": "not looking up from his laptop",
+              "lines": [
+                { "text": "“Here they are. The third column is a week out, so I've marked it. Can we fix it before eleven?”", "tag": "best", "you": 4, "them": 2, "outcome": "He scrolls back, finds the column, and says 'Fine, fix it.' There is a job on the table now, and the room is a little less cold.", "why": "It gives him a fact and a deadline. The cold day gives no warm nods, so you ask for a fix he can say yes to. That is a clean adult move, and it doesn't need him to be warm." },
+                { "text": "“Sorry, sorry, it's probably my mistake. I'll redo the whole thing.”", "tag": "ok", "you": -2, "them": -1, "outcome": "He nods without looking up. You now own a day of work he never asked for.", "why": "This is Sam's apology in a suit. It takes the weight off his face and puts it on yours. Nothing gets fixed, and the cold day gets to stay cold." }
+              ]
+            },
+            {
+              "who": "Daniel",
+              "text": "“The fix is in. But the client also wants the old figure. Why isn't it there?”",
+              "cue": "tapping the screen with a pen, once per word",
+              "lines": [
+                { "text": "“That's fair. The old figure is in the appendix, page nine. I can move it to the front if you want.”", "tag": "best", "you": 4, "them": 3, "outcome": "He turns to page nine. 'Move it up,' he says, and for a second the corner of his mouth moves.", "why": "You answer the question he asked, then offer a choice. Daniel treats someone who can decide as worth talking to, and a choice is the nearest thing to a warm nod this room allows." },
+                { "text": "“It isn't there because I didn't think they'd want it.”", "tag": "ok", "you": 0, "them": -2, "outcome": "'Didn't think,' he repeats. The pen taps twice.", "why": "True, and it puts you in the wrong. The cold day loves that. No nod comes back, and the next question will be harder." },
+                { "text": "“Right, I'm the problem again. Everyone else is always right, aren't they?”", "tag": "game", "you": 2, "them": -4, "outcome": "The spike feels good for a second, then the room goes colder.", "why": "A trap move: you make yourself the one who gets hurt, so both of you get a small hit of drama and nobody gets any work done. It ends the meeting early." }
+              ]
+            },
+            {
+              "who": "Omar",
+              "text": "“Did you see the release notes? Don't bother, I'll do them.” He doesn't wait for an answer.",
+              "cue": "already walking past your desk with a mug",
+              "lines": [
+                { "text": "“I'd like to read them, Omar. Can you send me the database section? I'll go through it tonight.”", "tag": "best", "you": 3, "them": 2, "outcome": "He stops, half turns, and says 'Sure.' It is small, and he takes it.", "why": "You ask for one specific thing. Omar has seen this before and is tired, so a small, real request lands better than sympathy would." },
+                { "text": "“Okay.” (you go back to your screen)", "tag": "ok", "you": -1, "them": -1, "outcome": "Omar shrugs and walks on. Nothing bad happens, and nothing warm does either.", "why": "No harm and no nod. The cold day is kept going by silence." }
+              ]
+            },
+            {
+              "who": "Daniel",
+              "text": "“Nine tomorrow. Have the fixed sheet in my inbox by eight.” The lift doors shut on his last word.",
+              "cue": "5:30pm, the lift, his phone already at his ear",
+              "lines": [
+                { "text": "“Nine it is. The sheet will be there by eight.”", "tag": "best", "you": 3, "them": 1, "outcome": "The doors close on his nod. You have a time and a thing, which is what this room runs on.", "why": "A time and a thing. The cold day runs on logistics, so give the logistics back, clearly and once." },
+                { "text": "“Right. Nine.” (you watch the floor numbers go down)", "tag": "ok", "you": -2, "them": 0, "outcome": "The time is agreed, and you spend the evening wondering whether he meant eight or nine.", "why": "A time is agreed and the thing is left vague. Vague work is anxious work, and the cold day keeps you guessing." }
+              ]
+            },
+            {
+              "who": "Mum",
+              "text": "“Did you eat? Don't say yes just to stop me. Tell me what you ate.”",
+              "cue": "10:40pm, the phone on the bed in apartment 3B, a text with three dots",
+              "lines": [
+                { "text": "“Chicken and rice, at the desk, and it was cold. Tell me about your knees, Mum. I want the proper version.”", "tag": "best", "you": 4, "them": 4, "outcome": "She sends a voice note about the knees and the neighbour's son. It is ten minutes of warmth.", "why": "A true answer and a question that gives her the floor. Mum keeps a ledger of what she gives you, so a real answer and a real question put something back on her side." },
+                { "text": "“Yes, Mum. Everything's fine.”", "tag": "ok", "you": -1, "them": -2, "outcome": "She sends a thumbs up and a sad face. The ledger gets one more line.", "why": "Short, and not harmful. It keeps the cold day cold, and Mum keeps counting." }
+              ]
+            }
+          ],
+          "payoff": "Daniel gives the appendix to Clara before lunch, and the meeting ends. You were right about the room, and the room stayed cold.",
+          "fallout": { "them": "Daniel's meter hits zero. He shuts the laptop, says 'We're done', and leaves you with the rain." },
+          "example": "A county office with a clerk who never looks up. The citizen who puts every question in writing learns that writing is the only warmth on offer."
+        },
+        {
+          "type": "scene",
+          "title": "Tuesday, the blur day",
+          "setting": "Tuesday, 6:50am to 6:40pm. Apartment 3B, the bus to the station, the desk at Halden. <i>The Heckler, in your head: 'Keep moving. If you stop, you'll have to think about it.'</i>",
+          "meters": { "you": 60, "them": 50 },
+          "beats": [
+            {
+              "who": "Maya",
+              "text": "“Tea's on. Eat, eat. No, don't sit, I'll put it in a bowl.” She is already at the sink with her back to you.",
+              "cue": "6:50am, the kitchen, the night-shift uniform still on",
+              "lines": [
+                { "text": "“Sit with me for two minutes, Maya. How was the night?”", "tag": "best", "you": 4, "them": 5, "outcome": "She sits, which is rare, and tells you about a patient who asked for her name. Then she laughs once.", "why": "A question about her, and two minutes that aren't about the bowl. The blur day leaves no room to think, so two minutes is a real gift, and the question lands." },
+                { "text": "“Thanks, I'll grab it on the bus.”", "tag": "ok", "you": -1, "them": -2, "outcome": "She nods and runs the bowl to the sink. The bus is already at the stop.", "why": "Polite and fast, and the blur keeps its hold. Nobody has been given anything, and nobody has been asked anything." }
+              ]
+            },
+            {
+              "who": "Sam",
+              "text": "“Sorry, sorry, I owe you for the milk again. Also I'm late. Is that your bag on the seat?”",
+              "cue": "8:10am, the bus, his phone at his ear, bag on the seat beside you",
+              "lines": [
+                { "text": "“Bag off the seat, please. And the milk is Friday, Sam, not someday.”", "tag": "best", "you": 5, "them": 2, "outcome": "He moves the bag and says 'Friday, Friday, promise,' as the bus lurches.", "why": "You say what you need and set a day. The blur runs on 'sorry' and 'later'. A date is the one thing that breaks the loop." },
+                { "text": "“It's fine, forget it.” (you turn to the window)", "tag": "ok", "you": -2, "them": 1, "outcome": "He says 'You're the best', and the milk debt grows by another week.", "why": "Easy and kind, and it lets the blur keep going. The debt stays open, and the next apology is already on its way." }
+              ]
+            },
+            {
+              "who": "Clara",
+              "text": "“Did you see the cell? I've done it four times. Never mind. Lunch?” She is already eating over her keyboard.",
+              "cue": "1:05pm, the Halden desks, a spreadsheet open",
+              "lines": [
+                { "text": "“Go on, eat with me. Show me the cell that's giving you trouble.”", "tag": "best", "you": 4, "them": 4, "outcome": "She puts her fork down, turns the screen, and shows you. It takes ten minutes, and nobody checks a phone.", "why": "Taking a break from the screen and asking about the problem both cut through the blur. You are looking with her, so the fixing stays hers." },
+                { "text": "“Sorry, I've got the deck due. Maybe later.”", "tag": "ok", "you": 0, "them": -2, "outcome": "She nods and goes back to the cell. The deck is real, and the later never comes.", "why": "Honest, and it keeps the blur going. Real work and a closed door can sit side by side, and the day runs on the door." },
+                { "text": "“Four times? Look at me, on since seven. Nobody has a day like mine.”", "tag": "game", "you": 3, "them": -3, "outcome": "She laughs and says 'Sure, you win', and you both go back to the screens.", "why": "A trap move: you turn the busy into a contest, and the hour goes on who is most tired. It ends the scene early." }
+              ]
+            },
+            {
+              "who": "Mum",
+              "text": "“You're busy, I know. Just tell me when, and I'll wait.”",
+              "cue": "6:40pm, the bus home, the phone buzzing three times in your hand",
+              "lines": [
+                { "text": "“I'm on the bus, Mum. I'll ring you at nine, properly, not in pieces.”", "tag": "best", "you": 4, "them": 2, "outcome": "She says 'Nine, then,' and you both know she will count the hours until then.", "why": "A time for a real call. The blur lets calls slide, and a time is how you stop the slide." },
+                { "text": "(you let it ring out and put the phone face down)", "tag": "ok", "you": -2, "them": -4, "outcome": "A four-minute voicemail about the knees arrives and sits in your inbox all evening.", "why": "The easiest move, and the blur wins the evening. Nothing is said, and the ledger grows." }
+              ]
+            }
+          ],
+          "payoff": "Clara laughs and goes back to her screen, and the hour is spent on who is busiest. Neither of you is any less tired by six.",
+          "example": "A school office, Thursday. A parent says the bus times look wrong. The clerk says “It's always been like that, you're imagining it,” and the parent drops the question."
+        },
+        {
+          "type": "scene",
+          "title": "Sunday, the flat day",
+          "setting": "Sunday, 2:15pm, apartment 3B, the sofa, the fan turning at one speed. <i>The Heckler, in your head: 'Fun is for people with time. You have bills.'</i>",
+          "meters": { "you": 60, "them": 50 },
+          "beats": [
+            {
+              "who": "Sam",
+              "text": "“Let's go out. There's a new place by the lake with cold coffee, supposed to be brilliant. My treat.” He already has his shoes on.",
+              "cue": "holding up his car keys like a prize",
+              "lines": [
+                { "text": "“That sounds good. Give me twenty minutes to find a shirt and I'm in.”", "tag": "best", "you": 4, "them": 4, "outcome": "He cheers, and the flat has a sound in it for the first time today.", "why": "A yes with a time attached. The flat day shuts doors without a bang, and a plain yes opens one." },
+                { "text": "“Maybe. I've still got the bills to sort.”", "tag": "ok", "you": -1, "them": -3, "outcome": "He sighs, 'The bills are always there,' and goes alone.", "why": "The bills are real, and the answer is still a closed door. It hands the flat day a point it hasn't earned." },
+                { "text": "“Cold coffee? Nice for some. Yes, but I'm the one with the rent and Gran's knees.”", "tag": "game", "you": 1, "them": -4, "outcome": "Sam says 'Okay, okay' and goes to the lake alone.", "why": "A trap move: a yes that is really a no, followed by a list of reasons. The reasons do the refusing, and the scene ends early." }
+              ]
+            },
+            {
+              "who": "Dad",
+              "text": "“We're fine. Nothing to report. Don't come home for it.”",
+              "cue": "3:40pm, a phone call, the kitchen behind him, the television on mute",
+              "lines": [
+                { "text": "“Okay, Dad. I'm glad you're fine. If there's one thing you're not fine about, I'd like to hear it.”", "tag": "best", "you": 4, "them": 2, "outcome": "A long pause. 'The gutter's blocked. Your mother is annoyed.' It is more than he has said all month.", "why": "You accept his 'fine' without taking it back, and you leave a small door open. Dad's wall is built to be leaned on gently. A small question gives him a door to walk through." },
+                { "text": "“Good. Tell Mum I'll ring.”", "tag": "ok", "you": -1, "them": -2, "outcome": "'Yes,' he says, and the call is over in a minute.", "why": "Polite and quick, and it shuts the call. The flat day gets its ordinary Sunday back." }
+              ]
+            },
+            {
+              "who": "Gran",
+              "text": "“The building society sent a letter again. My knees are no better, and Leo's school wants money for his shoes. Nobody tells me the price.” She stands in the doorway with a plate of pudding.",
+              "cue": "5:10pm, the doorway, the plate held out in both hands",
+              "lines": [
+                { "text": "“That's a lot of letters, Gran. Sit a minute, and I'll read the letter with you.”", "tag": "best", "you": 4, "them": 5, "outcome": "She sits, hands over the envelope, and for once stops talking about her knees.", "why": "You name the load and offer a specific job, then invite her to sit. What the flat day lacks is company in a small task." },
+                { "text": "“Oh, the building society again. I'm sure it'll sort itself out.”", "tag": "ok", "you": -2, "them": -2, "outcome": "'Yes, yes,' she says, and the plate stays in the doorway.", "why": "True-sounding and useless. The flat day likes this kind of kindness, because it changes nothing." }
+              ]
+            },
+            {
+              "who": "Mum",
+              "text": "“Did you eat? Did the rent go? When will you come home, then?” She is counting, and you can hear a pot on her stove.",
+              "cue": "9:00pm, the sofa, the fan at one speed",
+              "lines": [
+                { "text": "“The rent's paid, Mum. I'd like to hear about your knees properly, not just count them.”", "tag": "best", "you": 3, "them": 4, "outcome": "She goes quiet, then tells you about the knees in full, and about the neighbour's son.", "why": "A true answer, then a turn toward her. Mum's ledger is about what you owe. Your best line gives her something to receive, and it comes from you." },
+                { "text": "“Yes, Mum. Rent's paid. Everything's fine.”", "tag": "ok", "you": -2, "them": -2, "outcome": "'Good,' she says, 'then you won't mind if I worry.'", "why": "Harmless, and it closes the ledger without opening anything. The flat day wins the last line of the day." }
+              ]
+            }
+          ],
+          "payoff": "Sam says 'Okay, okay' and goes to the lake alone. You spend the afternoon listing the things you can't do, and nobody offers to help with any of them.",
+          "example": "A retired teacher on a park bench, Sunday. The same pigeons, the same “Nothing to report” for the grandchildren, and the same bench the following week."
+        }
+      ]
+    },
+    {
+      "level": "Analyse",
+      "label": "Analyse, explain it",
+      "items": [
+        {
+          "type": "pick",
+          "who": "Nadia",
+          "text": "“Maya told you that you were imagining the rota. Which banal script is built on talking a child out of what she sees and thinks?”",
+          "cue": "stirring her tea, watching the room",
+          "options": [
+            "Lovelessness: built on the stroke economy, so the person cannot get or give the strokes they need and feels unloved.",
+            "Mindlessness: built on messages against thinking, with discounting as its cornerstone, so the person feels unable to cope and learns to doubt what they notice.",
+            "Joylessness: built on cutting the child off from the body, so pleasure and pain both go dull and are handled with a tablet or a coffee."
+          ],
+          "answer": 1,
+          "why": "The books call these banal scripts. Mindlessness is the one built on messages against thinking, with discounting as its cornerstone. A child who is talked out of what she sees learns to doubt her own eyes. The other two rest on other things: the stroke economy for Lovelessness, and a body cut off from its signals for Joylessness.",
+          "traps": {
+            "0": "Lovelessness would send the talk to the cold, and someone would ask about warmth. Maya's line is warm enough and rushed, and the problem in it is that what you noticed has been waved off.",
+            "2": "Joylessness would send the talk to the body and to fun, and someone would ask whether you were having any. Maya's line is about the rota, and what it does is argue you out of what you saw."
+          },
+          "example": "A kitchen, Tuesday. A girl says the milk smells off. Her father says “Nothing's wrong with it, you're imagining things,” and drinks it himself. She learns to stop saying what she notices."
+        }
+      ]
+    }
+  ],
+  "debrief": {
+    "nadia": "Three days, and none of them needed a villain. Everyone has a bit of all three, and one usually shows most. Look at the day that felt most ordinary, because banal scripts go unnoticed.",
+    "bookTerm": "Banal scripts",
+    "bookNote": "The books call these banal scripts: Lovelessness, Mindlessness and Joylessness, the three everyday scripts that touch everyone to some degree, with one usually showing most."
+  },
+  "reflection": { "prompt": "Which of the three days did you live most this week, and what did you do at the moment it could have turned?" },
+  "next": "6.5"
+}

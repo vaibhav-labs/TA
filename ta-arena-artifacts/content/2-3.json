@@ -1,0 +1,165 @@
+{
+  "slot": "2.3",
+  "title": "Egogram",
+  "world": 2,
+  "worldName": "Three Voices",
+  "week": 2,
+  "weekName": "Three Voices",
+  "mechanic": "Build",
+  "concept": "After this one you can read your own five-bar voice-print, and say which bar is tallest this month and what filled it.",
+  "plainWord": "your voice-print",
+  "bookTerm": "Egogram",
+  "bookIdea": "An egogram is a bar chart devised by Jack Dusay: one bar for each of the five functional parts, its height showing roughly how much of the time a person uses that part. It is drawn by intuition, and it can change.",
+  "bookSource": "TA Today, ch. 3",
+  "opener": {
+    "setting": "Wednesday, 21:30, 3B, your room. The phone is face up on the bed.",
+    "lines": [
+      { "who": "The app", "text": "“This is you, so far. Not forever. This month.”", "cue": "five bars on the screen, each filled to a different height" }
+    ],
+    "ask": "Which of the five bars is tallest in you this month, and which of your own choices filled it?"
+  },
+  "rounds": [
+    {
+      "level": "Spot",
+      "label": "Spot, round 1",
+      "intro": "<b>How this one works:</b> each card is one line from your week. Drop it into the bar it came from. The five bars are the Strict Boss, the Caring Boss, the Pilot, the Wild Kid and the Good Kid.",
+      "items": [
+        {
+          "type": "sort",
+          "prompt": "Drop each line into the bar it came from.",
+          "bins": ["The Strict Boss", "The Caring Boss", "The Pilot", "The Wild Kid", "The Good Kid"],
+          "items": [
+            { "text": "“Did you eat, love? Eat something, you're too thin.”", "answer": 1, "why": "Worry dressed as a question about food. The soft voice and “too thin” are the Caring Boss, the Boss in its gentle face." },
+            { "text": "“The build's green, I'm merging it now.”", "answer": 2, "why": "A status and an action. Nothing in it is about whether anyone is good enough. That is the Pilot." },
+            { "text": "“Shoes off at the door, every time. I don't want to hear why.”", "answer": 0, "why": "A rule with no reason attached, and the questions shut out before they start. That is the Strict Boss, and the only way is its way." },
+            { "text": "“Screw the budget, I want the blue one now, and I'll sort the money later!”", "answer": 3, "why": "Wanting it now and waving the cost away. That is the Wild Kid, which grabs the thing and leaves the bill for later." },
+            { "text": "“Sorry, you've got the window seat. I'm fine in the middle, it's nothing.”", "answer": 4, "why": "She gives up the better seat before anyone asks, and calls the sacrifice nothing. That is the Good Kid, which keeps the peace at her own expense." }
+          ]
+        },
+        {
+          "type": "sort",
+          "prompt": "Drop each line into the bar it came from.",
+          "bins": ["The Strict Boss", "The Caring Boss", "The Pilot", "The Wild Kid", "The Good Kid"],
+          "items": [
+            { "text": "“Do it properly the first time, the way I showed you.”", "answer": 0, "why": "A standard handed down as the only right way, with no reason given. That is the Strict Boss, with no warmth at all." },
+            { "text": "“Sorry, it's probably wrong, ignore me.”", "answer": 4, "why": "She gives her own point away before anyone has heard it. That is the Good Kid, which gives up the view to keep the peace." },
+            { "text": "“You're going out in that jacket? Take a jumper, love, you'll catch a chill, and I'll be the one nursing you.”", "answer": 1, "why": "The worry is real, and the jumper is an order with the care wrapped round it. That is the Caring Boss, which is warm and still tells you what to wear." },
+            { "text": "“The invoice is in the folder, two pages, and the total is this month's bill.”", "answer": 2, "why": "A figure and a place to find it, with no verdict on anyone. That is the Pilot, which reports what is there." },
+            { "text": "“Let's drive to the coast tonight! Who needs leave, I'll sort it out by Monday.”", "answer": 3, "why": "A plan made in the moment, with the leave and the cost left for later. That is the Wild Kid, the want that skips the checks." }
+          ]
+        },
+        {
+          "type": "sort",
+          "prompt": "Drop each line into the bar it came from.",
+          "bins": ["The Strict Boss", "The Caring Boss", "The Pilot", "The Wild Kid", "The Good Kid"],
+          "items": [
+            { "text": "“Skip the stand-up, let's go for tea. Come on, live a little!”", "answer": 3, "why": "Wanting something now and waving the rules away. That is the Wild Kid, the part that wants and never checks the cost." },
+            { "text": "“The bus leaves at 7:10, so we walk to the stop now.”", "answer": 2, "why": "A time and a next step. Nothing in it judges anyone or asks for anything. That is the Pilot again, which deals with the bus." },
+            { "text": "“Late again. On time means on time, and I don't want to hear an excuse.”", "answer": 0, "why": "A rule stated as the only right way, with the excuse shut out before it is spoken. That is the Strict Boss, the standard with no room for a reason." },
+            { "text": "“Come here, let me fix your collar before you go in. Wear the grey, it suits you.”", "answer": 1, "why": "The collar is care, and the grey is an instruction. That is the Caring Boss. It is soft in tone and still decides what you wear." },
+            { "text": "“Sorry, I'm early, I'll wait outside so you don't have to move.”", "answer": 4, "why": "An apology for arriving early, and an offer to disappear. That is the Good Kid, small and quick, and it makes room before anyone has asked." }
+          ]
+        }
+      ]
+    },
+    {
+      "level": "Play",
+      "label": "Play, the week in motion",
+      "intro": "<b>Now the phone.</b> Mum is on the line. She asks: “Did you eat? Have you made friends? Your father…” Pick the voice behind each reply.",
+      "items": [
+        {
+          "type": "pick",
+          "who": "You, on the phone to Mum, Wednesday night",
+          "text": "“I ate, I'm fine, everyone's fine.”",
+          "cue": "bright and quick, closing the subject before she starts",
+          "options": ["The Strict Boss", "The Pilot", "The Wild Kid", "The Good Kid"],
+          "answer": 3,
+          "why": "It agrees and closes the door on the subject. Nothing gets said, and the peace is kept. That is the Good Kid, which learned that agreeing keeps it safe.",
+          "traps": {
+            "0": "The Strict Boss would be a ruling: “Mum, enough, I'm fine, end of.” That is an order, and it ends the call harder than it needs to.",
+            "1": "The Pilot would be specific: “I ate at eight, I'm tired, I'll ring you on Sunday.” It gives her facts and leaves the call open.",
+            "2": "The Wild Kid would blurt out something playful: “Mum, I had cake for dinner and I'd do it again!” That is the uncensored want, and it skips her question."
+          },
+          "example": "A family WhatsApp group, a cousin asks whether the flight landed: “Yes yes, all good, everything's fine!”<br>Nobody learns whether the flight was late, and nobody asks again."
+        },
+        {
+          "type": "pick",
+          "who": "You, on the phone to Mum, Wednesday night",
+          "text": "“Mum, I'm okay. Tell me how your knee scan went. You keep changing the subject off it.”",
+          "cue": "calm, a real question about the scan",
+          "options": ["The Strict Boss", "The Pilot", "The Wild Kid", "The Good Kid"],
+          "answer": 1,
+          "why": "It says the true thing, that you are okay, and then asks a real question about the scan. The call stays on facts and on her. That is the Pilot, the voice that deals with what is actually here.",
+          "traps": {
+            "0": "The Strict Boss would give an order: “Mum, that's enough about my eating. Stop checking on me.” It shuts her out and turns her worry into a telling-off.",
+            "2": "The Wild Kid would leap to something else: “Mum, guess what, there's a fox in the car park!” The call gets lively, and the scan never comes back up.",
+            "3": "The Good Kid would apologise and move on: “Sorry, Mum, I'll tell you about it next time.” The scan drops out of the call, and nobody has to say how it went."
+          },
+          "example": "A family WhatsApp group, a brother to his sister, who keeps asking whether he has eaten: “I've eaten, I'm okay. How did Dad's check-up go? You keep changing the subject.”<br>He answers once, then asks the question he actually wants answered."
+        },
+        {
+          "type": "pick",
+          "who": "You, on the phone to Mum, Wednesday night",
+          "text": "“Can you not interrogate me for one call?”",
+          "cue": "level, both hands flat on the table",
+          "options": ["The Strict Boss", "The Caring Boss", "The Wild Kid", "The Good Kid"],
+          "answer": 0,
+          "why": "A limit set in a firm voice, with no sigh and no apology. That is the Strict Boss on its healthy side: it states the boundary and does not punish her for asking.",
+          "traps": {
+            "1": "The Caring Boss would wrap the limit in care: “Mum, I love your questions, just one at a time.” That is kind, but the line you said has no softening in it.",
+            "2": "The Wild Kid would say it loud and fast, laugh, and hang up: “No more questions, I'm switching you off, bye!” It says what it feels the second it feels it, and the call is over before she can answer.",
+            "3": "The Good Kid would apologise and fold: “Sorry, Mum, sorry, I'm just tired.” The limit disappears and the call goes the way she wants."
+          },
+          "example": "A school gate, a teacher to a parent who keeps asking the same question: “Let's take one question at a time, please.”<br>A firm line with no insult in it, and nothing to apologise for."
+        }
+      ]
+    },
+    {
+      "level": "Analyse",
+      "label": "Analyse, explain it",
+      "intro": "<b>Build Gran's voice-print.</b> Ten lines from the landlady, one bar each. Count each bar: the tallest is the voice used most in these lines, which is a rough guide and not a measurement.",
+      "items": [
+        {
+          "type": "sort",
+          "prompt": "Drop each of Gran's ten lines into its bar, then count.",
+          "bins": ["The Strict Boss", "The Caring Boss", "The Pilot", "The Wild Kid", "The Good Kid"],
+          "items": [
+            { "text": "“Eat, eat, you'll be ill if you don't, and then who will I feed?”", "answer": 1, "why": "Care that is also a little bossy. The Caring Boss feeds people and tells them what to do." },
+            { "text": "“In my time you stood up when an elder came in. Nobody stands now.”", "answer": 0, "why": "A standard judged against the past, with the verdict already given. That is the Strict Boss." },
+            { "text": "“Don't mind me, I'll sit here, I'm only the landlady.”", "answer": 4, "why": "She makes herself small so nobody has to make room for her. That is the Good Kid." },
+            { "text": "“My knees are finished, the building society has put the price up, and the doctor says stop the stairs.”", "answer": 2, "why": "A list of facts about the situation, with nothing judged. That is the Pilot." },
+            { "text": "“Ha! Did you see his face? I'll tell the whole building, let them talk!”", "answer": 3, "why": "Delight and mischief, with no check on what follows. That is the Wild Kid." },
+            { "text": "“Take the good chair, love, I'll manage on the stool.”", "answer": 4, "why": "Giving up her own comfort so the young one keeps the good chair. The Good Kid again, quiet and accommodating." },
+            { "text": "“The tanker came at six. I checked the notice board, as usual.”", "answer": 2, "why": "She checked a fact and reported it. That is the Pilot, which gathers information." },
+            { "text": "“Oh, don't tell me it's cold, I know it's cold, you'll learn when you're my age.”", "answer": 0, "why": "A verdict on the young person, with “you'll learn” built in. That is the Strict Boss." },
+            { "text": "“Oh, I'll cook the chicken tonight, sorry, I know you don't like it, sorry.”", "answer": 4, "why": "An apology comes before anyone has complained. The Good Kid again: small and quick, sorry in advance." },
+            { "text": "“Temple on Sunday, everyone! Take the car and forget the schedule!”", "answer": 3, "why": "A wish for now, with the plan thrown out. That is the Wild Kid." }
+          ]
+        },
+        {
+          "type": "pick",
+          "who": "A friend, after you show your bars",
+          "text": "“So you're just a pushover, then. Your Good Kid bar is the tallest.”",
+          "cue": "teasing, pleased to have caught you",
+          "options": ["A fixed fact about your character", "A tall Good Kid bar this month, which is information to use", "Proof that your Pilot is missing"],
+          "answer": 1,
+          "why": "Your voice-print is a rough picture of how much of your time each voice takes this month. A tall Good Kid bar is data: it tells you which voice is doing most of the talking, and the Good Kid is also where good manners live, so a tall bar is not automatically a problem.",
+          "traps": {
+            "0": "Calling it fixed treats one month's bar as a life sentence. A voice-print is a rough picture that you can redraw, and it shifts when you practise a different voice, so it cannot be a fixed fact.",
+            "2": "A tall bar does not mean the Pilot is missing. The Pilot is one bar of five, and it can be loud too, which the friend has not checked."
+          },
+          "example": "A cricket group chat, a teammate after you drop an easy catch: “You always let the ball go, you're hopeless.”<br>One dropped catch is one line this week, not the whole chart."
+        }
+      ]
+    }
+  ],
+  "debrief": {
+    "nadia": "Each of us has all five bars, and their heights change with the month. A tall bar is information to read. Gran's tallest bar is the Good Kid, and yours is worth comparing with hers.",
+    "bookTerm": "Egogram",
+    "bookNote": "The books call this an egogram, a bar chart devised by Jack Dusay. Each of the five functional parts gets a bar, drawn by intuition to show roughly how much of your time it takes, and you can redraw it as you change."
+  },
+  "reflection": {
+    "prompt": "Think about the last time you felt tired at work or at home. Which bar was tallest in you then, and did it help you or hurt you?"
+  },
+  "next": "2.4"
+}

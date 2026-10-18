@@ -1,0 +1,811 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cross It · TA Arena</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    color-scheme: light;
+    --bg: #171233; --bg-2: #241c47;
+    --surface: #f2eefb; --surface-2: #c9b8e6; --surface-3: #bda8e2;
+    --accent: #6c5fe0; --accent-deep: #4a3fa0;
+    --pink: #d9699f; --blue: #5b8fd9;
+    --ok: #1f7568; --wrong: #a8407a; --alt: #5c4fb0;
+    --text: #231c3f; --text-dim: #675f82;
+    --on-bg: #ece7fb; --on-bg-dim: #b4abd9;
+    --shadow: rgba(23, 18, 51, 0.28);
+    --parent: #7b5fe0; --adult: #4f8fd9; --childv: #d9699f;
+  }
+  [hidden] { display: none !important; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    background-image:
+      radial-gradient(ellipse 820px 560px at 12% -8%, var(--bg-2), transparent),
+      radial-gradient(ellipse 680px 520px at 108% 12%, #2c1f4a, transparent),
+      radial-gradient(ellipse 600px 420px at 60% 110%, #2a1840, transparent);
+    color: var(--on-bg);
+    font-family: "IBM Plex Sans", system-ui, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 28px 16px 56px;
+  }
+  .stage { width: 100%; max-width: 580px; min-width: 0; }
+
+  .masthead { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 16px; padding: 0 4px; }
+  .series { font-family: "IBM Plex Mono", monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--pink); font-weight: 600; }
+  .series small { color: var(--on-bg-dim); font-weight: 500; letter-spacing: 0.08em; }
+  .tag { font-family: "IBM Plex Mono", monospace; font-size: 11px; color: var(--on-bg-dim); text-decoration: none; white-space: nowrap; }
+  .tag:hover { color: var(--pink); }
+  a:focus-visible, button:focus-visible, textarea:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  .card { background: var(--surface); color: var(--text); border-radius: 22px; box-shadow: 0 24px 60px var(--shadow); padding: 32px 28px 28px; position: relative; min-width: 0; overflow-wrap: anywhere; }
+  .card:focus { outline: none; }
+  .card-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; margin-bottom: 18px; }
+  .card-head > div:first-child { min-width: 0; }
+  h1 { font-family: "Fraunces", Georgia, serif; font-weight: 500; font-size: 27px; line-height: 1.2; margin: 0 0 6px; text-wrap: balance; letter-spacing: -0.01em; }
+  h1.h2 { font-size: 21px; margin: 0 0 12px; }
+  .deck { font-size: 14.5px; color: var(--text-dim); margin: 0; max-width: 40ch; line-height: 1.5; }
+  .case-no { font-family: "IBM Plex Mono", monospace; font-size: 11px; color: var(--text-dim); text-align: right; white-space: nowrap; padding-top: 4px; }
+  .tagline { display: inline-block; font-family: "IBM Plex Mono", monospace; font-size: 11px; color: var(--text-dim); background: var(--surface-2); border-radius: 999px; padding: 4px 12px; margin: 0 0 16px; letter-spacing: 0.03em; }
+  .kicker { font-family: "IBM Plex Mono", monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-dim); margin: 0 0 10px; }
+
+  .progress { display: flex; gap: 5px; margin-bottom: 24px; }
+  .progress i { height: 5px; flex: 1; background: var(--surface-2); border-radius: 999px; overflow: hidden; position: relative; }
+  .progress i.done { background: linear-gradient(90deg, var(--accent), var(--pink)); }
+  .progress i.current::after { content: ""; position: absolute; inset: 0; width: 50%; background: var(--accent); opacity: .55; }
+
+  .round-label { font-family: "IBM Plex Mono", monospace; font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-dim); margin-bottom: 10px; }
+  .round-intro { font-size: 15px; line-height: 1.55; color: var(--text-dim); margin: 0 0 16px; }
+
+  .exchange { background: var(--surface-2); border-radius: 16px; padding: 14px 16px; margin: 0 0 18px; }
+  .exchange .line { font-size: 15.5px; line-height: 1.5; margin: 0 0 8px; }
+  .exchange .line:last-child { margin-bottom: 0; }
+  .exchange .who { font-family: "IBM Plex Mono", monospace; font-size: 11px; color: var(--text-dim); display: block; margin-bottom: 2px; letter-spacing: 0.03em; }
+  .exchange .cue { font-size: 13.5px; color: var(--text-dim); font-style: italic; margin: 6px 0 12px; }
+  .exchange .cue:last-child { margin-bottom: 0; }
+
+  .lede { font-family: "Fraunces", Georgia, serif; font-size: 17.5px; font-weight: 500; font-style: italic; color: var(--accent-deep); line-height: 1.5; margin: 0 0 14px; }
+  .prompt { font-size: 16.5px; line-height: 1.55; margin: 0 0 18px; font-weight: 500; }
+  .setting { font-size: 15px; line-height: 1.55; color: var(--text-dim); font-style: italic; margin: 0 0 16px; }
+  .scene-title { font-family: "Fraunces", Georgia, serif; font-size: 19px; font-weight: 500; line-height: 1.3; margin: 0 0 6px; }
+
+  .choices { display: flex; flex-direction: column; gap: 10px; }
+  button.choice {
+    font-family: "IBM Plex Sans", sans-serif; font-size: 15px; font-weight: 500; text-align: left;
+    padding: 14px 17px; min-height: 44px; border-radius: 14px; border: none; background: var(--surface-2); color: var(--text);
+    cursor: pointer; transition: background 120ms, transform 80ms, box-shadow 120ms; line-height: 1.4;
+  }
+  button.choice:hover { background: var(--surface-3); box-shadow: 0 6px 16px rgba(108,95,224,0.16); }
+  button.choice:active { transform: scale(0.99); }
+  button.choice.correct { background: color-mix(in srgb, var(--ok) 20%, var(--surface)); box-shadow: 0 0 0 2px color-mix(in srgb, var(--ok) 45%, transparent) inset; }
+  button.choice.wrong { background: color-mix(in srgb, var(--wrong) 18%, var(--surface)); box-shadow: 0 0 0 2px color-mix(in srgb, var(--wrong) 40%, transparent) inset; }
+  button.choice.amber { background: color-mix(in srgb, var(--alt) 18%, var(--surface)); box-shadow: 0 0 0 2px color-mix(in srgb, var(--alt) 40%, transparent) inset; }
+  button.choice[disabled] { cursor: default; opacity: 0.6; }
+  button.choice[disabled]:hover { background: var(--surface-2); box-shadow: none; }
+  button.choice.correct[disabled], button.choice.wrong[disabled], button.choice.amber[disabled] { opacity: 1; }
+  button.choice.pal { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+
+  .pill { display: inline-block; max-width: 100%; font-family: "IBM Plex Mono", monospace; font-size: 11.5px; font-weight: 600; padding: 3px 10px; border-radius: 999px; color: #fff; letter-spacing: 0.02em; background: var(--accent); overflow-wrap: anywhere; }
+  .pill.p { background: var(--parent); }
+  .pill.a { background: var(--adult); }
+  .pill.c { background: var(--childv); }
+
+  .stamp { display: inline-flex; align-items: center; gap: 6px; font-family: "IBM Plex Mono", monospace; font-size: 12px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; padding: 5px 12px; border-radius: 999px; margin-bottom: 12px; color: #fff; }
+  .stamp.ok { background: var(--ok); }
+  .stamp.cross { background: var(--wrong); }
+  .stamp.amber { background: var(--alt); }
+
+  .why-box { border-radius: 16px; padding: 16px 18px 17px 20px; margin: 0 0 16px; border-left: 5px solid transparent; box-shadow: 0 8px 22px rgba(23,18,51,0.12); }
+  .why-box .stamp { margin-bottom: 10px; }
+  .why-box .feedback { margin: 0 0 12px; }
+  .why-box .feedback:last-child { margin-bottom: 0; }
+  .why-box.ok { background: color-mix(in srgb, var(--ok) 45%, white); border-left-color: var(--ok); }
+  .why-box.cross { background: color-mix(in srgb, var(--wrong) 42%, white); border-left-color: var(--wrong); }
+  .why-box.amber { background: color-mix(in srgb, var(--alt) 40%, white); border-left-color: var(--alt); }
+  .why-box.neutral { background: color-mix(in srgb, var(--accent) 22%, white); border-left-color: var(--accent); }
+
+  .feedback { font-size: 16px; line-height: 1.6; color: var(--text); margin: 0 0 14px; padding-top: 2px; }
+  .feedback b { color: inherit; }
+
+  .example { background: color-mix(in srgb, var(--accent) 38%, white); border-left: 5px solid var(--accent); border-radius: 16px; padding: 14px 16px 15px 18px; margin: 0 0 18px; font-size: 15px; line-height: 1.55; color: var(--text); box-shadow: 0 8px 22px rgba(23,18,51,0.10); }
+  .ex-label { font-family: "IBM Plex Mono", monospace; font-size: 10.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent-deep); margin-bottom: 6px; }
+
+  .nextbar { display: flex; justify-content: flex-end; align-items: center; gap: 10px; flex-wrap: wrap; margin-top: 4px; }
+  button.next, a.next {
+    font-family: "IBM Plex Mono", monospace; font-size: 13px; font-weight: 600; letter-spacing: 0.03em;
+    background: linear-gradient(135deg, var(--accent), var(--pink)); color: #fff; border: none; text-decoration: none;
+    padding: 12px 20px; min-height: 44px; border-radius: 999px; cursor: pointer; box-shadow: 0 10px 24px rgba(108,95,224,0.35);
+    display: inline-flex; align-items: center; justify-content: center; text-align: center;
+  }
+  button.next:hover, a.next:hover { filter: brightness(1.08); transform: translateY(-1px); }
+  button.next[disabled] { opacity: .45; cursor: default; box-shadow: none; transform: none; filter: none; }
+  .next-soon { font-size: 14px; color: var(--text-dim); margin: 0; }
+
+  .meters { display: flex; flex-direction: column; gap: 10px; margin: 0 0 18px; }
+  .meter { display: grid; grid-template-columns: 52px 1fr 40px; align-items: center; gap: 10px; font-family: "IBM Plex Mono", monospace; font-size: 12px; }
+  .meter .name { color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.08em; font-size: 11px; }
+  .meter .track { height: 10px; border-radius: 999px; background: var(--surface-2); overflow: hidden; }
+  .meter .fill { display: block; height: 100%; width: 0; border-radius: 999px; background: linear-gradient(90deg, var(--accent), var(--pink)); transition: width 300ms ease; }
+  .meter.them .fill { background: linear-gradient(90deg, var(--blue), var(--accent)); }
+  .meter.empty .fill { background: var(--wrong); }
+  .meter .num { text-align: right; color: var(--text); font-weight: 600; }
+
+  .total { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 12px; font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--text-dim); margin: 0 0 8px; }
+  .total b { font-family: "Fraunces", Georgia, serif; font-size: 28px; font-weight: 500; color: var(--text); }
+  .band { position: relative; height: 10px; border-radius: 999px; background: var(--surface-2); overflow: hidden; margin: 0 0 8px; }
+  .band .fill { position: absolute; left: 0; top: 0; bottom: 0; width: 0; background: linear-gradient(90deg, var(--accent), var(--pink)); transition: width 300ms ease; }
+  .band .fill.over { background: var(--wrong); }
+  .val { flex: none; font-family: "IBM Plex Mono", monospace; font-size: 12.5px; font-weight: 600; color: #fff; background: var(--accent-deep); border-radius: 999px; padding: 3px 10px; white-space: nowrap; }
+  .counter-actions { display: flex; justify-content: flex-end; gap: 10px; flex-wrap: wrap; margin-top: 16px; }
+  button.ghost { font-family: "IBM Plex Mono", monospace; font-size: 13px; font-weight: 600; letter-spacing: 0.03em; background: transparent; color: var(--text); border: 2px solid var(--surface-3); padding: 10px 18px; min-height: 44px; border-radius: 999px; cursor: pointer; }
+  button.ghost[disabled] { opacity: .45; cursor: default; }
+  .counter-fb:empty, .order-fb:empty { display: none; }
+
+  .sort-item { margin: 0 0 16px; }
+  .sort-item + .sort-item { padding-top: 16px; border-top: 1px solid var(--surface-2); }
+  .sort-item .exchange { margin-bottom: 12px; }
+  .seq { list-style: none; margin: 0 0 16px; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+  .seq:empty { display: none; }
+  .seq li { display: grid; grid-template-columns: 28px 1fr; gap: 10px; background: var(--surface-2); border-radius: 14px; padding: 12px 14px; }
+  .seq .n { font-family: "IBM Plex Mono", monospace; font-weight: 600; color: var(--accent-deep); }
+  .seq .ct { display: block; font-size: 15px; line-height: 1.5; }
+  .seq .why { display: block; font-size: 14px; line-height: 1.5; color: var(--text-dim); margin-top: 6px; }
+  .pool { margin: 0 0 14px; }
+
+  .intro-list { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 9px; }
+  .rules-box { background: var(--surface-2); border-radius: 16px; padding: 16px 18px; margin: 18px 0; }
+  .rules-box .round-label { margin-bottom: 10px; }
+  .rules-list { margin: 0; padding-left: 0; list-style: none; display: flex; flex-direction: column; gap: 9px; }
+  .rules-list li { font-size: 14px; line-height: 1.45; display: flex; gap: 10px; color: var(--text); }
+  .rules-list .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); flex: none; margin-top: 7px; }
+  .ask { background: var(--bg-2); color: var(--on-bg); border-radius: 16px; padding: 14px 16px 15px; margin: 0 0 18px; }
+  .ask .kicker { color: var(--on-bg-dim); margin-bottom: 6px; }
+  .ask p { font-family: "Fraunces", Georgia, serif; font-size: 17px; line-height: 1.45; margin: 0; }
+
+  .end-badge { font-family: "IBM Plex Mono", monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ok); margin-bottom: 8px; }
+  .source { margin-top: 20px; padding: 14px 16px; border-radius: 14px; background: var(--surface-2); font-size: 12.5px; color: var(--text-dim); line-height: 1.5; }
+  .source b { color: var(--text); }
+  .end-nav { margin-top: 18px; }
+
+  .reflect-tag { font-family: "IBM Plex Mono", monospace; font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #fff; background: linear-gradient(135deg, var(--accent), var(--pink)); display: inline-block; padding: 5px 12px; border-radius: 999px; margin-bottom: 14px; }
+  textarea.reflect-box { display: block; width: 100%; min-height: 120px; resize: vertical; font-family: "IBM Plex Sans", sans-serif; font-size: 15.5px; line-height: 1.55; color: var(--text); background: var(--surface-2); border: none; border-radius: 16px; padding: 14px 16px; margin-bottom: 18px; box-shadow: 0 0 0 2px transparent inset; }
+  textarea.reflect-box::placeholder { color: var(--text-dim); }
+  textarea.reflect-box:focus { outline: none; box-shadow: 0 0 0 2px var(--accent) inset; }
+
+  @media (max-width: 480px) {
+    body { padding: 20px 12px 40px; }
+    .card { padding: 26px 18px 22px; }
+    h1 { font-size: 24px; }
+    h1.h2 { font-size: 20px; }
+    .meter { grid-template-columns: 44px 1fr 36px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
+  }
+</style>
+<link rel="manifest" href="/TA/arena/manifest.json">
+<meta name="theme-color" content="#171233">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="TA Arena">
+<link rel="icon" href="/TA/favicon.svg">
+<link rel="apple-touch-icon" href="/TA/icon-192.png">
+</head>
+<body>
+
+<div class="stage">
+  <div class="masthead">
+    <div class="series" id="series">TA Arena</div>
+    <a class="tag" id="hubLink" href="#" hidden>← All games</a>
+  </div>
+  <main class="card" id="card" tabindex="-1">
+    <p class="deck">Loading the game.</p>
+    <noscript><p class="deck">This game needs JavaScript to run.</p></noscript>
+  </main>
+</div>
+
+<script>window.TA_GAME = {"slot":"3.3","title":"Cross It","world":3,"worldName":"Vectors","week":3,"weekName":"Volleys","mechanic":"Choice-story","concept":"After this one you can cut a whine on purpose, answering from a seat the other person did not call on, so the talk turns into a real conversation instead of a row.","plainWord":"a cut","bookTerm":"Crossed transaction","bookIdea":"When the reply comes from a different ego state than the one addressed, the lines cross and communication breaks off until the vectors realign. The person who was crossed tends to shift into the ego state the other one invited.","bookSource":"Games People Play, ch. 2; TA Today, ch. 7","opener":{"setting":"Sunday, 21:15, your room in apartment 3B, Hawthorn Court. The Corner Table finished four hours ago, and Mum's name is on the phone for the third time this week.","lines":[{"who":"Mum","text":"\u201cNobody rings me. I sit here with the TV on and I don't know what I did wrong. Tell me I didn't do anything wrong.\u201d","cue":"small voice, the TV loud behind her"}],"ask":"Can you answer Mum's plea from a seat she did not call on, so the call becomes a real talk instead of a row?"},"rounds":[{"level":"Spot","label":"Spot, round 1","intro":"<b>How this one works:<\/b> Mum's line is a plea, and every reply after it is a volley. A volley either runs on or gets cut. Tap the label that fits each line.","items":[{"type":"pick","who":"Mum, on the phone","text":"\u201cDad won't pick up, and nobody else rings. Am I that much trouble, love?\u201d","cue":"small and fast, the TV loud behind her","options":["The Boss","The Pilot","The Kid"],"answer":2,"why":"This is a plea. It asks you to soothe a hurt, and it has no plan and no verdict in it. That is the Kid, the voice that wants comfort, and it is aimed at the caring side of your Boss, the part that can soothe.","traps":{"0":"The Boss would say \u201cYou never ring, and you know it's your own fault.\u201d That is a verdict, so the call turns into a telling-off and the hurt never gets heard.","1":"The Pilot would say \u201cRing me on Sunday at eight and we'll talk about the week.\u201d That is a plan, and it deals with the calls, but this line is about the hurt, so the plan misses it."},"example":"A grandfather on a video call from his flat: \u201cNobody comes to see an old man. Never mind, I'll manage.\u201d<br>He is asking for comfort, not for a visit timetable."},{"type":"pick","who":"You, after a long pause","text":"\u201cOh, Mum, you did nothing wrong. Don't worry about it.\u201d","cue":"warm and quick, reaching for the reassurance","prompt":"What kind of reply is your line?","options":["A matched volley","A cut","Double-talk"],"answer":0,"why":"Your reply comes from the Caring Boss, the seat she called on, and it answers her plea with comfort. That is a matched volley, so it can run on, and she will be back with the same whine on Wednesday.","traps":{"1":"A cut would answer from a seat she did not call on, like \u201cWhat would you like from me this week?\u201d This line does not do that. It answers her plea with comfort from the seat she called on.","2":"Double-talk would be a polite line with a second message under it, like \u201cOh, Mum, you did nothing wrong. Not that you'd believe me.\u201d The words soothe and the tail carries a dig. Your line has no dig in it."},"example":"A cricket WhatsApp group, a player who keeps calling himself the worst bowler: \u201cYou're not the worst, mate, don't worry.\u201d<br>He gets the reassurance he was fishing for, and he will fish again on Sunday."},{"type":"pick","who":"You, a second later","text":"\u201cWhat would you like from me this week, Mum?\u201d","cue":"calm and level, eyes on the screen, not on the TV","prompt":"What kind of reply is your line?","options":["A matched volley","A cut","Double-talk"],"answer":1,"why":"This comes from the Pilot, a seat she did not call on. She called on the Caring Boss, and you asked a question instead, which is changing seat. The reply is a cut, so the whine has no seat to land in.","traps":{"0":"A matched volley would be \u201cOh, Mum, you did nothing wrong.\u201d She gets the comfort she asked for, and the whine comes back next Sunday.","2":"Double-talk would be the same words said through your teeth, \u201cOf course, Mum, what would you like from me this week?\u201d with a sigh behind it. The words are fine and the tone carries a second message, and she would hear the tone first."},"example":"A neighbours' building group chat, the secretary upset about the lift repair: \u201cFine, you're upset. What do you want us to decide tonight?\u201d<br>The question turns the sulk into a choice."},{"type":"pick","who":"Mum, a minute later","text":"\u201cOf course you're busy, love. Busy people don't ring. I know.\u201d","cue":"sweet voice, a sigh at the end","prompt":"Look at what the line says and what sits under it. Which label fits Mum's line?","options":["A matched volley","A cut","Double-talk"],"answer":2,"why":"The first message is sweet: she knows you are busy. The second sits underneath and says you never ring. Two messages in one line is double-talk, and the sigh tells you which one is loud.","traps":{"0":"A matched volley is a plain line that gets a plain reply from the seat it was aimed at, like \u201cYes, Mum, I'm busy, I'll ring Sunday.\u201d Her line says one thing and carries a second underneath, so it is not plain.","1":"A cut is a reply that answers from a different seat. Mum is not switching seats here. She is carrying two messages in the same line."},"example":"A school parents' group, a mother left out of the trip plan: \u201cNo, no, you all go ahead. I know my place.\u201d<br>The first message is polite. The second is the bill, and everyone reads that one."}]},{"level":"Play","label":"Play, the week in motion","items":[{"type":"scene","title":"Sunday, 21:20, your room in apartment 3B","setting":"The Corner Table is four hours behind you. The call has run four minutes. Mum has said \u201cnobody\u201d twice, and the TV is still on in her kitchen, 600 km away.","meters":{"you":70,"them":50},"beats":[{"who":"Mum","text":"\u201cNobody rings me. Dad doesn't even look at the phone. Tell me I didn't do anything wrong.\u201d","cue":"voice thin, a spoon clinking in a cup","lines":[{"text":"\u201cTell me one thing you want from this week, Mum. Just one.\u201d","tag":"best","you":4,"them":5,"outcome":"Mum stops mid-sigh. \u201cRing on Sundays. Properly, not for one minute.\u201d The plea has a request in it now.","why":"You answered from your Pilot, a seat she did not call on, and asked for a real request. The cut stops the plea without starting a row."},{"text":"\u201cOh, Mum, you did nothing wrong. Don't worry about it.\u201d","tag":"ok","you":-2,"them":3,"outcome":"She sighs, relieved. \u201cThank you, love. You always understand.\u201d The plea will be back on Wednesday.","why":"You answered from the Caring Boss, the seat she called on. It is a matched volley, so it runs on and feels kind, and nothing is asked of her."},{"text":"\u201cI'll ring every night, Mum, I promise. I'll fix everything this month.\u201d","tag":"game","you":-6,"them":4,"outcome":"Her voice warms. \u201cEvery night? You'll be tired, I know. You still owe me three weeks of calls.\u201d","why":"You took on a rescue, and she has noticed the promise and started the count. That is a trap move, so the scene ends here."}]},{"who":"Mum","text":"\u201cAfter everything I gave up for you, you don't even ask how I manage.\u201d","cue":"sharper now, a laugh with no fun in it","lines":[{"text":"\u201cWhich part of the week was hardest, Mum? Give me the day and the thing.\u201d","tag":"best","you":3,"them":6,"outcome":"Mum pauses. \u201cThe Tuesday, with the electricity bill. Nobody told me it was due.\u201d","why":"Her line came from the Boss and landed on your Kid. A question from your Pilot is a cut, so she has to answer with facts, and the guilt has nothing to push against."},{"text":"\u201cI know, Mum. I'm a terrible son. I'm sorry.\u201d","tag":"ok","you":-4,"them":2,"outcome":"\u201cYes, well, you should be,\u201d she says, and the call goes soft for a minute.","why":"You answered her Boss with your Kid. The sorry matches her verdict, so the groove runs on, and you give up ground you could have held."}]},{"who":"Mum","text":"\u201cDad says we're fine, like always. I'm the only one who worries.\u201d","cue":"tired, looking at something across the room","lines":[{"text":"\u201cWhat would you like Dad to do differently, Mum? Name one thing.\u201d","tag":"best","you":3,"them":4,"outcome":"She laughs, short and sour. \u201cAsk him to ring me, for once. He won't.\u201d","why":"You turned her feeling into a request. A request is a cut she can answer, and it gives her a real choice instead of a rescue."},{"text":"\u201cI'm sure Dad worries too, Mum. Don't upset yourself.\u201d","tag":"ok","you":-2,"them":-2,"outcome":"\u201cDon't upset myself,\u201d she repeats. \u201cThat's what everyone says.\u201d","why":"This is the Caring Boss again, a matched volley that calms her and changes nothing. She hears no new message, so the whine comes back at the next line."}]},{"who":"Mum","text":"\u201cThen tell me it's not my fault. Just say it. Is it my fault?\u201d","cue":"voice going thin, waiting for the yes","lines":[{"text":"\u201cNobody has to be at fault, Mum. What do you need from this call before we hang up?\u201d","tag":"best","you":4,"them":5,"outcome":"A long breath. \u201cJust to hear your voice on Sunday, I think.\u201d She has said the real thing.","why":"Saying nobody is at fault is a cut, and it refuses to put anyone in the dock. The question after it gets her Pilot to answer, so a row has nothing to start from."},{"text":"\u201cNo, Mum, of course it isn't. It's not your fault.\u201d","tag":"ok","you":-1,"them":2,"outcome":"\u201cGood,\u201d she says, and the call ends on a soft note. Nothing about Sunday has been decided.","why":"A matched volley that closes the question. It is kind, but it leaves the plea without a plan, so the same call comes back next week."},{"text":"\u201cFine, Mum, it's always about you, isn't it? Every single call.\u201d","tag":"game","you":-8,"them":-7,"outcome":"Her voice goes up. \u201cDon't you talk to me like that. Your father talks to me like that.\u201d The phone goes quiet with a click.","why":"This is a verdict wrapped in a question. It invites her Boss to answer, and a person who is crossed tends to move into the seat the other one invited, so a row starts and the scene ends here."}]}],"payoff":"The call ends early with the whine still on the line. Mum keeps the score, and next Sunday she starts from the last thing you said."},{"type":"scene","title":"Wednesday, 22:40, the kitchen in apartment 3B","setting":"The rent envelope is on the fridge, under a magnet shaped like a tea cup. Sam is still wearing his fintech lanyard, and he has not sat down.","meters":{"you":65,"them":55},"beats":[{"who":"Sam","text":"\u201cI'm such an idiot. I forgot the rent again. Sorry, sorry, don't say it.\u201d","cue":"envelope in hand, already apologising","lines":[{"text":"\u201cOkay. When can you pay it, and how much can you do by Friday?\u201d","tag":"best","you":4,"them":5,"outcome":"Sam stops with the envelope in the air. \u201cFriday. Thursday, if I skip the tea.\u201d","why":"You asked for a day and an amount, which is a cut from your Pilot that he can answer. The whine has nowhere to sit."},{"text":"\u201cIt's fine, Sam, don't worry about it.\u201d","tag":"ok","you":-2,"them":3,"outcome":"He grins, relieved. \u201cYou're the best, seriously.\u201d The envelope goes back on the fridge, with no date on it.","why":"You answered his Kid from the Caring Boss, which is a matched volley. He feels better at once, but the rent still has no day on it, and that is the price of the comfort."}]},{"who":"Sam","text":"\u201cYou always know what to do. I'm hopeless with money, I'm the one who needs bailing out.\u201d","cue":"a tight laugh, looking at the fridge and not at you","lines":[{"text":"\u201cYou're not hopeless, you're short this month. Give me the number and the day.\u201d","tag":"best","you":3,"them":4,"outcome":"He pulls out his phone and shows you a figure. \u201cNine thousand now, the rest on the fourth.\u201d","why":"You gave him a fact to answer, not a rescue. A grown-up can answer a number, and he did, so the talk stays open."},{"text":"\u201cGive me the envelope. I'll sort it out, and you can pay me back later.\u201d","tag":"game","you":-6,"them":5,"outcome":"His shoulders drop. \u201cYou're a lifesaver. I owe you.\u201d He hands over the envelope and forgets the date.","why":"You took the job off him. He is now the Kid being looked after, and you are carrying the rent, so the scene ends here."},{"text":"\u201cOkay, but you're doing better than you think.\u201d","tag":"ok","you":-1,"them":3,"outcome":"He laughs. \u201cYou say that every month.\u201d The number is still unsaid.","why":"A kind word from the Caring Boss answers the feeling and never asks for the number. The number goes unsaid, so the rent stays where it was."}]},{"who":"Sam","text":"\u201cFine, fine. Don't tell Gran, she'll make a whole speech out of it.\u201d","cue":"half a smile, one hand up, testing whether you will keep his secret","lines":[{"text":"\u201cI won't tell her. You tell her yourself on Sunday, before the watchman does.\u201d","tag":"best","you":4,"them":2,"outcome":"He groans. \u201cFine. Sunday. I'll take the speech.\u201d","why":"You kept the secret out of it and handed the choice back to him. Telling her himself keeps him an adult in the talk, and the rent does not become a family joke."},{"text":"\u201cDeal. Our secret, and you owe me a tea.\u201d","tag":"ok","you":-1,"them":4,"outcome":"He clinks his cup against yours. \u201cTea on me Friday, promise.\u201d","why":"A secret makes the whine a shared joke, so the rent slides to next month with both of you laughing. It is pleasant, and the date stays unset."}]},{"who":"Sam","text":"\u201cThanks. Sorry. Really, sorry, I'll sort it, promise.\u201d","cue":"already halfway out of the kitchen, envelope under his arm","lines":[{"text":"\u201cDon't say sorry. Say the day, and I'll write it on the fridge.\u201d","tag":"best","you":4,"them":5,"outcome":"He laughs, takes the marker from the drawer, and writes \u201cFri\u201d on the calendar with a smiley.","why":"You turned the sorry into a day that can be checked. He answers with something he can do, so the talk closes on an agreed day and the plea does not return on Thursday."},{"text":"\u201cNo problem, Sam. Sorted.\u201d","tag":"ok","you":0,"them":2,"outcome":"\u201cSorted,\u201d he says, and he leaves. The envelope stays on the fridge with no date on it.","why":"A matched volley that closes the talk kindly, but no day has been set. Next week's sorry will sound the same."}]}],"payoff":"Sam leaves the envelope with you, with a sticky note on it that says \u201cOwe you\u201d. The next sorry comes a week earlier."}]},{"level":"Analyse","label":"Analyse, explain it","items":[{"type":"pick","who":"You, after the call, working out why it held","text":"\u201cOkay. Ring me on Sunday, and tell me the one thing you want to talk about. I'll listen.\u201d","cue":"quieter now, the TV switched off","options":["Her Pilot answered your Pilot, so the talk stayed open","Her Boss handed you a rule, so the whine returns","Her Kid gave up, so the call is over"],"answer":0,"why":"Your request asked for a plan, so she answered with one. You changed seat, and the plea was cut before it could run on. A person who is crossed tends to move into the seat the other one invited, and your question invited her Pilot. A cut works when it asks for something real, like a day or one thing, and this one did.","traps":{"1":"If her Boss had answered, it would sound like \u201cFine, ring on Sunday, and don't start again.\u201d That is a rule handed back to you, and the whine would return next week with the rule attached.","2":"If her Kid had given up, it would sound like \u201cNever mind, I'm being silly, forget I said it.\u201d The call would end on the sulk, and the week would stay where it was."},"example":"A sports coach at the nets: \u201cOkay. Tell me one thing you want to fix before Saturday.\u201d<br>The question has an end point, so the player has a real answer to give."}]}],"debrief":{"nadia":"A plea calls on one seat, and if you answer from that same seat, the loop can run on and on. Changing seat to your Pilot cuts it, but the cut has to ask for something real, like a day or one thing she wants from you. Ask it as if you want the answer, because the same words said like a verdict will start a row.","bookTerm":"Crossed transaction","bookNote":"The books call this a crossed transaction: the reply comes from a different ego state than the one addressed, or does not go back to the one that spoke, so communication breaks off until the vectors realign. The person who was crossed tends to shift into the ego state the other one invited."},"reflection":{"prompt":"Think of a message this week that asked you to make a feeling go away. Which seat did you answer from, and what would one plain question from your Pilot have opened instead?"},"next":"3.4"};</script>
+<script>window.TA_NAV = {"hub":"https://vaibhav-labs.github.io/TA/arena/","next":{"slot":"3.4","title":"Cuff Links","url":"https://vaibhav-labs.github.io/TA/arena/3-4.html"}};</script>
+<script>
+(function () {
+  "use strict";
+
+  var GAME = window.TA_GAME;
+  var NAV = window.TA_NAV || { hub: null, next: null };
+  var card = document.getElementById("card");
+  var STORE_KEY = "ta-arena-reflect-" + (GAME ? GAME.slot : "");
+
+  // Content fields may carry <b>, <i> and <br> only. Other tags are dropped, and open
+  // tags are closed at the end of the field, so markup cannot leak into the card.
+  function rich(s) {
+    if (s === undefined || s === null) return "";
+    var open = [];
+    var out = String(s).replace(/<[^<>]*>|</g, function (tok) {
+      if (tok === "<") return "&lt;";
+      var m = /^<\s*(\/?)\s*([a-zA-Z]+)\s*(\/?)\s*>$/.exec(tok);
+      if (!m) return "";
+      var name = m[2].toLowerCase();
+      var closing = m[1] === "/";
+      if (name === "br") return closing ? "" : "<br>";
+      if (name !== "b" && name !== "i") return "";
+      if (closing) {
+        if (open[open.length - 1] === name) { open.pop(); return "</" + name + ">"; }
+        return "";
+      }
+      if (m[3]) return "";
+      open.push(name);
+      return "<" + name + ">";
+    });
+    while (open.length) out += "</" + open.pop() + ">";
+    return out;
+  }
+
+  function esc(s) {
+    return String(s === undefined || s === null ? "" : s)
+      .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;").replace(/'/g, "&#39;");
+  }
+
+  function clamp(v) { return Math.max(0, Math.min(100, v)); }
+
+  function safeUrl(u) {
+    return typeof u === "string" && /^https?:\/\//i.test(u) ? u : null;
+  }
+
+  var VOICE = { parent: "p", adult: "a", child: "c" };
+  function pill(label) {
+    var key = String(label).trim().toLowerCase();
+    var cls = Object.prototype.hasOwnProperty.call(VOICE, key) ? VOICE[key] : "x";
+    return '<span class="pill ' + cls + '">' + rich(label) + '</span>';
+  }
+
+  function exchange(who, text, cue) {
+    return '<div class="exchange"><p class="line"><span class="who">' + rich(who) + '</span>' +
+      rich(text) + '</p>' + (cue ? '<p class="cue">' + rich(cue) + '</p>' : '') + '</div>';
+  }
+
+  function exampleBox(text) {
+    return text ? '<div class="example"><div class="ex-label">Real example</div>' + rich(text) + '</div>' : "";
+  }
+
+  function nextbar(label) {
+    return '<div class="nextbar"><button class="next" type="button">' + label + '</button></div>';
+  }
+
+  function bindNext(fn) {
+    var b = card.querySelector(".nextbar button.next");
+    if (b) b.addEventListener("click", function () { fn(); });
+  }
+
+  function shuffled(n) {
+    var idx = [], i, j, t, attempt;
+    for (i = 0; i < n; i++) idx.push(i);
+    for (attempt = 0; attempt < 20; attempt++) {
+      for (i = n - 1; i > 0; i--) {
+        j = Math.floor(Math.random() * (i + 1));
+        t = idx[i]; idx[i] = idx[j]; idx[j] = t;
+      }
+      if (idx.some(function (v, p) { return v !== p; })) break;
+    }
+    return idx;
+  }
+
+  // Flat list of items across the three rounds; one progress segment each.
+  var ITEMS = [];
+  ((GAME && GAME.rounds) || []).forEach(function (round) {
+    (round.items || []).forEach(function (item, i) {
+      ITEMS.push({ round: round, item: item, first: i === 0 });
+    });
+  });
+  var TOTAL = ITEMS.length;
+
+  function progressHTML(done, current) {
+    var bars = "";
+    for (var i = 0; i < TOTAL; i++) {
+      bars += '<i class="' + (i < done ? "done" : (i === current ? "current" : "")) + '"></i>';
+    }
+    return '<div class="progress" role="progressbar" aria-label="Progress" aria-valuemin="0" aria-valuemax="' +
+      TOTAL + '" aria-valuenow="' + done + '">' + bars + '</div>';
+  }
+
+  function paintProgress(done, current) {
+    var old = card.querySelector(".progress");
+    if (old) old.outerHTML = progressHTML(done, current);
+  }
+
+  function frame(k, body, showIntro) {
+    var rec = ITEMS[k];
+    var intro = showIntro && rec.round.intro ? '<p class="round-intro">' + rich(rec.round.intro) + '</p>' : "";
+    return progressHTML(k, k) + '<div class="round-label">' + rich(rec.round.label) + '</div>' + intro + body;
+  }
+
+  // ---------- flow ----------
+
+  var state = { screen: "intro", k: 0 };
+
+  function settle() {
+    if (card.getBoundingClientRect().top < 0) card.scrollIntoView({ block: "start" });
+    card.focus({ preventScroll: true });
+  }
+
+  function render() {
+    if (state.screen === "intro") renderIntro();
+    else if (state.screen === "item") renderItem(state.k);
+    else if (state.screen === "debrief") renderDebrief();
+    else if (state.screen === "reflect") renderReflect();
+    else renderEnd();
+    settle();
+  }
+
+  function advance() {
+    if (state.screen === "intro") {
+      state.screen = "item"; state.k = 0;
+    } else if (state.screen === "item") {
+      if (state.k + 1 < TOTAL) state.k += 1;
+      else state.screen = "debrief";
+    } else if (state.screen === "debrief") {
+      state.screen = "reflect";
+    } else if (state.screen === "reflect") {
+      state.screen = "end";
+    }
+    render();
+  }
+
+  function renderItem(k) {
+    var it = ITEMS[k].item;
+    if (it.type === "pick") renderPick(k, it);
+    else if (it.type === "scene") renderScene(k, it);
+    else if (it.type === "sort") { if (it.order === true) renderOrder(k, it); else renderBins(k, it); }
+    else if (it.type === "counter") renderCounter(k, it);
+    else advance();
+  }
+
+  function renderIntro() {
+    var op = GAME.opener || {};
+    var lines = (op.lines || []).map(function (ln) {
+      return '<p class="line"><span class="who">' + rich(ln.who) + '</span>' + rich(ln.text) + '</p>' +
+        (ln.cue ? '<p class="cue">' + rich(ln.cue) + '</p>' : "");
+    }).join("");
+    var rounds = (GAME.rounds || []).map(function (r) {
+      var n = (r.items || []).length;
+      return '<li><span class="dot"></span><span><b>' + rich(r.level) + '</b>, ' + n +
+        (n === 1 ? ' item' : ' items') + '</span></li>';
+    }).join("");
+    card.innerHTML =
+      '<div class="tagline">TA Arena · World ' + esc(GAME.world) + ', ' + rich(GAME.worldName) +
+      ' · Game ' + esc(GAME.slot) + '</div>' +
+      '<div class="card-head"><div><h1>' + rich(GAME.title) + '</h1>' +
+      '<p class="deck">' + rich(GAME.concept) + '</p></div>' +
+      '<div class="case-no">' + esc(GAME.slot) + '<br>' + rich(GAME.weekName) + '</div></div>' +
+      '<p class="lede"><i>' + rich(op.setting) + '</i></p>' +
+      '<div class="exchange">' + lines + '</div>' +
+      '<div class="ask"><div class="kicker">The question</div><p>' + rich(op.ask) + '</p></div>' +
+      '<div class="rules-box"><div class="round-label">How this one works</div>' +
+      '<ul class="rules-list">' + rounds +
+      '<li><span class="dot"></span><span>Feedback follows every answer, with a real example</span></li>' +
+      '</ul></div>' +
+      nextbar("Start the game →");
+    bindNext(advance);
+  }
+
+  // ---------- pick ----------
+
+  function renderPick(k, it) {
+    var labels = it.options;
+    card.innerHTML = frame(k,
+      exchange(it.who, it.text, it.cue) +
+      '<p class="prompt">' + rich(it.prompt || "Which one is it?") + '</p>' +
+      '<div class="choices">' + labels.map(function (lab, i) {
+        return '<button class="choice" type="button" data-i="' + i + '">' + pill(lab) + '</button>';
+      }).join("") + '</div>', ITEMS[k].first);
+    var buttons = card.querySelectorAll("button.choice");
+    var answered = false;
+    buttons.forEach(function (btn) {
+      btn.addEventListener("click", function () { choose(parseInt(btn.getAttribute("data-i"), 10)); });
+    });
+    function choose(i) {
+      if (answered) return;
+      answered = true;
+      var right = i === it.answer;
+      buttons.forEach(function (b) { b.disabled = true; });
+      buttons[it.answer].classList.add("correct");
+      if (!right) buttons[i].classList.add("wrong");
+      var body = right
+        ? '<div class="why-box ok"><div class="stamp ok">✓ Right call</div>' +
+          '<p class="feedback"><b>Why:</b> ' + rich(it.why) + '</p></div>'
+        : '<div class="why-box cross"><div class="stamp cross">✗ Not quite</div>' +
+          '<p class="feedback"><b>You picked ' + rich(labels[i]) + '.</b> ' +
+          rich((it.traps || {})[String(i)]) + '</p>' +
+          '<p class="feedback"><b>The right call is ' + rich(labels[it.answer]) + '.</b> ' +
+          rich(it.why) + '</p></div>';
+      var fb = document.createElement("div");
+      fb.innerHTML = body + exampleBox(it.example) + nextbar("Continue →");
+      card.appendChild(fb);
+      paintProgress(k + 1, -1);
+      bindNext(advance);
+    }
+  }
+
+  // ---------- scene ----------
+
+  var TAG_LABEL = { best: "Best move", ok: "Fair move", game: "Trap move" };
+  var TAG_CLASS = { best: "ok", ok: "amber", game: "cross" };
+  var TAG_PICK = { best: "correct", ok: "amber", game: "wrong" };
+  var DEFAULT_FALLOUT = {
+    you: "You have nothing left to give in this exchange, so the scene stops here.",
+    them: "The other person has shut the conversation down, so the scene stops here."
+  };
+
+  function meterRow(key, label, v) {
+    return '<div class="meter ' + key + (v <= 0 ? " empty" : "") + '">' +
+      '<span class="name">' + label + '</span>' +
+      '<span class="track"><span class="fill" data-m="' + key + '" style="width:' + v + '%"></span></span>' +
+      '<span class="num" data-n="' + key + '">' + v + '</span></div>';
+  }
+
+  function meterHTML(m) {
+    return '<div class="meters">' + meterRow("you", "You", m.you) + meterRow("them", "Them", m.them) + '</div>';
+  }
+
+  function setMeters(m) {
+    ["you", "them"].forEach(function (key) {
+      var fill = card.querySelector('.fill[data-m="' + key + '"]');
+      var num = card.querySelector('.num[data-n="' + key + '"]');
+      var row = card.querySelector(".meter." + key);
+      if (fill) fill.style.width = m[key] + "%";
+      if (num) num.textContent = String(m[key]);
+      if (row) row.classList.toggle("empty", m[key] <= 0);
+    });
+  }
+
+  function renderScene(k, sc) {
+    var rec = ITEMS[k];
+    var meters = { you: clamp(Number(sc.meters.you)), them: clamp(Number(sc.meters.them)) };
+    var beats = sc.beats || [];
+    var bi = 0;
+
+    function drawBeat() {
+      var b = beats[bi];
+      card.innerHTML = frame(k,
+        '<h2 class="scene-title">' + rich(sc.title) + '</h2>' +
+        '<p class="setting">' + rich(sc.setting) + '</p>' +
+        meterHTML(meters) +
+        '<p class="kicker">Beat ' + (bi + 1) + ' of ' + beats.length + '</p>' +
+        exchange(b.who, b.text, b.cue) +
+        '<div class="choices">' + b.lines.map(function (ln, i) {
+          return '<button class="choice" type="button" data-i="' + i + '">' + rich(ln.text) + '</button>';
+        }).join("") + '</div>', rec.first && bi === 0);
+      var buttons = card.querySelectorAll("button.choice");
+      buttons.forEach(function (btn) {
+        btn.addEventListener("click", function () { pick(parseInt(btn.getAttribute("data-i"), 10), buttons); });
+      });
+    }
+
+    function pick(i, buttons) {
+      if (buttons[0].disabled) return;
+      var ln = beats[bi].lines[i];
+      buttons.forEach(function (x) { x.disabled = true; });
+      buttons[i].classList.add(TAG_PICK[ln.tag] || "amber");
+      meters.you = clamp(meters.you + ln.you);
+      meters.them = clamp(meters.them + ln.them);
+      setMeters(meters);
+      var dead = [];
+      if (meters.you <= 0) dead.push("you");
+      if (meters.them <= 0) dead.push("them");
+      var ends = ln.tag === "game" || dead.length > 0;
+      var cls = TAG_CLASS[ln.tag] || "amber";
+      var html = '<div class="why-box ' + cls + '"><div class="stamp ' + cls + '">' +
+        (TAG_LABEL[ln.tag] || "Move") + '</div>' +
+        '<p class="feedback">' + rich(ln.outcome) + '</p>' +
+        '<p class="feedback"><b>Why:</b> ' + rich(ln.why) + '</p></div>';
+      if (ln.tag === "game") {
+        html += '<div class="example"><div class="ex-label">How it ends</div>' + rich(sc.payoff) + '</div>';
+      }
+      if (dead.length) {
+        var fo = sc.fallout || {};
+        var lines = [];
+        if (dead.indexOf("them") >= 0) lines.push(fo.them || DEFAULT_FALLOUT.them);
+        if (dead.indexOf("you") >= 0) lines.push(fo.you || DEFAULT_FALLOUT.you);
+        html += '<div class="example"><div class="ex-label">How it ends</div>' +
+          lines.map(function (t) { return rich(t); }).join("<br><br>") + '</div>';
+      }
+      var last = ends || bi === beats.length - 1;
+      var fb = document.createElement("div");
+      fb.innerHTML = html + nextbar("Continue →");
+      card.appendChild(fb);
+      bindNext(function () {
+        if (last) { sceneOver(); return; }
+        bi += 1;
+        drawBeat();
+        settle();
+      });
+    }
+
+    function sceneOver() {
+      card.innerHTML = frame(k,
+        '<h2 class="scene-title">' + rich(sc.title) + '</h2>' +
+        '<p class="kicker">Scene over</p>' +
+        meterHTML(meters) +
+        exampleBox(sc.example) +
+        nextbar("Continue →"), false);
+      paintProgress(k + 1, -1);
+      bindNext(advance);
+    }
+
+    drawBeat();
+  }
+
+  // ---------- sort: bins (each card goes in a bin, one after another) ----------
+
+  function renderBins(k, sc) {
+    var items = sc.items || [];
+    var bins = sc.bins || [];
+    var list;
+
+    function finish() {
+      var end = document.createElement("div");
+      end.innerHTML = exampleBox(sc.example) + nextbar("Continue →");
+      card.appendChild(end);
+      paintProgress(k + 1, -1);
+      bindNext(advance);
+    }
+
+    function addCard(i) {
+      var c = items[i];
+      var wrap = document.createElement("div");
+      wrap.className = "sort-item";
+      wrap.innerHTML = '<div class="exchange"><p class="line">' + rich(c.text) + '</p></div>' +
+        '<div class="choices">' + bins.map(function (label, bi) {
+          return '<button class="choice" type="button" data-i="' + bi + '">' + rich(label) + '</button>';
+        }).join("") + '</div>';
+      list.appendChild(wrap);
+      var buttons = wrap.querySelectorAll("button.choice");
+      buttons.forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          if (buttons[0].disabled) return;
+          choose(parseInt(btn.getAttribute("data-i"), 10));
+        });
+      });
+
+      function choose(pick) {
+        buttons.forEach(function (x) { x.disabled = true; });
+        var right = pick === c.answer;
+        buttons[c.answer].classList.add("correct");
+        if (!right) buttons[pick].classList.add("wrong");
+        var fb = document.createElement("div");
+        fb.innerHTML = right
+          ? '<div class="why-box ok"><div class="stamp ok">✓ Right call</div>' +
+            '<p class="feedback"><b>Why:</b> ' + rich(c.why) + '</p></div>'
+          : '<div class="why-box cross"><div class="stamp cross">✗ Not quite</div>' +
+            '<p class="feedback"><b>You picked ' + rich(bins[pick]) + '.</b> It belongs in ' +
+            rich(bins[c.answer]) + '.</p>' +
+            '<p class="feedback"><b>Why:</b> ' + rich(c.why) + '</p></div>';
+        wrap.appendChild(fb);
+        if (i + 1 < items.length) {
+          addCard(i + 1);
+          list.lastElementChild.scrollIntoView({ block: "nearest" });
+        } else {
+          finish();
+        }
+      }
+    }
+
+    card.innerHTML = frame(k, '<p class="prompt">' + rich(sc.prompt) + '</p><div class="sort-list"></div>',
+      ITEMS[k].first);
+    list = card.querySelector(".sort-list");
+    if (items.length) addCard(0);
+  }
+
+  // ---------- sort: order (tap the cards in sequence) ----------
+
+  function renderOrder(k, sc) {
+    var items = sc.items || [];
+    var placed = 0;
+    card.innerHTML = frame(k,
+      '<p class="prompt">' + rich(sc.prompt) + '</p>' +
+      '<ol class="seq" aria-label="Placed so far"></ol>' +
+      '<div class="pool choices">' + shuffled(items.length).map(function (idx) {
+        return '<button class="choice" type="button" data-i="' + idx + '">' + rich(items[idx].text) + '</button>';
+      }).join("") + '</div>' +
+      '<div class="order-fb"></div>', ITEMS[k].first);
+    var seq = card.querySelector(".seq");
+    var fbBox = card.querySelector(".order-fb");
+
+    card.querySelectorAll(".pool button.choice").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        tap(parseInt(btn.getAttribute("data-i"), 10), btn);
+      });
+    });
+
+    function tap(idx, btn) {
+      if (idx === placed) {
+        var li = document.createElement("li");
+        li.innerHTML = '<span class="n">' + (placed + 1) + '</span><span><span class="ct">' +
+          rich(items[idx].text) + '</span><span class="why">' + rich(items[idx].why) + '</span></span>';
+        seq.appendChild(li);
+        placed += 1;
+        btn.remove();
+        fbBox.innerHTML = "";
+        if (placed === items.length) {
+          fbBox.innerHTML = exampleBox(sc.example) + nextbar("Continue →");
+          paintProgress(k + 1, -1);
+          bindNext(advance);
+        }
+      } else {
+        fbBox.innerHTML = '<div class="why-box amber"><div class="stamp amber">Not yet</div>' +
+          '<p class="feedback">' + rich(items[placed].why) + '</p></div>';
+      }
+    }
+  }
+
+  // ---------- counter ----------
+
+  function renderCounter(k, c) {
+    var palette = c.palette || [];
+    var used = palette.map(function () { return false; });
+    var total = 0, picks = 0, sent = false;
+
+    card.innerHTML = frame(k,
+      '<p class="prompt">' + rich(c.prompt) + '</p>' +
+      '<div class="total"><span>Total</span><b data-total>0</b>' +
+      '<span>Target ' + esc(c.target) + ', within ' + esc(c.tolerance) + '</span></div>' +
+      '<div class="band" aria-hidden="true"><span class="fill" data-fill></span></div>' +
+      '<p class="kicker">Picks used: <span data-picks>0</span> of ' + esc(c.maxPicks) + '</p>' +
+      '<div class="choices">' + palette.map(function (p, i) {
+        return '<button class="choice pal" type="button" data-i="' + i + '"><span>' + rich(p.text) +
+          '</span><span class="val">+' + esc(p.value) + '</span></button>';
+      }).join("") + '</div>' +
+      '<div class="counter-actions"><button class="ghost" type="button" data-reset>Reset</button>' +
+      '<button class="next" type="button" data-send>Send</button></div>' +
+      '<div class="counter-fb"></div>', ITEMS[k].first);
+
+    var totalEl = card.querySelector("[data-total]");
+    var fillEl = card.querySelector("[data-fill]");
+    var picksEl = card.querySelector("[data-picks]");
+    var sendBtn = card.querySelector("[data-send]");
+    var resetBtn = card.querySelector("[data-reset]");
+    var palBtns = card.querySelectorAll("button.pal");
+
+    function paint() {
+      totalEl.textContent = String(total);
+      picksEl.textContent = String(picks);
+      fillEl.style.width = Math.min(100, Math.round(total / c.target * 100)) + "%";
+      fillEl.classList.toggle("over", total > c.target + c.tolerance);
+      palBtns.forEach(function (b, i) {
+        b.disabled = sent || used[i] || picks >= c.maxPicks;
+      });
+      sendBtn.disabled = sent || picks < 1;
+      resetBtn.disabled = sent || picks < 1;
+    }
+
+    palBtns.forEach(function (b) {
+      b.addEventListener("click", function () {
+        var i = parseInt(b.getAttribute("data-i"), 10);
+        if (sent || used[i] || picks >= c.maxPicks) return;
+        used[i] = true;
+        picks += 1;
+        total += palette[i].value;
+        paint();
+      });
+    });
+
+    resetBtn.addEventListener("click", function () {
+      if (sent) return;
+      used = palette.map(function () { return false; });
+      total = 0;
+      picks = 0;
+      paint();
+    });
+
+    sendBtn.addEventListener("click", function () {
+      if (sent || picks < 1) return;
+      sent = true;
+      paint();
+      var hit = Math.abs(total - c.target) <= c.tolerance;
+      var under = !hit && total < c.target;
+      var msg = hit ? c.hitMsg : (under ? c.underMsg : c.overMsg);
+      var cls = hit ? "ok" : (under ? "amber" : "cross");
+      var fb = document.createElement("div");
+      fb.innerHTML = '<div class="why-box ' + cls + '"><div class="stamp ' + cls + '">' +
+        (hit ? "✓ Right call" : "✗ Not quite") + '</div>' +
+        '<p class="feedback">' + rich(msg) + '</p>' +
+        '<p class="feedback"><b>Why:</b> ' + rich(c.why) + '</p></div>' +
+        nextbar("Continue →");
+      card.querySelector(".counter-fb").appendChild(fb);
+      paintProgress(k + 1, -1);
+      bindNext(advance);
+    });
+
+    paint();
+  }
+
+  // ---------- debrief, reflection, end ----------
+
+  function renderDebrief() {
+    var d = GAME.debrief || {};
+    card.innerHTML = progressHTML(TOTAL, -1) +
+      '<div class="round-label">Debrief</div>' +
+      '<h1 class="h2">What Nadia would say</h1>' +
+      '<p class="feedback">' + rich(d.nadia) + '</p>' +
+      '<div class="why-box neutral"><p class="feedback"><b>' +
+      rich(d.bookTerm || GAME.bookTerm) + '</b></p>' +
+      '<p class="feedback">' + rich(d.bookNote || GAME.bookIdea) + '</p></div>' +
+      nextbar("Continue →");
+    bindNext(advance);
+  }
+
+  // Storage can be blocked or missing, so every access is guarded.
+  function readStore() {
+    try { return window.localStorage.getItem(STORE_KEY) || ""; } catch (e) { return ""; }
+  }
+
+  function writeStore(value) {
+    try { window.localStorage.setItem(STORE_KEY, value); } catch (e) { /* blocked: the page still works */ }
+  }
+
+  function renderReflect() {
+    var r = GAME.reflection || {};
+    card.innerHTML = progressHTML(TOTAL, -1) +
+      '<div class="reflect-tag">Your turn</div>' +
+      '<p class="prompt">' + rich(r.prompt) + '</p>' +
+      '<textarea class="reflect-box" aria-label="Your reflection" ' +
+      'placeholder="A few lines is plenty. This stays on your device, and nobody else sees it."></textarea>' +
+      nextbar("Continue →");
+    var box = card.querySelector("textarea");
+    box.value = readStore();
+    box.addEventListener("input", function () { writeStore(box.value); });
+    bindNext(advance);
+  }
+
+  function renderEnd() {
+    var hub = safeUrl(NAV.hub);
+    var nxt = NAV.next || null;
+    var links = hub ? '<a class="next" href="' + esc(hub) + '">All games</a>' : "";
+    if (nxt) {
+      var nxtUrl = safeUrl(nxt.url);
+      links += nxtUrl
+        ? '<a class="next" href="' + esc(nxtUrl) + '">Next game: ' +
+          rich(nxt.title || ("Game " + nxt.slot)) + ' →</a>'
+        : '<p class="next-soon">Next game opens soon</p>';
+    }
+    card.innerHTML = progressHTML(TOTAL, -1) +
+      '<div class="end-badge">Case closed</div>' +
+      '<h1 class="h2">Game ' + esc(GAME.slot) + ' is done.</h1>' +
+      '<p class="feedback">' + rich(GAME.concept) + '</p>' +
+      '<div class="source"><b>From:</b> ' + rich(GAME.bookSource) + '</div>' +
+      '<div class="nextbar end-nav">' + links + '</div>';
+  }
+
+  // ---------- start ----------
+
+  function init() {
+    var series = document.getElementById("series");
+    var hubLink = document.getElementById("hubLink");
+    if (!GAME || !GAME.rounds) {
+      series.textContent = "TA Arena";
+      card.innerHTML = '<h1 class="h2">This game could not load.</h1>';
+      return;
+    }
+    series.innerHTML = 'TA Arena <small>· World ' + esc(GAME.world) + ' · Game ' + esc(GAME.slot) + '</small>';
+    var hub = safeUrl(NAV.hub);
+    if (hub) {
+      hubLink.setAttribute("href", hub);
+      hubLink.hidden = false;
+    }
+    render();
+  }
+
+  init();
+})();
+</script>
+
+<script>if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('sw.js',{scope:'/TA/arena/'}).catch(function(){});});}</script>
+</body>
+</html>

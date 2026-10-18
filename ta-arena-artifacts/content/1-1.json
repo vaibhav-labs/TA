@@ -1,0 +1,466 @@
+{
+  "slot": "1.1",
+  "title": "Spinal Cord",
+  "world": 1,
+  "worldName": "Hunger",
+  "week": 1,
+  "weekName": "Invisible",
+  "mechanic": "Choice-story",
+  "concept": "After this one you can tell a warm nod from a cold one, and you can feel what a day with almost none costs you.",
+  "plainWord": "a nod",
+  "bookTerm": "Stroke",
+  "bookIdea": "Any sign that someone registers you, from a greeting to a glare, and people need a steady supply of them to stay well.",
+  "bookSource": "Games People Play, Introduction; Scripts People Live, ch. 1",
+  "opener": {
+    "setting": "Monday, 7:50am. Hawthorn Court, apartment 3B, the kitchen. You moved in two days ago.",
+    "lines": [
+      { "who": "Sam", "text": "“...”", "cue": "headphones in, pouring cereal, not looking up" },
+      { "who": "You", "text": "“Morning.”", "cue": "said to his back" }
+    ],
+    "ask": "Nothing bad has happened yet, so why does the day already feel like it is draining you?"
+  },
+  "rounds": [
+    {
+      "level": "Spot",
+      "label": "Spot, round 1",
+      "intro": "Each card is one line from today. Tap what it was: a <b>warm nod</b>, a <b>cold nod</b>, or nothing at all.",
+      "items": [
+        {
+          "type": "pick",
+          "who": "Halden reception",
+          "text": "“Name?”",
+          "cue": "9:35. She looks at her screen, not at you, and prints the badge.",
+          "options": ["A warm nod", "A cold nod", "Nothing at all"],
+          "answer": 1,
+          "why": "A cold nod still counts. She said one word and printed your badge, so she registered that you exist. Cold nods are still food.",
+          "traps": {
+            "0": "A warm nod would mean she was glad you came. Her eyes never left the screen, so calling it warm has you waiting for a smile that won't come.",
+            "2": "Nothing would mean she never noticed you. She did, and the day starts draining from this desk."
+          },
+          "example": "A school gate, 8:10am.<br>Teacher: “Name?”<br>She ticks the list and says “Sit” without lifting her head.<br>The child goes in. That is a nod, even a thin one, because the teacher saw the child."
+        },
+        {
+          "type": "pick",
+          "who": "Gran",
+          "text": "“Oh, new boy! You're too thin. Come, come, I've made flattened rice.”",
+          "cue": "stairwell, 8:15, her door already open",
+          "options": ["A warm nod", "A cold nod", "Nothing at all"],
+          "answer": 0,
+          "why": "A warm nod can sound like a complaint. Gran says you're too thin because she cares whether you eat. The complaint is the affection.",
+          "traps": {
+            "1": "A cold nod would need her to be annoyed with you. She is delighted, and she is already holding out the flattened rice.",
+            "2": "Nothing would mean she never saw you. She stood in her doorway and called you in."
+          },
+          "example": "A family WhatsApp group.<br>Uncle: “You look tired, eat something.”<br>It reads like a telling-off, but it is the same worry that makes him ask about your day."
+        },
+        {
+          "type": "pick",
+          "who": "Sam",
+          "text": "“...”",
+          "cue": "You say 'Morning' to his back. He nods at the cereal without turning round.",
+          "options": ["A warm nod", "A cold nod", "Nothing at all"],
+          "answer": 1,
+          "why": "A cold nod. It was small and it went to the cereal, but it still tells you he knows you are in the kitchen. That is more than nothing.",
+          "traps": {
+            "0": "A warm nod needs him to turn round and look at you. He stays facing the cereal, so calling it warm would be a guess.",
+            "2": "Nothing would mean you were invisible in that kitchen. He did nod, and a nod counts, even a small one."
+          },
+          "example": "A bus stop, 7:40am.<br>You say “Morning” to the back of a man's head.<br>He lifts two fingers off the rail without turning round."
+        },
+        {
+          "type": "pick",
+          "who": "Clara",
+          "text": "“Oh thank god, someone newer than me.”",
+          "cue": "canteen, 13:10, after you ask if you can sit down",
+          "options": ["A warm nod", "A cold nod", "Nothing at all"],
+          "answer": 0,
+          "why": "A warm nod for being there. She's glad you came, and you didn't have to do anything to earn it.",
+          "traps": {
+            "1": "A cold nod would mean she wanted you gone. She is relieved, and cold gets her wrong.",
+            "2": "Nothing would mean she didn't hear you. She looked up from her phone the moment you spoke."
+          },
+          "example": "A family lunch.<br>Cousin: “Oh good, you came, the kids kept asking for you.”<br>That is warm, and it is for being there, not for anything you did."
+        },
+        {
+          "type": "pick",
+          "who": "Mum",
+          "text": "“Did you eat?”",
+          "cue": "phone, 22:30, six hundred kilometres away",
+          "options": ["A warm nod", "A cold nod", "Nothing at all"],
+          "answer": 0,
+          "why": "A warm nod. The question sounds like a checklist, but it means she has you in mind when you're not there. Even a worried question is a nod for being.",
+          "traps": {
+            "1": "A cold nod would make her a nag. She asks because she misses you, so cold reads her too harshly.",
+            "2": "Nothing would mean no word from home at all. A question about your dinner is still her looking after you."
+          },
+          "example": "A neighbour's balcony, evening.<br>“You're back late. Have you eaten?”<br>It can feel like a checklist. It is also a sign she noticed you were out."
+        }
+      ]
+    },
+    {
+      "level": "Play",
+      "label": "Play, the day in motion",
+      "intro": "The day, then the walk home. Each beat gives you two or three things to say. Watch the <b>You</b> meter. It drains whenever nobody notices you.",
+      "items": [
+        {
+          "type": "scene",
+          "title": "Monday, 7:50 to 22:30",
+          "setting": "Six places in one day: the flat, the stairwell, Halden reception, Daniel's desk, the canteen and your room. The You meter starts at 70.",
+          "meters": { "you": 70, "them": 50 },
+          "beats": [
+            {
+              "who": "Sam",
+              "text": "“...”",
+              "cue": "3B kitchen, 7:50. Headphones in, pouring cereal.",
+              "lines": [
+                {
+                  "text": "“Morning.” You say it to his back.",
+                  "tag": "ok",
+                  "you": -4,
+                  "them": 0,
+                  "outcome": "He nods at the cereal.",
+                  "why": "A hello aimed at someone's back is too small to land. It counts as a nod, but he barely took it in, so the morning starts thin."
+                },
+                {
+                  "text": "You tap his shoulder. “Hey, I'm the new guy in the back room. We haven't actually met.”",
+                  "tag": "best",
+                  "you": 5,
+                  "them": 6,
+                  "outcome": "He pulls out one earbud. “Oh, yeah! Sam. Sorry, mornings.”",
+                  "why": "You gave him a reason to look up. Saying who you are is the simplest way to get a nod that actually lands."
+                },
+                {
+                  "text": "Say nothing and make tea.",
+                  "tag": "ok",
+                  "you": -8,
+                  "them": 0,
+                  "outcome": "The kettle is the loudest thing in the room.",
+                  "why": "Going quiet so you can't be turned away is the most expensive move of the morning. You gave up a chance to be seen, and the kettle filled the gap."
+                }
+              ]
+            },
+            {
+              "who": "Gran",
+              "text": "“Oh, new boy! You're too thin. Come, come, I've made flattened rice.”",
+              "cue": "stairwell, 8:15, her door open. You have twenty minutes to make the bus.",
+              "lines": [
+                {
+                  "text": "“I'm late, Gran, sorry!” (keep walking)",
+                  "tag": "ok",
+                  "you": -2,
+                  "them": -5,
+                  "outcome": "Her door stays open, but her smile goes. “Late, late, always late,” she tells the stairs.",
+                  "why": "Walking past a warm nod in a hurry lands as a cold one. You were polite about the bus, but she heard only that the flattened rice could wait."
+                },
+                {
+                  "text": "Stop at the door. “I can't today, but I'd love to on Saturday. Keep some for me?”",
+                  "tag": "best",
+                  "you": 4,
+                  "them": 8,
+                  "outcome": "“Saturday it is. And eat something!”",
+                  "why": "You said no to today and yes to Saturday, so she still gets to feed you. A no that comes with a yes keeps the nod flowing."
+                },
+                {
+                  "text": "Go in and eat. Miss the bus and arrive 25 minutes late.",
+                  "tag": "ok",
+                  "you": -10,
+                  "them": 10,
+                  "outcome": "Her kitchen smells of ginger, and the bus leaves without you. You reach Halden 25 minutes late.",
+                  "why": "The warm nod was real, and it cost you your own time. Keep that in mind, because the cost comes back later in the week.",
+                  "flags": ["late_day1"]
+                }
+              ]
+            },
+            {
+              "who": "Halden reception",
+              "text": "“Name?” She prints the badge. “Fourth floor.”",
+              "cue": "9:35. No eye contact. The screen takes most of her attention.",
+              "lines": [
+                {
+                  "text": "“Thanks. Fourth floor, got it.”",
+                  "tag": "best",
+                  "you": -2,
+                  "them": 3,
+                  "outcome": "Her eyes flick up for a second. Nothing else, but a second is something.",
+                  "why": "Thanking her costs nothing and gets a flicker back. The drain still happens here, because you can't pull a nod out of a screen."
+                },
+                {
+                  "text": "Take the badge in silence.",
+                  "tag": "ok",
+                  "you": -4,
+                  "them": 0,
+                  "outcome": "The badge goes on the lanyard. Four more points gone without a word.",
+                  "why": "Taking the badge without a word is what almost everyone does. It keeps the desk moving and leaves you a little lower."
+                }
+              ]
+            },
+            {
+              "who": "Daniel",
+              "text": "“You're the new backend hire. Good. Omar will show you the repo. Standup's at ten, don't be late to it, I hate that.”",
+              "cue": "not standing, not looking up. If you came in late, he adds “…and you already were.”",
+              "lines": [
+                {
+                  "text": "“Got it.”",
+                  "tag": "ok",
+                  "you": -2,
+                  "them": 0,
+                  "outcome": "He's already back on his screen.",
+                  "why": "Got it is correct and flat. Nothing is offered back, so nothing comes back."
+                },
+                {
+                  "text": "“Thanks, I'm looking forward to it. Anything you want me to read before standup?”",
+                  "tag": "best",
+                  "you": 3,
+                  "them": 4,
+                  "outcome": "He looks up, surprised. “…The incident log. Nobody reads it.”",
+                  "why": "Asking for something he knows about gives him a chance to be the expert, and that earns a real answer."
+                },
+                {
+                  "text": "“Sorry, sorry, won't happen again.” (said whether or not you were late)",
+                  "tag": "ok",
+                  "you": -6,
+                  "them": 0,
+                  "outcome": "He frowns. “Won't what happen?”",
+                  "why": "Saying sorry for nothing hands him a fault he never named. He frowns because he doesn't know what you mean."
+                }
+              ]
+            },
+            {
+              "who": "Clara",
+              "text": "“...”",
+              "cue": "canteen, 13:10. Six tables. Clara is alone at one, laughing at her phone. The others are full of people who already know each other.",
+              "lines": [
+                {
+                  "text": "Sit alone and eat fast.",
+                  "tag": "ok",
+                  "you": -6,
+                  "them": 0,
+                  "outcome": "You finish in twelve minutes, and nobody asks where you went.",
+                  "why": "Eating alone with a free seat in view is a way of not being looked at. It feels safe, and it is the same as being invisible."
+                },
+                {
+                  "text": "“Mind if I? I don't know anyone yet.”",
+                  "tag": "best",
+                  "you": 6,
+                  "them": 7,
+                  "outcome": "“Oh thank god, someone newer than me.” She looks up for the first time.",
+                  "why": "Admitting you're new is a small, true thing to say, and it gets a warm nod back.",
+                  "flags": ["clara_lunch"]
+                },
+                {
+                  "text": "Join the big table without asking.",
+                  "tag": "ok",
+                  "you": -3,
+                  "them": -3,
+                  "outcome": "Two people shift along to make room. Nobody introduces themselves.",
+                  "why": "Sitting down without a word puts you in a conversation you weren't asked into. Everyone makes room, and nobody makes you welcome."
+                }
+              ]
+            },
+            {
+              "who": "Mum",
+              "text": "“Did you eat? Your father says you should have taken the offer from the other city. I told him you know what you're doing. Did you eat?”",
+              "cue": "phone, your room, 22:30, the door shut",
+              "lines": [
+                {
+                  "text": "“I ate, Mum. It was a long day. I'm fine.”",
+                  "tag": "ok",
+                  "you": -3,
+                  "them": 0,
+                  "outcome": "“Fine, fine. Everyone's fine. Sleep.” The call ends in forty seconds.",
+                  "why": "The answer is true and closes the door. She got a report, not a conversation, so the nod doesn't land."
+                },
+                {
+                  "text": "“The truth is, nobody really talked to me today. It was weird.”",
+                  "tag": "best",
+                  "you": 8,
+                  "them": 6,
+                  "outcome": "A pause. “…First days are like that. Your father's first day at the mill, he came home and sat on the step for an hour.”",
+                  "why": "Saying the true thing gets the first real nod of the day. It is small and late, but it reaches her.",
+                  "flags": ["ma_open_1"]
+                },
+                {
+                  "text": "“Mum, I'm 27. You don't have to ask if I ate every day.”",
+                  "tag": "ok",
+                  "you": -2,
+                  "them": -8,
+                  "outcome": "“I'll stop asking, then.”",
+                  "why": "That line may be true, but it shuts the door. She loses the one thing she can still do from far away, and you lose a nod."
+                }
+              ]
+            }
+          ],
+          "fallout": {
+            "you": "You run out. You eat standing up and skip the call, and the day closes on an empty screen."
+          },
+          "example": "A new hostel in a new city.<br>Day one, the warden says hello and asks your name. By day ten the corridor has stopped looking up."
+        },
+        {
+          "type": "scene",
+          "title": "Monday, 18:05, the way home",
+          "setting": "The day is nearly over, and four people stand between Halden and your bed. Each of them has a nod to spare if you give them a reason. The You meter starts at 50.",
+          "meters": { "you": 50, "them": 50 },
+          "beats": [
+            {
+              "who": "Halden reception",
+              "text": "“Night.”",
+              "cue": "18:05. Same woman, same flat voice, coat half on. This time she looks up at you.",
+              "lines": [
+                {
+                  "text": "“Night. Thanks for sorting my badge this morning.”",
+                  "tag": "best",
+                  "you": 3,
+                  "them": 5,
+                  "outcome": "A short laugh. “Mind the lift on four, it sticks.”",
+                  "why": "Naming one thing she did tells her it was seen. A nod you hand over tends to come back, and hers is warmer than the one she gave you at 9:35."
+                },
+                {
+                  "text": "“Night.”",
+                  "tag": "ok",
+                  "you": -1,
+                  "them": 0,
+                  "outcome": "The door swings shut behind her. Even, and no more.",
+                  "why": "You matched her word for word. A matched hello keeps things square and adds nothing."
+                },
+                {
+                  "text": "Look at your phone and walk past.",
+                  "tag": "ok",
+                  "you": -5,
+                  "them": -4,
+                  "outcome": "She says it again, to your back and a little flatter. “Night.”",
+                  "why": "She gave you a nod and got none back. People notice that straight away."
+                }
+              ]
+            },
+            {
+              "who": "Omar",
+              "text": "“Repo's a mess, right? Everyone says sorry on day one.”",
+              "cue": "18:20, by the lift on four, bag on one shoulder, grinning at his phone.",
+              "lines": [
+                {
+                  "text": "“It is. I lost an hour in the build folder. Is it always like that?”",
+                  "tag": "best",
+                  "you": 4,
+                  "them": 5,
+                  "outcome": "He pockets the phone. “Always. I'll draw you a map tomorrow.”",
+                  "why": "You told him one small true thing and asked for his help. Admitting you struggled gives him a nod to hand over, and he hands it over."
+                },
+                {
+                  "text": "“Yeah, a bit.”",
+                  "tag": "ok",
+                  "you": -2,
+                  "them": 0,
+                  "outcome": "He nods. The lift comes, and you ride down watching the floor numbers.",
+                  "why": "True and flat. Nothing gets offered, so nothing comes back."
+                },
+                {
+                  "text": "“I think I got everything wrong today.”",
+                  "tag": "ok",
+                  "you": -3,
+                  "them": 2,
+                  "outcome": "“You didn't. Stop it.” He means it kindly, and it is over in a breath.",
+                  "why": "Fishing for comfort gets a quick, polite answer. It is a nod, though a thin one, and he only gave it because you asked."
+                }
+              ]
+            },
+            {
+              "who": "Sam",
+              "text": "“Oh. Hey. Sorry about this morning, I'm not a person before ten.”",
+              "cue": "3B kitchen, 19:10. Noodles in the pan, headphones round his neck for once.",
+              "lines": [
+                {
+                  "text": "“No worries. Is there anything about this flat I should know?”",
+                  "tag": "best",
+                  "you": 5,
+                  "them": 6,
+                  "outcome": "He puts the fork down. “Yeah. Don't use the blue towel. And the boiler hates Mondays.”",
+                  "why": "Asking for something only he knows gives him a nod to give, and he gives you more than you asked for."
+                },
+                {
+                  "text": "“Don't worry about it.”",
+                  "tag": "ok",
+                  "you": -1,
+                  "them": 1,
+                  "outcome": "“Cool.” He goes back to the noodles.",
+                  "why": "Kind, and it closes the topic. The nod you gave him was real, and the one you got back is tiny."
+                },
+                {
+                  "text": "Take your tea to your room without a word.",
+                  "tag": "ok",
+                  "you": -7,
+                  "them": 0,
+                  "outcome": "Your door clicks. A moment later you hear his headphones go back on.",
+                  "why": "Slipping away protects you from a cold reply, and it costs you the warm one he was holding out. It is the biggest drain of the evening."
+                }
+              ]
+            },
+            {
+              "who": "Gran",
+              "text": "“You haven't forgotten Saturday, have you? Eleven o'clock.”",
+              "cue": "3B front door, 20:30. She has climbed the stairs with a covered plate.",
+              "lines": [
+                {
+                  "text": "“Eleven on Saturday. I wrote it on my hand.” (hold it up)",
+                  "tag": "best",
+                  "you": 4,
+                  "them": 7,
+                  "outcome": "She laughs and presses the plate into your hands. “Eat it hot!”",
+                  "why": "A small proof that you listened is worth more to her than a promise. It earns the warmest nod of the evening, and a hot dinner."
+                },
+                {
+                  "text": "“I'll try to make it.”",
+                  "tag": "ok",
+                  "you": -3,
+                  "them": -4,
+                  "outcome": "“Try, try.” She sets the plate on the table, and the smile stays on her mouth only.",
+                  "why": "A hedge in answer to a warm invitation reads as cold. She asked for a yes and got a maybe."
+                },
+                {
+                  "text": "“Gran, you really don't have to feed me.”",
+                  "tag": "ok",
+                  "you": -4,
+                  "them": -6,
+                  "outcome": "“Of course I don't have to,” she says, and the plate is on the table before you finish.",
+                  "why": "Waving off a warm nod tells her it was not wanted. She keeps giving, and you take less than she gave."
+                }
+              ]
+            }
+          ],
+          "example": "A shared lift at the end of a long shift.<br>“Night!” “Night. Thanks for covering the desk.”<br>Two short lines, and both people walk out lighter."
+        }
+      ]
+    },
+    {
+      "level": "Analyse",
+      "label": "Analyse, explain it",
+      "items": [
+        {
+          "type": "pick",
+          "who": "You",
+          "text": "Nothing bad happened all day, and you still ran out of steam by night. What explains it?",
+          "options": [
+            "You were late, and everyone was cross with you",
+            "Few people gave you nods, and a person runs low without them",
+            "You talked too much on the bus and tired yourself out"
+          ],
+          "answer": 1,
+          "why": "Being noticed is a need. Most of the day had nothing for you, and cold nods still counted. A day with almost none drains you the way a day without food does.",
+          "traps": {
+            "0": "Lateness explains one bad moment, but nobody was angry with you all day. Blaming it would have you apologising to everyone, which is one more drain.",
+            "2": "Talking on the bus is a guess with no evidence behind it. You barely talked to anyone all day, and that is the problem."
+          },
+          "example": "A class reunion, a week later.<br>Two old classmates say hello and go back to their drinks.<br>You drive home tired. Nobody was rude, and nobody looked for you either."
+        }
+      ]
+    }
+  ],
+  "debrief": {
+    "nadia": "Being noticed is food. A day without it drains you the way a day without food does. Daniel's “don't be late” counted, and so did the receptionist saying “Name?”. Cold nods are still food, so count them too.",
+    "bookTerm": "Stroke",
+    "bookNote": "The books call this a stroke: any sign that someone noticed you exist, from a hello to a glare, and people need a steady supply of them to stay well."
+  },
+  "reflection": {
+    "prompt": "Think about the last week. Which person noticed you most, and did you let them?"
+  },
+  "next": "1.2"
+}

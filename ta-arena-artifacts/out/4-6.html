@@ -1,0 +1,803 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Boss: Why Don&#x27;t You–Yes But · TA Arena</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    color-scheme: light;
+    --bg: #171233; --bg-2: #241c47;
+    --surface: #f2eefb; --surface-2: #c9b8e6; --surface-3: #bda8e2;
+    --accent: #6c5fe0; --accent-deep: #4a3fa0;
+    --pink: #d9699f; --blue: #5b8fd9;
+    --ok: #1f7568; --wrong: #a8407a; --alt: #5c4fb0;
+    --text: #231c3f; --text-dim: #675f82;
+    --on-bg: #ece7fb; --on-bg-dim: #b4abd9;
+    --shadow: rgba(23, 18, 51, 0.28);
+    --parent: #7b5fe0; --adult: #4f8fd9; --childv: #d9699f;
+  }
+  [hidden] { display: none !important; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    background-image:
+      radial-gradient(ellipse 820px 560px at 12% -8%, var(--bg-2), transparent),
+      radial-gradient(ellipse 680px 520px at 108% 12%, #2c1f4a, transparent),
+      radial-gradient(ellipse 600px 420px at 60% 110%, #2a1840, transparent);
+    color: var(--on-bg);
+    font-family: "IBM Plex Sans", system-ui, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 28px 16px 56px;
+  }
+  .stage { width: 100%; max-width: 580px; min-width: 0; }
+
+  .masthead { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 16px; padding: 0 4px; }
+  .series { font-family: "IBM Plex Mono", monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--pink); font-weight: 600; }
+  .series small { color: var(--on-bg-dim); font-weight: 500; letter-spacing: 0.08em; }
+  .tag { font-family: "IBM Plex Mono", monospace; font-size: 11px; color: var(--on-bg-dim); text-decoration: none; white-space: nowrap; }
+  .tag:hover { color: var(--pink); }
+  a:focus-visible, button:focus-visible, textarea:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  .card { background: var(--surface); color: var(--text); border-radius: 22px; box-shadow: 0 24px 60px var(--shadow); padding: 32px 28px 28px; position: relative; min-width: 0; overflow-wrap: anywhere; }
+  .card:focus { outline: none; }
+  .card-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; margin-bottom: 18px; }
+  .card-head > div:first-child { min-width: 0; }
+  h1 { font-family: "Fraunces", Georgia, serif; font-weight: 500; font-size: 27px; line-height: 1.2; margin: 0 0 6px; text-wrap: balance; letter-spacing: -0.01em; }
+  h1.h2 { font-size: 21px; margin: 0 0 12px; }
+  .deck { font-size: 14.5px; color: var(--text-dim); margin: 0; max-width: 40ch; line-height: 1.5; }
+  .case-no { font-family: "IBM Plex Mono", monospace; font-size: 11px; color: var(--text-dim); text-align: right; white-space: nowrap; padding-top: 4px; }
+  .tagline { display: inline-block; font-family: "IBM Plex Mono", monospace; font-size: 11px; color: var(--text-dim); background: var(--surface-2); border-radius: 999px; padding: 4px 12px; margin: 0 0 16px; letter-spacing: 0.03em; }
+  .kicker { font-family: "IBM Plex Mono", monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-dim); margin: 0 0 10px; }
+
+  .progress { display: flex; gap: 5px; margin-bottom: 24px; }
+  .progress i { height: 5px; flex: 1; background: var(--surface-2); border-radius: 999px; overflow: hidden; position: relative; }
+  .progress i.done { background: linear-gradient(90deg, var(--accent), var(--pink)); }
+  .progress i.current::after { content: ""; position: absolute; inset: 0; width: 50%; background: var(--accent); opacity: .55; }
+
+  .round-label { font-family: "IBM Plex Mono", monospace; font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-dim); margin-bottom: 10px; }
+  .round-intro { font-size: 15px; line-height: 1.55; color: var(--text-dim); margin: 0 0 16px; }
+
+  .exchange { background: var(--surface-2); border-radius: 16px; padding: 14px 16px; margin: 0 0 18px; }
+  .exchange .line { font-size: 15.5px; line-height: 1.5; margin: 0 0 8px; }
+  .exchange .line:last-child { margin-bottom: 0; }
+  .exchange .who { font-family: "IBM Plex Mono", monospace; font-size: 11px; color: var(--text-dim); display: block; margin-bottom: 2px; letter-spacing: 0.03em; }
+  .exchange .cue { font-size: 13.5px; color: var(--text-dim); font-style: italic; margin: 6px 0 12px; }
+  .exchange .cue:last-child { margin-bottom: 0; }
+
+  .lede { font-family: "Fraunces", Georgia, serif; font-size: 17.5px; font-weight: 500; font-style: italic; color: var(--accent-deep); line-height: 1.5; margin: 0 0 14px; }
+  .prompt { font-size: 16.5px; line-height: 1.55; margin: 0 0 18px; font-weight: 500; }
+  .setting { font-size: 15px; line-height: 1.55; color: var(--text-dim); font-style: italic; margin: 0 0 16px; }
+  .scene-title { font-family: "Fraunces", Georgia, serif; font-size: 19px; font-weight: 500; line-height: 1.3; margin: 0 0 6px; }
+
+  .choices { display: flex; flex-direction: column; gap: 10px; }
+  button.choice {
+    font-family: "IBM Plex Sans", sans-serif; font-size: 15px; font-weight: 500; text-align: left;
+    padding: 14px 17px; min-height: 44px; border-radius: 14px; border: none; background: var(--surface-2); color: var(--text);
+    cursor: pointer; transition: background 120ms, transform 80ms, box-shadow 120ms; line-height: 1.4;
+  }
+  button.choice:hover { background: var(--surface-3); box-shadow: 0 6px 16px rgba(108,95,224,0.16); }
+  button.choice:active { transform: scale(0.99); }
+  button.choice.correct { background: color-mix(in srgb, var(--ok) 20%, var(--surface)); box-shadow: 0 0 0 2px color-mix(in srgb, var(--ok) 45%, transparent) inset; }
+  button.choice.wrong { background: color-mix(in srgb, var(--wrong) 18%, var(--surface)); box-shadow: 0 0 0 2px color-mix(in srgb, var(--wrong) 40%, transparent) inset; }
+  button.choice.amber { background: color-mix(in srgb, var(--alt) 18%, var(--surface)); box-shadow: 0 0 0 2px color-mix(in srgb, var(--alt) 40%, transparent) inset; }
+  button.choice[disabled] { cursor: default; opacity: 0.6; }
+  button.choice[disabled]:hover { background: var(--surface-2); box-shadow: none; }
+  button.choice.correct[disabled], button.choice.wrong[disabled], button.choice.amber[disabled] { opacity: 1; }
+  button.choice.pal { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+
+  .pill { display: inline-block; max-width: 100%; font-family: "IBM Plex Mono", monospace; font-size: 11.5px; font-weight: 600; padding: 3px 10px; border-radius: 999px; color: #fff; letter-spacing: 0.02em; background: var(--accent); overflow-wrap: anywhere; }
+  .pill.p { background: var(--parent); }
+  .pill.a { background: var(--adult); }
+  .pill.c { background: var(--childv); }
+
+  .stamp { display: inline-flex; align-items: center; gap: 6px; font-family: "IBM Plex Mono", monospace; font-size: 12px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; padding: 5px 12px; border-radius: 999px; margin-bottom: 12px; color: #fff; }
+  .stamp.ok { background: var(--ok); }
+  .stamp.cross { background: var(--wrong); }
+  .stamp.amber { background: var(--alt); }
+
+  .why-box { border-radius: 16px; padding: 16px 18px 17px 20px; margin: 0 0 16px; border-left: 5px solid transparent; box-shadow: 0 8px 22px rgba(23,18,51,0.12); }
+  .why-box .stamp { margin-bottom: 10px; }
+  .why-box .feedback { margin: 0 0 12px; }
+  .why-box .feedback:last-child { margin-bottom: 0; }
+  .why-box.ok { background: color-mix(in srgb, var(--ok) 45%, white); border-left-color: var(--ok); }
+  .why-box.cross { background: color-mix(in srgb, var(--wrong) 42%, white); border-left-color: var(--wrong); }
+  .why-box.amber { background: color-mix(in srgb, var(--alt) 40%, white); border-left-color: var(--alt); }
+  .why-box.neutral { background: color-mix(in srgb, var(--accent) 22%, white); border-left-color: var(--accent); }
+
+  .feedback { font-size: 16px; line-height: 1.6; color: var(--text); margin: 0 0 14px; padding-top: 2px; }
+  .feedback b { color: inherit; }
+
+  .example { background: color-mix(in srgb, var(--accent) 38%, white); border-left: 5px solid var(--accent); border-radius: 16px; padding: 14px 16px 15px 18px; margin: 0 0 18px; font-size: 15px; line-height: 1.55; color: var(--text); box-shadow: 0 8px 22px rgba(23,18,51,0.10); }
+  .ex-label { font-family: "IBM Plex Mono", monospace; font-size: 10.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent-deep); margin-bottom: 6px; }
+
+  .nextbar { display: flex; justify-content: flex-end; align-items: center; gap: 10px; flex-wrap: wrap; margin-top: 4px; }
+  button.next, a.next {
+    font-family: "IBM Plex Mono", monospace; font-size: 13px; font-weight: 600; letter-spacing: 0.03em;
+    background: linear-gradient(135deg, var(--accent), var(--pink)); color: #fff; border: none; text-decoration: none;
+    padding: 12px 20px; min-height: 44px; border-radius: 999px; cursor: pointer; box-shadow: 0 10px 24px rgba(108,95,224,0.35);
+    display: inline-flex; align-items: center; justify-content: center; text-align: center;
+  }
+  button.next:hover, a.next:hover { filter: brightness(1.08); transform: translateY(-1px); }
+  button.next[disabled] { opacity: .45; cursor: default; box-shadow: none; transform: none; filter: none; }
+  .next-soon { font-size: 14px; color: var(--text-dim); margin: 0; }
+
+  .meters { display: flex; flex-direction: column; gap: 10px; margin: 0 0 18px; }
+  .meter { display: grid; grid-template-columns: 52px 1fr 40px; align-items: center; gap: 10px; font-family: "IBM Plex Mono", monospace; font-size: 12px; }
+  .meter .name { color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.08em; font-size: 11px; }
+  .meter .track { height: 10px; border-radius: 999px; background: var(--surface-2); overflow: hidden; }
+  .meter .fill { display: block; height: 100%; width: 0; border-radius: 999px; background: linear-gradient(90deg, var(--accent), var(--pink)); transition: width 300ms ease; }
+  .meter.them .fill { background: linear-gradient(90deg, var(--blue), var(--accent)); }
+  .meter.empty .fill { background: var(--wrong); }
+  .meter .num { text-align: right; color: var(--text); font-weight: 600; }
+
+  .total { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 12px; font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--text-dim); margin: 0 0 8px; }
+  .total b { font-family: "Fraunces", Georgia, serif; font-size: 28px; font-weight: 500; color: var(--text); }
+  .band { position: relative; height: 10px; border-radius: 999px; background: var(--surface-2); overflow: hidden; margin: 0 0 8px; }
+  .band .fill { position: absolute; left: 0; top: 0; bottom: 0; width: 0; background: linear-gradient(90deg, var(--accent), var(--pink)); transition: width 300ms ease; }
+  .band .fill.over { background: var(--wrong); }
+  .val { flex: none; font-family: "IBM Plex Mono", monospace; font-size: 12.5px; font-weight: 600; color: #fff; background: var(--accent-deep); border-radius: 999px; padding: 3px 10px; white-space: nowrap; }
+  .counter-actions { display: flex; justify-content: flex-end; gap: 10px; flex-wrap: wrap; margin-top: 16px; }
+  button.ghost { font-family: "IBM Plex Mono", monospace; font-size: 13px; font-weight: 600; letter-spacing: 0.03em; background: transparent; color: var(--text); border: 2px solid var(--surface-3); padding: 10px 18px; min-height: 44px; border-radius: 999px; cursor: pointer; }
+  button.ghost[disabled] { opacity: .45; cursor: default; }
+  .counter-fb:empty, .order-fb:empty { display: none; }
+
+  .sort-item { margin: 0 0 16px; }
+  .sort-item + .sort-item { padding-top: 16px; border-top: 1px solid var(--surface-2); }
+  .sort-item .exchange { margin-bottom: 12px; }
+  .seq { list-style: none; margin: 0 0 16px; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+  .seq:empty { display: none; }
+  .seq li { display: grid; grid-template-columns: 28px 1fr; gap: 10px; background: var(--surface-2); border-radius: 14px; padding: 12px 14px; }
+  .seq .n { font-family: "IBM Plex Mono", monospace; font-weight: 600; color: var(--accent-deep); }
+  .seq .ct { display: block; font-size: 15px; line-height: 1.5; }
+  .seq .why { display: block; font-size: 14px; line-height: 1.5; color: var(--text-dim); margin-top: 6px; }
+  .pool { margin: 0 0 14px; }
+
+  .intro-list { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 9px; }
+  .rules-box { background: var(--surface-2); border-radius: 16px; padding: 16px 18px; margin: 18px 0; }
+  .rules-box .round-label { margin-bottom: 10px; }
+  .rules-list { margin: 0; padding-left: 0; list-style: none; display: flex; flex-direction: column; gap: 9px; }
+  .rules-list li { font-size: 14px; line-height: 1.45; display: flex; gap: 10px; color: var(--text); }
+  .rules-list .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); flex: none; margin-top: 7px; }
+  .ask { background: var(--bg-2); color: var(--on-bg); border-radius: 16px; padding: 14px 16px 15px; margin: 0 0 18px; }
+  .ask .kicker { color: var(--on-bg-dim); margin-bottom: 6px; }
+  .ask p { font-family: "Fraunces", Georgia, serif; font-size: 17px; line-height: 1.45; margin: 0; }
+
+  .end-badge { font-family: "IBM Plex Mono", monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ok); margin-bottom: 8px; }
+  .source { margin-top: 20px; padding: 14px 16px; border-radius: 14px; background: var(--surface-2); font-size: 12.5px; color: var(--text-dim); line-height: 1.5; }
+  .source b { color: var(--text); }
+  .end-nav { margin-top: 18px; }
+
+  .reflect-tag { font-family: "IBM Plex Mono", monospace; font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #fff; background: linear-gradient(135deg, var(--accent), var(--pink)); display: inline-block; padding: 5px 12px; border-radius: 999px; margin-bottom: 14px; }
+  textarea.reflect-box { display: block; width: 100%; min-height: 120px; resize: vertical; font-family: "IBM Plex Sans", sans-serif; font-size: 15.5px; line-height: 1.55; color: var(--text); background: var(--surface-2); border: none; border-radius: 16px; padding: 14px 16px; margin-bottom: 18px; box-shadow: 0 0 0 2px transparent inset; }
+  textarea.reflect-box::placeholder { color: var(--text-dim); }
+  textarea.reflect-box:focus { outline: none; box-shadow: 0 0 0 2px var(--accent) inset; }
+
+  @media (max-width: 480px) {
+    body { padding: 20px 12px 40px; }
+    .card { padding: 26px 18px 22px; }
+    h1 { font-size: 24px; }
+    h1.h2 { font-size: 20px; }
+    .meter { grid-template-columns: 44px 1fr 36px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
+  }
+</style>
+</head>
+<body>
+
+<div class="stage">
+  <div class="masthead">
+    <div class="series" id="series">TA Arena</div>
+    <a class="tag" id="hubLink" href="#" hidden>← All games</a>
+  </div>
+  <main class="card" id="card" tabindex="-1">
+    <p class="deck">Loading the game.</p>
+    <noscript><p class="deck">This game needs JavaScript to run.</p></noscript>
+  </main>
+</div>
+
+<script>window.TA_GAME = {"slot":"4.6","title":"Boss: Why Don't You\u2013Yes But","world":4,"worldName":"The Thesaurus","week":4,"weekName":"Traps","mechanic":"Many-handed","concept":"After this one you can stop a yes, but loop at a Sunday table by handing the problem back to the one who owns it, without leaving the room.","plainWord":"yes, but","bookTerm":"Why Don't You, Yes But","bookIdea":"Why Don't You, Yes But is a party game in which one person presents a problem and the others offer solutions, each turned down with a yes, but. Its aim is to reject suggestions, not to get one, and the payoff is the silence when the helpers run out.","bookSource":"Games People Play, ch. 8","opener":{"setting":"Sunday, 7:20pm, The Corner Table, the long table by the window. Five people and one problem. Nadia is at the counter with her back turned.","lines":[{"who":"Clara","text":"\u201cDaniel moved the release to Friday, again. I've done the test plan twice, and I can't say no to him.\u201d","cue":"both hands round a cup of tea, not drinking it"},{"who":"Nadia","text":"\u201cThen say it to the table, and listen to what comes back.\u201d","cue":"at the counter, wiping a cup, not turning round yet"}],"ask":"Stay at the table without giving advice, and find the one line that hands the problem back to the person who owns it."},"rounds":[{"level":"Spot","label":"Spot, round 1","intro":"Four moves run this table: a suggestion, a yes, but, the helper's sigh and a hand-back. Tap the move in each line.","items":[{"type":"pick","who":"Omar","text":"\u201cWhy don't you just tell him no, Clara? Say it once and see what happens.\u201d","cue":"already reaching for the biscuits","options":["a suggestion","a yes, but","a hand-back"],"answer":0,"why":"It starts with why don't you and offers a fix. Nothing is asked of Clara except to take the fix. That is a suggestion, and it is the first step of the loop.","traps":{"1":"This would be a yes, but if Clara had just turned down a fix and Omar were answering her. Here Omar has heard no reason yet, he is only offering one.","2":"This would be a hand-back if it gave the problem to Clara with a question about what she will do. Omar has taken the problem off her and put his own fix on it."},"example":"A driver at a bus stop, Monday. \u201cWhy don't you just take the auto, sir? Quicker.\u201d The man with the umbrella says nothing and keeps his place in the queue."},{"type":"pick","who":"Clara","text":"\u201cYes, but he'll say I'm not a team player. And Omar, you don't even work for him.\u201d","cue":"shaking her head, a little too quickly","options":["a suggestion","a yes, but","a hand-back"],"answer":1,"why":"She grants that the idea has a point, then gives the reason it won't work. That is the yes, but, and it keeps the loop running by inviting the next suggestion.","traps":{"0":"This would be a suggestion if she were offering a plan for the release. Here she is only explaining why a plan will fail.","2":"This would be a hand-back if she were saying the decision was hers to make. She is handing back a reason, not the decision."},"example":"A mother at the school gate: \u201cWhy don't you buy the uniform online? Yes, but the sizes are wrong, and the shop never answers.\u201d"},{"type":"pick","who":"Maya","text":"\u201cI'm only trying to help you! Why won't you just listen to one idea?\u201d","cue":"hands up, leaning back in the chair","options":["the helper's sigh","a suggestion","a hand-back"],"answer":0,"why":"The helper is frustrated that the fix was refused. The book calls this side I'm Only Trying to Help You, and the helper's bewilderment at not being thanked is what it pays out. Now the one with the problem has to manage the helper's feelings, and the problem stops being hers.","traps":{"1":"This would be a suggestion if it proposed a new action. It doesn't. It only complains that the last one was refused.","2":"This would be a hand-back if it asked Clara what she will do. Maya is asking Clara to take her advice, which is the opposite."},"example":"A friend at a wedding: \u201cI'm only trying to help you, why won't you let me fix the seating?\u201d The seating stays as it is, and both of you are cross."},{"type":"pick","who":"Nadia","text":"\u201cThat's a difficult problem. What are you going to do about it?\u201d","cue":"from the counter, still not turning round","options":["a suggestion","the helper's sigh","a hand-back"],"answer":2,"why":"It names the problem as real, then gives it back to the person who owns it. There is no fix in it, no reason and no sigh. Only a question about what happens next, and it goes to Clara.","traps":{"0":"This would be a suggestion if it said what Clara should do next. It asks her what she will do, which is a different job.","1":"This would be the helper's sigh if it complained that nobody listens. It doesn't blame anyone, and it hands the problem back."},"example":"A teacher at parents' evening: \u201cThat's a difficult spelling problem. What are you going to do about it at home?\u201d The parent says, \u201cRead with him, I suppose.\u201d"}]},{"level":"Play","label":"Play, the week in motion","intro":"Yes-But Night. Five people and one problem, and you are one of the helpers. Keep both meters above half at the end. Each suggestion you make feeds the loop, so watch every line.","items":[{"type":"scene","title":"Sunday, 7:24pm, the long table","setting":"The Corner Table, the long table by the window. Clara has her cup in both hands, and the others have their chairs pulled in. <i>The Heckler, in your head: \u201cGive her one good idea, and everyone will see you know what you're doing.\u201d<\/i>","meters":{"you":60,"them":50},"beats":[{"who":"Clara","text":"\u201cYes, but he'll say I'm not a team player. And Omar, you don't even work for him.\u201d","cue":"shaking her head, a little too quickly","lines":[{"text":"\u201cClara, that's a difficult problem. What are you going to do about it?\u201d","tag":"best","you":4,"them":4,"outcome":"Clara looks at the table for a long second. \u201cTell him Friday's too soon, I suppose. In writing.\u201d It is her answer, and nobody else is holding it.","why":"You stop feeding the loop and hand the problem back to the person who owns it. Her answer is slower than a fix and better, because it is hers."},{"text":"\u201cThen tell him that, and say you'll hit the Friday test plan.\u201d","tag":"ok","you":-2,"them":1,"outcome":"\u201cYes, but Friday's the test plan,\u201d Clara says, and Maya leans in with the next idea.","why":"It sounds kind, and it is still a suggestion. The loop takes it as a new fix, and Clara's next yes, but is already loaded."},{"text":"\u201cI'm only trying to help you, Clara. Why do you keep saying no?\u201d","tag":"game","you":-3,"them":-6,"outcome":"Clara looks at you as though you had changed sides. \u201cYou're only trying to help yourself,\u201d she says, and the table goes silent.","why":"The helper's sigh turns the problem into your hurt feelings. Clara now has to look after you, and the release has dropped off the table."}]},{"who":"Maya","text":"\u201cWhy don't you do the test on Saturday? Then he can't say you were late.\u201d","cue":"already wiping the table in front of you","lines":[{"text":"\u201cThat's a difficult problem, Clara. What are you going to do about it?\u201d","tag":"best","you":4,"them":4,"outcome":"Maya stops wiping. Clara says, \u201cI don't know yet,\u201d and it is the first real pause at the table.","why":"The same line, handed back again. A second suggestion arrived, and you did not pick it up. The owner has to choose, and she is slower now, which is what you want."},{"text":"\u201cSaturday might work, if you're not wiped out by then.\u201d","tag":"ok","you":-2,"them":1,"outcome":"\u201cI'm wiped out every Saturday,\u201d Maya says, and Clara says, \u201cYes, but I'd have to ask Omar.\u201d","why":"A kind-looking yes that keeps the loop turning. You joined the suggestions, so the next yes, but now has two owners."},{"text":"\u201cMaya, you always take the weekend and then complain. I'm only trying to help.\u201d","tag":"game","you":-3,"them":-5,"outcome":"Maya puts the cloth down. \u201cRight, so it's my fault now,\u201d she says, and the table splits in two.","why":"The helper's sigh, aimed at a third person. The problem now has two owners, and both of them are cross with you."}]},{"who":"Clara","text":"\u201cYes, but Omar's review is on Saturday, and Daniel would notice. And Maya, you work weekends. I don't.\u201d","cue":"one finger tapping the rim of the cup","lines":[{"text":"\u201cThat's a difficult problem, Clara. What are you going to do about it?\u201d","tag":"best","you":4,"them":4,"outcome":"Clara breathes out. \u201cI'll tell him Friday is too soon, on Monday, in writing.\u201d The sentence is hers.","why":"The third hand-back, short and flat. Each yes, but has been answered with the same question, and the question is what finally breaks the loop."},{"text":"\u201cThen give the test to Omar on Saturday, and you do the release.\u201d","tag":"ok","you":-2,"them":0,"outcome":"Omar says, \u201cWhy would I do her test?\u201d and the table starts arguing about Saturday.","why":"A new fix, handed to someone who never agreed to take it. The loop gets a fresh set of yes, buts."},{"text":"\u201cYes, but you're the one who keeps saying yes to Daniel, Clara.\u201d","tag":"game","you":-3,"them":-6,"outcome":"Clara's face closes. \u201cThanks,\u201d she says, and reaches for the tea she still hasn't drunk.","why":"A verdict on her habits, dressed up as a remark. It makes the table choose sides, and the problem disappears behind the choosing."}]},{"who":"Sam","text":"\u201cWhy don't you quit? There are a thousand jobs in the city, and I'd have quit by now.\u201d","cue":"grinning, pushing the biscuit plate towards you","lines":[{"text":"\u201cThat's a difficult problem, Clara. What are you going to do about it?\u201d","tag":"best","you":4,"them":4,"outcome":"Sam laughs, then stops. \u201cFair. It's your release,\u201d he says, and the table waits.","why":"The line gives the problem back again while the joke is still in the air. The table has nothing to answer with except Clara's own plan."},{"text":"\u201cHaha, not everyone is you, Sam. Maybe look at the job boards this week?\u201d","tag":"ok","you":-2,"them":0,"outcome":"\u201cMaybe,\u201d Clara says, which is the most polite yes, but on the table.","why":"A joke, then a suggestion. The joke made the suggestion easy to take, and the loop found a softer way to keep going."},{"text":"\u201cSam, you sell things for a living. You'd sell anyone anything. I'm only trying to help.\u201d","tag":"game","you":-4,"them":-6,"outcome":"Sam's grin drops, and the table turns to you. \u201cThat's not fair,\u201d he says, and Omar says nothing.","why":"The helper's sigh, now aimed at the adviser beside you. You have made the table about you, and the problem has slid under the biscuits."}]},{"who":"Clara","text":"\u201cYes, but if I quit, Daniel wins, and I'm not giving him that either.\u201d","cue":"quieter now, looking at the window","lines":[{"text":"\u201cThat's a difficult problem, Clara. What are you going to do about it?\u201d","tag":"best","you":4,"them":5,"outcome":"She turns the cup once, slowly. \u201cI'm going to say Friday is too soon, in writing, before the review.\u201d","why":"The hand-back worked because it stayed short. Her answer is the first one all evening that nobody pushed into her hands."},{"text":"\u201cOkay, then Monday for the test, and Friday for the release.\u201d","tag":"ok","you":-2,"them":1,"outcome":"\u201cMonday,\u201d Clara repeats, and Sam says, \u201cSee? That's the answer,\u201d and the loop starts up again.","why":"You offered a schedule, which is still a fix. Clara can now argue about the schedule, and the yes, but has a new target."},{"text":"\u201cYou're making excuses, Clara. I'm trying to help you.\u201d","tag":"game","you":-4,"them":-6,"outcome":"Clara puts her cup down, hard. \u201cThen I'll sort it out on my own,\u201d she says, and gets up.","why":"A trap move: you named the excuse and then made the helping the issue. The one with the problem leaves the table, and the loop wins the night."}]}],"payoff":"Clara picks up her bag and says she will sort it out alone. The table goes quiet, and the problem goes home with her, still unanswered.","fallout":{"them":"Clara stands and walks out into the street with her bag. Nobody offers her a lift, and the group's next suggestion is about the biscuits."}},{"type":"scene","title":"Sunday, 8:10pm, the cold tea","setting":"The same table, the tea gone cold in the cups. Nadia turns from the counter with a cloth in her hand, for the first time all evening. <i>The Heckler, in your head: \u201cSay something clever now, and they will all remember it.\u201d<\/i>","meters":{"you":50,"them":50},"beats":[{"who":"Nadia","text":"\u201cWhat just happened?\u201d","cue":"putting the cloth down, one hand on the counter","lines":[{"text":"\u201cEveryone gave Clara a suggestion, and she said yes, but to each one. I stopped giving advice and handed the problem back to her.\u201d","tag":"best","you":4,"them":3,"outcome":"Nadia nods. \u201cGood. Keep going, and see where it leads her.\u201d","why":"A plain account of the loop: the advice, the yes, but, and the hand-back that stopped the feeding. Naming the move is what lets you make the right one again on purpose."},{"text":"\u201cClara didn't want any of our ideas. That's her problem.\u201d","tag":"ok","you":-2,"them":-2,"outcome":"Nadia says, \u201cIs it? Look at who offered the most ideas.\u201d","why":"Partly true, and it puts the blame on Clara. The loop had four helpers, and you were one of them. The diagnosis has to include your own part."},{"text":"\u201cClara is the difficult one here, and I'm the only one who tried.\u201d","tag":"game","you":-4,"them":-6,"outcome":"Nadia says, \u201cThat's the trap, and you've just shown us. Thanks,\u201d and goes back to the counter.","why":"The helper's sigh, said out loud to the group. The diagnosis you were asked for turns into another round of the same loop, and the table learns nothing."}]},{"who":"Clara","text":"\u201cI don't know. Maybe I'll tell him Friday is too soon, on Monday, in writing. Then I'll see what he says.\u201d","cue":"one hand flat on the table, the cup pushed aside","lines":[{"text":"\u201cThen say that to him in your words, Clara, and tell us on Monday what he said.\u201d","tag":"best","you":3,"them":4,"outcome":"She nods. \u201cMonday. In writing. I'll tell you what he says.\u201d","why":"The problem and the answer both stay with her, and the check-in is a date, not a rescue. The loop has nothing left to feed on."},{"text":"\u201cGood, and Omar can read your email before you send it.\u201d","tag":"ok","you":-2,"them":0,"outcome":"Omar says, \u201cHappy to,\u201d and Clara says, \u201cYes, but send it tonight,\u201d and the table laughs.","why":"You handed her a helper for the email. The rescue is small, but it puts advice back on the table, and a yes, but comes straight after it."},{"text":"\u201cDon't blame me if Daniel is furious, Clara.\u201d","tag":"game","you":-4,"them":-6,"outcome":"Clara looks at her cup and says nothing, and the table lets the silence sit.","why":"A trap move: you put the consequence on her before she has acted. The loop ends with blame, and nobody has the answer."}]},{"who":"Omar","text":"\u201cWell, that was four people's advice, and not one of us got to finish a sentence.\u201d","cue":"pulling his coat on, a bad back in every movement","lines":[{"text":"\u201cThen the end of the sentence is Clara's to write, Omar. What did she say she'll do?\u201d","tag":"best","you":3,"them":3,"outcome":"Omar pauses at the door. \u201cMonday, in writing. Right,\u201d he says, and sits back down.","why":"You send the question back to the owner one more time. Omar has to hear her answer rather than finish his own."},{"text":"\u201cThen let's all send her a list of what to do.\u201d","tag":"ok","you":-2,"them":-1,"outcome":"\u201cGood, a list,\u201d Sam says, and reaches for his phone.","why":"A list is another round of suggestions. It sounds like teamwork, and it starts the loop again."},{"text":"\u201cYou're leaving because nobody let you finish, Omar. Like always.\u201d","tag":"game","you":-3,"them":-5,"outcome":"Omar says nothing, goes out, and the door shuts behind him.","why":"A trap move: you named his habit and used it as the verdict. He leaves, the table loses an adviser, and the problem stays exactly where it started."}]}],"payoff":"The table breaks up before the tea is warm. Clara takes the problem home, and the advice goes home with everyone else."}]},{"level":"Analyse","label":"Analyse, explain it","intro":"Two questions about the table. Pick the explanation that fits what happened.","items":[{"type":"pick","who":"Nadia","text":"Why does the yes, but keep the table going round?","cue":"the cold tea, the biscuits, nobody leaving","options":["Because Clara secretly enjoys being given advice, and wants more of it.","Each suggestion gets a reason it can't work, so the helpers keep offering new ones and nobody has to act.","Because the helpers are being paid to keep talking."],"answer":1,"why":"The yes, but does two jobs. It turns each fix down, and it invites the next one. The aim is to reject the suggestions, not to get one, so the loop runs until the helpers run dry. The silence that follows is the payoff, because it shows the helpers to be inadequate. Meanwhile the problem stays at the table.","traps":{"0":"Clara does not want the advice. The point of the loop is to turn suggestions down, so more advice is not what she is after. The loop needs the suggestions to keep coming and each one to be turned down.","2":"Nobody is paid for advice. It keeps going because every suggestion invites the next one."},"example":"A family dinner: \u201cWhy don't you ask the landlord for a fresh coat of paint?\u201d \u201cYes, but he never answers.\u201d \u201cWhy don't you write to him, then?\u201d \u201cYes, but he never reads the post.\u201d"},{"type":"pick","who":"Nadia","text":"Why does \u201cThat's a difficult problem. What are you going to do about it?\u201d break the loop?","cue":"the same line, handed back each time","options":["It shames the helpers into stopping, so they sit down.","It hands the problem back to the person who owns it, so the next move is theirs and not the table's.","It shows the problem is too big to solve, so everyone gives up."],"answer":1,"why":"The line names the problem as real, then asks the owner to act. It declines the helper's part. Once the owner has to answer, the helpers have no fix left to offer, and the one with the problem is left at a loss or answers from a different voice, so the frustration shows and can be talked about.","traps":{"0":"The helpers may feel shamed, but a shamed table can keep suggesting for the rest of the night. Shame does not stop the loop, and it makes the room cold.","2":"It says the problem is hard, which is true, and it does not say the problem is too big. The loop stops because the owner is asked to act, not because anyone gives up."},"example":"A school meeting about the bus timetable: \u201cThat's a difficult problem. What are you going to do about it with the other parents?\u201d The parent who keeps proposing new times has to choose one."}]}],"debrief":{"nadia":"Five people and one problem, and nobody short of advice. The only thing that moved the table was the one who gave the problem back. Next Sunday somebody will ask what you think, so decide now what you will say.","bookTerm":"Why Don't You, Yes But","bookNote":"The books describe Why Don't You, Yes But as a party game. One person presents a problem and the others offer solutions, each turned down with a yes, but. The aim is to reject the suggestions, and the payoff is the silence when the helpers run out. The book's way out is not to play the helper, for example by saying it is a difficult problem and asking what the person is going to do about it."},"reflection":{"prompt":"Where did you say yes, but this week, and what would handing the problem back to the person who owns it have sounded like?"},"next":"5.1"};</script>
+<script>window.TA_NAV = {"hub":"https://claude.ai/artifact/FzdEytVBojsBteGVMXXV4K","next":{"slot":"5.1","title":"Real or Racket","url":"https://claude.ai/artifact/U2PuUcjP1ZoFZFpHQrFNQm"}};</script>
+<script>
+(function () {
+  "use strict";
+
+  var GAME = window.TA_GAME;
+  var NAV = window.TA_NAV || { hub: null, next: null };
+  var card = document.getElementById("card");
+  var STORE_KEY = "ta-arena-reflect-" + (GAME ? GAME.slot : "");
+
+  // Content fields may carry <b>, <i> and <br> only. Other tags are dropped, and open
+  // tags are closed at the end of the field, so markup cannot leak into the card.
+  function rich(s) {
+    if (s === undefined || s === null) return "";
+    var open = [];
+    var out = String(s).replace(/<[^<>]*>|</g, function (tok) {
+      if (tok === "<") return "&lt;";
+      var m = /^<\s*(\/?)\s*([a-zA-Z]+)\s*(\/?)\s*>$/.exec(tok);
+      if (!m) return "";
+      var name = m[2].toLowerCase();
+      var closing = m[1] === "/";
+      if (name === "br") return closing ? "" : "<br>";
+      if (name !== "b" && name !== "i") return "";
+      if (closing) {
+        if (open[open.length - 1] === name) { open.pop(); return "</" + name + ">"; }
+        return "";
+      }
+      if (m[3]) return "";
+      open.push(name);
+      return "<" + name + ">";
+    });
+    while (open.length) out += "</" + open.pop() + ">";
+    return out;
+  }
+
+  function esc(s) {
+    return String(s === undefined || s === null ? "" : s)
+      .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;").replace(/'/g, "&#39;");
+  }
+
+  function clamp(v) { return Math.max(0, Math.min(100, v)); }
+
+  function safeUrl(u) {
+    return typeof u === "string" && /^https?:\/\//i.test(u) ? u : null;
+  }
+
+  var VOICE = { parent: "p", adult: "a", child: "c" };
+  function pill(label) {
+    var key = String(label).trim().toLowerCase();
+    var cls = Object.prototype.hasOwnProperty.call(VOICE, key) ? VOICE[key] : "x";
+    return '<span class="pill ' + cls + '">' + rich(label) + '</span>';
+  }
+
+  function exchange(who, text, cue) {
+    return '<div class="exchange"><p class="line"><span class="who">' + rich(who) + '</span>' +
+      rich(text) + '</p>' + (cue ? '<p class="cue">' + rich(cue) + '</p>' : '') + '</div>';
+  }
+
+  function exampleBox(text) {
+    return text ? '<div class="example"><div class="ex-label">Real example</div>' + rich(text) + '</div>' : "";
+  }
+
+  function nextbar(label) {
+    return '<div class="nextbar"><button class="next" type="button">' + label + '</button></div>';
+  }
+
+  function bindNext(fn) {
+    var b = card.querySelector(".nextbar button.next");
+    if (b) b.addEventListener("click", function () { fn(); });
+  }
+
+  function shuffled(n) {
+    var idx = [], i, j, t, attempt;
+    for (i = 0; i < n; i++) idx.push(i);
+    for (attempt = 0; attempt < 20; attempt++) {
+      for (i = n - 1; i > 0; i--) {
+        j = Math.floor(Math.random() * (i + 1));
+        t = idx[i]; idx[i] = idx[j]; idx[j] = t;
+      }
+      if (idx.some(function (v, p) { return v !== p; })) break;
+    }
+    return idx;
+  }
+
+  // Flat list of items across the three rounds; one progress segment each.
+  var ITEMS = [];
+  ((GAME && GAME.rounds) || []).forEach(function (round) {
+    (round.items || []).forEach(function (item, i) {
+      ITEMS.push({ round: round, item: item, first: i === 0 });
+    });
+  });
+  var TOTAL = ITEMS.length;
+
+  function progressHTML(done, current) {
+    var bars = "";
+    for (var i = 0; i < TOTAL; i++) {
+      bars += '<i class="' + (i < done ? "done" : (i === current ? "current" : "")) + '"></i>';
+    }
+    return '<div class="progress" role="progressbar" aria-label="Progress" aria-valuemin="0" aria-valuemax="' +
+      TOTAL + '" aria-valuenow="' + done + '">' + bars + '</div>';
+  }
+
+  function paintProgress(done, current) {
+    var old = card.querySelector(".progress");
+    if (old) old.outerHTML = progressHTML(done, current);
+  }
+
+  function frame(k, body, showIntro) {
+    var rec = ITEMS[k];
+    var intro = showIntro && rec.round.intro ? '<p class="round-intro">' + rich(rec.round.intro) + '</p>' : "";
+    return progressHTML(k, k) + '<div class="round-label">' + rich(rec.round.label) + '</div>' + intro + body;
+  }
+
+  // ---------- flow ----------
+
+  var state = { screen: "intro", k: 0 };
+
+  function settle() {
+    if (card.getBoundingClientRect().top < 0) card.scrollIntoView({ block: "start" });
+    card.focus({ preventScroll: true });
+  }
+
+  function render() {
+    if (state.screen === "intro") renderIntro();
+    else if (state.screen === "item") renderItem(state.k);
+    else if (state.screen === "debrief") renderDebrief();
+    else if (state.screen === "reflect") renderReflect();
+    else renderEnd();
+    settle();
+  }
+
+  function advance() {
+    if (state.screen === "intro") {
+      state.screen = "item"; state.k = 0;
+    } else if (state.screen === "item") {
+      if (state.k + 1 < TOTAL) state.k += 1;
+      else state.screen = "debrief";
+    } else if (state.screen === "debrief") {
+      state.screen = "reflect";
+    } else if (state.screen === "reflect") {
+      state.screen = "end";
+    }
+    render();
+  }
+
+  function renderItem(k) {
+    var it = ITEMS[k].item;
+    if (it.type === "pick") renderPick(k, it);
+    else if (it.type === "scene") renderScene(k, it);
+    else if (it.type === "sort") { if (it.order === true) renderOrder(k, it); else renderBins(k, it); }
+    else if (it.type === "counter") renderCounter(k, it);
+    else advance();
+  }
+
+  function renderIntro() {
+    var op = GAME.opener || {};
+    var lines = (op.lines || []).map(function (ln) {
+      return '<p class="line"><span class="who">' + rich(ln.who) + '</span>' + rich(ln.text) + '</p>' +
+        (ln.cue ? '<p class="cue">' + rich(ln.cue) + '</p>' : "");
+    }).join("");
+    var rounds = (GAME.rounds || []).map(function (r) {
+      var n = (r.items || []).length;
+      return '<li><span class="dot"></span><span><b>' + rich(r.level) + '</b>, ' + n +
+        (n === 1 ? ' item' : ' items') + '</span></li>';
+    }).join("");
+    card.innerHTML =
+      '<div class="tagline">TA Arena · World ' + esc(GAME.world) + ', ' + rich(GAME.worldName) +
+      ' · Game ' + esc(GAME.slot) + '</div>' +
+      '<div class="card-head"><div><h1>' + rich(GAME.title) + '</h1>' +
+      '<p class="deck">' + rich(GAME.concept) + '</p></div>' +
+      '<div class="case-no">' + esc(GAME.slot) + '<br>' + rich(GAME.weekName) + '</div></div>' +
+      '<p class="lede"><i>' + rich(op.setting) + '</i></p>' +
+      '<div class="exchange">' + lines + '</div>' +
+      '<div class="ask"><div class="kicker">The question</div><p>' + rich(op.ask) + '</p></div>' +
+      '<div class="rules-box"><div class="round-label">How this one works</div>' +
+      '<ul class="rules-list">' + rounds +
+      '<li><span class="dot"></span><span>Feedback follows every answer, with a real example</span></li>' +
+      '</ul></div>' +
+      nextbar("Start the game →");
+    bindNext(advance);
+  }
+
+  // ---------- pick ----------
+
+  function renderPick(k, it) {
+    var labels = it.options;
+    card.innerHTML = frame(k,
+      exchange(it.who, it.text, it.cue) +
+      '<p class="prompt">' + rich(it.prompt || "Which one is it?") + '</p>' +
+      '<div class="choices">' + labels.map(function (lab, i) {
+        return '<button class="choice" type="button" data-i="' + i + '">' + pill(lab) + '</button>';
+      }).join("") + '</div>', ITEMS[k].first);
+    var buttons = card.querySelectorAll("button.choice");
+    var answered = false;
+    buttons.forEach(function (btn) {
+      btn.addEventListener("click", function () { choose(parseInt(btn.getAttribute("data-i"), 10)); });
+    });
+    function choose(i) {
+      if (answered) return;
+      answered = true;
+      var right = i === it.answer;
+      buttons.forEach(function (b) { b.disabled = true; });
+      buttons[it.answer].classList.add("correct");
+      if (!right) buttons[i].classList.add("wrong");
+      var body = right
+        ? '<div class="why-box ok"><div class="stamp ok">✓ Right call</div>' +
+          '<p class="feedback"><b>Why:</b> ' + rich(it.why) + '</p></div>'
+        : '<div class="why-box cross"><div class="stamp cross">✗ Not quite</div>' +
+          '<p class="feedback"><b>You picked ' + rich(labels[i]) + '.</b> ' +
+          rich((it.traps || {})[String(i)]) + '</p>' +
+          '<p class="feedback"><b>The right call is ' + rich(labels[it.answer]) + '.</b> ' +
+          rich(it.why) + '</p></div>';
+      var fb = document.createElement("div");
+      fb.innerHTML = body + exampleBox(it.example) + nextbar("Continue →");
+      card.appendChild(fb);
+      paintProgress(k + 1, -1);
+      bindNext(advance);
+    }
+  }
+
+  // ---------- scene ----------
+
+  var TAG_LABEL = { best: "Best move", ok: "Fair move", game: "Trap move" };
+  var TAG_CLASS = { best: "ok", ok: "amber", game: "cross" };
+  var TAG_PICK = { best: "correct", ok: "amber", game: "wrong" };
+  var DEFAULT_FALLOUT = {
+    you: "You have nothing left to give in this exchange, so the scene stops here.",
+    them: "The other person has shut the conversation down, so the scene stops here."
+  };
+
+  function meterRow(key, label, v) {
+    return '<div class="meter ' + key + (v <= 0 ? " empty" : "") + '">' +
+      '<span class="name">' + label + '</span>' +
+      '<span class="track"><span class="fill" data-m="' + key + '" style="width:' + v + '%"></span></span>' +
+      '<span class="num" data-n="' + key + '">' + v + '</span></div>';
+  }
+
+  function meterHTML(m) {
+    return '<div class="meters">' + meterRow("you", "You", m.you) + meterRow("them", "Them", m.them) + '</div>';
+  }
+
+  function setMeters(m) {
+    ["you", "them"].forEach(function (key) {
+      var fill = card.querySelector('.fill[data-m="' + key + '"]');
+      var num = card.querySelector('.num[data-n="' + key + '"]');
+      var row = card.querySelector(".meter." + key);
+      if (fill) fill.style.width = m[key] + "%";
+      if (num) num.textContent = String(m[key]);
+      if (row) row.classList.toggle("empty", m[key] <= 0);
+    });
+  }
+
+  function renderScene(k, sc) {
+    var rec = ITEMS[k];
+    var meters = { you: clamp(Number(sc.meters.you)), them: clamp(Number(sc.meters.them)) };
+    var beats = sc.beats || [];
+    var bi = 0;
+
+    function drawBeat() {
+      var b = beats[bi];
+      card.innerHTML = frame(k,
+        '<h2 class="scene-title">' + rich(sc.title) + '</h2>' +
+        '<p class="setting">' + rich(sc.setting) + '</p>' +
+        meterHTML(meters) +
+        '<p class="kicker">Beat ' + (bi + 1) + ' of ' + beats.length + '</p>' +
+        exchange(b.who, b.text, b.cue) +
+        '<div class="choices">' + b.lines.map(function (ln, i) {
+          return '<button class="choice" type="button" data-i="' + i + '">' + rich(ln.text) + '</button>';
+        }).join("") + '</div>', rec.first && bi === 0);
+      var buttons = card.querySelectorAll("button.choice");
+      buttons.forEach(function (btn) {
+        btn.addEventListener("click", function () { pick(parseInt(btn.getAttribute("data-i"), 10), buttons); });
+      });
+    }
+
+    function pick(i, buttons) {
+      if (buttons[0].disabled) return;
+      var ln = beats[bi].lines[i];
+      buttons.forEach(function (x) { x.disabled = true; });
+      buttons[i].classList.add(TAG_PICK[ln.tag] || "amber");
+      meters.you = clamp(meters.you + ln.you);
+      meters.them = clamp(meters.them + ln.them);
+      setMeters(meters);
+      var dead = [];
+      if (meters.you <= 0) dead.push("you");
+      if (meters.them <= 0) dead.push("them");
+      var ends = ln.tag === "game" || dead.length > 0;
+      var cls = TAG_CLASS[ln.tag] || "amber";
+      var html = '<div class="why-box ' + cls + '"><div class="stamp ' + cls + '">' +
+        (TAG_LABEL[ln.tag] || "Move") + '</div>' +
+        '<p class="feedback">' + rich(ln.outcome) + '</p>' +
+        '<p class="feedback"><b>Why:</b> ' + rich(ln.why) + '</p></div>';
+      if (ln.tag === "game") {
+        html += '<div class="example"><div class="ex-label">How it ends</div>' + rich(sc.payoff) + '</div>';
+      }
+      if (dead.length) {
+        var fo = sc.fallout || {};
+        var lines = [];
+        if (dead.indexOf("them") >= 0) lines.push(fo.them || DEFAULT_FALLOUT.them);
+        if (dead.indexOf("you") >= 0) lines.push(fo.you || DEFAULT_FALLOUT.you);
+        html += '<div class="example"><div class="ex-label">How it ends</div>' +
+          lines.map(function (t) { return rich(t); }).join("<br><br>") + '</div>';
+      }
+      var last = ends || bi === beats.length - 1;
+      var fb = document.createElement("div");
+      fb.innerHTML = html + nextbar("Continue →");
+      card.appendChild(fb);
+      bindNext(function () {
+        if (last) { sceneOver(); return; }
+        bi += 1;
+        drawBeat();
+        settle();
+      });
+    }
+
+    function sceneOver() {
+      card.innerHTML = frame(k,
+        '<h2 class="scene-title">' + rich(sc.title) + '</h2>' +
+        '<p class="kicker">Scene over</p>' +
+        meterHTML(meters) +
+        exampleBox(sc.example) +
+        nextbar("Continue →"), false);
+      paintProgress(k + 1, -1);
+      bindNext(advance);
+    }
+
+    drawBeat();
+  }
+
+  // ---------- sort: bins (each card goes in a bin, one after another) ----------
+
+  function renderBins(k, sc) {
+    var items = sc.items || [];
+    var bins = sc.bins || [];
+    var list;
+
+    function finish() {
+      var end = document.createElement("div");
+      end.innerHTML = exampleBox(sc.example) + nextbar("Continue →");
+      card.appendChild(end);
+      paintProgress(k + 1, -1);
+      bindNext(advance);
+    }
+
+    function addCard(i) {
+      var c = items[i];
+      var wrap = document.createElement("div");
+      wrap.className = "sort-item";
+      wrap.innerHTML = '<div class="exchange"><p class="line">' + rich(c.text) + '</p></div>' +
+        '<div class="choices">' + bins.map(function (label, bi) {
+          return '<button class="choice" type="button" data-i="' + bi + '">' + rich(label) + '</button>';
+        }).join("") + '</div>';
+      list.appendChild(wrap);
+      var buttons = wrap.querySelectorAll("button.choice");
+      buttons.forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          if (buttons[0].disabled) return;
+          choose(parseInt(btn.getAttribute("data-i"), 10));
+        });
+      });
+
+      function choose(pick) {
+        buttons.forEach(function (x) { x.disabled = true; });
+        var right = pick === c.answer;
+        buttons[c.answer].classList.add("correct");
+        if (!right) buttons[pick].classList.add("wrong");
+        var fb = document.createElement("div");
+        fb.innerHTML = right
+          ? '<div class="why-box ok"><div class="stamp ok">✓ Right call</div>' +
+            '<p class="feedback"><b>Why:</b> ' + rich(c.why) + '</p></div>'
+          : '<div class="why-box cross"><div class="stamp cross">✗ Not quite</div>' +
+            '<p class="feedback"><b>You picked ' + rich(bins[pick]) + '.</b> It belongs in ' +
+            rich(bins[c.answer]) + '.</p>' +
+            '<p class="feedback"><b>Why:</b> ' + rich(c.why) + '</p></div>';
+        wrap.appendChild(fb);
+        if (i + 1 < items.length) {
+          addCard(i + 1);
+          list.lastElementChild.scrollIntoView({ block: "nearest" });
+        } else {
+          finish();
+        }
+      }
+    }
+
+    card.innerHTML = frame(k, '<p class="prompt">' + rich(sc.prompt) + '</p><div class="sort-list"></div>',
+      ITEMS[k].first);
+    list = card.querySelector(".sort-list");
+    if (items.length) addCard(0);
+  }
+
+  // ---------- sort: order (tap the cards in sequence) ----------
+
+  function renderOrder(k, sc) {
+    var items = sc.items || [];
+    var placed = 0;
+    card.innerHTML = frame(k,
+      '<p class="prompt">' + rich(sc.prompt) + '</p>' +
+      '<ol class="seq" aria-label="Placed so far"></ol>' +
+      '<div class="pool choices">' + shuffled(items.length).map(function (idx) {
+        return '<button class="choice" type="button" data-i="' + idx + '">' + rich(items[idx].text) + '</button>';
+      }).join("") + '</div>' +
+      '<div class="order-fb"></div>', ITEMS[k].first);
+    var seq = card.querySelector(".seq");
+    var fbBox = card.querySelector(".order-fb");
+
+    card.querySelectorAll(".pool button.choice").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        tap(parseInt(btn.getAttribute("data-i"), 10), btn);
+      });
+    });
+
+    function tap(idx, btn) {
+      if (idx === placed) {
+        var li = document.createElement("li");
+        li.innerHTML = '<span class="n">' + (placed + 1) + '</span><span><span class="ct">' +
+          rich(items[idx].text) + '</span><span class="why">' + rich(items[idx].why) + '</span></span>';
+        seq.appendChild(li);
+        placed += 1;
+        btn.remove();
+        fbBox.innerHTML = "";
+        if (placed === items.length) {
+          fbBox.innerHTML = exampleBox(sc.example) + nextbar("Continue →");
+          paintProgress(k + 1, -1);
+          bindNext(advance);
+        }
+      } else {
+        fbBox.innerHTML = '<div class="why-box amber"><div class="stamp amber">Not yet</div>' +
+          '<p class="feedback">' + rich(items[placed].why) + '</p></div>';
+      }
+    }
+  }
+
+  // ---------- counter ----------
+
+  function renderCounter(k, c) {
+    var palette = c.palette || [];
+    var used = palette.map(function () { return false; });
+    var total = 0, picks = 0, sent = false;
+
+    card.innerHTML = frame(k,
+      '<p class="prompt">' + rich(c.prompt) + '</p>' +
+      '<div class="total"><span>Total</span><b data-total>0</b>' +
+      '<span>Target ' + esc(c.target) + ', within ' + esc(c.tolerance) + '</span></div>' +
+      '<div class="band" aria-hidden="true"><span class="fill" data-fill></span></div>' +
+      '<p class="kicker">Picks used: <span data-picks>0</span> of ' + esc(c.maxPicks) + '</p>' +
+      '<div class="choices">' + palette.map(function (p, i) {
+        return '<button class="choice pal" type="button" data-i="' + i + '"><span>' + rich(p.text) +
+          '</span><span class="val">+' + esc(p.value) + '</span></button>';
+      }).join("") + '</div>' +
+      '<div class="counter-actions"><button class="ghost" type="button" data-reset>Reset</button>' +
+      '<button class="next" type="button" data-send>Send</button></div>' +
+      '<div class="counter-fb"></div>', ITEMS[k].first);
+
+    var totalEl = card.querySelector("[data-total]");
+    var fillEl = card.querySelector("[data-fill]");
+    var picksEl = card.querySelector("[data-picks]");
+    var sendBtn = card.querySelector("[data-send]");
+    var resetBtn = card.querySelector("[data-reset]");
+    var palBtns = card.querySelectorAll("button.pal");
+
+    function paint() {
+      totalEl.textContent = String(total);
+      picksEl.textContent = String(picks);
+      fillEl.style.width = Math.min(100, Math.round(total / c.target * 100)) + "%";
+      fillEl.classList.toggle("over", total > c.target + c.tolerance);
+      palBtns.forEach(function (b, i) {
+        b.disabled = sent || used[i] || picks >= c.maxPicks;
+      });
+      sendBtn.disabled = sent || picks < 1;
+      resetBtn.disabled = sent || picks < 1;
+    }
+
+    palBtns.forEach(function (b) {
+      b.addEventListener("click", function () {
+        var i = parseInt(b.getAttribute("data-i"), 10);
+        if (sent || used[i] || picks >= c.maxPicks) return;
+        used[i] = true;
+        picks += 1;
+        total += palette[i].value;
+        paint();
+      });
+    });
+
+    resetBtn.addEventListener("click", function () {
+      if (sent) return;
+      used = palette.map(function () { return false; });
+      total = 0;
+      picks = 0;
+      paint();
+    });
+
+    sendBtn.addEventListener("click", function () {
+      if (sent || picks < 1) return;
+      sent = true;
+      paint();
+      var hit = Math.abs(total - c.target) <= c.tolerance;
+      var under = !hit && total < c.target;
+      var msg = hit ? c.hitMsg : (under ? c.underMsg : c.overMsg);
+      var cls = hit ? "ok" : (under ? "amber" : "cross");
+      var fb = document.createElement("div");
+      fb.innerHTML = '<div class="why-box ' + cls + '"><div class="stamp ' + cls + '">' +
+        (hit ? "✓ Right call" : "✗ Not quite") + '</div>' +
+        '<p class="feedback">' + rich(msg) + '</p>' +
+        '<p class="feedback"><b>Why:</b> ' + rich(c.why) + '</p></div>' +
+        nextbar("Continue →");
+      card.querySelector(".counter-fb").appendChild(fb);
+      paintProgress(k + 1, -1);
+      bindNext(advance);
+    });
+
+    paint();
+  }
+
+  // ---------- debrief, reflection, end ----------
+
+  function renderDebrief() {
+    var d = GAME.debrief || {};
+    card.innerHTML = progressHTML(TOTAL, -1) +
+      '<div class="round-label">Debrief</div>' +
+      '<h1 class="h2">What Nadia would say</h1>' +
+      '<p class="feedback">' + rich(d.nadia) + '</p>' +
+      '<div class="why-box neutral"><p class="feedback"><b>' +
+      rich(d.bookTerm || GAME.bookTerm) + '</b></p>' +
+      '<p class="feedback">' + rich(d.bookNote || GAME.bookIdea) + '</p></div>' +
+      nextbar("Continue →");
+    bindNext(advance);
+  }
+
+  // Storage can be blocked or missing, so every access is guarded.
+  function readStore() {
+    try { return window.localStorage.getItem(STORE_KEY) || ""; } catch (e) { return ""; }
+  }
+
+  function writeStore(value) {
+    try { window.localStorage.setItem(STORE_KEY, value); } catch (e) { /* blocked: the page still works */ }
+  }
+
+  function renderReflect() {
+    var r = GAME.reflection || {};
+    card.innerHTML = progressHTML(TOTAL, -1) +
+      '<div class="reflect-tag">Your turn</div>' +
+      '<p class="prompt">' + rich(r.prompt) + '</p>' +
+      '<textarea class="reflect-box" aria-label="Your reflection" ' +
+      'placeholder="A few lines is plenty. This stays on your device, and nobody else sees it."></textarea>' +
+      nextbar("Continue →");
+    var box = card.querySelector("textarea");
+    box.value = readStore();
+    box.addEventListener("input", function () { writeStore(box.value); });
+    bindNext(advance);
+  }
+
+  function renderEnd() {
+    var hub = safeUrl(NAV.hub);
+    var nxt = NAV.next || null;
+    var links = hub ? '<a class="next" href="' + esc(hub) + '">All games</a>' : "";
+    if (nxt) {
+      var nxtUrl = safeUrl(nxt.url);
+      links += nxtUrl
+        ? '<a class="next" href="' + esc(nxtUrl) + '">Next game: ' +
+          rich(nxt.title || ("Game " + nxt.slot)) + ' →</a>'
+        : '<p class="next-soon">Next game opens soon</p>';
+    }
+    card.innerHTML = progressHTML(TOTAL, -1) +
+      '<div class="end-badge">Case closed</div>' +
+      '<h1 class="h2">Game ' + esc(GAME.slot) + ' is done.</h1>' +
+      '<p class="feedback">' + rich(GAME.concept) + '</p>' +
+      '<div class="source"><b>From:</b> ' + rich(GAME.bookSource) + '</div>' +
+      '<div class="nextbar end-nav">' + links + '</div>';
+  }
+
+  // ---------- start ----------
+
+  function init() {
+    var series = document.getElementById("series");
+    var hubLink = document.getElementById("hubLink");
+    if (!GAME || !GAME.rounds) {
+      series.textContent = "TA Arena";
+      card.innerHTML = '<h1 class="h2">This game could not load.</h1>';
+      return;
+    }
+    series.innerHTML = 'TA Arena <small>· World ' + esc(GAME.world) + ' · Game ' + esc(GAME.slot) + '</small>';
+    var hub = safeUrl(NAV.hub);
+    if (hub) {
+      hubLink.setAttribute("href", hub);
+      hubLink.hidden = false;
+    }
+    render();
+  }
+
+  init();
+})();
+</script>
+
+</body>
+</html>

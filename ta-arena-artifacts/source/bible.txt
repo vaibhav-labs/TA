@@ -1,0 +1,313 @@
+[NOTE: design source kept for reference. Names and places in this file are superseded by GLOBAL-NAMES.md (for example Meera is now Nadia, and Pune is removed). Book claims in the games were audited against the books; see audit/.]
+
+[H1] TA Arena — Game-Based Learning Strategy (PWA)
+·
+v2, 12 Oct 2026. The four PDFs are all Transactional Analysis (TA) texts, so this is a TA mastery game — but v1 specified it as a catalogue of levels, which is why the built screen shows a card of text and "Coming soon". v2 fixes that at the root: the game is now a seven-week story with a fixed cast, every level is a fully scripted scene with meters and consequences, every book term has a plain in-game word (the real term is revealed only after the player has felt it), and the reward for learning is literally seeing more of each conversation. Sections 2a–2c and 6 are new; 4 and 10 are amended; the rest stands.
+[H2] 1. Source library
+The curriculum is scoped to the four TA books uploaded on 11 Oct 2026. (Drive also holds older non-TA PDFs — de Botton, graphic novels, coaching books — which are excluded; say the word if any should come in as a bonus world.)
+Book
+Author, year
+What it contributes to the game
+Depth it goes to
+Transactional Analysis in Psychotherapy
+Eric Berne, 1961
+The foundations: ego states as real phenomena (Parent/Adult/Child), structural vs functional analysis, contamination and exclusion, the first account of transactions, games and scripts, group treatment, symbiosis of therapist and patient.
+Deepest on why ego states exist (archaeopsyche, neopsyche, exteropsyche) and on diagnosing them
+Games People Play
+Eric Berne, 1964
+Strokes and stimulus-hunger, the six ways of structuring time, complementary / crossed / ulterior transactions, the formal game analysis template (thesis, aim, roles, dynamics, paradigm, moves, 6 advantages, antithesis), the thesaurus of ~36 named games in 7 families, degrees of games, and the three parts of autonomy (awareness, spontaneity, intimacy).
+The game catalogue itself — every named game becomes a playable scenario
+Scripts People Live
+Claude Steiner, 1974
+Scripts as decisions made under injunction, the script matrix (injunctions, counter-injunctions, attributions), banal scripts (Lovelessness, Mindlessness, Joylessness), sex-role scripts, the Stroke Economy and its five rules, the Pig Parent / Critical Parent, Rescue triangle, cooperative contracts, permission and protection.
+Deepest on how scripts form and on the social/political critique of stroking
+TA Today
+Ian Stewart & Vann Joines, 1987 (2nd ed. 2012)
+The modern synthesis: functional model (CP/NP/A/FC/AC), egograms, the four behavioural / social / historical / phenomenological diagnoses, options (Karpman), the Drama Triangle, Formula G, rackets and the Racket System, stamps, discounting and the Discount Matrix, passivity, symbiosis, miniscript and drivers, life positions and the OK Corral, redecision, contracts, autonomy.
+Broadest coverage; the spine for ordering the curriculum
+How the four books map onto one curriculum. TA Today supplies the order (it is a textbook). Berne 1961 supplies the deep theory for Worlds 1–2. Games People Play supplies the scenarios for Worlds 3–4 and the autonomy endgame. Steiner supplies Worlds 5–6 (strokes as economy, scripts as decisions, the Rescue triangle) and the social-critique layer that keeps advanced players interested.
+[H2] 2. Design philosophy
+The game teaches by making the player do TA, not read it: every level drops the player into a live transaction, asks for a diagnosis or a move, shows the consequence, then names the concept. Theory arrives after the experience, never before. This mirrors how Berne taught — observe the behaviour, then label the ego state.
+Three player levels, one path. Every world is playable at three difficulties that change the question, not the scenario:
+Level
+Who it is for
+What a level asks
+Scoring
+Spot (L1)
+Never heard of TA
+Recognise: "Which ego state spoke?" "Was that a stroke?" 2–3 options, immediate feedback.
+Right / wrong, 1 point
+Play (L2)
+Knows the basics, wants fluency
+Intervene: "Pick the next line that keeps communication open" / "cross this transaction on purpose". 3–4 options, branching consequence.
+Best / okay / game-move, 0–3 points
+Analyse (L3)
+Coach, counsellor, TA student
+Explain: fill the formal analysis (aim, roles, paradigm, payoff, antithesis), name the injunction behind the script, design the contract. Free-text or multi-field, graded by rubric.
+Rubric 0–5 per field
+A player picks a level at the start; the app recommends moving up when accuracy on a world passes 85 %, and down (quietly) when it falls under 50 %.
+The learning loop every level follows (the engine, not the content):
+Situation — a 3–8 line dialogue or inner monologue, named characters, stated setting.
+Move — the player diagnoses, chooses a line, or fills an analysis.
+Consequence — the scene plays one more beat showing what that move produced.
+Lesson card — the concept, the book it comes from, one quotable definition, the common confusion.
+Echo — 24–72 h later the same concept returns in a new situation (spaced retrieval, section 8).
+Why games, and why these games. Berne's own word for the pathological patterns is "games", so the app leans into the pun: the player's job is to stop playing Berne's games by getting good at this one. Each of Berne's named games becomes a scenario the player must first recognise, then refuse (the antithesis), then explain. That gives the thesaurus of ~36 games a natural three-pass structure that maps exactly onto Spot / Play / Analyse.
+Design constraints agreed with you:
+Visuals stay minimal: text, one colour accent, simple PAC stacked-circle diagrams drawn in CSS, no illustrations, no animation beyond a 150 ms fade.
+Depth over breadth per level: a single level teaches one concept and one confusion.
+Roundedness: every concept is met at least three times — once as recognition, once as a decision, once as explanation — and across at least two books' framings where they differ (e.g. Berne's Rescuer vs Steiner's Rescue triangle vs Karpman's Drama Triangle).
+[H2] 2a. The story
+You are 27 and you have just moved to Pune for a job. Seven weeks of your life play out, one week per world, across three places: the flat you share, the office you've joined, and the phone calls home. Everyone you meet is running a pattern they can't see. By week seven you can see all of them — and your own.
+Setting. Kesari Heights, a four-storey building in Kothrud. You rent a room in flat 3B. Downstairs in 1A lives the landlady. Your job is at Lumen, a 40-person software company in Baner, a 35-minute ride away. Home is a city 600 km away, reachable only by phone. Every scene is stamped with a day, a time and a place, and the week runs Monday to Sunday.
+The frame. Each Sunday you go to a drop-in group at a café called Chai & Why, run by Meera. Meera is the game's teacher. She never lectures before a scene; she debriefs after it, in plain words, and she gives you one thing to watch for in the coming week. The Sunday session is the week's boss: a live scene where you have to use what the week taught, with Meera watching.
+[H3] The cast
+Nine recurring characters. Each one carries two or three patterns from the books, so the same person can be the lesson in week 1 and again, deeper, in week 6. Names, ages and jobs are fixed so the player builds relationships.
+Who
+Where you meet them
+What they're like on the surface
+The patterns they carry (book terms, hidden from the player until revealed)
+You
+everywhere
+New in town, eager to be liked, good at your job, bad at saying no
+Built from the player's choices: the app computes which voice you default to; the story reveals it in week 4 and names it in week 6
+Aai (Mrs Deshpande, 64)
+1A, the landlady; widow; feeds you
+Warm, nosy, full of complaints about her knees, the building society and her son in Canada
+Why Don't You–Yes But; Ain't It Awful; later her script: an "Until" script ("I'll live once the kids are settled") and the Don't Be Important injunction she passes to her grandson
+Rohan (29)
+3B flatmate; sales at a fintech
+Charming, funny, always late with his share of the rent, spills things, apologises beautifully
+Schlemiel; Kick Me; stroke-starved (grew up on negative strokes); week 4 "Have One" at the office party; Hurry Up driver
+Tanvi (31)
+3B flatmate; ICU nurse
+Runs the flat, cooks for everyone, never sits down, says "it's fine"
+Rescuer; Harried; Please Others driver; Don't Be Important injunction; over-adaptation; the stroke-filter that rejects praise
+Vikram (44)
+your manager at Lumen
+Sharp, fair in his own eyes, keeps score
+NIGYSOB; Courtroom; Blemish; Controlling Parent; Be Perfect driver; life position I'm OK–You're Not OK
+Sana (26)
+teammate, joined 3 months before you
+Bright, self-deprecating, laughs at her own mistakes before anyone else can
+Stupid (mild form); Try Hard driver; Don't Think injunction; later your ally
+Dev (35)
+senior engineer
+Tired, competent, has a bad back, has "seen this before"
+Wooden Leg; See What You Made Me Do; discounting at the "can't change" level; Be Strong
+Ma (58)
+phone, most evenings
+Loving, worried, keeps a ledger of what you owe her
+If It Weren't For You (played against Papa); Sweetheart; the source of your Please Others; Don't Grow Up
+Papa (61)
+phone, rarely
+Few words, proud, says "we're fine"
+Be Strong; Don't Feel; the Pig Parent voice in your head is mostly his
+Kabir (8)
+Aai's grandson, visits on Saturdays
+Clever, watches adults, knows exactly which face gets what
+The Little Professor: shows games being invented; the Mike-at-the-dinner-table scene from GPP is his
+Meera (52)
+Chai & Why, Sundays
+Direct, kind, unimpressed, laughs easily
+The Adult voice of the game; models autonomy; the only character who never plays a game — and in week 7 you catch her almost playing one and she thanks you
+[H3] The arc, week by week
+Week
+Title
+What happens to you
+What you learn to do
+Sunday boss
+1
+Invisible
+You arrive. Nobody knows you. Rohan ignores you, Aai smothers you, the office doesn't look up. By Friday you are strangely exhausted and you don't know why.
+Notice that being noticed is a need, not a want; count it; tell small talk from real talk
+The Nod Rules: Meera's group has unspoken rules about who may praise whom; you have to break them
+2
+Three Voices
+You start hearing three different yous come out of your mouth: the one that sounds like Papa, the one that just handles things, the one that sulks. Others have them too.
+Hear which voice is talking — in you and in them
+The Fake Pilot: Vikram's "let's be rational" that isn't
+3
+Volleys
+Conversations start going wrong in a way you can now watch, like slow-motion replay. One with Ma goes very wrong. One with Dev, you fix on purpose.
+Keep a conversation open; cut one on purpose; hear two messages in one line
+The Pitch: a salesman at the mall sells you a phone you can't afford, and you see exactly how
+4
+Traps
+You realise the same scenes keep happening: Rohan's spill-and-sorry, Aai's yes-but, Vikram's gotcha. You see the hook, the flip, the sting. You see yours.
+Name a trap from its flip; step out of it without punishing the other person
+Yes-But Night at Chai & Why: five people, one problem, you are the one who refuses to advise
+5
+Underneath
+Tanvi collapses. Dev shrugs. Sana laughs. You find what each one is doing instead of feeling or acting.
+Tell a stand-in feeling from a real one; find which part of a problem someone is shrinking; spot the four ways of not acting
+The Shrinking Ladder: a live conversation where you must name each level of avoidance
+6
+The Plan
+Aai tells you her life. Kabir shows you how a child decides. You phone home and hear, for the first time, the plan you were handed at six.
+Read a life story for its Don'ts and Musts; hear a driver in five seconds; find the early decision
+The Plan Board: build Aai's plan, then your own
+7
+Your Own Person
+You make a deal with Tanvi, decline to rescue Rohan, give Sana a green light, and have one real conversation with Ma.
+Make a clean agreement; help without rescuing; give permission with protection behind it; stay real when a trap opens
+After Traps, What?: a six-turn candid conversation with Meera, who keeps leaving trap-doors open to see if you'll fall in
+Your own pattern is the spine. Every choice the player makes in weeks 1–3 is tagged with the voice it came from. In week 4 Meera says it out loud for the first time ("Four times this week you fixed something nobody asked you to fix"). In week 6 the player builds their own Plan Board from their choice history, not from a fictional story. In week 7 the ending differs by pattern: a Rescuer's ending is about letting Rohan fail; a Blamer's is about dropping a Courtroom case against Vikram; a Sufferer's is about asking Aai directly for what they want.
+[H2] 2b. Plain words
+The player never meets a book term before they have lived the thing it names. Every concept has an in-game word that an 8-year-old would understand; the book term appears only on Meera's debrief card, after the scene, as "the books call this…". From then on the app uses both, plain word first. This is the single rule that makes it a learning game instead of a textbook with buttons.
+Book term
+In-game word
+How Meera first explains it (verbatim copy for the card)
+Stroke
+a nod
+"Any sign that someone noticed you exist. A hello, a glare, a like, a slap — all nods. The books call these strokes."
+Positive / negative stroke
+warm nod / cold nod
+"A cold nod still counts. Ask any kid who misbehaves to get told off."
+Conditional / unconditional
+nod for doing / nod for being
+"'Good work' is for doing. 'Good to see you' is for being. People starve on the first kind alone."
+Stroke filter
+the bounce
+"When a warm nod comes and you bat it away — 'oh, it was nothing'. The nod never lands."
+Stroke economy
+the Nod Rules
+"Five rules nobody wrote down: don't give them, don't ask for them, don't accept them, don't refuse the ones you don't want, don't give them to yourself. Guess who benefits."
+Time structuring (withdrawal, ritual, pastime, activity, game, intimacy)
+the six things people do with an hour: alone, routine, small talk, work, trap, real
+"Most hours are small talk or work. Traps feel like the most alive — until you see the sting. Real is rare and it's the only one that fills you up."
+Ego states: Parent / Adult / Child
+the three voices: the Boss, the Pilot, the Kid
+"The Boss is everything you copied from the grown-ups who raised you. The Pilot handles what's actually in front of you. The Kid is the you that was there before any of that. Books: Parent, Adult, Child. Not childish. Not mature. Just three recordings."
+Controlling / Nurturing Parent
+the Strict Boss / the Caring Boss
+"Same voice, two faces. Both can be good or bad for you."
+Free / Adapted Child
+the Wild Kid / the Good Kid
+"The Wild Kid wants; the Good Kid does what it learned keeps it safe — obeys, or rebels, which is obeying backwards."
+Egogram
+your voice-print
+"How loud each voice is in you, this month."
+Contamination
+a leak
+"When the Boss or the Kid talks through the Pilot's mouth and it sounds like a fact. 'Women can't drive.' 'Everyone's against me.'"
+Exclusion
+a stuck voice
+"Someone who only has one voice switched on."
+Little Professor (A1)
+the Kid's own pilot
+"Kids are not stupid. A three-year-old can work out which face gets the biscuit."
+Transaction
+a volley
+"One line and its reply. The smallest unit of any conversation."
+Complementary
+a matched volley
+"The reply comes from the voice that was spoken to. These can go on forever — nice ones and nasty ones."
+Crossed
+a cut
+"The reply comes from a different voice than the one addressed. The conversation stops until someone shifts. Cuts are how you end a bad pattern."
+Ulterior (angular, duplex)
+double-talk
+"Two messages in one line. The one underneath decides what happens."
+Options (Karpman)
+changing seat
+"You don't have to answer from the voice they spoke to. Pick another seat."
+Game
+a trap
+"A routine two people run again and again, with a hidden hook and a sting at the end that both of them, somehow, arranged. The books call these games — not fun games."
+Formula G (con, gimmick, response, switch, crossup, payoff)
+bait, hook, bite, flip, blink, sting
+"Bait is offered, a hook catches, someone bites, then the flip — one person changes role — a moment of 'wait, what?', and the sting, the bad feeling both walk away with."
+Drama Triangle: Persecutor / Rescuer / Victim
+Blamer / Saviour / Sufferer
+"Three chairs. Every trap is people swapping chairs. The Saviour chair looks like helping. It isn't."
+Antithesis
+stepping out
+"Refusing the chair you were offered — without grabbing another one."
+Degrees of games
+first, second, third strength
+"First: you'd tell it at a party. Second: you'd hide it. Third: someone ends up in hospital, court or the morgue."
+Racket feeling
+a stand-in feeling
+"A feeling you learned to show because the real one wasn't allowed. It never fixes anything, which is how you spot it."
+Authentic feelings (mad, sad, scared, glad)
+the four real ones
+"Angry, sad, scared, glad. Each one, when it's real, finishes something."
+Trading stamps
+grudge coupons
+"You collect them quietly. Then one day you cash them in — on someone, or on yourself."
+Discounting (4 levels)
+shrinking
+"Making part of a problem smaller than it is: that it exists, that it matters, that it can change, that you could change it."
+Grandiosity
+inflating
+"The other side of the same coin."
+Passivity (4 behaviours)
+the four ways of not acting
+"Freeze, over-comply, fidget, fall apart."
+Symbiosis
+two halves
+"Two people who together make one whole person — one does the thinking, one does the feeling — and neither grows."
+Redefining
+sidestepping
+"Answering a different question than the one asked."
+Life positions / OK Corral
+your verdict
+"The deal you decided about yourself and everyone else, before you could spell: I'm fine / I'm not; you're fine / you're not."
+Script
+the Plan
+"A story about your life you wrote before you were seven, with an ending, and you've been quietly following it since."
+Injunctions
+the Don'ts
+"Twelve messages, mostly never said out loud, that children decode from how grown-ups behave: don't exist, don't be you, don't be a child, don't grow up, don't succeed, don't, don't matter, don't belong, don't be close, don't be well, don't think, don't feel."
+Counter-injunctions / Drivers
+the Musts
+"Be perfect. Please others. Try hard. Be strong. Hurry up. They sound like virtues. They are conditions."
+Script process (Until/After/Never/Always/Almost/Open)
+the Plan's shape
+"Some plans say 'not until'. Some say 'after this, the price'. Some never arrive. Some always repeat. Some almost make it."
+Early decision / redecision
+the line you wrote / rewriting the line
+"At five you decided something sensible for a five-year-old. You can decide again."
+Pig Parent / Critical Parent
+the Heckler
+"The voice that tells you you're not OK. Steiner called it the Pig Parent. It's not you; it's installed."
+Rescue (Steiner's three rules)
+saving vs helping
+"You're saving, not helping, if: you do more than half, you do what you don't want to, or nobody asked."
+Contract
+the deal
+"Two Pilots agreeing, out loud, what we're doing and how we'll know it's done."
+Permission / Protection / Potency
+the green light, the safety net, the backbone
+"Don't give a green light without a net under it and the backbone to hold it."
+Autonomy (awareness, spontaneity, intimacy)
+being your own person: noticing, choosing fresh, being real
+"Noticing what's actually here. Choosing from all three voices, not the one you were trained to. Saying the true thing to someone who can hear it."
+Reveal timing. Weeks 1–3 use only plain words in scenes. From the week 4 debrief on, Meera says the book term once per concept; from week 5 the scene UI shows the book term in grey under the plain word; by week 7 the Book Trail uses book terms only. A player who finishes can read any of the four books and recognise every chapter.
+[H2] 2c. What makes it a game
+A screen of text with a "next" button is a book. Five mechanics turn the same text into play: something to lose, something to see, something that remembers, something to build, and a weekly test under pressure.
+1. Two meters on every scene. Top of the screen, two thin bars.
+Them — how the other person is with you right now. Starts mid; a line that lands warm raises it, a cold one drops it, a trap-move spikes it (traps feel great for a beat) then crashes it at the sting.
+You — your own steadiness. Drops when you answer from a voice you were trained to rather than chose; drops hard when you take the Saviour chair; recovers on a cut that works, on a nod you accept, on a real line.
+Meters move visibly on every choice, with a one-word tag ("warm", "cold", "hook", "cut", "real"). A scene ends early if Them hits zero (they walk off, slam a door, go quiet) or You hits zero (you cave, say yes to something you'll resent). Either early end is a valid outcome and the debrief uses it. The meters are the player's first instrument: before they can name anything, they can feel a line go wrong.
+2. The Reveal layer. This is the game's reward curve. The conversation is shown plain at first; as the player learns, they unlock the ability to see what is under it, by long-pressing any line.
+Unlocked after
+Long-press on a line shows
+Week 1
+Nods: a tally of warm/cold nods given and received so far in the scene
+Week 2
+The voice: which of the three voices said this line, with the cue that gives it away (word, tone, posture)
+Week 3
+The volley: the arrow from speaker's voice to listener's voice; matched or cut; a second grey arrow if there is double-talk
+Week 4
+The trap: once a scene has bait and a hook, a thin yellow line appears under the dialogue and thickens toward the flip; at the flip it pulses once
+Week 5
+The ladder: which level of shrinking a line is doing, if any
+Week 6
+The Plan: a Don't or a Must a line is obeying, in grey
+Nothing is shown before it is unlocked, so a week-1 player sees a clean chat and a week-6 player sees every line annotated. Replaying week 1 with week-6 eyes is a stated goal of the game ("Go back and watch Rohan's first apology now").
+3. Carried consequences. Each scene writes flags; later scenes read them. Examples: if in 1.3 you forgave Rohan's spill with "it's fine", then in 4.1 he opens with a bigger spill and the line "you're the only one who gets me"; if you refused it, 4.1 opens with him sulking at Tanvi instead and you watch the trap from the outside. If you let Aai's yes-but run to the silence in 1.5, the week-4 boss has a sixth voice (Aai) at the table. The flags are few (≤ 3 per scene) and named in each script.
+4. Things you build and keep. Your voice-print (from week 2, updated every scene); your nod ledger (week 1); your Trap Book — a page per trap you've named, with where you saw it (week 4 on); your Plan Board (week 6, built from your own play history, not a fictional one); your Deal with Tanvi (week 7). All visible on the profile, all exportable.
+5. Sunday under pressure. The boss scene has a visible timer per line (12 s at Play level, none at Spot, 20 s at Analyse because you must also write), the meters are twice as sensitive, and Meera interrupts once mid-scene to ask "What just happened?" — a one-tap diagnosis the player must get right to continue. Pass = Them above 50 % at the end and You above 50 %. You can fail; the week doesn't advance; Meera gives one hint and you replay.
+What this changes in the engines (section 5). Every engine takes meters and flags in and emits deltas; Choice-story becomes the default engine for ~80 % of scenes with the others (Sort-it, Counter, Ladder, Build, Vector) appearing as moments inside a scene — a 20-second mini-board that the scene pauses for — rather than as whole levels. Section 10's schema is amended accordingly.

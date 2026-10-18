@@ -1,0 +1,241 @@
+[NOTE: design source kept for reference. Names and places in this file are superseded by GLOBAL-NAMES.md (for example Meera is now Nadia, and Pune is removed). Book claims in the games were audited against the books; see audit/.]
+
+[H2] 6. Full scenes
+Every scene below is written to the depth Claude Code needs: setting, cast, what the scene reads from earlier scenes, the beats, every option with its meter effect and outcome, the mini-board if any, how the scene ends, Meera's debrief card, and the flags it writes. Option tags: real (best), ok, cold (hurts Them), cave (hurts You), hook (a trap move — feels good, then costs). Meter deltas are out of 100. Spot level shows the same scene with a one-tap recognition question at the marked beat instead of choices; Analyse level adds the written field at the end.
+[H3] Week 1 — Invisible
+[H4] 1.1 Nobody Looks Up
+Monday. 7:50 → 22:30. Six places in one day. Cast: Rohan, Aai, Lumen reception, Vikram, Sana, Ma. This is the only scene where the You meter is the whole game: it starts at 70 and drains 4 points every beat in which you are not noticed. The player cannot see why yet.
+Beat 1 — 3B kitchen, 7:50. Rohan, headphones in, pours cereal, doesn't look up. You've been here two days.
+"Morning." (said to his back) → Them +0, You −4. Outcome: he nods at the cereal. Tag: ok.
+Tap his shoulder: "Hey — I'm the new guy in the back room. We haven't actually met." → Them +6, You +5. He pulls one earbud: "Oh — yeah! Rohan. Sorry, mornings." Tag: real.
+Say nothing, make tea. → You −8. Tag: cave. Outcome: the kettle is the loudest thing in the room.
+Beat 2 — stairwell, 8:15. Aai's door is open. "Arre, new boy! You're too thin. Come, come, I've made poha." You have 20 minutes to make the bus.
+"I'm late, Aai, sorry!" (keep walking) → Them −5, You −2. Tag: cold.
+Stop at the door: "I can't today, but I'd love to on Saturday. Keep some for me?" → Them +8, You +4. "Saturday it is. And eat something!" Tag: real.
+Go in and eat, miss the bus, arrive 25 minutes late. → Them +10, You −10 (and late_day1 = true). Tag: cave. Meera will come back to this: a warm nod you paid for.
+Beat 3 — Lumen reception, 9:35. The receptionist looks at her screen. "Name?" Badge printed. "Fourth floor." No eye contact. (No choice; You −4. The screen shows the drain happen with nothing you can do. At Spot level the recognition question appears here: "Did you just get a nod?" → Yes, a cold one. Explanation: she registered you exist.)
+Beat 4 — Vikram's desk, 9:50. Vikram, not standing: "You're the new backend hire. Good. Dev will show you the repo. Standup's at ten, don't be late to it, I hate that." (If late_day1: "…and you already were.")
+"Got it." → You −2. Tag: ok.
+"Thanks — looking forward to it. Anything you want me to read before standup?" → Them +4, You +3. Vikram, surprised: "…The incident log. Nobody reads it." Tag: real.
+"Sorry, sorry, won't happen again." (said whether or not you were late) → You −6. Tag: cave. He frowns: "Won't what happen?"
+Beat 5 — canteen, 13:10. Six tables. Sana is at one, laughing at something on her phone, alone. The rest are full of people who know each other.
+Sit alone, eat fast. → You −6. Tag: cave.
+Sit with Sana: "Mind if I? I don't know anyone yet." → Them +7, You +6. Sana: "Oh thank god, someone newer than me." Tag: real. Writes sana_lunch = true.
+Join the big table without asking. → Them −3, You −3 (two people shift to make room; nobody introduces themselves). Tag: cold.
+Beat 6 — 3B, your room, 22:30. Ma calls. "Did you eat? Your father says you should have taken the Bangalore offer. I told him you know what you're doing. Did you eat?"
+"I ate, Ma. It was a long day, I'm fine." → You −3. Tag: ok. She: "Fine, fine. Everyone's fine. Sleep." The call ends in 40 seconds.
+"Honestly? Nobody really talked to me today. It was weird." → You +8, Them +6. Pause. "…First days are like that. I remember your father's first day at the mill, he came home and sat on the step for an hour." Tag: real. Writes ma_open_1 = true.
+"Ma, I'm 27, you don't have to ask if I ate every day." → Them −8, You −2. "I'll stop asking then." Tag: cold.
+Ending. Whatever the path, the day closes with You shown as a number and the line: "You did nothing wrong today. So why are you this tired?" Then the Reveal layer's first unlock: long-press any beat and see the nod tally. A day with mostly "ok" and "cave" choices shows 2 warm nods received; a "real" day shows 9.
+Meera's card (first debrief; she introduces herself in two lines).
+Name: Nods.
+One line: Being noticed isn't a nice-to-have. A day without it drains you like a day without food.
+What you did: [generated: e.g. "You got through the day without asking anyone for anything, and got two nods for it."]
+The confusion: People think only praise counts. Vikram's "don't be late" counted. The receptionist counted. Cold nods are still food.
+From the book: Games People Play, Introduction — Berne on infants who aren't handled: "If you are not stroked, your spinal cord will shrivel up."
+Flags written: late_day1, sana_lunch, ma_open_1.
+[H4] 1.2 Sort the Day
+Tuesday. 19:00, 3B balcony. Tanvi is back from a 12-hour shift, feet up, first time you've properly talked. Cast: Tanvi. This scene is mostly a mini-board wrapped in a short story.
+Beat 1. Tanvi: "So how's Lumen? Rohan said you looked like a kicked puppy last night."
+"He's not wrong." → Them +5. Tag: real.
+"It's fine, really." → You −4. Tag: cave. Tanvi: "Mm. That's my line."
+Beat 2. Tanvi: "Okay, tell me the day. Everything anyone said to you. I'll tell you which ones were real." → Mini-board: Sort-it. Twelve lines from Monday and Tuesday appear one at a time; the player drags each into a 2×2: warm / cold across, for doing / for being down. Items (correct cell in brackets):
+Receptionist: "Name?" [cold · being — she registered you, nothing more]
+Vikram: "Don't be late, I hate that." [cold · doing]
+Vikram: "Nobody reads the incident log." (said after you asked) [warm · doing]
+Sana: "Thank god, someone newer than me." [warm · being]
+Aai: "You're too thin." [warm · being — the complaint is the affection]
+Ma: "Did you eat?" [warm · being]
+Rohan: nods at the cereal [cold · being]
+Dev, Tuesday: "Your PR's got three lint errors." [cold · doing]
+Dev, Tuesday: "…but the logic's right, which is more than I expected." [warm · doing]
+The security guard: raised his hand as you came in [warm · being]
+The group chat: nobody replied to your "hi all" [cold · being — the absence is itself a message]
+Tanvi, now: "Okay, tell me the day." [warm · being]
+Beat 3 — the twist round. Tanvi: "Now. Which of those did you actually let in?" The warm items reappear; the player taps the ones they accepted. Then Tanvi reads them back: "Dev said your logic was right and you said 'it was mostly copied from the docs'. That's a bounce. Sana was glad to see you and you said 'I'm just hiding from the big table'. Bounce." Each bounce the player made in 1.1 (the app knows from the options chosen) is listed. You +3 per nod the player admits they bounced — the point being that noticing the bounce is itself the fix.
+Beat 4. Tanvi stands up: "Right, I'm making dal, you're eating it."
+"You've just done 12 hours, let me." → Them +4, You +4. She stops. "…Nobody says that." Tag: real. Writes tanvi_offered_1 = true.
+"Thanks, Tanvi, you're a star." → Them +2 (she doesn't hear it; she's already in the kitchen). Tag: ok. Meera will flag: a warm nod for doing, to someone who is drowning in those.
+Meera's card. Name: Warm, cold, doing, being — and the bounce. One line: There are four kinds of nod, and most people live on the two for doing. What you did: [generated bounce count]. The confusion: A complaint can be a warm nod ("you're too thin"). Silence can be a cold one. From the book: TA Today ch. 8, the stroke filter; Steiner on "the Nod Rules" (named next Sunday).
+Flags: tanvi_offered_1, bounce_count_w1.
+[H4] 1.3 Thirty Hellos
+Wednesday, 8:00 and 8:40. Cast: Rohan (returning from a week in Goa — he left Monday night), Aai.
+Beat 1 — 3B door, 8:00. Rohan walks in, tanned, bag over shoulder. He's been gone a week; you've exchanged maybe four sentences total. Mini-board: Counter. A meter labelled owed sits at 30 (Tanvi told you last night: "Rohan needs a proper hello when he gets back or he sulks for two days"). You build the greeting from a palette of lines, each worth nods; the meter fills; you stop when you think it's enough.
+Line
+Worth
+"Hey."
+1
+"You're back!"
+3
+"How was Goa?"
+5
+"Wait, tell me everything."
+7
+"You look well."
+4
+"Did the whole gang go?"
+4
+"Good to have you back, honestly."
+6
+"Right, I've got to run."
+1 (ends the greeting)
+Target band: 26–34. Under 20: Rohan says "Cool." and goes to his room; Them −10; flag rohan_sulk = true. Over 40: Rohan laughs, "Okay, what do you want?"; Them +2 only — the extra nods read as a sales pitch. In band: Them +12; he sits on the kitchen counter and tells you about a boat. Writes rohan_greeted = true.
+Beat 2 — stairwell, 8:40, first pass. Aai on the landing with the milk. You exchange: "Morning, Aai!" / "Morning, beta, eat something!" (No choice. Tally: 2 nods each way.)
+Beat 3 — stairwell, 8:55, second pass. You forgot your laptop charger. Aai is still on the landing.
+A nod and a half-smile, keep moving. → Them +1. Tag: real. Aai nods back, carries on.
+"Aai! How are you? How are the knees today? Did your son call?" → Them −3. Tag: cold (it is, oddly). Aai narrows her eyes: "I'm the same as fifteen minutes ago. What do you want?"
+Walk past without looking. → Them −6. Tag: cold. Aai, to the milk: "Hm."
+Meera's card. Name: The hello sum. One line: People keep an exact, unspoken count of nods owed, and both too few and too many feel wrong. What you did: [band hit / missed]. The confusion: A greeting isn't "just manners" — it's a precise exchange, and the amount owed depends on time apart. From the book: Games People Play ch. 3, the eight-stroke ritual and Mr C's vacation.
+Flags: rohan_sulk, rohan_greeted.
+[H4] 1.4 Friday Drinks
+Friday, 19:30, a brewery in Baner. Lumen's monthly. Rohan came as your plus-one. Cast: everyone from Lumen, Rohan, a stranger at the bar.
+Beat 1 — the doorway. Mini-board: Floor-plan. Six zones, each with three lines of overheard talk; the player labels each with one of the six things people do with an hour (alone / routine / small talk / work / trap / real) before choosing where to go.
+Near the door: Vikram and the CFO. "Good turnout." "Better than last month." "The Q3 numbers—" "Monday, Monday." → routine.
+Long table: Sana and three interns. "What do you pay for Baner?" "Twenty-two for a 1BHK, can you believe it." "Kothrud's worse now." → small talk (the "How Much" pastime).
+Corner booth: two engineers, a laptop, one beer each, untouched. "If we batch the writes—" "Then the retry logic breaks." → work.
+Balcony: two people you don't know, close, quiet. "…I didn't tell anyone that before." "I'm glad you told me." → real.
+Bar: Rohan with a stranger. "Have one with me, come on, you're on holiday." "I'm driving—" "One. For me." → trap (the player can't name it yet; the yellow line is not unlocked; the "for me" is the hook).
+Stool by the wall: Dev, phone, back to the room. → alone.
+Scoring: per zone. The most-missed are 4 (people call it small talk) and 5 (people call it small talk or routine) — the debrief addresses both.
+Beat 2 — where do you go?
+Zone 2, Sana's table. → Them +5, You +2. Twenty minutes of rent prices; pleasant; nothing happens. Tag: ok. Sana at some point: "We should actually talk sometime." (flag sana_wants_real = true)
+Zone 1, Vikram. → Them +1, You −3. "Good you came." Then he turns to the CFO. Tag: ok.
+Zone 5, Rohan. → the stranger has given in and ordered. Rohan to you: "And one for my roommate!" Sub-choice: "Sure." (You −5, tag cave, flag had_one = true) / "I'm good, I'll grab a water." (Them −4 with Rohan — "Boring!" — but You +5, tag real).
+Zone 4, the balcony. → Them −8 (you interrupt; they stop talking). Tag: cold. Lesson: real talk is private; you can't join it, only be invited.
+Zone 6, Dev. → "Hey." "Hey." He goes back to the phone. You −2. Tag: ok. But if you sit and say nothing for 10 seconds (an option: "Just sit."), Dev: "Back's killing me. Hate these things." Them +6. Tag: real. Writes dev_opened_1 = true.
+Beat 3 — 23:10, the ride home. Rohan, in the cab, a bit drunk: "You're alright, you know. Tanvi said you'd be boring." (Recognition prompt at all levels: warm or cold? Both — a warm nod wrapped around a cold one, the player's first taste of double-talk; the tag shown is "mixed".)
+Meera's card. Name: The six things people do with an hour. One line: Alone, routine, small talk, work, trap, real — and most of us spend our lives in the middle four. What you did: [zone chosen]. The confusion: The balcony looked like small talk. Small talk is safe because nothing can happen in it; real talk is rare because something can. From the book: Games People Play ch. 2 & 4 — time structuring, pastimes as a cocktail party "gallery".
+Flags: sana_wants_real, had_one, dev_opened_1.
+[H4] 1.5 Join the Table
+Saturday, 11:00, Aai's kitchen, 1A. You came for the promised poha. Two neighbours are already there: Mrs Kale (70) and Reshma (38, a mother of two from 2B). Kabir (8) is under the table with a tablet. Cast: Aai, Mrs Kale, Reshma, Kabir.
+The scene teaches that small talk runs in levels, that a table is a club, and that the newcomer who plays the wrong level gets quietly dropped.
+Beat 1 — the topic is "children these days", and it's running at the Strict Boss level. Mrs Kale: "No manners. In our time you stood up when an elder came in." Aai: "It's the phones. Look at this one." (points under the table). Reshma: "And the schools don't help."
+"My cousin's kids are the same, honestly. Nobody says thank you any more." → Them +6. Tag: ok. You're in. The three nod; Mrs Kale passes you the pickle. (This is joining a pastime correctly — it earns nods and costs nothing. The card will say so without judging it.)
+"To be fair, the research says screen time matters less than—" → Them −7. Tag: cold. Silence. Mrs Kale: "Research." Aai changes the subject to the water tanker. You've played the wrong level (Pilot into a Boss conversation) and been dropped.
+"Kabir, what are you playing?" → Them −2 from the adults, but Kabir looks up: "Clash. You want to see my base?" Tag: real — with the only person at the table not in the pastime. Writes kabir_base = true.
+Beat 2 — the level shifts. Reshma, quieter: "Honestly, I don't know if I'm doing it right. Aarav won't talk to me any more." The table changes temperature: Aai puts a hand on her arm.
+"What's he like when he does talk?" → Them +8. Tag: real. Reshma actually answers.
+"They all go through that phase." → Them +2. Tag: ok. Mrs Kale agrees; the moment closes.
+"Have you tried taking the phone away at dinner?" → Them −4. Tag: cold (nobody asked for advice; the player has started the move that will be named in week 4 as the Saviour chair). Reshma: "Yes." Flat. Flag advised_reshma = true.
+Beat 3 — the sting of the week, unnamed. Kabir, from under the table: "Aai, my stomach hurts." Aai, instantly: "Arre! Come, lie down, I'll make you kadha." Reshma, dryly: "He said that at our place too, right when the homework came out." Aai: "Don't say that, he's a child." (No choice. Recognition prompt: "Did Kabir just get a nod?" → Yes — a big warm one, for being, and he got it for a stomach ache. The card does not yet call this a trap. It will, in 2.5.)
+Meera's card. Name: Small talk is a club. One line: Every table has a level — grumbling, sharing, problem-solving — and you join at the level that's running, or you get dropped. What you did: [joined / dropped / went to Kabir]. The confusion: Joining small talk isn't fake. It's how people check whether you're safe before anything real. From the book: Games People Play ch. 4, "PTA" at three levels, and the new neighbour who plays "Sunny Side Up" and isn't invited back.
+Flags: kabir_base, advised_reshma.
+[H4] 1.6 Sunday boss — The Nod Rules
+Sunday, 16:00, Chai & Why. Your first session. Six people around two pushed-together tables; Meera at the end. You know nobody. Cast: Meera, Anil (50s, retired bank manager), Priyanka (30s, product designer), Joseph (40s, teacher), Farida (20s, student), and — surprise — Dev, who nods at you and looks at the table. Writes dev_at_group = true.
+Meera opens: "New face. Good. House rule: nobody explains anything until something has happened. So — let's make something happen." She puts a card face-down in front of you. "Five things. Do all five before chai's cold. I won't tell you what they are. You'll know when you've done one, because the room will tell you."
+The five things are Steiner's five Nod Rules, which the player must break, one each. The group's reactions are scripted; the timer is 12 seconds per line at Play level. The player picks lines from a rolling menu of 6; three are rule-breaks, three are safe. Breaking a rule raises You and briefly dips Them; the dip recovers two beats later if the player holds steady (doesn't apologise).
+Rule 1 — Don't give nods. Priyanka has just said something sharp about a client. Menu includes: "That was a really clear way to put it." → Priyanka blinks: "…Thanks. People don't usually say." Anil: "We don't do compliments here, Meera will think you're buttering her up." You +8, Them −3 then +5. Rule broken. Safe options ("Mm." / "Clients, eh.") keep Them flat and You −2.
+Rule 2 — Don't ask for nods. Meera asks everyone to say one thing that went right this week. Your turn. Menu includes: "I'd actually like to know — do I come across as standoffish? Nobody at work talks to me and I can't tell." → silence; then Joseph: "Not standoffish. Careful." Farida: "You looked terrified walking in, if that helps." Laughter. You +10, Them +4. Rule broken. Safe: "I finished my first PR." (fine, You +1; Meera: "And?").
+Rule 3 — Don't accept nods. Joseph, later: "You listen well, for a new person." Menu includes the bounce — "Oh, I'm just quiet" (tag cave, You −6, the rule kept) — and "Thank you. I'll take that." → Joseph nods. You +8. Rule broken. Meera, aside: "Did everyone see that? He kept it."
+Rule 4 — Don't refuse the nods you don't want. Anil, kindly and unbearably: "You remind me of my nephew. Same lost look. He's doing very well now, you know, you'll be fine, these things take time, when I was your age—" Menu includes: "Anil, I appreciate it — and I don't want to be anyone's nephew today. Can I just be new?" → Anil, after a beat: "…Fair." Meera smiles. You +10, Them −4 then +6. Rule broken. Safe: "Thanks, Anil." (You −5; the card calls this swallowing a nod you didn't want.)
+Rule 5 — Don't give yourself nods. Meera's closing round: "One thing you did well today. Out loud. Yes, about yourself." Menu includes: "I asked a room of strangers if I was standoffish. That took something." → Farida: "It did." You +10. Rule broken. Safe: "I… showed up?" (You +2; Meera: "That's a dodge. Try again." — the only time she pushes.)
+Meera's interruption (mid-scene, after rule 3): "Stop. What just happened when Joseph said you listen well?" One-tap: [He was being polite / I nearly bounced it / He was asking for something]. Correct: I nearly bounced it (or I kept it, if the player did). Wrong answer: Meera: "Look again," and the line replays.
+Pass condition. 4 of 5 rules broken and You ≥ 50 at the end. Fail: Meera: "Three out of five. The room didn't bite you, did it? Come back next Sunday — same card." Replay.
+Ending. Walking out, Dev falls into step. "Didn't know you came here." "First time." "Yeah. Don't… mention it at work." Recognition: warm or cold? — warm, for being, from a man who's forbidden himself to give them.
+Meera's card (first time she gives the week's one thing to watch). Name: The Nod Rules. One line: Five rules nobody wrote down keep nods scarce: don't give, don't ask, don't accept, don't refuse, don't self-give. What you did: [rules broken]. The confusion: These rules feel like modesty. They are a diet somebody put you on. Who benefits when nods are scarce? Anyone who hands them out. (Analyse level: write 60 words on who, in your week, benefited.) From the book: Scripts People Live ch. 9, the Stroke Economy. Watch this week: every time you say "it was nothing".
+Flags: dev_at_group, rules_broken_w1 (0–5), self_nod (bool).
+End of week 1 — what the player can now see. The Reveal layer shows nod tallies on every past scene. The profile shows the week's nod ledger: given / received / bounced / refused. Meera's one line on the week: "Next week we find out who's doing the talking."
+[H3] Week 2 — Three Voices
+The week the player learns to hear the Boss, the Pilot and the Kid — in others, then in themselves. The Reveal layer unlocks "the voice" at the end of 2.1, so from 2.2 on the player can long-press any line to see which voice said it and the cue that gives it away.
+[H4] 2.1 The Voice That Isn't Yours
+Monday, 20:00, 3B kitchen. You've dropped a glass. It shatters. Before you think, a sentence comes out of your mouth in a voice you recognise — it's Papa's. Cast: you, Tanvi (watching), and an inner-voice mechanic introduced here.
+Beat 1 — the reflex. The glass breaks. Three sentences flash up; pick the one that actually came out:
+"Oh for god's sake, can't you do anything right." (flat, hard — Papa's exact words to you at nine)
+"Oh no — is anyone near it? Mind your feet." (checking the facts)
+"I'm so stupid, I'm so stupid, sorry, sorry." (small, fast, young)
+Whichever you pick, Tanvi looks up. The app stores it as your first voice-print data point. (No meter change yet; this beat is a mirror, not a test.)
+Beat 2 — Tanvi names them without the words. Tanvi: "You know you've got three settings? Just now you did the one that sounds like it's telling someone off. My mum had that one. Then there's the one that just… deals with it. And the little one that says sorry before anyone's even upset." Mini-board: label the three. The app replays the three sentences from beat 1 and the player drags each onto one of three simple icons: a pointing hand (Boss), a steering wheel (Pilot), a small figure (Kid). All three correct = the voices are now named for the rest of the game.
+Beat 3 — whose Boss? Tanvi: "The telling-off voice. Whose is it? Not yours. You're 27, you didn't invent 'can't you do anything right'."
+"My dad's. Word for word." → You +6. Tag: real. The app marks Papa as a source of your Boss voice (pays off in week 6).
+"Everyone says that." → You −3. Tag: cave (sidestepping — named later).
+"Does it matter whose it is?" → Tanvi: "Only if you ever want to turn it down." You +2. Tag: ok.
+Reveal unlock. From now, long-press shows the voice + the cue (word choice, tone, posture). The scene ends with the three icons pinned to the top of the screen, greyed, ready.
+Meera's card (delivered Sunday but previewed here). Name: The three voices. One line: The Boss is borrowed, the Pilot is here-and-now, the Kid was there first. What you did: [first voice-print point]. The confusion: The Kid isn't childish and the Pilot isn't "the mature one" — they're three recordings, and you need all three. From the book: Berne 1961 & Games People Play ch. 1 — ego states as real, observable states, not roles.
+Flags: papa_boss_named, voiceprint_1.
+[H4] 2.2 Spot the Voice at Work
+Tuesday, standup and after. Lumen, fourth floor. Cast: Vikram, Dev, Sana. Pure diagnosis practice, dressed as a morning. Reveal is on, so the player can check themselves by long-pressing.
+Beat 1 — standup, five lines, name the voice. Each line appears; the player taps Boss / Pilot / Kid; the cue is shown after.
+Vikram: "We don't miss deadlines on my team." → Boss (a rule, "we don't", borrowed standard).
+Dev: "The staging box is out of memory; I'll bump it to 8 gig and retry by eleven." → Pilot (facts, plan, time).
+Sana: "Sorry, sorry, mine's not done, I'm so slow." → Kid (small, apologising, "I'm so…").
+Vikram: "It's fine, Sana, it happens." (waving a hand, not looking up) → Boss, caring face (the Caring Boss — soothing a Kid, keeping her small).
+Dev: "What's actually blocking it? Let's look." → Pilot.
+Score per line. The trap item is 4 — players read "it's fine" as kind/Pilot; it's a Caring Boss patting a Kid on the head, which keeps Sana in the Kid chair.
+Beat 2 — after standup, Sana at your desk. Sana: "God, I always do that. Blurt out how rubbish I am before Vikram can."
+"You're not rubbish. Your logic in the auth module was the cleanest I've seen." (a warm nod for doing, aimed at her Pilot) → Them +6, You +4. Sana, surprised, straightens up. Tag: real. (She tries to bounce it — "it was mostly the library" — the player has seen the bounce before and the UI highlights it.)
+"Ha, same, I do it too." → Them +3, You −1. Tag: ok (you joined her in the Kid chair; comfortable, useless).
+"Why do you let Vikram get to you?" → Them −3. Tag: cold (a Boss question; she shrinks further).
+Beat 3. Sana: "Can I sit with you at lunch? The newbies have to stick together." (callback: if sana_lunch from 1.1, she says "like Monday"). → yes/no; yes writes sana_ally = true and unlocks her as your week-4+ partner.
+Meera's card. Name: Hearing the voice. One line: You diagnose the voice from the cue — the words, the tone, the posture — not from whether the line is nice. What you did: [accuracy]. The confusion: "It's fine, it happens" sounded kind. It was the Caring Boss keeping Sana little. From the book: TA Today ch. 2 & 4 — the functional model and the four ways to diagnose.
+Flags: sana_ally.
+[H4] 2.3 Your Own Voice-Print
+Wednesday, 21:30, 3B, your room. A quiet scene. Cast: you, Ma (phone), and the app itself. Mini-board: Build (egogram).
+Beat 1. The app shows you five bars — Strict Boss, Caring Boss, Pilot, Wild Kid, Good Kid — filled from your choices in weeks 1–2 (every option was tagged with a voice). It doesn't explain; it just shows. "This is you, so far. Not forever — this month."
+Beat 2 — a live test of the reading. Ma calls. Standard opener: "Did you eat? Have you made friends? Your father—" The player has three ready responses, and the app predicts which voice the player will pick based on their bar heights, then reveals whether they matched their own pattern:
+"I ate, I'm fine, everyone's fine." → Good Kid (compliant).
+"Ma, I'm okay. Tell me how your knee scan went — you keep changing the subject off it." → Pilot.
+"Can you not interrogate me for one call?" → Wild Kid (rebel) / Strict Boss, depending on tone sub-choice.
+Whichever you pick, the app: "That was your [voice]. Your tallest bar is [X]. Match?" You +5 if the player can predict themselves before choosing (a toggle: "guess first").
+Beat 3. Ma, at the end, unprompted (if ma_open_1): "You sounded like your father just now. The good bits, I mean. He also asks about the scan." A warm nod for being, that also hands you information about your Boss voice.
+Meera's card. Name: Your voice-print. One line: Right now one voice is doing most of your talking; naming it is step one to choosing. What you did: [tallest bar]. The confusion: A tall Good-Kid bar isn't a flaw to fix — it's data. From the book: TA Today, Dusay's egogram.
+Flags: voiceprint_w2 (five ints).
+[H4] 2.4 The Leak
+Thursday, 13:00, Lumen canteen. Cast: Vikram, Dev, Sana, you. The week's hardest idea: when the Boss or the Kid talks through the Pilot's mouth and it sounds like a plain fact. Mini-board: Spot-the-leak.
+Beat 1. Lunch table talk. Eight statements fly past; flag each as Pilot (clean fact), Boss-leak (a borrowed prejudice wearing a fact's clothes), or Kid-leak (a fear wearing a fact's clothes). A deliberate penalty for over-flagging teaches that clean Pilot statements exist.
+Vikram: "Junior devs today just don't have the discipline we had." → Boss-leak.
+Dev: "The deploy takes nine minutes; I timed it." → Pilot.
+Sana: "There's no point me pitching ideas, they never land." → Kid-leak (a decision dressed as a fact).
+Vikram: "If you want it done properly you do it yourself." → Boss-leak.
+You (from your own week-1 choices, if advised_reshma or had_one): a line of yours replays — "I always end up the one sorting things out" → Kid-leak or Boss-leak, your call, and the app shows which your pattern suggests.
+Dev: "We've tried caching it before, in 2023; it broke the invoices." → Pilot (a real memory, a real fact — not a leak, even though it sounds like "can't be done").
+Sana: "Everyone here is cleverer than me." → Kid-leak.
+Vikram: "Rules are rules." → Boss-leak.
+Beat 2 — the costly one. Vikram, to the table: "Women don't really go for backend, it's just how it is." Sana goes quiet.
+"Actually our last two backend hires were women — Sana's one of them." (clean Pilot, facts only) → Them with Vikram −5, with Sana +10, with Dev +4. Tag: real. Vikram: "…Hm. Point." Writes stood_for_sana = true.
+"That's a bit much, Vikram." (Boss meeting Boss) → Them −6 all round; it becomes a status fight; Sana shrinks further. Tag: cold.
+Say nothing. → You −8, and Sana clocks that you said nothing (sana_let_down = true). Tag: cave.
+Meera's card. Name: The leak. One line: When a borrowed belief or an old fear comes out sounding like a fact, that's a leak — and the giveaway is that it can't be checked. What you did: [accuracy + the Vikram choice]. The confusion: "We tried it in 2023, it broke" is a real fact, not a leak. "Can't be done" from fear is a leak. Same shape, different source. From the book: Berne 1961 & TA Today ch. 6 — contamination (Parent and Child prejudice in the Adult).
+Flags: stood_for_sana, sana_let_down.
+[H4] 2.5 Kabir Invents a Trap
+Saturday, 16:00, Aai's kitchen. Kabir is there; so is his mother, Reshma. Dinner is cooking. This scene is the GPP "Mike at the dinner table" moment, and it is where the player first watches a trap being built by a child — the key to understanding that traps are learned, not innate. Cast: Kabir, Aai, Reshma, you.
+Beat 1 — the model. Kabir's older cousin Tara (10) is visiting and gets a stomach ache at the table; Aai immediately excuses her, fusses, makes kadha. Kabir watches this closely. (No choice; recognition prompt: "What did Tara just get, and for what?" → a big warm nod, for being, for a stomach ache. If the player saw 1.5, the app notes: "You've seen this before.")
+Beat 2 — the copy. Ten minutes later, Kabir, eyeing the karela (bitter gourd) on his plate: "Aai… my stomach hurts too." Aai turns to fuss. You catch Kabir's eye; he knows you saw. Your move — you're the grown-up who noticed (the GPP father's line):
+Wink, and quietly: "Does it really hurt, or is it the karela?" → Kabir bursts out laughing: "The karela!" Them +8 with Kabir, +5 with Reshma (who saw). Tag: real. The trap is broken before it sets. The app: "You just stopped a trap being born. The books call this catching a game in statu nascendi — as it's being born."
+Play along: "Oh no, poor Kabir, no karela for him." → Aai agrees; Kabir gets out of the karela; Them +3 but the app shows a faint yellow thread forming under Kabir — the trap has set one notch. Flag kabir_trap_fed = true. Tag: hook (you fed it).
+Tell on him: "He just doesn't want the karela, Aai." → Kabir glares; Them −6 with Kabir. Tag: cold. (The trap is stopped, but by shaming — the wrong tool; the card distinguishes this from the wink.)
+Beat 3 — why it matters. Reshma, quietly, to you: "Aarav does the exact same thing. The headache before homework. I never know whether to believe him." (callback to 1.5).
+"Hard to tell real from the move, isn't it. Tara got fussed over for hers — he's just copying what works." → Them +7. Tag: real. Reshma: "…Huh. He is, isn't he."
+"You should call his bluff." → Them −3. Tag: cold (advice nobody asked for — the Saviour chair again; the app is now quietly counting these for week 4).
+Meera's card. Name: Traps are learned. One line: A child watches which face gets the biscuit and copies it; that's how a trap is born, and it can be caught the moment it starts. What you did: [broke / fed / shamed]. The confusion: Kids aren't manipulative monsters — they're running a tiny, clever pilot, working out what gets a nod. From the book: Games People Play ch. 5, the genesis of games (Mike and the stomach-ache); the "Little Professor".
+Flags: kabir_trap_fed, saviour_count (incremented).
+[H4] 2.6 Sunday boss — The Fake Pilot
+Sunday, 16:00, Chai & Why. Cast: Meera, the group, and a guest: Vikram, who someone brought along (he doesn't know you come here; awkward). The boss tests whether the player can hear a Boss-leak dressed as pure reason — "let's just be rational about this" — which is Vikram's whole style.
+Setup. Meera runs a mock disagreement: the group must decide whether Chai & Why should move to a bigger room. Vikram, invited to "bring an outside view", takes over in full Fake-Pilot mode: every sentence sounds like calm logic and is actually a borrowed rule or a put-down. The player's job across six turns is to tell the real Pilot statements from the leaks, and — twice — to make a clean cut that returns the room to actual Pilot thinking without starting a status fight.
+The six turns (player diagnoses, then on turns 3 and 5 must choose a line):
+Vikram: "Let's be rational. Bigger room, more rent, simple maths." → sounds Pilot; is Pilot-ish but incomplete (ignores what the group is for). Diagnose: mostly Pilot, one leak ("simple" dismisses the hard part).
+Priyanka: "But this room is why people feel safe enough to talk." → Pilot (a real fact about the group's purpose).
+Vikram: "Feelings aren't a business plan." → Boss-leak wearing reason. Player's cut (choose):
+"Actually, for a drop-in group, how people feel is the business plan — that's the product." (Pilot → Pilot, reframes on facts) → Them +6, the room nods, Vikram pauses. Tag: real.
+"Don't be so cold about it." (Boss → Boss) → status fight; Them −7. Tag: cold.
+Say nothing. → Vikram rolls on; You −4. Tag: cave.
+Dev (who's there): "We did try a bigger room in 2019. Attendance dropped. People sat further apart." → Pilot (real memory — the trap item; players may hear "it won't work" and mislabel it a Kid-leak).
+Vikram: "Well if nobody here can think about money, I'll leave you to it." → the flip — he's moved to the Blamer/Sufferer chair, though the player can't name that until week 4. Player's cut:
+"Money matters — let's actually do the maths with the attendance data Dev just mentioned, not without it." (keeps him in Pilot, hands him a real task) → Them +7; Vikram sits back down, grudgingly useful. Tag: real. Writes cut_vikram = true.
+"Fine, go then." → he leaves; the group deflates; Them −8. Tag: cold.
+Meera, to the room: "So?" — and the group reaches a Pilot decision only if the player made both cuts cleanly.
+Meera's interruption (after turn 3): "What just happened when Vikram said 'feelings aren't a business plan'?" → [He made a good point / He used a rule to win / He asked a question]. Correct: He used a rule to win (a leak).
+Pass: both cuts real, Them ≥ 50, You ≥ 50. Fail: Meera: "He walked all over you with the word 'rational'. Watch for it. Again next week?"
+Ending. After, Vikram to you at the door, quietly: "You come here?" "First realised it last Sunday." He looks at you differently — not warmer, but recalculating. Writes vikram_knows = true (changes his week-4 tone).
+Meera's card. Name: The Fake Pilot. One line: The hardest leak to catch is the one that sounds like pure reason — "let's just be rational" is often a Boss winning. What you did: [cuts]. The confusion: Real Pilot thinking welcomes the feelings and the memory as data; the Fake Pilot uses "rational" to rule them out. From the book: Berne on the contaminated Adult; TA Today on redefining and the Fake Pilot move. Watch this week: anyone who says "obviously" or "simple" or "rational" — check what they're ruling out.
+Flags: cut_vikram, vikram_knows.
+End of week 2 — what the player can now see. Long-press reveals the voice behind any line, in every scene past and present. The profile shows the player's voice-print, updated. Meera's one line: "Now you can hear the voices. Next week, watch what they do to each other."
+[H3] Week 3 — Volleys
+The week conversations become visible as moves and counter-moves. Reveal unlocks "the volley" at the end of 3.1: long-press shows the arrow from speaker's voice to listener's voice, whether it's matched or cut, and a second grey arrow when there's double-talk. This is the week with the first scene that can genuinely wound the player — the call with Ma — and the first they fix something on purpose.
+[H4] 3.1 Slow-Motion Replay
+Monday, 19:30, 3B. Tanvi teaches you to see a conversation as arrows. Cast: Tanvi, and a replayed clip of you-and-Rohan. Mini-board: Vector, introduced gently.
+Beat 1. Tanvi pulls up (in-fiction, on her phone's notes app) a thing you said to Rohan last night. Two little stacks of three circles appear — you and Rohan — and she drags an arrow: "You said 'can you just once pay rent on time' — that came from here [your Strict Boss] and landed here [his Kid]." The player then drags the reply arrow for Rohan's "ugh, you sound like my mum" — Kid back up to Boss. The two arrows are parallel. "See? Matched. It'll run forever, this one. Nasty, but matched."
+Beat 2 — the player draws one. A fresh exchange: you to Sana, "your auth code was clean" → Sana, "it was mostly the library". The player drags both arrows: Pilot→Pilot offered, but Sana's reply comes from the Kid (bounce) — the arrows cross. "Crossed. That's why it felt like it didn't land. She changed the voice on you."
+Beat 3. Tanvi: "Matched keeps a thing going. Crossed stops it. Neither is good or bad — depends what you want to keep going." Recognition prompt: given a nasty matched volley you want to end, do you want to match or cross? → cross.
+Reveal unlock: the volley view. Meera's card (Sunday): Name: Volleys — matched and cut. One line: A matched volley runs forever; a cut stops it; you choose which you want. From the book: Games People Play ch. 2 — the first two rules of communication. Flags: none.
+[H4] 3.2 Keep It Going
+Tuesday, 13:00, canteen. Cast: Dev. A scene about the good use of matched volleys — keeping a fragile conversation alive. Dev rarely opens; today, if dev_opened_1 or dev_at_group, he does.

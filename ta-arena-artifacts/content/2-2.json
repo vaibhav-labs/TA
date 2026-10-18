@@ -1,0 +1,165 @@
+{
+  "slot": "2.2",
+  "title": "Five Faces",
+  "world": 2,
+  "worldName": "Three Voices",
+  "week": 2,
+  "weekName": "Three Voices",
+  "mechanic": "Diagnose",
+  "concept": "After this one you can tell the five faces of the three voices apart, and see which side of a face is showing.",
+  "plainWord": "the face",
+  "bookTerm": "Functional model",
+  "bookIdea": "The Parent splits into a controlling part and a nurturing part, the Child splits into a free part and an adapted part, and the Adult stays whole, which makes five in all. Each of the four split parts can be used in a helpful or an unhelpful way.",
+  "bookSource": "TA Today, ch. 3",
+  "opener": {
+    "setting": "Tuesday, 09:40, Halden, fourth floor. Standup has just finished and the room is still loud.",
+    "lines": [
+      { "who": "Daniel", "text": "“Right. Standup's done. Let's keep it moving.”", "cue": "not looking up from his laptop" }
+    ],
+    "ask": "Which voice is talking in each line, and is that face helping the person or keeping them stuck?"
+  },
+  "rounds": [
+    {
+      "level": "Spot",
+      "label": "Spot, round 1",
+      "intro": "<b>How this one works:</b> the same three voices as before, now at a standup. Tap the voice, then read the cue that gives it away.",
+      "items": [
+        {
+          "type": "pick",
+          "who": "Daniel, standup",
+          "text": "“We don't miss deadlines on my team.”",
+          "cue": "arms folded, a rule about what “we” do",
+          "options": ["The Boss", "The Pilot", "The Kid"],
+          "answer": 0,
+          "why": "A rule about the whole team, with the standard borrowed from somewhere else. That is the Boss, and it speaks for everyone in the room.",
+          "traps": {
+            "1": "The Pilot would give the plan: “The deadline is Thursday, here's what's left.” This line has no facts in it, only a standard about everyone.",
+            "2": "The Kid would sound like “I always miss them”, scared of the date. This line lays down the law instead."
+          },
+          "example": "A cricket ground, a captain before the toss: “We don't bowl first in this city. Nobody does.”<br>It sounds like a fact about cricket, but it is a rule the team inherited."
+        },
+        {
+          "type": "pick",
+          "who": "Omar, standup",
+          "text": "“The staging box is out of memory; I'll bump it to 8 gig and retry by eleven.”",
+          "cue": "a plan with numbers in it",
+          "options": ["The Boss", "The Pilot", "The Kid"],
+          "answer": 1,
+          "why": "Facts about the box, and a plan with a time. Nothing in it is about who is right or wrong. That is the Pilot, the voice that handles what is in front of him.",
+          "traps": {
+            "0": "The Boss would make it a question of blame: “Who let it run out?” The facts would turn into a charge against someone.",
+            "2": "The Kid would sound like “I'll try, sorry, I might break it.” The numbers would vanish and the worry would take their place."
+          },
+          "example": "A school bus driver at the gate: “The left door sticks. I'll oil it at lunch and check it before the three o'clock run.”<br>A fix, a time and a check. That is the Pilot at work."
+        },
+        {
+          "type": "pick",
+          "who": "Clara, standup",
+          "text": "“Sorry, sorry, mine's not done, I'm so slow.”",
+          "cue": "apologising first, calling herself slow",
+          "options": ["The Boss", "The Pilot", "The Kid"],
+          "answer": 2,
+          "why": "She says sorry before anyone has asked, and puts herself down. That is the Kid, the part that was there first and still shrinks when a room is watching.",
+          "traps": {
+            "0": "The Boss would blame her: “You should have started on Monday.” The room would hear a rule, with no plea in it.",
+            "1": "The Pilot would say “Mine's not done, it'll be ready after lunch.” No sorry, no name-calling, and the plan is the point."
+          },
+          "example": "A family group chat, a cousin who is late with the sweets order: “Sorry sorry, I'm hopeless, I'll send it tonight.”<br>The apology is bigger than the problem, and that is how the Kid talks."
+        },
+        {
+          "type": "pick",
+          "who": "Daniel, not looking up",
+          "text": "“It's fine, Clara, it happens.”",
+          "cue": "a hand waved at the screen, a soothing tone",
+          "options": ["The Boss", "The Pilot", "The Kid"],
+          "answer": 0,
+          "why": "It sounds calm and kind. But soothing someone who is upset, from above, is the Boss in its caring face. It keeps Clara in the small chair while looking helpful.",
+          "traps": {
+            "1": "The Pilot would name the next step: “It happens, let's fix the test.” This line has no next step, so it is only a pat on the head.",
+            "2": "The Kid would say “it's fine” to get out of trouble. Daniel is the one speaking, though, and he is not the one in trouble."
+          },
+          "example": "A family WhatsApp group, a father after his daughter spills the paint: “It's fine, love, it happens.”<br>Said with a wave and no look up, it closes the subject and leaves her feeling small."
+        },
+        {
+          "type": "pick",
+          "who": "Omar, standup",
+          "text": "“What's actually blocking it? Let's look.”",
+          "cue": "leaning in, asking what the problem is",
+          "options": ["The Boss", "The Pilot", "The Kid"],
+          "answer": 1,
+          "why": "It asks about the problem and offers to go and look. That is the Pilot, the voice that wants the facts so the work can move.",
+          "traps": {
+            "0": "The Boss would ask “Why isn't this done yet?” The question would be a charge, rather than a search.",
+            "2": "The Kid would say “I don't know, sorry, can someone else look?” That hands the question away instead of asking it."
+          },
+          "example": "A bank queue, a teller to a man holding the wrong form: “What's the form for? Let's find the right one.”<br>She wants the facts and the next step, and nothing more."
+        }
+      ]
+    },
+    {
+      "level": "Play",
+      "label": "Play, the week in motion",
+      "intro": "<b>Harder now.</b> The Boss comes in a strict face and a caring face, and the Kid comes in a wild face and a good face. Any of them can help or hurt. Read the cue, then pick the face, not just the voice.",
+      "items": [
+        {
+          "type": "pick",
+          "who": "Maya, at the stove, taking the spatula from you",
+          "text": "“Leave it with me, love. You'll only get the onions wrong, and then you'll be upset.”",
+          "cue": "soft voice, a hand on your arm",
+          "options": ["The Strict Boss", "The Caring Boss", "The Pilot", "The Good Kid"],
+          "answer": 1,
+          "why": "The words are soft, which is the Caring Boss. What makes it smothering is the move: she takes the job off you because she has decided you can't do it, so you never get to learn. That is the hurtful side of the caring face.",
+          "traps": {
+            "0": "The Strict Boss would say “Give it here, you'll get it wrong.” Flat and final, with no love and no hand on your arm.",
+            "2": "The Pilot would offer a split of the work: “The onions need five minutes, you go on the rice.” That leaves you cooking rather than sidelined.",
+            "3": "The Good Kid would sound like “Sorry, you do it, I'll just watch.” That is the line of the one being helped, and here Maya is the one speaking."
+          },
+          "example": "A birthday party, a parent to a child trying to tie a balloon: “Give it here, sweetheart. You'll only get it knotted, and then you'll cry.”<br>The care is real. The child never learns to tie the knot."
+        },
+        {
+          "type": "pick",
+          "who": "Daniel, in the Friday review",
+          "text": "“The report's due Friday at noon. I'll read it when it's in, not before. Ask me again on Thursday and the answer's still no.”",
+          "cue": "steady, a clear line with a reason",
+          "options": ["The Strict Boss", "The Caring Boss", "The Pilot", "The Wild Kid"],
+          "answer": 0,
+          "why": "This is the Strict Boss on its healthy side: a firm line with a reason and a time, so the other person knows where they stand. It protects the work and puts nobody down.",
+          "traps": {
+            "1": "The Caring Boss would soften it: “Don't worry, love, send it whenever.” The boundary goes, and the pushing starts again.",
+            "2": "The Pilot would state the facts only: “Friday noon, I'll read it then.” It is accurate, but the firm no that holds the line is missing.",
+            "3": "The Wild Kid would blurt out what it wants: “Friday noon? I was going to be at the beach by then!” The boundary turns into a haggle over what the speaker wants."
+          },
+          "example": "A school canteen, the cook to a boy who wants a second helping before the bell: “One is the rule today, and I'll give you the second one at break.”<br>A firm line with a reason and a time is the healthy side of the Boss."
+        }
+      ]
+    },
+    {
+      "level": "Analyse",
+      "label": "Analyse, explain it",
+      "intro": "<b>Five faces.</b> Drop each line into the face it came from, then read the why.",
+      "items": [
+        {
+          "type": "sort",
+          "prompt": "Put each line in the right face of the five.",
+          "bins": ["The Strict Boss", "The Caring Boss", "The Pilot", "The Wild Kid", "The Good Kid"],
+          "items": [
+            { "text": "“Get it done by Friday or you're off the project.”", "answer": 0, "why": "A rule with a threat in it. That is the Strict Boss, the Boss at its harshest. Its helpful side would give the same deadline with a reason and no threat." },
+            { "text": "“Oh, you poor thing, come and sit down, I'll make you tea.”", "answer": 1, "why": "Warm and protective, and it takes over. That is the Caring Boss. Its hurtful side is smothering: care that stops you doing the thing yourself." },
+            { "text": "“Right. Three options, with the cost of each. Pick one and I'll set it up.”", "answer": 2, "why": "Options and costs, then a clear next step. That is the Pilot, the voice that deals with what is actually here." },
+            { "text": "“Let's just leave now, I don't care about the report, let's go!”", "answer": 3, "why": "Wanting something now, with no check on what it costs. That is the Wild Kid. It is honest about wanting and has not thought ahead yet." },
+            { "text": "“Sorry, whatever you think is best, I'll do it however you like.”", "answer": 4, "why": "It gives up its own view to keep the peace. That is the Good Kid, which learned that keeping quiet keeps it safe." }
+          ]
+        }
+      ]
+    }
+  ],
+  "debrief": {
+    "nadia": "The Strict Boss and the Caring Boss are one voice with two faces, and so are the Wild Kid and the Good Kid. Each of those four faces has a helpful side and a hurtful side, so ask what the face is doing before you decide whether it is nice. The Pilot stands alone in the middle.",
+    "bookTerm": "Functional model",
+    "bookNote": "The books call this the functional model, which shows how you use your ego states. The Parent splits into controlling (sometimes called critical) and nurturing, the Child into free and adapted, and the Adult stays whole. Some writers add that each of the four split parts can be used in a positive or a negative way."
+  },
+  "reflection": {
+    "prompt": "Think of someone at home or at work who is kind and still keeps you small. Which face were they wearing, the helpful side or the hurtful one?"
+  },
+  "next": "2.3"
+}

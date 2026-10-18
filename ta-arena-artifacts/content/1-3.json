@@ -1,0 +1,292 @@
+{
+  "slot": "1.3",
+  "title": "Hi–Hi",
+  "world": 1,
+  "worldName": "Hunger",
+  "week": 1,
+  "weekName": "Invisible",
+  "mechanic": "Counter",
+  "concept": "After this one you can count the nods a greeting needs after time apart, and tell a hello that's too small from one that's too big.",
+  "plainWord": "the hello sum",
+  "bookTerm": "Ritual",
+  "bookIdea": "A ritual is a set exchange, such as a greeting, that follows a predictable pattern, and both sides work out without saying so how many nods they owe each other.",
+  "bookSource": "Games People Play, ch. 3",
+  "opener": {
+    "setting": "Wednesday, 8:00am. The 3B door. Sam walks in, tanned, a bag over one shoulder. He left on Monday night.",
+    "lines": [
+      {
+        "who": "Maya",
+        "text": "“Sam needs a proper hello when he gets back, or he sulks for two days.”",
+        "cue": "last night, over the dishes"
+      },
+      {
+        "who": "Sam",
+        "text": "“...”",
+        "cue": "in the doorway, bag still on one shoulder"
+      }
+    ],
+    "ask": "How much of a welcome does Sam need after being away, and how do you build one that pays it?"
+  },
+  "rounds": [
+    {
+      "level": "Spot",
+      "label": "Spot, round 1",
+      "intro": "Three lines from the hello at the door. Tap what each one tells you.",
+      "items": [
+        {
+          "type": "pick",
+          "who": "Sam",
+          "text": "“Cool.”",
+          "cue": "after a short hello, walking off to his room",
+          "options": [
+            "He's keeping count, and you came up short",
+            "He's pleased with the greeting",
+            "He wants to talk about the coast"
+          ],
+          "answer": 0,
+          "why": "He is keeping count. A short hello leaves him owed, and “cool” is what owed sounds like.",
+          "traps": {
+            "1": "Pleased would sound like “Oh, lovely!” Cool is flat, so calling it pleasure gets the message wrong.",
+            "2": "A wish to talk about the coast would come with a warm chat. He is walking off to his room, so the talk isn't on offer."
+          },
+          "example": "A friend's office, Monday.<br>You say “Hi” at the desk.<br>“Cool,” she says, and turns back to her screen. She wanted more than a hi."
+        },
+        {
+          "type": "pick",
+          "who": "Sam",
+          "text": "“Okay, what do you want?”",
+          "cue": "laughing, after a run of warm lines at the door",
+          "options": [
+            "He thinks you want a favour",
+            "Too many warm lines in a row read like a pitch",
+            "He's bored of the welcome"
+          ],
+          "answer": 1,
+          "why": "Too many warm lines at once sound like a sales pitch. He is checking what you are selling.",
+          "traps": {
+            "0": "A favour would come with one clear ask. There was no ask, only a pile of warm lines, and the pile is what he noticed.",
+            "2": "Boredom would mean the welcome went on too long. The lines were warm, not dull, so the question is about the warmth."
+          },
+          "example": "A neighbour's birthday.<br>“Happy birthday! You look amazing! Have you had cake? You must come to ours!”<br>Five warm lines in a row make you wonder what they want."
+        },
+        {
+          "type": "pick",
+          "who": "You",
+          "text": "“Right, I've got to run.”",
+          "cue": "the kitchen, after a quick hello",
+          "options": [
+            "A full hello",
+            "A compliment",
+            "A quick exit"
+          ],
+          "answer": 2,
+          "why": "A quick exit. It ends the greeting, and it counts as one small nod, not a full welcome.",
+          "traps": {
+            "0": "A full hello needs several warm lines. One line about running off counts as one nod, and it closes the greeting.",
+            "1": "A compliment would say something nice about him. This line is about your schedule, so it isn't a compliment."
+          },
+          "example": "A train platform.<br>“Sorry, got to catch this, see you!”<br>It is a polite exit. It is still one nod, and the talk is over."
+        }
+      ]
+    },
+    {
+      "level": "Play",
+      "label": "Play, the week in motion",
+      "intro": "Sam's greeting is a counter. Pick the lines that pay what he is owed, then walk the stairs with Gran.",
+      "items": [
+        {
+          "type": "counter",
+          "prompt": "Sam is back from the coast after two nights away and is owed about a dozen nods. Build a greeting that pays them.",
+          "target": 12,
+          "tolerance": 3,
+          "maxPicks": 12,
+          "palette": [
+            {
+              "text": "“Hey.”",
+              "value": 1,
+              "tag": "small"
+            },
+            {
+              "text": "“You're back!”",
+              "value": 3,
+              "tag": "warm"
+            },
+            {
+              "text": "“How was the coast?”",
+              "value": 5,
+              "tag": "warm"
+            },
+            {
+              "text": "“Wait, tell me everything.”",
+              "value": 7,
+              "tag": "warm"
+            },
+            {
+              "text": "“You look well.”",
+              "value": 4,
+              "tag": "warm"
+            },
+            {
+              "text": "“Did the whole gang go?”",
+              "value": 4,
+              "tag": "warm"
+            },
+            {
+              "text": "“Good to have you back, really.”",
+              "value": 6,
+              "tag": "warm"
+            },
+            {
+              "text": "“I missed you. The flat was far too quiet without you.”",
+              "value": 8,
+              "tag": "gush"
+            },
+            {
+              "text": "“Right, I've got to run.”",
+              "value": 1,
+              "tag": "exit"
+            }
+          ],
+          "underMsg": "Sam says “Cool.” and goes to his room. He is still owed more than that.",
+          "overMsg": "Sam laughs. “Okay, what do you want?” Too many warm lines in a row sound like a pitch.",
+          "hitMsg": "He sits on the kitchen counter and tells you about a boat.",
+          "why": "The amount owed rises with time apart, so two nights asks for far more than a passing hello and far less than a month away would. Too little leaves someone sulking, and too much sounds like a pitch.",
+          "them": {
+            "under": -10,
+            "over": 2,
+            "hit": 12
+          },
+          "flags": {
+            "under": [
+              "sam_sulk"
+            ],
+            "hit": [
+              "sam_greeted"
+            ]
+          }
+        },
+        {
+          "type": "scene",
+          "title": "Wednesday, 8:40 and 8:55, the stairwell",
+          "setting": "Gran on the landing with the milk, first on the way down and then on the way back up for your charger.",
+          "meters": {
+            "you": 60,
+            "them": 50
+          },
+          "beats": [
+            {
+              "who": "Gran",
+              "text": "“...”",
+              "cue": "stairwell, 8:40, on the landing with the milk",
+              "lines": [
+                {
+                  "text": "“Morning, Gran!”",
+                  "tag": "best",
+                  "you": 3,
+                  "them": 3,
+                  "outcome": "She answers at once, the way she always does.",
+                  "why": "A hello with her name in it is a clean exchange, and it pays a nod each way."
+                },
+                {
+                  "text": "Nod, and keep moving.",
+                  "tag": "ok",
+                  "you": -2,
+                  "them": -1,
+                  "outcome": "She has to fill the silence herself, and she does it to the milk.",
+                  "why": "A nod with no word is smaller. It leaves her to carry the exchange on her own."
+                }
+              ]
+            },
+            {
+              "who": "Gran",
+              "text": "“Morning, love, eat something!”",
+              "cue": "still on the landing, the milk on her hip",
+              "lines": [
+                {
+                  "text": "“I will, Gran. Thanks.”",
+                  "tag": "best",
+                  "you": 2,
+                  "them": 2,
+                  "outcome": "She shifts the milk and smiles at the stairs. “Good, good.”",
+                  "why": "You answered what she said, not only the hello. That is what keeps the exchange going."
+                },
+                {
+                  "text": "“Yes, yes.” (already on the stairs)",
+                  "tag": "ok",
+                  "you": -1,
+                  "them": -1,
+                  "outcome": "“Yes, yes, yes,” she says to your back.",
+                  "why": "The words are right, but you are gone before she finishes. It ends the exchange a half-step early."
+                }
+              ]
+            },
+            {
+              "who": "Gran",
+              "text": "“...”",
+              "cue": "stairwell, 8:55, second pass. You forgot your laptop charger. Gran is still on the landing.",
+              "lines": [
+                {
+                  "text": "A nod and a half-smile, then keep moving.",
+                  "tag": "best",
+                  "you": 0,
+                  "them": 1,
+                  "outcome": "Gran nods back and carries on up the stairs.",
+                  "why": "A small nod is enough for a quick pass. You asked for nothing, so nothing more was owed."
+                },
+                {
+                  "text": "“Gran! How are you? How are the knees today? Did your son call?”",
+                  "tag": "ok",
+                  "you": 0,
+                  "them": -3,
+                  "outcome": "Gran narrows her eyes. “I'm the same as fifteen minutes ago. What do you want?”",
+                  "why": "Three questions in a row on a second pass read as a favour being asked. The interest was real, but the pile of it felt like a pitch."
+                },
+                {
+                  "text": "Walk past without looking.",
+                  "tag": "ok",
+                  "you": 0,
+                  "them": -6,
+                  "outcome": "Gran, to the milk: “Hm.”",
+                  "why": "Going by without a look is cold, and she notices. It is a small cut, and it leaves her owed."
+                }
+              ]
+            }
+          ],
+          "example": "A landlady in another building.<br>“You're getting thin, come in.” Every morning, the same warm line, and a missed one gets noticed."
+        }
+      ]
+    },
+    {
+      "level": "Analyse",
+      "label": "Analyse, explain it",
+      "items": [
+        {
+          "type": "pick",
+          "who": "You",
+          "text": "“Hey.” felt too small, and “Wait, tell me everything” felt like too much. What explains that?",
+          "options": [
+            "The amount owed depends on time apart, so both too little and too much feel wrong",
+            "Greetings are only manners, so any amount is fine if it's polite",
+            "Sam is hard to please, so nothing you say will count"
+          ],
+          "answer": 0,
+          "why": "A greeting is a precise exchange. Time apart sets how much is owed. Too little leaves a gap, and too much reads as a pitch.",
+          "traps": {
+            "1": "If greetings were only manners, the amount would not matter. Sam sulked at “Hey.” because a short hello carries a debt, and manners don't come with one.",
+            "2": "“He's just hard to please” sounds like a shrug, and then you stop trying. The debt stays unpaid, so his “Cool” will come again."
+          },
+          "example": "A cousin visiting after two years.<br>“Hi!” at the door, and then nothing for an hour.<br>The cousin notices the gap in the welcome, even if nobody says so."
+        }
+      ]
+    }
+  ],
+  "debrief": {
+    "nadia": "A greeting isn't only manners. People keep an unspoken count of the nods they're owed, and the count goes up with time apart. Too few and the other person sulks, and too many sounds like a pitch.",
+    "bookTerm": "Ritual",
+    "bookNote": "The books call this a ritual: a set exchange, such as a greeting, that follows a predictable pattern. Berne adds that both sides work out, without saying so, how many nods they owe each other, and that the sum grows with time apart. His own example reaches about thirty after a month away, so a short trip needs far fewer."
+  },
+  "reflection": {
+    "prompt": "Who did you greet properly this week, and who did you only wave at?"
+  },
+  "next": "1.4"
+}

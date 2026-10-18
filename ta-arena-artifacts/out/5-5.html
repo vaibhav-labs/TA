@@ -1,0 +1,803 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Two Halves · TA Arena</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    color-scheme: light;
+    --bg: #171233; --bg-2: #241c47;
+    --surface: #f2eefb; --surface-2: #c9b8e6; --surface-3: #bda8e2;
+    --accent: #6c5fe0; --accent-deep: #4a3fa0;
+    --pink: #d9699f; --blue: #5b8fd9;
+    --ok: #1f7568; --wrong: #a8407a; --alt: #5c4fb0;
+    --text: #231c3f; --text-dim: #675f82;
+    --on-bg: #ece7fb; --on-bg-dim: #b4abd9;
+    --shadow: rgba(23, 18, 51, 0.28);
+    --parent: #7b5fe0; --adult: #4f8fd9; --childv: #d9699f;
+  }
+  [hidden] { display: none !important; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    background-image:
+      radial-gradient(ellipse 820px 560px at 12% -8%, var(--bg-2), transparent),
+      radial-gradient(ellipse 680px 520px at 108% 12%, #2c1f4a, transparent),
+      radial-gradient(ellipse 600px 420px at 60% 110%, #2a1840, transparent);
+    color: var(--on-bg);
+    font-family: "IBM Plex Sans", system-ui, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 28px 16px 56px;
+  }
+  .stage { width: 100%; max-width: 580px; min-width: 0; }
+
+  .masthead { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 16px; padding: 0 4px; }
+  .series { font-family: "IBM Plex Mono", monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--pink); font-weight: 600; }
+  .series small { color: var(--on-bg-dim); font-weight: 500; letter-spacing: 0.08em; }
+  .tag { font-family: "IBM Plex Mono", monospace; font-size: 11px; color: var(--on-bg-dim); text-decoration: none; white-space: nowrap; }
+  .tag:hover { color: var(--pink); }
+  a:focus-visible, button:focus-visible, textarea:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  .card { background: var(--surface); color: var(--text); border-radius: 22px; box-shadow: 0 24px 60px var(--shadow); padding: 32px 28px 28px; position: relative; min-width: 0; overflow-wrap: anywhere; }
+  .card:focus { outline: none; }
+  .card-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; margin-bottom: 18px; }
+  .card-head > div:first-child { min-width: 0; }
+  h1 { font-family: "Fraunces", Georgia, serif; font-weight: 500; font-size: 27px; line-height: 1.2; margin: 0 0 6px; text-wrap: balance; letter-spacing: -0.01em; }
+  h1.h2 { font-size: 21px; margin: 0 0 12px; }
+  .deck { font-size: 14.5px; color: var(--text-dim); margin: 0; max-width: 40ch; line-height: 1.5; }
+  .case-no { font-family: "IBM Plex Mono", monospace; font-size: 11px; color: var(--text-dim); text-align: right; white-space: nowrap; padding-top: 4px; }
+  .tagline { display: inline-block; font-family: "IBM Plex Mono", monospace; font-size: 11px; color: var(--text-dim); background: var(--surface-2); border-radius: 999px; padding: 4px 12px; margin: 0 0 16px; letter-spacing: 0.03em; }
+  .kicker { font-family: "IBM Plex Mono", monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-dim); margin: 0 0 10px; }
+
+  .progress { display: flex; gap: 5px; margin-bottom: 24px; }
+  .progress i { height: 5px; flex: 1; background: var(--surface-2); border-radius: 999px; overflow: hidden; position: relative; }
+  .progress i.done { background: linear-gradient(90deg, var(--accent), var(--pink)); }
+  .progress i.current::after { content: ""; position: absolute; inset: 0; width: 50%; background: var(--accent); opacity: .55; }
+
+  .round-label { font-family: "IBM Plex Mono", monospace; font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-dim); margin-bottom: 10px; }
+  .round-intro { font-size: 15px; line-height: 1.55; color: var(--text-dim); margin: 0 0 16px; }
+
+  .exchange { background: var(--surface-2); border-radius: 16px; padding: 14px 16px; margin: 0 0 18px; }
+  .exchange .line { font-size: 15.5px; line-height: 1.5; margin: 0 0 8px; }
+  .exchange .line:last-child { margin-bottom: 0; }
+  .exchange .who { font-family: "IBM Plex Mono", monospace; font-size: 11px; color: var(--text-dim); display: block; margin-bottom: 2px; letter-spacing: 0.03em; }
+  .exchange .cue { font-size: 13.5px; color: var(--text-dim); font-style: italic; margin: 6px 0 12px; }
+  .exchange .cue:last-child { margin-bottom: 0; }
+
+  .lede { font-family: "Fraunces", Georgia, serif; font-size: 17.5px; font-weight: 500; font-style: italic; color: var(--accent-deep); line-height: 1.5; margin: 0 0 14px; }
+  .prompt { font-size: 16.5px; line-height: 1.55; margin: 0 0 18px; font-weight: 500; }
+  .setting { font-size: 15px; line-height: 1.55; color: var(--text-dim); font-style: italic; margin: 0 0 16px; }
+  .scene-title { font-family: "Fraunces", Georgia, serif; font-size: 19px; font-weight: 500; line-height: 1.3; margin: 0 0 6px; }
+
+  .choices { display: flex; flex-direction: column; gap: 10px; }
+  button.choice {
+    font-family: "IBM Plex Sans", sans-serif; font-size: 15px; font-weight: 500; text-align: left;
+    padding: 14px 17px; min-height: 44px; border-radius: 14px; border: none; background: var(--surface-2); color: var(--text);
+    cursor: pointer; transition: background 120ms, transform 80ms, box-shadow 120ms; line-height: 1.4;
+  }
+  button.choice:hover { background: var(--surface-3); box-shadow: 0 6px 16px rgba(108,95,224,0.16); }
+  button.choice:active { transform: scale(0.99); }
+  button.choice.correct { background: color-mix(in srgb, var(--ok) 20%, var(--surface)); box-shadow: 0 0 0 2px color-mix(in srgb, var(--ok) 45%, transparent) inset; }
+  button.choice.wrong { background: color-mix(in srgb, var(--wrong) 18%, var(--surface)); box-shadow: 0 0 0 2px color-mix(in srgb, var(--wrong) 40%, transparent) inset; }
+  button.choice.amber { background: color-mix(in srgb, var(--alt) 18%, var(--surface)); box-shadow: 0 0 0 2px color-mix(in srgb, var(--alt) 40%, transparent) inset; }
+  button.choice[disabled] { cursor: default; opacity: 0.6; }
+  button.choice[disabled]:hover { background: var(--surface-2); box-shadow: none; }
+  button.choice.correct[disabled], button.choice.wrong[disabled], button.choice.amber[disabled] { opacity: 1; }
+  button.choice.pal { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+
+  .pill { display: inline-block; max-width: 100%; font-family: "IBM Plex Mono", monospace; font-size: 11.5px; font-weight: 600; padding: 3px 10px; border-radius: 999px; color: #fff; letter-spacing: 0.02em; background: var(--accent); overflow-wrap: anywhere; }
+  .pill.p { background: var(--parent); }
+  .pill.a { background: var(--adult); }
+  .pill.c { background: var(--childv); }
+
+  .stamp { display: inline-flex; align-items: center; gap: 6px; font-family: "IBM Plex Mono", monospace; font-size: 12px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; padding: 5px 12px; border-radius: 999px; margin-bottom: 12px; color: #fff; }
+  .stamp.ok { background: var(--ok); }
+  .stamp.cross { background: var(--wrong); }
+  .stamp.amber { background: var(--alt); }
+
+  .why-box { border-radius: 16px; padding: 16px 18px 17px 20px; margin: 0 0 16px; border-left: 5px solid transparent; box-shadow: 0 8px 22px rgba(23,18,51,0.12); }
+  .why-box .stamp { margin-bottom: 10px; }
+  .why-box .feedback { margin: 0 0 12px; }
+  .why-box .feedback:last-child { margin-bottom: 0; }
+  .why-box.ok { background: color-mix(in srgb, var(--ok) 45%, white); border-left-color: var(--ok); }
+  .why-box.cross { background: color-mix(in srgb, var(--wrong) 42%, white); border-left-color: var(--wrong); }
+  .why-box.amber { background: color-mix(in srgb, var(--alt) 40%, white); border-left-color: var(--alt); }
+  .why-box.neutral { background: color-mix(in srgb, var(--accent) 22%, white); border-left-color: var(--accent); }
+
+  .feedback { font-size: 16px; line-height: 1.6; color: var(--text); margin: 0 0 14px; padding-top: 2px; }
+  .feedback b { color: inherit; }
+
+  .example { background: color-mix(in srgb, var(--accent) 38%, white); border-left: 5px solid var(--accent); border-radius: 16px; padding: 14px 16px 15px 18px; margin: 0 0 18px; font-size: 15px; line-height: 1.55; color: var(--text); box-shadow: 0 8px 22px rgba(23,18,51,0.10); }
+  .ex-label { font-family: "IBM Plex Mono", monospace; font-size: 10.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent-deep); margin-bottom: 6px; }
+
+  .nextbar { display: flex; justify-content: flex-end; align-items: center; gap: 10px; flex-wrap: wrap; margin-top: 4px; }
+  button.next, a.next {
+    font-family: "IBM Plex Mono", monospace; font-size: 13px; font-weight: 600; letter-spacing: 0.03em;
+    background: linear-gradient(135deg, var(--accent), var(--pink)); color: #fff; border: none; text-decoration: none;
+    padding: 12px 20px; min-height: 44px; border-radius: 999px; cursor: pointer; box-shadow: 0 10px 24px rgba(108,95,224,0.35);
+    display: inline-flex; align-items: center; justify-content: center; text-align: center;
+  }
+  button.next:hover, a.next:hover { filter: brightness(1.08); transform: translateY(-1px); }
+  button.next[disabled] { opacity: .45; cursor: default; box-shadow: none; transform: none; filter: none; }
+  .next-soon { font-size: 14px; color: var(--text-dim); margin: 0; }
+
+  .meters { display: flex; flex-direction: column; gap: 10px; margin: 0 0 18px; }
+  .meter { display: grid; grid-template-columns: 52px 1fr 40px; align-items: center; gap: 10px; font-family: "IBM Plex Mono", monospace; font-size: 12px; }
+  .meter .name { color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.08em; font-size: 11px; }
+  .meter .track { height: 10px; border-radius: 999px; background: var(--surface-2); overflow: hidden; }
+  .meter .fill { display: block; height: 100%; width: 0; border-radius: 999px; background: linear-gradient(90deg, var(--accent), var(--pink)); transition: width 300ms ease; }
+  .meter.them .fill { background: linear-gradient(90deg, var(--blue), var(--accent)); }
+  .meter.empty .fill { background: var(--wrong); }
+  .meter .num { text-align: right; color: var(--text); font-weight: 600; }
+
+  .total { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 12px; font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--text-dim); margin: 0 0 8px; }
+  .total b { font-family: "Fraunces", Georgia, serif; font-size: 28px; font-weight: 500; color: var(--text); }
+  .band { position: relative; height: 10px; border-radius: 999px; background: var(--surface-2); overflow: hidden; margin: 0 0 8px; }
+  .band .fill { position: absolute; left: 0; top: 0; bottom: 0; width: 0; background: linear-gradient(90deg, var(--accent), var(--pink)); transition: width 300ms ease; }
+  .band .fill.over { background: var(--wrong); }
+  .val { flex: none; font-family: "IBM Plex Mono", monospace; font-size: 12.5px; font-weight: 600; color: #fff; background: var(--accent-deep); border-radius: 999px; padding: 3px 10px; white-space: nowrap; }
+  .counter-actions { display: flex; justify-content: flex-end; gap: 10px; flex-wrap: wrap; margin-top: 16px; }
+  button.ghost { font-family: "IBM Plex Mono", monospace; font-size: 13px; font-weight: 600; letter-spacing: 0.03em; background: transparent; color: var(--text); border: 2px solid var(--surface-3); padding: 10px 18px; min-height: 44px; border-radius: 999px; cursor: pointer; }
+  button.ghost[disabled] { opacity: .45; cursor: default; }
+  .counter-fb:empty, .order-fb:empty { display: none; }
+
+  .sort-item { margin: 0 0 16px; }
+  .sort-item + .sort-item { padding-top: 16px; border-top: 1px solid var(--surface-2); }
+  .sort-item .exchange { margin-bottom: 12px; }
+  .seq { list-style: none; margin: 0 0 16px; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+  .seq:empty { display: none; }
+  .seq li { display: grid; grid-template-columns: 28px 1fr; gap: 10px; background: var(--surface-2); border-radius: 14px; padding: 12px 14px; }
+  .seq .n { font-family: "IBM Plex Mono", monospace; font-weight: 600; color: var(--accent-deep); }
+  .seq .ct { display: block; font-size: 15px; line-height: 1.5; }
+  .seq .why { display: block; font-size: 14px; line-height: 1.5; color: var(--text-dim); margin-top: 6px; }
+  .pool { margin: 0 0 14px; }
+
+  .intro-list { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 9px; }
+  .rules-box { background: var(--surface-2); border-radius: 16px; padding: 16px 18px; margin: 18px 0; }
+  .rules-box .round-label { margin-bottom: 10px; }
+  .rules-list { margin: 0; padding-left: 0; list-style: none; display: flex; flex-direction: column; gap: 9px; }
+  .rules-list li { font-size: 14px; line-height: 1.45; display: flex; gap: 10px; color: var(--text); }
+  .rules-list .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); flex: none; margin-top: 7px; }
+  .ask { background: var(--bg-2); color: var(--on-bg); border-radius: 16px; padding: 14px 16px 15px; margin: 0 0 18px; }
+  .ask .kicker { color: var(--on-bg-dim); margin-bottom: 6px; }
+  .ask p { font-family: "Fraunces", Georgia, serif; font-size: 17px; line-height: 1.45; margin: 0; }
+
+  .end-badge { font-family: "IBM Plex Mono", monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ok); margin-bottom: 8px; }
+  .source { margin-top: 20px; padding: 14px 16px; border-radius: 14px; background: var(--surface-2); font-size: 12.5px; color: var(--text-dim); line-height: 1.5; }
+  .source b { color: var(--text); }
+  .end-nav { margin-top: 18px; }
+
+  .reflect-tag { font-family: "IBM Plex Mono", monospace; font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #fff; background: linear-gradient(135deg, var(--accent), var(--pink)); display: inline-block; padding: 5px 12px; border-radius: 999px; margin-bottom: 14px; }
+  textarea.reflect-box { display: block; width: 100%; min-height: 120px; resize: vertical; font-family: "IBM Plex Sans", sans-serif; font-size: 15.5px; line-height: 1.55; color: var(--text); background: var(--surface-2); border: none; border-radius: 16px; padding: 14px 16px; margin-bottom: 18px; box-shadow: 0 0 0 2px transparent inset; }
+  textarea.reflect-box::placeholder { color: var(--text-dim); }
+  textarea.reflect-box:focus { outline: none; box-shadow: 0 0 0 2px var(--accent) inset; }
+
+  @media (max-width: 480px) {
+    body { padding: 20px 12px 40px; }
+    .card { padding: 26px 18px 22px; }
+    h1 { font-size: 24px; }
+    h1.h2 { font-size: 20px; }
+    .meter { grid-template-columns: 44px 1fr 36px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
+  }
+</style>
+</head>
+<body>
+
+<div class="stage">
+  <div class="masthead">
+    <div class="series" id="series">TA Arena</div>
+    <a class="tag" id="hubLink" href="#" hidden>← All games</a>
+  </div>
+  <main class="card" id="card" tabindex="-1">
+    <p class="deck">Loading the game.</p>
+    <noscript><p class="deck">This game needs JavaScript to run.</p></noscript>
+  </main>
+</div>
+
+<script>window.TA_GAME = {"slot":"5.5","title":"Two Halves","world":5,"worldName":"Underneath","week":5,"weekName":"Underneath","mechanic":"Choice-story","concept":"After this one you can see two people who share the three voices between them, and find the move that gives each of them all three.","plainWord":"two people sharing three voices","bookTerm":"Symbiosis","bookIdea":"A symbiosis is a relationship in which one person acts the Parent and the Adult while the other acts the Child, so between them they use only three of the six ego states.","bookSource":"TA Today, ch. 1 and 20","opener":{"setting":"Saturday, 7:40am. Hawthorn Court, apartment 3B, the kitchen. The fridge has a sheet on it in Maya's handwriting, and she has just come off a night shift.","lines":[{"who":"Maya","text":"\u201cSam, the sheet says you still owe the gas. I've checked it twice.\u201d","cue":"still in her ward shoes, not sitting down"},{"who":"Sam","text":"\u201cI know, I know. I'm hopeless. You still love me, right?\u201d","cue":"grinning at the fridge, already reaching for the biscuits"}],"ask":"Which of them plays the Boss and the Pilot, which of them plays the Kid, and what move would give each of them all three voices?"},"rounds":[{"level":"Spot","label":"Spot, round 1","intro":"Each line here comes from one of the three voices: the Boss, the Pilot or the Kid. Tap the voice that is talking, and then the picture of the pair.","items":[{"type":"pick","who":"Maya","text":"<i>She reads the week's jobs off the fridge sheet, one finger on each line, and does not look up. \u201cBins out Thursday. Gas by Friday. Don't argue, just do it.\u201d<\/i>","cue":"Saturday, 7:45am, the fridge door","options":["the Boss","the Pilot","the Kid"],"answer":0,"why":"\u201cDon't argue, just do it\u201d is an order with no reasons and no room for a reply. That is the Boss, the voice that learned how a flat should run. The Pilot would give the facts and leave the choice open.","traps":{"1":"The Pilot deals with what is in front of you, and the bins and the gas are that kind of fact. But the Pilot would not say \u201cdon't argue,\u201d so the words here are more than facts.","2":"The Kid would whine or plead, something like \u201cOh, do I have to?\u201d Maya is not asking for anything, so the Kid is not talking in this line."},"example":"A school gate, Monday, 8:10am.<br>Mum: \u201cBag on your back. No dawdling. Don't argue.\u201d<br>Son: \u201cOkay.\u201d He stops talking and walks to the gate with his eyes on the ground."},{"type":"pick","who":"Sam","text":"<i>He holds up the empty milk carton and grins. \u201cSorry, sorry, I know, I'm hopeless. You love me anyway.\u201d He reaches for the biscuit tin before anyone can answer.<\/i>","cue":"Saturday, 7:52am, the counter","options":["the Boss","the Pilot","the Kid"],"answer":2,"why":"The apology is charming, and it is also a way of collecting a warm nod without making a plan. \u201cI'm hopeless\u201d asks to be rescued, and the biscuit tin shows the wish is for comfort. That is the Kid, the part that wants a nod and asks for it.","traps":{"0":"The Boss would be stern, something like \u201cPay it back today.\u201d Sam is grinning and pleading, not giving orders, so the Boss is not the voice here.","1":"The Pilot would say what is owed and when it will be paid. Sam never mentions a date, and that missing date is the clue."},"example":"A cricket net, Saturday.<br>Player: \u201cSorry, sorry, I dropped the catch again. You love me, right?\u201d<br>Coach: \u201cFine. Go and get the ball, you clown.\u201d"},{"type":"pick","who":"Apartment 3B","text":"<i>Maya keeps the sheet, counts every bill and tells Sam what to do. Sam keeps the jokes and the apologies, and waits to be told. The flat runs, and it runs on those two jobs only.<\/i>","cue":"Wednesday, 9:40pm, apartment 3B, the kitchen","options":["One plays the Boss and the Pilot, the other plays the Kid","A shared plan, with both of them checking the sheet","Two people who simply dislike chores"],"answer":0,"why":"Maya gives the orders and does the sums, which are the Boss and the Pilot. Sam supplies the sorry and the charm, which is the Kid. Between them the flat uses three voices where two people could have six. That is the two halves pattern, and it stays stuck while each one keeps to their side.","traps":{"1":"A shared plan would show both of them on the sheet. Here the sheet belongs to Maya alone, and Sam never opens it, so it only looks shared from across the room.","2":"Dislike of chores would be a feeling about the bins and the dishes. The clip is about how the two of them fit together, not about what they think of the work."},"example":"A band with two players, Friday.<br>Drummer: \u201cI've got the setlist and the van, and I'll tell you when to start. You just sing and keep everyone laughing.\u201d<br>Singer: \u201cDeal. And I'll forget the setlist, as usual.\u201d"}]},{"level":"Play","label":"Play, the week in motion","intro":"Two scenes in the same flat. Maya plays the Boss and the Pilot, and Sam plays the Kid. Find the line that gives each of them a voice they have been leaving unused, and watch what the words do to the meters.","items":[{"type":"scene","title":"Monday, 22:30, the kitchen","setting":"Hawthorn Court, apartment 3B. The sheet is on the fridge door in Maya's writing, and the light over the cooker is the only light on.","meters":{"you":50,"them":50},"beats":[{"who":"Sam","text":"\u201cSorry, sorry, I know. The rent's late again, and I'm the milk man of the month. I'll sort it, I promise.\u201d","cue":"still in his work shirt, the milk carton in one hand","lines":[{"text":"\u201cTell me the day, Sam, not the promise. Friday, or Saturday?\u201d","tag":"best","you":4,"them":2,"outcome":"He stops grinning for a second. \u201cFriday. Put it on the sheet.\u201d","why":"You ask for a date instead of accepting a sorry. A date is the Pilot's job, and Sam usually leaves the Pilot to Maya."},{"text":"\u201cIt's fine. Maya's already done the sheet.\u201d","tag":"ok","you":-1,"them":1,"outcome":"He laughs, relieved. Then he goes to find the biscuits.","why":"It is kind, and it keeps the pattern as it is. Maya does the sheet, Sam does the sorry, and nobody has to plan anything."},{"text":"\u201cYou always say sorry and then nothing happens. We all know how this goes.\u201d","tag":"game","you":-5,"them":-6,"outcome":"The scene stops there. Sam puts the carton down, says \u201cRight. Fine,\u201d and goes to his room.","why":"You pick a side and hand Sam all of the blame. His warmth goes cold, and the sulk is all he has left to hold."}]},{"who":"Maya","text":"\u201cIt's fine. I've done the sheet. Sam, you're down for the gas, and four hundred for the milk.\u201d","cue":"standing at the counter in her scrubs, not sitting down","lines":[{"text":"\u201cMaya, sit down first. Then show me the sheet, and we'll check the numbers together.\u201d","tag":"best","you":4,"them":4,"outcome":"She hesitates, then pulls out a stool and sits with the sheet on her knee. \u201cFine. Check it, then.\u201d","why":"You ask her to sit, which gives her the Kid's turn at being looked after, and you share the sums so the Pilot's job is no longer hers alone."},{"text":"\u201cThanks. Send me my share and I'll check it.\u201d","tag":"ok","you":0,"them":1,"outcome":"She nods and goes back to the cooker, the sheet still in her hand.","why":"It is polite and fair, but it leaves her on her feet doing the work alone. The pattern holds."},{"text":"\u201cYou're the only one who ever gets things done in this flat. I'd be lost without you.\u201d","tag":"game","you":-5,"them":3,"outcome":"The scene stops there. Maya says \u201cSure, I'll keep doing it,\u201d and turns back to the cooker.","why":"Praise like this ties her down. It makes the sheet hers and the applause yours, so she keeps the Boss's job and you keep the job of being impressed."}]},{"who":"Sam","text":"\u201cYou're amazing, Maya. I don't know what we'd do without you.\u201d","cue":"leaning on the fridge, grinning","lines":[{"text":"\u201cThen pay her on Friday, and she won't have to chase you for it.\u201d","tag":"best","you":4,"them":2,"outcome":"The grin slips, then comes back smaller. \u201cFriday. Yes. Okay.\u201d","why":"You turn the praise into a plan. Praise with no date is a nod for being, and this one needs a Friday to count for anything."},{"text":"\u201cNo worries. It's what we do.\u201d","tag":"ok","you":-1,"them":1,"outcome":"They both laugh, and the sheet stays exactly where it is.","why":"It sounds friendly, but it agrees that the pattern is normal. The praise is taken, and the sheet stays with Maya."},{"text":"\u201cThen stop being late and she won't have to do the sheet at all.\u201d","tag":"game","you":-4,"them":-5,"outcome":"The scene stops there. Sam looks at the floor, Maya says \u201cDon't, please,\u201d and the room goes quiet.","why":"You blame Sam for both the lateness and the work, which splits the flat into two sides. It sounds fair, and it keeps everyone in the same seats."}]},{"who":"Maya","text":"\u201cPlease don't make it a whole thing. I'm fine.\u201d","cue":"rubbing her eyes with the heel of one hand","lines":[{"text":"\u201cYou're not fine if you're on your feet at ten at night. Sit, I'll make the tea, and we'll do the sheet after.\u201d","tag":"best","you":4,"them":3,"outcome":"She sits. \u201cOkay. Two sugars, and no sheet tonight.\u201d","why":"You name the real feeling, which is tiredness, and you ask her to take a turn at being looked after. That is the Kid's voice, and she is allowed to use it."},{"text":"\u201cOK. Goodnight, then. See you in the morning.\u201d","tag":"ok","you":-1,"them":-1,"outcome":"She says \u201cNight,\u201d and the sheet stays on the counter.","why":"A polite goodnight does no harm, but it leaves her on her feet with the sheet still undone."},{"text":"\u201cFine. You're always fine, aren't you? Nothing ever gets to you.\u201d","tag":"game","you":-5,"them":-6,"outcome":"The scene stops there. Maya puts the sheet in her pocket and goes to her room.","why":"This is a hook with a joke on the outside. It makes her steadiness the thing to prove, so she has to keep being the one who holds everything."}]},{"who":"Sam","text":"\u201cShall I take the bins on Thursdays? I'll put it in my phone. I promise I will.\u201d","cue":"already holding his phone, thumb over the calendar","lines":[{"text":"\u201cYes. Put it in the shared calendar, and tell Maya when it's done, not when she asks.\u201d","tag":"best","you":4,"them":4,"outcome":"He types it in and grins. \u201cThursday, bins. I'll tell her when it's done.\u201d","why":"You give Sam a plan he owns, and a report to make, so the planning starts to be his as well. That is the Pilot's job, which he usually hands away."},{"text":"\u201cSure. Thanks.\u201d","tag":"ok","you":0,"them":2,"outcome":"He pockets the phone. The bins will be done when someone else remembers them.","why":"You accept the offer but never ask for a plan, so it stays a feeling. Sure is polite, and the calendar stays empty."},{"text":"\u201cDon't bother. You'll forget, and then it'll be on me again.\u201d","tag":"game","you":-6,"them":-6,"outcome":"The scene stops there. Sam puts the phone away and says nothing at all.","why":"This is blame again, and it tells him his offer does not count. He will stop offering, and the planning falls back on Maya."}]}],"payoff":"Monday, 22:50. The milk is still on the counter, and the sheet on the fridge has not been checked.","fallout":{"them":"Sam stops saying sorry in the flat for the rest of the week, and he does not offer anything else either."}},{"type":"scene","title":"Saturday, 7:40am, the kitchen","setting":"Apartment 3B. Maya has come off a night shift, and the shopping list is on the table in her handwriting. Sam has his tote bag over one shoulder.","meters":{"you":50,"them":50},"beats":[{"who":"Sam","text":"\u201cShopping! Leave it to me. I'll get the good cheese and the mangoes. No list needed.\u201d","cue":"already at the door with the tote bag over one shoulder","lines":[{"text":"\u201cDo the list first, read it back to Maya, and then go for the mangoes.\u201d","tag":"best","you":4,"them":2,"outcome":"He pulls out his phone and types. \u201cCheese, rice, mangoes last. Got it.\u201d","why":"You turn his charm into a plan he reads back out loud, so he uses his Pilot as well as his warmth."},{"text":"\u201cNice one. Have fun. Bring back something sweet.\u201d","tag":"ok","you":0,"them":2,"outcome":"He grins and waves the tote bag. \u201cMangoes it is.\u201d","why":"This is pleasant, but it gives Sam the fun part of the errand and leaves the list with Maya, who has been up all night."},{"text":"\u201cLast time you came back with three tubs of ice cream and no rice. Don't do it again.\u201d","tag":"game","you":-4,"them":-5,"outcome":"The scene stops there. Sam says \u201cRight, of course,\u201d and goes out without the bag.","why":"Teasing him back into the Kid's corner shuts him out of the plan. The list stays on the table, unread."}]},{"who":"Maya","text":"\u201cI've written the list. Don't change it, it's already been checked twice.\u201d","cue":"sitting at the table with a cup of tea she has not touched","lines":[{"text":"\u201cRead it to me, and tell me which bit you'd like to hand over. The mangoes, maybe?\u201d","tag":"best","you":4,"them":4,"outcome":"She looks up, surprised. \u201cThe mangoes. Yes. Okay.\u201d She hands him the pen.","why":"You ask her to choose what to give away, instead of carrying the whole list alone. Giving a piece away lets her sit still while someone else does a bit of the Pilot's work."},{"text":"\u201cOK, I'll stick to it exactly.\u201d","tag":"ok","you":-1,"them":1,"outcome":"She nods, and the list stays where it is, all in her handwriting.","why":"Sticking to the list is fair, but it leaves the list with her and gives her no turn at being looked after."},{"text":"\u201cIt's your list, so if it's wrong, that's your fault and not mine.\u201d","tag":"game","you":-4,"them":-6,"outcome":"The scene stops there. Maya looks at the list, then at the door, and says nothing.","why":"This is blame, and it moves her from planning into a fight about the list. Now the list is the thing they argue about, and nothing gets bought."}]},{"who":"Sam","text":"\u201cI'll cook dinner as well. Lentils, or that potato one you like.\u201d","cue":"bag back on his shoulder, already thinking about dinner","lines":[{"text":"\u201cLentils, and you own the rice timing, because you're better at it. Set a timer, and tell her when it's on.\u201d","tag":"best","you":4,"them":3,"outcome":"He nods, pleased to be trusted with something specific. \u201cTimer. Got it.\u201d","why":"You give him a job with a clear end. He keeps his warmth and takes on the planning part of dinner."},{"text":"\u201cLovely. Surprise us.\u201d","tag":"ok","you":0,"them":2,"outcome":"He grins. \u201cSurprise, I can do that.\u201d","why":"This is warm and light. But a surprise dinner is a feeling with no plan, so Maya will still be checking the pot later."},{"text":"\u201cYou'll burn it like last time, so I'll cook it instead.\u201d","tag":"game","you":-4,"them":-4,"outcome":"The scene stops there. Sam's grin drops. \u201cFine. You do it, then.\u201d","why":"You take the job from him before he has started. It looks like a rescue, and it keeps him in the Kid's corner for good."}]},{"who":"Maya","text":"\u201cI can't do the rest of the week like this. I'm so tired I can't tell what I'm saying.\u201d","cue":"head against the cupboard door, eyes shut","lines":[{"text":"\u201cThat's true, and it's a lot. What would make Wednesday lighter, and who could take part of it?\u201d","tag":"best","you":4,"them":4,"outcome":"She opens her eyes. \u201cWednesday's the bins and the laundry. Sam could do the bins.\u201d","why":"You take her tiredness as real information and ask for a plan. She can be frank about the load, and the load gets a second pair of hands."},{"text":"\u201cDon't worry, we'll sort it. Go to bed.\u201d","tag":"ok","you":-2,"them":1,"outcome":"She says \u201cWe won't, we never do,\u201d and goes to her room.","why":"This sounds like kindness, but it is a promise nobody makes. It takes the load off her for a minute and leaves the week as it was."},{"text":"\u201cYou always say you're tired. Make a plan or stop complaining.\u201d","tag":"game","you":-5,"them":-6,"outcome":"The scene stops there. Maya says \u201cFine,\u201d and the tiredness goes back inside her.","why":"This is the Boss voice, and it shames the feeling without giving her a job. She goes back to carrying everything alone."}]},{"who":"Sam","text":"\u201cI'll do the bins on Wednesday, and I'll put the rent sheet on the fridge with my name on it.\u201d","cue":"a little more serious now, the tote bag on the floor","lines":[{"text":"\u201cGood. Write both on the sheet, and say them to Maya before you go out.\u201d","tag":"best","you":4,"them":4,"outcome":"He writes it on the sheet. \u201cBins Wednesday, rent sheet, my name. Done.\u201d","why":"You make his plan visible and have him say it out loud, so both of them can see it. Sam starts to use a voice he usually leaves to Maya."},{"text":"\u201cBrilliant, you're a legend. Thank you.\u201d","tag":"ok","you":0,"them":3,"outcome":"He beams, and the plan goes back into a feeling.","why":"Praise is a warm nod, but it lands on the feeling and skips the plan. Nothing gets written down."},{"text":"\u201cDon't promise. You never do it.\u201d","tag":"game","you":-5,"them":-6,"outcome":"The scene stops there. Sam picks up his bag and leaves, and the sheet stays blank.","why":"Calling it a promise you never keep sends him back to the Kid's corner, and it makes the plan something to doubt before it starts."}]}],"payoff":"Saturday, 8:20am. The list stays on the table, and the shopping turns into a rushed trip to the corner shop.","fallout":{"you":"Maya takes the list to her room and does the shopping herself, alone, in a hurry."}}]},{"level":"Analyse","label":"Analyse, explain it","intro":"Two questions to explain back. You can use the book words now.","items":[{"type":"pick","who":"Nadia","text":"\u201cMaya keeps the sheet and gives the orders, and Sam keeps the jokes and waits to be told. Which word do the books use for a relationship where one person plays the Parent and the Adult and the other plays the Child?\u201d","cue":"turning her cup, one eyebrow up","options":["Symbiosis","Racket","Passivity"],"answer":0,"why":"Maya plays the Parent and the Adult, with the orders and the sums, and Sam plays the Child, with the sorry and the charm. Between them they use three of the six ego states. The books call that pattern a symbiosis.","traps":{"1":"A racket is a stand-in feeling, something shown because the real one was not allowed. Sam's apologies might look like that, but the question is about the fit between two people, not about one feeling.","2":"Passivity describes one person's way of dodging a problem. Both of them act all the time, and the question asks how the two of them fit together."},"example":"A school trip, Friday.<br>Teacher: \u201cI've got the register and the bus times. You just smile at the parents.\u201d<br>Helper: \u201cFine, I'll smile. Don't ask me about the bus.\u201d"},{"type":"pick","who":"Nadia","text":"\u201cWhat move would give both of them all three voices, the Boss, the Pilot and the Kid?\u201d","cue":"pen in hand, waiting","options":["Give Maya a turn at being looked after, and give Sam one piece of the planning with a clear hand-off.","Take over the sheet yourself, so neither of them has to think about it any more.","Tell Sam to stop apologising, since the apologies are wearing everyone out."],"answer":0,"why":"Both of them are using only part of what they have. Maya gets a turn in the Kid's chair, and Sam gets a piece of the Pilot's work with a clear end. That loosens the symbiosis from both ends without cutting anyone out of the flat.","traps":{"1":"Taking over the sheet makes you the new Boss and Pilot, and the pair gets a third person to lean on. It feels helpful, but now the symbiosis includes you and nobody has taken up a new voice.","2":"Telling Sam to stop apologising cuts off his Kid without giving him a plan. It looks like a fix, and it leaves Maya with the whole sheet."},"example":"A housing society meeting, Sunday.<br>Neighbour A: \u201cI'll write the minutes, and you do the chairs and the tea, as always.\u201d<br>Neighbour B: \u201cFine. You write, and one of us can sit down for a change. Me first.\u201d"}]}],"debrief":{"nadia":"Two people in one flat, and a sheet on the fridge that only one of them ever looked at. Maya played the Boss and the Pilot and Sam played the Kid, so the flat used three voices where six were on offer. Give each of them a job from the voices they have been leaving to the other.","bookTerm":"Symbiosis","bookNote":"The books call this symbiosis: a relationship in which one person acts the Parent and the Adult and the other acts the Child, so that between them they use only three of the six ego states."},"reflection":{"prompt":"In which relationship of yours does one person give the orders and do the sums while the other is looked after, and which one job could you take back this week?"},"next":"5.6"};</script>
+<script>window.TA_NAV = {"hub":"https://claude.ai/artifact/FzdEytVBojsBteGVMXXV4K","next":{"slot":"5.6","title":"Boss: The Discount Matrix","url":"https://claude.ai/artifact/BYTUPGB8c7aFFCU4JBJeFj"}};</script>
+<script>
+(function () {
+  "use strict";
+
+  var GAME = window.TA_GAME;
+  var NAV = window.TA_NAV || { hub: null, next: null };
+  var card = document.getElementById("card");
+  var STORE_KEY = "ta-arena-reflect-" + (GAME ? GAME.slot : "");
+
+  // Content fields may carry <b>, <i> and <br> only. Other tags are dropped, and open
+  // tags are closed at the end of the field, so markup cannot leak into the card.
+  function rich(s) {
+    if (s === undefined || s === null) return "";
+    var open = [];
+    var out = String(s).replace(/<[^<>]*>|</g, function (tok) {
+      if (tok === "<") return "&lt;";
+      var m = /^<\s*(\/?)\s*([a-zA-Z]+)\s*(\/?)\s*>$/.exec(tok);
+      if (!m) return "";
+      var name = m[2].toLowerCase();
+      var closing = m[1] === "/";
+      if (name === "br") return closing ? "" : "<br>";
+      if (name !== "b" && name !== "i") return "";
+      if (closing) {
+        if (open[open.length - 1] === name) { open.pop(); return "</" + name + ">"; }
+        return "";
+      }
+      if (m[3]) return "";
+      open.push(name);
+      return "<" + name + ">";
+    });
+    while (open.length) out += "</" + open.pop() + ">";
+    return out;
+  }
+
+  function esc(s) {
+    return String(s === undefined || s === null ? "" : s)
+      .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;").replace(/'/g, "&#39;");
+  }
+
+  function clamp(v) { return Math.max(0, Math.min(100, v)); }
+
+  function safeUrl(u) {
+    return typeof u === "string" && /^https?:\/\//i.test(u) ? u : null;
+  }
+
+  var VOICE = { parent: "p", adult: "a", child: "c" };
+  function pill(label) {
+    var key = String(label).trim().toLowerCase();
+    var cls = Object.prototype.hasOwnProperty.call(VOICE, key) ? VOICE[key] : "x";
+    return '<span class="pill ' + cls + '">' + rich(label) + '</span>';
+  }
+
+  function exchange(who, text, cue) {
+    return '<div class="exchange"><p class="line"><span class="who">' + rich(who) + '</span>' +
+      rich(text) + '</p>' + (cue ? '<p class="cue">' + rich(cue) + '</p>' : '') + '</div>';
+  }
+
+  function exampleBox(text) {
+    return text ? '<div class="example"><div class="ex-label">Real example</div>' + rich(text) + '</div>' : "";
+  }
+
+  function nextbar(label) {
+    return '<div class="nextbar"><button class="next" type="button">' + label + '</button></div>';
+  }
+
+  function bindNext(fn) {
+    var b = card.querySelector(".nextbar button.next");
+    if (b) b.addEventListener("click", function () { fn(); });
+  }
+
+  function shuffled(n) {
+    var idx = [], i, j, t, attempt;
+    for (i = 0; i < n; i++) idx.push(i);
+    for (attempt = 0; attempt < 20; attempt++) {
+      for (i = n - 1; i > 0; i--) {
+        j = Math.floor(Math.random() * (i + 1));
+        t = idx[i]; idx[i] = idx[j]; idx[j] = t;
+      }
+      if (idx.some(function (v, p) { return v !== p; })) break;
+    }
+    return idx;
+  }
+
+  // Flat list of items across the three rounds; one progress segment each.
+  var ITEMS = [];
+  ((GAME && GAME.rounds) || []).forEach(function (round) {
+    (round.items || []).forEach(function (item, i) {
+      ITEMS.push({ round: round, item: item, first: i === 0 });
+    });
+  });
+  var TOTAL = ITEMS.length;
+
+  function progressHTML(done, current) {
+    var bars = "";
+    for (var i = 0; i < TOTAL; i++) {
+      bars += '<i class="' + (i < done ? "done" : (i === current ? "current" : "")) + '"></i>';
+    }
+    return '<div class="progress" role="progressbar" aria-label="Progress" aria-valuemin="0" aria-valuemax="' +
+      TOTAL + '" aria-valuenow="' + done + '">' + bars + '</div>';
+  }
+
+  function paintProgress(done, current) {
+    var old = card.querySelector(".progress");
+    if (old) old.outerHTML = progressHTML(done, current);
+  }
+
+  function frame(k, body, showIntro) {
+    var rec = ITEMS[k];
+    var intro = showIntro && rec.round.intro ? '<p class="round-intro">' + rich(rec.round.intro) + '</p>' : "";
+    return progressHTML(k, k) + '<div class="round-label">' + rich(rec.round.label) + '</div>' + intro + body;
+  }
+
+  // ---------- flow ----------
+
+  var state = { screen: "intro", k: 0 };
+
+  function settle() {
+    if (card.getBoundingClientRect().top < 0) card.scrollIntoView({ block: "start" });
+    card.focus({ preventScroll: true });
+  }
+
+  function render() {
+    if (state.screen === "intro") renderIntro();
+    else if (state.screen === "item") renderItem(state.k);
+    else if (state.screen === "debrief") renderDebrief();
+    else if (state.screen === "reflect") renderReflect();
+    else renderEnd();
+    settle();
+  }
+
+  function advance() {
+    if (state.screen === "intro") {
+      state.screen = "item"; state.k = 0;
+    } else if (state.screen === "item") {
+      if (state.k + 1 < TOTAL) state.k += 1;
+      else state.screen = "debrief";
+    } else if (state.screen === "debrief") {
+      state.screen = "reflect";
+    } else if (state.screen === "reflect") {
+      state.screen = "end";
+    }
+    render();
+  }
+
+  function renderItem(k) {
+    var it = ITEMS[k].item;
+    if (it.type === "pick") renderPick(k, it);
+    else if (it.type === "scene") renderScene(k, it);
+    else if (it.type === "sort") { if (it.order === true) renderOrder(k, it); else renderBins(k, it); }
+    else if (it.type === "counter") renderCounter(k, it);
+    else advance();
+  }
+
+  function renderIntro() {
+    var op = GAME.opener || {};
+    var lines = (op.lines || []).map(function (ln) {
+      return '<p class="line"><span class="who">' + rich(ln.who) + '</span>' + rich(ln.text) + '</p>' +
+        (ln.cue ? '<p class="cue">' + rich(ln.cue) + '</p>' : "");
+    }).join("");
+    var rounds = (GAME.rounds || []).map(function (r) {
+      var n = (r.items || []).length;
+      return '<li><span class="dot"></span><span><b>' + rich(r.level) + '</b>, ' + n +
+        (n === 1 ? ' item' : ' items') + '</span></li>';
+    }).join("");
+    card.innerHTML =
+      '<div class="tagline">TA Arena · World ' + esc(GAME.world) + ', ' + rich(GAME.worldName) +
+      ' · Game ' + esc(GAME.slot) + '</div>' +
+      '<div class="card-head"><div><h1>' + rich(GAME.title) + '</h1>' +
+      '<p class="deck">' + rich(GAME.concept) + '</p></div>' +
+      '<div class="case-no">' + esc(GAME.slot) + '<br>' + rich(GAME.weekName) + '</div></div>' +
+      '<p class="lede"><i>' + rich(op.setting) + '</i></p>' +
+      '<div class="exchange">' + lines + '</div>' +
+      '<div class="ask"><div class="kicker">The question</div><p>' + rich(op.ask) + '</p></div>' +
+      '<div class="rules-box"><div class="round-label">How this one works</div>' +
+      '<ul class="rules-list">' + rounds +
+      '<li><span class="dot"></span><span>Feedback follows every answer, with a real example</span></li>' +
+      '</ul></div>' +
+      nextbar("Start the game →");
+    bindNext(advance);
+  }
+
+  // ---------- pick ----------
+
+  function renderPick(k, it) {
+    var labels = it.options;
+    card.innerHTML = frame(k,
+      exchange(it.who, it.text, it.cue) +
+      '<p class="prompt">' + rich(it.prompt || "Which one is it?") + '</p>' +
+      '<div class="choices">' + labels.map(function (lab, i) {
+        return '<button class="choice" type="button" data-i="' + i + '">' + pill(lab) + '</button>';
+      }).join("") + '</div>', ITEMS[k].first);
+    var buttons = card.querySelectorAll("button.choice");
+    var answered = false;
+    buttons.forEach(function (btn) {
+      btn.addEventListener("click", function () { choose(parseInt(btn.getAttribute("data-i"), 10)); });
+    });
+    function choose(i) {
+      if (answered) return;
+      answered = true;
+      var right = i === it.answer;
+      buttons.forEach(function (b) { b.disabled = true; });
+      buttons[it.answer].classList.add("correct");
+      if (!right) buttons[i].classList.add("wrong");
+      var body = right
+        ? '<div class="why-box ok"><div class="stamp ok">✓ Right call</div>' +
+          '<p class="feedback"><b>Why:</b> ' + rich(it.why) + '</p></div>'
+        : '<div class="why-box cross"><div class="stamp cross">✗ Not quite</div>' +
+          '<p class="feedback"><b>You picked ' + rich(labels[i]) + '.</b> ' +
+          rich((it.traps || {})[String(i)]) + '</p>' +
+          '<p class="feedback"><b>The right call is ' + rich(labels[it.answer]) + '.</b> ' +
+          rich(it.why) + '</p></div>';
+      var fb = document.createElement("div");
+      fb.innerHTML = body + exampleBox(it.example) + nextbar("Continue →");
+      card.appendChild(fb);
+      paintProgress(k + 1, -1);
+      bindNext(advance);
+    }
+  }
+
+  // ---------- scene ----------
+
+  var TAG_LABEL = { best: "Best move", ok: "Fair move", game: "Trap move" };
+  var TAG_CLASS = { best: "ok", ok: "amber", game: "cross" };
+  var TAG_PICK = { best: "correct", ok: "amber", game: "wrong" };
+  var DEFAULT_FALLOUT = {
+    you: "You have nothing left to give in this exchange, so the scene stops here.",
+    them: "The other person has shut the conversation down, so the scene stops here."
+  };
+
+  function meterRow(key, label, v) {
+    return '<div class="meter ' + key + (v <= 0 ? " empty" : "") + '">' +
+      '<span class="name">' + label + '</span>' +
+      '<span class="track"><span class="fill" data-m="' + key + '" style="width:' + v + '%"></span></span>' +
+      '<span class="num" data-n="' + key + '">' + v + '</span></div>';
+  }
+
+  function meterHTML(m) {
+    return '<div class="meters">' + meterRow("you", "You", m.you) + meterRow("them", "Them", m.them) + '</div>';
+  }
+
+  function setMeters(m) {
+    ["you", "them"].forEach(function (key) {
+      var fill = card.querySelector('.fill[data-m="' + key + '"]');
+      var num = card.querySelector('.num[data-n="' + key + '"]');
+      var row = card.querySelector(".meter." + key);
+      if (fill) fill.style.width = m[key] + "%";
+      if (num) num.textContent = String(m[key]);
+      if (row) row.classList.toggle("empty", m[key] <= 0);
+    });
+  }
+
+  function renderScene(k, sc) {
+    var rec = ITEMS[k];
+    var meters = { you: clamp(Number(sc.meters.you)), them: clamp(Number(sc.meters.them)) };
+    var beats = sc.beats || [];
+    var bi = 0;
+
+    function drawBeat() {
+      var b = beats[bi];
+      card.innerHTML = frame(k,
+        '<h2 class="scene-title">' + rich(sc.title) + '</h2>' +
+        '<p class="setting">' + rich(sc.setting) + '</p>' +
+        meterHTML(meters) +
+        '<p class="kicker">Beat ' + (bi + 1) + ' of ' + beats.length + '</p>' +
+        exchange(b.who, b.text, b.cue) +
+        '<div class="choices">' + b.lines.map(function (ln, i) {
+          return '<button class="choice" type="button" data-i="' + i + '">' + rich(ln.text) + '</button>';
+        }).join("") + '</div>', rec.first && bi === 0);
+      var buttons = card.querySelectorAll("button.choice");
+      buttons.forEach(function (btn) {
+        btn.addEventListener("click", function () { pick(parseInt(btn.getAttribute("data-i"), 10), buttons); });
+      });
+    }
+
+    function pick(i, buttons) {
+      if (buttons[0].disabled) return;
+      var ln = beats[bi].lines[i];
+      buttons.forEach(function (x) { x.disabled = true; });
+      buttons[i].classList.add(TAG_PICK[ln.tag] || "amber");
+      meters.you = clamp(meters.you + ln.you);
+      meters.them = clamp(meters.them + ln.them);
+      setMeters(meters);
+      var dead = [];
+      if (meters.you <= 0) dead.push("you");
+      if (meters.them <= 0) dead.push("them");
+      var ends = ln.tag === "game" || dead.length > 0;
+      var cls = TAG_CLASS[ln.tag] || "amber";
+      var html = '<div class="why-box ' + cls + '"><div class="stamp ' + cls + '">' +
+        (TAG_LABEL[ln.tag] || "Move") + '</div>' +
+        '<p class="feedback">' + rich(ln.outcome) + '</p>' +
+        '<p class="feedback"><b>Why:</b> ' + rich(ln.why) + '</p></div>';
+      if (ln.tag === "game") {
+        html += '<div class="example"><div class="ex-label">How it ends</div>' + rich(sc.payoff) + '</div>';
+      }
+      if (dead.length) {
+        var fo = sc.fallout || {};
+        var lines = [];
+        if (dead.indexOf("them") >= 0) lines.push(fo.them || DEFAULT_FALLOUT.them);
+        if (dead.indexOf("you") >= 0) lines.push(fo.you || DEFAULT_FALLOUT.you);
+        html += '<div class="example"><div class="ex-label">How it ends</div>' +
+          lines.map(function (t) { return rich(t); }).join("<br><br>") + '</div>';
+      }
+      var last = ends || bi === beats.length - 1;
+      var fb = document.createElement("div");
+      fb.innerHTML = html + nextbar("Continue →");
+      card.appendChild(fb);
+      bindNext(function () {
+        if (last) { sceneOver(); return; }
+        bi += 1;
+        drawBeat();
+        settle();
+      });
+    }
+
+    function sceneOver() {
+      card.innerHTML = frame(k,
+        '<h2 class="scene-title">' + rich(sc.title) + '</h2>' +
+        '<p class="kicker">Scene over</p>' +
+        meterHTML(meters) +
+        exampleBox(sc.example) +
+        nextbar("Continue →"), false);
+      paintProgress(k + 1, -1);
+      bindNext(advance);
+    }
+
+    drawBeat();
+  }
+
+  // ---------- sort: bins (each card goes in a bin, one after another) ----------
+
+  function renderBins(k, sc) {
+    var items = sc.items || [];
+    var bins = sc.bins || [];
+    var list;
+
+    function finish() {
+      var end = document.createElement("div");
+      end.innerHTML = exampleBox(sc.example) + nextbar("Continue →");
+      card.appendChild(end);
+      paintProgress(k + 1, -1);
+      bindNext(advance);
+    }
+
+    function addCard(i) {
+      var c = items[i];
+      var wrap = document.createElement("div");
+      wrap.className = "sort-item";
+      wrap.innerHTML = '<div class="exchange"><p class="line">' + rich(c.text) + '</p></div>' +
+        '<div class="choices">' + bins.map(function (label, bi) {
+          return '<button class="choice" type="button" data-i="' + bi + '">' + rich(label) + '</button>';
+        }).join("") + '</div>';
+      list.appendChild(wrap);
+      var buttons = wrap.querySelectorAll("button.choice");
+      buttons.forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          if (buttons[0].disabled) return;
+          choose(parseInt(btn.getAttribute("data-i"), 10));
+        });
+      });
+
+      function choose(pick) {
+        buttons.forEach(function (x) { x.disabled = true; });
+        var right = pick === c.answer;
+        buttons[c.answer].classList.add("correct");
+        if (!right) buttons[pick].classList.add("wrong");
+        var fb = document.createElement("div");
+        fb.innerHTML = right
+          ? '<div class="why-box ok"><div class="stamp ok">✓ Right call</div>' +
+            '<p class="feedback"><b>Why:</b> ' + rich(c.why) + '</p></div>'
+          : '<div class="why-box cross"><div class="stamp cross">✗ Not quite</div>' +
+            '<p class="feedback"><b>You picked ' + rich(bins[pick]) + '.</b> It belongs in ' +
+            rich(bins[c.answer]) + '.</p>' +
+            '<p class="feedback"><b>Why:</b> ' + rich(c.why) + '</p></div>';
+        wrap.appendChild(fb);
+        if (i + 1 < items.length) {
+          addCard(i + 1);
+          list.lastElementChild.scrollIntoView({ block: "nearest" });
+        } else {
+          finish();
+        }
+      }
+    }
+
+    card.innerHTML = frame(k, '<p class="prompt">' + rich(sc.prompt) + '</p><div class="sort-list"></div>',
+      ITEMS[k].first);
+    list = card.querySelector(".sort-list");
+    if (items.length) addCard(0);
+  }
+
+  // ---------- sort: order (tap the cards in sequence) ----------
+
+  function renderOrder(k, sc) {
+    var items = sc.items || [];
+    var placed = 0;
+    card.innerHTML = frame(k,
+      '<p class="prompt">' + rich(sc.prompt) + '</p>' +
+      '<ol class="seq" aria-label="Placed so far"></ol>' +
+      '<div class="pool choices">' + shuffled(items.length).map(function (idx) {
+        return '<button class="choice" type="button" data-i="' + idx + '">' + rich(items[idx].text) + '</button>';
+      }).join("") + '</div>' +
+      '<div class="order-fb"></div>', ITEMS[k].first);
+    var seq = card.querySelector(".seq");
+    var fbBox = card.querySelector(".order-fb");
+
+    card.querySelectorAll(".pool button.choice").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        tap(parseInt(btn.getAttribute("data-i"), 10), btn);
+      });
+    });
+
+    function tap(idx, btn) {
+      if (idx === placed) {
+        var li = document.createElement("li");
+        li.innerHTML = '<span class="n">' + (placed + 1) + '</span><span><span class="ct">' +
+          rich(items[idx].text) + '</span><span class="why">' + rich(items[idx].why) + '</span></span>';
+        seq.appendChild(li);
+        placed += 1;
+        btn.remove();
+        fbBox.innerHTML = "";
+        if (placed === items.length) {
+          fbBox.innerHTML = exampleBox(sc.example) + nextbar("Continue →");
+          paintProgress(k + 1, -1);
+          bindNext(advance);
+        }
+      } else {
+        fbBox.innerHTML = '<div class="why-box amber"><div class="stamp amber">Not yet</div>' +
+          '<p class="feedback">' + rich(items[placed].why) + '</p></div>';
+      }
+    }
+  }
+
+  // ---------- counter ----------
+
+  function renderCounter(k, c) {
+    var palette = c.palette || [];
+    var used = palette.map(function () { return false; });
+    var total = 0, picks = 0, sent = false;
+
+    card.innerHTML = frame(k,
+      '<p class="prompt">' + rich(c.prompt) + '</p>' +
+      '<div class="total"><span>Total</span><b data-total>0</b>' +
+      '<span>Target ' + esc(c.target) + ', within ' + esc(c.tolerance) + '</span></div>' +
+      '<div class="band" aria-hidden="true"><span class="fill" data-fill></span></div>' +
+      '<p class="kicker">Picks used: <span data-picks>0</span> of ' + esc(c.maxPicks) + '</p>' +
+      '<div class="choices">' + palette.map(function (p, i) {
+        return '<button class="choice pal" type="button" data-i="' + i + '"><span>' + rich(p.text) +
+          '</span><span class="val">+' + esc(p.value) + '</span></button>';
+      }).join("") + '</div>' +
+      '<div class="counter-actions"><button class="ghost" type="button" data-reset>Reset</button>' +
+      '<button class="next" type="button" data-send>Send</button></div>' +
+      '<div class="counter-fb"></div>', ITEMS[k].first);
+
+    var totalEl = card.querySelector("[data-total]");
+    var fillEl = card.querySelector("[data-fill]");
+    var picksEl = card.querySelector("[data-picks]");
+    var sendBtn = card.querySelector("[data-send]");
+    var resetBtn = card.querySelector("[data-reset]");
+    var palBtns = card.querySelectorAll("button.pal");
+
+    function paint() {
+      totalEl.textContent = String(total);
+      picksEl.textContent = String(picks);
+      fillEl.style.width = Math.min(100, Math.round(total / c.target * 100)) + "%";
+      fillEl.classList.toggle("over", total > c.target + c.tolerance);
+      palBtns.forEach(function (b, i) {
+        b.disabled = sent || used[i] || picks >= c.maxPicks;
+      });
+      sendBtn.disabled = sent || picks < 1;
+      resetBtn.disabled = sent || picks < 1;
+    }
+
+    palBtns.forEach(function (b) {
+      b.addEventListener("click", function () {
+        var i = parseInt(b.getAttribute("data-i"), 10);
+        if (sent || used[i] || picks >= c.maxPicks) return;
+        used[i] = true;
+        picks += 1;
+        total += palette[i].value;
+        paint();
+      });
+    });
+
+    resetBtn.addEventListener("click", function () {
+      if (sent) return;
+      used = palette.map(function () { return false; });
+      total = 0;
+      picks = 0;
+      paint();
+    });
+
+    sendBtn.addEventListener("click", function () {
+      if (sent || picks < 1) return;
+      sent = true;
+      paint();
+      var hit = Math.abs(total - c.target) <= c.tolerance;
+      var under = !hit && total < c.target;
+      var msg = hit ? c.hitMsg : (under ? c.underMsg : c.overMsg);
+      var cls = hit ? "ok" : (under ? "amber" : "cross");
+      var fb = document.createElement("div");
+      fb.innerHTML = '<div class="why-box ' + cls + '"><div class="stamp ' + cls + '">' +
+        (hit ? "✓ Right call" : "✗ Not quite") + '</div>' +
+        '<p class="feedback">' + rich(msg) + '</p>' +
+        '<p class="feedback"><b>Why:</b> ' + rich(c.why) + '</p></div>' +
+        nextbar("Continue →");
+      card.querySelector(".counter-fb").appendChild(fb);
+      paintProgress(k + 1, -1);
+      bindNext(advance);
+    });
+
+    paint();
+  }
+
+  // ---------- debrief, reflection, end ----------
+
+  function renderDebrief() {
+    var d = GAME.debrief || {};
+    card.innerHTML = progressHTML(TOTAL, -1) +
+      '<div class="round-label">Debrief</div>' +
+      '<h1 class="h2">What Nadia would say</h1>' +
+      '<p class="feedback">' + rich(d.nadia) + '</p>' +
+      '<div class="why-box neutral"><p class="feedback"><b>' +
+      rich(d.bookTerm || GAME.bookTerm) + '</b></p>' +
+      '<p class="feedback">' + rich(d.bookNote || GAME.bookIdea) + '</p></div>' +
+      nextbar("Continue →");
+    bindNext(advance);
+  }
+
+  // Storage can be blocked or missing, so every access is guarded.
+  function readStore() {
+    try { return window.localStorage.getItem(STORE_KEY) || ""; } catch (e) { return ""; }
+  }
+
+  function writeStore(value) {
+    try { window.localStorage.setItem(STORE_KEY, value); } catch (e) { /* blocked: the page still works */ }
+  }
+
+  function renderReflect() {
+    var r = GAME.reflection || {};
+    card.innerHTML = progressHTML(TOTAL, -1) +
+      '<div class="reflect-tag">Your turn</div>' +
+      '<p class="prompt">' + rich(r.prompt) + '</p>' +
+      '<textarea class="reflect-box" aria-label="Your reflection" ' +
+      'placeholder="A few lines is plenty. This stays on your device, and nobody else sees it."></textarea>' +
+      nextbar("Continue →");
+    var box = card.querySelector("textarea");
+    box.value = readStore();
+    box.addEventListener("input", function () { writeStore(box.value); });
+    bindNext(advance);
+  }
+
+  function renderEnd() {
+    var hub = safeUrl(NAV.hub);
+    var nxt = NAV.next || null;
+    var links = hub ? '<a class="next" href="' + esc(hub) + '">All games</a>' : "";
+    if (nxt) {
+      var nxtUrl = safeUrl(nxt.url);
+      links += nxtUrl
+        ? '<a class="next" href="' + esc(nxtUrl) + '">Next game: ' +
+          rich(nxt.title || ("Game " + nxt.slot)) + ' →</a>'
+        : '<p class="next-soon">Next game opens soon</p>';
+    }
+    card.innerHTML = progressHTML(TOTAL, -1) +
+      '<div class="end-badge">Case closed</div>' +
+      '<h1 class="h2">Game ' + esc(GAME.slot) + ' is done.</h1>' +
+      '<p class="feedback">' + rich(GAME.concept) + '</p>' +
+      '<div class="source"><b>From:</b> ' + rich(GAME.bookSource) + '</div>' +
+      '<div class="nextbar end-nav">' + links + '</div>';
+  }
+
+  // ---------- start ----------
+
+  function init() {
+    var series = document.getElementById("series");
+    var hubLink = document.getElementById("hubLink");
+    if (!GAME || !GAME.rounds) {
+      series.textContent = "TA Arena";
+      card.innerHTML = '<h1 class="h2">This game could not load.</h1>';
+      return;
+    }
+    series.innerHTML = 'TA Arena <small>· World ' + esc(GAME.world) + ' · Game ' + esc(GAME.slot) + '</small>';
+    var hub = safeUrl(NAV.hub);
+    if (hub) {
+      hubLink.setAttribute("href", hub);
+      hubLink.hidden = false;
+    }
+    render();
+  }
+
+  init();
+})();
+</script>
+
+</body>
+</html>

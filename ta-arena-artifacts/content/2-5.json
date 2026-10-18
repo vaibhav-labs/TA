@@ -1,0 +1,183 @@
+{
+  "slot": "2.5",
+  "title": "Little Professor",
+  "world": 2,
+  "worldName": "Three Voices",
+  "week": 2,
+  "weekName": "Three Voices",
+  "mechanic": "Choice-story",
+  "concept": "After this one you can see a child learn a trap by copying what gets a nod, and you can catch the trap while it is still being born.",
+  "plainWord": "a trap",
+  "bookTerm": "Little Professor",
+  "bookIdea": "The Little Professor is the Adult inside the Child: the intuitive, quick-witted part that works out what gets a response from people. Berne found that young children set games up themselves by copying what works.",
+  "bookSource": "Games People Play, ch. 5; Scripts People Live, ch. 2; TA Today, ch. 4",
+  "opener": {
+    "setting": "Saturday, 16:00, Gran's kitchen in 1A. Dinner is on the stove and bitter gourd is frying in the pan.",
+    "lines": [
+      { "who": "Gran", "text": "“Leo, come and sit. Eat your bitter gourd, it's good for you.”", "cue": "stirring the pan with her back to the room" }
+    ],
+    "ask": "Can you spot a trap being copied in this kitchen, and choose a move that stops it rather than feeds it?"
+  },
+  "rounds": [
+    {
+      "level": "Spot",
+      "label": "Spot, round 1",
+      "intro": "<b>How this one works:</b> you read what just happened at the table, then say what it was. Three quick questions before the scene starts.",
+      "items": [
+        {
+          "type": "pick",
+          "who": "Gran, to Tara",
+          "text": "“Oh! Come, lie down, I'll make you a herbal drink.”",
+          "cue": "Tara, 10, is clutching her stomach. Gran is already reaching for the kettle.",
+          "options": ["A big warm nod, for being", "A cold nod, for doing wrong", "Nothing, she was not noticed"],
+          "answer": 0,
+          "why": "Gran came running at once, with warmth and full attention. Tara got it for a stomach ache, so the nod was for being unwell, and she had done nothing to earn it.",
+          "traps": {
+            "1": "A cold nod would be a telling-off, like “Stop making a fuss.” Gran did the opposite, and warmly.",
+            "2": "Nothing would mean Tara was ignored. Gran was across the kitchen before the sentence had finished."
+          },
+          "example": "A school sports day, a coach to a boy who limps off the field: “Come and sit, champ, I'll get you water.”<br>The boy is fussed over, and the match is forgotten for ten minutes."
+        },
+        {
+          "type": "pick",
+          "who": "Leo, from the stool",
+          "text": "“Gran… my stomach hurts too.”",
+          "cue": "eyeing the bitter gourd on his plate, his voice in the same tone Tara used",
+          "options": ["A real stomach ache, nothing else", "A copy of the move that got Tara fussed over", "A quiet protest about the bitter gourd"],
+          "answer": 1,
+          "why": "The bitter gourd is part of it, but the timing and the words matter more. Same words, same moment, same reward: Leo has seen the stomach work for Tara, and he is trying it.",
+          "traps": {
+            "0": "A real stomach ache would come on its own, not ten minutes after Tara's nod and just as the bitter gourd appears on the plate.",
+            "2": "A protest about the bitter gourd would be loud and honest. Leo is asking for the nod, and the taste has nothing to do with it."
+          },
+          "example": "A family birthday, a cousin who suddenly needs the loo just as the cake is cut. Last year someone else left the room with a big fuss, and got cake brought to them.<br>The timing gives the copy away."
+        },
+        {
+          "type": "pick",
+          "who": "Grace, at the stove",
+          "text": "“Ethan does the exact same thing. The headache before homework.”",
+          "cue": "dry and tired, a knowing look at you",
+          "options": ["Ethan is properly ill every time", "Ethan has learned a move that works", "Grace is cross with the school"],
+          "answer": 1,
+          "why": "Ethan, like Leo, has found a bid that gets him out of something. The headache has worked before, so he keeps using it, and nobody has to decide it is a lie.",
+          "traps": {
+            "0": "A real illness would not come back every time the homework does. Grace is describing a pattern she has seen before.",
+            "2": "Her tone is tired, not angry at the school. The line is about a pattern that works on her."
+          },
+          "example": "A family WhatsApp group, an uncle who always has “a call” just before the family vote: “Sorry, got to take this one, back in five.”<br>The call is always at the same point in the agenda."
+        }
+      ]
+    },
+    {
+      "level": "Play",
+      "label": "Play, the week in motion",
+      "items": [
+        {
+          "type": "scene",
+          "title": "Saturday, 16:10, Gran's kitchen",
+          "setting": "Ten minutes after Tara's nod. The bitter gourd is on Leo's plate, and he is watching the room the way a chess player watches the board.",
+          "meters": { "you": 70, "them": 50 },
+          "beats": [
+            {
+              "who": "Leo",
+              "text": "“Gran… my stomach hurts too.”",
+              "cue": "eyes on the bitter gourd, one hand on his tummy",
+              "lines": [
+                { "text": "“Does it really hurt, or is it the bitter gourd?” (said under the breath, with a wink)", "tag": "best", "you": 4, "them": 8, "outcome": "Leo snorts and says “The bitter gourd!” Grace laughs into her glass. The bid never gets going.", "why": "You caught the bid with a joke that lets him off, so nobody has to be the villain. The trap is broken while it is still being born." },
+                { "text": "“Oh no, poor Leo, no bitter gourd for him.”", "tag": "game", "you": -2, "them": 3, "outcome": "Gran agrees at once, Leo slides the bitter gourd to the side and grins. Under his name, a faint thread appears.", "why": "You fed the bid. The move got him what he wanted, so next time he will try it sooner. A trap move ends the scene here." },
+                { "text": "“He just doesn't want the bitter gourd, Gran.”", "tag": "ok", "you": -2, "them": -6, "outcome": "Leo glares at you across the table. Gran clicks her tongue and gives him the herbal drink anyway, to keep the peace.", "why": "The trap stops, but by shaming. It works for tonight and teaches him to hide the next bid better, so it is the wrong tool." }
+              ]
+            },
+            {
+              "who": "Leo",
+              "text": "“Gran, my head hurts now. Can I have the herbal drink without the bitter gourd?”",
+              "cue": "a sly look, testing whether you will go along with it",
+              "lines": [
+                { "text": "“Which one hurts, the head or the bitter gourd? Show me, and I'll believe you.”", "tag": "best", "you": 3, "them": 5, "outcome": "He pauses, then laughs: “Both, but mostly the bitter gourd.” Gran laughs too, and the herbal drink arrives without a fuss.", "why": "You asked for the real answer, and that let him be honest without losing face. A kind question gives a child a way out of the bid." },
+                { "text": "“Gran, let him have the herbal drink, he's ill.”", "tag": "game", "you": -3, "them": 2, "outcome": "Gran pours a second cup. Leo sips it and looks pleased with himself, and the next bid is already forming.", "why": "You took the bid at face value and rewarded it. Feeding the copy is the same move as feeding the original, and it ends the scene early." },
+                { "text": "“Okay, have the herbal drink, love.”", "tag": "ok", "you": 0, "them": 1, "outcome": "Leo sips and says nothing. The next bid will come sooner, and he knows it works.", "why": "Giving in is gentle and does no harm this time. The honest answer is still missing." }
+              ]
+            },
+            {
+              "who": "Gran",
+              "text": "“Oh, what's going on with that boy's stomach?”",
+              "cue": "turning round, a spoon in her hand",
+              "lines": [
+                { "text": "“He's had a long day, Gran. Shall we ask him what he needs?”", "tag": "best", "you": 4, "them": 6, "outcome": "Gran pauses. “Ask him?” She looks at Leo, who has no answer ready.", "why": "You moved from guessing to asking. That leaves the child a real choice, and the trap loses its audience." },
+                { "text": "“Leo's stomach is fine, Gran. He's copying Tara.”", "tag": "ok", "you": -4, "them": -6, "outcome": "Gran turns sharply. “Don't say that, he's a child.” The kitchen goes cold for a moment.", "why": "Naming the copy is true, but it lands on Gran's care, so she defends him and the copying gets an audience." }
+              ]
+            }
+          ],
+          "payoff": "Gran gives him an extra spoon of herbal drink, and the trap has set one notch. Grace notices and says nothing."
+        },
+        {
+          "type": "scene",
+          "title": "Saturday, 16:40, Gran's kitchen",
+          "setting": "Grace is drying the same plate for the third time. Leo is on the stool, cross about the bitter gourd. Gran is still at the stove.",
+          "meters": { "you": 70, "them": 50 },
+          "beats": [
+            {
+              "who": "Grace",
+              "text": "“Ethan does the exact same thing. The headache before homework. I never know whether to believe him.”",
+              "cue": "drying the plate, not looking at you",
+              "lines": [
+                { "text": "“Hard to tell a real one from the move, isn't it? Tara got fussed over for hers. He's copying what works.”", "tag": "best", "you": 3, "them": 7, "outcome": "Grace stops drying. “…Huh. He is, isn't he.”", "why": "You named the pattern without blaming Ethan. Copying what works is how a trap spreads, and saying it aloud lets a parent see it from outside." },
+                { "text": "“You should call his bluff.”", "tag": "ok", "you": -3, "them": -3, "outcome": "Grace nods without looking up. She has heard that advice from everyone, and it did not help.", "why": "Nobody asked for advice. It makes you the one who fixes her child, and leaves her nothing to do but agree." },
+                { "text": "“That must be exhausting for you.”", "tag": "ok", "you": 0, "them": 2, "outcome": "Grace sighs. “Yes. It really is.” The moment stays heavy, and nothing moves.", "why": "Warm, but it stays on the feeling and never helps her see the pattern. It is kind, and it does not open anything up." }
+              ]
+            },
+            {
+              "who": "Grace",
+              "text": "“So what do I do? Take the phone away, or let him have the day off?”",
+              "cue": "a real question this time, no sarcasm",
+              "lines": [
+                { "text": "“Tell him kindly that the headache didn't work, and ask what would help him start the homework.”", "tag": "best", "you": 4, "them": 6, "outcome": "Grace laughs. “That's a new one. Maybe I'll try it.”", "why": "You gave her a plain line that does not shame him and does not rescue him. He keeps his dignity, and the bid loses its reward." },
+                { "text": "“Take the phone away, every time.”", "tag": "ok", "you": -2, "them": -2, "outcome": "“Yes, I tried that,” she says flatly.", "why": "A rule enforced hard feels like a fight, and the bid keeps its audience. It does no harm, and it still falls short of the best move." },
+                { "text": "“I'd just believe him, to be safe.”", "tag": "game", "you": -6, "them": 3, "outcome": "Grace relaxes for a moment. The homework goes unfinished, and the headache is now the way the evening ends.", "why": "You agreed to let the headache count. That is a trap move, and it ends the scene here with the result below." }
+              ]
+            },
+            {
+              "who": "Gran",
+              "text": "“Grace, leave the boy alone. He's only a child.”",
+              "cue": "without turning round, spoon still in hand",
+              "lines": [
+                { "text": "“He is a child, Gran. That's why he's learning so fast.”", "tag": "best", "you": 3, "them": 4, "outcome": "Gran turns round, a little startled. “…Hm. Learning, yes.”", "why": "You agreed he is a child and kept the lesson in view. The line protects Leo without pretending the pattern is not there." },
+                { "text": "“Yes, Gran, you're right, I shouldn't have said it.”", "tag": "ok", "you": -4, "them": 1, "outcome": "Gran nods, satisfied. Grace looks at the floor.", "why": "You gave up the point to keep the peace. It is pleasant, and it leaves the trap running." }
+              ]
+            }
+          ],
+          "payoff": "Grace believes the headache every time from now on, and the bid goes up in price."
+        }
+      ]
+    },
+    {
+      "level": "Analyse",
+      "label": "Analyse, explain it",
+      "items": [
+        {
+          "type": "pick",
+          "who": "Leo, on the stool, after the kitchen",
+          "text": "“Tara got the herbal drink. Ethan got the day off. So my stomach works best on Saturdays.”",
+          "cue": "working it out out loud, very pleased with himself",
+          "options": ["The Kid's own pilot", "The Kid's raw feelings", "The Kid's copy of a grown-up rule"],
+          "answer": 0,
+          "why": "Leo is running a small, clever pilot of his own. He has watched which move gets a nod from the people around him and worked out when it pays. That quick, intuitive thinking sits inside the Kid, and it is where a trap is first set up.",
+          "traps": {
+            "1": "The Kid's raw feelings would be the wail or the giggle itself, wanting with no plan behind it. Leo is lining up Tara and Ethan as evidence, and that is thinking.",
+            "2": "A copied grown-up rule would sound like something Gran says: “Never waste good food.” Leo is not repeating anyone's rule. He is comparing what worked for other children and drawing his own conclusion."
+          },
+          "example": "A cricket match in the lane, a boy who has worked out that the other side gives him another go whenever he sulks: “Every time I cry, they give me another go.”<br>Working out what gets the nod is a plan the child has made."
+        }
+      ]
+    }
+  ],
+  "debrief": {
+    "nadia": "A child watches which move gets a nod and copies it, and that is how a trap is born. You can catch it the moment it starts, with a joke that lets the child off or a plain question that gives a real choice. Feeding it keeps it running, and shaming stops it only for tonight.",
+    "bookTerm": "Little Professor",
+    "bookNote": "The books call this the Little Professor, the Adult in the Child: the intuitive, quick-witted part of a child that works out what gets a response from people. Berne found that young children set games up themselves, as when a small boy copied his brother's stomach ache at the dinner table, and that a father who simply asked whether he wanted to play that game stopped it as it was being born."
+  },
+  "reflection": {
+    "prompt": "Think of a bid for attention you made this week, like a headache or a sigh. What did it get you, and what would a plain question have got you instead?"
+  },
+  "next": "2.6"
+}

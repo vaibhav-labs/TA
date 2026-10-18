@@ -1,10 +1,10 @@
 # TA — Project Knowledge
 
-Last updated: 2026-10-18. This file tracks the current state of the project so a
+Last updated: 2026-10-18 (Product 3 section added). This file tracks the current state of the project so a
 fresh session (or future me) can pick up context fast. It is not design docs —
 see `docs/STRATEGY.md` for the original full spec and `README.md` for dev setup.
 
-## What this repo contains (two separate products, one deploy)
+## What this repo contains (two products that deploy, plus a third folder of artifacts)
 
 1. **TA Arena** — the main React/Vite/TypeScript app (`src/`). A 7-world,
    42-level Transactional Analysis mastery game with a mastery/unlock engine,
@@ -382,6 +382,204 @@ verified with lint/build/test plus a live Playwright click-through after.
 - Deploys are verified by polling
   `https://api.github.com/repos/vaibhav-labs/TA/actions/runs?per_page=1`
   after a push, not assumed to have succeeded just because `git push` returned.
+
+## Product 3: TA Arena Artifacts (added 2026-10-18)
+
+A third, separate product lives in `ta-arena-artifacts/`: 42 standalone single-file HTML games plus a hub, written to the First Transaction standard (story opener, Spot/Play/Analyse rounds, an explained example for every answer, debrief, reflection, navigation). They are published as Claude Artifacts, not deployed to GitHub Pages, and are not part of the Vite build (the folder is outside `src/` and `public/`). Unlike the React app, they show book sources to players on the end card, because they were audited against the books (see "Book audit" below). All commands below run from `ta-arena-artifacts/`; its own README-style files are `BRIEF.md` and `GLOBAL-NAMES.md`.
+
+Discrepancies found by the audit that affect the older products: the stroke economy chapter in *Scripts People Live* is ch. 8, so the First Transaction `01-strokes` citation of "ch. 9" and the `knowledge.md` rows quoting *TA Today* ch. 8 to 9 for some Wild/Child content are worth re-checking; the table above for 7-3 says *TA Today* ch. 28, which does not exist in the contents page (the three P's are in *Scripts People Live* ch. 21); 6-4's "ch. 8" should be ch. 6 to 10; 7-4 cites *Scripts People Live* ch. 21 but the antithesis idea is *Games People Play* ch. 5 and 11. Those older entries were not changed.
+
+### What this is
+
+TA Arena is a set of 42 standalone browser games that teach Transactional Analysis (TA), the psychology of how people talk to each other, built as 7 worlds of 6 games. Each game is one self-contained HTML file published as a Claude Artifact, plus one hub page that shows a route map of all 42.
+
+The artifacts are the product. They are not a conversion of the earlier GitHub PWA (vaibhav-labs.github.io/TA). The brief was to match the detail of the earlier "First Transaction" artifact: a story opener, rounds, an explanation with a real conversation example for every right and wrong answer, a debrief, a reflection and series navigation.
+
+Audience: anyone, worldwide. English only, British spelling, no Hindi, no Pune, no currency, a global cast.
+
+### Game structure (every game)
+
+1. Story opener (a short scene that sets the problem).
+2. Three rounds: Spot (3 to 5 items), Play (2 to 3 items), Analyse (1 to 2 items). The build tool prints an advisory when a count is outside these ranges.
+3. Every item has a `why` for the right answer and a `traps` entry for each wrong answer, each with a real example line.
+4. Debrief card: `debrief.nadia` (two to four plain sentences in Nadia's voice), `debrief.bookTerm`, `debrief.bookNote`.
+5. End card shows `bookTerm`, `bookIdea`, `bookSource`.
+6. Reflection prompt and a link to the next game and the hub.
+
+Item types: `pick`, `scene` (branching beats with meters), `sort` (drop lines into bins), `counter`. Scene lines carry tags `best`, `ok`, `game`.
+
+Plain-words rule: weeks 1 to 4 show no book terms in body text (terms appear only in the debrief and end card). Weeks 5 to 7 may use book terms in Analyse.
+
+### Worlds and games (slot, title, book term, source)
+
+World 1 Hunger (week "Invisible"): strokes and time.
+- 1.1 Spinal Cord, Stroke; Games People Play (GPP) Introduction, Scripts People Live (SPL) ch. 1
+- 1.2 Stroke Sorter, Stroke filter; SPL ch. 8 and 22; TA Today (TAT) ch. 8
+- 1.3 Hi-Hi, Ritual; GPP ch. 3
+- 1.4 The Party, Time structuring; GPP Introduction and ch. 3 to 5; SPL ch. 1; TAT ch. 9
+- 1.5 PTA Three Ways, Pastime; GPP ch. 4
+- 1.6 Boss: The Stroke Economy, Stroke economy; SPL ch. 8
+
+World 2 Three Voices: ego states.
+- 2.1 Who Said That, Ego state; GPP ch. 1; Transactional Analysis in Psychotherapy (TAP) ch. 2; TAT ch. 2
+- 2.2 Five Faces, Functional model; TAT ch. 3
+- 2.3 Egogram, Egogram; TAT ch. 3
+- 2.4 Four Ways to Know, Four diagnoses; TAT ch. 5; TAP ch. 7
+- 2.5 Little Professor; GPP ch. 5; SPL ch. 2; TAT ch. 4
+- 2.6 Boss: The Contaminated Adult, Contamination; TAP ch. 4; TAT ch. 6
+
+World 3 Vectors (week "Volleys"): transactions.
+- 3.1 Draw the Arrow, Transaction; GPP ch. 2; TAT ch. 7
+- 3.2 Keep It Going, Complementary; GPP ch. 2; TAT ch. 7
+- 3.3 Cross It, Crossed; GPP ch. 2; TAT ch. 7
+- 3.4 Cuff Links, Crossed Types I and II; GPP ch. 2; TAP ch. 9
+- 3.5 The Barn, Duplex; GPP ch. 2
+- 3.6 Boss: The Salesman, Angular; GPP ch. 2
+
+World 4 The Thesaurus (week "Traps"): games.
+- 4.1 Is It a Game?; GPP ch. 5; TAT ch. 1
+- 4.2 Formula G; TAT ch. 23; SPL ch. 11
+- 4.3 Life Games; GPP ch. 6
+- 4.4 Home Games, Marital games; GPP ch. 7
+- 4.5 Room Games, Good games; GPP ch. 12
+- 4.6 Boss: Why Don't You, Yes But; GPP ch. 8
+
+World 5 Underneath: feelings, stamps, discounts, symbiosis.
+- 5.1 Real or Racket; TAT ch. 1 and 21; SPL ch. 1
+- 5.2 Stamp Book, Trading stamps; SPL ch. 1; TAT ch. 1 and 21
+- 5.3 Four Levels, Discounting; TAT ch. 1, 17, 18; SPL ch. 9
+- 5.4 Doing Nothing, Passivity; TAT ch. 17; SPL ch. 9
+- 5.5 Two Halves, Symbiosis; TAT ch. 1 and 20
+- 5.6 Boss: The Discount Matrix; TAT ch. 18
+
+World 6 The Plan: scripts.
+- 6.1 OK Corral, Life positions; TAT ch. 12; SPL ch. 5 and 6
+- 6.2 Hear the Driver, Drivers; TAT ch. 16
+- 6.3 Don't, Injunctions; SPL ch. 4, 6, 7, 21; TAT ch. 14
+- 6.4 Three Banal Scripts; SPL ch. 6 to 10
+- 6.5 Script Process; TAT ch. 15
+- 6.6 Boss: The Script Matrix; SPL ch. 4, 6, 21; TAT ch. 13
+
+World 7 Autonomy (week "Your Own Person"):
+- 7.1 Help or Rescue, Rescue; SPL ch. 11, 16, 19
+- 7.2 The Contract; SPL ch. 20; TAT ch. 26
+- 7.3 Three P's, Permission, protection and potency; SPL ch. 21
+- 7.4 Despair to Laughter, Antithesis; GPP ch. 5 and 11
+- 7.5 Awareness, Spontaneity, Intimacy; GPP ch. 16 and 17
+- 7.6 After Games, What?; GPP ch. 18
+
+Mechanics by game (the `mechanic` field): choice-story, sort-it, counter, floor-plan, rule-breaker, diagnose, build, spot-the-leak, vector, replay, two-track, sequence, many-handed, collect, ladder, quadrant, match, open. See `content/<slot>.json`.
+
+### Repository layout
+
+- `content/<world>-<n>.json`: the 42 game definitions (the source of truth for all text).
+- `engine/template.html`: the game player. Markers `/*__TA_DATA__*/null/*__TA_DATA__*/` and `/*__TA_NAV__*/.../*__TA_NAV__*/` are replaced at build time.
+- `engine/hub-template.html`: the home-screen route map.
+- `engine/build.py`: validates content, writes `out/`. Standard library only.
+- `engine/nav.json`: hub URL and the URL and title for each of the 42 slots (generated by `make_nav.py`).
+- `world-intro.json`: per-world text for the hub (`name`, `weekName`, `intro`, `why`, `can`, `boss`).
+- `out/`: built HTML (42 games plus `hub.html`). This is what gets published.
+- `BRIEF.md`: the content contract and writing rules. `GLOBAL-NAMES.md`: the cast and rename map.
+- `source/`: the original design documents (`bible.txt`, `world-map-and-mechanics.txt`, `scenes-weeks-1-3.txt`). They still contain old names and places and carry a note saying GLOBAL-NAMES.md supersedes them.
+- `check_plain.py`, `check_global.py`, `qa/smoke.py`, `qa/hub_check.py`: checkers and browser tests.
+- `audit/cluster-A.md` to `cluster-D.md`: the per-game book audit tables.
+- Not in the repo on purpose: the four book PDFs and their extracted text (copyright). They live in a `books/` folder that is git-ignored.
+
+### Build, check, test, publish
+
+From `ta-arena-artifacts/`:
+
+```
+python3 engine/build.py          # all games into out/
+python3 engine/build.py --hub    # out/hub.html
+python3 check_plain.py           # weeks 1 to 4 must show no book terms in body text (expect hits: 0)
+python3 check_global.py          # old names, Hindi words, places, currency (expect hits: 0)
+for f in content/*.json; do python3 -m json.tool $f > /dev/null; done
+python3 qa/smoke.py              # 42 games in headless Chromium, about 120 s
+python3 qa/hub_check.py          # hub layout at 1280 and 390 px, focus ring
+```
+
+Build options: `--content-dir`, `--out-dir`, `--nav`, `--intro`. A game that fails validation is reported and not written; exit status is 1 on any error.
+
+Allowed inline tags in content: `<b>`, `<i>`, `<br>`. The build rejects others.
+
+Publishing: each file in `out/` is published with the Artifact tool, passing `url` to update the existing artifact in place (no icon on updates). Games were first published as Version 1, then Version 2 (nav links, intro, global names) and now Version 3 (book audit).
+
+### PWA and live URL
+
+`python3 make_pwa.py` (from `ta-arena-artifacts/`) builds the 42 games and the hub with absolute GitHub Pages links (`engine/nav-pwa.json`), adds manifest, theme colour and service-worker registration, and writes everything to `public/arena/` (hub = `index.html`, games = `1-1.html` to `7-6.html`, plus `manifest.json` and `sw.js`). The existing deploy workflow publishes it. Live at `https://vaibhav-labs.github.io/TA/arena/` (installable; scope `/TA/arena/`). `public/arena/` is generated: change `ta-arena-artifacts/content/*.json`, rerun `make_pwa.py`, and bump `VERSION` in `make_pwa.py` so installed clients refresh. The service worker is network first with cache fallback, like First Transaction. `vite.config.ts` lists `arena/**` in `globIgnores` so the root service worker leaves these pages to their own. Google Fonts load from the network and fall back to system fonts offline.
+
+### Writing rules (humanize)
+
+No em dashes. Curly quotes in dialogue. British spelling. No triads, no "not X but Y", no drumroll openers, no participial tails, no significance inflation. Vary sentence length. The score script (`humanize-writing/scripts/score.js`, line "AI-likeness N/100") must stay under 30 per game. Current scores are 0 to 6 for all 42 games.
+
+### Cast and names (global)
+
+Sam (was Rohan), Maya (Tanvi), Daniel (Vikram), Omar (Dev), Clara (Sana), Leo (Kabir), Nadia (Meera, the debrief voice), Grace (Reshma), Hannah (Priyanka), Ella (Priya), Peter (Anil), Mei (Asha). Tara unchanged. Mum, Dad, Gran replace Ma, Papa, Aai. "love" replaces the endearment. Places: no Pune, Mumbai or Goa ("the city", "the coast"); the cafe is The Corner Table; the company is Halden; Hawthorn Court and apartment 3B; tea not chai; no currency (use counts, "a bill", "a fee"). The debrief JSON key is `nadia` (it was `meera`). The full rules and the banned-word list are in GLOBAL-NAMES.md and enforced by `check_global.py` (case-insensitive, whole-word).
+
+### The book audit (October 2026)
+
+Sources, all from the user's Google Drive: *Games People Play* (Berne, 82 pp, full text), *Scripts People Live* (Steiner, 408 pp, full text), *Transactional Analysis in Psychotherapy* (Berne, scanned, OCR text for ch. 1 to 14), *TA Today* (Stewart and Joines, only front matter, contents page and ch. 1 to 7 readable; the PDF is over the 10 MB Drive download limit and the read tool truncates at about page 64).
+
+Method: four parallel reviewers, one per cluster (A worlds 1, B worlds 2 and 3, C worlds 4 to 6, D world 7), each read every game and checked term, idea, source line and every implied claim and answer key against the book text. Verdicts VERIFIED, CORRECTED or UNVERIFIABLE with evidence are in `audit/cluster-*.md`. SPL page numbers there are PDF page positions, because the SPL text has no printed page numbers.
+
+Main corrections:
+- Chapter cites: the stroke economy is SPL ch. 8 (not 9); many source lines were corrected to the checked chapters only.
+- 7.2: the four contract requirements are Steiner's (mutual consent, consideration, competency, lawful object; SPL ch. 20), not Berne's. The game was rebuilt on them.
+- 7.3: Permission, Protection and Potency are Steiner's three P's (SPL ch. 21); Protection was first postulated by Patricia Crossman; potency is the giver's strength, not the receiver's reason.
+- 7.1: Steiner gives a two-part summary plus a no-help-without-a-request rule, not a list of three; the game now sorts 12 helping acts.
+- 7.4: laughter after refusing a game "may" follow in a good outcome (GPP ch. 5, p. 21); it is not guaranteed. 7.6 now covers GPP ch. 18 instead of duplicating 7.5.
+- 4.3 and 4.4: game names and details fixed to GPP ch. 6 and 7. 3.4, 3.5, 3.6: transaction types and the duplex and angular definitions fixed (GPP ch. 2). 5.5: symbiosis fixed. 6.4: the three basic scripts follow Steiner's training in Lovelessness, Mindlessness and Joylessness. 6.5: source is TA Today ch. 15.
+- 1.3: Berne's example of about thirty nods is after a month away, so the two-night trip counter was rescaled to about a dozen (target 12, tolerance 3).
+- 3.6: redundant third Analyse question removed to match "two questions" and the brief.
+- Play and Analyse counts brought into range for 1.1, 1.5, 2.4, 7.1, 7.6.
+- Flag renames and a "Beta" leftover in 3.4 ("Love") fixed during the global-names pass.
+
+Not verifiable (TA Today ch. 8 onward unreadable): Formula G as TA Today states it, the four discount levels and four passive behaviours as written there, the six process scripts, the five drivers, the OK Corral applied to adults, symbiosis beyond ch. 1, the term "counter-injunction", the "stroke filter" term and the warm/cold grid for doing versus being. These keep only what the contents page and standard TA theory support. To close this, supply those chapters as text or a split PDF.
+
+Known adaptations (deliberate, not errors): 3.5 flirtation softened to wanting company; 4.5 "Want Out" set at work; 4.4 marital games applied to flatmates. Rebellion belongs to the Adapted Child in TA Today ch. 3 but to the natural Child in TAP ch. 7; the games follow TA Today, and no game labels a sulk as the Wild Kid (checked). The design table's "Steiner's three Rescue rules" and "Berne's four requirements" are table errors, not book statements.
+
+### QA status (18 October 2026)
+
+- JSON valid for all 42 files.
+- Build: no errors or warnings; no Play/Analyse count advisories.
+- `check_plain.py`: 0 hits. `check_global.py`: 0 hits.
+- Humanize score: every game 0 to 6.
+- `qa/smoke.py`: 42 of 42 pass, 0 page errors (about 121 s).
+- `qa/hub_check.py`: PASS at 1280 and 390 px.
+- All 42 games and the hub published as Version 3.
+
+### Published artifact map
+
+Base: https://claude.ai/artifact/ followed by the id. Artifacts are private to the owner until shared from the page's Share menu. Hub: FzdEytVBojsBteGVMXXV4K.
+
+1-1 GchqGmxabuBvvig2uWewn1; 1-2 2FG67GodMyXHnVkSLgX6F1; 1-3 FQZTE26Tetb3Cqe7pBztVU; 1-4 PvVDedNSfj1X7PLJHdeJJr; 1-5 DTmRPSymTnbjSLs7LSwg6H; 1-6 W6MRqhzsHbP4sTJ8Nqirp2;
+2-1 NHi7rFVjpwWgTUGCFLdcfJ; 2-2 TgGgALj5WQgSvbU1YQcrMd; 2-3 GDViWJ3SgtLWcASu7hCDtL; 2-4 3c6qN2P5rn7JP6dEPuLptv; 2-5 3SZLhBJuzD2UqneYgNbf94; 2-6 5FsXiRoMRB4anxTPuHmMa4;
+3-1 8nEQcyqpxd1UpWwRsnpXjV; 3-2 Bq2wTtJbNR58JADVMzx4p6; 3-3 5JmSViMCTnndnUwR8s8ZAj; 3-4 JxFsmUfmYHHSfLgvhnqkHu; 3-5 UVN6pxYARCV84hSNzvFQTn; 3-6 FpRyhcmjZ7AJwNxvXrwack;
+4-1 P5Musr4vb1yGbVUwtRftbk; 4-2 7cTckACt6F8SNPuVgaBYDU; 4-3 GZFLfTyw2M8TBA1GVgt4Xb; 4-4 NpMzNHMxHxAeLB615QKBBX; 4-5 CiZTLP1gdtjsKkXr7uuvrk; 4-6 33B9mjWmYM2HqhaNhfmoL9;
+5-1 U2PuUcjP1ZoFZFpHQrFNQm; 5-2 Han4DXPaRMHX5fE2FXai9J; 5-3 XFTvLmBDuQ6zuY3Wwp5N8u; 5-4 5SEWcMFkZqqcPGTiDWLJ8T; 5-5 MZ84ez7MSZVgrUGML58jVF; 5-6 BYTUPGB8c7aFFCU4JBJeFj;
+6-1 5eAxqr1fS5RN7aLnxkVjdV; 6-2 3ckXKZfxfkrm5q1SAyGrqW; 6-3 Brhq7keSkDpZQM8AnkfkT5; 6-4 8yPoVaZnJyJqeeygNaEER8; 6-5 3k5L13vbHQbjDEWwa3m6YV; 6-6 6ohNLgWTiVsxZKktMYnqJR;
+7-1 Fq1W1u5y6FYvjQ7Rg2AczR; 7-2 A4qJnVuGrgm46BSSVW4rXE; 7-3 RgmJcyETexdoYozhtgrAJv; 7-4 1MRVBfvZaDLPVqkX8TW4W1; 7-5 Xa8N3tZ8C3rvb1vkPgNETz; 7-6 DNdVvbWSwdGBpAPTavJQuF.
+
+The earlier "First Transaction" artifact (6r9B6FmMHnvWfVHJP53EQ9) is not linked from the hub.
+
+### Decisions and gotchas
+
+- Stroke titles unchanged; "flat" kept (British English).
+- The hub reads URLs from `engine/nav.json`; regenerate with `make_nav.py` if an artifact URL ever changes, then rebuild everything, because every game embeds the nav.
+- Republishing needs the `url` of the existing artifact; omitting it creates a new artifact and breaks the links.
+- The smoke test takes about two minutes; run it with a long timeout and separately from the hub check.
+- Do not paste book text into games. Paraphrase only.
+- Weeks 1 to 4: do not add book terms to body text; `check_plain.py` will fail.
+- Case-sensitive name checks miss "Beta", `meera` keys and flag names such as `tanvi_offered_1`; `check_global.py` is case-insensitive for that reason.
+- The humanizer-evolution pipeline (research, implement, verify against the Humanize app engine) was never run for this project: the engine repository was not available.
+
+### Open items
+
+1. Verify the TA Today ch. 8+ claims listed in section 8 once those chapters are available.
+2. Optionally link the First Transaction artifact from the hub.
+3. Source docs in `source/` still hold old names (marked as superseded); clean them only if they are reused.
+4. Several games cite a combined range of book chapters; if a reader needs exact pages, add page numbers from the audit files.
 
 ## Scripts
 

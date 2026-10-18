@@ -1,0 +1,137 @@
+{
+  "slot": "4.2",
+  "title": "Formula G",
+  "world": 4,
+  "worldName": "The Thesaurus",
+  "week": 4,
+  "weekName": "Traps",
+  "mechanic": "Sequence",
+  "concept": "After this one you can put a trap's six steps in order, bait first and sting last, and point to the flip where the chairs swap.",
+  "plainWord": "the six steps",
+  "bookTerm": "Formula G",
+  "bookIdea": "Formula G sets out how a game runs in six parts and a fixed order: a con aimed at a weak spot (the gimmick) draws a response, then comes the switch, the crossup of confusion, and the payoff last.",
+  "bookSource": "TA Today, ch. 23; Scripts People Live, ch. 11",
+  "opener": {
+    "setting": "Thursday, 9:40pm. Hawthorn Court, apartment 3B, the sofa. The bathroom light is still on, and nobody has turned it off.",
+    "lines": [
+      { "who": "Sam", "text": "“Did you leave the bathroom light on? I'm not blaming anyone. Just the one who gets blamed for it.”", "cue": "from the doorway, arms folded" },
+      { "who": "Maya", "text": "“I turned it off. I always turn it off.”", "cue": "pulling the blanket straight without looking up" },
+      { "who": "Sam", "text": "“Ha. Okay. You're always so sure of yourself, aren't you? Forget it.”", "cue": "already walking to his room" }
+    ],
+    "ask": "Put the six steps of each trap in order, with the bait first and the sting last, and find the flip where the chairs swap."
+  },
+  "rounds": [
+    {
+      "level": "Spot",
+      "label": "Spot, round 1",
+      "intro": "Each set below is one short trap, with six lines. Tap them in the order the trap runs, with the bait first and the sting last.",
+      "items": [
+        {
+          "type": "sort",
+          "prompt": "Put these six lines in the order the trap runs, with the bait first and the sting last.",
+          "order": true,
+          "items": [
+            { "text": "Sam: “Sorry, sorry. I've knocked your notes off the table again. I'm hopeless, aren't I?”", "why": "Bait comes first. It reads as a plain apology, so you feel you ought to answer, and nothing in it asks you for anything yet." },
+            { "text": "Sam: “Everyone always ends up picking up my mess. It's the story of my life.”", "why": "The hook comes second. It catches the Saviour's reflex in you, the urge to pick things up for people." },
+            { "text": "You: “It's fine, I'll pick them up. Don't worry about it.”", "why": "The bite comes third. It is the reply that takes the hook, so you move into the Saviour's chair and start clearing up his mess." },
+            { "text": "Sam: “Wow, you always make it sound like I'm the problem. Like I can't do anything right.”", "why": "The flip comes fourth. Sam leaves the Sufferer's chair for the Blamer's, which leaves you in the Sufferer's, the one now being blamed." },
+            { "text": "You: “Wait, what? I was only trying to help.”", "why": "The blink comes fifth. You meant to help and find yourself cast as the problem, so you are caught off guard and stop for a moment." },
+            { "text": "Sam: “Forget it. Whatever.”", "why": "The sting comes last. Neither of you got what you wanted, and you both carry the same bad feeling. The trap is ready to run again at the next spill." }
+          ],
+          "example": "A family WhatsApp group, Sunday. “Sorry, I forgot the sweets again. I'm useless, aren't I?”<br>“Don't be silly, I'll get them.”<br>“No, you always do everything. Forget it.”"
+        },
+        {
+          "type": "sort",
+          "prompt": "Put these six lines in the order the trap runs. Start with the bait and end with the sting.",
+          "order": true,
+          "items": [
+            { "text": "Daniel: “Good, you're here. Quick question about the sheet you sent this morning.”", "why": "Bait comes first. The question sounds routine, so you relax, and nothing has been caught yet." },
+            { "text": "Daniel: “I was going to check it myself. I thought you were careful with these.”", "why": "The hook comes second. Being called careful is a nod you want, and he holds it just out of reach, so you start to reach for it." },
+            { "text": "You: “I did check it. I think. Let me have a look.”", "why": "The bite comes third. You doubt your own check before anyone has shown you a mistake, which is the reply the hook was fishing for." },
+            { "text": "Daniel: “Ah. So you haven't checked it. I knew it. I'll do it myself, then.”", "why": "The flip comes fourth. Daniel takes the Blamer's chair, your doubt becomes his evidence, and you are left in the Sufferer's." },
+            { "text": "You: “Hang on. I sent it at nine. You read it and said it was fine.”", "why": "The blink comes fifth. You remember the nine o'clock send, and his story does not match what happened, so you stop and look at him." },
+            { "text": "Daniel: “Fine. Just don't let it happen again.” He turns back to his screen.", "why": "The sting comes last. He has the final word and you are left with the doubt he planted. The sheet is still not checked." }
+          ],
+          "example": "A parents' WhatsApp group, Monday. “Did you bring the sports kit?”<br>“I think so. Let me check.”<br>“Ah, so you didn't. I knew it.”"
+        },
+        {
+          "type": "sort",
+          "prompt": "Put these six lines in the order the trap runs, with the bait first and the sting last.",
+          "order": true,
+          "items": [
+            { "text": "Omar: “Can you shut the bathroom window when you're done? It's freezing in here.”", "why": "Bait comes first. It is a fair request in a cold flat, so nobody can object to it yet." },
+            { "text": "Omar: “Some of us notice when the heating's on. Some of us don't.”", "why": "The hook comes second. It lands on your sense of being careless, so you feel called to defend yourself instead of just shutting the window." },
+            { "text": "You: “Sorry. I was in the shower. I'll shut it now, don't shout.”", "why": "The bite comes third. You answer the hook with an excuse. That puts you in the Sufferer's chair, and you have to prove you were not careless." },
+            { "text": "Omar: “Look what you made me do. Now I'm the one raising my voice at a window.”", "why": "The flip comes fourth. Omar moves from the Blamer's chair into the Sufferer's, and that leaves you in the Blamer's, the one he says made him shout." },
+            { "text": "You: “Wait. You're the one who started it, not me.”", "why": "The blink comes fifth. You only asked about a window, so being blamed for his shouting catches you out. You say so." },
+            { "text": "Omar: “Fine. Make it about you, like always.” He carries the kettle into the kitchen.", "why": "The sting comes last. Omar has the last word and you feel accused. The same argument is set up for the next open window." }
+          ],
+          "example": "A school gate, Wednesday. “Can you bring the lunch box? It's on the bench.”<br>“I'm not the one who forgets things.”<br>“Look what you made me do. Now I'm late too.”"
+        }
+      ]
+    },
+    {
+      "level": "Play",
+      "label": "Play, the week in motion",
+      "intro": "These lines look alike, so the order is harder to hear. Watch for the moment the chairs swap, and let that tell you where the flip is.",
+      "items": [
+        {
+          "type": "sort",
+          "prompt": "These lines look alike. Put them in the order the trap runs, with the bait first and the sting last, and watch where the chairs swap.",
+          "order": true,
+          "items": [
+            { "text": "Gran: “I'm not complaining, but nobody reads these letters for me. You're the only one who understands them.”", "why": "Bait comes first. It sounds like a small complaint and a compliment, so a helper hears a favour to be done and no trap at all." },
+            { "text": "Gran: “Of course you're busy, with all that office work. Not that I'd know, nobody tells me anything.”", "why": "The hook comes second. Being busy becomes a fault you owe her for, and that catches the part of you that wants to make it up to her." },
+            { "text": "You: “I'll read it with you tonight. Don't worry, I'll sort the whole letter.”", "why": "The bite comes third. You offer to carry the whole letter, so you move into the Saviour's chair, and she settles into the Sufferer's." },
+            { "text": "Gran: “Oh, you've decided it's a big job, have you? I'll manage on my own, as always.”", "why": "The flip comes fourth. Gran leaves the Sufferer's chair for the Blamer's, and it is you who is now accused of making the letter a burden." },
+            { "text": "You: “Hang on, I only said I'd read it. Nobody said it was a big job.”", "why": "The blink comes fifth. The story has changed under you, and you are caught between an offer you made and a charge you never earned." },
+            { "text": "Gran: “Fine. I'll ask the neighbour, then.” She puts the envelope back in the drawer.", "why": "The sting comes last. She ends up alone with the letter and you feel you have let her down. The next letter will bring the same trap back." }
+          ],
+          "example": "A housing society meeting, Saturday. “You're the only one who can talk to the secretary. Could you raise the lift?”<br>“I'll raise it.”<br>“Oh, so it's that important now?”"
+        },
+        {
+          "type": "sort",
+          "prompt": "Put these six lines in the order the trap runs. Some lines sound like teasing, and one line is the flip.",
+          "order": true,
+          "items": [
+            { "text": "Clara: “I've opened the sheet four times. Clearly I'm the slowest person in the city.”", "why": "Bait comes first. It is a joke at her own expense, and it asks someone to laugh or to say she is not that slow." },
+            { "text": "Daniel: “Four times? Well, at least you're consistent. Some people give up at two.”", "why": "The hook comes second. He praises the wrong thing, her persistence, while calling her slow, so she has to decide whether to laugh it off or argue." },
+            { "text": "Clara: “Ha. Yes. I'm the one who never gives up, that's me.”", "why": "The bite comes third. She takes the sarcasm as a compliment and joins in, which keeps her in the Sufferer's chair while she pretends it is a joke." },
+            { "text": "Daniel: “Clara, I thought you'd have it by now. Did you even read the brief?”", "why": "The flip comes fourth. Daniel stops teasing like a friend and takes the Blamer's chair, and Clara is left holding the blame." },
+            { "text": "Clara: “Wait. You just said I was consistent. Now I didn't read the brief?”", "why": "The blink comes fifth. The praise she was given has been taken back in the same breath, and she is stuck turning the sentence over." },
+            { "text": "Daniel: “Doesn't matter. I'll do it myself.” He turns back to his screen, and she closes hers.", "why": "The sting comes last. He does the work alone and she feels she has failed. The same trap is waiting for the next sheet." }
+          ],
+          "example": "A snooker club, Saturday. “You lost again? Some people never learn the angle.”<br>“Ha, yes, that's me. Never learns.”<br>“Then you should play someone else.”"
+        }
+      ]
+    },
+    {
+      "level": "Analyse",
+      "label": "Analyse, explain it",
+      "intro": "One longer trap, where the chairs swap at the flip. Put the lines in order, and use the why on each line to see who sits where before and after.",
+      "items": [
+        {
+          "type": "sort",
+          "prompt": "Put these six lines in order. Read each why as you go, because it says which chair each of you is in, and where the chairs swap.",
+          "order": true,
+          "items": [
+            { "text": "Mum: “Don't worry if you're busy. I know you're busy. I'm only sitting here with the lentils.”", "why": "Bait comes first. It gives you permission to be busy, so there is nothing to answer yet, only a small guilt waiting to be picked up." },
+            { "text": "Mum: “Three rings and no answer. Still, I'm only your mother. I'm used to it.”", "why": "The hook comes second. The missed calls become her hurt, which pulls you into the Saviour's chair, the one that has to make it up to her." },
+            { "text": "You: “Sorry, Mum. I'll ring you properly tonight. Twice, if you like.”", "why": "The bite comes third. You take on a promise you may not keep, so you are the Saviour fixing her hurt, and she is the Sufferer waiting for the fix." },
+            { "text": "Mum: “Tonight, of course. You'll ring when you're done with everyone else. You always do this.”", "why": "The flip comes fourth. Mum moves into the Blamer's chair, and you slide into the Sufferer's, the one who always lets her down." },
+            { "text": "You: “Mum, I said I'd ring. Why are we arguing about a phone call?”", "why": "The blink comes fifth. You were only offering a call, so the argument catches you off guard. You stop trying to fix it." },
+            { "text": "Mum: “Fine. Ring when you can. I'll be here, not that anyone asks.” She hangs up before you can answer.", "why": "The sting comes last. She has the last word and the line goes dead. You both carry the feeling that a promise counts for less than a grievance." }
+          ],
+          "example": "A school trip group chat, Friday. “Are you coming to the picnic?”<br>“I'll try, I'm on call.”<br>“Fine, don't worry about us. We'll manage.”"
+        }
+      ]
+    }
+  ],
+  "debrief": {
+    "nadia": "A trap runs in a recognisable order, so once you know the order you can hear one coming. Watch for the hook, the moment someone leans on a soft spot of yours, then the bite, when you take it, and then the flip, when the chairs swap. The sting is what you feel last, but every step before it set it up.",
+    "bookTerm": "Formula G",
+    "bookNote": "The books call this Formula G, a game laid out in six parts in a fixed order: the con, the gimmick, the response, the switch, the crossup and the payoff. The players swap roles at the switch, much as they do on the Drama Triangle, and the payoff comes last."
+  },
+  "reflection": { "prompt": "Think of a friendly line that turned on you this week. Which step was the flip, and what did you do in the blink?" },
+  "next": "4.3"
+}

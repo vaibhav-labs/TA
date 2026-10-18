@@ -1,0 +1,167 @@
+{
+  "slot": "5.3",
+  "title": "Four Levels",
+  "world": 5,
+  "worldName": "Underneath",
+  "week": 5,
+  "weekName": "Underneath",
+  "mechanic": "Ladder",
+  "concept": "After this one you can name which part of a problem a line is making smaller, and say what a real step would look like.",
+  "plainWord": "shrinking",
+  "bookTerm": "Discounting",
+  "bookIdea": "Discounting is ignoring part of a situation without realising it, and it can shrink a problem at one of four levels: that it exists, that it matters, that it can change, or that you personally can do anything about it.",
+  "bookSource": "TA Today, ch. 1, 17 and 18; Scripts People Live, ch. 9",
+  "opener": {
+    "setting": "Thursday, 6:15pm. Hawthorn Court, the stairwell between 1A and 3B. The lift has a paper sign on its door.",
+    "lines": [
+      { "who": "Gran", "text": "“The lift's been broken since March. It's always broken. What can anyone do about a lift?”", "cue": "one hand on the banister, the other on her knee" },
+      { "who": "Sam", "text": "“It's not a big deal, Gran. I'll take the stairs. I always take the stairs.”", "cue": "already two steps up, not turning round" }
+    ],
+    "ask": "Each line makes part of a problem look smaller. Which part is it: whether it is there, whether it matters, whether it can change, or whether you can do anything about it?"
+  },
+  "rounds": [
+    {
+      "level": "Spot",
+      "label": "Spot, round 1",
+      "intro": "Each line makes one part of a problem smaller. Three parts are offered for each line. Pick the one the line is shrinking.",
+      "items": [
+        {
+          "type": "pick",
+          "who": "Daniel",
+          "text": "“There's no problem with the deck. The client never complained, so let's not go looking for one.”",
+          "cue": "already closing the file",
+          "options": ["The problem isn't there at all", "The problem can't be changed", "I can't do anything about it"],
+          "answer": 0,
+          "why": "He says the problem is not there. No complaint means, in his view, no problem to find, so the deck is closed. That is the first level of shrinking: the problem is made so small it does not exist.",
+          "traps": {
+            "1": "'The problem can't be changed' would sound like a shrug over a deck that has already gone out. It treats the mistake as fixed in place, so nobody checks the numbers, and the next client gets the same slip.",
+            "2": "'I can't do anything about it' would hand the deck to you alone. The talk would move to what you are unable to do, and the question of whether anything is wrong would never get asked."
+          },
+          "example": "A school office, Monday.<br>Clerk: “Nobody has complained about the bus fees, so there's no problem to look at.”<br>Mum: “I've had three emails about it this week.”"
+        },
+        {
+          "type": "pick",
+          "who": "Clara",
+          "text": "“It's one slip in a footnote. Nobody reads footnotes anyway, so it doesn't matter at all.”",
+          "cue": "shrugging, already back at her screen",
+          "options": ["The problem isn't there at all", "The problem doesn't matter much", "The problem can't be changed"],
+          "answer": 1,
+          "why": "The slip is there, and she can see it. She makes it small by saying it does not matter, which is the second level. Once something is said not to matter, nobody is asked to fix it.",
+          "traps": {
+            "0": "'The problem isn't there at all' would deny the slip exists. The team would be told there is nothing to check, the slip would stay in print, and nobody would know it was ever there to fix.",
+            "2": "'The problem can't be changed' would turn a footnote into a fact of life. The talk would go to whether footnotes can be edited, and the slip would stay where it is, with nobody asked to look."
+          },
+          "example": "A cricket scorecard, Sunday.<br>Scorer: “It's one run wrong in the total. Nobody reads the total, so it doesn't matter at all.”<br>Captain: “The total is the whole point of the card.”"
+        },
+        {
+          "type": "pick",
+          "who": "Gran",
+          "text": "“The society sent another letter. They'll never fix the lift, not in my lifetime. Nothing in this building ever changes.”",
+          "cue": "folding the letter in four, not looking up",
+          "options": ["The problem doesn't matter much", "The problem can't be changed", "I can't do anything about it"],
+          "answer": 1,
+          "why": "The problem is real, and she grants that. She makes it small by saying it can never change, which is the third level. A problem that cannot change is one nobody has to bring to the next meeting.",
+          "traps": {
+            "0": "'It doesn't matter much' would sound like a shrug at a lift the whole building uses. The talk would stay on how bad the stairs are, and the letter would go in the drawer with no reply.",
+            "2": "'I can't do anything about it' would make the lift her own burden. The talk would turn to what she cannot do, and the society would be let off without anyone asking them for a date."
+          },
+          "example": "A bank queue, Tuesday.<br>Customer: “The machine's broken again. It's always broken. Nothing here ever gets fixed.”<br>Clerk: “The counter is on the left. The form is on the desk.”"
+        },
+        {
+          "type": "pick",
+          "who": "Omar",
+          "text": "“I'd raise it at the review, but they'd only look at me. I couldn't sort out the rota, not from where I sit.”",
+          "cue": "staring at the rota on the wall",
+          "options": ["The problem isn't there at all", "The problem can't be changed", "I can't do anything about it"],
+          "answer": 2,
+          "why": "The rota is a real problem, and he says he has no way to move it. He makes his own part small: he cannot act from where he sits. That is the fourth level, and it is the most personal one. It keeps him out of the room where the rota gets decided.",
+          "traps": {
+            "0": "'The problem isn't there at all' would say the rota has no problem in it. That closes the review before it starts, and Omar is spared the work of raising it.",
+            "1": "'The problem can't be changed' would blame the rota itself. The talk would go to whether a rota can be fixed, and Omar's own part would never come up, so the rota would stay as it is."
+          },
+          "example": "A school gate, Friday.<br>Mum: “The sports day clash is ridiculous, but I'm not on the committee, so I couldn't change it.”<br>Friend: “Email the committee. It takes two minutes.”"
+        }
+      ]
+    },
+    {
+      "level": "Play",
+      "label": "Play, the week in motion",
+      "intro": "Harder now. All four parts of the problem are on the table, and each line can seem to fit more than one. Pick the part the line is working hardest to shrink.",
+      "items": [
+        {
+          "type": "pick",
+          "who": "Maya",
+          "text": "“I'm not complaining. The night shifts have always been like this, and the hospital won't change the rota for a few nurses. It's just how the ward runs.”",
+          "cue": "smiling, folding the same towel for the third time",
+          "options": [
+            "The problem isn't there at all",
+            "The problem doesn't matter much",
+            "The problem can't be changed",
+            "I can't do anything about it"
+          ],
+          "answer": 2,
+          "why": "'Won't change the rota' is the third level: the problem is treated as fixed in place. The smile and the 'not complaining' keep it that way, and once a problem is fixed, nobody has to ask the hospital for anything.",
+          "traps": {
+            "0": "'It isn't there at all' would deny the tired nights, and the towel-folding would look like fine work. Nobody would ask for relief, and the shifts would run on without a word.",
+            "1": "'It doesn't matter much' would make the night shifts a small thing. The talk would move to whether nurses should mind at all, and nobody would ask why the rota has not changed.",
+            "3": "'I can't do anything about it' would sound fair from one nurse, and it would close the matter for her. The talk would turn to what she cannot do, and the hospital would never be asked."
+          },
+          "example": "A factory line, Tuesday.<br>Worker: “The night shifts have always been like this. The company won't change the rota, so I'm not complaining.”<br>Supervisor: “Then put the rota problem in writing to HR by Friday.”"
+        },
+        {
+          "type": "pick",
+          "who": "Gran",
+          "text": "“Nobody's ever had a problem with the stairs. My knees are my own business, so don't fuss about them.”",
+          "cue": "hauling the shopping up one step, then stopping to get her breath",
+          "options": [
+            "The problem isn't there at all",
+            "The problem doesn't matter much",
+            "The problem can't be changed",
+            "I can't do anything about it"
+          ],
+          "answer": 0,
+          "why": "'Nobody's ever had a problem' says the problem is not there at all, which is the first level. Her hand on the rail and the stop for breath say otherwise. Once a problem is said not to exist, nobody has to look at the steps.",
+          "traps": {
+            "1": "'It doesn't matter much' would make her breathing a small thing. The talk would move to the shopping, and the stairs would stay steep for the next visit.",
+            "2": "'It can't be changed' would turn the stairs into a permanent fact. Gran would be left with the bag, and nobody would ask about a rail.",
+            "3": "'I can't do anything about it' would make the stairs her own burden alone. You would offer to carry the bag, and the question of a rail would never reach the society."
+          },
+          "example": "A bus stop, Saturday.<br>Old man: “Nobody's ever had a problem with these steps. Don't fuss about the rail.”<br>He stops halfway up and holds the rail with both hands."
+        }
+      ]
+    },
+    {
+      "level": "Analyse",
+      "label": "Analyse, explain it",
+      "items": [
+        {
+          "type": "pick",
+          "who": "Nadia",
+          "text": "Sam, to Gran: “It's only a few days late, Gran. Hardly a big deal, and nobody's going to care about a few days.” Which level of discounting is that, and what would a real step look like?",
+          "cue": "turning her cup, eyes on the stairwell",
+          "options": [
+            "Existence. He says the rent is not late at all. A real step would be to check the date on the bank statement.",
+            "Significance. He says a few days late is hardly a big deal. A real step would be to name a day when the rent will land, and say what the delay costs Gran.",
+            "Change possibilities. He says the rent cannot be paid any faster. A real step would be to ask Gran for a payment plan with a date on it.",
+            "Personal abilities. He says he has no power over the bank. A real step would be to set up a standing transfer for the first of the month."
+          ],
+          "answer": 1,
+          "why": "Plain words first: he is making a late rent look small. The books call this discounting, and this is the significance level, the one that says the problem does not matter much. A real step names a day for the money and says what the delay costs Gran, so the problem is treated as one that matters.",
+          "traps": {
+            "0": "Existence would say the rent is not late at all. Gran would hear that she has the date wrong, and the argument would be about the calendar, not about what the delay costs her.",
+            "2": "Change possibilities would say the rent cannot be paid any faster. Sam would be let off, the talk would turn to the bank, and no date would be set for the money.",
+            "3": "Personal abilities would say he has no power over the bank. A standing transfer would never be set up, because the step is treated as impossible before anyone has tried it."
+          },
+          "example": "A parent group chat, Monday.<br>Mum: “It's only the bake sale money, a few days late. Nobody will mind.”<br>Treasurer: “It's fine, but I'd like it by Friday, please. The bank wants the date.”"
+        }
+      ]
+    }
+  ],
+  "debrief": {
+    "nadia": "Every line in that week made some part of a problem smaller, and most of them picked the same few places to do it. Once you can say which part is being shrunk, you can ask the question that sits under it. That question is almost always the same one: what would a real step look like?",
+    "bookTerm": "Discounting",
+    "bookNote": "The books call this discounting: ignoring part of a problem without realising it, at one of four levels, which are that it exists, that it matters, that it can change, or that you can do anything about it."
+  },
+  "reflection": { "prompt": "Which part of a problem did you make smaller this week: whether it was there, whether it mattered, whether it could change, or whether you could change it?" },
+  "next": "5.4"
+}

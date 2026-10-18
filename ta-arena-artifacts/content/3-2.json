@@ -1,0 +1,211 @@
+{
+  "slot": "3.2",
+  "title": "Keep It Going",
+  "world": 3,
+  "worldName": "Vectors",
+  "week": 3,
+  "weekName": "Volleys",
+  "mechanic": "Choice-story",
+  "concept": "After this one you can keep a fragile conversation going by answering from the voice it was spoken to, and spot a matched chain that runs on but does harm.",
+  "plainWord": "a matched volley",
+  "bookTerm": "Complementary transaction",
+  "bookIdea": "A reply that comes from the ego state the message was aimed at, and goes back to the one that spoke, makes a complementary transaction. While transactions stay complementary, communication can go on indefinitely.",
+  "bookSource": "Games People Play, ch. 2; TA Today, ch. 7",
+  "opener": {
+    "setting": "Tuesday, 13:00, the Halden canteen near the station. The table by the window, six tables, the rest full of people who already know each other.",
+    "lines": [
+      { "who": "Omar", "text": "“Mind if I sit here? Everyone else has got their phones out.”", "cue": "a tray of lentils and rice in one hand, a steel tumbler of tea in the other" },
+      { "who": "Omar", "text": "“Don't read anything into it.”", "cue": "not quite looking at you, then doing it" }
+    ],
+    "ask": "Can you keep Omar talking by answering from the voice he spoke to, rather than cutting him off or taking his work off his hands?"
+  },
+  "rounds": [
+    {
+      "level": "Spot",
+      "label": "Spot, round 1",
+      "intro": "<b>How this one works:</b> Omar speaks, and you pick the voice that answers so the talk keeps going. Four quick questions, then the canteen.",
+      "items": [
+        {
+          "type": "pick",
+          "who": "Omar",
+          "text": "“Build's red again. Third time since Friday, and nobody reads the logs.”",
+          "cue": "flat, eyes on his tray",
+          "options": ["The Boss", "The Pilot", "The Kid"],
+          "answer": 1,
+          "why": "He is reporting a plain fact with a history behind it, and he wants a reply about the logs. That is the Pilot talking to your Pilot, so the matched reply comes from your Pilot and goes straight back to his, and the talk keeps going.",
+          "traps": {
+            "0": "A Boss reply would be “Then it's the platform team's problem, and you can leave it there.” That is a ruling on the fact, so Omar has nothing left to say and the talk drops.",
+            "2": "A Kid reply would be “Sorry, I'm no good with the logs.” It apologises instead of answering, so the fact is left hanging on the tray."
+          },
+          "example": "A family WhatsApp group, a cousin who posts: “The bank app is down again, third time this week.”<br>“Which error does it show? Screenshot it and I'll look.” keeps the thread going. “Not my problem” ends it."
+        },
+        {
+          "type": "pick",
+          "who": "Omar",
+          "text": "“Sorry, sorry, I missed the deploy again. I'm so useless at it.”",
+          "cue": "apologising before anyone has said a word",
+          "options": ["The Boss", "The Pilot", "The Kid"],
+          "answer": 0,
+          "why": "The apology is aimed at someone who could be cross or could forgive. A Boss reply, “It happens, we'll check before we push next time,” answers from the voice he spoke to, so the talk keeps going.",
+          "traps": {
+            "1": "A Pilot reply would be “Right, the deploy's at four, let's sort it.” It is a sensible plan, but it skips the apology, so the apology hangs there and the talk stops.",
+            "2": "A Kid reply would be “Oh no, I'm rubbish at it too.” Two Kids apologising can feel close, but the reply came from a different voice than the one addressed, so it cuts the line."
+          },
+          "example": "A train platform, a young man who missed the train by seconds: “Sorry, sorry, I'm hopeless at mornings.”<br>The guard says “Happens. The next one's in six minutes,” and the line runs on."
+        },
+        {
+          "type": "pick",
+          "who": "Omar",
+          "text": "“Don't whine about the back. Take the tablets and get on with the box.”",
+          "cue": "sharp, not looking up from his phone",
+          "options": ["The Boss", "The Pilot", "The Kid"],
+          "answer": 2,
+          "why": "The order comes from the Boss and is aimed at the Kid in you. The Kid's reply, “Okay, tablets first, then the box,” is the voice that was spoken to, so the line matches and keeps running.",
+          "traps": {
+            "0": "A Boss reply, “Don't talk to me like that, Omar,” answers an order with an order from another seat. The line is cut, and the box stays where it was.",
+            "1": "A Pilot reply, “The rota has me on till four, so no,” is a sensible fact, but it comes after an order and never answers the voice the order was aimed at. The talk stops there."
+          },
+          "example": "A school gate, a mother to her son who is still in the car: “Get out, you'll be late, and take your bag.”<br>“Okay, bag, then I'm going.” is the matched reply. “Stop nagging, I'll go when I'm ready.” is the cut, because it answers from another seat."
+        },
+        {
+          "type": "pick",
+          "who": "Omar",
+          "text": "“Did the deploy notes reach you, or should I send them again?”",
+          "cue": "a real question, the tumbler turning in his hand",
+          "prompt": "Which kind of reply keeps the talk going?",
+          "options": ["A matched volley, it keeps going", "A cut, it stops the talk"],
+          "answer": 0,
+          "why": "He asks a plain question from the Pilot, and a plain Pilot answer keeps the volley alive: “Got them, thanks. Which step do you want me to check first?”",
+          "traps": {
+            "1": "A cut would be “Please don't send them again, I'm drowning in tickets.” It answers from the Kid, a different voice than the one he asked from, so the question drops and the talk goes with it."
+          },
+          "example": "A school gate, a dad at the bike rack: “Did you get the trip form, or should I sign another?”<br>“Got it, thanks, which box did it need?” keeps them talking. “Please don't ask me again” ends it."
+        }
+      ]
+    },
+    {
+      "level": "Play",
+      "label": "Play, the week in motion",
+      "intro": "<b>Now you keep it going.</b> Each line you pick is a reply. Matched replies keep the talk alive, and a matched reply can keep running for the wrong reasons too.",
+      "items": [
+        {
+          "type": "scene",
+          "title": "Tuesday, 13:00, Halden canteen, the table by the window",
+          "setting": "Omar has sat down opposite you with a tray of lentils and rice, which he has never done before. His tea is going cold in the steel tumbler.",
+          "meters": { "you": 70, "them": 50 },
+          "beats": [
+            {
+              "who": "Omar",
+              "text": "“They've moved the release to Friday. Again. I've been on the staging box since seven.”",
+              "cue": "pushing rice round the plate, not looking up",
+              "lines": [
+                { "text": "“Again? What moved, the date or the scope?”", "tag": "best", "you": 4, "them": 7, "outcome": "Omar looks up. “The scope. Which is the same thing, really. Nobody ever asks which.”", "why": "A plain question in the same voice he used gives him a fact to answer. The talk keeps going because you answered the Pilot he spoke to." },
+                { "text": "“Ugh, that's so annoying, sorry. Hope it isn't too bad.”", "tag": "ok", "you": -1, "them": -3, "outcome": "Omar nods at the rice. “Yeah. Sure.” The date is left hanging, and he has nothing to add.", "why": "The sympathy comes from the caring side of the Boss, but he spoke to the Pilot with a fact. A reply from another voice is a cut, so the line stops even though it sounds kind." },
+                { "text": "“Not your call, mate. Product decides the dates.”", "tag": "ok", "you": -2, "them": -5, "outcome": "Omar puts his fork down. “Right. Fine.” He goes back to his phone.", "why": "The Boss answers a fact with a ruling. That closes the talk, because he now has to defend the scope instead of talking about the box." }
+              ]
+            },
+            {
+              "who": "Omar",
+              "text": "“Nobody here asks how I'm doing, you know. My back's been like this since Friday.”",
+              "cue": "rubbing the small of his back under the table",
+              "lines": [
+                { "text": "“That sounds rough. Which bit hurts more, the lifting or the sitting?”", "tag": "best", "you": 4, "them": 6, "outcome": "He half laughs. “The lifting. Bending over that box is the worst bit.”", "why": "Warmth answers the caring voice he spoke to, and the question hands him a real choice. The line matches and keeps going, and the job stays with him." },
+                { "text": "“Oh, poor you. Leave the box with me, I'll take it. Go and lie down.”", "tag": "game", "you": -6, "them": 8, "outcome": "Omar's shoulders drop. “You're a lifesaver, really. I owe you one.” He carries the tray back to his desk without looking at the box again.", "why": "You took the job off him. The reply is still matched, so the chain runs on, but he is now the Kid being looked after and you are doing his work. This is a trap move, and it ends the scene here." },
+                { "text": "“Same here, my back's rubbish too.”", "tag": "ok", "you": -1, "them": 2, "outcome": "Omar nods slowly. “Yeah. Everyone's back is rubbish.” The moment is shared, and then it is gone.", "why": "He asked for care from a caring voice, and you answered from the Kid. The reply matches in feeling and cuts in voice, so he gets company rather than the care he was asking for." }
+              ]
+            },
+            {
+              "who": "Omar",
+              "text": "“Anyway. The box needs a bigger disk, and I've asked for it twice.”",
+              "cue": "back to the facts, a bit embarrassed",
+              "lines": [
+                { "text": "“What size disk do you need, and who has sat on the request?”", "tag": "best", "you": 4, "them": 5, "outcome": "Omar grins at the table. “Four hundred gig. And Daniel, obviously.”", "why": "You stayed in the Pilot and asked for the facts he needs. He is answered in his own voice, so the talk can keep running on the thing he cares about." },
+                { "text": "“Don't be embarrassed. You're allowed to moan about it.”", "tag": "ok", "you": -3, "them": -1, "outcome": "Omar looks surprised, then a bit cross. “I'm not moaning. I'm telling you the disk is small.”", "why": "You answered a fact with a parent's permission, which is a cut. He did not ask to be told how to feel, so the disk drops out of the conversation." }
+              ]
+            }
+          ],
+          "payoff": "Omar takes the tray back to his desk, a job lighter. By Thursday the staging box is yours, and so is the next one, and he has stopped sitting at your table."
+        },
+        {
+          "type": "scene",
+          "title": "Tuesday, 13:20, Halden canteen, the same table",
+          "setting": "Omar is back at the table with a second tea he has not touched. He is looking at the window, not at you, and the canteen is louder now.",
+          "meters": { "you": 70, "them": 50 },
+          "beats": [
+            {
+              "who": "Omar",
+              "text": "“You going to The Corner Table on Sunday? Don't tell anyone I asked.”",
+              "cue": "turning the tumbler round on the table",
+              "lines": [
+                { "text": "“Yeah, I'm going. Are you? Nadia says she's got a spare chair.”", "tag": "best", "you": 4, "them": 7, "outcome": "Omar snorts. “Nadia always has a spare chair. It's the only thing she's consistent about.” He almost smiles.", "why": "You answered his question with a real answer and asked one back. That gives him a next step, and he can still choose what to do with it." },
+                { "text": "“Nobody's asking you to be anything, Omar. Don't overthink it.”", "tag": "ok", "you": -2, "them": -4, "outcome": "He shrugs and picks up the tumbler. “Right. Fine.”", "why": "A ruling from the Boss answers a question he asked as the Pilot. He is told not to think about it, so the question drops and the chair stays empty." },
+                { "text": "“Same, I'm not sure I'll go either.”", "tag": "ok", "you": -1, "them": -1, "outcome": "Omar looks at you as if you had said something else. “Right. Okay.”", "why": "The Kid answers a Pilot question. You matched the mood, though the voice was wrong, so it is a cut, and his question stops in the air." }
+              ]
+            },
+            {
+              "who": "Omar",
+              "text": "“I always say I'll go, and then I sit in the car outside for twenty minutes.”",
+              "cue": "quiet, not joking",
+              "lines": [
+                { "text": "“What stops you, once you're sat in the car? Tell me the actual thing.”", "tag": "best", "you": 4, "them": 6, "outcome": "He thinks about it. “The car park, I think. Walking in when everyone already knows each other.”", "why": "You answered from the Pilot, the voice he was speaking from, and asked for the real thing. He gets room to say something true, which keeps the volley alive." },
+                { "text": "“You should just go in. Walk in and say hello to Nadia.”", "tag": "ok", "you": -2, "them": -3, "outcome": "He goes quiet. “Yeah. Maybe.” The line runs out with his hands round the cup.", "why": "Advice from the Boss is kindly meant, but it jumps past what he said. Nothing he feels has been asked about, so the talk closes." }
+              ]
+            },
+            {
+              "who": "Omar",
+              "text": "“Anyway. Release is Friday, the box is fine, and I've got a meeting at two.”",
+              "cue": "standing up with the tray, already leaving",
+              "lines": [
+                { "text": "“Go on, then. Thanks for the Sunday tip. I'll think about it.”", "tag": "best", "you": 3, "them": 5, "outcome": "Omar nods, almost warm. “Maybe see you there.” He leaves the table with the tray.", "why": "You let the volley end on a Pilot note, with a thanks and a real intention. Nothing is cut, so he leaves knowing the talk was welcome." },
+                { "text": "“Yes, Omar, you're busy. Off you go.”", "tag": "ok", "you": -2, "them": -4, "outcome": "He nods, tray in hand, and walks out without looking back at the table.", "why": "You sent him off from the Boss's chair. It does no harm, though it answers his plan with a dismissal, so the volley is cut right at the end." }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": "Analyse",
+      "label": "Analyse, explain it",
+      "items": [
+        {
+          "type": "pick",
+          "who": "You, replaying the canteen",
+          "text": "“Leave the box with me, I'll take it.” “You're a lifesaver, really.” Two lines, and the talk ran on between them.",
+          "cue": "the tea cold, the box still open on your laptop",
+          "options": ["A matched volley, it keeps going", "A cut, it stops the talk", "A nod, one warm line"],
+          "answer": 0,
+          "why": "Each reply came from the voice that was spoken to: the Kid answered the caring voice, and the caring voice answered the Kid. The chain ran on for as long as both kept their parts, even though the work and the back went unsorted.",
+          "traps": {
+            "1": "A cut needs a reply from a different voice than the one addressed. Here both lines landed in the seat they were aimed at, so nothing stopped them.",
+            "2": "A nod is one line of warmth. This was a loop of replies, and each reply set up the next one, so the one-line label misses the chain."
+          },
+          "example": "A family WhatsApp group, a mother who writes: “Leave the shopping, I'll pick it up.” Her son replies: “You're the best, Mum.”<br>Next week the bills come round the same way. Every reply was in the right seat, and the chain keeps going."
+        },
+        {
+          "type": "pick",
+          "who": "You, the next time he says it",
+          "text": "“My back's been like this since Friday.” How do you keep him talking, and leave the box with him?",
+          "cue": "you already know which answer is the easy one",
+          "options": ["A matched volley that hands the job back", "A matched volley that takes the job off him", "A cut to the deploy notes"],
+          "answer": 0,
+          "why": "A caring question and a rescue are both matched, so both keep the line going. The difference is whether the job goes back to Omar. A question about which bit hurts gives him a choice and leaves the box with him.",
+          "traps": {
+            "1": "Taking the job is matched too, which is why it feels like help. It keeps the line running, but Omar stays in the Kid's chair and you end up holding his box.",
+            "2": "A cut to the deploy notes changes the subject to work, so the back is dropped mid-sentence and nobody gets to finish saying it."
+          },
+          "example": "A shop counter, a customer who groans: “This printer's been broken all week.”<br>“Which error does it show? Read it out and we'll sort it.” keeps the job with the customer, and the line keeps going."
+        }
+      ]
+    }
+  ],
+  "debrief": {
+    "nadia": "Omar barely opened, and for a few lines the canteen became a real conversation. Matched replies kept it alive, and the best ones asked him something he could answer. The rescue was matched too, so it ran on, but it took the box off his hands and left him in the Kid's chair. A conversation that keeps going is not always one that helps.",
+    "bookTerm": "Complementary transaction",
+    "bookNote": "The books call this a complementary transaction: a reply from the voice that was spoken to, back to the voice that spoke. Berne's first rule is that while transactions stay complementary, communication can go on indefinitely."
+  },
+  "reflection": {
+    "prompt": "Think of a conversation this week that kept going longer than it should, or one you cut short. Which voice answered, and did the reply hand the other person their next step or take the job off them?"
+  },
+  "next": "3.3"
+}

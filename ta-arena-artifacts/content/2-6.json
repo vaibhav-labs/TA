@@ -1,0 +1,157 @@
+{
+  "slot": "2.6",
+  "title": "Boss: The Contaminated Adult",
+  "world": 2,
+  "worldName": "Three Voices",
+  "week": 2,
+  "weekName": "Three Voices",
+  "mechanic": "Spot-the-leak",
+  "concept": "After this one you can tell a clean Pilot line from a Boss leak or a Kid leak, and make a cut that brings a room back to facts.",
+  "plainWord": "a leak",
+  "bookTerm": "Contamination",
+  "bookIdea": "A borrowed belief or an old fear comes out in the Adult's voice as if it were a fact, and the books call this contamination of the Adult.",
+  "bookSource": "Transactional Analysis in Psychotherapy, ch. 4; TA Today, ch. 6",
+  "opener": {
+    "setting": "Sunday, 16:00, The Corner Table, the back room. Two pushed-together tables and a guest at the end.",
+    "lines": [
+      { "who": "Nadia", "text": "“Right. Should we move to a bigger room? Daniel's here to give us an outside view, so let's hear it.”", "cue": "from the end of the table, pen ready, not smiling" }
+    ],
+    "ask": "Can you tell Daniel's real thinking from his leaks, and cut the room back to the facts without starting a fight?"
+  },
+  "rounds": [
+    {
+      "level": "Spot",
+      "label": "Spot, round 1",
+      "intro": "<b>How this one works:</b> each line is either a clean Pilot line or a leak, and leaks come from the Boss or the Kid. A leak sounds like a fact, but it cannot be checked. Tap the label that fits.",
+      "items": [
+        {
+          "type": "pick",
+          "who": "Daniel",
+          "text": "“Let's be rational. Bigger room, more rent, simple maths.”",
+          "cue": "leaning forward, pen down, sure of the numbers",
+          "options": ["A clean Pilot", "A Boss leak", "A Kid leak"],
+          "answer": 1,
+          "why": "Most of this line is Pilot: a bigger room, more rent, the numbers. The leak is the word “simple”, which says the hard part does not count. “Let's be rational” is the cover for it, so the label is a Boss leak, even though most of the line is sound.",
+          "traps": {
+            "0": "A clean Pilot would be the numbers alone, such as “A bigger room costs more rent.” This line adds “simple”, which rules out what the group is for.",
+            "2": "A Kid leak would be a fear, such as “We'll never afford a bigger room.” Daniel is sure of himself, and he is using the numbers to win."
+          },
+          "example": "A family wedding WhatsApp group, an uncle: “Let's be sensible. The bigger hall costs more, so simple maths says we book the small one.”<br>Nobody asks how many people are coming, and the word simple has already decided it."
+        },
+        {
+          "type": "pick",
+          "who": "Hannah",
+          "text": "“But this room is why people feel safe enough to talk.”",
+          "cue": "steady, looking at Nadia, not at Daniel",
+          "options": ["A clean Pilot", "A Boss leak", "A Kid leak"],
+          "answer": 0,
+          "why": "A fact about what the group is for, said with nothing borrowed. It can be checked: ask people, and they will say the same. Real Pilot thinking takes it in as data.",
+          "traps": {
+            "1": "A Boss leak would dress a rule as a fact, like “The room is fine as it is, end of.” Hannah's line can be tested, so it is not a leak.",
+            "2": "A Kid leak would be a fear dressed as a fact, like “We'll never fit everyone in.” Hannah is describing why the room works, and she is calm about it."
+          },
+          "example": "A cricket club committee, a member who says: “The back gate is why the juniors keep coming.” Ask the juniors and they will tell you the same.<br>That is a fact about the club, and anyone can check it."
+        },
+        {
+          "type": "pick",
+          "who": "Daniel",
+          "text": "“Feelings aren't a business plan.”",
+          "cue": "leaning back, the tone that closes the topic. Nadia interrupts: “What just happened there?”",
+          "options": ["He made a good point", "He used a rule to win", "He asked a question"],
+          "answer": 1,
+          "why": "It sounds like reason, and it works as a rule used to close the discussion. Nobody can check it, and it rules out the feelings before anyone has looked at them. That is a Boss leak.",
+          "traps": {
+            "0": "A good point would be a fact about the money or the room. This line is only a rule about what counts.",
+            "2": "A question would invite an answer. This line ends the topic and leaves nobody room to reply."
+          },
+          "example": "A school parents' meeting, a chairman: “Parents' worries aren't a budget item.” The room goes quiet, and the agenda moves on.<br>The rule sounds sensible, and it stops the conversation."
+        },
+        {
+          "type": "pick",
+          "who": "Ruby",
+          "text": "“Nobody listens to a student anyway, so there's no point me saying anything.”",
+          "cue": "quiet, looking at her hands, the words come out fast",
+          "options": ["A clean Pilot", "A Kid leak", "A Boss leak"],
+          "answer": 1,
+          "why": "A fear decides in advance what will happen. Nobody has tested it, and it cannot be tested, because she has not spoken yet. That is a Kid leak, a feeling wearing the clothes of a fact.",
+          "traps": {
+            "0": "A clean Pilot would be checkable: “Last week my idea went into the plan.” This line says nothing about what happened, only what she expects.",
+            "2": "A Boss leak would have a rule in it, such as “Students should know their place.” Ruby is scared, and her line has no rule in it at all."
+          },
+          "example": "A train platform, a passenger who says: “The fast trains never stop here for people like me, so why bother asking?” He has not asked the guard yet.<br>The fear is doing the talking, and nobody has checked the timetable."
+        }
+      ]
+    },
+    {
+      "level": "Play",
+      "label": "Play, the week in motion",
+      "intro": "<b>Now you speak.</b> Daniel is taking the room over. Pick the line that makes a clean cut back to facts.",
+      "items": [
+        {
+          "type": "pick",
+          "who": "Daniel",
+          "text": "“Feelings aren't a business plan.”",
+          "cue": "the room has gone still, Hannah is looking at you",
+          "options": [
+            "Actually, for a drop-in group, how people feel is the business plan. That's the product.",
+            "Don't be so cold about it.",
+            "Say nothing, and let him carry on."
+          ],
+          "answer": 0,
+          "why": "This is a clean cut. It answers his rule with a fact about the group, so you stay in the Pilot and the room can think again. Daniel pauses, and the room nods.",
+          "traps": {
+            "1": "Don't be so cold about it answers a rule with a rule, Boss against Boss. The room picks sides and the status fight starts, which is the trap.",
+            "2": "Saying nothing lets him carry on as if he had won. You feel the room drop, and you keep quiet through it, which costs you more than a sharp reply would."
+          },
+          "example": "A bank branch review, a manager says: “Customer worries aren't a target.” The team lead answers with last quarter's complaint numbers, and the review goes back to the figures.<br>The cut uses facts, so nobody has to lose."
+        },
+        {
+          "type": "pick",
+          "who": "Daniel, standing up",
+          "text": "“Well, if nobody here can think about money, I'll leave you to it.”",
+          "cue": "chair scraping back, hand already on the door",
+          "options": [
+            "Money matters. Let's do the maths with the attendance data Omar just mentioned, not without it.",
+            "Fine, go then.",
+            "Please don't go, Daniel, we'd all miss you. What would make you stay?"
+          ],
+          "answer": 0,
+          "why": "You take his point seriously, then hand him a real task built on the data in the room. He stays in the Pilot, where he is useful, and he sits back down.",
+          "traps": {
+            "1": "Fine, go then. He leaves, the group deflates, and nothing is decided. The cold move gives him the exit he wanted.",
+            "2": "This sounds warm, but it is you begging him to stay. He gets the win he came for, and the trap keeps running because he now holds the room."
+          },
+          "example": "A housing society meeting, a resident stands up: “Well, if nobody here cares about the lift repairs, I'll go home.” The secretary says: “Good, let's look at the repair quote together, with the numbers you already have.”<br>He is handed a real job, and he stays."
+        }
+      ]
+    },
+    {
+      "level": "Analyse",
+      "label": "Analyse, explain it",
+      "intro": "<b>Five statements, five labels.</b> A double leak is a Boss leak and a Kid leak holding each other up in one line. A stuck voice is one voice doing all the talking, with the others shut out. Put each statement in the bin where it belongs.",
+      "items": [
+        {
+          "type": "sort",
+          "prompt": "Put each statement in its bin.",
+          "bins": ["A clean Pilot", "A Boss leak", "A Kid leak", "A double leak", "A stuck voice"],
+          "items": [
+            { "text": "Omar: “We did try a bigger room in 2019. Attendance dropped. People sat further apart.”", "answer": 0, "why": "This is checkable: a date and a result. A real memory is clean Pilot data, even when it sounds like a no. Players often mislabel it as a Kid leak, and the test is whether it can be checked." },
+            { "text": "Daniel: “Obviously money is what matters here, so let's not waste time on the feelings.”", "answer": 1, "why": "“Obviously” ends the question before anyone checks it. A borrowed rule about money is wearing the clothes of a fact, so this is a Boss leak." },
+            { "text": "Ruby: “Nobody listens to a student anyway, so there's no point me saying anything.”", "answer": 2, "why": "A fear decides in advance what will happen, and nobody has tested it. That is the Kid leak talking." },
+            { "text": "Joseph: “Groups always fall apart when they grow, and I'd only be in the way, so let's stay small.”", "answer": 3, "why": "Two leaks in one line. “Groups always fall apart when they grow” is a borrowed slogan taken as fact, which is the Boss leaking. “I'd only be in the way” is an old fear taken as fact, which is the Kid leaking. The two back each other up, so the line sounds like a conclusion." },
+            { "text": "Peter: “Don't ask how I feel about it. Give me the figures and I'll give you the answer. That's all I do, and it's all I've ever done.”", "answer": 4, "why": "Only one voice is ever switched on, the one that handles data, and the others are shut out. That is a stuck voice. A clean Pilot can use feelings and memories as data too." }
+          ]
+        }
+      ]
+    }
+  ],
+  "debrief": {
+    "nadia": "The hardest leak to catch is the one that sounds like pure reason. “Let's be rational” is often a Boss winning, and “obviously” is often a rule in disguise. Real Pilot thinking takes feelings and memories as data, while a leak uses reason to rule them out.",
+    "bookTerm": "Contamination",
+    "bookNote": "The books call a borrowed belief or an old fear passing as adult fact contamination of the Adult. Berne calls the borrowed-belief kind prejudice and the old-fear kind delusion. When both are present it is a double contamination, and a voice that is shut out altogether is called exclusion."
+  },
+  "reflection": {
+    "prompt": "Think of a word you used this week, like “obviously” or “simple”. What were you ruling out when you said it?"
+  },
+  "next": "3.1"
+}

@@ -1,0 +1,318 @@
+{
+  "slot": "1.5",
+  "title": "PTA Three Ways",
+  "world": 1,
+  "worldName": "Hunger",
+  "week": 1,
+  "weekName": "Invisible",
+  "mechanic": "Choice-story",
+  "concept": "After this one you can match the level a table is talking at, and see when a fact or a fix has got you dropped.",
+  "plainWord": "small talk",
+  "bookTerm": "Pastime",
+  "bookIdea": "A pastime is a simple chat on one shared topic that fills an interval of time and trades some nods. Berne shows one pastime running at three levels, and a newcomer who plays a different one from the group gets a cool reception.",
+  "bookSource": "Games People Play, ch. 4",
+  "opener": {
+    "setting": "Saturday, 11:00. Gran's kitchen, 1A. You came for the promised flattened rice. Two neighbours are already there.",
+    "lines": [
+      { "who": "Gran", "text": "“Sit, sit, love. The flattened rice is almost ready.”", "cue": "stirring the pan, the radio on low" },
+      { "who": "Leo", "text": "“...”", "cue": "under the table with a tablet, not looking up" }
+    ],
+    "ask": "What level is this table talking at, and which line joins it without getting you dropped?"
+  },
+  "rounds": [
+    {
+      "level": "Spot",
+      "label": "Spot, round 1",
+      "intro": "Three lines from three tables. Tap the level each one is running at.",
+      "items": [
+        {
+          "type": "pick",
+          "who": "Neighbour",
+          "text": "“Nobody says thank you any more, does anybody?”",
+          "cue": "the water tanker queue, Saturday morning",
+          "options": ["Grumbling", "Sharing", "Problem-solving"],
+          "answer": 0,
+          "why": "Grumbling. The line complains about the world and asks nobody for anything. Anyone listening can agree without risking a thing.",
+          "traps": {
+            "1": "Sharing would tell a story about the person saying it. This line only complains about how people behave now.",
+            "2": "Problem-solving would have a fix in it. There is no fix here, just a complaint everyone can agree with."
+          },
+          "example": "A bus queue in the rain.<br>“Buses are never on time these days.” “I know, it's ridiculous.”<br>Two people agree, and nobody is asked to do anything."
+        },
+        {
+          "type": "pick",
+          "who": "Neighbour",
+          "text": "“We moved here in March, and I still don't know anyone's name at the gate.”",
+          "cue": "the school gate, pick-up time",
+          "options": ["Grumbling", "Sharing", "Problem-solving"],
+          "answer": 1,
+          "why": "Sharing. She tells you something about herself, and she is looking for someone to say the same back.",
+          "traps": {
+            "0": "Grumbling would be a complaint about the school or the town. She is talking about her own loneliness at the gate.",
+            "2": "Problem-solving would offer a fix, like a group chat. She has not asked for one yet, and a fix would jump the level."
+          },
+          "example": "A tenants' meeting.<br>“I've only just moved in, and I've not met the lift man yet.”<br>Someone says, “Me neither, I'm on the third floor.” That is a share, and the room is friendlier for it."
+        },
+        {
+          "type": "pick",
+          "who": "Neighbour",
+          "text": "“Have you tried a timer on the router at night?”",
+          "cue": "the kitchen table, a laptop open",
+          "options": ["Grumbling", "Sharing", "Problem-solving"],
+          "answer": 2,
+          "why": "Problem-solving. It offers a specific fix for a specific problem. A fix can help, and it can also get you dropped if the table is not ready for it.",
+          "traps": {
+            "0": "Grumbling would be a complaint, like “the internet is always bad.” This line has a concrete fix in it.",
+            "1": "Sharing would tell something personal. A router timer is a tool, not a story about the person."
+          },
+          "example": "A family dinner.<br>“My son's always tired. Have you tried an earlier bedtime?”<br>It is a fix, and it lands well if someone asked for one."
+        }
+      ]
+    },
+    {
+      "level": "Play",
+      "label": "Play, the week in motion",
+      "intro": "Gran's table runs at a level, and the level moves. Join it at the level it's running, or you get dropped.",
+      "items": [
+        {
+          "type": "scene",
+          "title": "Saturday, 11:00, Gran's kitchen",
+          "setting": "Mrs Kale (70) and Grace (38, from 2B) are at the table. Leo (8) is under it with a tablet. Gran is at the stove.",
+          "meters": { "you": 60, "them": 50 },
+          "beats": [
+            {
+              "who": "Mrs Kale",
+              "text": "“No manners. In our time you stood up when an elder came in.” Gran: “It's the phones. Look at this one.” Grace: “And the schools don't help.”",
+              "cue": "the topic is children these days, and it's running at the grumbling level. Gran points under the table.",
+              "lines": [
+                {
+                  "text": "“My cousin's kids are the same. Nobody says thank you any more.”",
+                  "tag": "ok",
+                  "you": 0,
+                  "them": 6,
+                  "outcome": "You're in. Mrs Kale passes you the pickle.",
+                  "why": "You joined at the level that was running, and it cost you nothing. Joining at the level a table is at earns nods, and it is how a table sizes you up before anything real."
+                },
+                {
+                  "text": "“To be fair, the research says screen time matters less than…”",
+                  "tag": "ok",
+                  "you": 0,
+                  "them": -7,
+                  "outcome": "Silence. Mrs Kale: “Research.” Gran changes the subject to the water tanker.",
+                  "why": "You brought a fact to a grumble. The table was at one level, you stepped up to another, and the talk moved on without you."
+                },
+                {
+                  "text": "“Leo, what are you playing?”",
+                  "tag": "best",
+                  "you": 0,
+                  "them": -2,
+                  "outcome": "The adults barely look up, but Leo does. “Clash. You want to see my base?”",
+                  "why": "The one person at the table who wasn't grumbling looked up. A question about his world, not about theirs, got the only real answer in the room.",
+                  "flags": ["leo_base"]
+                }
+              ]
+            },
+            {
+              "who": "Grace",
+              "text": "“I don't know if I'm doing this right. Ethan won't talk to me any more.”",
+              "cue": "quieter. The table changes temperature. Gran puts a hand on her arm.",
+              "lines": [
+                {
+                  "text": "“What's he like when he does talk?”",
+                  "tag": "best",
+                  "you": 2,
+                  "them": 8,
+                  "outcome": "Grace actually answers. She tells you about the cricket, and the sulking after it.",
+                  "why": "A question about her son, not about the topic, moves the talk to a real level. She answers because you asked about him."
+                },
+                {
+                  "text": "“They all go through that phase.”",
+                  "tag": "ok",
+                  "you": 0,
+                  "them": 2,
+                  "outcome": "Mrs Kale agrees, and the moment closes.",
+                  "why": "A reassurance that asks nothing back is small talk again. It is kind, and it shuts the door on her."
+                },
+                {
+                  "text": "“Have you tried taking the phone away at dinner?”",
+                  "tag": "ok",
+                  "you": -3,
+                  "them": -4,
+                  "outcome": "“Yes.” Flat. Grace looks at her plate.",
+                  "why": "Nobody asked for advice, and advice lands as a fix. She had already tried it, so now she is the one who got it wrong.",
+                  "flags": ["advised_grace"]
+                }
+              ]
+            },
+            {
+              "who": "Leo",
+              "text": "“Gran, my stomach hurts.”",
+              "cue": "from under the table, eyes on Gran's face. Gran is already on her feet.",
+              "lines": [
+                {
+                  "text": "“Leo, where does it hurt? Show me.”",
+                  "tag": "best",
+                  "you": 2,
+                  "them": 6,
+                  "outcome": "“My tummy. Here.” He points, then checks Gran's face to see whether it's working.",
+                  "why": "Asking where it hurts treats the ache as a real question. It also shows you what he is watching for, and that is the first thing to notice."
+                },
+                {
+                  "text": "Say nothing and watch.",
+                  "tag": "ok",
+                  "you": -3,
+                  "them": 0,
+                  "outcome": "“Oh! Come, lie down, I'll make you a herbal drink.” Grace, dryly: “He said that at our place too, right when the homework came out.” Gran: “Don't say that, he's a child.”",
+                  "why": "Watching is fine, and it is what the table does. Nothing you say changes what happens next, so the pattern shows without anyone calling it out."
+                },
+                {
+                  "text": "“You're fine, Leo. Finish your food.”",
+                  "tag": "ok",
+                  "you": -2,
+                  "them": -5,
+                  "outcome": "His face shuts. Gran frowns at you. “Don't be hard on the child.”",
+                  "why": "Telling a child he is fine, when he has just said he hurts, closes the door on him. It is a cold move, and Gran sees it."
+                }
+              ]
+            }
+          ],
+          "example": "A school parents' group.<br>“My son says his head hurts before every test.”<br>Half the group offers tea. The other half asks which test it is."
+        },
+        {
+          "type": "scene",
+          "title": "Saturday, 12:10, the table changes gear",
+          "setting": "Gran's kitchen again, an hour on. The grumbling has run out. Mrs Kale's phone is on the table and Grace has her laptop open. Leo has stopped listening. The You meter starts at 60.",
+          "meters": { "you": 60, "them": 50 },
+          "beats": [
+            {
+              "who": "Mrs Kale",
+              "text": "“It dies by lunchtime, and I charge it all night.” Gran: “Try the other cable.” Grace: “Mine did that. It was the cable.”",
+              "cue": "12:10. The talk has turned to fixing things, and every line is a fix.",
+              "lines": [
+                {
+                  "text": "“Does it get hot while it charges?”",
+                  "tag": "best",
+                  "you": 2,
+                  "them": 6,
+                  "outcome": "“Boiling,” says Mrs Kale. Grace points at her. “That's the battery.”",
+                  "why": "A question aimed at the fix keeps you at the level the table is on. You are in, and you have added something."
+                },
+                {
+                  "text": "“Mine nearly died last week. I was so cross.”",
+                  "tag": "ok",
+                  "you": -2,
+                  "them": -3,
+                  "outcome": "“Hm,” says Mrs Kale, and Grace asks Gran about the cable again. The talk steps round you.",
+                  "why": "You brought a feeling to a table that was trading fixes. Nobody minded, and nobody picked it up."
+                },
+                {
+                  "text": "“Nothing lasts these days.”",
+                  "tag": "ok",
+                  "you": -1,
+                  "them": -2,
+                  "outcome": "“Mm,” says Mrs Kale. Gran holds up the other cable.",
+                  "why": "A grumble is the level the table has just left. It is polite, and it goes nowhere."
+                }
+              ]
+            },
+            {
+              "who": "Grace",
+              "text": "“You work with computers, don't you? What would you do?”",
+              "cue": "she turns her laptop round so you can see the screen",
+              "lines": [
+                {
+                  "text": "“Get the battery tested at the shop. I can look at her settings after lunch, if you like.”",
+                  "tag": "best",
+                  "you": 4,
+                  "them": 6,
+                  "outcome": "“Would you?” Mrs Kale slides the phone an inch towards you.",
+                  "why": "She asked for a fact, so the fact is welcome. You answered at the size of the question and offered one more step."
+                },
+                {
+                  "text": "“Well, those cells wear out after a few hundred charges, and fast chargers make it worse, depending on the chemistry in the cell, which varies by maker...”",
+                  "tag": "ok",
+                  "you": -2,
+                  "them": -5,
+                  "outcome": "Gran tops up Mrs Kale's cup. Grace's eyes drift to the window.",
+                  "why": "You were asked, and you gave far more than the table wanted. The facts were right and the size was wrong."
+                },
+                {
+                  "text": "“Oh, I'm no expert.”",
+                  "tag": "ok",
+                  "you": -3,
+                  "them": -2,
+                  "outcome": "“Don't be silly,” says Grace, and turns the laptop back round.",
+                  "why": "Waving off a nod for what you know costs you twice. Grace asked to be kind, and she is the one who feels turned down."
+                }
+              ]
+            },
+            {
+              "who": "Mrs Kale",
+              "text": "“It was my husband's phone first. I can't bring myself to change it.”",
+              "cue": "quieter. Gran's hand goes to her sleeve, and Grace shuts the laptop.",
+              "lines": [
+                {
+                  "text": "“That's a good reason to keep it.”",
+                  "tag": "best",
+                  "you": 3,
+                  "them": 8,
+                  "outcome": "“Isn't it,” she says. For the first time all morning she sits back.",
+                  "why": "The table has dropped to a personal level, and you went down with it. A plain, warm line is all it needed."
+                },
+                {
+                  "text": "“You could move everything to a new phone. It only takes ten minutes.”",
+                  "tag": "ok",
+                  "you": -3,
+                  "them": -5,
+                  "outcome": "“I know how it works,” says Mrs Kale. Gran gives you a look.",
+                  "why": "You answered a feeling with a fix. The talk had moved to another level, and you stayed behind on the old one."
+                },
+                {
+                  "text": "“Shall I get the biscuits?”",
+                  "tag": "ok",
+                  "you": -3,
+                  "them": -1,
+                  "outcome": "“Not now, love,” says Gran. The silence is waiting for someone, and it is not the biscuits.",
+                  "why": "Leaving the table the moment it turns real costs you a nod you could have given. It is a quiet way of stepping out."
+                }
+              ]
+            }
+          ],
+          "example": "A neighbours' group chat.<br>“My router keeps dropping.” “Move it off the floor.” “That worked for me.”<br>Everyone is trading fixes. A long sad story dropped in here would stop the chat."
+        }
+      ]
+    },
+    {
+      "level": "Analyse",
+      "label": "Analyse, explain it",
+      "items": [
+        {
+          "type": "pick",
+          "who": "You",
+          "text": "Mrs Kale's table was grumbling. Why did the research line get you dropped?",
+          "options": [
+            "You brought a fact up to a level the table wasn't at, so the talk moved on without you",
+            "The research was wrong, and everyone at the table knew it",
+            "Mrs Kale doesn't like anyone who talks about screens"
+          ],
+          "answer": 0,
+          "why": "Small talk runs in levels, and a table moves at one of them. A fact pushed into a grumble changes the level, and nobody at the table asked for that.",
+          "traps": {
+            "1": "Calling the research wrong would sound like a correction, and a correction is just another level change. Nobody at the table had asked whether it was right.",
+            "2": "Mrs Kale's taste in topics is not the reason. The whole table was grumbling, and you stepped out of it."
+          },
+          "example": "A group of parents at the school gate.<br>“Homework's too much these days.” “Ugh, tell me about it.”<br>Someone says, “The data says kids sleep less,” and the chat turns to the rain."
+        }
+      ]
+    }
+  ],
+  "debrief": {
+    "nadia": "Every table has a level, such as grumbling or problem-solving. You join at the level that's running, or you get dropped. Small talk is also how people size each other up before anything real gets said.",
+    "bookTerm": "Pastime",
+    "bookNote": "The books call this a pastime: a simple chat on one shared topic that fills an interval of time and trades some nods. Berne shows one pastime played at three levels, notes that a newcomer who plays a different one gets a cool reception, and says people use pastimes to size each other up."
+  },
+  "reflection": {
+    "prompt": "Think about a group you joined recently. Did you join at the level it was running, or did you jump to a different one?"
+  },
+  "next": "1.6"
+}
