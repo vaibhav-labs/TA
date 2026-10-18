@@ -82,7 +82,6 @@ export function Callout({ children, label = "Read" }: PropsWithChildren<{ label?
           <span className="text-[11px] font-mono uppercase tracking-widest font-black text-ta-yellow bg-ta-yellow/15 px-2 py-0.5 rounded border border-ta-yellow/30">
             {label === "Why" ? "Psychological Analysis" : label}
           </span>
-          <span className="text-xs text-slate-400">&bull; Berne's Rule</span>
         </div>
         <div className="text-[15px] leading-relaxed text-slate-200 mt-1 font-normal">
           {children}

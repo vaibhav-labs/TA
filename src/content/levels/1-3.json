@@ -80,7 +80,7 @@
         },
         {
           "type": "text",
-          "label": "In under 50 words: why does TA Today say ritual participants 'keep a close count' of strokes, and what does that explain about why Dev's one-word \"Hey\" landed as a snub?",
+          "label": "In under 50 words: why do ritual participants 'keep a close count' of strokes, and what does that explain about why Dev's one-word \"Hey\" landed as a snub?",
           "maxWords": 50,
           "rubric": ["ritual", "precise", "stroke count", "predictable", "scaled", "deprivation"]
         }

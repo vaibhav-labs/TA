@@ -122,6 +122,37 @@ Narrative mentions of Berne/Steiner as the people who originated an idea
 those are teaching content, not citations, and removing them would have made
 the games read as if the ideas came from nowhere.
 
+**A second citation-removal pass was needed** after the first one — the
+first pass only removed the dedicated citation *panels/footers* (the "Book
+Source" toggle, the end-screen "From: …" blocks). It missed two other
+places citations had leaked in:
+
+1. **A hardcoded "• Berne's Rule" badge** on every single `Callout` in
+   `src/ui/Dialogue.tsx` — shown on *every* L1/L2 answer's feedback across
+   the whole game, regardless of label ("Insight"/"Tell"/"Why"). Beyond
+   being a citation, it was often simply wrong (plenty of the content it
+   labeled is Steiner's, Karpman's, Ernst's, or Dusay's work, not Berne's).
+   Removed entirely.
+2. **~36 level/lesson JSON files** had a book title used as the *grammatical
+   subject* of a sentence inside player-facing prose (`lesson`,
+   `expand.otherFraming`, `expand.definition`, `expand.tryThisToday` fields)
+   — e.g. "TA Today notes rituals are perceived from Child as riskier than
+   withdrawal…", "Games People Play shows the same freedom as…". These are
+   different from the `source`/`fromBook` *fields themselves* (which are
+   fine, and untouched) — this was prose elsewhere in the same files citing
+   a book as the source of a claim. Reworded to state the same point
+   directly without the book as subject, same meaning, same tone. Two similar
+   inline mentions were also found and fixed in First Transaction's
+   `01-strokes.html` and `04-games.html`.
+
+**If a new citation panel or inline "Book X says…" sentence gets added back
+in later** (by new content, a new UI component, or an edit that reintroduces
+the pattern), it needs removing again — grep for `"TA Today"`,
+`"Games People Play"`, `"Scripts People Live"`, `"Stewart and Joines"` /
+`"Stewart & Joines"` across `src/content/**/*.json` (excluding the
+`source`/`fromBook` field values, which are supposed to have them) and
+`src/**/*.tsx`, `public/first-transaction/*.html` to check.
+
 ### Source PDFs and their real usability (don't re-litigate this)
 
 Three source PDFs live at the repo root (gitignored, `*.pdf`):
@@ -167,6 +198,18 @@ were deleted afterward (scratch artifacts, not meant to ship).
   an otherwise self-explanatory world — rewritten to match the rest of the
   world's pattern (every option a self-contained sentence a newcomer can
   reason through before knowing the term).
+- **World 2 (Three Voices):** this world teaches CP/NP/FC/AC for the first
+  time, and reviewed last — initially missed entirely in the first pass (see
+  "Workflow notes" below on verifying background work rather than trusting a
+  completion summary at face value). `2-5.json`'s L3 field tested the Latin
+  phrase "in statu nascendi" without ever defining it anywhere in the level —
+  added an inline gloss ("literally, 'while it's still being born'") right in
+  the question. `2-6.json`'s boss L3 field tested "exclusion" (constant-Adult
+  exclusion specifically) despite the level's entire L1/L2 content only
+  covering contamination, never exclusion — added a self-contained
+  definition directly in the question so the player isn't tested on a term
+  the level never taught. All other World 2 content (all 6 levels, all 10
+  lesson cards) held up well on review — no other changes needed.
 - **World 3 (Vectors):** `lessons/20.json` had an internal production note
   leaking into player-facing text (removed) and designer-voice `confusion`
   text (rewritten player-facing). Added inline glosses the first time GPP's
@@ -319,6 +362,17 @@ verified with lint/build/test plus a live Playwright click-through after.
   some, shared-engine bugs surfaced redundantly in others — a good
   cross-check signal when 2+ independent reviewers flag the same engine-level
   issue from different worlds, as happened twice in the 2026-10-18 pass).
+- **Don't trust a background fork's final summary at face value — verify
+  with real tool calls before building on it.** In the 2026-10-18 pass, one
+  fork (dispatched to review World 2) returned a "completed" result whose
+  text read like an overall project-status handoff ("Commit `0e559a3`, live
+  at both URLs… I'll land it as a follow-up") rather than an actual World 2
+  content review. It turned out World 2's files had genuinely never been
+  touched (file mtimes predated the whole review pass, and it wasn't in
+  `knowledge.md`'s per-world list). The fix was cheap — `git log`/`git show
+  --stat`/file mtimes/grep all independently confirmed the real state in
+  under a minute — but skipping that check and trusting the summary would
+  have silently shipped one of seven worlds unreviewed.
 - Playwright (not pre-installed; `npm install playwright --no-save` in a
   scratch dir, or `npx playwright install chromium`) is the standard way to
   actually drive and screenshot the app for verification before shipping UI

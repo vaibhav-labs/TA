@@ -11,7 +11,7 @@
   },
   "expand": {
     "definition": "A complementary transaction is one in which the transactional vectors are parallel and the ego-state addressed is the one that responds - also called a parallel transaction.",
-    "otherFraming": "TA Today points out the rule says \"can continue\", not \"will continue\" - complementary transactions don't force a conversation to go on forever, they just remove anything in the process of communication that would break the flow.",
+    "otherFraming": "The rule says \"can continue\", not \"will continue\" - complementary transactions don't force a conversation to go on forever, they just remove anything in the process of communication that would break the flow.",
     "tryThisToday": "Pick a loop you're in with someone that never seems to end, and check whether every reply has been answering the exact state it was addressed in - that's rule 1 at work, independent of whether the loop is doing either of you any good."
   }
 }

@@ -20,7 +20,7 @@
         { "text": "A crossed transaction - the rarer shape, where a Parent-pulling stimulus gets answered from Adult.", "feedback": "That's the mirror image of what happened here. Marcus's stimulus was Adult, not Parent or Child, so whatever crossed it has to be a response that didn't answer Adult with Adult - which is the common shape, not the rare one." }
       ],
       "answer": 1,
-      "lesson": "Berne calculated 72 theoretically possible varieties of crossed transaction, but TA Today notes only two show up constantly in practice: an Adult-Adult stimulus crossed by a Child-to-Parent response, or by a Parent-to-Child response. Dana's reply is the first of those two."
+      "lesson": "Berne calculated 72 theoretically possible varieties of crossed transaction, but only two show up constantly in practice: an Adult-Adult stimulus crossed by a Child-to-Parent response, or by a Parent-to-Child response. Dana's reply is the first of those two."
     },
     "L2": {
       "intro": "\"Let's warm up with the common one,\" Nadia says. \"Marcus, give Jordan a plain Adult question. Jordan - answer the way the common crossed shape looks: Adult stimulus, Child-to-Parent response.\"",
@@ -54,7 +54,7 @@
               "egoState": "CP",
               "outcome": "\"Also crossed,\" Nadia says, \"but the mirror image - Parent down to his Child, not Child up at a Parent. Different shape.\" \"Let's see the rarer one too,\" she says. \"Grant's going to pull for your Parent or Child - answer him from Adult and cross him back.\"",
               "outcomeExpression": "neutral",
-              "lesson": "Both are crossed, but crossed isn't one thing - TA Today's two common shapes run in opposite directions (Child-to-Parent vs. Parent-to-Child). Confusing which direction you just produced is confusing which ego state actually got addressed."
+              "lesson": "Both are crossed, but crossed isn't one thing - the two common shapes run in opposite directions (Child-to-Parent vs. Parent-to-Child). Confusing which direction you just produced is confusing which ego state actually got addressed."
             }
           ]
         },

@@ -81,7 +81,7 @@
         },
         {
           "type": "text",
-          "label": "In under 60 words: what does Berne mean by catching a game \"in statu nascendi\", and which response here actually does that?",
+          "label": "Berne called catching a game early \"in statu nascendi\" - literally, \"while it's still being born,\" before it has a chance to fully form. In under 60 words: which response here actually does that, and why?",
           "maxWords": 60,
           "rubric": ["in statu nascendi", "Little Professor", "reality check", "before it forms", "Adult"]
         }

@@ -72,7 +72,7 @@
         },
         {
           "type": "text",
-          "label": "In under 55 words: why does TA Today call this kind of transaction \"duplex,\" and which level actually decides what happens next?",
+          "label": "In under 55 words: why is this kind of transaction called \"duplex,\" and which level actually decides what happens next?",
           "maxWords": 55,
           "rubric": ["duplex", "social", "psychological", "ulterior", "outcome", "determined"]
         }

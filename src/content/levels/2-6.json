@@ -164,7 +164,7 @@
         },
         {
           "type": "text",
-          "label": "In under 60 words: Victor presents everything as flat, confident fact and never once says \"I could be wrong\" or asks a real question back. If someone always sounds like pure Adult but it's actually contaminated, which exclusion pattern does that counterfeit, and why is it dangerous?",
+          "label": "There's a real pattern called \"constant Adult exclusion\" - someone who's genuinely shut the door on Parent and Child and runs on Adult alone, no feelings, no inherited rules, just cold processing. In under 60 words: Victor presents everything as flat, confident fact and never once says \"I could be wrong\" or asks a real question back - but he's contaminated, not excluded. Why is a contaminated Adult that successfully imitates constant-Adult exclusion more dangerous than the real thing?",
           "maxWords": 60,
           "rubric": ["constant Adult", "exclusion", "counterfeit", "reality-testing", "contamination", "mistaken for"]
         }
