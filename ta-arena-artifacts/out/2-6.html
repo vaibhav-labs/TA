@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Boss: The Contaminated Adult · TA Arena</title>
+<title>Boss: The Contaminated Adult · You</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
@@ -271,14 +271,52 @@
   button.sfx { font-family: "IBM Plex Mono", monospace; font-size: 11px; font-weight: 600; letter-spacing: 0.06em; color: var(--on-bg-dim); background: transparent; border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 999px; padding: 4px 10px; min-height: 28px; cursor: pointer; }
   button.sfx:hover { color: var(--wc); border-color: var(--wc); }
   .masthead .right { display: flex; align-items: center; gap: 12px; }
+  :root {
+    --i-check: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Ccircle cx=%2212%22 cy=%2212%22 r=%229%22/%3E%3Cpath d=%22m8 12 3 3 5-6%22/%3E%3C/svg%3E");
+    --i-cross: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Ccircle cx=%2212%22 cy=%2212%22 r=%229%22/%3E%3Cpath d=%22m9 9 6 6M15 9l-6 6%22/%3E%3C/svg%3E");
+    --i-bolt: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M13 2 4 14h7l-1 8 9-12h-7z%22/%3E%3C/svg%3E");
+    --i-eye: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z%22/%3E%3Ccircle cx=%2212%22 cy=%2212%22 r=%223%22/%3E%3C/svg%3E");
+    --i-play: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M7 4v16l13-8z%22/%3E%3C/svg%3E");
+    --i-search: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Ccircle cx=%2211%22 cy=%2211%22 r=%227%22/%3E%3Cpath d=%22m20 20-4-4%22/%3E%3C/svg%3E");
+    --i-trophy: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M8 4h8v5a4 4 0 0 1-8 0zM8 6H4v1a3 3 0 0 0 4 3M16 6h4v1a3 3 0 0 1-4 3M12 13v4M8 21h8M10 17h4%22/%3E%3C/svg%3E");
+    --i-pencil: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M4 20l1-4L16 5l3 3L8 19z%22/%3E%3C/svg%3E");
+    --i-book: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M4 5a2 2 0 0 1 2-2h13v14H6a2 2 0 0 0-2 2zM4 19a2 2 0 0 0 2 2h13v-4%22/%3E%3C/svg%3E");
+    --i-help: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Ccircle cx=%2212%22 cy=%2212%22 r=%229%22/%3E%3Cpath d=%22M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.7.4-1 .9-1 1.7M12 17h.01%22/%3E%3C/svg%3E");
+    --i-crown: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M3 8l4 4 5-7 5 7 4-4-2 11H5z%22/%3E%3C/svg%3E");
+    --i-lock: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Crect x=%225%22 y=%2211%22 width=%2214%22 height=%229%22 rx=%222%22/%3E%3Cpath d=%22M8 11V8a4 4 0 0 1 8 0v3%22/%3E%3C/svg%3E");
+    --i-home: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M3 11l9-8 9 8M5 10v10h14V10%22/%3E%3C/svg%3E");
+    --i-speaker: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M4 9v6h4l5 4V5L8 9zM16 9a4 4 0 0 1 0 6%22/%3E%3C/svg%3E");
+    --i-spark: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M12 3l2 6 6 2-6 2-2 6-2-6-6-2 6-2z%22/%3E%3C/svg%3E");
+    --i-flag: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M5 21V4M5 4h11l-2 4 2 4H5%22/%3E%3C/svg%3E");
+  }
+
+  /* Line icons (CSS masks) */
+  .stamp::before, .ex-label::before, .end-badge::before, .reflect-tag::before, .source b::before, .ask .kicker::before,
+  .round-label::before, .boss-tag::before, .state::before, a.tag::before, button.sfx::before {
+    content: ""; display: inline-block; width: 1.2em; height: 1.2em; margin-right: 0.4em; vertical-align: -0.24em;
+    background: currentColor; -webkit-mask: var(--ic) center / contain no-repeat; mask: var(--ic) center / contain no-repeat; }
+  .stamp::before { margin-right: 0; width: 1.3em; height: 1.3em; vertical-align: middle; }
+  .stamp.ok { --ic: var(--i-check); } .stamp.cross { --ic: var(--i-cross); } .stamp.amber { --ic: var(--i-help); }
+  .ex-label { --ic: var(--i-spark); } .end-badge { --ic: var(--i-trophy); } .reflect-tag { --ic: var(--i-pencil); }
+  .source b { --ic: var(--i-book); } .ask .kicker { --ic: var(--i-help); } .boss-tag { --ic: var(--i-crown); }
+  .state { --ic: var(--i-lock); } a.tag { --ic: var(--i-home); } button.sfx { --ic: var(--i-speaker); }
+  .round-label { --ic: var(--i-help); }
+  .round-label[data-lv="spot"] { --ic: var(--i-eye); } .round-label[data-lv="play"] { --ic: var(--i-play); }
+  .round-label[data-lv="analyse"] { --ic: var(--i-search); } .round-label[data-lv="debrief"] { --ic: var(--i-spark); }
+  .boss-tag::before, .state::before { width: 1.1em; height: 1.1em; margin-right: 0.3em; }
+  .emb { display: block; width: 100%; height: 100%; overflow: visible; }
+  .emb-wrap { display: block; flex: none; width: 46px; height: 46px; filter: drop-shadow(0 0 10px color-mix(in srgb, var(--wc) 45%, transparent)); }
+  .series .emb-wrap { display: inline-block; width: 24px; height: 24px; vertical-align: -7px; margin-right: 8px; filter: none; }
+  .case-no .emb-wrap { margin: 0 0 8px auto; }
+  .end-emblem { width: 64px; height: 64px; margin: 0 0 12px; filter: drop-shadow(0 0 14px color-mix(in srgb, var(--wc) 55%, transparent)); }
 </style>
 </head>
 <body>
 
 <div class="stage">
   <div class="masthead">
-    <div class="series" id="series">TA Arena</div>
-    <div class="right"><button type="button" class="sfx" id="sfx" aria-pressed="true">SFX ON</button><a class="tag" id="hubLink" href="#" hidden>← All games</a></div>
+    <div class="series" id="series">You</div>
+    <div class="right"><button type="button" class="sfx" id="sfx" aria-pressed="true" aria-label="Sound">SFX ON</button><a class="tag" id="hubLink" href="#" hidden>All games</a></div>
   </div>
   <main class="card" id="card" tabindex="-1">
     <p class="deck">Loading the game.</p>
@@ -286,6 +324,7 @@
   </main>
 </div>
 
+<script>window.TA_EMB = {"1": "<svg class=\"emb\" viewBox=\"0 0 36 36\" aria-hidden=\"true\" focusable=\"false\"><linearGradient id=\"w1g\" x1=\"0%\" y1=\"0%\" x2=\"100%\" y2=\"100%\"><stop offset=\"0%\" stop-color=\"#FFA000\"/><stop offset=\"100%\" stop-color=\"#FF3D00\"/></linearGradient><g stroke=\"url(#w1g)\" stroke-width=\"3\" stroke-linecap=\"round\"><line x1=\"8\" y1=\"8\" x2=\"8\" y2=\"28\"/><line x1=\"14\" y1=\"8\" x2=\"14\" y2=\"28\"/><line x1=\"20\" y1=\"8\" x2=\"20\" y2=\"28\"/><line x1=\"26\" y1=\"8\" x2=\"26\" y2=\"28\"/></g><line x1=\"4\" y1=\"24\" x2=\"30\" y2=\"12\" stroke=\"#FFFC00\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><circle cx=\"31\" cy=\"11\" r=\"2.5\" fill=\"#FFFC00\"/></svg>", "2": "<svg class=\"emb\" viewBox=\"0 0 36 36\" aria-hidden=\"true\" focusable=\"false\"><line x1=\"18\" y1=\"6\" x2=\"18\" y2=\"30\" stroke=\"rgba(255,255,255,0.3)\" stroke-width=\"2\" stroke-dasharray=\"2 2\"/><circle cx=\"18\" cy=\"8\" r=\"4.5\" fill=\"#F43F5E\" stroke=\"#fff\" stroke-width=\"1.5\"/><circle cx=\"18\" cy=\"18\" r=\"6\" fill=\"#06B6D4\" stroke=\"#FFFC00\" stroke-width=\"2\"/><circle cx=\"18\" cy=\"28\" r=\"4.5\" fill=\"#F59E0B\" stroke=\"#fff\" stroke-width=\"1.5\"/></svg>", "3": "<svg class=\"emb\" viewBox=\"0 0 36 36\" aria-hidden=\"true\" focusable=\"false\"><linearGradient id=\"w3a\" x1=\"0%\" y1=\"0%\" x2=\"100%\" y2=\"100%\"><stop offset=\"0%\" stop-color=\"#C084FC\"/><stop offset=\"100%\" stop-color=\"#9333EA\"/></linearGradient><linearGradient id=\"w3b\" x1=\"100%\" y1=\"0%\" x2=\"0%\" y2=\"100%\"><stop offset=\"0%\" stop-color=\"#FFFC00\"/><stop offset=\"100%\" stop-color=\"#F59E0B\"/></linearGradient><line x1=\"6\" y1=\"6\" x2=\"30\" y2=\"30\" stroke=\"url(#w3a)\" stroke-width=\"3.2\" stroke-linecap=\"round\"/><line x1=\"30\" y1=\"6\" x2=\"6\" y2=\"30\" stroke=\"url(#w3b)\" stroke-width=\"3.2\" stroke-linecap=\"round\"/><polygon points=\"30,30 24,29 29,24\" fill=\"#C084FC\"/><polygon points=\"6,30 12,29 7,24\" fill=\"#FFFC00\"/><circle cx=\"18\" cy=\"18\" r=\"3\" fill=\"#fff\"/><circle cx=\"18\" cy=\"18\" r=\"6\" fill=\"none\" stroke=\"#FFFC00\" stroke-width=\"1.2\" opacity=\"0.8\"/></svg>", "4": "<svg class=\"emb\" viewBox=\"0 0 36 36\" aria-hidden=\"true\" focusable=\"false\"><linearGradient id=\"w4g\" x1=\"0%\" y1=\"0%\" x2=\"100%\" y2=\"100%\"><stop offset=\"0%\" stop-color=\"#FB7185\"/><stop offset=\"100%\" stop-color=\"#E11D48\"/></linearGradient><path d=\"M18 9 C13 7 7 7 4 8 L4 26 C8 25 13 25 18 28 C23 25 28 25 32 26 L32 8 C29 7 23 7 18 9 Z\" fill=\"url(#w4g)\" stroke=\"#fff\" stroke-width=\"1.5\"/><line x1=\"18\" y1=\"9\" x2=\"18\" y2=\"28\" stroke=\"#FFE4E6\" stroke-width=\"2\"/><polygon points=\"18,14 14,21 22,21\" fill=\"#FFFC00\" stroke=\"#000\" stroke-width=\"1\"/></svg>", "5": "<svg class=\"emb\" viewBox=\"0 0 36 36\" aria-hidden=\"true\" focusable=\"false\"><linearGradient id=\"w5g\" x1=\"0%\" y1=\"0%\" x2=\"0%\" y2=\"100%\"><stop offset=\"0%\" stop-color=\"#FFFFFF\"/><stop offset=\"40%\" stop-color=\"#67E8F9\"/><stop offset=\"100%\" stop-color=\"#0E7490\"/></linearGradient><line x1=\"3\" y1=\"13\" x2=\"33\" y2=\"13\" stroke=\"#22D3EE\" stroke-width=\"2\" stroke-dasharray=\"3 1\"/><polygon points=\"18,6 23,13 13,13\" fill=\"#fff\" stroke=\"#67E8F9\" stroke-width=\"1.2\"/><polygon points=\"13,13 23,13 27,29 9,29\" fill=\"url(#w5g)\" stroke=\"#0891B2\" stroke-width=\"1.5\"/><path d=\"M12 32 Q18 35 24 32\" stroke=\"#06B6D4\" stroke-width=\"1.5\" fill=\"none\" opacity=\"0.6\" stroke-linecap=\"round\"/></svg>", "6": "<svg class=\"emb\" viewBox=\"0 0 36 36\" aria-hidden=\"true\" focusable=\"false\"><linearGradient id=\"w6g\" x1=\"0%\" y1=\"0%\" x2=\"100%\" y2=\"100%\"><stop offset=\"0%\" stop-color=\"#34D399\"/><stop offset=\"100%\" stop-color=\"#059669\"/></linearGradient><circle cx=\"18\" cy=\"6\" r=\"3.5\" fill=\"#FFFC00\" stroke=\"#fff\" stroke-width=\"1\"/><path d=\"M18 9.5 V16 M18 16 L9 26 M18 16 L27 26\" stroke=\"#34D399\" stroke-width=\"2.5\" stroke-linecap=\"round\" fill=\"none\"/><circle cx=\"9\" cy=\"27\" r=\"4\" fill=\"url(#w6g)\" stroke=\"#fff\" stroke-width=\"1.2\"/><circle cx=\"27\" cy=\"27\" r=\"4\" fill=\"url(#w6g)\" stroke=\"#fff\" stroke-width=\"1.2\"/><line x1=\"12.5\" y1=\"24\" x2=\"23.5\" y2=\"24\" stroke=\"#FFFC00\" stroke-width=\"1.5\" stroke-dasharray=\"2 2\"/></svg>", "7": "<svg class=\"emb\" viewBox=\"0 0 36 36\" aria-hidden=\"true\" focusable=\"false\"><radialGradient id=\"w7g\" cx=\"50%\" cy=\"100%\" r=\"80%\"><stop offset=\"0%\" stop-color=\"#FFFC00\"/><stop offset=\"60%\" stop-color=\"#F59E0B\"/><stop offset=\"100%\" stop-color=\"#D97706\"/></radialGradient><path d=\"M7 23 A11 11 0 0 1 29 23 Z\" fill=\"url(#w7g)\" stroke=\"#FFFC00\" stroke-width=\"1.5\"/><line x1=\"3\" y1=\"23\" x2=\"33\" y2=\"23\" stroke=\"#FDE68A\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><g stroke=\"#FFFC00\" stroke-width=\"2.5\" stroke-linecap=\"round\"><line x1=\"18\" y1=\"5\" x2=\"18\" y2=\"9\"/><line x1=\"8\" y1=\"9\" x2=\"11\" y2=\"12\"/><line x1=\"28\" y1=\"9\" x2=\"25\" y2=\"12\"/><line x1=\"31\" y1=\"17\" x2=\"27\" y2=\"18\"/><line x1=\"5\" y1=\"17\" x2=\"9\" y2=\"18\"/></g></svg>"};</script>
 <script>window.TA_GAME = {"slot":"2.6","title":"Boss: The Contaminated Adult","world":2,"worldName":"Three Voices","week":2,"weekName":"Three Voices","mechanic":"Spot-the-leak","concept":"After this one you can tell a clean Pilot line from a Boss leak or a Kid leak, and make a cut that brings a room back to facts.","plainWord":"a leak","bookTerm":"Contamination","bookIdea":"A borrowed belief or an old fear comes out in the Adult's voice as if it were a fact, and the books call this contamination of the Adult.","bookSource":"Transactional Analysis in Psychotherapy, ch. 4; TA Today, ch. 6","opener":{"setting":"Sunday, 16:00, The Corner Table, the back room. Two pushed-together tables and a guest at the end.","lines":[{"who":"Nadia","text":"\u201cRight. Should we move to a bigger room? Daniel's here to give us an outside view, so let's hear it.\u201d","cue":"from the end of the table, pen ready, not smiling"}],"ask":"Can you tell Daniel's real thinking from his leaks, and cut the room back to the facts without starting a fight?"},"rounds":[{"level":"Spot","label":"Spot, round 1","intro":"<b>How this one works:<\/b> each line is either a clean Pilot line or a leak, and leaks come from the Boss or the Kid. A leak sounds like a fact, but it cannot be checked. Tap the label that fits.","items":[{"type":"pick","who":"Daniel","text":"\u201cLet's be rational. Bigger room, more rent, simple maths.\u201d","cue":"leaning forward, pen down, sure of the numbers","options":["A clean Pilot","A Boss leak","A Kid leak"],"answer":1,"why":"Most of this line is Pilot: a bigger room, more rent, the numbers. The leak is the word \u201csimple\u201d, which says the hard part does not count. \u201cLet's be rational\u201d is the cover for it, so the label is a Boss leak, even though most of the line is sound.","traps":{"0":"A clean Pilot would be the numbers alone, such as \u201cA bigger room costs more rent.\u201d This line adds \u201csimple\u201d, which rules out what the group is for.","2":"A Kid leak would be a fear, such as \u201cWe'll never afford a bigger room.\u201d Daniel is sure of himself, and he is using the numbers to win."},"example":"A family wedding WhatsApp group, an uncle: \u201cLet's be sensible. The bigger hall costs more, so simple maths says we book the small one.\u201d<br>Nobody asks how many people are coming, and the word simple has already decided it."},{"type":"pick","who":"Hannah","text":"\u201cBut this room is why people feel safe enough to talk.\u201d","cue":"steady, looking at Nadia, not at Daniel","options":["A clean Pilot","A Boss leak","A Kid leak"],"answer":0,"why":"A fact about what the group is for, said with nothing borrowed. It can be checked: ask people, and they will say the same. Real Pilot thinking takes it in as data.","traps":{"1":"A Boss leak would dress a rule as a fact, like \u201cThe room is fine as it is, end of.\u201d Hannah's line can be tested, so it is not a leak.","2":"A Kid leak would be a fear dressed as a fact, like \u201cWe'll never fit everyone in.\u201d Hannah is describing why the room works, and she is calm about it."},"example":"A cricket club committee, a member who says: \u201cThe back gate is why the juniors keep coming.\u201d Ask the juniors and they will tell you the same.<br>That is a fact about the club, and anyone can check it."},{"type":"pick","who":"Daniel","text":"\u201cFeelings aren't a business plan.\u201d","cue":"leaning back, the tone that closes the topic. Nadia interrupts: \u201cWhat just happened there?\u201d","options":["He made a good point","He used a rule to win","He asked a question"],"answer":1,"why":"It sounds like reason, and it works as a rule used to close the discussion. Nobody can check it, and it rules out the feelings before anyone has looked at them. That is a Boss leak.","traps":{"0":"A good point would be a fact about the money or the room. This line is only a rule about what counts.","2":"A question would invite an answer. This line ends the topic and leaves nobody room to reply."},"example":"A school parents' meeting, a chairman: \u201cParents' worries aren't a budget item.\u201d The room goes quiet, and the agenda moves on.<br>The rule sounds sensible, and it stops the conversation."},{"type":"pick","who":"Ruby","text":"\u201cNobody listens to a student anyway, so there's no point me saying anything.\u201d","cue":"quiet, looking at her hands, the words come out fast","options":["A clean Pilot","A Kid leak","A Boss leak"],"answer":1,"why":"A fear decides in advance what will happen. Nobody has tested it, and it cannot be tested, because she has not spoken yet. That is a Kid leak, a feeling wearing the clothes of a fact.","traps":{"0":"A clean Pilot would be checkable: \u201cLast week my idea went into the plan.\u201d This line says nothing about what happened, only what she expects.","2":"A Boss leak would have a rule in it, such as \u201cStudents should know their place.\u201d Ruby is scared, and her line has no rule in it at all."},"example":"A train platform, a passenger who says: \u201cThe fast trains never stop here for people like me, so why bother asking?\u201d He has not asked the guard yet.<br>The fear is doing the talking, and nobody has checked the timetable."}]},{"level":"Play","label":"Play, the week in motion","intro":"<b>Now you speak.<\/b> Daniel is taking the room over. Pick the line that makes a clean cut back to facts.","items":[{"type":"pick","who":"Daniel","text":"\u201cFeelings aren't a business plan.\u201d","cue":"the room has gone still, Hannah is looking at you","options":["Actually, for a drop-in group, how people feel is the business plan. That's the product.","Don't be so cold about it.","Say nothing, and let him carry on."],"answer":0,"why":"This is a clean cut. It answers his rule with a fact about the group, so you stay in the Pilot and the room can think again. Daniel pauses, and the room nods.","traps":{"1":"Don't be so cold about it answers a rule with a rule, Boss against Boss. The room picks sides and the status fight starts, which is the trap.","2":"Saying nothing lets him carry on as if he had won. You feel the room drop, and you keep quiet through it, which costs you more than a sharp reply would."},"example":"A bank branch review, a manager says: \u201cCustomer worries aren't a target.\u201d The team lead answers with last quarter's complaint numbers, and the review goes back to the figures.<br>The cut uses facts, so nobody has to lose."},{"type":"pick","who":"Daniel, standing up","text":"\u201cWell, if nobody here can think about money, I'll leave you to it.\u201d","cue":"chair scraping back, hand already on the door","options":["Money matters. Let's do the maths with the attendance data Omar just mentioned, not without it.","Fine, go then.","Please don't go, Daniel, we'd all miss you. What would make you stay?"],"answer":0,"why":"You take his point seriously, then hand him a real task built on the data in the room. He stays in the Pilot, where he is useful, and he sits back down.","traps":{"1":"Fine, go then. He leaves, the group deflates, and nothing is decided. The cold move gives him the exit he wanted.","2":"This sounds warm, but it is you begging him to stay. He gets the win he came for, and the trap keeps running because he now holds the room."},"example":"A housing society meeting, a resident stands up: \u201cWell, if nobody here cares about the lift repairs, I'll go home.\u201d The secretary says: \u201cGood, let's look at the repair quote together, with the numbers you already have.\u201d<br>He is handed a real job, and he stays."}]},{"level":"Analyse","label":"Analyse, explain it","intro":"<b>Five statements, five labels.<\/b> A double leak is a Boss leak and a Kid leak holding each other up in one line. A stuck voice is one voice doing all the talking, with the others shut out. Put each statement in the bin where it belongs.","items":[{"type":"sort","prompt":"Put each statement in its bin.","bins":["A clean Pilot","A Boss leak","A Kid leak","A double leak","A stuck voice"],"items":[{"text":"Omar: \u201cWe did try a bigger room in 2019. Attendance dropped. People sat further apart.\u201d","answer":0,"why":"This is checkable: a date and a result. A real memory is clean Pilot data, even when it sounds like a no. Players often mislabel it as a Kid leak, and the test is whether it can be checked."},{"text":"Daniel: \u201cObviously money is what matters here, so let's not waste time on the feelings.\u201d","answer":1,"why":"\u201cObviously\u201d ends the question before anyone checks it. A borrowed rule about money is wearing the clothes of a fact, so this is a Boss leak."},{"text":"Ruby: \u201cNobody listens to a student anyway, so there's no point me saying anything.\u201d","answer":2,"why":"A fear decides in advance what will happen, and nobody has tested it. That is the Kid leak talking."},{"text":"Joseph: \u201cGroups always fall apart when they grow, and I'd only be in the way, so let's stay small.\u201d","answer":3,"why":"Two leaks in one line. \u201cGroups always fall apart when they grow\u201d is a borrowed slogan taken as fact, which is the Boss leaking. \u201cI'd only be in the way\u201d is an old fear taken as fact, which is the Kid leaking. The two back each other up, so the line sounds like a conclusion."},{"text":"Peter: \u201cDon't ask how I feel about it. Give me the figures and I'll give you the answer. That's all I do, and it's all I've ever done.\u201d","answer":4,"why":"Only one voice is ever switched on, the one that handles data, and the others are shut out. That is a stuck voice. A clean Pilot can use feelings and memories as data too."}]}]}],"debrief":{"nadia":"The hardest leak to catch is the one that sounds like pure reason. \u201cLet's be rational\u201d is often a Boss winning, and \u201cobviously\u201d is often a rule in disguise. Real Pilot thinking takes feelings and memories as data, while a leak uses reason to rule them out.","bookTerm":"Contamination","bookNote":"The books call a borrowed belief or an old fear passing as adult fact contamination of the Adult. Berne calls the borrowed-belief kind prejudice and the old-fear kind delusion. When both are present it is a double contamination, and a voice that is shut out altogether is called exclusion."},"reflection":{"prompt":"Think of a word you used this week, like \u201cobviously\u201d or \u201csimple\u201d. What were you ruling out when you said it?"},"next":"3.1"};</script>
 <script>window.TA_NAV = {"hub":"https://claude.ai/artifact/FzdEytVBojsBteGVMXXV4K","next":{"slot":"3.1","title":"Draw the Arrow","url":"https://claude.ai/artifact/8nEQcyqpxd1UpWwRsnpXjV"}};</script>
 <script>
@@ -398,7 +437,7 @@
   function frame(k, body, showIntro) {
     var rec = ITEMS[k];
     var intro = showIntro && rec.round.intro ? '<p class="round-intro">' + rich(rec.round.intro) + '</p>' : "";
-    return progressHTML(k, k) + '<div class="round-label">' + rich(rec.round.label) + '</div>' + intro + body;
+    return progressHTML(k, k) + '<div class="round-label" data-lv="' + esc(String(rec.round.label).split(/[ ,]/)[0].toLowerCase()) + '">' + rich(rec.round.label) + '</div>' + intro + body;
   }
 
   // ---------- flow ----------
@@ -454,11 +493,11 @@
         (n === 1 ? ' item' : ' items') + '</span></li>';
     }).join("");
     card.innerHTML =
-      '<div class="tagline">TA Arena · World ' + esc(GAME.world) + ', ' + rich(GAME.worldName) +
+      '<div class="tagline">You · World ' + esc(GAME.world) + ', ' + rich(GAME.worldName) +
       ' · Game ' + esc(GAME.slot) + '</div>' +
       '<div class="card-head"><div><h1>' + rich(GAME.title) + '</h1>' +
       '<p class="deck">' + rich(GAME.concept) + '</p></div>' +
-      '<div class="case-no">' + esc(GAME.slot) + '<br>' + rich(GAME.weekName) + '</div></div>' +
+      '<div class="case-no"><span class="emb-wrap">' + ((window.TA_EMB || {})[String(GAME.world)] || "") + '</span>' + esc(GAME.slot) + '<br>' + rich(GAME.weekName) + '</div></div>' +
       '<p class="lede"><i>' + rich(op.setting) + '</i></p>' +
       '<div class="exchange">' + lines + '</div>' +
       '<div class="ask"><div class="kicker">The question</div><p>' + rich(op.ask) + '</p></div>' +
@@ -493,9 +532,9 @@
       buttons[it.answer].classList.add("correct");
       if (!right) buttons[i].classList.add("wrong");
       var body = right
-        ? '<div class="why-box ok"><div class="stamp ok">✓ Right call</div>' +
+        ? '<div class="why-box ok"><div class="stamp ok">Right call</div>' +
           '<p class="feedback"><b>Why:</b> ' + rich(it.why) + '</p></div>'
-        : '<div class="why-box cross"><div class="stamp cross">✗ Not quite</div>' +
+        : '<div class="why-box cross"><div class="stamp cross">Not quite</div>' +
           '<p class="feedback"><b>You picked ' + rich(labels[i]) + '.</b> ' +
           rich((it.traps || {})[String(i)]) + '</p>' +
           '<p class="feedback"><b>The right call is ' + rich(labels[it.answer]) + '.</b> ' +
@@ -656,9 +695,9 @@
         if (!right) buttons[pick].classList.add("wrong");
         var fb = document.createElement("div");
         fb.innerHTML = right
-          ? '<div class="why-box ok"><div class="stamp ok">✓ Right call</div>' +
+          ? '<div class="why-box ok"><div class="stamp ok">Right call</div>' +
             '<p class="feedback"><b>Why:</b> ' + rich(c.why) + '</p></div>'
-          : '<div class="why-box cross"><div class="stamp cross">✗ Not quite</div>' +
+          : '<div class="why-box cross"><div class="stamp cross">Not quite</div>' +
             '<p class="feedback"><b>You picked ' + rich(bins[pick]) + '.</b> It belongs in ' +
             rich(bins[c.answer]) + '.</p>' +
             '<p class="feedback"><b>Why:</b> ' + rich(c.why) + '</p></div>';
@@ -789,7 +828,7 @@
       var cls = hit ? "ok" : (under ? "amber" : "cross");
       var fb = document.createElement("div");
       fb.innerHTML = '<div class="why-box ' + cls + '"><div class="stamp ' + cls + '">' +
-        (hit ? "✓ Right call" : "✗ Not quite") + '</div>' +
+        (hit ? "Right call" : "Not quite") + '</div>' +
         '<p class="feedback">' + rich(msg) + '</p>' +
         '<p class="feedback"><b>Why:</b> ' + rich(c.why) + '</p></div>' +
         nextbar("Continue →");
@@ -806,7 +845,7 @@
   function renderDebrief() {
     var d = GAME.debrief || {};
     card.innerHTML = progressHTML(TOTAL, -1) +
-      '<div class="round-label">Debrief</div>' +
+      '<div class="round-label" data-lv="debrief">Debrief</div>' +
       '<h1 class="h2">What Nadia would say</h1>' +
       '<p class="feedback">' + rich(d.nadia) + '</p>' +
       '<div class="why-box neutral"><p class="feedback"><b>' +
@@ -851,7 +890,7 @@
         : '<p class="next-soon">Next game opens soon</p>';
     }
     card.innerHTML = progressHTML(TOTAL, -1) +
-      '<div class="end-badge">Case closed</div>' +
+      '<div class="end-emblem">' + ((window.TA_EMB || {})[String(GAME.world)] || "") + '</div><div class="end-badge">Case closed</div>' +
       '<h1 class="h2">Game ' + esc(GAME.slot) + ' is done.</h1>' +
       '<p class="feedback">' + rich(GAME.concept) + '</p>' +
       '<div class="source"><b>From:</b> ' + rich(GAME.bookSource) + '</div>' +
@@ -864,11 +903,11 @@
     var series = document.getElementById("series");
     var hubLink = document.getElementById("hubLink");
     if (!GAME || !GAME.rounds) {
-      series.textContent = "TA Arena";
+      series.textContent = "You";
       card.innerHTML = '<h1 class="h2">This game could not load.</h1>';
       return;
     }
-    series.innerHTML = 'TA Arena <small>· World ' + esc(GAME.world) + ' · Game ' + esc(GAME.slot) + '</small>';
+    series.innerHTML = '<span class="emb-wrap">' + ((window.TA_EMB || {})[String(GAME.world)] || "") + '</span>You <small>· World ' + esc(GAME.world) + ' · Game ' + esc(GAME.slot) + '</small>';
     var hub = safeUrl(NAV.hub);
     if (hub) {
       hubLink.setAttribute("href", hub);

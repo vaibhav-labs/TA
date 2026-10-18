@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Formula G · TA Arena</title>
+<title>Formula G · You</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
@@ -271,21 +271,59 @@
   button.sfx { font-family: "IBM Plex Mono", monospace; font-size: 11px; font-weight: 600; letter-spacing: 0.06em; color: var(--on-bg-dim); background: transparent; border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 999px; padding: 4px 10px; min-height: 28px; cursor: pointer; }
   button.sfx:hover { color: var(--wc); border-color: var(--wc); }
   .masthead .right { display: flex; align-items: center; gap: 12px; }
+  :root {
+    --i-check: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Ccircle cx=%2212%22 cy=%2212%22 r=%229%22/%3E%3Cpath d=%22m8 12 3 3 5-6%22/%3E%3C/svg%3E");
+    --i-cross: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Ccircle cx=%2212%22 cy=%2212%22 r=%229%22/%3E%3Cpath d=%22m9 9 6 6M15 9l-6 6%22/%3E%3C/svg%3E");
+    --i-bolt: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M13 2 4 14h7l-1 8 9-12h-7z%22/%3E%3C/svg%3E");
+    --i-eye: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z%22/%3E%3Ccircle cx=%2212%22 cy=%2212%22 r=%223%22/%3E%3C/svg%3E");
+    --i-play: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M7 4v16l13-8z%22/%3E%3C/svg%3E");
+    --i-search: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Ccircle cx=%2211%22 cy=%2211%22 r=%227%22/%3E%3Cpath d=%22m20 20-4-4%22/%3E%3C/svg%3E");
+    --i-trophy: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M8 4h8v5a4 4 0 0 1-8 0zM8 6H4v1a3 3 0 0 0 4 3M16 6h4v1a3 3 0 0 1-4 3M12 13v4M8 21h8M10 17h4%22/%3E%3C/svg%3E");
+    --i-pencil: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M4 20l1-4L16 5l3 3L8 19z%22/%3E%3C/svg%3E");
+    --i-book: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M4 5a2 2 0 0 1 2-2h13v14H6a2 2 0 0 0-2 2zM4 19a2 2 0 0 0 2 2h13v-4%22/%3E%3C/svg%3E");
+    --i-help: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Ccircle cx=%2212%22 cy=%2212%22 r=%229%22/%3E%3Cpath d=%22M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.7.4-1 .9-1 1.7M12 17h.01%22/%3E%3C/svg%3E");
+    --i-crown: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M3 8l4 4 5-7 5 7 4-4-2 11H5z%22/%3E%3C/svg%3E");
+    --i-lock: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Crect x=%225%22 y=%2211%22 width=%2214%22 height=%229%22 rx=%222%22/%3E%3Cpath d=%22M8 11V8a4 4 0 0 1 8 0v3%22/%3E%3C/svg%3E");
+    --i-home: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M3 11l9-8 9 8M5 10v10h14V10%22/%3E%3C/svg%3E");
+    --i-speaker: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M4 9v6h4l5 4V5L8 9zM16 9a4 4 0 0 1 0 6%22/%3E%3C/svg%3E");
+    --i-spark: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M12 3l2 6 6 2-6 2-2 6-2-6-6-2 6-2z%22/%3E%3C/svg%3E");
+    --i-flag: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M5 21V4M5 4h11l-2 4 2 4H5%22/%3E%3C/svg%3E");
+  }
+
+  /* Line icons (CSS masks) */
+  .stamp::before, .ex-label::before, .end-badge::before, .reflect-tag::before, .source b::before, .ask .kicker::before,
+  .round-label::before, .boss-tag::before, .state::before, a.tag::before, button.sfx::before {
+    content: ""; display: inline-block; width: 1.2em; height: 1.2em; margin-right: 0.4em; vertical-align: -0.24em;
+    background: currentColor; -webkit-mask: var(--ic) center / contain no-repeat; mask: var(--ic) center / contain no-repeat; }
+  .stamp::before { margin-right: 0; width: 1.3em; height: 1.3em; vertical-align: middle; }
+  .stamp.ok { --ic: var(--i-check); } .stamp.cross { --ic: var(--i-cross); } .stamp.amber { --ic: var(--i-help); }
+  .ex-label { --ic: var(--i-spark); } .end-badge { --ic: var(--i-trophy); } .reflect-tag { --ic: var(--i-pencil); }
+  .source b { --ic: var(--i-book); } .ask .kicker { --ic: var(--i-help); } .boss-tag { --ic: var(--i-crown); }
+  .state { --ic: var(--i-lock); } a.tag { --ic: var(--i-home); } button.sfx { --ic: var(--i-speaker); }
+  .round-label { --ic: var(--i-help); }
+  .round-label[data-lv="spot"] { --ic: var(--i-eye); } .round-label[data-lv="play"] { --ic: var(--i-play); }
+  .round-label[data-lv="analyse"] { --ic: var(--i-search); } .round-label[data-lv="debrief"] { --ic: var(--i-spark); }
+  .boss-tag::before, .state::before { width: 1.1em; height: 1.1em; margin-right: 0.3em; }
+  .emb { display: block; width: 100%; height: 100%; overflow: visible; }
+  .emb-wrap { display: block; flex: none; width: 46px; height: 46px; filter: drop-shadow(0 0 10px color-mix(in srgb, var(--wc) 45%, transparent)); }
+  .series .emb-wrap { display: inline-block; width: 24px; height: 24px; vertical-align: -7px; margin-right: 8px; filter: none; }
+  .case-no .emb-wrap { margin: 0 0 8px auto; }
+  .end-emblem { width: 64px; height: 64px; margin: 0 0 12px; filter: drop-shadow(0 0 14px color-mix(in srgb, var(--wc) 55%, transparent)); }
 </style>
 <link rel="manifest" href="/TA/arena/manifest.json">
 <meta name="theme-color" content="#171233">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="TA Arena">
-<link rel="icon" href="/TA/favicon.svg">
-<link rel="apple-touch-icon" href="/TA/icon-192.png">
+<meta name="apple-mobile-web-app-title" content="You">
+<link rel="icon" href="/TA/arena/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/TA/arena/icon-192.png">
 </head>
 <body>
 
 <div class="stage">
   <div class="masthead">
-    <div class="series" id="series">TA Arena</div>
-    <div class="right"><button type="button" class="sfx" id="sfx" aria-pressed="true">SFX ON</button><a class="tag" id="hubLink" href="#" hidden>← All games</a></div>
+    <div class="series" id="series">You</div>
+    <div class="right"><button type="button" class="sfx" id="sfx" aria-pressed="true" aria-label="Sound">SFX ON</button><a class="tag" id="hubLink" href="#" hidden>All games</a></div>
   </div>
   <main class="card" id="card" tabindex="-1">
     <p class="deck">Loading the game.</p>
@@ -293,6 +331,7 @@
   </main>
 </div>
 
+<script>window.TA_EMB = {"1": "<svg class=\"emb\" viewBox=\"0 0 36 36\" aria-hidden=\"true\" focusable=\"false\"><linearGradient id=\"w1g\" x1=\"0%\" y1=\"0%\" x2=\"100%\" y2=\"100%\"><stop offset=\"0%\" stop-color=\"#FFA000\"/><stop offset=\"100%\" stop-color=\"#FF3D00\"/></linearGradient><g stroke=\"url(#w1g)\" stroke-width=\"3\" stroke-linecap=\"round\"><line x1=\"8\" y1=\"8\" x2=\"8\" y2=\"28\"/><line x1=\"14\" y1=\"8\" x2=\"14\" y2=\"28\"/><line x1=\"20\" y1=\"8\" x2=\"20\" y2=\"28\"/><line x1=\"26\" y1=\"8\" x2=\"26\" y2=\"28\"/></g><line x1=\"4\" y1=\"24\" x2=\"30\" y2=\"12\" stroke=\"#FFFC00\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><circle cx=\"31\" cy=\"11\" r=\"2.5\" fill=\"#FFFC00\"/></svg>", "2": "<svg class=\"emb\" viewBox=\"0 0 36 36\" aria-hidden=\"true\" focusable=\"false\"><line x1=\"18\" y1=\"6\" x2=\"18\" y2=\"30\" stroke=\"rgba(255,255,255,0.3)\" stroke-width=\"2\" stroke-dasharray=\"2 2\"/><circle cx=\"18\" cy=\"8\" r=\"4.5\" fill=\"#F43F5E\" stroke=\"#fff\" stroke-width=\"1.5\"/><circle cx=\"18\" cy=\"18\" r=\"6\" fill=\"#06B6D4\" stroke=\"#FFFC00\" stroke-width=\"2\"/><circle cx=\"18\" cy=\"28\" r=\"4.5\" fill=\"#F59E0B\" stroke=\"#fff\" stroke-width=\"1.5\"/></svg>", "3": "<svg class=\"emb\" viewBox=\"0 0 36 36\" aria-hidden=\"true\" focusable=\"false\"><linearGradient id=\"w3a\" x1=\"0%\" y1=\"0%\" x2=\"100%\" y2=\"100%\"><stop offset=\"0%\" stop-color=\"#C084FC\"/><stop offset=\"100%\" stop-color=\"#9333EA\"/></linearGradient><linearGradient id=\"w3b\" x1=\"100%\" y1=\"0%\" x2=\"0%\" y2=\"100%\"><stop offset=\"0%\" stop-color=\"#FFFC00\"/><stop offset=\"100%\" stop-color=\"#F59E0B\"/></linearGradient><line x1=\"6\" y1=\"6\" x2=\"30\" y2=\"30\" stroke=\"url(#w3a)\" stroke-width=\"3.2\" stroke-linecap=\"round\"/><line x1=\"30\" y1=\"6\" x2=\"6\" y2=\"30\" stroke=\"url(#w3b)\" stroke-width=\"3.2\" stroke-linecap=\"round\"/><polygon points=\"30,30 24,29 29,24\" fill=\"#C084FC\"/><polygon points=\"6,30 12,29 7,24\" fill=\"#FFFC00\"/><circle cx=\"18\" cy=\"18\" r=\"3\" fill=\"#fff\"/><circle cx=\"18\" cy=\"18\" r=\"6\" fill=\"none\" stroke=\"#FFFC00\" stroke-width=\"1.2\" opacity=\"0.8\"/></svg>", "4": "<svg class=\"emb\" viewBox=\"0 0 36 36\" aria-hidden=\"true\" focusable=\"false\"><linearGradient id=\"w4g\" x1=\"0%\" y1=\"0%\" x2=\"100%\" y2=\"100%\"><stop offset=\"0%\" stop-color=\"#FB7185\"/><stop offset=\"100%\" stop-color=\"#E11D48\"/></linearGradient><path d=\"M18 9 C13 7 7 7 4 8 L4 26 C8 25 13 25 18 28 C23 25 28 25 32 26 L32 8 C29 7 23 7 18 9 Z\" fill=\"url(#w4g)\" stroke=\"#fff\" stroke-width=\"1.5\"/><line x1=\"18\" y1=\"9\" x2=\"18\" y2=\"28\" stroke=\"#FFE4E6\" stroke-width=\"2\"/><polygon points=\"18,14 14,21 22,21\" fill=\"#FFFC00\" stroke=\"#000\" stroke-width=\"1\"/></svg>", "5": "<svg class=\"emb\" viewBox=\"0 0 36 36\" aria-hidden=\"true\" focusable=\"false\"><linearGradient id=\"w5g\" x1=\"0%\" y1=\"0%\" x2=\"0%\" y2=\"100%\"><stop offset=\"0%\" stop-color=\"#FFFFFF\"/><stop offset=\"40%\" stop-color=\"#67E8F9\"/><stop offset=\"100%\" stop-color=\"#0E7490\"/></linearGradient><line x1=\"3\" y1=\"13\" x2=\"33\" y2=\"13\" stroke=\"#22D3EE\" stroke-width=\"2\" stroke-dasharray=\"3 1\"/><polygon points=\"18,6 23,13 13,13\" fill=\"#fff\" stroke=\"#67E8F9\" stroke-width=\"1.2\"/><polygon points=\"13,13 23,13 27,29 9,29\" fill=\"url(#w5g)\" stroke=\"#0891B2\" stroke-width=\"1.5\"/><path d=\"M12 32 Q18 35 24 32\" stroke=\"#06B6D4\" stroke-width=\"1.5\" fill=\"none\" opacity=\"0.6\" stroke-linecap=\"round\"/></svg>", "6": "<svg class=\"emb\" viewBox=\"0 0 36 36\" aria-hidden=\"true\" focusable=\"false\"><linearGradient id=\"w6g\" x1=\"0%\" y1=\"0%\" x2=\"100%\" y2=\"100%\"><stop offset=\"0%\" stop-color=\"#34D399\"/><stop offset=\"100%\" stop-color=\"#059669\"/></linearGradient><circle cx=\"18\" cy=\"6\" r=\"3.5\" fill=\"#FFFC00\" stroke=\"#fff\" stroke-width=\"1\"/><path d=\"M18 9.5 V16 M18 16 L9 26 M18 16 L27 26\" stroke=\"#34D399\" stroke-width=\"2.5\" stroke-linecap=\"round\" fill=\"none\"/><circle cx=\"9\" cy=\"27\" r=\"4\" fill=\"url(#w6g)\" stroke=\"#fff\" stroke-width=\"1.2\"/><circle cx=\"27\" cy=\"27\" r=\"4\" fill=\"url(#w6g)\" stroke=\"#fff\" stroke-width=\"1.2\"/><line x1=\"12.5\" y1=\"24\" x2=\"23.5\" y2=\"24\" stroke=\"#FFFC00\" stroke-width=\"1.5\" stroke-dasharray=\"2 2\"/></svg>", "7": "<svg class=\"emb\" viewBox=\"0 0 36 36\" aria-hidden=\"true\" focusable=\"false\"><radialGradient id=\"w7g\" cx=\"50%\" cy=\"100%\" r=\"80%\"><stop offset=\"0%\" stop-color=\"#FFFC00\"/><stop offset=\"60%\" stop-color=\"#F59E0B\"/><stop offset=\"100%\" stop-color=\"#D97706\"/></radialGradient><path d=\"M7 23 A11 11 0 0 1 29 23 Z\" fill=\"url(#w7g)\" stroke=\"#FFFC00\" stroke-width=\"1.5\"/><line x1=\"3\" y1=\"23\" x2=\"33\" y2=\"23\" stroke=\"#FDE68A\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><g stroke=\"#FFFC00\" stroke-width=\"2.5\" stroke-linecap=\"round\"><line x1=\"18\" y1=\"5\" x2=\"18\" y2=\"9\"/><line x1=\"8\" y1=\"9\" x2=\"11\" y2=\"12\"/><line x1=\"28\" y1=\"9\" x2=\"25\" y2=\"12\"/><line x1=\"31\" y1=\"17\" x2=\"27\" y2=\"18\"/><line x1=\"5\" y1=\"17\" x2=\"9\" y2=\"18\"/></g></svg>"};</script>
 <script>window.TA_GAME = {"slot":"4.2","title":"Formula G","world":4,"worldName":"The Thesaurus","week":4,"weekName":"Traps","mechanic":"Sequence","concept":"After this one you can put a trap's six steps in order, bait first and sting last, and point to the flip where the chairs swap.","plainWord":"the six steps","bookTerm":"Formula G","bookIdea":"Formula G sets out how a game runs in six parts and a fixed order: a con aimed at a weak spot (the gimmick) draws a response, then comes the switch, the crossup of confusion, and the payoff last.","bookSource":"TA Today, ch. 23; Scripts People Live, ch. 11","opener":{"setting":"Thursday, 9:40pm. Hawthorn Court, apartment 3B, the sofa. The bathroom light is still on, and nobody has turned it off.","lines":[{"who":"Sam","text":"\u201cDid you leave the bathroom light on? I'm not blaming anyone. Just the one who gets blamed for it.\u201d","cue":"from the doorway, arms folded"},{"who":"Maya","text":"\u201cI turned it off. I always turn it off.\u201d","cue":"pulling the blanket straight without looking up"},{"who":"Sam","text":"\u201cHa. Okay. You're always so sure of yourself, aren't you? Forget it.\u201d","cue":"already walking to his room"}],"ask":"Put the six steps of each trap in order, with the bait first and the sting last, and find the flip where the chairs swap."},"rounds":[{"level":"Spot","label":"Spot, round 1","intro":"Each set below is one short trap, with six lines. Tap them in the order the trap runs, with the bait first and the sting last.","items":[{"type":"sort","prompt":"Put these six lines in the order the trap runs, with the bait first and the sting last.","order":true,"items":[{"text":"Sam: \u201cSorry, sorry. I've knocked your notes off the table again. I'm hopeless, aren't I?\u201d","why":"Bait comes first. It reads as a plain apology, so you feel you ought to answer, and nothing in it asks you for anything yet."},{"text":"Sam: \u201cEveryone always ends up picking up my mess. It's the story of my life.\u201d","why":"The hook comes second. It catches the Saviour's reflex in you, the urge to pick things up for people."},{"text":"You: \u201cIt's fine, I'll pick them up. Don't worry about it.\u201d","why":"The bite comes third. It is the reply that takes the hook, so you move into the Saviour's chair and start clearing up his mess."},{"text":"Sam: \u201cWow, you always make it sound like I'm the problem. Like I can't do anything right.\u201d","why":"The flip comes fourth. Sam leaves the Sufferer's chair for the Blamer's, which leaves you in the Sufferer's, the one now being blamed."},{"text":"You: \u201cWait, what? I was only trying to help.\u201d","why":"The blink comes fifth. You meant to help and find yourself cast as the problem, so you are caught off guard and stop for a moment."},{"text":"Sam: \u201cForget it. Whatever.\u201d","why":"The sting comes last. Neither of you got what you wanted, and you both carry the same bad feeling. The trap is ready to run again at the next spill."}],"example":"A family WhatsApp group, Sunday. \u201cSorry, I forgot the sweets again. I'm useless, aren't I?\u201d<br>\u201cDon't be silly, I'll get them.\u201d<br>\u201cNo, you always do everything. Forget it.\u201d"},{"type":"sort","prompt":"Put these six lines in the order the trap runs. Start with the bait and end with the sting.","order":true,"items":[{"text":"Daniel: \u201cGood, you're here. Quick question about the sheet you sent this morning.\u201d","why":"Bait comes first. The question sounds routine, so you relax, and nothing has been caught yet."},{"text":"Daniel: \u201cI was going to check it myself. I thought you were careful with these.\u201d","why":"The hook comes second. Being called careful is a nod you want, and he holds it just out of reach, so you start to reach for it."},{"text":"You: \u201cI did check it. I think. Let me have a look.\u201d","why":"The bite comes third. You doubt your own check before anyone has shown you a mistake, which is the reply the hook was fishing for."},{"text":"Daniel: \u201cAh. So you haven't checked it. I knew it. I'll do it myself, then.\u201d","why":"The flip comes fourth. Daniel takes the Blamer's chair, your doubt becomes his evidence, and you are left in the Sufferer's."},{"text":"You: \u201cHang on. I sent it at nine. You read it and said it was fine.\u201d","why":"The blink comes fifth. You remember the nine o'clock send, and his story does not match what happened, so you stop and look at him."},{"text":"Daniel: \u201cFine. Just don't let it happen again.\u201d He turns back to his screen.","why":"The sting comes last. He has the final word and you are left with the doubt he planted. The sheet is still not checked."}],"example":"A parents' WhatsApp group, Monday. \u201cDid you bring the sports kit?\u201d<br>\u201cI think so. Let me check.\u201d<br>\u201cAh, so you didn't. I knew it.\u201d"},{"type":"sort","prompt":"Put these six lines in the order the trap runs, with the bait first and the sting last.","order":true,"items":[{"text":"Omar: \u201cCan you shut the bathroom window when you're done? It's freezing in here.\u201d","why":"Bait comes first. It is a fair request in a cold flat, so nobody can object to it yet."},{"text":"Omar: \u201cSome of us notice when the heating's on. Some of us don't.\u201d","why":"The hook comes second. It lands on your sense of being careless, so you feel called to defend yourself instead of just shutting the window."},{"text":"You: \u201cSorry. I was in the shower. I'll shut it now, don't shout.\u201d","why":"The bite comes third. You answer the hook with an excuse. That puts you in the Sufferer's chair, and you have to prove you were not careless."},{"text":"Omar: \u201cLook what you made me do. Now I'm the one raising my voice at a window.\u201d","why":"The flip comes fourth. Omar moves from the Blamer's chair into the Sufferer's, and that leaves you in the Blamer's, the one he says made him shout."},{"text":"You: \u201cWait. You're the one who started it, not me.\u201d","why":"The blink comes fifth. You only asked about a window, so being blamed for his shouting catches you out. You say so."},{"text":"Omar: \u201cFine. Make it about you, like always.\u201d He carries the kettle into the kitchen.","why":"The sting comes last. Omar has the last word and you feel accused. The same argument is set up for the next open window."}],"example":"A school gate, Wednesday. \u201cCan you bring the lunch box? It's on the bench.\u201d<br>\u201cI'm not the one who forgets things.\u201d<br>\u201cLook what you made me do. Now I'm late too.\u201d"}]},{"level":"Play","label":"Play, the week in motion","intro":"These lines look alike, so the order is harder to hear. Watch for the moment the chairs swap, and let that tell you where the flip is.","items":[{"type":"sort","prompt":"These lines look alike. Put them in the order the trap runs, with the bait first and the sting last, and watch where the chairs swap.","order":true,"items":[{"text":"Gran: \u201cI'm not complaining, but nobody reads these letters for me. You're the only one who understands them.\u201d","why":"Bait comes first. It sounds like a small complaint and a compliment, so a helper hears a favour to be done and no trap at all."},{"text":"Gran: \u201cOf course you're busy, with all that office work. Not that I'd know, nobody tells me anything.\u201d","why":"The hook comes second. Being busy becomes a fault you owe her for, and that catches the part of you that wants to make it up to her."},{"text":"You: \u201cI'll read it with you tonight. Don't worry, I'll sort the whole letter.\u201d","why":"The bite comes third. You offer to carry the whole letter, so you move into the Saviour's chair, and she settles into the Sufferer's."},{"text":"Gran: \u201cOh, you've decided it's a big job, have you? I'll manage on my own, as always.\u201d","why":"The flip comes fourth. Gran leaves the Sufferer's chair for the Blamer's, and it is you who is now accused of making the letter a burden."},{"text":"You: \u201cHang on, I only said I'd read it. Nobody said it was a big job.\u201d","why":"The blink comes fifth. The story has changed under you, and you are caught between an offer you made and a charge you never earned."},{"text":"Gran: \u201cFine. I'll ask the neighbour, then.\u201d She puts the envelope back in the drawer.","why":"The sting comes last. She ends up alone with the letter and you feel you have let her down. The next letter will bring the same trap back."}],"example":"A housing society meeting, Saturday. \u201cYou're the only one who can talk to the secretary. Could you raise the lift?\u201d<br>\u201cI'll raise it.\u201d<br>\u201cOh, so it's that important now?\u201d"},{"type":"sort","prompt":"Put these six lines in the order the trap runs. Some lines sound like teasing, and one line is the flip.","order":true,"items":[{"text":"Clara: \u201cI've opened the sheet four times. Clearly I'm the slowest person in the city.\u201d","why":"Bait comes first. It is a joke at her own expense, and it asks someone to laugh or to say she is not that slow."},{"text":"Daniel: \u201cFour times? Well, at least you're consistent. Some people give up at two.\u201d","why":"The hook comes second. He praises the wrong thing, her persistence, while calling her slow, so she has to decide whether to laugh it off or argue."},{"text":"Clara: \u201cHa. Yes. I'm the one who never gives up, that's me.\u201d","why":"The bite comes third. She takes the sarcasm as a compliment and joins in, which keeps her in the Sufferer's chair while she pretends it is a joke."},{"text":"Daniel: \u201cClara, I thought you'd have it by now. Did you even read the brief?\u201d","why":"The flip comes fourth. Daniel stops teasing like a friend and takes the Blamer's chair, and Clara is left holding the blame."},{"text":"Clara: \u201cWait. You just said I was consistent. Now I didn't read the brief?\u201d","why":"The blink comes fifth. The praise she was given has been taken back in the same breath, and she is stuck turning the sentence over."},{"text":"Daniel: \u201cDoesn't matter. I'll do it myself.\u201d He turns back to his screen, and she closes hers.","why":"The sting comes last. He does the work alone and she feels she has failed. The same trap is waiting for the next sheet."}],"example":"A snooker club, Saturday. \u201cYou lost again? Some people never learn the angle.\u201d<br>\u201cHa, yes, that's me. Never learns.\u201d<br>\u201cThen you should play someone else.\u201d"}]},{"level":"Analyse","label":"Analyse, explain it","intro":"One longer trap, where the chairs swap at the flip. Put the lines in order, and use the why on each line to see who sits where before and after.","items":[{"type":"sort","prompt":"Put these six lines in order. Read each why as you go, because it says which chair each of you is in, and where the chairs swap.","order":true,"items":[{"text":"Mum: \u201cDon't worry if you're busy. I know you're busy. I'm only sitting here with the lentils.\u201d","why":"Bait comes first. It gives you permission to be busy, so there is nothing to answer yet, only a small guilt waiting to be picked up."},{"text":"Mum: \u201cThree rings and no answer. Still, I'm only your mother. I'm used to it.\u201d","why":"The hook comes second. The missed calls become her hurt, which pulls you into the Saviour's chair, the one that has to make it up to her."},{"text":"You: \u201cSorry, Mum. I'll ring you properly tonight. Twice, if you like.\u201d","why":"The bite comes third. You take on a promise you may not keep, so you are the Saviour fixing her hurt, and she is the Sufferer waiting for the fix."},{"text":"Mum: \u201cTonight, of course. You'll ring when you're done with everyone else. You always do this.\u201d","why":"The flip comes fourth. Mum moves into the Blamer's chair, and you slide into the Sufferer's, the one who always lets her down."},{"text":"You: \u201cMum, I said I'd ring. Why are we arguing about a phone call?\u201d","why":"The blink comes fifth. You were only offering a call, so the argument catches you off guard. You stop trying to fix it."},{"text":"Mum: \u201cFine. Ring when you can. I'll be here, not that anyone asks.\u201d She hangs up before you can answer.","why":"The sting comes last. She has the last word and the line goes dead. You both carry the feeling that a promise counts for less than a grievance."}],"example":"A school trip group chat, Friday. \u201cAre you coming to the picnic?\u201d<br>\u201cI'll try, I'm on call.\u201d<br>\u201cFine, don't worry about us. We'll manage.\u201d"}]}],"debrief":{"nadia":"A trap runs in a recognisable order, so once you know the order you can hear one coming. Watch for the hook, the moment someone leans on a soft spot of yours, then the bite, when you take it, and then the flip, when the chairs swap. The sting is what you feel last, but every step before it set it up.","bookTerm":"Formula G","bookNote":"The books call this Formula G, a game laid out in six parts in a fixed order: the con, the gimmick, the response, the switch, the crossup and the payoff. The players swap roles at the switch, much as they do on the Drama Triangle, and the payoff comes last."},"reflection":{"prompt":"Think of a friendly line that turned on you this week. Which step was the flip, and what did you do in the blink?"},"next":"4.3"};</script>
 <script>window.TA_NAV = {"hub":"https://vaibhav-labs.github.io/TA/arena/","next":{"slot":"4.3","title":"Life Games","url":"https://vaibhav-labs.github.io/TA/arena/4-3.html"}};</script>
 <script>
@@ -405,7 +444,7 @@
   function frame(k, body, showIntro) {
     var rec = ITEMS[k];
     var intro = showIntro && rec.round.intro ? '<p class="round-intro">' + rich(rec.round.intro) + '</p>' : "";
-    return progressHTML(k, k) + '<div class="round-label">' + rich(rec.round.label) + '</div>' + intro + body;
+    return progressHTML(k, k) + '<div class="round-label" data-lv="' + esc(String(rec.round.label).split(/[ ,]/)[0].toLowerCase()) + '">' + rich(rec.round.label) + '</div>' + intro + body;
   }
 
   // ---------- flow ----------
@@ -461,11 +500,11 @@
         (n === 1 ? ' item' : ' items') + '</span></li>';
     }).join("");
     card.innerHTML =
-      '<div class="tagline">TA Arena · World ' + esc(GAME.world) + ', ' + rich(GAME.worldName) +
+      '<div class="tagline">You · World ' + esc(GAME.world) + ', ' + rich(GAME.worldName) +
       ' · Game ' + esc(GAME.slot) + '</div>' +
       '<div class="card-head"><div><h1>' + rich(GAME.title) + '</h1>' +
       '<p class="deck">' + rich(GAME.concept) + '</p></div>' +
-      '<div class="case-no">' + esc(GAME.slot) + '<br>' + rich(GAME.weekName) + '</div></div>' +
+      '<div class="case-no"><span class="emb-wrap">' + ((window.TA_EMB || {})[String(GAME.world)] || "") + '</span>' + esc(GAME.slot) + '<br>' + rich(GAME.weekName) + '</div></div>' +
       '<p class="lede"><i>' + rich(op.setting) + '</i></p>' +
       '<div class="exchange">' + lines + '</div>' +
       '<div class="ask"><div class="kicker">The question</div><p>' + rich(op.ask) + '</p></div>' +
@@ -500,9 +539,9 @@
       buttons[it.answer].classList.add("correct");
       if (!right) buttons[i].classList.add("wrong");
       var body = right
-        ? '<div class="why-box ok"><div class="stamp ok">✓ Right call</div>' +
+        ? '<div class="why-box ok"><div class="stamp ok">Right call</div>' +
           '<p class="feedback"><b>Why:</b> ' + rich(it.why) + '</p></div>'
-        : '<div class="why-box cross"><div class="stamp cross">✗ Not quite</div>' +
+        : '<div class="why-box cross"><div class="stamp cross">Not quite</div>' +
           '<p class="feedback"><b>You picked ' + rich(labels[i]) + '.</b> ' +
           rich((it.traps || {})[String(i)]) + '</p>' +
           '<p class="feedback"><b>The right call is ' + rich(labels[it.answer]) + '.</b> ' +
@@ -663,9 +702,9 @@
         if (!right) buttons[pick].classList.add("wrong");
         var fb = document.createElement("div");
         fb.innerHTML = right
-          ? '<div class="why-box ok"><div class="stamp ok">✓ Right call</div>' +
+          ? '<div class="why-box ok"><div class="stamp ok">Right call</div>' +
             '<p class="feedback"><b>Why:</b> ' + rich(c.why) + '</p></div>'
-          : '<div class="why-box cross"><div class="stamp cross">✗ Not quite</div>' +
+          : '<div class="why-box cross"><div class="stamp cross">Not quite</div>' +
             '<p class="feedback"><b>You picked ' + rich(bins[pick]) + '.</b> It belongs in ' +
             rich(bins[c.answer]) + '.</p>' +
             '<p class="feedback"><b>Why:</b> ' + rich(c.why) + '</p></div>';
@@ -796,7 +835,7 @@
       var cls = hit ? "ok" : (under ? "amber" : "cross");
       var fb = document.createElement("div");
       fb.innerHTML = '<div class="why-box ' + cls + '"><div class="stamp ' + cls + '">' +
-        (hit ? "✓ Right call" : "✗ Not quite") + '</div>' +
+        (hit ? "Right call" : "Not quite") + '</div>' +
         '<p class="feedback">' + rich(msg) + '</p>' +
         '<p class="feedback"><b>Why:</b> ' + rich(c.why) + '</p></div>' +
         nextbar("Continue →");
@@ -813,7 +852,7 @@
   function renderDebrief() {
     var d = GAME.debrief || {};
     card.innerHTML = progressHTML(TOTAL, -1) +
-      '<div class="round-label">Debrief</div>' +
+      '<div class="round-label" data-lv="debrief">Debrief</div>' +
       '<h1 class="h2">What Nadia would say</h1>' +
       '<p class="feedback">' + rich(d.nadia) + '</p>' +
       '<div class="why-box neutral"><p class="feedback"><b>' +
@@ -858,7 +897,7 @@
         : '<p class="next-soon">Next game opens soon</p>';
     }
     card.innerHTML = progressHTML(TOTAL, -1) +
-      '<div class="end-badge">Case closed</div>' +
+      '<div class="end-emblem">' + ((window.TA_EMB || {})[String(GAME.world)] || "") + '</div><div class="end-badge">Case closed</div>' +
       '<h1 class="h2">Game ' + esc(GAME.slot) + ' is done.</h1>' +
       '<p class="feedback">' + rich(GAME.concept) + '</p>' +
       '<div class="source"><b>From:</b> ' + rich(GAME.bookSource) + '</div>' +
@@ -871,11 +910,11 @@
     var series = document.getElementById("series");
     var hubLink = document.getElementById("hubLink");
     if (!GAME || !GAME.rounds) {
-      series.textContent = "TA Arena";
+      series.textContent = "You";
       card.innerHTML = '<h1 class="h2">This game could not load.</h1>';
       return;
     }
-    series.innerHTML = 'TA Arena <small>· World ' + esc(GAME.world) + ' · Game ' + esc(GAME.slot) + '</small>';
+    series.innerHTML = '<span class="emb-wrap">' + ((window.TA_EMB || {})[String(GAME.world)] || "") + '</span>You <small>· World ' + esc(GAME.world) + ' · Game ' + esc(GAME.slot) + '</small>';
     var hub = safeUrl(NAV.hub);
     if (hub) {
       hubLink.setAttribute("href", hub);

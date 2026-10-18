@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>TA Arena</title>
+<title>You</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
@@ -159,13 +159,53 @@
   .route-list a[href$="#world-5"] { --wc: #06b6d4; }
   .route-list a[href$="#world-6"] { --wc: #10b981; }
   .route-list a[href$="#world-7"] { --wc: #f59e0b; }
+  :root {
+    --i-check: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Ccircle cx=%2212%22 cy=%2212%22 r=%229%22/%3E%3Cpath d=%22m8 12 3 3 5-6%22/%3E%3C/svg%3E");
+    --i-cross: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Ccircle cx=%2212%22 cy=%2212%22 r=%229%22/%3E%3Cpath d=%22m9 9 6 6M15 9l-6 6%22/%3E%3C/svg%3E");
+    --i-bolt: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M13 2 4 14h7l-1 8 9-12h-7z%22/%3E%3C/svg%3E");
+    --i-eye: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z%22/%3E%3Ccircle cx=%2212%22 cy=%2212%22 r=%223%22/%3E%3C/svg%3E");
+    --i-play: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M7 4v16l13-8z%22/%3E%3C/svg%3E");
+    --i-search: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Ccircle cx=%2211%22 cy=%2211%22 r=%227%22/%3E%3Cpath d=%22m20 20-4-4%22/%3E%3C/svg%3E");
+    --i-trophy: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M8 4h8v5a4 4 0 0 1-8 0zM8 6H4v1a3 3 0 0 0 4 3M16 6h4v1a3 3 0 0 1-4 3M12 13v4M8 21h8M10 17h4%22/%3E%3C/svg%3E");
+    --i-pencil: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M4 20l1-4L16 5l3 3L8 19z%22/%3E%3C/svg%3E");
+    --i-book: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M4 5a2 2 0 0 1 2-2h13v14H6a2 2 0 0 0-2 2zM4 19a2 2 0 0 0 2 2h13v-4%22/%3E%3C/svg%3E");
+    --i-help: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Ccircle cx=%2212%22 cy=%2212%22 r=%229%22/%3E%3Cpath d=%22M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.7.4-1 .9-1 1.7M12 17h.01%22/%3E%3C/svg%3E");
+    --i-crown: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M3 8l4 4 5-7 5 7 4-4-2 11H5z%22/%3E%3C/svg%3E");
+    --i-lock: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Crect x=%225%22 y=%2211%22 width=%2214%22 height=%229%22 rx=%222%22/%3E%3Cpath d=%22M8 11V8a4 4 0 0 1 8 0v3%22/%3E%3C/svg%3E");
+    --i-home: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M3 11l9-8 9 8M5 10v10h14V10%22/%3E%3C/svg%3E");
+    --i-speaker: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M4 9v6h4l5 4V5L8 9zM16 9a4 4 0 0 1 0 6%22/%3E%3C/svg%3E");
+    --i-spark: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M12 3l2 6 6 2-6 2-2 6-2-6-6-2 6-2z%22/%3E%3C/svg%3E");
+    --i-flag: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M5 21V4M5 4h11l-2 4 2 4H5%22/%3E%3C/svg%3E");
+  }
+
+  /* Line icons (CSS masks) */
+  .stamp::before, .ex-label::before, .end-badge::before, .reflect-tag::before, .source b::before, .ask .kicker::before,
+  .round-label::before, .boss-tag::before, .state::before, a.tag::before, button.sfx::before {
+    content: ""; display: inline-block; width: 1.2em; height: 1.2em; margin-right: 0.4em; vertical-align: -0.24em;
+    background: currentColor; -webkit-mask: var(--ic) center / contain no-repeat; mask: var(--ic) center / contain no-repeat; }
+  .stamp::before { margin-right: 0; width: 1.3em; height: 1.3em; vertical-align: middle; }
+  .stamp.ok { --ic: var(--i-check); } .stamp.cross { --ic: var(--i-cross); } .stamp.amber { --ic: var(--i-help); }
+  .ex-label { --ic: var(--i-spark); } .end-badge { --ic: var(--i-trophy); } .reflect-tag { --ic: var(--i-pencil); }
+  .source b { --ic: var(--i-book); } .ask .kicker { --ic: var(--i-help); } .boss-tag { --ic: var(--i-crown); }
+  .state { --ic: var(--i-lock); } a.tag { --ic: var(--i-home); } button.sfx { --ic: var(--i-speaker); }
+  .round-label { --ic: var(--i-help); }
+  .round-label[data-lv="spot"] { --ic: var(--i-eye); } .round-label[data-lv="play"] { --ic: var(--i-play); }
+  .round-label[data-lv="analyse"] { --ic: var(--i-search); } .round-label[data-lv="debrief"] { --ic: var(--i-spark); }
+  .boss-tag::before, .state::before { width: 1.1em; height: 1.1em; margin-right: 0.3em; }
+  .emb { display: block; width: 100%; height: 100%; overflow: visible; }
+  .emb-wrap { display: block; flex: none; width: 46px; height: 46px; filter: drop-shadow(0 0 10px color-mix(in srgb, var(--wc) 45%, transparent)); }
+  .world h2 { display: flex; align-items: center; gap: 12px; }
+  .world h2 .emb-wrap { width: 48px; height: 48px; }
+  h1 .emb-wrap { display: inline-block; width: 44px; height: 44px; vertical-align: -9px; margin-right: 10px; }
+  .stop-emb { display: block; width: 28px; height: 28px; margin-top: 6px; }
+  @media (min-width: 640px) { .stop-emb { width: 34px; height: 34px; } }
 </style>
 </head>
 <body>
 
 <div class="stage">
   <header class="card">
-    <h1>TA Arena</h1>
+    <h1>You</h1>
     <p class="deck">Forty-two short games in seven worlds. Each world builds on the one before it.</p>
   </header>
 

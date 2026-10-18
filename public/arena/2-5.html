@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Little Professor · TA Arena</title>
+<title>Little Professor · You</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
@@ -271,21 +271,59 @@
   button.sfx { font-family: "IBM Plex Mono", monospace; font-size: 11px; font-weight: 600; letter-spacing: 0.06em; color: var(--on-bg-dim); background: transparent; border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 999px; padding: 4px 10px; min-height: 28px; cursor: pointer; }
   button.sfx:hover { color: var(--wc); border-color: var(--wc); }
   .masthead .right { display: flex; align-items: center; gap: 12px; }
+  :root {
+    --i-check: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Ccircle cx=%2212%22 cy=%2212%22 r=%229%22/%3E%3Cpath d=%22m8 12 3 3 5-6%22/%3E%3C/svg%3E");
+    --i-cross: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Ccircle cx=%2212%22 cy=%2212%22 r=%229%22/%3E%3Cpath d=%22m9 9 6 6M15 9l-6 6%22/%3E%3C/svg%3E");
+    --i-bolt: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M13 2 4 14h7l-1 8 9-12h-7z%22/%3E%3C/svg%3E");
+    --i-eye: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z%22/%3E%3Ccircle cx=%2212%22 cy=%2212%22 r=%223%22/%3E%3C/svg%3E");
+    --i-play: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M7 4v16l13-8z%22/%3E%3C/svg%3E");
+    --i-search: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Ccircle cx=%2211%22 cy=%2211%22 r=%227%22/%3E%3Cpath d=%22m20 20-4-4%22/%3E%3C/svg%3E");
+    --i-trophy: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M8 4h8v5a4 4 0 0 1-8 0zM8 6H4v1a3 3 0 0 0 4 3M16 6h4v1a3 3 0 0 1-4 3M12 13v4M8 21h8M10 17h4%22/%3E%3C/svg%3E");
+    --i-pencil: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M4 20l1-4L16 5l3 3L8 19z%22/%3E%3C/svg%3E");
+    --i-book: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M4 5a2 2 0 0 1 2-2h13v14H6a2 2 0 0 0-2 2zM4 19a2 2 0 0 0 2 2h13v-4%22/%3E%3C/svg%3E");
+    --i-help: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Ccircle cx=%2212%22 cy=%2212%22 r=%229%22/%3E%3Cpath d=%22M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.7.4-1 .9-1 1.7M12 17h.01%22/%3E%3C/svg%3E");
+    --i-crown: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M3 8l4 4 5-7 5 7 4-4-2 11H5z%22/%3E%3C/svg%3E");
+    --i-lock: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Crect x=%225%22 y=%2211%22 width=%2214%22 height=%229%22 rx=%222%22/%3E%3Cpath d=%22M8 11V8a4 4 0 0 1 8 0v3%22/%3E%3C/svg%3E");
+    --i-home: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M3 11l9-8 9 8M5 10v10h14V10%22/%3E%3C/svg%3E");
+    --i-speaker: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M4 9v6h4l5 4V5L8 9zM16 9a4 4 0 0 1 0 6%22/%3E%3C/svg%3E");
+    --i-spark: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M12 3l2 6 6 2-6 2-2 6-2-6-6-2 6-2z%22/%3E%3C/svg%3E");
+    --i-flag: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M5 21V4M5 4h11l-2 4 2 4H5%22/%3E%3C/svg%3E");
+  }
+
+  /* Line icons (CSS masks) */
+  .stamp::before, .ex-label::before, .end-badge::before, .reflect-tag::before, .source b::before, .ask .kicker::before,
+  .round-label::before, .boss-tag::before, .state::before, a.tag::before, button.sfx::before {
+    content: ""; display: inline-block; width: 1.2em; height: 1.2em; margin-right: 0.4em; vertical-align: -0.24em;
+    background: currentColor; -webkit-mask: var(--ic) center / contain no-repeat; mask: var(--ic) center / contain no-repeat; }
+  .stamp::before { margin-right: 0; width: 1.3em; height: 1.3em; vertical-align: middle; }
+  .stamp.ok { --ic: var(--i-check); } .stamp.cross { --ic: var(--i-cross); } .stamp.amber { --ic: var(--i-help); }
+  .ex-label { --ic: var(--i-spark); } .end-badge { --ic: var(--i-trophy); } .reflect-tag { --ic: var(--i-pencil); }
+  .source b { --ic: var(--i-book); } .ask .kicker { --ic: var(--i-help); } .boss-tag { --ic: var(--i-crown); }
+  .state { --ic: var(--i-lock); } a.tag { --ic: var(--i-home); } button.sfx { --ic: var(--i-speaker); }
+  .round-label { --ic: var(--i-help); }
+  .round-label[data-lv="spot"] { --ic: var(--i-eye); } .round-label[data-lv="play"] { --ic: var(--i-play); }
+  .round-label[data-lv="analyse"] { --ic: var(--i-search); } .round-label[data-lv="debrief"] { --ic: var(--i-spark); }
+  .boss-tag::before, .state::before { width: 1.1em; height: 1.1em; margin-right: 0.3em; }
+  .emb { display: block; width: 100%; height: 100%; overflow: visible; }
+  .emb-wrap { display: block; flex: none; width: 46px; height: 46px; filter: drop-shadow(0 0 10px color-mix(in srgb, var(--wc) 45%, transparent)); }
+  .series .emb-wrap { display: inline-block; width: 24px; height: 24px; vertical-align: -7px; margin-right: 8px; filter: none; }
+  .case-no .emb-wrap { margin: 0 0 8px auto; }
+  .end-emblem { width: 64px; height: 64px; margin: 0 0 12px; filter: drop-shadow(0 0 14px color-mix(in srgb, var(--wc) 55%, transparent)); }
 </style>
 <link rel="manifest" href="/TA/arena/manifest.json">
 <meta name="theme-color" content="#171233">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="TA Arena">
-<link rel="icon" href="/TA/favicon.svg">
-<link rel="apple-touch-icon" href="/TA/icon-192.png">
+<meta name="apple-mobile-web-app-title" content="You">
+<link rel="icon" href="/TA/arena/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/TA/arena/icon-192.png">
 </head>
 <body>
 
 <div class="stage">
   <div class="masthead">
-    <div class="series" id="series">TA Arena</div>
-    <div class="right"><button type="button" class="sfx" id="sfx" aria-pressed="true">SFX ON</button><a class="tag" id="hubLink" href="#" hidden>← All games</a></div>
+    <div class="series" id="series">You</div>
+    <div class="right"><button type="button" class="sfx" id="sfx" aria-pressed="true" aria-label="Sound">SFX ON</button><a class="tag" id="hubLink" href="#" hidden>All games</a></div>
   </div>
   <main class="card" id="card" tabindex="-1">
     <p class="deck">Loading the game.</p>
@@ -293,6 +331,7 @@
   </main>
 </div>
 
+<script>window.TA_EMB = {"1": "<svg class=\"emb\" viewBox=\"0 0 36 36\" aria-hidden=\"true\" focusable=\"false\"><linearGradient id=\"w1g\" x1=\"0%\" y1=\"0%\" x2=\"100%\" y2=\"100%\"><stop offset=\"0%\" stop-color=\"#FFA000\"/><stop offset=\"100%\" stop-color=\"#FF3D00\"/></linearGradient><g stroke=\"url(#w1g)\" stroke-width=\"3\" stroke-linecap=\"round\"><line x1=\"8\" y1=\"8\" x2=\"8\" y2=\"28\"/><line x1=\"14\" y1=\"8\" x2=\"14\" y2=\"28\"/><line x1=\"20\" y1=\"8\" x2=\"20\" y2=\"28\"/><line x1=\"26\" y1=\"8\" x2=\"26\" y2=\"28\"/></g><line x1=\"4\" y1=\"24\" x2=\"30\" y2=\"12\" stroke=\"#FFFC00\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><circle cx=\"31\" cy=\"11\" r=\"2.5\" fill=\"#FFFC00\"/></svg>", "2": "<svg class=\"emb\" viewBox=\"0 0 36 36\" aria-hidden=\"true\" focusable=\"false\"><line x1=\"18\" y1=\"6\" x2=\"18\" y2=\"30\" stroke=\"rgba(255,255,255,0.3)\" stroke-width=\"2\" stroke-dasharray=\"2 2\"/><circle cx=\"18\" cy=\"8\" r=\"4.5\" fill=\"#F43F5E\" stroke=\"#fff\" stroke-width=\"1.5\"/><circle cx=\"18\" cy=\"18\" r=\"6\" fill=\"#06B6D4\" stroke=\"#FFFC00\" stroke-width=\"2\"/><circle cx=\"18\" cy=\"28\" r=\"4.5\" fill=\"#F59E0B\" stroke=\"#fff\" stroke-width=\"1.5\"/></svg>", "3": "<svg class=\"emb\" viewBox=\"0 0 36 36\" aria-hidden=\"true\" focusable=\"false\"><linearGradient id=\"w3a\" x1=\"0%\" y1=\"0%\" x2=\"100%\" y2=\"100%\"><stop offset=\"0%\" stop-color=\"#C084FC\"/><stop offset=\"100%\" stop-color=\"#9333EA\"/></linearGradient><linearGradient id=\"w3b\" x1=\"100%\" y1=\"0%\" x2=\"0%\" y2=\"100%\"><stop offset=\"0%\" stop-color=\"#FFFC00\"/><stop offset=\"100%\" stop-color=\"#F59E0B\"/></linearGradient><line x1=\"6\" y1=\"6\" x2=\"30\" y2=\"30\" stroke=\"url(#w3a)\" stroke-width=\"3.2\" stroke-linecap=\"round\"/><line x1=\"30\" y1=\"6\" x2=\"6\" y2=\"30\" stroke=\"url(#w3b)\" stroke-width=\"3.2\" stroke-linecap=\"round\"/><polygon points=\"30,30 24,29 29,24\" fill=\"#C084FC\"/><polygon points=\"6,30 12,29 7,24\" fill=\"#FFFC00\"/><circle cx=\"18\" cy=\"18\" r=\"3\" fill=\"#fff\"/><circle cx=\"18\" cy=\"18\" r=\"6\" fill=\"none\" stroke=\"#FFFC00\" stroke-width=\"1.2\" opacity=\"0.8\"/></svg>", "4": "<svg class=\"emb\" viewBox=\"0 0 36 36\" aria-hidden=\"true\" focusable=\"false\"><linearGradient id=\"w4g\" x1=\"0%\" y1=\"0%\" x2=\"100%\" y2=\"100%\"><stop offset=\"0%\" stop-color=\"#FB7185\"/><stop offset=\"100%\" stop-color=\"#E11D48\"/></linearGradient><path d=\"M18 9 C13 7 7 7 4 8 L4 26 C8 25 13 25 18 28 C23 25 28 25 32 26 L32 8 C29 7 23 7 18 9 Z\" fill=\"url(#w4g)\" stroke=\"#fff\" stroke-width=\"1.5\"/><line x1=\"18\" y1=\"9\" x2=\"18\" y2=\"28\" stroke=\"#FFE4E6\" stroke-width=\"2\"/><polygon points=\"18,14 14,21 22,21\" fill=\"#FFFC00\" stroke=\"#000\" stroke-width=\"1\"/></svg>", "5": "<svg class=\"emb\" viewBox=\"0 0 36 36\" aria-hidden=\"true\" focusable=\"false\"><linearGradient id=\"w5g\" x1=\"0%\" y1=\"0%\" x2=\"0%\" y2=\"100%\"><stop offset=\"0%\" stop-color=\"#FFFFFF\"/><stop offset=\"40%\" stop-color=\"#67E8F9\"/><stop offset=\"100%\" stop-color=\"#0E7490\"/></linearGradient><line x1=\"3\" y1=\"13\" x2=\"33\" y2=\"13\" stroke=\"#22D3EE\" stroke-width=\"2\" stroke-dasharray=\"3 1\"/><polygon points=\"18,6 23,13 13,13\" fill=\"#fff\" stroke=\"#67E8F9\" stroke-width=\"1.2\"/><polygon points=\"13,13 23,13 27,29 9,29\" fill=\"url(#w5g)\" stroke=\"#0891B2\" stroke-width=\"1.5\"/><path d=\"M12 32 Q18 35 24 32\" stroke=\"#06B6D4\" stroke-width=\"1.5\" fill=\"none\" opacity=\"0.6\" stroke-linecap=\"round\"/></svg>", "6": "<svg class=\"emb\" viewBox=\"0 0 36 36\" aria-hidden=\"true\" focusable=\"false\"><linearGradient id=\"w6g\" x1=\"0%\" y1=\"0%\" x2=\"100%\" y2=\"100%\"><stop offset=\"0%\" stop-color=\"#34D399\"/><stop offset=\"100%\" stop-color=\"#059669\"/></linearGradient><circle cx=\"18\" cy=\"6\" r=\"3.5\" fill=\"#FFFC00\" stroke=\"#fff\" stroke-width=\"1\"/><path d=\"M18 9.5 V16 M18 16 L9 26 M18 16 L27 26\" stroke=\"#34D399\" stroke-width=\"2.5\" stroke-linecap=\"round\" fill=\"none\"/><circle cx=\"9\" cy=\"27\" r=\"4\" fill=\"url(#w6g)\" stroke=\"#fff\" stroke-width=\"1.2\"/><circle cx=\"27\" cy=\"27\" r=\"4\" fill=\"url(#w6g)\" stroke=\"#fff\" stroke-width=\"1.2\"/><line x1=\"12.5\" y1=\"24\" x2=\"23.5\" y2=\"24\" stroke=\"#FFFC00\" stroke-width=\"1.5\" stroke-dasharray=\"2 2\"/></svg>", "7": "<svg class=\"emb\" viewBox=\"0 0 36 36\" aria-hidden=\"true\" focusable=\"false\"><radialGradient id=\"w7g\" cx=\"50%\" cy=\"100%\" r=\"80%\"><stop offset=\"0%\" stop-color=\"#FFFC00\"/><stop offset=\"60%\" stop-color=\"#F59E0B\"/><stop offset=\"100%\" stop-color=\"#D97706\"/></radialGradient><path d=\"M7 23 A11 11 0 0 1 29 23 Z\" fill=\"url(#w7g)\" stroke=\"#FFFC00\" stroke-width=\"1.5\"/><line x1=\"3\" y1=\"23\" x2=\"33\" y2=\"23\" stroke=\"#FDE68A\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><g stroke=\"#FFFC00\" stroke-width=\"2.5\" stroke-linecap=\"round\"><line x1=\"18\" y1=\"5\" x2=\"18\" y2=\"9\"/><line x1=\"8\" y1=\"9\" x2=\"11\" y2=\"12\"/><line x1=\"28\" y1=\"9\" x2=\"25\" y2=\"12\"/><line x1=\"31\" y1=\"17\" x2=\"27\" y2=\"18\"/><line x1=\"5\" y1=\"17\" x2=\"9\" y2=\"18\"/></g></svg>"};</script>
 <script>window.TA_GAME = {"slot":"2.5","title":"Little Professor","world":2,"worldName":"Three Voices","week":2,"weekName":"Three Voices","mechanic":"Choice-story","concept":"After this one you can see a child learn a trap by copying what gets a nod, and you can catch the trap while it is still being born.","plainWord":"a trap","bookTerm":"Little Professor","bookIdea":"The Little Professor is the Adult inside the Child: the intuitive, quick-witted part that works out what gets a response from people. Berne found that young children set games up themselves by copying what works.","bookSource":"Games People Play, ch. 5; Scripts People Live, ch. 2; TA Today, ch. 4","opener":{"setting":"Saturday, 16:00, Gran's kitchen in 1A. Dinner is on the stove and bitter gourd is frying in the pan.","lines":[{"who":"Gran","text":"\u201cLeo, come and sit. Eat your bitter gourd, it's good for you.\u201d","cue":"stirring the pan with her back to the room"}],"ask":"Can you spot a trap being copied in this kitchen, and choose a move that stops it rather than feeds it?"},"rounds":[{"level":"Spot","label":"Spot, round 1","intro":"<b>How this one works:<\/b> you read what just happened at the table, then say what it was. Three quick questions before the scene starts.","items":[{"type":"pick","who":"Gran, to Tara","text":"\u201cOh! Come, lie down, I'll make you a herbal drink.\u201d","cue":"Tara, 10, is clutching her stomach. Gran is already reaching for the kettle.","options":["A big warm nod, for being","A cold nod, for doing wrong","Nothing, she was not noticed"],"answer":0,"why":"Gran came running at once, with warmth and full attention. Tara got it for a stomach ache, so the nod was for being unwell, and she had done nothing to earn it.","traps":{"1":"A cold nod would be a telling-off, like \u201cStop making a fuss.\u201d Gran did the opposite, and warmly.","2":"Nothing would mean Tara was ignored. Gran was across the kitchen before the sentence had finished."},"example":"A school sports day, a coach to a boy who limps off the field: \u201cCome and sit, champ, I'll get you water.\u201d<br>The boy is fussed over, and the match is forgotten for ten minutes."},{"type":"pick","who":"Leo, from the stool","text":"\u201cGran\u2026 my stomach hurts too.\u201d","cue":"eyeing the bitter gourd on his plate, his voice in the same tone Tara used","options":["A real stomach ache, nothing else","A copy of the move that got Tara fussed over","A quiet protest about the bitter gourd"],"answer":1,"why":"The bitter gourd is part of it, but the timing and the words matter more. Same words, same moment, same reward: Leo has seen the stomach work for Tara, and he is trying it.","traps":{"0":"A real stomach ache would come on its own, not ten minutes after Tara's nod and just as the bitter gourd appears on the plate.","2":"A protest about the bitter gourd would be loud and honest. Leo is asking for the nod, and the taste has nothing to do with it."},"example":"A family birthday, a cousin who suddenly needs the loo just as the cake is cut. Last year someone else left the room with a big fuss, and got cake brought to them.<br>The timing gives the copy away."},{"type":"pick","who":"Grace, at the stove","text":"\u201cEthan does the exact same thing. The headache before homework.\u201d","cue":"dry and tired, a knowing look at you","options":["Ethan is properly ill every time","Ethan has learned a move that works","Grace is cross with the school"],"answer":1,"why":"Ethan, like Leo, has found a bid that gets him out of something. The headache has worked before, so he keeps using it, and nobody has to decide it is a lie.","traps":{"0":"A real illness would not come back every time the homework does. Grace is describing a pattern she has seen before.","2":"Her tone is tired, not angry at the school. The line is about a pattern that works on her."},"example":"A family WhatsApp group, an uncle who always has \u201ca call\u201d just before the family vote: \u201cSorry, got to take this one, back in five.\u201d<br>The call is always at the same point in the agenda."}]},{"level":"Play","label":"Play, the week in motion","items":[{"type":"scene","title":"Saturday, 16:10, Gran's kitchen","setting":"Ten minutes after Tara's nod. The bitter gourd is on Leo's plate, and he is watching the room the way a chess player watches the board.","meters":{"you":70,"them":50},"beats":[{"who":"Leo","text":"\u201cGran\u2026 my stomach hurts too.\u201d","cue":"eyes on the bitter gourd, one hand on his tummy","lines":[{"text":"\u201cDoes it really hurt, or is it the bitter gourd?\u201d (said under the breath, with a wink)","tag":"best","you":4,"them":8,"outcome":"Leo snorts and says \u201cThe bitter gourd!\u201d Grace laughs into her glass. The bid never gets going.","why":"You caught the bid with a joke that lets him off, so nobody has to be the villain. The trap is broken while it is still being born."},{"text":"\u201cOh no, poor Leo, no bitter gourd for him.\u201d","tag":"game","you":-2,"them":3,"outcome":"Gran agrees at once, Leo slides the bitter gourd to the side and grins. Under his name, a faint thread appears.","why":"You fed the bid. The move got him what he wanted, so next time he will try it sooner. A trap move ends the scene here."},{"text":"\u201cHe just doesn't want the bitter gourd, Gran.\u201d","tag":"ok","you":-2,"them":-6,"outcome":"Leo glares at you across the table. Gran clicks her tongue and gives him the herbal drink anyway, to keep the peace.","why":"The trap stops, but by shaming. It works for tonight and teaches him to hide the next bid better, so it is the wrong tool."}]},{"who":"Leo","text":"\u201cGran, my head hurts now. Can I have the herbal drink without the bitter gourd?\u201d","cue":"a sly look, testing whether you will go along with it","lines":[{"text":"\u201cWhich one hurts, the head or the bitter gourd? Show me, and I'll believe you.\u201d","tag":"best","you":3,"them":5,"outcome":"He pauses, then laughs: \u201cBoth, but mostly the bitter gourd.\u201d Gran laughs too, and the herbal drink arrives without a fuss.","why":"You asked for the real answer, and that let him be honest without losing face. A kind question gives a child a way out of the bid."},{"text":"\u201cGran, let him have the herbal drink, he's ill.\u201d","tag":"game","you":-3,"them":2,"outcome":"Gran pours a second cup. Leo sips it and looks pleased with himself, and the next bid is already forming.","why":"You took the bid at face value and rewarded it. Feeding the copy is the same move as feeding the original, and it ends the scene early."},{"text":"\u201cOkay, have the herbal drink, love.\u201d","tag":"ok","you":0,"them":1,"outcome":"Leo sips and says nothing. The next bid will come sooner, and he knows it works.","why":"Giving in is gentle and does no harm this time. The honest answer is still missing."}]},{"who":"Gran","text":"\u201cOh, what's going on with that boy's stomach?\u201d","cue":"turning round, a spoon in her hand","lines":[{"text":"\u201cHe's had a long day, Gran. Shall we ask him what he needs?\u201d","tag":"best","you":4,"them":6,"outcome":"Gran pauses. \u201cAsk him?\u201d She looks at Leo, who has no answer ready.","why":"You moved from guessing to asking. That leaves the child a real choice, and the trap loses its audience."},{"text":"\u201cLeo's stomach is fine, Gran. He's copying Tara.\u201d","tag":"ok","you":-4,"them":-6,"outcome":"Gran turns sharply. \u201cDon't say that, he's a child.\u201d The kitchen goes cold for a moment.","why":"Naming the copy is true, but it lands on Gran's care, so she defends him and the copying gets an audience."}]}],"payoff":"Gran gives him an extra spoon of herbal drink, and the trap has set one notch. Grace notices and says nothing."},{"type":"scene","title":"Saturday, 16:40, Gran's kitchen","setting":"Grace is drying the same plate for the third time. Leo is on the stool, cross about the bitter gourd. Gran is still at the stove.","meters":{"you":70,"them":50},"beats":[{"who":"Grace","text":"\u201cEthan does the exact same thing. The headache before homework. I never know whether to believe him.\u201d","cue":"drying the plate, not looking at you","lines":[{"text":"\u201cHard to tell a real one from the move, isn't it? Tara got fussed over for hers. He's copying what works.\u201d","tag":"best","you":3,"them":7,"outcome":"Grace stops drying. \u201c\u2026Huh. He is, isn't he.\u201d","why":"You named the pattern without blaming Ethan. Copying what works is how a trap spreads, and saying it aloud lets a parent see it from outside."},{"text":"\u201cYou should call his bluff.\u201d","tag":"ok","you":-3,"them":-3,"outcome":"Grace nods without looking up. She has heard that advice from everyone, and it did not help.","why":"Nobody asked for advice. It makes you the one who fixes her child, and leaves her nothing to do but agree."},{"text":"\u201cThat must be exhausting for you.\u201d","tag":"ok","you":0,"them":2,"outcome":"Grace sighs. \u201cYes. It really is.\u201d The moment stays heavy, and nothing moves.","why":"Warm, but it stays on the feeling and never helps her see the pattern. It is kind, and it does not open anything up."}]},{"who":"Grace","text":"\u201cSo what do I do? Take the phone away, or let him have the day off?\u201d","cue":"a real question this time, no sarcasm","lines":[{"text":"\u201cTell him kindly that the headache didn't work, and ask what would help him start the homework.\u201d","tag":"best","you":4,"them":6,"outcome":"Grace laughs. \u201cThat's a new one. Maybe I'll try it.\u201d","why":"You gave her a plain line that does not shame him and does not rescue him. He keeps his dignity, and the bid loses its reward."},{"text":"\u201cTake the phone away, every time.\u201d","tag":"ok","you":-2,"them":-2,"outcome":"\u201cYes, I tried that,\u201d she says flatly.","why":"A rule enforced hard feels like a fight, and the bid keeps its audience. It does no harm, and it still falls short of the best move."},{"text":"\u201cI'd just believe him, to be safe.\u201d","tag":"game","you":-6,"them":3,"outcome":"Grace relaxes for a moment. The homework goes unfinished, and the headache is now the way the evening ends.","why":"You agreed to let the headache count. That is a trap move, and it ends the scene here with the result below."}]},{"who":"Gran","text":"\u201cGrace, leave the boy alone. He's only a child.\u201d","cue":"without turning round, spoon still in hand","lines":[{"text":"\u201cHe is a child, Gran. That's why he's learning so fast.\u201d","tag":"best","you":3,"them":4,"outcome":"Gran turns round, a little startled. \u201c\u2026Hm. Learning, yes.\u201d","why":"You agreed he is a child and kept the lesson in view. The line protects Leo without pretending the pattern is not there."},{"text":"\u201cYes, Gran, you're right, I shouldn't have said it.\u201d","tag":"ok","you":-4,"them":1,"outcome":"Gran nods, satisfied. Grace looks at the floor.","why":"You gave up the point to keep the peace. It is pleasant, and it leaves the trap running."}]}],"payoff":"Grace believes the headache every time from now on, and the bid goes up in price."}]},{"level":"Analyse","label":"Analyse, explain it","items":[{"type":"pick","who":"Leo, on the stool, after the kitchen","text":"\u201cTara got the herbal drink. Ethan got the day off. So my stomach works best on Saturdays.\u201d","cue":"working it out out loud, very pleased with himself","options":["The Kid's own pilot","The Kid's raw feelings","The Kid's copy of a grown-up rule"],"answer":0,"why":"Leo is running a small, clever pilot of his own. He has watched which move gets a nod from the people around him and worked out when it pays. That quick, intuitive thinking sits inside the Kid, and it is where a trap is first set up.","traps":{"1":"The Kid's raw feelings would be the wail or the giggle itself, wanting with no plan behind it. Leo is lining up Tara and Ethan as evidence, and that is thinking.","2":"A copied grown-up rule would sound like something Gran says: \u201cNever waste good food.\u201d Leo is not repeating anyone's rule. He is comparing what worked for other children and drawing his own conclusion."},"example":"A cricket match in the lane, a boy who has worked out that the other side gives him another go whenever he sulks: \u201cEvery time I cry, they give me another go.\u201d<br>Working out what gets the nod is a plan the child has made."}]}],"debrief":{"nadia":"A child watches which move gets a nod and copies it, and that is how a trap is born. You can catch it the moment it starts, with a joke that lets the child off or a plain question that gives a real choice. Feeding it keeps it running, and shaming stops it only for tonight.","bookTerm":"Little Professor","bookNote":"The books call this the Little Professor, the Adult in the Child: the intuitive, quick-witted part of a child that works out what gets a response from people. Berne found that young children set games up themselves, as when a small boy copied his brother's stomach ache at the dinner table, and that a father who simply asked whether he wanted to play that game stopped it as it was being born."},"reflection":{"prompt":"Think of a bid for attention you made this week, like a headache or a sigh. What did it get you, and what would a plain question have got you instead?"},"next":"2.6"};</script>
 <script>window.TA_NAV = {"hub":"https://vaibhav-labs.github.io/TA/arena/","next":{"slot":"2.6","title":"Boss: The Contaminated Adult","url":"https://vaibhav-labs.github.io/TA/arena/2-6.html"}};</script>
 <script>
@@ -405,7 +444,7 @@
   function frame(k, body, showIntro) {
     var rec = ITEMS[k];
     var intro = showIntro && rec.round.intro ? '<p class="round-intro">' + rich(rec.round.intro) + '</p>' : "";
-    return progressHTML(k, k) + '<div class="round-label">' + rich(rec.round.label) + '</div>' + intro + body;
+    return progressHTML(k, k) + '<div class="round-label" data-lv="' + esc(String(rec.round.label).split(/[ ,]/)[0].toLowerCase()) + '">' + rich(rec.round.label) + '</div>' + intro + body;
   }
 
   // ---------- flow ----------
@@ -461,11 +500,11 @@
         (n === 1 ? ' item' : ' items') + '</span></li>';
     }).join("");
     card.innerHTML =
-      '<div class="tagline">TA Arena · World ' + esc(GAME.world) + ', ' + rich(GAME.worldName) +
+      '<div class="tagline">You · World ' + esc(GAME.world) + ', ' + rich(GAME.worldName) +
       ' · Game ' + esc(GAME.slot) + '</div>' +
       '<div class="card-head"><div><h1>' + rich(GAME.title) + '</h1>' +
       '<p class="deck">' + rich(GAME.concept) + '</p></div>' +
-      '<div class="case-no">' + esc(GAME.slot) + '<br>' + rich(GAME.weekName) + '</div></div>' +
+      '<div class="case-no"><span class="emb-wrap">' + ((window.TA_EMB || {})[String(GAME.world)] || "") + '</span>' + esc(GAME.slot) + '<br>' + rich(GAME.weekName) + '</div></div>' +
       '<p class="lede"><i>' + rich(op.setting) + '</i></p>' +
       '<div class="exchange">' + lines + '</div>' +
       '<div class="ask"><div class="kicker">The question</div><p>' + rich(op.ask) + '</p></div>' +
@@ -500,9 +539,9 @@
       buttons[it.answer].classList.add("correct");
       if (!right) buttons[i].classList.add("wrong");
       var body = right
-        ? '<div class="why-box ok"><div class="stamp ok">✓ Right call</div>' +
+        ? '<div class="why-box ok"><div class="stamp ok">Right call</div>' +
           '<p class="feedback"><b>Why:</b> ' + rich(it.why) + '</p></div>'
-        : '<div class="why-box cross"><div class="stamp cross">✗ Not quite</div>' +
+        : '<div class="why-box cross"><div class="stamp cross">Not quite</div>' +
           '<p class="feedback"><b>You picked ' + rich(labels[i]) + '.</b> ' +
           rich((it.traps || {})[String(i)]) + '</p>' +
           '<p class="feedback"><b>The right call is ' + rich(labels[it.answer]) + '.</b> ' +
@@ -663,9 +702,9 @@
         if (!right) buttons[pick].classList.add("wrong");
         var fb = document.createElement("div");
         fb.innerHTML = right
-          ? '<div class="why-box ok"><div class="stamp ok">✓ Right call</div>' +
+          ? '<div class="why-box ok"><div class="stamp ok">Right call</div>' +
             '<p class="feedback"><b>Why:</b> ' + rich(c.why) + '</p></div>'
-          : '<div class="why-box cross"><div class="stamp cross">✗ Not quite</div>' +
+          : '<div class="why-box cross"><div class="stamp cross">Not quite</div>' +
             '<p class="feedback"><b>You picked ' + rich(bins[pick]) + '.</b> It belongs in ' +
             rich(bins[c.answer]) + '.</p>' +
             '<p class="feedback"><b>Why:</b> ' + rich(c.why) + '</p></div>';
@@ -796,7 +835,7 @@
       var cls = hit ? "ok" : (under ? "amber" : "cross");
       var fb = document.createElement("div");
       fb.innerHTML = '<div class="why-box ' + cls + '"><div class="stamp ' + cls + '">' +
-        (hit ? "✓ Right call" : "✗ Not quite") + '</div>' +
+        (hit ? "Right call" : "Not quite") + '</div>' +
         '<p class="feedback">' + rich(msg) + '</p>' +
         '<p class="feedback"><b>Why:</b> ' + rich(c.why) + '</p></div>' +
         nextbar("Continue →");
@@ -813,7 +852,7 @@
   function renderDebrief() {
     var d = GAME.debrief || {};
     card.innerHTML = progressHTML(TOTAL, -1) +
-      '<div class="round-label">Debrief</div>' +
+      '<div class="round-label" data-lv="debrief">Debrief</div>' +
       '<h1 class="h2">What Nadia would say</h1>' +
       '<p class="feedback">' + rich(d.nadia) + '</p>' +
       '<div class="why-box neutral"><p class="feedback"><b>' +
@@ -858,7 +897,7 @@
         : '<p class="next-soon">Next game opens soon</p>';
     }
     card.innerHTML = progressHTML(TOTAL, -1) +
-      '<div class="end-badge">Case closed</div>' +
+      '<div class="end-emblem">' + ((window.TA_EMB || {})[String(GAME.world)] || "") + '</div><div class="end-badge">Case closed</div>' +
       '<h1 class="h2">Game ' + esc(GAME.slot) + ' is done.</h1>' +
       '<p class="feedback">' + rich(GAME.concept) + '</p>' +
       '<div class="source"><b>From:</b> ' + rich(GAME.bookSource) + '</div>' +
@@ -871,11 +910,11 @@
     var series = document.getElementById("series");
     var hubLink = document.getElementById("hubLink");
     if (!GAME || !GAME.rounds) {
-      series.textContent = "TA Arena";
+      series.textContent = "You";
       card.innerHTML = '<h1 class="h2">This game could not load.</h1>';
       return;
     }
-    series.innerHTML = 'TA Arena <small>· World ' + esc(GAME.world) + ' · Game ' + esc(GAME.slot) + '</small>';
+    series.innerHTML = '<span class="emb-wrap">' + ((window.TA_EMB || {})[String(GAME.world)] || "") + '</span>You <small>· World ' + esc(GAME.world) + ' · Game ' + esc(GAME.slot) + '</small>';
     var hub = safeUrl(NAV.hub);
     if (hub) {
       hubLink.setAttribute("href", hub);

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build the TA Arena game pages and the hub.
+"""Build the You game pages and the hub.
 
 Usage:
   python3 TA/engine/build.py                    games from TA/content into TA/out
@@ -19,6 +19,8 @@ import json
 import os
 import re
 import sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from emblems import EMBLEMS
 
 ENGINE = os.path.dirname(os.path.abspath(__file__))
 TA = os.path.dirname(ENGINE)
@@ -545,7 +547,7 @@ def strip_tags(s):
 def fill_template(template, game, nav_obj):
     page = DATA_RE.sub(lambda m: safe_json(game), template, count=1)
     page = NAV_RE.sub(lambda m: safe_json(nav_obj), page, count=1)
-    title = html.escape(strip_tags(game["title"])) + " · TA Arena"
+    title = html.escape(strip_tags(game["title"])) + " · You"
     page = TITLE_RE.sub(lambda m: f"<title>{title}</title>", page, count=1)
     return page
 
@@ -687,7 +689,7 @@ def world_html(n, w, games, nav):
     return (
         f'<section class="card world" id="world-{n}" aria-labelledby="world-{n}-title">\n'
         f'  <p class="kicker">World {n} of 7 · Week {n} · {plain(w["weekName"])}</p>\n'
-        f'  <h2 id="world-{n}-title">{plain(w["name"])}</h2>\n'
+        f'  <h2 id="world-{n}-title"><span class="emb-wrap">{EMBLEMS[n]}</span>{plain(w["name"])}</h2>\n'
         f'  <p class="intro">{plain(w["intro"])}</p>\n'
         f'  <p class="why"><span class="label">Why it comes here:</span> {plain(w["why"])}</p>\n'
         f'  <p class="can">After this world you can {plain(w["can"])}.</p>\n'
@@ -705,6 +707,7 @@ def worlds_html(games, nav, intro):
 def route_html(intro):
     """The seven numbered stops at the top. Each stop jumps to its world section."""
     stops = [f'<li><a href="#world-{n}"><span class="num">{n}</span>'
+             f'<span class="stop-emb">{EMBLEMS[n]}</span>'
              f'<span class="sname">{plain(intro[n]["name"])}</span></a></li>'
              for n in WORLD_NUMBERS]
     return '<ol class="route-list">\n    ' + "\n    ".join(stops) + "\n  </ol>"
@@ -756,7 +759,7 @@ def build_hub(args, nav):
 
 
 def main(argv=None):
-    ap = argparse.ArgumentParser(description="Build TA Arena pages.")
+    ap = argparse.ArgumentParser(description="Build You pages.")
     ap.add_argument("--content-dir", default=os.path.join(TA, "content"))
     ap.add_argument("--out-dir", default=os.path.join(TA, "out"))
     ap.add_argument("--nav", default=os.path.join(ENGINE, "nav.json"))
