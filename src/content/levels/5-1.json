@@ -1,0 +1,78 @@
+{
+  "id": "5-1",
+  "title": "Real or Racket",
+  "world": 5,
+  "engine": "diagnose",
+  "concepts": [36],
+  "source": { "book": "TA Today", "chapter": 21, "quote": "racket feelings never help finish the situation." },
+  "setting": "Two weeks after the release mess. Thursday, 4:50pm, sprint retro wrapping up. Arjun has been quiet the whole meeting, then speaks up as people start closing their laptops.",
+  "playAs": "Priya, the team lead",
+  "levels": {
+    "L1": {
+      "npc": "Arjun",
+      "expression": "tense",
+      "line": "Ha, whatever, it doesn't matter. I'll just fix it again, like always.",
+      "cues": ["bitter half-laugh", "\"like always\"", "doesn't name what's wrong or ask anyone for anything"],
+      "question": "Is Arjun expressing an authentic feeling here, or a racket feeling?",
+      "options": [
+        { "text": "Authentic frustration - he was genuinely overworked, so saying it plainly will get it fixed.", "feedback": "He isn't naming anything specific or asking for a change - he's not saying what's wrong, just replaying a line. That's not what authentic, problem-solving frustration sounds like." },
+        { "text": "A racket feeling - it feels real to him, but the bitter laugh and \"like always\" are signals of an old script belief being replayed, and saying it changes nothing.", "feedback": "Right. The tell isn't whether it's genuine - he's really feeling it. The tell is that expressing it doesn't move anything, and the recycled line is the signature of a racket, not fresh anger about today." },
+        { "text": "A racket feeling, simply because he's being negative - any complaint like this is a racket.", "feedback": "Close, but not for that reason. Negativity alone isn't the tell - authentic anger can sound sharp too. The tell here is specifically that it never resolves anything, not that it sounds bad." }
+      ],
+      "answer": 1,
+      "lesson": "A racket feeling can feel completely real - the tell isn't whether it's genuine, it's whether expressing it ever finishes anything. Arjun's bitter laugh and his recycled line (\"like always\") are signals of a discount, not fresh, present-tense anger about today."
+    },
+    "L2": {
+      "intro": "You want to find out if there's a real, solvable problem here - not just hand him another stroke for the old story. What do you say?",
+      "beats": [
+        {
+          "npc": "Arjun",
+          "expression": "tense",
+          "line": "Ha, whatever, it doesn't matter. I'll just fix it again, like always.",
+          "cues": ["bitter laugh", "same complaint, different week"],
+          "egoState": "AC",
+          "options": [
+            {
+              "text": "You always do end up fixing it, don't you.",
+              "tag": "game-move",
+              "egoState": "NP",
+              "outcome": "Arjun gives a small, satisfied nod. \"Yeah. Story of my life.\" The meeting moves on; nothing about the workload changes.",
+              "outcomeExpression": "neutral",
+              "lesson": "Agreeing with the racket line pays him a stamp for it - this is Fanita English's racketeering: trading strokes for the feeling instead of looking at the actual problem underneath it."
+            },
+            {
+              "text": "That sounds exhausting. Take it easy today.",
+              "tag": "ok",
+              "egoState": "NP",
+              "outcome": "He softens. \"Thanks... I guess.\" He's comforted, but the actual workload problem stays exactly as it was.",
+              "outcomeExpression": "neutral",
+              "lesson": "Kind, but it strokes the racket feeling rather than the unmet need underneath it - useful once, but it won't move the real problem forward."
+            },
+            {
+              "text": "What specifically needs fixing, and whose is it to fix?",
+              "tag": "best",
+              "egoState": "A",
+              "outcome": "Arjun blinks, the laugh dropping. \"Actually... the deploy script is still broken from last sprint. I keep patching it by hand instead of flagging it.\" Now there's something to solve.",
+              "outcomeExpression": "open",
+              "lesson": "An Adult question toward the actual problem doesn't feed the racket feeling - it surfaces the real, solvable issue the racket was substituting for."
+            },
+            {
+              "text": "Must be rough feeling like it's always on you.",
+              "tag": "ok",
+              "egoState": "NP",
+              "outcome": "Arjun shrugs, not quite landing on it. \"I don't know, maybe.\"",
+              "outcomeExpression": "neutral",
+              "lesson": "Naming an authentic feeling (mad, sad, scared, glad) can help - but guessing at it from outside, without evidence, risks landing as just another stroke for the Child rather than a real opening."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "echoAfterHours": 24,
+  "echo": {
+    "setting": "A week later: Arjun says the same kind of line about a different ticket.",
+    "line": "Ha, whatever, I'll just handle it, like always.",
+    "shape": "same three-option diagnose shape as L1"
+  }
+}

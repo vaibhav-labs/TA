@@ -1,0 +1,137 @@
+{
+  "id": "4-5",
+  "title": "Room Games",
+  "world": 4,
+  "engine": "choice-story",
+  "concepts": [32, 33, 34, 35],
+  "source": { "book": "TA Today", "chapter": 25, "quote": "In Blemish, the player finds fault with others, criticizing their appearance, work, dress, etc." },
+  "setting": "A different room, a different cast, every stop this week - a bar, a therapist's office, a corner store, a neighbor's porch. Same six-stage machinery underneath, dressed differently for sexual and Underworld games too (Rapo's come-on-then-rebuff, Let's You and Him Fight's manufactured rivalry) wherever they show up.",
+  "playAs": "You, moving through all four rooms",
+  "levels": {
+    "L1": {
+      "npc": "Karan",
+      "expression": "open",
+      "line": "Did you see what Tanvi was wearing? And don't even get me started on Raj's new haircut...",
+      "cues": ["never a word about his own flaws", "laughed off as \"just teasing\"", "happening at a casual bar hangout"],
+      "question": "Karan's running commentary on everyone's flaws, laughed off as teasing, at a casual bar hangout. Is this a Party game, a Consulting-Room game, an Underworld game, or a Good game?",
+      "options": [
+        { "text": "Party game", "feedback": "Right - this is Blemish, played for laughs at a social gathering, exactly where Party games live: first-degree, time-structuring for a group, nobody involved is a client or a criminal." },
+        { "text": "Consulting-Room game", "feedback": "Consulting-Room games (like Stupid or Wooden Leg) need a professional \"helper\" in the room - a therapist, doctor, teacher. There's no helper here, just a bar and some friends." },
+        { "text": "Underworld game", "feedback": "Underworld games (like Cops and Robbers) are about criminals and the people who chase them. Karan isn't dodging the law, he's dodging a mirror." },
+        { "text": "Good game", "feedback": "Good games still run a Switch and a Payoff, but the payoff benefits someone besides the player. Karan's running commentary benefits Karan - at everyone else's expense." }
+      ],
+      "answer": 0,
+      "lesson": "GPP's game taxonomy sorts by social setting and who's in the room, not by how harmful the content feels: Party games run in casual social time-structuring, Consulting-Room games need a professional helper present, Underworld games involve crime and pursuit, and Good games keep the same structure but aim the payoff at someone other than the player."
+    },
+    "L2": {
+      "intro": "Three more rooms this week: a counselor's office, a corner store, and a neighbor's porch.",
+      "beats": [
+        {
+          "npc": "Yusuf",
+          "expression": "tense",
+          "line": "I've tried everything you've suggested, doctor, nothing works. I guess I'm just a hopeless case.",
+          "cues": ["fourth technique in four sessions, each one \"doesn't work\" within a week", "slight brightening when he says \"hopeless case\""],
+          "egoState": "C",
+          "options": [
+            {
+              "text": "Let's try one more approach - I have another idea.",
+              "tag": "game-move",
+              "egoState": "NP",
+              "outcome": "Yusuf nods eagerly. Next week: \"That one didn't work either, doctor.\"",
+              "outcomeExpression": "neutral",
+              "lesson": "Supplying idea number five keeps the Rescuer side of I'm Only Trying To Help You fully staffed - as long as there's always another technique coming, there's never a session where the pattern itself gets named."
+            },
+            {
+              "text": "I notice every technique I've offered has stopped working within a week. What do you make of that?",
+              "tag": "best",
+              "egoState": "A",
+              "outcome": "Yusuf shifts in his seat. \"...I hadn't thought about it that way.\" First time the pattern itself is on the table instead of the content.",
+              "outcomeExpression": "open",
+              "lesson": "Naming the repeating shape - not the fourth failed technique, the pattern of techniques failing - is how a helper steps off the Rescuer role ITHY keeps offering."
+            },
+            {
+              "text": "Maybe you're not trying hard enough.",
+              "tag": "game-move",
+              "egoState": "CP",
+              "outcome": "Yusuf's face falls. \"I knew you'd eventually say that too.\" He gets his kick, right on schedule - and you've just confirmed his \"I'm hopeless\" belief for him.",
+              "outcomeExpression": "tense",
+              "lesson": "This delivers the blame-the-Victim Switch he's fishing for, which actually completes his game's Payoff rather than interrupting it."
+            }
+          ]
+        },
+        {
+          "npc": "Deven",
+          "expression": "open",
+          "line": "...Yeah, it's in my pocket. I mean, you were gonna find it anyway.",
+          "cues": ["left the tag half-ripped where anyone could see", "more relieved than scared at getting caught", "third time this month at this store"],
+          "egoState": "C",
+          "options": [
+            {
+              "text": "You're banned from this store, I'm calling your parents right now.",
+              "tag": "ok",
+              "egoState": "CP",
+              "outcome": "Deven shrugs, almost smiling. \"Figured.\" The consequence lands and somehow still doesn't look like it touched anything underneath.",
+              "outcomeExpression": "neutral",
+              "lesson": "The real-world consequence is appropriate and necessary - and by itself, consequence is the Response stage of Cops and Robbers, not the exit from it; the thrill was never really about getting away with it."
+            },
+            {
+              "text": "You keep leaving the tags where we'll see them. What's actually going on?",
+              "tag": "best",
+              "egoState": "A",
+              "outcome": "Deven's smile drops. \"I don't know. I guess I wanted someone to notice.\" First honest sentence of the conversation.",
+              "outcomeExpression": "open",
+              "lesson": "For a player who's set up to get caught, the game's real payoff is the getting-caught itself - asking about that, past the theft, is what starts to address the actual need underneath the game."
+            },
+            {
+              "text": "Wow, you must think this is hilarious.",
+              "tag": "game-move",
+              "egoState": "P",
+              "outcome": "\"Yeah, maybe,\" Deven says, the small smile widening. Somehow the scolding is the best part of his day.",
+              "outcomeExpression": "tense",
+              "lesson": "Persecuting delivers exactly the reaction a Cops-and-Robbers player is unconsciously angling for - the attention of being caught, dressed up as punishment."
+            }
+          ]
+        },
+        {
+          "npc": "Mrs. Oyelaran",
+          "expression": "open",
+          "line": "Oh, you're worrying about the exam again? Sit, sit - tell me what's actually confusing you, let's look at it together.",
+          "cues": ["fifth kid this month who's shown up on her porch unannounced", "never brings it up unless asked, never takes credit afterward"],
+          "egoState": "NP",
+          "options": [
+            {
+              "text": "You should charge for tutoring, you're basically running a business for free.",
+              "tag": "ok",
+              "egoState": "A",
+              "outcome": "Mrs. Oyelaran laughs. \"Maybe one day.\" Nothing changes - she wasn't doing this for payment, and the suggestion doesn't land anywhere.",
+              "outcomeExpression": "neutral",
+              "lesson": "Reasonable, practical advice aimed at a want she doesn't have - it misreads what's actually going on in the exchange."
+            },
+            {
+              "text": "Isn't it exhausting, having kids just show up like that?",
+              "tag": "ok",
+              "egoState": "A",
+              "outcome": "\"Some days,\" she admits, \"but watching Deven's face when he gets it - that's the whole reason.\" She clearly isn't resentful, isn't collecting martyr points.",
+              "outcomeExpression": "open",
+              "lesson": "Looking for the hidden resentment assumes every helping pattern must secretly be I'm Only Trying To Help You - the tell that this one's different is that there's no Switch coming: ask her again next month, she'll still look like this."
+            },
+            {
+              "text": "This still runs on Formula G, doesn't it - so what makes it a GOOD game instead of a trap?",
+              "tag": "best",
+              "egoState": "A",
+              "outcome": "\"Ha! Never thought of it that way. I suppose... because nobody ends up worse off. Not even me.\"",
+              "outcomeExpression": "open",
+              "lesson": "A Good game keeps the same structure - an ulterior transaction, something like a payoff - but the payoff benefits someone besides the player, or costs nobody anything real. Not every game is a trap; most of the famous ones just are."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "echoAfterHours": 48,
+  "echo": {
+    "setting": "Two days later. Karan starts up again at a different table, same opening line, new target.",
+    "line": "Okay but don't you think it's a LITTLE much, what she's wearing?",
+    "shape": "same four-option shape as L1"
+  }
+}

@@ -1,0 +1,266 @@
+{
+  "id": "7-6",
+  "title": "After Games, What?",
+  "world": 7,
+  "engine": "choice-story",
+  "concepts": [61],
+  "source": {
+    "book": "Games People Play",
+    "chapter": 18,
+    "quote": "After games, what?"
+  },
+  "setting": "A long-postponed coffee. Vikram and Sana have been close since university, through a lot of old patterns - a few real fights, more unreal ones. Tonight feels different before either of them says anything.",
+  "playAs": "Vikram",
+  "levels": {
+    "L1": {
+      "npc": "Sana",
+      "expression": "tense",
+      "line": "I don't know why I even bother trying with people. Everyone always lets me down eventually.",
+      "cues": ["\"everyone\" - a blanket claim", "no specific ask attached", "sets Vikram up as either rescuer or exception"],
+      "question": "What is Sana actually opening with here?",
+      "options": [
+        { "text": "A plain statement of fact - she's just naming something true.", "feedback": "If it were just a fact, it wouldn't need to be this broad. \"Everyone always\" is doing work here - it's inviting a reaction, not reporting data." },
+        { "text": "A Victim-flavored opener - the real move is testing whether Vikram will rush to be the exception, or push back and prove her right.", "feedback": "Right. Reassuring her too fast makes Vikram the Rescuer; arguing makes him the Persecutor she expected. Either one keeps this a game instead of a conversation." },
+        { "text": "A sincere, specific request for comfort.", "feedback": "There's no specific ask here - that absence is exactly the tell that this is an opener, not yet a real request." }
+      ],
+      "answer": 1,
+      "lesson": "Naming what an opener is doing, without taking it personally and without rushing to fix it, is the precondition for everything that follows - six turns of staying out of Rescuer, Persecutor, and withdrawal, starting now."
+    },
+    "L2": {
+      "intro": "Six turns. Sana keeps offering old openings; Vikram has to find something real each time without rescuing, persecuting, or pulling away.",
+      "beats": [
+        {
+          "npc": "Sana",
+          "expression": "tense",
+          "line": "I don't know why I even bother trying with people. Everyone always lets me down eventually.",
+          "cues": ["blanket claim", "no specific ask"],
+          "egoState": "C",
+          "options": [
+            {
+              "text": "That sounds lonely. What actually happened today?",
+              "tag": "best",
+              "egoState": "A",
+              "outcome": "She exhales. \"...Someone I was counting on bailed on me, again. It's not really about you.\" The opener relaxes into an actual story.",
+              "outcomeExpression": "open",
+              "lesson": "Asking what actually happened, instead of either reassuring or correcting the blanket claim, is the Adult move that turns an opener into a real conversation."
+            },
+            {
+              "text": "You've got me, at least.",
+              "tag": "ok",
+              "egoState": "NP",
+              "outcome": "\"...Yeah. Thanks.\" Nice, but vague - the actual story never comes out.",
+              "outcomeExpression": "neutral",
+              "lesson": "Warm, but it answers the feeling behind the opener without ever asking what happened - a mild Rescue, comforting instead of curious."
+            },
+            {
+              "text": "You're right, people suck. I'm always here for you no matter what.",
+              "tag": "game-move",
+              "egoState": "NP",
+              "outcome": "Sana settles back, satisfied. \"...Yeah. At least I have you.\" The Victim role locks in.",
+              "outcomeExpression": "neutral",
+              "lesson": "Agreeing with the \"everyone\" and installing yourself as the exception is a full Rescue - it feels supportive, and it's exactly what keeps her in the Victim seat."
+            },
+            {
+              "text": "That's not really true, you do this every time.",
+              "tag": "game-move",
+              "egoState": "CP",
+              "outcome": "Sana's jaw tightens. \"...Wow. Even you.\" She leans back, vindicated in a different way.",
+              "outcomeExpression": "tense",
+              "lesson": "Correcting her confirms the exact accusation the opener was fishing for - Persecutor and Rescuer are two faces of the same unresolved resentment, and this is the Persecutor face."
+            }
+          ]
+        },
+        {
+          "npc": "Sana",
+          "expression": "tense",
+          "line": "I probably shouldn't have told you that - you're going to think less of me now.",
+          "cues": ["testing reaction to her own admission", "inviting reassurance or confirmation"],
+          "egoState": "C",
+          "options": [
+            {
+              "text": "I don't think less of you. I think you've had a rough stretch.",
+              "tag": "best",
+              "egoState": "A",
+              "outcome": "She exhales properly this time. \"...Okay. Thank you.\"",
+              "outcomeExpression": "open",
+              "lesson": "Specific and genuine beats generic reassurance - naming what's actually true (a rough stretch) instead of a blanket \"of course not\" is what makes this land as real."
+            },
+            {
+              "text": "No, of course not...",
+              "tag": "ok",
+              "egoState": "AC",
+              "outcome": "Trails off, a little flat. Sana looks at him, unconvinced. \"...Okay.\"",
+              "outcomeExpression": "neutral",
+              "lesson": "Technically the right words, delivered on autopilot - this is reassurance without weight behind it, and she can tell."
+            },
+            {
+              "text": "Anyway, how's work going?",
+              "tag": "game-move",
+              "egoState": "A",
+              "outcome": "Sana blinks. \"...Yeah. Fine, I guess.\" She goes quiet for the rest of the coffee order.",
+              "outcomeExpression": "neutral",
+              "lesson": "Changing the subject is withdrawal - the third trap alongside rescuing and persecuting. It feels safe, but it closes the exchange just as surely as an argument would."
+            },
+            {
+              "text": "Why would you think I'd judge you for that?",
+              "tag": "game-move",
+              "egoState": "CP",
+              "outcome": "\"...Sorry, forget it.\" She retreats, a little stung by the sharpness.",
+              "outcomeExpression": "tense",
+              "lesson": "The words defend her, but the tone persecutes - a sharp \"why would you think that\" lands as pushback, not reassurance."
+            }
+          ]
+        },
+        {
+          "npc": "Sana",
+          "expression": "neutral",
+          "line": "I keep trying to fix things with my sister but nothing works. What would you do?",
+          "cues": ["direct ask for advice", "old \"Why Don't You—Yes, But\" shape"],
+          "egoState": "C",
+          "options": [
+            {
+              "text": "What have you already tried?",
+              "tag": "best",
+              "egoState": "A",
+              "outcome": "She lists three things, actually reflecting out loud as she goes. \"...huh, I haven't tried just asking her what she needs.\"",
+              "outcomeExpression": "open",
+              "lesson": "Turning the request back rather than supplying an answer sidesteps the Yes-But trap entirely and lets her find her own next move."
+            },
+            {
+              "text": "That's a really hard one.",
+              "tag": "ok",
+              "egoState": "NP",
+              "outcome": "\"Yeah, it is.\" Sympathetic, and the conversation stalls there.",
+              "outcomeExpression": "neutral",
+              "lesson": "Sympathy is kind but doesn't move anything - no bait is offered, but nothing opens up either."
+            },
+            {
+              "text": "Why don't you just call her and apologize first?",
+              "tag": "game-move",
+              "egoState": "P",
+              "outcome": "\"Yeah, but she never picks up when I call.\" Classic Yes-But, right on schedule.",
+              "outcomeExpression": "tense",
+              "lesson": "Supplying the advice she asked for still walks into the trap - the game's shape doesn't require ill intent from Vikram, just an offered answer to shoot down."
+            }
+          ]
+        },
+        {
+          "npc": "Sana",
+          "expression": "tense",
+          "line": "You always say you'll be there, but you weren't there when my dad was in the hospital.",
+          "cues": ["direct accusation", "old resentment surfacing, real this time"],
+          "egoState": "CP",
+          "options": [
+            {
+              "text": "You're right, I wasn't, and that must have really hurt. I'm sorry - and I'm here now.",
+              "tag": "best",
+              "egoState": "A",
+              "outcome": "Sana's eyes well up. \"...Yeah. It did.\" A real, unguarded moment, no defense, no groveling.",
+              "outcomeExpression": "open",
+              "lesson": "Taking the accusation seriously without over-apologizing or arguing is the harder middle path - accountability without collapsing into one-down and without defending yourself out of it."
+            },
+            {
+              "text": "I'm so sorry, I'm honestly the worst friend, I'll make it up to you forever.",
+              "tag": "ok",
+              "egoState": "AC",
+              "outcome": "\"...Okay, it's not that big a deal, I guess.\" Sana ends up comforting him instead.",
+              "outcomeExpression": "neutral",
+              "lesson": "Over-apologizing flips the dynamic into a different Rescue - now Sana has to manage Vikram's guilt, which quietly erases the thing she was actually trying to say."
+            },
+            {
+              "text": "I was dealing with my own stuff too, you know.",
+              "tag": "game-move",
+              "egoState": "CP",
+              "outcome": "\"...Right. Of course you were.\" Flat, closed off.",
+              "outcomeExpression": "tense",
+              "lesson": "A defensive counter-justification, even a true one, lands as Persecution right now - it answers the accusation instead of the hurt underneath it."
+            }
+          ]
+        },
+        {
+          "npc": "Sana",
+          "expression": "open",
+          "line": "...Thanks for not running from that. I bet you're sick of hearing about my problems, though.",
+          "cues": ["genuine thanks, then an old self-deprecating reflex right after"],
+          "egoState": "AC",
+          "options": [
+            {
+              "text": "Not even a little. I like that you tell me real things.",
+              "tag": "best",
+              "egoState": "FC",
+              "outcome": "She actually smiles, unguarded. \"...Okay. Good.\"",
+              "outcomeExpression": "open",
+              "lesson": "Matching her candor instead of brushing it off keeps this a genuine exchange - naming what you actually value, not just denying the self-deprecation."
+            },
+            {
+              "text": "No, no, it's totally fine!",
+              "tag": "ok",
+              "egoState": "AC",
+              "outcome": "Quick, a little automatic. \"...Okay.\" The moment passes without quite landing.",
+              "outcomeExpression": "neutral",
+              "lesson": "Fast reassurance, while not wrong, is slightly dismissive - it closes the topic rather than actually meeting it."
+            },
+            {
+              "text": "Maybe we should talk about something lighter.",
+              "tag": "game-move",
+              "egoState": "A",
+              "outcome": "Sana nods. \"...Sure.\" Something in her goes quiet for the rest of the conversation.",
+              "outcomeExpression": "neutral",
+              "lesson": "Suggesting a lighter topic is withdrawal again, right near the end - stepping back from real contact feels gentler than it is, but it's the same trap."
+            }
+          ]
+        },
+        {
+          "npc": "Sana",
+          "expression": "open",
+          "line": "I don't think I've ever just... talked like this with anyone without it turning into a thing. Is this what it's supposed to feel like?",
+          "cues": ["naming the moment itself", "genuinely asking, no angle"],
+          "egoState": "FC",
+          "options": [
+            {
+              "text": "Yeah. No roles, no score-keeping - just this. I'm glad we're here.",
+              "tag": "best",
+              "egoState": "FC",
+              "outcome": "Sana laughs, a real one. \"...Yeah. Me too.\" Nothing more needs to be said.",
+              "outcomeExpression": "open",
+              "lesson": "This is Berne's answer to \"after games, what?\" - not a bigger insight or a new plan, just candid, game-free contact sustained long enough to be felt. That's what intimacy is: not a reward for surviving the games, but the thing itself."
+            },
+            {
+              "text": "Ha, I guess we're both growing up.",
+              "tag": "ok",
+              "egoState": "A",
+              "outcome": "Sana smiles, but something a little real in the moment gets deflected by the joke.",
+              "outcomeExpression": "neutral",
+              "lesson": "Humor is a gentle way to hold a tender moment, but here it slightly undercuts the realness she just named - a small retreat from candor right at the finish line."
+            },
+            {
+              "text": "You just need to keep doing exactly what we did today and you'll be fine.",
+              "tag": "game-move",
+              "egoState": "P",
+              "outcome": "Sana's face closes slightly. \"...Right. Yeah.\" The warmth cools.",
+              "outcomeExpression": "neutral",
+              "lesson": "Turning the moment into advice for her future slides back into a Rescue at the very last second - after six turns of staying present, the final move still has to resist fixing her."
+            }
+          ]
+        }
+      ]
+    },
+    "L3": {
+      "fields": [
+        {
+          "type": "text",
+          "label": "In under 120 words: write your own honest answer to Berne's closing question, \"after games, what?\" Use one real or imagined moment where you chose candor over a game.",
+          "maxWords": 120,
+          "rubric": ["candor", "game-free", "honest", "vulnerable", "real", "Adult", "present"]
+        },
+        {
+          "type": "text",
+          "label": "In under 40 words: name one game you personally fall into most often, and what the antithesis would look like for you.",
+          "maxWords": 40,
+          "rubric": ["game", "antithesis", "pattern", "role", "Rescuer", "Persecutor", "Victim"]
+        }
+      ]
+    }
+  },
+  "echoAfterHours": 0
+}

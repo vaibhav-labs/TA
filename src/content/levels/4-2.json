@@ -1,0 +1,122 @@
+{
+  "id": "4-2",
+  "title": "Formula G",
+  "world": 4,
+  "engine": "sequence",
+  "concepts": [24, 25],
+  "source": { "book": "TA Today", "chapter": 23, "quote": "Con + Gimmick = Response -> Switch -> Crossup -> Payoff" },
+  "setting": "Two weeks into a rough sprint. Mei has quietly taken on everyone's overflow work, always with the same bright \"I've got it, don't worry about it.\"",
+  "playAs": "Dev, Mei's teammate",
+  "levels": {
+    "L1": {
+      "npc": "Mei",
+      "expression": "tense",
+      "line": "No one appreciates what I do around here!",
+      "cues": ["this is the third weekend she's stayed late", "teammates look blindsided", "her voice cracks on \"appreciates\""],
+      "question": "Mei has spent two weeks quietly taking on everyone's overflow work. This is the line that makes the room go quiet. Which stage of Formula G is this?",
+      "options": [
+        { "text": "Con", "feedback": "Not quite - the Con was the quiet non-verbal offer two weeks ago (\"I've got it, don't worry\"), and this line comes well after it. This moment is actually the Switch: the instant Mei's role flips from quietly helping to accusing everyone of not noticing - the floor-moving moment this whole formula is built to catch." },
+        { "text": "Gimmick", "feedback": "Not quite - the Gimmick belongs to whoever bought into the Con (here, the teammates who let her take the work), and this line is Mei's own. This moment is actually the Switch: the instant her role flips from quietly helping to accusing everyone, the floor-moving moment this whole formula is built to catch." },
+        { "text": "Response", "feedback": "Not quite - the Response was the two weeks of her actually doing the extra work while everyone said \"thanks, you're a lifesaver\"; this line breaks that pattern instead of continuing it. This moment is actually the Switch: the instant her role flips from quietly helping to accusing everyone, the floor-moving moment this whole formula is built to catch." },
+        { "text": "Switch", "feedback": "Right. This is the Switch: the moment the role flips, Rescuer becomes accusing Victim, mid-sentence, and everyone in the room feels the floor move." },
+        { "text": "Crossup", "feedback": "Close, but not quite - the Crossup is the beat right after this (the stunned \"wait, what?\" on everyone's faces); this line causes the Crossup, it isn't the Crossup itself. This moment is the Switch that triggers it: the instant Mei's role flips from quietly helping to accusing everyone, the floor-moving moment this whole formula is built to catch." },
+        { "text": "Payoff", "feedback": "Not quite - the Payoff lands after the Crossup, once the racket feelings settle (Mei's grim satisfaction, the team's guilt); this line is a step earlier, the thing that triggers all of that. This moment is the Switch: the instant her role flips from quietly helping to accusing everyone, the floor-moving moment this whole formula is built to catch." }
+      ],
+      "answer": 3,
+      "lesson": "Formula G runs Con + Gimmick = Response -> Switch -> Crossup -> Payoff. The Switch is the diagnostic moment: the instant a role flips and both players feel the floor move. Everything before it can look like an ordinary helpful pattern; the Switch is what proves it was a game."
+    },
+    "L2": {
+      "intro": "Two weeks of \"I've got it, don't worry about it\" from Mei. Tonight she's still at her desk at 7pm, and you're about to leave.",
+      "beats": [
+        {
+          "npc": "Mei",
+          "expression": "neutral",
+          "line": "It's fine, I've got it. Go home, don't worry about it.",
+          "cues": ["this is the third extra task this week", "the bright tone doesn't match the stack of files"],
+          "egoState": "NP",
+          "options": [
+            {
+              "text": "Okay, thanks, you're a lifesaver!",
+              "tag": "game-move",
+              "egoState": "C",
+              "outcome": "Mei beams, tired. The stack doesn't shrink, and your gratitude just bought her another week of it.",
+              "outcomeExpression": "open",
+              "lesson": "Taking the help at face value and praising it is the Gimmick's payoff for her Con - it feels good for both of you right now, and it's exactly what keeps the Response stage running."
+            },
+            {
+              "text": "Are you sure? That's the third thing this week.",
+              "tag": "best",
+              "egoState": "A",
+              "outcome": "Mei pauses. \"I mean... yeah, I guess it is a lot.\" For a second the performance drops.",
+              "outcomeExpression": "neutral",
+              "lesson": "Naming the pattern out loud, from Adult, is the earliest point anyone can catch a game - right at the Gimmick, before the Response stage even gets going properly."
+            },
+            {
+              "text": "Cool, see you tomorrow.",
+              "tag": "ok",
+              "egoState": "A",
+              "outcome": "You leave. Mei stays. Nothing is said, nothing changes.",
+              "outcomeExpression": "neutral",
+              "lesson": "Not feeding the game isn't the same as interrupting it - staying neutral lets the Response stage run exactly as long as it was always going to."
+            }
+          ]
+        },
+        {
+          "npc": "Mei",
+          "expression": "tense",
+          "line": "No one appreciates what I do around here!",
+          "cues": ["third weekend late", "voice cracks on \"appreciates\"", "the room goes quiet"],
+          "egoState": "C",
+          "options": [
+            {
+              "text": "That's not fair, we never asked you to do all that.",
+              "tag": "game-move",
+              "egoState": "CP",
+              "outcome": "\"Oh, so now it's MY fault for trying to help?\" Mei fires back. The fight is officially on.",
+              "outcomeExpression": "tense",
+              "lesson": "Meeting her Victim-to-Persecutor flip with your own Persecutor just trades which corner of the Triangle each of you stands on - the game continues, now louder."
+            },
+            {
+              "text": "You're right, we should've appreciated you more, I'm sorry.",
+              "tag": "ok",
+              "egoState": "NP",
+              "outcome": "Mei softens, but files the apology away as proof she was right to feel unappreciated. Next sprint, she volunteers for everything again.",
+              "outcomeExpression": "neutral",
+              "lesson": "Comforting the Victim role confirms it was the right role to take - kind in the moment, and it reloads the same game for next time."
+            },
+            {
+              "text": "Sounds like you've been doing a lot nobody signed up for. What do you actually want to happen now?",
+              "tag": "best",
+              "egoState": "A",
+              "outcome": "Silence. Then: \"...I don't actually know. I just know I'm exhausted.\" First honest sentence of the conversation.",
+              "outcomeExpression": "open",
+              "lesson": "This is the Switch's real exit: cross to Adult instead of taking the Victim or Persecutor role on offer, and ask the concrete question instead of supplying the expected reaction - this is what stops a Switch from completing into a Payoff."
+            }
+          ]
+        }
+      ]
+    },
+    "L3": {
+      "fields": [
+        {
+          "type": "text",
+          "label": "Write Mei's game in one sentence per stage: Con, Gimmick, Response, Switch, Crossup, Payoff.",
+          "maxWords": 90,
+          "rubric": ["Con", "Gimmick", "Response", "Switch", "Crossup", "Payoff", "Rescuer", "Victim"]
+        },
+        {
+          "type": "text",
+          "label": "Name Mei's Drama Triangle role before the Switch, and after. What role did Dev almost take by reacting instead of asking?",
+          "maxWords": 60,
+          "rubric": ["Rescuer", "Victim", "Persecutor", "before", "after", "switch"]
+        }
+      ]
+    }
+  },
+  "echoAfterHours": 72,
+  "echo": {
+    "setting": "Three days later. Mei is already reaching for someone else's task before they've finished asking.",
+    "line": "It's fine, I've got it, don't worry about it.",
+    "shape": "same beat-one shape as L2"
+  }
+}

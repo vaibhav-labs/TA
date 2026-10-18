@@ -13,7 +13,6 @@ function LessonCardView({ conceptId }: { conceptId: number }) {
   const name = card?.name ?? concept.concept.split(/[,:;(]/)[0].trim();
   const oneLine = card?.oneLine ?? concept.concept;
   const confusion = card?.confusion ?? (concept.confusion ? `Common confusion: ${concept.confusion}.` : null);
-  const book = card?.fromBook.book ?? concept.source;
 
   return (
     <div className="ta-fade rounded-3xl bg-slate-900/90 border border-white/10 p-5 shadow-2xl backdrop-blur-xl flex flex-col gap-3 relative overflow-hidden">
@@ -46,11 +45,6 @@ function LessonCardView({ conceptId }: { conceptId: number }) {
           <span>{confusion}</span>
         </div>
       )}
-
-      <div className="text-xs font-mono text-slate-400 pt-1">
-        {book}
-        {card && <span className="italic"> &mdash; &ldquo;{card.fromBook.quote}&rdquo;</span>}
-      </div>
 
       {card?.expand && (
         <div className="pt-2 border-t border-white/10">

@@ -1,0 +1,100 @@
+{
+  "id": "7-1",
+  "title": "Help or Rescue",
+  "world": 7,
+  "engine": "diagnose",
+  "concepts": [57],
+  "source": {
+    "book": "Scripts People Live",
+    "chapter": 19,
+    "quote": "whether by going along with something she doesn't want to do, by doing more than 50% of the work, or by not asking for what is wanted"
+  },
+  "setting": "Sunday evening. Meher calls again - third time this year - about rent. Rahul picks up already half-knowing what's coming.",
+  "playAs": "Rahul",
+  "levels": {
+    "L1": {
+      "npc": "Meher",
+      "expression": "tense",
+      "line": "I don't know what I'm going to do, I might actually lose the apartment this time. You're literally the only person who could help me right now.",
+      "cues": ["third time this year", "no specific ask made yet", "\"the only person\" framing"],
+      "question": "Is Meher asking Rahul for Help, or opening a Rescue?",
+      "options": [
+        { "text": "Help - she's in real trouble and she's asking directly.", "feedback": "She's in real trouble, that part's true - but look again: has she actually asked for anything, or just described the crisis and named Rahul as the solution?" },
+        { "text": "Rescue - there's no specific request yet, and \"the only person who could help\" puts the whole burden on Rahul before he's agreed to anything.", "feedback": "Right. Steiner's test isn't whether someone needs help, it's whether there's an actual request and the start of a two-sided contract - \"you're the only one\" is the Victim's opening move, not a request." },
+        { "text": "Can't tell yet - it depends on whether Rahul offers money or not.", "feedback": "Close, but the tell isn't what Rahul offers - it's whether anyone has named a specific ask yet. A Rescue can start before any money changes hands." }
+      ],
+      "answer": 1,
+      "lesson": "Steiner's definition doesn't hinge on how real the crisis is - it hinges on whether there's a specific request and a two-sided contract. \"You're the only one who can help\" is a Rescue opener because it assigns Rahul the Rescuer role before he's agreed to anything or heard what's actually being asked."
+    },
+    "L2": {
+      "intro": "Rahul wants to actually help Meher without quietly signing up to do more than half the work, again. What does he say?",
+      "beats": [
+        {
+          "npc": "Meher",
+          "expression": "tense",
+          "line": "I don't know what I'm going to do, I might actually lose the apartment this time. You're literally the only person who could help me right now.",
+          "cues": ["same ask as last time", "no amount named", "framing Rahul as her only option"],
+          "egoState": "C",
+          "options": [
+            {
+              "text": "What exactly do you need, and what have you already figured out you can put toward it yourself?",
+              "tag": "best",
+              "egoState": "A",
+              "outcome": "A pause. \"...Okay. I have maybe $300 saved. I need about $550 more.\" Specific, for the first time.",
+              "outcomeExpression": "neutral",
+              "lesson": "Naming the actual number and asking what she's already contributing turns a vague Rescue opener into something that can become a real contract - mutual consent needs a specific request from both sides, not just a crisis."
+            },
+            {
+              "text": "Of course, I'll transfer it to you right now, don't worry about it.",
+              "tag": "game-move",
+              "egoState": "NP",
+              "outcome": "\"Oh my god, thank you, you're a lifesaver.\" Relief - and the same call, same time, roughly the same amount, in about four months.",
+              "outcomeExpression": "open",
+              "lesson": "This is rule one and rule two of Rescue at once: doing something before you've thought about whether you actually want to, and doing 100% of the work. It feels generous tonight and costs the friendship slowly."
+            },
+            {
+              "text": "I can send you $150, but that's genuinely all I can do this time.",
+              "tag": "ok",
+              "egoState": "A",
+              "outcome": "\"Okay... I guess that helps some.\" She takes it, but nothing about what she'll do for the rest gets discussed.",
+              "outcomeExpression": "neutral",
+              "lesson": "The boundary is real and that matters, but handing over an amount without asking what she's contributing or planning still skips the contract - it's a smaller Rescue, not yet Help."
+            },
+            {
+              "text": "I can't keep bailing you out every few months, you need to actually deal with this.",
+              "tag": "game-move",
+              "egoState": "CP",
+              "outcome": "Silence, then: \"Wow. Okay. Forget it, I'll figure it out myself.\" She hangs up.",
+              "outcomeExpression": "tense",
+              "lesson": "Refusing to Rescue is right in principle, but this lands as Persecution, not a boundary - Steiner's point is that Rescuer and Persecutor are the same unresolved resentment, just pointed in different directions."
+            }
+          ]
+        }
+      ]
+    },
+    "L3": {
+      "fields": [
+        {
+          "type": "vector",
+          "label": "Draw the vectors for the full-Rescue reply and for the best reply.",
+          "pairs": [
+            { "label": "\"I'll transfer it right now, don't worry\"", "from": "P", "to": "C" },
+            { "label": "\"What have you already figured out?\"", "from": "A", "to": "A" }
+          ]
+        },
+        {
+          "type": "text",
+          "label": "In under 50 words: name Steiner's three tests for Rescue, and say which one Rahul's first instinct broke.",
+          "maxWords": 50,
+          "rubric": ["50%", "don't want", "ask", "contract", "Victim", "request"]
+        }
+      ]
+    }
+  },
+  "echoAfterHours": 72,
+  "echo": {
+    "setting": "72 hours later: Meher texts again, this time about her car.",
+    "line": "Can you just lend me $400? I'll pay you back, promise.",
+    "shape": "same four-option shape as L2"
+  }
+}

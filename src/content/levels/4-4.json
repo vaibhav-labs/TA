@@ -1,0 +1,112 @@
+{
+  "id": "4-4",
+  "title": "Home Games",
+  "world": 4,
+  "engine": "choice-story",
+  "concepts": [31, 29],
+  "source": { "book": "TA Today", "chapter": 25, "quote": "the one-time Rescuer changes to an accusing Persecutor instead of a woeful Victim" },
+  "setting": "Rohan and Alisha's marriage runs on more of these than either of them would admit - Sweetheart at parties, Corner when one of them goes quiet instead of answering, Harried when Alisha's to-do list hits six items nobody actually assigned her, Frigid Woman/Man when intimacy itself becomes the battlefield. Tonight it's a dinner party.",
+  "playAs": "Maya, a friend who keeps getting pulled into the middle of it",
+  "levels": {
+    "L1": {
+      "npc": "Rohan",
+      "expression": "open",
+      "line": "Isn't she wonderful? Cooks every night - well, except when she burns the rice, ha ha, but we love her anyway!",
+      "cues": ["laugh paired with \"except when...\"", "every eye at the table swings to Alisha, waiting"],
+      "question": "This is Sweetheart - public praise with a needle folded inside it, watching for Alisha's reaction. Which response is the antithesis - the one that doesn't feed the game?",
+      "options": [
+        { "text": "\"I do NOT burn the rice, that happened ONCE.\"", "feedback": "This gives Rohan exactly what Sweetheart is fishing for - visible irritation that \"proves\" the jab landed and he was just being playful." },
+        { "text": "Say nothing, and go quiet for the rest of the night.", "feedback": "Swallowing it still delivers a payoff - now of private resentment - it just moves the racket feeling off-stage instead of removing it." },
+        { "text": "\"Yes, honey!\" - cheerfully, playing along completely.", "feedback": "Right. Agreeing all the way, with warmth instead of edge, removes the needle's job. There's no gap left between the praise and her reaction for the jab to land in." },
+        { "text": "Needle him back publicly about his own flaws.", "feedback": "This escalates into a different game - now you're both Persecuting - it doesn't exit the one already running, it just adds a second one." }
+      ],
+      "answer": 2,
+      "lesson": "The antithesis isn't about winning the exchange or getting even - that's just playing the game back. It's about declining the specific role the game is built to provoke; for Sweetheart, that means refusing the irritation it's fishing for, not refusing the praise."
+    },
+    "L2": {
+      "intro": "Dinner is winding down. Two more rounds are about to start, and you're the one sitting between them.",
+      "beats": [
+        {
+          "npc": "Rohan",
+          "expression": "tense",
+          "line": "Maya, back me up here - tell Alisha that leaving dishes overnight is disgusting, right?",
+          "cues": ["talking about her in third person while she's sitting right there", "appealing to you as judge"],
+          "egoState": "P",
+          "options": [
+            {
+              "text": "Yeah honestly Alisha, dishes overnight is pretty gross.",
+              "tag": "game-move",
+              "egoState": "P",
+              "outcome": "Rohan looks triumphant. \"SEE? Even Maya agrees.\" Alisha goes quiet, and the real conversation about dishes never happens.",
+              "outcomeExpression": "tense",
+              "lesson": "Delivering a verdict makes you the judge Courtroom needs - the case gets \"won,\" and the actual two people never have to talk to each other."
+            },
+            {
+              "text": "I don't really want to referee this one.",
+              "tag": "ok",
+              "egoState": "A",
+              "outcome": "Awkward silence. Rohan turns to a different friend to ask the same question.",
+              "outcomeExpression": "neutral",
+              "lesson": "Opting out is better than ruling, but it still treats this as a case looking for a verdict instead of naming what's actually happening."
+            },
+            {
+              "text": "That sounds like something to say to Alisha, not to me - she's right there.",
+              "tag": "best",
+              "egoState": "A",
+              "outcome": "Rohan opens his mouth, closes it, turns to Alisha instead. \"...Okay. Alisha, the dishes thing - actually, can we talk about it?\"",
+              "outcomeExpression": "open",
+              "lesson": "Refusing to be the third party and redirecting the case back to the two actual parties is the antithesis to Courtroom - no verdict, no judge, no game."
+            },
+            {
+              "text": "You two argue about this every week, huh.",
+              "tag": "ok",
+              "egoState": "A",
+              "outcome": "Both laugh it off, slightly embarrassed, but still look to you to settle it. \"So... who's right?\"",
+              "outcomeExpression": "neutral",
+              "lesson": "Naming the pattern is a good start and stops short of the actual move - it still leaves you holding the gavel if you don't also hand the case back."
+            }
+          ]
+        },
+        {
+          "npc": "Alisha",
+          "expression": "tense",
+          "line": "The kids start full days at school next month... I guess there's nothing stopping me from finishing that degree now.",
+          "cues": ["the obstacle she's complained about for years just disappeared", "no excitement in a sentence that's supposed to be about getting her dream back"],
+          "egoState": "C",
+          "options": [
+            {
+              "text": "That's amazing! You should sign up today!",
+              "tag": "ok",
+              "egoState": "FC",
+              "outcome": "Alisha's smile is thin. \"Yeah... I'll look into it.\" Three months later, she still hasn't.",
+              "outcomeExpression": "neutral",
+              "lesson": "Cheering the stated goal takes the social-level words at face value and misses the Switch actually happening in front of you - the obstacle leaving is exactly when If It Weren't For You reveals it was never really about the obstacle."
+            },
+            {
+              "text": "You've wanted this for years - what's actually stopping you now?",
+              "tag": "best",
+              "egoState": "A",
+              "outcome": "Long pause. \"Honestly? I think I'm scared I'll try and it won't be as good as I imagined.\" First true sentence in a decade of this complaint.",
+              "outcomeExpression": "open",
+              "lesson": "Naming that the old obstacle is gone and asking what's really in the way catches the Switch cleanly - this is the moment the racketeering (\"if it weren't for you\") either turns into a real conversation or converts into a full game."
+            },
+            {
+              "text": "Well, there's always something, I guess.",
+              "tag": "game-move",
+              "egoState": "NP",
+              "outcome": "\"Yeah,\" Alisha says, visibly relieved. \"There's always something.\" The complaint gets to live on forever.",
+              "outcomeExpression": "neutral",
+              "lesson": "Agreeing that there's \"always something\" hands her a replacement obstacle for free - the sympathetic version of this response still protects the game from ever having to resolve."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "echoAfterHours": 96,
+  "echo": {
+    "setting": "Four days later. Rohan, mid-story at another gathering, starts winding up for the same kind of toast.",
+    "line": "Isn't she wonderful? Well, mostly...",
+    "shape": "same four-option shape as L1"
+  }
+}

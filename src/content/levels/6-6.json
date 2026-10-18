@@ -1,0 +1,100 @@
+{
+  "id": "6-6",
+  "title": "The Script Matrix",
+  "world": 6,
+  "engine": "build",
+  "concepts": [45, 46, 49, 56],
+  "boss": true,
+  "source": {
+    "book": "TA Today",
+    "chapter": 10,
+    "quote": "a life plan made in childhood, reinforced by the parents, justified by subsequent events, and culminating in a chosen alternative"
+  },
+  "setting": "Imran was the second son in a family that measured love in report cards. His father, an engineer who'd clawed his way up from nothing, worked sixty-hour weeks and almost never raised his voice - he didn't need to. When six-year-old Imran brought home a 95 on a maths test, his father studied it for a long moment and said, flatly, 'What happened to the other five points?' Not angry. Already moving on to the next thing. Imran's older brother had been sickly as a toddler and got the worried, hovering attention that came with it; Imran, healthy and quiet, got noticed mainly when something needed fixing. He doesn't remember anyone saying 'I love you' out loud in that house. He does remember, very clearly, his father spending an entire Sunday teaching him to sand a table leg - 'Here's how you do it properly, or you don't bother' - patient, thorough, and entirely about the wood. By seven, Imran had privately decided something he couldn't have put into words yet: that he was tolerated here, not wanted, and that the only leverage he had over that was being flawless. He carried it into school, redoing homework that already had full marks. He carries it into his thirties now, as a financial analyst who hasn't taken a sick day in six years, who proofreads every email four times before sending it, and who feels his stomach drop half a second before he even knows why, every single time, at the sound of a knock on his office door.",
+  "playAs": "Imran, financial analyst, 34",
+  "levels": {
+    "L1": {
+      "npc": "Imran's father",
+      "expression": "neutral",
+      "line": "What happened to the other five points?",
+      "cues": ["flat, not angry", "already moving on to the next thing before Imran answers", "six-year-old Imran still holding the 95%"],
+      "question": "Quick primer: a script matrix has three channels a parent can hand a message down through - injunction, a silent early rule from their Child; counter-injunction, a spoken later rule from their Parent; and programme, a modeled 'here's how to...' from their Adult. In Imran's script matrix, which slot does this line fill?",
+      "options": [
+        { "text": "Injunction - a Child-to-Child message about survival.", "feedback": "Injunctions are mostly nonverbal and preverbal; this is a fully verbal, content-ful sentence about a standard. The injunction here is underneath, in how flatly he reacted - not in what he said." },
+        { "text": "Counter-injunction - a Parent-to-Parent command, verbal and content-based.", "feedback": "Right. 'What happened to the other five points' is a textbook Be Perfect counter-injunction: verbal, specific, and the kind of line you can still hear in your father's actual voice years later - exactly how TA Today says to tell counter-injunctions from injunctions." },
+        { "text": "Programme - an Adult-to-Adult 'here's how to...' modeling message.", "feedback": "Programme messages model a method - 'here's how to...'. This is a judgment about a result, not instructions for doing something." },
+        { "text": "Permission - a Child-to-Child message that counters an injunction.", "feedback": "Permissions are nonverbal and preverbal too, and this is neither nonverbal nor permissive - it's a verbal demand, which puts it in the counter-injunction box, not the permission box." }
+      ],
+      "answer": 1,
+      "lesson": "TA Today gives two tests for counter-injunction vs. injunction: counter-injunctions are verbal and come later (roughly ages 3-12); injunctions are preverbal, felt in the body, and earlier (before age 6-8). 'What happened to the other five points' passes both tests for counter-injunction - the injunction in this story is quieter and older than that."
+    },
+    "L2": {
+      "intro": "A decade of quiet overperformance later. Present day, Tuesday, 4:50pm.",
+      "beats": [
+        {
+          "npc": "Beth",
+          "expression": "open",
+          "line": "Hey - got a sec? Found a typo in the report you sent. No big deal, just wanted to flag it before it goes out.",
+          "cues": ["casual tone", "already turning to leave, clearly not a big moment for her"],
+          "egoState": "A",
+          "options": [
+            {
+              "text": "Oh god, I'm so sorry - let me redo the whole thing, I'll have a new version in twenty minutes.",
+              "tag": "game-move",
+              "egoState": "AC",
+              "outcome": "Beth looks confused. 'It's one word, Imran, it's fine.' He spends the evening rechecking every page anyway.",
+              "outcomeExpression": "tense",
+              "lesson": "This is the Be Perfect counter-injunction running the old matrix in real time: the stomach-drop (the script signal) and the overcorrection (the payoff rehearsal) are both sized to the threat his six-year-old self decided this was, not to one typo."
+            },
+            {
+              "text": "Thanks - I'll fix it. (Fixes just the typo. Moves on.)",
+              "tag": "best",
+              "egoState": "A",
+              "outcome": "It's done in thirty seconds. Nothing else happens - which is itself the whole point: the story predicted catastrophe, and catastrophe didn't come.",
+              "outcomeExpression": "neutral",
+              "lesson": "A redecision rarely looks like an insight in the moment - it looks like a response sized to the actual stimulus instead of to the threat an old decision assumed was coming."
+            },
+            {
+              "text": "(Say nothing. Nod. Replay it all afternoon.)",
+              "tag": "game-move",
+              "egoState": "AC",
+              "outcome": "Beth shrugs and walks off, already thinking about something else. Imran can't explain, even to himself, why his chest is still tight an hour later.",
+              "outcomeExpression": "tense",
+              "lesson": "This is the miniscript's stopper position: going through the Be Perfect driver without the energy to satisfy it, landing straight in the old racket feeling the injunction produces - the one-down, not-OK one."
+            },
+            {
+              "text": "Well, you could've just fixed it yourself instead of making it a whole thing.",
+              "tag": "ok",
+              "egoState": "CP",
+              "outcome": "Beth blinks, taken aback. 'I - okay, sure, sorry.' A small, strange tension hangs over the rest of the afternoon.",
+              "outcomeExpression": "tense",
+              "lesson": "Blaming outward is a different exit from the same miniscript, not an escape from it - same driver underneath, just a different racket position: one-up instead of one-down."
+            }
+          ]
+        }
+      ]
+    },
+    "L3": {
+      "fields": [
+        {
+          "type": "text",
+          "label": "In your own words: what's the injunction underneath Imran's story, and what counter-injunction or programme has been covering it?",
+          "maxWords": 50,
+          "rubric": ["Don't Belong", "tolerated", "not wanted", "Be Perfect", "counter-injunction", "Work Hard", "programme", "here's how"]
+        },
+        {
+          "type": "text",
+          "label": "Propose Imran's early decision (what he decided, as a child, in order to stay OK) and a redecision he could make now.",
+          "maxWords": 60,
+          "rubric": ["early decision", "OK to belong", "redecision", "It's OK", "permission", "flawless", "enough"]
+        }
+      ]
+    }
+  },
+  "echoAfterHours": 8760,
+  "echo": {
+    "setting": "A year later, performance review season.",
+    "line": "His new manager says, warmly, 'You know you don't have to redo things that are already right, right?' Imran laughs and says 'old habits' - and means it a little more like a joke than it used to be.",
+    "shape": "no quiz this time - just notice the sentence"
+  }
+}

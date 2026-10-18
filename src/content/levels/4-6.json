@@ -1,0 +1,135 @@
+{
+  "id": "4-6",
+  "title": "Why Don't You - Yes But",
+  "world": 4,
+  "engine": "many-handed",
+  "concepts": [32, 29],
+  "boss": true,
+  "source": { "book": "TA Today", "chapter": 25, "quote": "You sound like you have a problem. What do you want me to do about it?" },
+  "setting": "Thursday night support circle, five chairs. Farah just opened with: \"I just wish my husband would learn to fix things around the house instead of always calling someone.\" Leena, Oskar, and Theo are already leaning in with ideas.",
+  "playAs": "You, 'Black' - leading tonight's group",
+  "levels": {
+    "L1": {
+      "npc": "Farah",
+      "expression": "tense",
+      "line": "Yes, but he'd see right through that, he'd know it was a hint.",
+      "cues": ["third suggestion rejected in a row", "she leans forward for each new idea, like she's enjoying the hunt", "never once says \"I don't want advice\""],
+      "question": "Three suggestions, three polite rejections, and Farah keeps leaning in for more. What's actually going on?",
+      "options": [
+        { "text": "She genuinely wants a solution and just hasn't heard the right one yet.", "feedback": "If that were true, the room would drift toward specifics - budgets, schedules, actual logistics. Instead every idea gets a quick, generic \"yes, but\" and the group moves straight to the next one. That's not how real problem-solving sounds." },
+        { "text": "She's testing the group to see who cares enough to keep trying.", "feedback": "Close, but that reads intent into her rather than naming the structure of the exchange. What's actually observable is a repeating transaction shape, not a sincerity test." },
+        { "text": "The group is playing Why Don't You...? and Farah is playing Yes, But... - the point was never to find a workable suggestion.", "feedback": "Right. This is a game, not a problem-solving session: the social level says \"help me,\" the psychological level says \"you won't,\" and every exchange confirms it. The Response stage can run through ten suggestions as easily as three - the number was never the point." },
+        { "text": "Leena, Oskar, and Theo aren't actually listening to each other.", "feedback": "They're listening fine, and taking turns politely - the game doesn't need anyone to be rude or distracted, just willing to keep offering solutions." }
+      ],
+      "answer": 2,
+      "lesson": "Why Don't You...? and Yes, But... are the same game from two chairs: the group supplies an endless Response stage of suggestions, and the presenter's Gimmick - a belief that she can't actually be helped, or doesn't want to be - rejects each one. The content of the suggestions is almost irrelevant, because the shape, not the specifics, is what's repeating."
+    },
+    "L2": {
+      "intro": "Three suggestions down, three \"yes, buts\" collected. The room turns to you.",
+      "beats": [
+        {
+          "npc": "Farah",
+          "expression": "tense",
+          "line": "I don't know... maybe nothing's going to work. You probably think I'm hopeless too.",
+          "cues": ["directly invites you, the leader, to either rescue or confirm hopelessness", "group goes quiet, waiting on you"],
+          "egoState": "C",
+          "options": [
+            {
+              "text": "No, no, you're not hopeless, let me think... what about couples counseling?",
+              "tag": "game-move",
+              "egoState": "NP",
+              "outcome": "Farah brightens for a second. \"Yes, but we tried that two years ago and it didn't help.\" Round four begins.",
+              "outcomeExpression": "tense",
+              "lesson": "Offering a fourth suggestion - even a warm, well-meant one - re-enters the Response stage exactly where everyone else has been standing. Reassurance plus a new idea is still fuel for Why Don't You...? Worth remembering for next time: the real skill here isn't getting it right once with Farah, it's doing the same antithesis again with the next person who starts a new round - like Leena, right after."
+            },
+            {
+              "text": "You're not hopeless, and I'm also not going to try to fix your husband from here.",
+              "tag": "ok",
+              "egoState": "A",
+              "outcome": "Farah blinks, slightly thrown. \"Oh. Okay.\" The group looks unsure what happens next.",
+              "outcomeExpression": "neutral",
+              "lesson": "This correctly declines to Rescue, and stops short of actually redirecting the conversation anywhere - it closes a door without opening the one that matters. And the harder part of this skill is still ahead: doing it again, on purpose, the next time someone else in the circle starts the same pattern - not just managing to say the right thing once."
+            },
+            {
+              "text": "That's a difficult problem. What are you going to do about it?",
+              "tag": "best",
+              "egoState": "A",
+              "outcome": "A real silence. Farah opens her mouth for a \"yes, but\" and finds there's nothing being offered to say yes-but to. \"...I... hadn't thought about it that way.\"",
+              "outcomeExpression": "open",
+              "lesson": "This is the classic antithesis to Why Don't You...? / Yes, But...: it hands the problem back to the person who actually has it, in Adult, without supplying a target for the next rejection."
+            }
+          ]
+        },
+        {
+          "npc": "Leena",
+          "expression": "open",
+          "line": "Must be nice. My boss doesn't listen to ME either, and believe me, I've tried everything.",
+          "cues": ["same shape as Farah's opening, new content", "group already leaning in with fresh ideas"],
+          "egoState": "C",
+          "options": [
+            {
+              "text": "Well, have you tried talking to HR about it?",
+              "tag": "game-move",
+              "egoState": "A",
+              "outcome": "\"Yes, but HR is friends with my boss,\" Leena says instantly. The whole group is off again.",
+              "outcomeExpression": "tense",
+              "lesson": "A fresh \"why don't you\" from you, the facilitator, re-opens exactly the game you just closed with Farah - the lesson doesn't transfer by accident, it has to be applied again, on purpose, to the new presenter."
+            },
+            {
+              "text": "Sounds like you want some advice too - go ahead, maybe someone has an idea.",
+              "tag": "game-move",
+              "egoState": "NP",
+              "outcome": "The group dives in with five new suggestions. Leena fields each one with a \"yes, but\" of her own.",
+              "outcomeExpression": "tense",
+              "lesson": "Handing the floor to the group restarts their Response stage - you've stepped out of Rescuer only to immediately wave everyone else back into it."
+            },
+            {
+              "text": "That's a hard one too. What have you actually decided to do about it?",
+              "tag": "best",
+              "egoState": "A",
+              "outcome": "Leena pauses, same as Farah did. \"Huh. I don't think I've actually decided anything yet.\"",
+              "outcomeExpression": "open",
+              "lesson": "Applying the same antithesis to a new presenter, on purpose, is the actual skill - not a trick that works once on Farah, but a move for the pattern itself, wherever it shows up next."
+            },
+            {
+              "text": "Interesting how that came up right after Farah's did.",
+              "tag": "ok",
+              "egoState": "A",
+              "outcome": "Leena shrugs. \"I mean... I guess. Still true though.\" The observation lands but doesn't actually close anything.",
+              "outcomeExpression": "neutral",
+              "lesson": "Noticing the pattern out loud is useful and incomplete - naming it isn't the same as handing the problem back to the person who has it."
+            }
+          ]
+        }
+      ]
+    },
+    "L3": {
+      "fields": [
+        {
+          "type": "text",
+          "label": "Write the full Formula G for Farah's game: her Con, the group's Gimmick, what happened during the Response, the Switch, the Crossup, and the Payoff for both sides.",
+          "maxWords": 140,
+          "rubric": ["Con", "Gimmick", "Response", "Switch", "Crossup", "Payoff", "Yes But", "Why Don't You"]
+        },
+        {
+          "type": "text",
+          "label": "In under 50 words: why is \"That's a difficult problem, what are you going to do about it?\" an antithesis and not just a clever comeback?",
+          "maxWords": 50,
+          "rubric": ["antithesis", "hands back", "Adult", "no payoff", "not reprisal", "refuses"]
+        },
+        {
+          "type": "text",
+          "label": "Name one of the six advantages Farah gets from playing Yes, But... instead of actually fixing the problem.",
+          "maxWords": 40,
+          "rubric": ["internal psychological", "external psychological", "social", "biological", "existential", "avoid", "strokes"]
+        }
+      ]
+    }
+  },
+  "echoAfterHours": 168,
+  "echo": {
+    "setting": "Next week's circle. A sixth chair is empty, but a new member opens with the exact same shape Farah used.",
+    "line": "I just wish somebody around here would actually listen to me for once.",
+    "shape": "same beat-two shape as L2"
+  }
+}

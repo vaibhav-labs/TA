@@ -1,0 +1,156 @@
+{
+  "id": "7-5",
+  "title": "Awareness / Spontaneity / Intimacy",
+  "world": 7,
+  "engine": "choice-story",
+  "concepts": [60],
+  "source": {
+    "book": "Games People Play",
+    "chapter": 17,
+    "quote": "autonomy"
+  },
+  "setting": "Saturday afternoon. Amar and Leela, friends since college, are out running errands together with no particular agenda - a market stall, a walk, then coffee.",
+  "playAs": "Amar",
+  "levels": {
+    "L1": {
+      "npc": "Leela",
+      "expression": "open",
+      "line": "Here, try a slice. Isn't it just like the ones we used to get from that cart near college?",
+      "cues": ["inviting a comparison to the past", "an actual orange in your hand, right now"],
+      "question": "Which of the three capacities of autonomy is actually being tested when Amar decides how to answer this?",
+      "options": [
+        { "text": "Awareness - whether he actually tastes and notices this orange, or just repeats the expected comparison.", "feedback": "Right. Berne's awareness means seeing, hearing, and tasting what's actually in front of you in your own way, not the way you were taught to - the test here is whether Amar checks the orange or just checks the memory." },
+        { "text": "Spontaneity - whether he picks an unusual response.", "feedback": "Spontaneity is about freedom of feeling and expression, not novelty for its own sake - this moment is specifically about direct sensory contact with something real, which is awareness." },
+        { "text": "Intimacy - whether he's honest with Leela.", "feedback": "Not yet - nothing vulnerable has been shared here for Amar to meet candidly. This is a much smaller moment: just noticing what's true about an orange." }
+      ],
+      "answer": 0,
+      "lesson": "Autonomy's three capacities aren't interchangeable. Awareness is the specific capacity for direct, unfiltered contact with what's actually here - the easiest way to lose it is to answer from the stored script (\"just like the old days\") instead of your own senses."
+    },
+    "L2": {
+      "intro": "Three small moments across the afternoon. Each one offers Amar a scripted, easy response and a real one.",
+      "beats": [
+        {
+          "npc": "Leela",
+          "expression": "open",
+          "line": "Here, try a slice. Isn't it just like the ones we used to get from that cart near college?",
+          "cues": ["inviting comparison to the past", "the actual orange is right here"],
+          "egoState": "FC",
+          "options": [
+            {
+              "text": "Actually - this one's way more tart than I remember. Really good, though.",
+              "tag": "best",
+              "egoState": "A",
+              "outcome": "Leela laughs. \"Huh, didn't expect that answer.\" She tries one too, actually paying attention this time.",
+              "outcomeExpression": "open",
+              "lesson": "Noticing what's actually true now, even when it contradicts the expected memory, is Berne's awareness: direct contact with the present instead of fitting experience to an old script."
+            },
+            {
+              "text": "Mmhm, yeah, tastes the same.",
+              "tag": "ok",
+              "egoState": "AC",
+              "outcome": "Automatic. Leela shrugs and moves on to the next stall.",
+              "outcomeExpression": "neutral",
+              "lesson": "A polite, reflexive match isn't wrong, but it's autopilot - agreeing with the expected comparison instead of actually checking it against what's in your mouth."
+            },
+            {
+              "text": "Oh my god, remember that one time at the cart when-",
+              "tag": "game-move",
+              "egoState": "C",
+              "outcome": "Leela's attention drifts halfway through; the orange goes unfinished in Amar's hand.",
+              "outcomeExpression": "neutral",
+              "lesson": "This swaps the actual orange for a stored story about oranges - the present moment becomes a prop for an old narrative instead of something tasted."
+            }
+          ]
+        },
+        {
+          "npc": "Leela",
+          "expression": "neutral",
+          "line": "You're always so calm about everything. Doesn't anything ever actually get to you?",
+          "cues": ["needling a role you always play", "inviting the performance of your usual steady self"],
+          "egoState": "C",
+          "options": [
+            {
+              "text": "Actually, yeah - that thing in the meeting Thursday really got under my skin.",
+              "tag": "best",
+              "egoState": "FC",
+              "outcome": "\"Oh! Okay, wasn't expecting that.\" A real moment opens up between them.",
+              "outcomeExpression": "open",
+              "lesson": "Spontaneity is freedom to feel and express whatever actually fits right now, not being locked into one rehearsed role - dropping \"the calm one\" for the honest reaction is the autonomous move."
+            },
+            {
+              "text": "Ha, nothing really fazes me, you know that.",
+              "tag": "ok",
+              "egoState": "AC",
+              "outcome": "Predictable. Leela nods like she expected exactly that - the conversation stays exactly where it's always been.",
+              "outcomeExpression": "neutral",
+              "lesson": "This is the opposite of spontaneity: the rehearsed, on-brand reply that keeps the relationship right where the script says it should stay."
+            },
+            {
+              "text": "Why do you even care?",
+              "tag": "game-move",
+              "egoState": "CP",
+              "outcome": "Leela blinks, stung. \"...Okay, sorry I asked.\" She backs off.",
+              "outcomeExpression": "tense",
+              "lesson": "A snap reaction can feel spontaneous, but it's just as automatic as the calm deflection - real spontaneity is choosing freely among the feelings available, not firing off whichever one is loaded."
+            }
+          ]
+        },
+        {
+          "npc": "Leela",
+          "expression": "open",
+          "line": "Honestly... I've been kind of lonely since I moved here. I don't even know why I'm telling you this.",
+          "cues": ["unscripted admission", "nothing attached, no ask, no angle"],
+          "egoState": "FC",
+          "options": [
+            {
+              "text": "Thanks for telling me. I felt kind of the same way my first year here - want to grab lunch this week, just the two of us?",
+              "tag": "best",
+              "egoState": "FC",
+              "outcome": "Leela's shoulders drop. \"...Yeah. I'd really like that.\" Plans get made, real ones.",
+              "outcomeExpression": "open",
+              "lesson": "Berne's intimacy is candid, game-free exchange with no ulterior transaction - meeting vulnerability with vulnerability, plus something concrete, instead of managing it from a distance."
+            },
+            {
+              "text": "You'll make friends soon, don't worry about it!",
+              "tag": "ok",
+              "egoState": "NP",
+              "outcome": "\"...Yeah, maybe.\" Kind, but Leela goes a little quiet after.",
+              "outcomeExpression": "neutral",
+              "lesson": "Reassurance from Parent is well-meant, but it answers from above instead of meeting her where she actually is - it's comfort, not the candid exchange intimacy actually calls for."
+            },
+            {
+              "text": "Oh, you should totally come to this thing I'm hosting next week, everyone will love you!",
+              "tag": "game-move",
+              "egoState": "A",
+              "outcome": "Leela smiles, but something in her face closes down. \"...Sure, maybe.\"",
+              "outcomeExpression": "neutral",
+              "lesson": "Turning her candid moment into a pitch swaps real exchange for a performance - a disguised invitation standing in for the much smaller, much realer thing she actually needed, which was just to be heard."
+            }
+          ]
+        }
+      ]
+    },
+    "L3": {
+      "fields": [
+        {
+          "type": "text",
+          "label": "In under 50 words: name Berne's three components of autonomy and give one moment from today (real or imagined) for each.",
+          "maxWords": 50,
+          "rubric": ["awareness", "spontaneity", "intimacy", "present", "free", "script"]
+        },
+        {
+          "type": "text",
+          "label": "In one sentence: spontaneity is often confused with impulsiveness. What's actually the difference?",
+          "maxWords": 30,
+          "rubric": ["choice", "free", "range", "automatic", "impulsive"]
+        }
+      ]
+    }
+  },
+  "echoAfterHours": 24,
+  "echo": {
+    "setting": "The next evening, a voice note from Leela.",
+    "line": "\"Hey - thanks again for lunch plans. Also, random, but your coffee order is somehow always the most predictable thing about you.\"",
+    "shape": "same three-beat shape as L2, lighter stakes"
+  }
+}

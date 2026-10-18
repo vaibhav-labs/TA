@@ -1,0 +1,137 @@
+{
+  "id": "1-5",
+  "title": "PTA Three Ways",
+  "world": 1,
+  "engine": "choice-story",
+  "concepts": [5, 7],
+  "source": { "book": "TA Today", "chapter": 9, "quote": "there's usually a session of 'P.T.A.'" },
+  "setting": "School pickup, 3:15pm. The same pastime - talking about kids - is running at three different tables by the gate, and it sounds like a different conversation each time.",
+  "playAs": "Camellia, a parent",
+  "levels": {
+    "L1": {
+      "npc": "Rosita, at the gate",
+      "expression": "tense",
+      "line": "Kids today just don't get taught respect anymore - it's the screens, I'm telling you, every single one of them.",
+      "cues": ["sweeping generalization ('every single one')", "moral judgment, not a specific example", "certainty without evidence"],
+      "question": "Rosita's doing the same pastime every parent at the gate does - talking about kids. Which register is she doing it in?",
+      "options": [
+        { "text": "Parent - a pre-judged opinion about the world, delivered as settled fact.", "feedback": "Right - sweeping, moral, certain, about \"kids today\" in general. This is the Parental register of the pastime." },
+        { "text": "Adult - she's reporting something she's actually observed and checked.", "feedback": "Adult would be specific and tentative (\"my son's screen time went up this term, and...\"), not a sweeping verdict about every child." },
+        { "text": "Child - she's replaying an old feeling from her own childhood.", "feedback": "Child register of this pastime sounds more like anxious or wistful memory, not a confident moral verdict about the world." }
+      ],
+      "answer": 0,
+      "lesson": "The same pastime topic - kids and parenting - gets played in different ego-state registers: Parent delivers settled, moral opinions about the world ('kids today...'); Adult trades specific, checkable information; Child replays old feelings. Same words-shaped activity, three different internal processes."
+    },
+    "L2": {
+      "intro": "Camellia can match whichever register she's handed, or cross it. Same pastime, three possible levels.",
+      "beats": [
+        {
+          "npc": "Rosita",
+          "expression": "tense",
+          "line": "Kids today just don't get taught respect anymore - it's the screens, I'm telling you.",
+          "cues": ["sweeping judgment, delivered as fact"],
+          "egoState": "CP",
+          "options": [
+            {
+              "text": "Match her: \"Exactly, it's all the screens, my kid's the same.\"",
+              "tag": "ok",
+              "egoState": "CP",
+              "outcome": "Rosita nods, satisfied. They've spent two minutes agreeing about screens without checking anything. Comfortable, unremarkable, over by the time the bell rings.",
+              "outcomeExpression": "neutral",
+              "lesson": "Matching a Parent-register pastime keeps it comfortable and complementary - that's not a failure, pastimes exist partly to sound each other out safely; it's just not the only option."
+            },
+            {
+              "text": "Offer something specific and checkable: \"Actually my son's teacher said his focus has been fine this term - it was rough in September, but it evened out.\"",
+              "tag": "best",
+              "egoState": "A",
+              "outcome": "Rosita pauses, genuinely curious. \"Huh - what changed?\" The conversation shifts from verdicts to information, Adult-to-Adult, without anyone feeling corrected.",
+              "outcomeExpression": "open",
+              "lesson": "Crossing a Parent-register pastime to Adult - specific, checkable, not a sweeping verdict - is the register TA Today distinguishes from the judgmental kind. Same topic, same friendliness, different register."
+            },
+            {
+              "text": "Say, \"God, this is exactly what my mother used to say about me and TV. Makes me feel about eight years old.\"",
+              "tag": "ok",
+              "egoState": "C",
+              "outcome": "Rosita laughs, surprised into something more personal herself. \"Mine too, actually.\" The pastime drops into shared memory instead of shared verdicts.",
+              "outcomeExpression": "open",
+              "lesson": "Child-register pastiming - going back and replaying old feelings - is just as real a register as Parent or Adult; it's not wrong, it's a third way of playing the same topic."
+            },
+            {
+              "text": "Say, with a little edge: \"Well, some of us actually monitor what our kids watch.\"",
+              "tag": "game-move",
+              "egoState": "CP",
+              "outcome": "Rosita's smile tightens. \"Well. Must be nice to have the time.\" The pastime just curdled toward something sharper.",
+              "outcomeExpression": "tense",
+              "lesson": "This isn't a pastime reply anymore - it's a dig wrapped in agreement, exactly the kind of opening move that can tip a comfortable pastime into a game if either person picks it up."
+            }
+          ]
+        },
+        {
+          "npc": "Dev, by the fence",
+          "expression": "tense",
+          "line": "I don't know, I just feel like I'm failing him somehow - like this is going to be the thing he remembers about his childhood, his dad being distracted all the time.",
+          "cues": ["self-blaming", "catastrophic leap ('this is going to be the thing')", "fidgeting"],
+          "egoState": "AC",
+          "options": [
+            {
+              "text": "Ask plainly: \"What's actually been happening this week - can you give me one example?\"",
+              "tag": "best",
+              "egoState": "A",
+              "outcome": "Dev stops fidgeting. \"Okay - actually, just Tuesday night, I was on my phone during dinner. That's it, really.\" One concrete thing, now something he can actually change.",
+              "outcomeExpression": "open",
+              "lesson": "Asking for a specific example crosses a Child-register pastime - global, catastrophic feeling - into Adult, one checkable fact. The same move that works on a Parent-register pastime works here too."
+            },
+            {
+              "text": "Reassure him warmly: \"No, no, you're a great dad, don't even think that.\"",
+              "tag": "ok",
+              "egoState": "NP",
+              "outcome": "Dev nods, comforted for the moment, but the specific worry never actually gets looked at.",
+              "outcomeExpression": "neutral",
+              "lesson": "Comforting Child with Nurturing Parent feels kind and keeps the pastime warm, but it answers the feeling, not the specific, checkable thing underneath it."
+            },
+            {
+              "text": "Match his worry: \"Oh, I know, I feel exactly the same, it's the worst, isn't it.\"",
+              "tag": "ok",
+              "egoState": "AC",
+              "outcome": "They sit in the shared worry for a minute. It feels bonding, and neither of them is any closer to knowing what, if anything, needs to change.",
+              "outcomeExpression": "neutral",
+              "lesson": "Matching Child-register worry with your own is comfortable and complementary, but like any pastime it stays in feeling-talk rather than moving toward anything checkable."
+            },
+            {
+              "text": "Say, \"Honestly, compared to some parents, you're doing fine\" - implying some parents aren't.",
+              "tag": "game-move",
+              "egoState": "CP",
+              "outcome": "Dev manages a weak smile, but glances toward Rosita, still mid-rant by the gate. The comparison handed him someone to feel superior to instead of a worry to solve.",
+              "outcomeExpression": "tense",
+              "lesson": "A comparison-stroke resolves the bad feeling by creating a target, not by addressing anything - the same discount-shaped move as the earlier dig, just aimed downward instead of sideways."
+            }
+          ]
+        }
+      ]
+    },
+    "L3": {
+      "fields": [
+        {
+          "type": "vector",
+          "label": "Draw the vectors for Rosita's opening line, and for your best (Adult-crossing) reply.",
+          "pairs": [
+            { "label": "Rosita's opening (\"kids today...\")", "from": "P", "to": "P" },
+            { "label": "Your best reply", "from": "A", "to": "A" }
+          ]
+        },
+        {
+          "type": "text",
+          "label": "In under 60 words: name the three registers the 'same' parenting pastime can be played in, and what changes between them.",
+          "maxWords": 60,
+          "rubric": ["Parent", "Adult", "Child", "register", "judgment", "specific", "feeling"]
+        }
+      ]
+    }
+  },
+  "echoAfterHours": 168,
+  "echo": {
+    "setting": "A week later: the office Slack channel for 'wins'.",
+    "line": "\"Huge win, had to share!! 🎉🎉\"",
+    "shape": "same three-register question - is this post Parent, Adult, or Child?"
+  }
+}

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { PacStack } from "./PacStack";
 import { playSuccess, playTap } from "./sound";
+import { structuralOf, type EgoState } from "../content/types";
 
 type Letter = "P" | "A" | "C";
 
@@ -12,10 +13,12 @@ interface VectorProps {
 }
 
 function toLetter(s: string): Letter {
+  // Content should pass pure P/A/C, but fall back through structuralOf()
+  // for any functional code (CP/NP/FC/AC) so e.g. "NP" buckets to Parent,
+  // not Adult — startsWith("P") alone gets that wrong for every compound code.
   const up = s.toUpperCase();
-  if (up.startsWith("P")) return "P";
-  if (up.startsWith("C")) return "C";
-  return "A";
+  if (up === "P" || up === "A" || up === "C") return up;
+  return structuralOf(up as EgoState);
 }
 
 // Y-coordinates for P, A, C circles in a 3-high stack (viewBox 0 0 100 180)

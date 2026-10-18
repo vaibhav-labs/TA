@@ -1,0 +1,17 @@
+{
+  "concept": 39,
+  "name": "Discounting: levels, types and areas",
+  "oneLine": "Discounting is unawarely ignoring information needed to solve a problem, classified by area (self, others, situation), type (stimuli, problems, options) and level (existence, significance, changeability, personal ability).",
+  "whatYouDid": "You traced Mike's \"I just don't think I've got what it takes\" past the levels he'd already conceded - that the option exists, matters, and works for others - down to the one he was actually discounting: his own ability.",
+  "confusion": "Every discount comes paired with grandiosity - exaggerating some other feature of reality to compensate - so look for both halves, not just the thing being minimized.",
+  "fromBook": {
+    "book": "TA Today",
+    "chapter": 17,
+    "quote": "Discounting is defined as unawarely ignoring information relevant to the solution of a problem."
+  },
+  "expand": {
+    "definition": "The simple version you actually need: discounting always lands on one of four levels, in order from biggest to smallest - does the problem even exist, does it actually matter, can it change at all, and finally, can *this person* change it. Someone can grant the first three and still be quietly discounting the fourth, like Mike does. (The Schiffs' full model also crosses this ladder with an area - self, others, or the situation - and a type - a stimulus, a problem, or an option - for twelve boxes total, but the four-level ladder alone is what actually does the diagnostic work.)",
+    "otherFraming": "Grandiosity is discounting's mirror image: as one feature of reality gets blotted out, another gets blown up out of proportion - the friend who calls the waiter \"incompetent\" is discounting the waiter's competence while being grandiose about his own right to judge.",
+    "tryThisToday": "Pick a problem you haven't solved, and climb the ladder from the top: do you actually believe it's a real problem? Does it matter? Could it change at all? And finally - could you be the one to change it?"
+  }
+}

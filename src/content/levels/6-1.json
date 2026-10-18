@@ -1,0 +1,134 @@
+{
+  "id": "6-1",
+  "title": "OK Corral",
+  "world": 6,
+  "engine": "sort-it",
+  "concepts": [44],
+  "source": {
+    "book": "TA Today",
+    "chapter": 12,
+    "quote": "Though we switch between quadrants on the Corral, we each have one 'favorite' quadrant where we spend most of our time while in script."
+  },
+  "setting": "Monday, 9:05am. The warehouse floor is already loud. Diego has run this shift for two years and prides himself on never letting anything slip.",
+  "playAs": "Diego, warehouse shift lead",
+  "levels": {
+    "L1": {
+      "npc": "Diego",
+      "expression": "tense",
+      "line": "Don't bring me small stuff. Figure it out yourself - that's literally your job.",
+      "cues": ["sharp tone", "doesn't look up from his clipboard", "already walking off before she can answer"],
+      "question": "Quick primer: the OK Corral is a simple map of four stances we take toward ourselves and the other person in a moment - I'm-OK/You're-OK, I'm-not-OK/You're-OK, I'm-OK/You're-not-OK, and I'm-not-OK/You're-not-OK - each one paired with a go-to move: Get-On-With, Get-Away-From, Get-Rid-Of, or Get-Nowhere-With. Priti just asked Diego a quick clarifying question about the delivery schedule. Which OK Corral position is Diego speaking from?",
+      "options": [
+        { "text": "I'm OK, you're OK - he's being efficient, delegating clearly.", "feedback": "Get-On-With from Adult can sound brief, sure - but it stays curious and leaves the door open for a real answer. This closes the door before she's said a word." },
+        { "text": "I'm not-OK, you're OK - he feels overwhelmed and is deferring to her judgment.", "feedback": "Deferring upward is the next quadrant's move. Nothing here suggests Diego sees Priti as more capable than him - he's dismissing her, not deferring to her." },
+        { "text": "I'm OK, you're not-OK - he's getting rid of a problem he's decided isn't worth his attention.", "feedback": "Right. This is Get-Rid-Of done from Child, not Adult: the content could pass for healthy delegation, but the sharp tone and the refusal to even hear the question out is one-up, not fair." },
+        { "text": "I'm not-OK, you're not-OK - he's given up on the whole situation.", "feedback": "Get-Nowhere-With sounds defeated or resigned. Diego isn't resigned here - he's dismissive and clearly still in charge. That's the one-up quadrant, not the futility one." }
+      ],
+      "answer": 2,
+      "lesson": "Get-Rid-Of can be done from Adult (clear, fair, leaves both people OK) or from Child (one-up, dismissive, quietly 'confirming' I'm-OK-you're-not). The content of a line doesn't tell you which - the tone and the follow-through do."
+    },
+    "L2": {
+      "intro": "Track Diego's OK Corral position across one ordinary shift. Same four positions each time; the operation he reaches for is the tell.",
+      "beats": [
+        {
+          "npc": "Priti",
+          "expression": "tense",
+          "line": "Diego - I sent the wrong pallet out on the 8am run. The client already called. I'm sorry.",
+          "cues": ["won't quite meet his eyes", "holding the manifest against her chest like a shield"],
+          "egoState": "AC",
+          "options": [
+            {
+              "text": "This is exactly why I check everything myself. Go. I'll fix it.",
+              "tag": "game-move",
+              "egoState": "CP",
+              "outcome": "Priti shrinks and backs off. The pallet gets sorted within the hour - but she stops mentioning small mistakes to him early, from now on.",
+              "outcomeExpression": "tense",
+              "lesson": "Get-Rid-Of from Child looks capable in the moment, but 'I'll fix it myself' trains people to hide problems from you instead of bringing them early - a short-term win that 'confirms' I'm-OK-you're-not at a real cost."
+            },
+            {
+              "text": "Oh no - I probably should've double-checked the manifest myself. This one's on me too.",
+              "tag": "ok",
+              "egoState": "AC",
+              "outcome": "Priti looks relieved, but confused - it wasn't his mistake. Diego absorbs blame that was never his to carry.",
+              "outcomeExpression": "neutral",
+              "lesson": "Get-Away-From by way of self-blame reflects I'm-not-OK-you're-OK. It's generous, and it protects the relationship, but it reinforces a not-OK view of himself that wasn't actually called for here."
+            },
+            {
+              "text": "Walk me through what happened, then let's call the client together.",
+              "tag": "best",
+              "egoState": "A",
+              "outcome": "They map the error in ninety seconds and call the client together. The client calms down fast, hearing an actual plan instead of an apology alone.",
+              "outcomeExpression": "open",
+              "lesson": "Get-On-With chosen in Adult, not stumbled into. Ernst calls I'm-OK-you're-OK the only position based on reality - which is exactly why it looks unremarkable next to the other three."
+            },
+            {
+              "text": "Ugh. Nothing goes right on this shift, does it.",
+              "tag": "game-move",
+              "egoState": "AC",
+              "outcome": "Priti doesn't know what to say to that. The mistake still needs fixing, and now the mood on the floor has dropped with it.",
+              "outcomeExpression": "neutral",
+              "lesson": "Get-Nowhere-With doesn't make the problem smaller - it just adds futility on top of it. If this becomes Diego's habit, it's the payoff a banal script is quietly aiming for."
+            }
+          ]
+        },
+        {
+          "npc": "Fatima",
+          "expression": "tense",
+          "line": "I heard about this morning's mix-up, Diego. In front of everyone: 'Can we get some basic quality control around here?'",
+          "cues": ["said loudly enough for the whole floor to hear", "doesn't ask what actually happened before saying it"],
+          "egoState": "CP",
+          "options": [
+            {
+              "text": "(Say nothing. Stare at the floor. Feel the old 'I never get it right' settle in.)",
+              "tag": "game-move",
+              "egoState": "AC",
+              "outcome": "The team notices him go quiet. Fatima moves on to the next item. Diego carries the sting all afternoon, and snaps at Priti again later for something small.",
+              "outcomeExpression": "tense",
+              "lesson": "This is the position we fall back to under stress, not the one we live in most of the day - Ernst's Corralogram can show a completely different quadrant in the same twenty-four hours."
+            },
+            {
+              "text": "That's not accurate. Here's what happened and how it's already resolved.",
+              "tag": "best",
+              "egoState": "A",
+              "outcome": "Fatima pauses, visibly recalibrating. She mutters a half-acknowledgment and moves on. The team sees Diego hold his ground without steamrolling anyone.",
+              "outcomeExpression": "neutral",
+              "lesson": "Get-On-With doesn't mean staying silent or agreeing - it means staying in Adult while still stating the facts plainly, even toward someone above you."
+            },
+            {
+              "text": "Must be nice to swoop in and judge after the fact.",
+              "tag": "ok",
+              "egoState": "CP",
+              "outcome": "Satisfying for about three seconds. Fatima bristles, and now there's a second small conflict stacked on top of the first one.",
+              "outcomeExpression": "tense",
+              "lesson": "Get-Rid-Of toward Fatima discharges the sting but creates a new problem - the impulse to push back was fair; doing it from Child instead of Adult is what makes it costly."
+            },
+            {
+              "text": "Yeah, well, nothing I do is ever right around here anyway.",
+              "tag": "game-move",
+              "egoState": "AC",
+              "outcome": "Awkward silence. Nobody on the team quite knows where to look.",
+              "outcomeExpression": "neutral",
+              "lesson": "Get-Nowhere-With doesn't protect Diego from the criticism - it just adds a line to the record that nothing here ever goes right, which is the belief the whole pattern exists to confirm."
+            }
+          ]
+        }
+      ]
+    },
+    "L3": {
+      "fields": [
+        {
+          "type": "text",
+          "label": "Sketch your own Corralogram for an ordinary day this week: which OK Corral quadrant gets the most square inches, and what's one Adult operation you could try there instead of the scripty version?",
+          "maxWords": 70,
+          "rubric": ["OK Corral", "quadrant", "Adult", "operation", "Get-On-With", "Get-Rid-Of", "Get-Away-From", "Get-Nowhere-With"]
+        }
+      ]
+    }
+  },
+  "echoAfterHours": 48,
+  "echo": {
+    "setting": "48 hours later, Saturday morning, Diego's own kitchen.",
+    "line": "His son knocks over the orange juice reaching for the cereal. Diego's first words are already halfway out: 'Can you not? Just - go, I'll clean it.'",
+    "shape": "same four-quadrant menu as L1/L2"
+  }
+}

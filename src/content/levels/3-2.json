@@ -1,0 +1,109 @@
+{
+  "id": "3-2",
+  "title": "Keep It Going",
+  "world": 3,
+  "engine": "choice-story",
+  "concepts": [17],
+  "source": { "book": "TA Today", "chapter": 7, "quote": "So long as transactions remain complementary, communication can continue indefinitely." },
+  "setting": "Thursday afternoon, two desks over. Rohit, the newest engineer on the team, has asked Priya to check something four times since lunch.",
+  "playAs": "Priya, the team lead",
+  "levels": {
+    "L1": {
+      "npc": "Rohit",
+      "expression": "tense",
+      "line": "Sorry - is this an okay time? I didn't want to bug you again, but I wasn't sure if the migration script was right...",
+      "cues": ["apologizes before asking", "\"again\"", "rising, uncertain tone", "shrinks slightly"],
+      "question": "This is the fourth time since lunch. Priya has reassured him every time, and the exchange never breaks down - it just keeps happening. What does that tell you?",
+      "options": [
+        { "text": "Nothing's wrong with it - since it keeps going smoothly, it must be a healthy pattern.", "feedback": "That's the trap. Smooth and ongoing only tells you it's complementary - meaning each reply answers the exact state it was addressed in, which is literally the only thing that keeps an exchange going (that's rule 1). It says nothing about whether the pattern is good for Rohit or for Priya." },
+        { "text": "It's complementary, which only guarantees it can continue - this looks like a Nurturing Parent / Adapted Child loop that's keeping Rohit dependent rather than building his confidence.", "feedback": "Right. A complementary exchange (rule 1) predicts the loop can run indefinitely. It says nothing about whether the loop is doing either of them any good." },
+        { "text": "It must be crossed, since the specific question changes every time.", "feedback": "The content changes; the shape doesn't. Small-and-unsure addressed up (Child to Parent), reassurance addressed down (Parent to Child) - same vectors every time, which is exactly what makes it complementary." }
+      ],
+      "answer": 1,
+      "lesson": "Rule 1 says complementary transactions can continue indefinitely - it says nothing about whether they should. A Parent-Child loop is just as complementary as an Adult-Adult one, and just as capable of running forever."
+    },
+    "L2": {
+      "intro": "Keep this going. Each time Rohit comes back, pick how to answer - and notice what each choice costs.",
+      "beats": [
+        {
+          "npc": "Rohit",
+          "expression": "tense",
+          "line": "Sorry again - for the migration script, should the \"users\" table go before or after \"orders\"? I don't want to break anything.",
+          "cues": ["apologizes first", "\"again\""],
+          "egoState": "AC",
+          "options": [
+            { "text": "Users first - it's the one being referenced. Good instinct to check order on migrations.", "tag": "best", "egoState": "NP", "outcome": "\"Okay, got it, thank you.\" He runs off to fix it. Ten minutes later he's back with another small question.", "outcomeExpression": "neutral", "lesson": "Reassurance answering his uncertainty is complementary - Nurturing Parent to Adapted Child - and by rule 1 it can continue exactly like this all afternoon." },
+            { "text": "Here, let me just reorder it for you, it's faster.", "tag": "ok", "egoState": "NP", "outcome": "\"Oh - thanks!\" He watches you fix it rather than fixing it himself. The loop holds, but now he's learned less than he would have.", "outcomeExpression": "neutral", "lesson": "Still complementary, still keeps the chain alive - but doing the task for him is a heavier Parent move than answering his question, and the one most likely to make the next question arrive sooner." },
+            { "text": "Rohit, you've asked me something every twenty minutes today.", "tag": "game-move", "egoState": "CP", "outcome": "He goes red and mutters \"sorry, sorry\" and backs away without the answer he needed. The migration ships wrong an hour later.", "outcomeExpression": "tense", "lesson": "This crosses his Child-pulling stimulus with Critical Parent instead of staying complementary - which does break the loop, but by rule 2 (a mismatched reply breaks the exchange until someone shifts) it also breaks the communication itself, right when he still needed the actual answer." }
+          ]
+        },
+        {
+          "npc": "Rohit",
+          "expression": "tense",
+          "line": "Okay, next thing - the test suite's flaky on my machine, like three tests fail randomly. Is that normal, or did I break something?",
+          "cues": ["\"is that normal\"", "checking before deciding anything"],
+          "egoState": "AC",
+          "options": [
+            { "text": "Those three are known-flaky, everyone ignores them - but good instinct to ask instead of assuming.", "tag": "best", "egoState": "NP", "outcome": "\"Oh okay, good, I was worried.\" Relief, then: \"One more thing, actually -\"", "outcomeExpression": "neutral", "lesson": "Same shape as last time: Adapted Child uncertainty answered by Nurturing Parent reassurance. Complementary, continuing, rule 1 exactly as advertised." },
+            { "text": "Don't worry about test flakiness, it's basically never your fault.", "tag": "ok", "egoState": "NP", "outcome": "\"Oh, good.\" He relaxes, but he also hasn't learned which three tests, or why they're flaky, or how to tell next time.", "outcomeExpression": "neutral", "lesson": "Reassurance without information keeps the chain alive just as well as reassurance with it - which is the problem: it soothes the feeling without touching the skill that would stop the feeling recurring." },
+            { "text": "If you'd read the test output you'd see which ones are flaky.", "tag": "game-move", "egoState": "CP", "outcome": "He stops asking out loud and starts quietly guessing instead - which is worse for both of you.", "outcomeExpression": "tense", "lesson": "A Critical Parent correction crosses his Child question instead of answering it from the state he addressed; rule 2 - it breaks the exchange, and silent guessing is harder to catch than an out-loud question." }
+          ]
+        },
+        {
+          "npc": "Rohit",
+          "expression": "tense",
+          "line": "Should I set the env var in \".env.local\" or ask ops to set it in the staging config? I genuinely don't know which is right here.",
+          "cues": ["\"genuinely don't know\""],
+          "egoState": "AC",
+          "options": [
+            { "text": "Staging config, always - \".env.local\" never leaves your laptop. That's worth remembering.", "tag": "best", "egoState": "NP", "outcome": "\"Got it, that makes sense actually.\" A beat of real learning this time - but the pattern of asking first hasn't changed.", "outcomeExpression": "neutral", "lesson": "Still Nurturing Parent to Adapted Child, still complementary - rule 1 doesn't care that this particular answer happened to teach him something; the chain continues either way." },
+            { "text": "I'll just message ops and get it sorted for you.", "tag": "ok", "egoState": "NP", "outcome": "\"Oh, thanks, I appreciate it.\" One less thing for him to figure out - and one more thing he now knows he can hand off.", "outcomeExpression": "neutral", "lesson": "Taking the task off his hands entirely is the most Parent-heavy option yet - complementary, but it moves responsibility backward, and the chain remembers that next time something's unclear." },
+            { "text": "You need to start figuring some of this out yourself.", "tag": "game-move", "egoState": "CP", "outcome": "\"...Right. Sorry.\" He goes quiet for the rest of the afternoon, and the env var never gets set correctly.", "outcomeExpression": "tense", "lesson": "True advice, wrong ego state, wrong moment - crossing his question with a lecture breaks the exchange (rule 2) without leaving him anything he can actually act on." }
+          ]
+        },
+        {
+          "npc": "Rohit",
+          "expression": "tense",
+          "line": "Is it okay if I just copy how you worded the last PR description? I don't want to word mine wrong.",
+          "cues": ["asking permission for something low-stakes"],
+          "egoState": "AC",
+          "options": [
+            { "text": "Copy the structure, sure - but try writing the summary line yourself first and I'll tell you if it's off.", "tag": "best", "egoState": "A", "outcome": "He pauses. \"...Okay. Let me try.\" For the first time today, he doesn't come straight back with another question.", "outcomeExpression": "open", "lesson": "This is the shift the chain needs: an Adult invitation to try, rather than Parent reassurance or Parent takeover - still a response to his stimulus, but it addresses his Adult instead of his Child, which is why it finally slows the loop down." },
+            { "text": "Yeah, totally fine, just copy it.", "tag": "ok", "egoState": "NP", "outcome": "\"Okay, thanks!\" Done in ten seconds - and he's already drafting the next question in his head.", "outcomeExpression": "neutral", "lesson": "Quick, kind, complementary - and exactly as repeatable as every reassurance before it. Rule 1 doesn't reward effort or difficulty; any parallel vector keeps the chain going." },
+            { "text": "You really should have your own way of writing these by now.", "tag": "game-move", "egoState": "CP", "outcome": "He flinches and just... copies it anyway, silently, without asking next time - which feels like progress and isn't.", "outcomeExpression": "tense", "lesson": "This crosses rather than answers, and what looks like the loop ending is actually him hiding the next version of the same question instead of asking it out loud." }
+          ]
+        },
+        {
+          "npc": "Rohit",
+          "expression": "tense",
+          "line": "Last thing, I promise - does this deploy checklist look right to you, or did I miss a step?",
+          "cues": ["\"last thing, I promise\"", "still checking before acting"],
+          "egoState": "AC",
+          "options": [
+            { "text": "Walk me through which step you were least sure about, and let's check that one together.", "tag": "best", "egoState": "A", "outcome": "He points to step 4. \"This one - do I roll back staging first or prod?\" A real, specific, answerable question, not a general bid for reassurance.", "outcomeExpression": "open", "lesson": "Inviting his Adult to locate the actual uncertainty, rather than reassuring the whole list at once, is what turns a dependency loop into a skill-building exchange - still complementary, now Adult-Adult." },
+            { "text": "Looks fine, go ahead.", "tag": "ok", "egoState": "NP", "outcome": "\"Great, thanks!\" He goes ahead - and next deploy, he'll ask again, because nothing about how he checks has changed.", "outcomeExpression": "neutral", "lesson": "A quick green light is complementary and kind, and changes nothing about the next time this exact uncertainty comes up." },
+            { "text": "I've already told you, just use your judgment.", "tag": "game-move", "egoState": "CP", "outcome": "He nods, says nothing else, and deploys without actually resolving which step he was unsure about.", "outcomeExpression": "tense", "lesson": "Telling him to use judgment he's told you he doesn't yet trust isn't Adult information, it's a Parent dismissal dressed as advice - it crosses the stimulus instead of answering it, and the real uncertainty goes unresolved." }
+          ]
+        },
+        {
+          "npc": "Rohit",
+          "expression": "tense",
+          "line": "Okay, actually, one more - I keep asking you this stuff. Is that annoying? Should I just stop asking?",
+          "cues": ["naming the pattern itself", "asking permission to stop asking"],
+          "egoState": "AC",
+          "options": [
+            { "text": "Don't stop asking - but next time, tell me what you think the answer is first, then we'll check it. You've been right more than you think.", "tag": "best", "egoState": "A", "outcome": "He blinks. \"...Okay. I can try that.\" Six turns in, this is the first reply that was built to end the loop instead of extend it.", "outcomeExpression": "open", "lesson": "This is rule 1's limit, made visible: everything before this kept the Parent-Child chain alive because it answered Child with Parent. Answering his Child-pulling question from Adult instead, inviting his own judgment, is what actually starts closing the gap that's been generating every question since lunch." },
+            { "text": "It's not annoying at all, ask me anything, always.", "tag": "ok", "egoState": "NP", "outcome": "\"Oh - okay, good, thank you.\" Warm, true, and it guarantees there will be a seventh question tomorrow.", "outcomeExpression": "neutral", "lesson": "This is the kindest possible version of the same complementary move you've been making all afternoon - which is exactly why, on its own, it can't be the end of the pattern. Rule 1: as long as it stays complementary, it continues." },
+            { "text": "Honestly? Yeah, it's a lot today.", "tag": "game-move", "egoState": "CP", "outcome": "His face falls. \"Oh. Sorry. I'll stop.\" He does stop - by going quiet and guessing instead of asking, which is worse for the next migration, not better.", "outcomeExpression": "tense", "lesson": "Said honestly but landed as rejection, this crosses the one moment he was closest to naming the pattern himself - rule 2 breaks the exchange here at the worst possible beat to break it." }
+          ]
+        }
+      ]
+    }
+  },
+  "echoAfterHours": 18,
+  "echo": {
+    "setting": "The next morning, Rohit taps your shoulder before you've even sat down.",
+    "line": "Sorry - quick one before standup?",
+    "shape": "same six-beat shape as L2"
+  }
+}

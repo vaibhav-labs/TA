@@ -243,15 +243,11 @@
   </div>
 
   <p class="divider-note">New to this? Start with <b>Game 1</b>. Each one builds on the last.</p>
-
-  <div class="source-foot">
-    Built from <b>TA Today</b> (Stewart &amp; Joines, 1987), <b>Scripts People Live</b> (Claude Steiner, 1974), and <b>Transactional Analysis in Psychotherapy</b> (Eric Berne, 1961).
-  </div>
 </div>
 
 <script>
   if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => { navigator.serviceWorker.register('./sw.js'); });
+    window.addEventListener('load', () => { if (location.protocol.startsWith('http')) navigator.serviceWorker.register('./sw.js'); });
   }
 </script>
 </body>

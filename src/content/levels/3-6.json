@@ -1,0 +1,92 @@
+{
+  "id": "3-6",
+  "title": "The Salesman",
+  "world": 3,
+  "engine": "fields",
+  "concepts": [19],
+  "source": { "book": "TA Today", "chapter": 7, "quote": "The textbook example is that of a salesperson hoping to hook a customer into an impulse purchase." },
+  "setting": "Saturday, an electronics showroom. Denise has already sold two other people something they didn't plan to buy today.",
+  "playAs": "the customer, browsing with a specific budget in mind",
+  "levels": {
+    "L1": {
+      "npc": "Denise",
+      "expression": "neutral",
+      "line": "This one's definitely the better pair, but I think it's probably outside what you were looking to spend.",
+      "cues": ["casual, almost offhand tone", "pairs a compliment on the product with a doubt about you", "no actual price has been stated yet"],
+      "question": "On the social level, Denise is just comparing products and noting your budget. What's the second message, and who is it aimed at?",
+      "options": [
+        { "text": "There's only one message here - she's giving you honest, Adult information to help you decide.", "feedback": "If that were all, there'd be nothing for the word \"probably\" to be doing. Pairing a compliment on the item with a doubt about your budget, before you've said a number, is aimed at provoking a reaction, not informing a decision." },
+        { "text": "This is an angular transaction: the words are Adult-to-Adult, but there's a second message from her Adult aimed at your Child, inviting you to prove her wrong by buying it.", "feedback": "Right. Berne's own name for this exact shape: an Adult-Adult social stimulus with a second line running from her Adult to your Child." },
+        { "text": "This is a duplex transaction, since two things are being communicated on two different levels.", "feedback": "Close, but duplex is a different shape - duplex runs two full complementary exchanges at once, one social and one psychological, with the other person answering on both tracks. Here there's just one extra message aimed at your Child; the name for that specific shape is angular." }
+      ],
+      "answer": 1,
+      "lesson": "TA Today's textbook example of an angular transaction is exactly this: a salesperson pairing honest product information with a doubt about your budget, hoping to hook you into Child and get a purchase instead of a decision. By rule 3 (when the spoken and unspoken levels disagree, the unspoken one wins), what you do next is decided at that psychological level, not by the honest half of the sentence."
+    },
+    "L2": {
+      "intro": "Three products, three hooks. Respond from Adult at both levels, three times running, and the hook stops working.",
+      "beats": [
+        {
+          "npc": "Denise",
+          "expression": "neutral",
+          "line": "These earbuds are genuinely the better sound - but I think they're probably more than you came in looking to spend.",
+          "cues": ["offhand delivery", "doubt paired with a compliment"],
+          "egoState": "A",
+          "options": [
+            { "text": "What's the actual price difference, and what's the real improvement in sound - not the pitch, the spec?", "tag": "best", "egoState": "A", "outcome": "Denise, slightly thrown, actually answers with numbers. \"...Twenty more, and yeah, better bass response, mostly.\" You decide on the numbers, not the dare.", "outcomeExpression": "neutral", "lesson": "Answering the content (price, spec) instead of the dare (proving you can afford it) is Adult at both levels - you're not buying to spite her doubt, and you're not collapsing under it either." },
+            { "text": "I don't need to be sold on whether I can afford it, thanks.", "tag": "ok", "egoState": "A", "outcome": "Denise shrugs. \"Fair enough.\" Correct in spirit, a little defensive in delivery - the Adult content is right, but there's a flicker of the Child dare peeking through in the tone.", "outcomeExpression": "neutral", "lesson": "The words are Adult, but an edge in the delivery is Adult content riding on a Child reaction underneath - you've answered the hook, but not quite cleanly; the psychological level still got a response, just a defensive one." },
+            { "text": "I can afford whatever I want, I'll take the better ones.", "tag": "game-move", "egoState": "C", "outcome": "\"Great choice!\" Denise says, already reaching for the next item. You just spent more money to win an argument nobody said out loud.", "outcomeExpression": "tense", "lesson": "This is the textbook payoff: the social level (a product comparison) got answered, but the actual decision was made at the psychological level, by the Child who took the bait. Rule 3 - the outcome is determined psychologically, not socially - and this is what losing that way looks like." }
+          ]
+        },
+        {
+          "npc": "Denise",
+          "expression": "neutral",
+          "line": "Now, this speaker - way better range, obviously - but again, might be a stretch for your budget.",
+          "cues": ["repeats the exact pattern", "\"obviously\", \"again\""],
+          "egoState": "A",
+          "options": [
+            { "text": "Same question as last time - what's the actual range difference, and what does \"a stretch\" mean in dollars?", "tag": "best", "egoState": "A", "outcome": "\"...About forty dollars, and yeah, noticeably further range.\" Same hook, same clean answer. Denise is starting to adjust her pitch.", "outcomeExpression": "neutral", "lesson": "Repeating the Adult move a second time isn't luck - rule 3 cares about which level you answer, and you're consistently answering the social level's actual content instead of the psychological level's dare, each time it's offered." },
+            { "text": "I heard you the first time, I know what I can afford.", "tag": "ok", "egoState": "A", "outcome": "\"Okay, okay,\" Denise says, hands up. True, Adult content - delivered with a trace of irritation that says the dare got a little further under your skin this time.", "outcomeExpression": "neutral", "lesson": "Twice in a row now the content's been right but the delivery has carried a flicker of reaction - the hook is testing whether persistence gets a different, more Child, result; staying aware of that is the actual skill here." },
+            { "text": "Fine, you clearly think I can't afford it, I'll take it.", "tag": "game-move", "egoState": "C", "outcome": "\"Perfect!\" Denise says. Same move, same bait, same bite - seeing it coming last time didn't stop it this time.", "outcomeExpression": "tense", "lesson": "Recognizing the pattern in the last beat doesn't automatically immunize you in this one - each transaction is answered on its own, and the Child dare has to be declined again, every time it's offered, not just once." }
+          ]
+        },
+        {
+          "npc": "Denise",
+          "expression": "neutral",
+          "line": "Okay, last one - the home theater system, honestly our best, but this one's a real stretch for most people's budget.",
+          "cues": ["\"honestly\", \"most people\"", "the biggest number yet"],
+          "egoState": "A",
+          "options": [
+            { "text": "What does it actually do better than the setup I have, and what's the real number - not \"a stretch,\" a figure?", "tag": "best", "egoState": "A", "outcome": "Denise, for the first time all afternoon, just tells you straight: \"Fourteen hundred. Better surround imaging, that's about it for your room size.\" You say you'll think about it. She doesn't push.", "outcomeExpression": "open", "lesson": "Three for three: answering the actual content instead of the implied dare, every time, is what finally changes the transaction itself - Denise stops offering the hook because the hook has stopped working on you specifically." },
+            { "text": "I think I'll pass on that one, but thanks for the info.", "tag": "ok", "egoState": "A", "outcome": "\"No worries,\" Denise says. A perfectly good, genuinely Adult decline - the other healthy ending to this exact example: the hook simply didn't take.", "outcomeExpression": "neutral", "lesson": "TA Today notes this exact outcome as the alternate healthy ending to an angular transaction - a thoughtful decline is just as Adult as a reasoned purchase. What makes either one count is that the decision came from weighing the content, not from the dare." },
+            { "text": "You know what, fine, I'll take it, I can handle it.", "tag": "game-move", "egoState": "C", "outcome": "\"Wonderful choice,\" Denise says, already writing it up. Three hooks, three bites - and a bill for something you walked in never planning to buy.", "outcomeExpression": "tense", "lesson": "The third bite costs the most, literally - and it's still the same shape as the first one: an Adult sentence carrying a Child dare, answered from Child instead of Adult, with the outcome decided exactly where rule 3 says it would be." }
+          ]
+        }
+      ]
+    },
+    "L3": {
+      "fields": [
+        {
+          "type": "vector",
+          "label": "Draw the angular transaction for Denise's line, and the vectors for your best response.",
+          "pairs": [
+            { "label": "Social-level stimulus (S1)", "from": "A", "to": "A" },
+            { "label": "Psychological-level stimulus (S2) - the hidden hook", "from": "A", "to": "C" },
+            { "label": "Your best response", "from": "A", "to": "A" }
+          ]
+        },
+        {
+          "type": "text",
+          "label": "In under 60 words: why does answering \"from Adult at both levels\" beat the hook, when the social-level words were honest either way?",
+          "maxWords": 60,
+          "rubric": ["psychological", "social", "angular", "Adult", "outcome", "determined", "hook"]
+        }
+      ]
+    }
+  },
+  "echoAfterHours": 48,
+  "echo": {
+    "setting": "Two days later, an ad in your feed.",
+    "line": "This one's better, obviously. But it's probably not for everyone.",
+    "shape": "same angular-vector diagnosis as L1"
+  }
+}

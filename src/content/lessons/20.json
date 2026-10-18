@@ -1,0 +1,17 @@
+{
+  "concept": 20,
+  "name": "Vectors / relationship diagram",
+  "oneLine": "The arrows drawn between two people's PAC diagrams showing which ego state sent a message and which one it was aimed at.",
+  "whatYouDid": "You drew the stimulus vector from Priya's Adult to Arjun's Adult, and the response vector back the same way - the parallel arrows were what told you the transaction was complementary, not the words alone.",
+  "confusion": "The easy mistake isn't a specific wrong answer - it's skipping the diagram altogether and trying to diagnose a transaction from the words alone, when the vectors are what actually settle it.",
+  "fromBook": {
+    "book": "TA Today",
+    "chapter": 7,
+    "quote": "The arrows show the direction of each communication. In formal language, these arrows are known as vectors."
+  },
+  "expand": {
+    "definition": "Each ego state (Parent, Adult, Child) on one person's diagram can send to, or be addressed by, any of the three on the other person's diagram - the full relationship diagram is the set of vectors a transaction could travel between two three-circle stacks. There are nine such possible vectors in all.",
+    "otherFraming": "Whether a transaction is complementary or crossed is read entirely off the vectors - parallel vectors landing on the state that answers mean complementary; vectors that aren't parallel, or that land somewhere else, mean crossed.",
+    "tryThisToday": "Next time you're diagnosing an exchange, physically sketch the two PAC stacks and draw the arrow before you decide what kind of transaction it is - the shape usually makes the answer obvious."
+  }
+}

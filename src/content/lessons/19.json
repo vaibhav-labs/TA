@@ -1,0 +1,17 @@
+{
+  "concept": 19,
+  "name": "Ulterior transaction",
+  "oneLine": "A transaction carrying two messages at once - an overt social-level message, and a covert psychological-level one that actually decides what happens.",
+  "whatYouDid": "Denise's pitch sounded like plain Adult information about the product, but the psychological-level dig at your budget was the real message - answering only the words would have missed what was actually being decided.",
+  "confusion": "People analyze only the social level - the words - and miss that the outcome of an ulterior transaction is settled underneath those words, not by them.",
+  "fromBook": {
+    "book": "TA Today",
+    "chapter": 7,
+    "quote": "The textbook example is that of a salesperson hoping to hook a customer into an impulse purchase."
+  },
+  "expand": {
+    "definition": "Berne's third rule: the behavioral outcome of an ulterior transaction is determined at the psychological, not the social, level. An angular transaction sends one hidden message, classically from Adult to the other person's Child (the salesperson's dare); a duplex transaction runs two full complementary exchanges at once, one social and one psychological.",
+    "otherFraming": "TA Today calls reading the non-verbal, psychological-level clues \"thinking Martian\" - watching what actually happens next, the way an observer with no preconceptions about what words are supposed to mean would.",
+    "tryThisToday": "Next time someone's words sound neutral but something in you still reacts, ask what the psychological-level message might have been - and notice which level you just answered."
+  }
+}

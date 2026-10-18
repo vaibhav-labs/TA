@@ -1,0 +1,180 @@
+{
+  "id": "2-6",
+  "title": "The Contaminated Adult",
+  "world": 2,
+  "engine": "spot-the-leak",
+  "concepts": [13, 14],
+  "boss": true,
+  "source": { "book": "TA Today", "chapter": 6, "quote": "Eric Berne named these two problems contamination and exclusion." },
+  "setting": "Thursday, 3pm. Victor, a consultant brought in to \"fix hiring\", has the room's full attention. He never once raises his voice.",
+  "playAs": "Zoë, a colleague on the hiring panel",
+  "levels": {
+    "L1": {
+      "npc": "Victor",
+      "expression": "neutral",
+      "line": "Look, it's just a fact: people from that background don't test well under pressure, and honestly, I've never met one who could really hack this role anyway.",
+      "cues": ["delivered flat and confident, like a shared fact", "no evidence offered, no counter-examples considered", "\"it's just a fact\" used to shut down further checking"],
+      "question": "Victor sounds calm and certain, like he's just reporting reality. What's actually going on?",
+      "options": [
+        { "text": "This is real Adult reasoning - he's just being direct", "feedback": "Real Adult reasoning updates when checked and can point to evidence; \"it's just a fact\" used to end the conversation, with no evidence offered, is the opposite of that." },
+        { "text": "Parent contamination only - he's repeating a prejudice he was taught", "feedback": "There is a taught prejudice here (\"people from that background don't test well\") - but the second half, \"I've never met one who could really hack this role\", is his own experience generalized into certainty. There's more than one source feeding this." },
+        { "text": "Double contamination - a Parent prejudice and a Child delusion, both mistaken for fact", "feedback": "Right. \"People from that background don't test well\" is an inherited Parent prejudice; \"I've never met one who could really hack this role\" turns a handful of personal impressions into a sweeping belief, which is the Child-delusion half. Both get delivered in the same flat, certain Adult voice - that's what makes contamination dangerous: it doesn't sound like Parent or Child." },
+        { "text": "Child delusion only - he's generalizing from a few bad experiences", "feedback": "His own experience is doing some of the work, true - but \"it's just a fact\" about an entire group of people is also exactly the shape of an inherited prejudice, not something he worked out himself from scratch." }
+      ],
+      "answer": 2,
+      "lesson": "Contamination is dangerous precisely because it doesn't come wearing a Parent scowl or a Child whine - it borrows the Adult's flat, reasonable voice. Berne's real test isn't the tone, it's the content: does this claim update when checked against reality, or does it just restate itself more firmly? Victor's claim does the second."
+    },
+    "L2": {
+      "intro": "Three statements, three chances to test what's real Adult and what's borrowing its voice. You're on the panel - what do you say?",
+      "beats": [
+        {
+          "npc": "Victor",
+          "expression": "neutral",
+          "line": "Honestly, if people just worked harder, none of this would be an issue. That's just how the world works.",
+          "cues": ["flat, generic certainty", "no data, no specific case"],
+          "egoState": "A",
+          "options": [
+            {
+              "text": "That's completely wrong and unfair.",
+              "tag": "game-move",
+              "egoState": "CP",
+              "outcome": "Victor's smile tightens. \"I'm just stating facts.\" Now it's a standoff - certainty versus certainty.",
+              "outcomeExpression": "tense",
+              "lesson": "Meeting a contaminated claim with a flat moral counter-claim from Controlling Parent doesn't expose the contamination, it just adds a second absolute to the room."
+            },
+            {
+              "text": "Can you point to the data behind that? I've seen the opposite in our own numbers.",
+              "tag": "best",
+              "egoState": "A",
+              "outcome": "Victor pauses. \"Well - I mean, anecdotally...\" For the first time, the certainty wobbles.",
+              "outcomeExpression": "neutral",
+              "lesson": "Asking for the evidence a real Adult claim should be able to produce tests contamination without attacking the person - if the claim can't survive the check, the Adult mask starts to slip on its own."
+            },
+            {
+              "text": "I guess that's probably true, you'd know better than me.",
+              "tag": "game-move",
+              "egoState": "AC",
+              "outcome": "Victor nods, satisfied. The claim stands, reinforced, unchecked.",
+              "outcomeExpression": "neutral",
+              "lesson": "Accepting a contaminated claim because it was delivered with total confidence is exactly how prejudice gets passed on as \"just facts\" - the content is never actually tested."
+            },
+            {
+              "text": "Maybe, but let's focus on the hiring numbers instead.",
+              "tag": "ok",
+              "egoState": "A",
+              "outcome": "The conversation moves on, but the claim itself is left standing, unchallenged, for next time.",
+              "outcomeExpression": "neutral",
+              "lesson": "Redirecting avoids a fight and keeps the meeting moving, but it leaves the contaminated belief completely intact for the next conversation."
+            }
+          ]
+        },
+        {
+          "npc": "Victor",
+          "expression": "neutral",
+          "line": "I don't even need to look at his resume - I can just tell within the first minute whether someone's going to work out. Never been wrong yet.",
+          "cues": ["unfalsifiable claim", "no tracking of actual outcomes mentioned"],
+          "egoState": "A",
+          "options": [
+            {
+              "text": "Wow, that's an amazing skill.",
+              "tag": "game-move",
+              "egoState": "AC",
+              "outcome": "Victor beams. \"I know, right?\" The delusion gets a round of applause.",
+              "outcomeExpression": "neutral",
+              "lesson": "Flattering an unfalsifiable claim (\"never been wrong yet\" - how would he know?) reinforces exactly the kind of overconfidence contamination runs on."
+            },
+            {
+              "text": "How would you actually know you've never been wrong - do you track the ones you rejected?",
+              "tag": "best",
+              "egoState": "A",
+              "outcome": "Victor opens his mouth, closes it. \"I... no, not really.\" First real crack in the certainty all day.",
+              "outcomeExpression": "neutral",
+              "lesson": "This question goes straight at what makes \"never been wrong yet\" a Child delusion rather than an Adult conclusion: a real Adult claim can be checked against disconfirming cases, and this one never has been."
+            },
+            {
+              "text": "That's ridiculous, nobody can tell that fast.",
+              "tag": "ok",
+              "egoState": "CP",
+              "outcome": "Victor shrugs. \"Twenty years of experience says otherwise.\" Dismissal doesn't dent confidence built this way.",
+              "outcomeExpression": "tense",
+              "lesson": "A blunt dismissal from Parent gives Victor something to defend against rather than something to actually examine."
+            },
+            {
+              "text": "Sure, but let's still run the full process for this one.",
+              "tag": "ok",
+              "egoState": "A",
+              "outcome": "Victor agrees, a little put out. The claim is sidestepped rather than tested, but the process stays intact for now.",
+              "outcomeExpression": "neutral",
+              "lesson": "Practical and safe for the hire, but the underlying delusion (\"I can just tell\") is never actually named or tested."
+            }
+          ]
+        },
+        {
+          "npc": "Victor",
+          "expression": "neutral",
+          "line": "Based on the last three cohorts' actual pass rates, candidates from bootcamps have underperformed on the systems-design round specifically - here's the breakdown.",
+          "cues": ["specific, checkable numbers offered", "scoped to one round, not a sweeping claim", "opens a spreadsheet unprompted"],
+          "egoState": "A",
+          "options": [
+            {
+              "text": "That's just prejudice dressed up in numbers.",
+              "tag": "game-move",
+              "egoState": "CP",
+              "outcome": "Victor pulls up the actual spreadsheet. \"It's... literally just the numbers.\" Crying contamination where there isn't any costs you credibility for the next real instance.",
+              "outcomeExpression": "tense",
+              "lesson": "Treating every confident claim as contamination is its own trap - a claim backed by specific, checkable data and open to being wrong is exactly what real Adult content looks like; the diagnosis is in the evidence, not the confidence."
+            },
+            {
+              "text": "Interesting - what do you think is driving that gap, and what should we check before changing anything?",
+              "tag": "best",
+              "egoState": "A",
+              "outcome": "Victor relaxes slightly - a real question lands differently than a loaded one. \"Honestly, I think it's the round's format, not the candidates. Worth testing.\"",
+              "outcomeExpression": "open",
+              "lesson": "Engaging real Adult content with more Adult content - curiosity, next steps, willingness to be wrong - is what distinguishes a genuine data-backed claim from the contaminated ones that only sound like it."
+            },
+            {
+              "text": "Okay, so bootcamp grads are a no, got it.",
+              "tag": "ok",
+              "egoState": "A",
+              "outcome": "Victor frowns. \"That's not what I said - it's one round, not a verdict on anyone.\" The data gets over-read into a blanket rule.",
+              "outcomeExpression": "tense",
+              "lesson": "This over-generalizes a specific, limited finding into the same kind of sweeping claim contamination usually produces - ironically turning real Adult data into something that now behaves like a prejudice."
+            },
+            {
+              "text": "Let's just ignore that round's data for now.",
+              "tag": "ok",
+              "egoState": "A",
+              "outcome": "Victor shrugs. \"Your call,\" clearly unconvinced. Useful data gets shelved instead of used or checked.",
+              "outcomeExpression": "neutral",
+              "lesson": "Dismissing a genuinely checkable claim wastes real information - the skill here isn't suspicion of everything confident, it's testing each claim on its own merits."
+            }
+          ]
+        }
+      ]
+    },
+    "L3": {
+      "fields": [
+        {
+          "type": "vector",
+          "label": "Draw the contamination: Victor's Parent prejudice and his Child delusion, both reaching into Adult.",
+          "pairs": [
+            { "label": "Parent prejudice reaching into Adult", "from": "P", "to": "A" },
+            { "label": "Child delusion reaching into Adult", "from": "C", "to": "A" }
+          ]
+        },
+        {
+          "type": "text",
+          "label": "In under 60 words: Victor presents everything as flat, confident fact and never once says \"I could be wrong\" or asks a real question back. If someone always sounds like pure Adult but it's actually contaminated, which exclusion pattern does that counterfeit, and why is it dangerous?",
+          "maxWords": 60,
+          "rubric": ["constant Adult", "exclusion", "counterfeit", "reality-testing", "contamination", "mistaken for"]
+        }
+      ]
+    }
+  },
+  "echoAfterHours": 48,
+  "echo": {
+    "setting": "48 hours later: the hiring decision gets written up, and Victor's line from the first beat shows up verbatim in the official notes.",
+    "line": "If people just worked harder, none of this would be an issue.",
+    "shape": "same spot-the-contamination shape as L1, now as a written record instead of a spoken line"
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "id": "5-5",
+  "title": "Two Halves",
+  "world": 5,
+  "engine": "choice-story",
+  "concepts": [42],
+  "source": { "book": "TA Today", "chapter": 20, "quote": "two or more individuals behave as though between them they form a single person." },
+  "setting": "Planning meeting, Jules's third week on the team. Troy is walking through the architecture for next quarter's project.",
+  "playAs": "Jules, the new hire",
+  "levels": {
+    "L1": {
+      "npc": "Troy",
+      "expression": "neutral",
+      "line": "Don't worry about the architecture decision, Jules - I've already got it figured out. Just follow the plan I'll send you.",
+      "cues": ["Troy makes every call without asking Jules's view", "Jules never offers an opinion, only ever nods and writes it down", "both seem completely comfortable - no friction at all"],
+      "question": "What's actually going on between Troy and Jules here?",
+      "options": [
+        { "text": "A healthy division of labor - Troy's the manager, so naturally he decides.", "feedback": "Experience can be a real reason for one person deciding more - but notice Jules never even offers a view, not once. That's not experience speaking, that's an ego state shut down entirely." },
+        { "text": "A symbiosis - Troy is running Parent and Adult, Jules is running only Child, and between them they're using three ego states instead of six.", "feedback": "Right. Troy decides and directs (Parent plus Adult); Jules only ever assents (Child). Neither uses their full range - that's the Schiffs' definition of symbiosis, and the comfort both feel is part of the problem, not evidence it's fine." },
+        { "text": "A crossed transaction - Jules is refusing to engage with Troy directly.", "feedback": "No crossing here. Jules's silent nodding is actually complementary to Troy's Parent; the transaction flows smoothly, which is exactly what makes the symbiotic trap easy to miss." }
+      ],
+      "answer": 1,
+      "lesson": "Symbiosis isn't about rank or who 'should' decide - it's that between two people, only three ego states are doing all the work: Troy supplies Parent and Adult, Jules supplies only Child, and the comfort both feel is what keeps it stable, not proof that it's healthy."
+    },
+    "L2": {
+      "intro": "Troy's about to send you the architecture plan without ever asking what you think. You actually have a thought about it - what do you do?",
+      "beats": [
+        {
+          "npc": "Troy",
+          "line": "Don't worry about the architecture decision, Jules - I've already got it figured out. Just follow the plan I'll send you.",
+          "expression": "neutral",
+          "cues": ["decides without asking", "invites only compliance"],
+          "egoState": "CP",
+          "options": [
+            {
+              "text": "Okay, sounds good.",
+              "tag": "game-move",
+              "egoState": "C",
+              "outcome": "Troy nods, satisfied. The plan arrives an hour later. The symbiosis holds exactly as it was.",
+              "outcomeExpression": "neutral",
+              "lesson": "This is the easy, comfortable, default move - and that comfort is the tell. Taking the Child position confirms the symbiosis instead of disturbing it."
+            },
+            {
+              "text": "Are you sure? Maybe you should double check it with someone senior.",
+              "tag": "ok",
+              "egoState": "AC",
+              "outcome": "Troy waves it off. \"No need, I've got this.\" Jules still hasn't said what Jules actually thinks.",
+              "outcomeExpression": "neutral",
+              "lesson": "This voices doubt, but it still hands the thinking to someone else rather than Jules's own Adult - it doesn't add the missing ego state back into the pair, it just relocates the Parent role to a third person."
+            },
+            {
+              "text": "Actually, I looked at this yesterday and I think there's a problem with the caching layer - can I walk you through it?",
+              "tag": "best",
+              "egoState": "A",
+              "outcome": "Troy pauses, surprised. \"Oh - go ahead, I'm listening.\" For the first time in the scene, he's not deciding and Jules isn't just nodding.",
+              "outcomeExpression": "open",
+              "lesson": "Offering a real Adult observation - not a challenge, not a request for permission - is the move that adds a missing ego state back into the pair: now Jules is thinking, and Troy has to use his Adult to actually consider it instead of just directing."
+            },
+            {
+              "text": "You always just tell me what to do - I need you to ask my opinion sometimes.",
+              "tag": "ok",
+              "egoState": "A",
+              "outcome": "Troy looks taken aback. \"I... didn't realize I was doing that.\" Honest, but it's a complaint about the pattern rather than a concrete contribution to this decision.",
+              "outcomeExpression": "neutral",
+              "lesson": "True and worth saying eventually, but naming the pattern in the abstract doesn't itself add Adult content to this decision - pair it with an actual observation like the caching-layer one, or it just becomes a new topic to manage rather than a change in the symbiosis."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "echoAfterHours": 96,
+  "echo": {
+    "setting": "A month later: Jules notices a different teammate deferring to Troy on everything, the exact same old pattern.",
+    "line": "Don't worry about it, Troy's already got it figured out.",
+    "shape": "same four-option shape as L2"
+  }
+}

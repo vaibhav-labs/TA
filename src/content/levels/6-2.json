@@ -1,0 +1,124 @@
+{
+  "id": "6-2",
+  "title": "Hear the Driver",
+  "world": 6,
+  "engine": "diagnose",
+  "concepts": [51],
+  "source": {
+    "book": "TA Today",
+    "chapter": 16,
+    "quote": "The five drivers are the functional manifestations of not-OK (structural) counterscripts."
+  },
+  "setting": "Tuesday, 2:45pm. Weekly status round. Dana leads a small product team and has learned to watch the half-second before people answer, not just the answer.",
+  "playAs": "Dana, team lead",
+  "levels": {
+    "L1": {
+      "npc": "Lucia",
+      "expression": "neutral",
+      "line": "The deliverable is - and I want to be precise here - ninety, or really ninety-two percent complete.",
+      "cues": ["ticks the percentage off on two fingers", "eyes flick up and to the side mid-sentence, like she's reading something off the ceiling", "voice even, well-modulated, almost professorial"],
+      "question": "Quick primer: a 'driver' is a lightning-fast pattern - half a second, in tone, word choice, and gesture - that shows up right before someone answers, like they're unconsciously proving an old rule such as 'I'm only OK if I'm perfect' or 'I'm only OK if I hurry.' Which driver is Lucia showing?",
+      "options": [
+        { "text": "Try Hard", "feedback": "Try Hard sounds strangled and hunched, full of 'huh?' and 'what?' and 'it's hard to...'. Lucia's voice is smooth and her correction adds precision - that's not straining, that's something else." },
+        { "text": "Be Perfect", "feedback": "Right. The self-correcting parenthesis ('ninety, or really ninety-two'), the finger count, and the eyes checking an invisible ceiling for the exact right number are the classic Be Perfect tells." },
+        { "text": "Hurry Up", "feedback": "Hurry Up sounds staccato and rushed, with foot-tapping urgency. Lucia is actually slowing down to get the number exactly right - the opposite energy." },
+        { "text": "Be Strong", "feedback": "Be Strong shows up as flat, distancing, and gesture-free - 'that's done' instead of 'I did that.' Lucia is animated and precise, not withdrawn." }
+      ],
+      "answer": 1,
+      "lesson": "Each driver has a distinct half-second signature in words, tone, gesture, and face. Be Perfect's tell is the self-correcting parenthesis plus the upward glance - as if the exact right number were written on the ceiling."
+    },
+    "L2": {
+      "intro": "Two teammates, two different drivers, same afternoon. What Dana says in the next half-second either feeds the driver or offers its allower.",
+      "beats": [
+        {
+          "npc": "Omar",
+          "expression": "tense",
+          "line": "Is this OK? I mean - it's probably fine, whatever works for you, really, sorry to even ask-",
+          "cues": ["eyebrows raised, head tilted down then glancing up", "voice rising at the end of each clause", "hands open, palms up"],
+          "egoState": "AC",
+          "options": [
+            {
+              "text": "It's fine, don't worry about it!",
+              "tag": "ok",
+              "egoState": "NP",
+              "outcome": "Omar relaxes for a second, then immediately asks another small permission-seeking question about something else entirely.",
+              "outcomeExpression": "tense",
+              "lesson": "Reassurance feels kind but doesn't touch the driver itself. Please Others runs on needing you to be pleased, so blanket reassurance just resets the loop instead of interrupting it."
+            },
+            {
+              "text": "Just make the call that makes me happy, I trust you.",
+              "tag": "game-move",
+              "egoState": "CP",
+              "outcome": "Omar laughs a beat too quickly. 'Okay! Whatever you think is best, then!' - more pleasing, not less.",
+              "outcomeExpression": "tense",
+              "lesson": "This answers his literal question - what will please you - instead of crossing it. It's complementary to his Please Others opening, so it reinforces the exact pattern it seems to be joking about."
+            },
+            {
+              "text": "What do you think is right here? Tell me that first.",
+              "tag": "best",
+              "egoState": "A",
+              "outcome": "A pause. Omar actually thinks about it, then gives a real opinion - a little shaky, but his own.",
+              "outcomeExpression": "open",
+              "lesson": "This is the allower underneath Please Others - 'please yourself' - turned into a concrete question instead of advice. It asks for his Adult instead of accepting the Child's offer."
+            },
+            {
+              "text": "You need to stop apologizing for every little thing, it's not professional.",
+              "tag": "game-move",
+              "egoState": "CP",
+              "outcome": "Omar's shoulders rise further. 'Sorry - I mean - right, sorry.' The apology about the apologizing is still an apology.",
+              "outcomeExpression": "tense",
+              "lesson": "Naming the pattern from Parent judgment just gives his Adapted Child one more thing to try to please you about. The fix isn't a correction - it's an invitation to his own Adult."
+            }
+          ]
+        },
+        {
+          "npc": "Caleb",
+          "expression": "tense",
+          "line": "Quick, quick - just send it, we don't have time for this, go go go.",
+          "cues": ["rapid-fire delivery, words almost running together", "finger tapping the desk", "eyes darting to the clock and back"],
+          "egoState": "AC",
+          "options": [
+            {
+              "text": "You're right, let's just send it now.",
+              "tag": "game-move",
+              "egoState": "AC",
+              "outcome": "They send it. Ten minutes later they catch an error a thirty-second check would've caught.",
+              "outcomeExpression": "tense",
+              "lesson": "Matching someone's Hurry Up is complementary, not helpful - it feels productive in the moment and reliably produces exactly the rework Hurry Up scripts predict."
+            },
+            {
+              "text": "Take thirty seconds. I'll time it.",
+              "tag": "best",
+              "egoState": "A",
+              "outcome": "Caleb exhales, actually re-reads it, and catches the error himself. 'Oh - good thing we checked.'",
+              "outcomeExpression": "open",
+              "lesson": "'Take your time' as a vague instruction doesn't land on someone mid-driver. Turning it into a small, bounded, concrete action does."
+            },
+            {
+              "text": "Relax, there's no rush.",
+              "tag": "ok",
+              "egoState": "NP",
+              "outcome": "Caleb nods, but his foot keeps tapping. He sends it two minutes later anyway, barely slower than before.",
+              "outcomeExpression": "tense",
+              "lesson": "Telling someone to relax rarely works mid-driver - the allower has to be a specific action, not a mood you're asking them to adopt."
+            },
+            {
+              "text": "We're always behind because of you.",
+              "tag": "game-move",
+              "egoState": "CP",
+              "outcome": "Caleb's typing gets even faster and more frantic.",
+              "outcomeExpression": "tense",
+              "lesson": "Blame adds stress on top of a stress-behavior - it's the fastest way to deepen someone's Hurry Up, not interrupt it."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "echoAfterHours": 30,
+  "echo": {
+    "setting": "Saturday, the gym. Dana's trainer, mid-set, breathing hard.",
+    "line": "'I'm fine, keep going' - said flat, immobile face, arms already back in position before anyone asked if he was actually fine.",
+    "shape": "same five-driver menu"
+  }
+}

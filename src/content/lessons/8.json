@@ -1,0 +1,17 @@
+{
+  "concept": 8,
+  "name": "Structural model: Parent, Adult, Child",
+  "oneLine": "Parent, Adult and Child name where content comes from - copied from parents (Parent), built fresh in the here-and-now (Adult), or replayed from your own childhood (Child) - not how mature or childish it sounds.",
+  "whatYouDid": "You had to resist reading Dev's crossed arms and clipped tone as just \"being immature\" and instead place it structurally: a childhood-style protest being replayed, not a character flaw.",
+  "confusion": "People assume Child always means childish and Adult always means mature or grown-up-sounding; the tell is that \"Adult\" is about the timing of the response - here-and-now, using present resources - not its tone. A panicked, badly-reasoned reaction can still be genuine Adult if it's really about what's happening right now, and a calm, articulate statement can still be Child if it's a replay of something decided decades ago.",
+  "fromBook": {
+    "book": "TA Today",
+    "chapter": 2,
+    "quote": "When I am behaving, thinking and feeling as I did when I was a child, I am said to be in my Child ego-state."
+  },
+  "expand": {
+    "definition": "The structural model sorts personality content into three parts by origin: Parent (exteropsyche, copied from parent-figures), Adult (neopsyche, built fresh as a response to the here-and-now), and Child (archaeopsyche, replayed from one's own childhood).",
+    "otherFraming": "Freud's id/ego/superego cover similar ground but are purely theoretical and generalized; Berne's ego-states are judged from observable behaviour and point to specific, named people in your own history, not a universal psychic structure everyone shares identically.",
+    "tryThisToday": "Pick one strong reaction you have today and ask: is this really about right now, or is it dated - copied from someone, or replayed from some younger version of me?"
+  }
+}

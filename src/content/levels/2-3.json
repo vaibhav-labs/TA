@@ -1,0 +1,97 @@
+{
+  "id": "2-3",
+  "title": "Egogram",
+  "world": 2,
+  "engine": "build",
+  "concepts": [11],
+  "source": { "book": "TA Today", "chapter": 3, "quote": "The idea is to draw a vertical bar above each ego-state label. The height of the bar shows how much of the time you use that functional part." },
+  "setting": "Saturday morning. A group chat is planning a long-weekend trip. Zara, the self-appointed organizer, has just sent a wall of text.",
+  "playAs": "Leo, Zara's oldest friend in the group",
+  "levels": {
+    "L1": {
+      "npc": "Zara",
+      "expression": "tense",
+      "line": "We're doing the beach house, not the city. Obviously. Someone has to decide, since no one else ever will. Don't argue, I've already booked it. You'll thank me later.",
+      "cues": ["already booked it before asking anyone", "\"obviously\" / \"don't argue\"", "flat, final tone", "no room left for anyone else's input"],
+      "question": "Across this whole message, which functional ego state is dominant in Zara - and is it the positive or negative side?",
+      "options": [
+        { "text": "Positive Controlling Parent", "feedback": "Positive CP directs toward someone else's good and leaves room to object; here Zara's already booked it and shut down argument before it started - that's not protection, that's control for its own sake." },
+        { "text": "Negative Controlling Parent", "feedback": "Right. \"Don't argue\", booking it without asking, and the flat finality are negative Controlling Parent - directing others while discounting their say in it." },
+        { "text": "Free Child", "feedback": "Free Child would be spontaneous and uncensored, but not aimed at controlling someone else's choices - Zara isn't playing, she's issuing a verdict." },
+        { "text": "Adult", "feedback": "There's no here-and-now weighing of options or information exchange here - just a decision already made and defended against argument. That's Parent content, not Adult process." }
+      ],
+      "answer": 1,
+      "lesson": "An egogram isn't read off a single line - it's which functional part keeps showing up. Four sentences of \"obviously\", pre-booking, and \"don't argue\" is a consistent Controlling Parent pattern, and the total absence of any bid for others' input marks it negative rather than positive."
+    },
+    "L2": {
+      "intro": "The group chat goes quiet after Zara's message. What do you say?",
+      "beats": [
+        {
+          "npc": "Zara",
+          "expression": "tense",
+          "line": "So - beach house. Everyone's fine with that, right?",
+          "cues": ["asked after booking, not before", "tone expects agreement, not an answer"],
+          "egoState": "CP",
+          "options": [
+            {
+              "text": "Sounds great, Zara, you always sort us out!",
+              "tag": "game-move",
+              "egoState": "AC",
+              "outcome": "Zara relaxes - and books the next three trips the exact same way, unasked, as usual.",
+              "outcomeExpression": "neutral",
+              "lesson": "Praising the takeover from Adapted Child invites more of the same negative Controlling Parent pattern - it feels easier in the moment but reinforces the imbalance."
+            },
+            {
+              "text": "Beach house works for me, but can we check with Priti and Dev before it's final?",
+              "tag": "best",
+              "egoState": "A",
+              "outcome": "A pause, then: \"Oh - sure, I'll ask them.\" The decision stands, but the process opens up.",
+              "outcomeExpression": "open",
+              "lesson": "Naming the missing step - did anyone else actually get asked - from Adult doesn't attack Zara's choice, it corrects the process. That's exactly the kind of challenge that can shift someone's egogram over time."
+            },
+            {
+              "text": "You can't just decide everything for everyone, Zara.",
+              "tag": "ok",
+              "egoState": "CP",
+              "outcome": "Zara goes quiet, then: \"Fine. Forget it, you guys plan it then.\" Control for control - now someone else has to do the work she was doing.",
+              "outcomeExpression": "tense",
+              "lesson": "Matching Controlling Parent with Controlling Parent crosses the transaction, but it's judgment for judgment rather than a request - it can get someone to back off, at a cost."
+            },
+            {
+              "text": "Whatever, it's not worth the fight.",
+              "tag": "ok",
+              "egoState": "AC",
+              "outcome": "The trip gets booked Zara's way, again. Quiet surface, same pattern underneath.",
+              "outcomeExpression": "neutral",
+              "lesson": "Negative Adapted Child compliance keeps the peace short-term but does nothing to change the recurring pattern - the egogram stays exactly where it was."
+            }
+          ]
+        }
+      ]
+    },
+    "L3": {
+      "fields": [
+        {
+          "type": "vector",
+          "label": "Draw the vector for Zara's message, and for Leo's best response.",
+          "pairs": [
+            { "label": "Zara's pattern", "from": "P", "to": "C" },
+            { "label": "Leo's best response", "from": "A", "to": "A" }
+          ]
+        },
+        {
+          "type": "text",
+          "label": "In under 60 words, describe your own egogram today: which functional part gets the tallest bar, and is it serving you right now?",
+          "maxWords": 60,
+          "rubric": ["Controlling Parent", "Nurturing Parent", "Adult", "Free Child", "Adapted Child", "constancy"]
+        }
+      ]
+    }
+  },
+  "echoAfterHours": 24,
+  "echo": {
+    "setting": "24 hours later: Leo catches himself mid-sentence, telling his own partner where they're eating tonight without asking.",
+    "line": "We're going to the new ramen place. Obviously. I already booked it.",
+    "shape": "same egogram-reading shape as L1, turned on the player's own pattern"
+  }
+}

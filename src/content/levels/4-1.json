@@ -1,0 +1,79 @@
+{
+  "id": "4-1",
+  "title": "Is It a Game?",
+  "world": 4,
+  "engine": "diagnose",
+  "concepts": [23],
+  "source": { "book": "TA Today", "chapter": 23, "quote": "Games are played without Adult awareness." },
+  "setting": "Sunday night, the fifth month running. Noor's phone buzzes with the usual text before rent is due.",
+  "playAs": "Noor",
+  "levels": {
+    "L1": {
+      "npc": "Theo",
+      "expression": "open",
+      "line": "You're seriously the best, I'll get you back next month, promise!",
+      "cues": ["same promise, fifth month running", "relief in his voice, not apology", "Noor's tight smile"],
+      "question": "Rent's late again, the promise sounds like last month's promise, and Noor ends up covering it - again. Is this a pastime, an operation, a manoeuvre, or a game?",
+      "options": [
+        { "text": "Pastime", "feedback": "Pastimes structure time together with no hidden stake - chit-chat about the weather, not unpaid rent with a repeating payoff." },
+        { "text": "Operation", "feedback": "An operation is a straight ask that actually resolves the problem. The rent never actually gets paid back - that's the tell this isn't a clean, Adult transaction." },
+        { "text": "Manoeuvre", "feedback": "A manoeuvre is a single move inside something bigger, not the whole repeating five-month sequence." },
+        { "text": "Game", "feedback": "Right. An ulterior Con (\"I'll pay you back\") hooks Noor's Gimmick (her need to be needed), runs its Response for a month, Switches at \"don't worry about it\", and both collect a Payoff - his relief, her resentment mixed with importance." }
+      ],
+      "answer": 3,
+      "lesson": "A game is diagnosed by structure, not by how bad it feels: an ulterior transaction that hooks a Gimmick, repeats, and lands a Switch and a Payoff outside Adult awareness. Any one piece missing, and you're looking at a pastime, an operation, or a lone manoeuvre instead."
+    },
+    "L2": {
+      "intro": "Next month. Same thread, same pattern starting up. What does Noor say back?",
+      "beats": [
+        {
+          "npc": "Theo",
+          "expression": "tense",
+          "line": "Hey so... rent's gonna be a few days late again. I promise I'm good for it!",
+          "cues": ["same promise", "fifth time"],
+          "egoState": "AC",
+          "options": [
+            {
+              "text": "Don't worry about it, pay me whenever.",
+              "tag": "game-move",
+              "egoState": "NP",
+              "outcome": "Theo's shoulders drop with relief. \"Seriously, you're the best.\" He's gone before you can say anything else - same as every month.",
+              "outcomeExpression": "open",
+              "lesson": "Rescuing from Nurturing Parent hands over exactly the payoff (being needed, being let off) his Gimmick was fishing for. It feels kind. It's also the move that keeps the game running."
+            },
+            {
+              "text": "You always say that. I'm not your bank.",
+              "tag": "game-move",
+              "egoState": "CP",
+              "outcome": "\"Wow. Sorry for existing,\" Theo mutters, and shuts his door. Twenty minutes later you're the one knocking to apologize.",
+              "outcomeExpression": "tense",
+              "lesson": "Persecuting doesn't step off the Triangle, it just swaps which corner you're standing on - and in this pair, Victim always calls Rescuer back out of you anyway."
+            },
+            {
+              "text": "No worries, we'll figure it out.",
+              "tag": "ok",
+              "egoState": "A",
+              "outcome": "\"Cool, thanks,\" Theo says, and nothing else gets named - no amount, no date.",
+              "outcomeExpression": "neutral",
+              "lesson": "Adult-sounding words aren't automatically Adult; without a concrete ask, the vague reassurance still lets the Con go unchallenged."
+            },
+            {
+              "text": "I need it by Friday. If that's tight, let's set up an actual payment plan right now.",
+              "tag": "best",
+              "egoState": "A",
+              "outcome": "A beat of silence - there's no performance of gratitude to play off. \"Okay... yeah. Let's do that.\" You end up with a plan instead of a feeling.",
+              "outcomeExpression": "open",
+              "lesson": "This is the antithesis in miniature: naming the real ask and a concrete next step declines the role on offer, without punishing him for offering it."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "echoAfterHours": 720,
+  "echo": {
+    "setting": "Thirty days later. The same text thread lights up again.",
+    "line": "Hey, so... you won't believe this, but...",
+    "shape": "same four-option shape as L2"
+  }
+}

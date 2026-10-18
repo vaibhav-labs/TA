@@ -146,8 +146,8 @@
   button.choice:active { transform: scale(0.99); }
   button.choice:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 
-  button.choice.correct { background: color-mix(in srgb, var(--ok) 20%, var(--surface)); box-shadow: 0 0 0 2px color-mix(in srgb, var(--ok) 45%, transparent) inset; }
-  button.choice.wrong { background: color-mix(in srgb, var(--wrong) 18%, var(--surface)); box-shadow: 0 0 0 2px color-mix(in srgb, var(--wrong) 40%, transparent) inset; }
+  button.choice.correct { background: color-mix(in srgb, var(--ok) 50%, var(--surface-2)); box-shadow: 0 0 0 2.5px var(--ok) inset; }
+  button.choice.wrong { background: color-mix(in srgb, var(--wrong) 50%, var(--surface-2)); box-shadow: 0 0 0 2.5px var(--wrong) inset; }
   button.choice[disabled] { cursor: default; opacity: 0.6; }
   button.choice.correct[disabled], button.choice.wrong[disabled] { opacity: 1; }
 
@@ -482,7 +482,6 @@
       <div class="end-badge">Case closed</div>
       <h1 style="font-size:22px;">A stroke is just a unit of &ldquo;I see you.&rdquo;</h1>
       <p class="feedback">Positive or negative, conditional or unconditional, it's still the thing we're all quietly rationed on. The skill isn't finding more strokes out in the world. It's noticing which of the five rules you're already following without having agreed to them.</p>
-      <div class="source"><b>From:</b> Ian Stewart &amp; Vann Joines, <i>TA Today</i> (ch. 8, &ldquo;Strokes&rdquo;) &middot; Claude Steiner, <i>Scripts People Live</i> (ch. 9, &ldquo;The Stroke Economy&rdquo;)</div>
       <div class="nextbar" style="margin-top:18px;">
         <button class="next" id="nextBtn">Next game: Who's Talking? →</button>
       </div>
@@ -528,7 +527,7 @@
 
 <script>
   if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => { navigator.serviceWorker.register('./sw.js'); });
+    window.addEventListener('load', () => { if (location.protocol.startsWith('http')) navigator.serviceWorker.register('./sw.js'); });
   }
 </script>
 </body>

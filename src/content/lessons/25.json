@@ -1,0 +1,17 @@
+{
+  "concept": 25,
+  "name": "Drama Triangle",
+  "oneLine": "Persecutor, Rescuer, and Victim are three scripty roles people step into during a game, and they switch which role they hold at the Switch.",
+  "whatYouDid": "You tagged Mei's Rescuer role before the Switch and her Victim role after it, and chose the Adult response that declined to take the Persecutor or Rescuer role the Switch was offering Dev.",
+  "confusion": "Rescuer looks like helping, so it gets mistaken for kindness - but a Rescuer, same as a Persecutor, is discounting someone: the Rescuer discounts the other person's ability to think or act for themselves.",
+  "fromBook": {
+    "book": "TA Today",
+    "chapter": 23,
+    "quote": "whenever people play games, they are stepping into one of three scripty roles: Persecutor, Rescuer or Victim"
+  },
+  "expand": {
+    "definition": "Karpman's Drama Triangle: a Persecutor puts others down from one-up, a Rescuer \"helps\" from one-up while believing others can't manage alone, and a Victim experiences themselves as one-down - all three roles discount someone, and all three are inauthentic, old strategies rather than here-and-now responses.",
+    "otherFraming": "TA Today's capitalization convention: Persecutor, Rescuer, Victim with capital letters mean the scripty role; lowercase persecutor, rescuer, victim mean the real-life thing - a real helper isn't automatically a Rescuer.",
+    "tryThisToday": "Watch for the moment you catch yourself about to \"help\" someone who hasn't actually asked - that's the Rescuer corner, and it's usually the easiest one to step into without noticing."
+  }
+}

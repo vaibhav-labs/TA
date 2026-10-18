@@ -1,0 +1,78 @@
+{
+  "id": "5-2",
+  "title": "Stamp Book",
+  "world": 5,
+  "engine": "choice-story",
+  "concepts": [37],
+  "source": { "book": "TA Today", "chapter": 21, "quote": "by cashing in the stamps, they can move towards their script payoff." },
+  "setting": "Friday, 5:45pm. It's been a long week. Rosita is still at her desk when Troy, her manager, pokes his head in and asks her to resend a file he says he can't find.",
+  "playAs": "Troy, the manager",
+  "levels": {
+    "L1": {
+      "npc": "Rosita",
+      "expression": "tense",
+      "line": "That's it. I am done. You have NO idea how long I've been putting up with this.",
+      "cues": ["Friday, 5:45pm, end of a long week", "\"how long I've been putting up with this\"", "today's actual trigger was just a resend-the-file request"],
+      "question": "Rosita's reaction is much bigger than today's trigger (resending a file). What's actually going on?",
+      "options": [
+        { "text": "Fresh anger at today's request - resending a file really is that frustrating on its own.", "feedback": "Today's trigger is tiny. The size of her reaction doesn't match one resent file - that gap is exactly the signal that something else is going on." },
+        { "text": "She's cashing in a week's worth of saved stamps - today's small trigger just licenses letting go of the whole collection at once.", "feedback": "Right. This is the \"last straw\" effect, named precisely: Berne's stamp theory says a racket feeling you don't express in the moment gets saved up, and an often-unrelated, small trigger later becomes the excuse to cash the whole collection in at once. The straw was never really the problem - the pile already there was." },
+        { "text": "She's being deliberately manipulative to get sympathy.", "feedback": "Stamp-saving isn't a conscious strategy - it happens outside awareness, the same way racket feelings do. Calling it manipulation misses that she doesn't know she's doing it." }
+      ],
+      "answer": 1,
+      "lesson": "The disproportion between a small trigger and a big reaction is the signature of a stamp cash-in: racket feelings saved all week get traded in together, and the final trigger only has to be big enough to license the payoff, not big enough to justify it on its own."
+    },
+    "L2": {
+      "intro": "Rosita's unloading a week's worth in one go. You could defend yourself, escalate, or find out what's actually underneath it.",
+      "beats": [
+        {
+          "npc": "Rosita",
+          "expression": "tense",
+          "line": "That's it. I am done. You have NO idea how long I've been putting up with this.",
+          "cues": ["much bigger than today's trigger"],
+          "egoState": "C",
+          "options": [
+            {
+              "text": "I didn't ask you to put up with anything - all I did was ask you to resend a file.",
+              "tag": "game-move",
+              "egoState": "CP",
+              "outcome": "\"Oh, so now it's MY fault for asking?!\" She escalates further, listing three more things from the week.",
+              "outcomeExpression": "tense",
+              "lesson": "Technically fair, but it answers the stamp cash-in with a counter-grievance of your own - it escalates the exchange instead of finding what's underneath it."
+            },
+            {
+              "text": "Whoa, okay, I hear you, I'm sorry, let's just drop it.",
+              "tag": "ok",
+              "egoState": "NP",
+              "outcome": "She exhales. \"Fine. Whatever.\" The blow-up ends, but nobody named what actually built up all week.",
+              "outcomeExpression": "neutral",
+              "lesson": "This stops the immediate fight, but it's a quick, comfortable stroke for the Child, not an Adult look at the real unaddressed problem - the stamps will start collecting again by Monday."
+            },
+            {
+              "text": "Okay - something's clearly been building all week, not just today. What's actually been going on?",
+              "tag": "best",
+              "egoState": "A",
+              "outcome": "Rosita pauses, still breathing hard. \"Honestly? Nobody's covered for me once this week and I haven't had a real lunch most days.\" A real, solvable problem surfaces.",
+              "outcomeExpression": "open",
+              "lesson": "Naming the mismatch between the small trigger and the big reaction, then asking Adult-to-Adult what's underneath it, is how you get past the cashed-in stamps to the actual unmet need."
+            },
+            {
+              "text": "You've clearly been saving this up - why didn't you say something sooner?",
+              "tag": "ok",
+              "egoState": "A",
+              "outcome": "\"Because every time I try, there's no time, or it's not a big deal, or-\" she stops herself, still worked up.",
+              "outcomeExpression": "tense",
+              "lesson": "Accurate about the mechanism, but asked as a challenge it still sounds like blame - naming the pattern works best paired with real curiosity, not a \"why didn't you\" she has to defend against."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "echoAfterHours": 72,
+  "echo": {
+    "setting": "A month later: a teammate mentions, half-joking, that they've been saving up feedback for Troy's annual review.",
+    "line": "Oh, I've got a whole list I've been saving for this.",
+    "shape": "same four-option shape as L2"
+  }
+}

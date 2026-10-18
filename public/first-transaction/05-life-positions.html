@@ -61,8 +61,8 @@
   button.choice:hover { background: var(--surface-3); box-shadow: 0 6px 16px rgba(108,95,224,0.16); }
   button.choice:active { transform: scale(0.99); }
   button.choice:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
-  button.choice.correct { background: color-mix(in srgb, var(--ok) 20%, var(--surface)); box-shadow: 0 0 0 2px color-mix(in srgb, var(--ok) 45%, transparent) inset; }
-  button.choice.wrong { background: color-mix(in srgb, var(--wrong) 18%, var(--surface)); box-shadow: 0 0 0 2px color-mix(in srgb, var(--wrong) 40%, transparent) inset; }
+  button.choice.correct { background: color-mix(in srgb, var(--ok) 50%, var(--surface-2)); box-shadow: 0 0 0 2.5px var(--ok) inset; }
+  button.choice.wrong { background: color-mix(in srgb, var(--wrong) 50%, var(--surface-2)); box-shadow: 0 0 0 2.5px var(--wrong) inset; }
   button.choice[disabled] { cursor: default; opacity: 0.6; }
   button.choice.correct[disabled], button.choice.wrong[disabled] { opacity: 1; }
   .stamp {
@@ -320,7 +320,6 @@
         <li><span class="n">4</span><span>Yes, But... (psychological games)</span></li>
         <li><span class="n">5</span><span>Pick Your Corner (life positions)</span></li>
       </ul>
-      <div class="source"><b>From:</b> Ian Stewart &amp; Vann Joines, <i>TA Today</i> (ch. 12, &ldquo;Life Positions,&rdquo; and Franklin Ernst's OK Corral)</div>
       <div class="nextbar" style="margin-top:18px;"><button class="next" id="nextBtn">Play the series again →</button></div>
     `;
     document.getElementById("nextBtn").addEventListener("click", () => {
@@ -368,7 +367,7 @@
 
 <script>
   if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => { navigator.serviceWorker.register('./sw.js'); });
+    window.addEventListener('load', () => { if (location.protocol.startsWith('http')) navigator.serviceWorker.register('./sw.js'); });
   }
 </script>
 </body>

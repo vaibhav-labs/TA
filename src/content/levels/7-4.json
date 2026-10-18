@@ -1,0 +1,183 @@
+{
+  "id": "7-4",
+  "title": "Despair to Laughter",
+  "world": 7,
+  "engine": "choice-story",
+  "concepts": [29],
+  "source": {
+    "book": "Scripts People Live",
+    "chapter": 21,
+    "quote": "games such as \"Why Don't You—Yes, But,\""
+  },
+  "setting": "Thursday, coffee after work. Theo has a problem with his landlord again - the fourth version of some unsolvable problem this month - and he's doing the thing he always does.",
+  "playAs": "Jordan",
+  "levels": {
+    "L1": {
+      "npc": "Theo",
+      "expression": "tense",
+      "line": "Why don't you just - no, wait, I already thought of that, it won't work either.",
+      "cues": ["rejects the suggestion before it's even offered", "the ask-then-reject rhythm repeats every time", "not actually requesting information"],
+      "question": "What is Theo actually asking for here, and from which ego state?",
+      "options": [
+        { "text": "He's asking from Adult, gathering information to solve a real problem.", "feedback": "A genuine Adult request would wait to hear an answer before deciding it won't work. Rejecting the suggestion before it even exists isn't information-gathering." },
+        { "text": "He's asking from Child, running \"Why Don't You - Yes, But\" - the point isn't the advice, it's proving nobody can actually help.", "feedback": "Right. The game's payoff is the proof that help doesn't work, not the help itself - every offered answer just needs to be shot down, which is why the suggestions never actually land." },
+        { "text": "He's asking from Parent, testing whether you'll follow his standards.", "feedback": "He's not imposing a rule on you here - he's soliciting rescue, not judging your compliance with some standard." }
+      ],
+      "answer": 1,
+      "lesson": "\"Why Don't You - Yes, But\" is played from Child, soliciting a stream of Parent-flavored advice only to reject each piece - the antithesis isn't a better suggestion, it's refusing to supply suggestions at all."
+    },
+    "L2": {
+      "intro": "Jordan has watched Theo do this with five different friends this month. Time to hold the antithesis instead of playing along - however many rounds it takes.",
+      "beats": [
+        {
+          "npc": "Theo",
+          "expression": "tense",
+          "line": "I don't know what to do about my landlord, he's completely impossible.",
+          "cues": ["no specific ask", "invites rescue by default"],
+          "egoState": "C",
+          "options": [
+            {
+              "text": "What have you already tried?",
+              "tag": "best",
+              "egoState": "A",
+              "outcome": "\"I mean... nothing yet. I just want someone to tell me what to do.\"",
+              "outcomeExpression": "neutral",
+              "lesson": "Handing the question back instead of supplying an answer is the antithesis to \"Why Don't You - Yes, But\": the game only runs if someone keeps offering suggestions to reject."
+            },
+            {
+              "text": "That sounds really frustrating.",
+              "tag": "ok",
+              "egoState": "NP",
+              "outcome": "\"It is! You have no idea.\" Sympathetic, but the opening isn't challenged either way.",
+              "outcomeExpression": "tense",
+              "lesson": "Naming the feeling keeps Jordan out of the Rescuer seat for now, which is fine once - but it doesn't move anything, since no advice has been offered yet for Theo to reject."
+            },
+            {
+              "text": "Why don't you just send him a formal written notice about it?",
+              "tag": "game-move",
+              "egoState": "P",
+              "outcome": "\"Yeah, but he doesn't even read his mail.\" First Yes-But, right on cue.",
+              "outcomeExpression": "tense",
+              "lesson": "Taking the bait is exactly the Rescuer move the game is built to invite - and because this is a game-move, the exchange ends right here, before it can go any further."
+            }
+          ]
+        },
+        {
+          "npc": "Theo",
+          "expression": "tense",
+          "line": "Come on, you always have good ideas - what would YOU actually do?",
+          "cues": ["direct appeal, raised stakes", "implying Jordan is withholding help"],
+          "egoState": "C",
+          "options": [
+            {
+              "text": "I think you already know what you'd do if you weren't scared of the fight.",
+              "tag": "best",
+              "egoState": "A",
+              "outcome": "Theo goes quiet. \"...Maybe I do, actually.\"",
+              "outcomeExpression": "neutral",
+              "lesson": "The antithesis has to survive the second push, not just the first ask - escalation is the game testing whether the refusal was real or just polite."
+            },
+            {
+              "text": "I really don't know your landlord or your lease well enough to say.",
+              "tag": "ok",
+              "egoState": "A",
+              "outcome": "\"Ugh, fine.\" True, and a little cold - he backs off but looks stung.",
+              "outcomeExpression": "tense",
+              "lesson": "This dodges the bait without landing anywhere - a defensible non-answer, but it doesn't open the door the way handing the question back does."
+            },
+            {
+              "text": "Okay, fine - I'd call a tenants' rights hotline.",
+              "tag": "game-move",
+              "egoState": "P",
+              "outcome": "\"Yeah, but I tried calling one of those once and it just rang forever.\" Second Yes-But.",
+              "outcomeExpression": "tense",
+              "lesson": "Caving on the second round is the classic trap: persistence of the Rescuer, not any one offer, is what keeps these games running indefinitely."
+            }
+          ]
+        },
+        {
+          "npc": "Theo",
+          "expression": "tense",
+          "line": "Wow. I thought you actually cared about this. I guess not.",
+          "cues": ["guilt as leverage", "testing whether Jordan will fold to avoid the accusation"],
+          "egoState": "C",
+          "options": [
+            {
+              "text": "I do care - that's exactly why I'm not going to hand you an answer you'll just shoot down.",
+              "tag": "best",
+              "egoState": "A",
+              "outcome": "Silence. Then: \"...Oh my god. I do that, don't I?\"",
+              "outcomeExpression": "open",
+              "lesson": "Naming the pattern out loud is itself a strong antithesis - the move doesn't have to be a refusal, it can be the insight that breaks the frame."
+            },
+            {
+              "text": "Sorry, I didn't mean it like that.",
+              "tag": "ok",
+              "egoState": "AC",
+              "outcome": "\"Good. So what should I do?\" Straight back to square one.",
+              "outcomeExpression": "tense",
+              "lesson": "Apologizing under the guilt-trip slides Jordan into Adapted Child and reopens the exact door the antithesis had just closed."
+            },
+            {
+              "text": "Fine, fine - maybe take a video of the leak and send it to the housing board.",
+              "tag": "game-move",
+              "egoState": "P",
+              "outcome": "\"Yeah, but I don't even have a decent camera.\" Third Yes-But.",
+              "outcomeExpression": "tense",
+              "lesson": "Same move, third time - the game can run as many rounds as the Rescuer keeps supplying material for."
+            }
+          ]
+        },
+        {
+          "npc": "Theo",
+          "expression": "open",
+          "line": "...I ask people for advice and then explain why it won't work. I've done this with like five different friends this month, haven't I?",
+          "cues": ["noticing the pattern himself, unprompted"],
+          "egoState": "A",
+          "options": [
+            {
+              "text": "Yeah. You just did it about three times in the last five minutes, with me.",
+              "tag": "best",
+              "egoState": "A",
+              "outcome": "Theo bursts out laughing. \"Oh my god - there I go again!\"",
+              "outcomeExpression": "open",
+              "lesson": "This is the marker Berne and Steiner point to: despair tipping into real laughter is what it looks like when someone sees their own pattern from Adult, not just hears it described."
+            },
+            {
+              "text": "It's okay, honestly, we all do stuff like this.",
+              "tag": "ok",
+              "egoState": "NP",
+              "outcome": "Theo nods, half-smiles - the laugh doesn't quite land, the moment passes.",
+              "outcomeExpression": "neutral",
+              "lesson": "Comforting dampens the Aha! right when it's arriving - useful earlier in the conversation, but here it takes the heat off before the pattern can be fully felt."
+            },
+            {
+              "text": "Do you want help making a list of what hasn't worked so far?",
+              "tag": "game-move",
+              "egoState": "NP",
+              "outcome": "\"Yes! Let's start with the landlord thing.\" Right back into round one.",
+              "outcomeExpression": "tense",
+              "lesson": "Offering to help organize the problem is a Rescue wearing a helpful mask - it restarts the whole loop one line before the finish."
+            }
+          ]
+        }
+      ]
+    },
+    "L3": {
+      "fields": [
+        {
+          "type": "text",
+          "label": "In under 50 words: what is \"antithesis\" in Berne's sense, and why did holding it here take three rounds instead of one?",
+          "maxWords": 50,
+          "rubric": ["antithesis", "refuse", "escalation", "Rescuer", "pattern", "persist"]
+        }
+      ]
+    }
+  },
+  "echoAfterHours": 120,
+  "echo": {
+    "setting": "Five days later, a group chat message from Theo about a different unsolvable problem, same rhythm.",
+    "line": "\"Okay don't even suggest X, I already know it won't work, but what do you think I should do??\"",
+    "shape": "same escalating beats as L2"
+  }
+}

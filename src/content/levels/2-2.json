@@ -1,0 +1,97 @@
+{
+  "id": "2-2",
+  "title": "Five Faces",
+  "world": 2,
+  "engine": "diagnose",
+  "concepts": [9, 10],
+  "source": { "book": "TA Today", "chapter": 3, "quote": "Positive Nurturing Parent implies caring which is provided from a position of genuine regard for the person helped." },
+  "setting": "Wednesday, 9pm. Sam, a developer, is still online, fourth night this week, deep in the deploy channel.",
+  "playAs": "Rhea, the engineering manager",
+  "levels": {
+    "L1": {
+      "npc": "Priti",
+      "expression": "open",
+      "line": "Don't worry about any of this - I'll just handle the deploy myself, you go home and rest.",
+      "cues": ["warm smile", "already reaching for Sam's keyboard", "takes the task without asking first"],
+      "question": "Which functional ego state is Priti showing here - and which side of it?",
+      "options": [
+        { "text": "Positive Nurturing Parent - genuine caring", "feedback": "Close, but check whether Sam was asked or just overridden - true positive Nurturing Parent offers care without taking the choice away from the other person." },
+        { "text": "Negative Nurturing Parent - smothering", "feedback": "Right. The smile is warm, but she's already taken the keyboard - that one-up \"I'll decide what's best for you\" move is the textbook smother-mother, not genuine care." },
+        { "text": "Positive Controlling Parent - a firm, protective boundary", "feedback": "There's no boundary being set here, no rule, no limit - Priti isn't controlling anything, she's taking over the caretaking entirely." },
+        { "text": "Negative Controlling Parent - a put-down", "feedback": "There's no judgment or command here, no \"you should\" - this is phrased as help, which is exactly what makes it Nurturing, not Controlling." }
+      ],
+      "answer": 1,
+      "lesson": "Nurturing Parent isn't automatically the good one: when care removes someone else's choice or decides what's best for them without asking, it discounts them just as much as a put-down does - that's negative Nurturing Parent, and it can look kinder than a boundary that is actually healthier."
+    },
+    "L2": {
+      "intro": "Priti means well, but taking over isn't going to fix the pattern. You're Sam's manager - what do you say?",
+      "beats": [
+        {
+          "npc": "Sam",
+          "expression": "tense",
+          "line": "Priti's right, it's fine, I'll just push through tonight too.",
+          "cues": ["forced smile", "already turning back to the screen"],
+          "egoState": "AC",
+          "options": [
+            {
+              "text": "Priti's got it tonight. You're off the rotation for the next two nights - no exceptions.",
+              "tag": "best",
+              "egoState": "CP",
+              "outcome": "Sam blinks, then exhales. \"Okay... thanks, actually.\" The rule holds without a lecture.",
+              "outcomeExpression": "open",
+              "lesson": "Positive Controlling Parent sets a real limit aimed at Sam's wellbeing, stated plainly, without a put-down - that's the boundary Priti's smothering never actually offered."
+            },
+            {
+              "text": "Don't worry about it, I'll just quietly move your tickets to someone else.",
+              "tag": "ok",
+              "egoState": "NP",
+              "outcome": "Sam doesn't even notice the tickets move until Friday, and never learns why his week got lighter.",
+              "outcomeExpression": "neutral",
+              "lesson": "This fixes the symptom without naming it, and decides for Sam instead of with him - gentler than Priti's move, but the same one-up shape underneath."
+            },
+            {
+              "text": "You should really learn to pace yourself better.",
+              "tag": "game-move",
+              "egoState": "CP",
+              "outcome": "Sam's shoulders drop further. \"Yeah... I know.\" Nothing changes, he just feels worse about it.",
+              "outcomeExpression": "tense",
+              "lesson": "This sounds like a boundary but it's actually a judgment with no limit attached - negative Controlling Parent discounts Sam instead of protecting him."
+            },
+            {
+              "text": "How many nights is this now - what's actually going on with the deploy?",
+              "tag": "ok",
+              "egoState": "A",
+              "outcome": "Sam pauses. \"Honestly, no one's owned the rollback plan since Deep left.\" Useful, but tonight's exhaustion is still unresolved.",
+              "outcomeExpression": "neutral",
+              "lesson": "Good Adult diagnosis of the root cause, worth following up on - but it leaves tonight unaddressed; sometimes an Adult finding still needs a Controlling Parent boundary attached to actually take effect."
+            }
+          ]
+        }
+      ]
+    },
+    "L3": {
+      "fields": [
+        {
+          "type": "vector",
+          "label": "Draw the vectors for Priti's offer, and for Rhea's best response.",
+          "pairs": [
+            { "label": "Priti's offer", "from": "P", "to": "C" },
+            { "label": "Rhea's best response", "from": "P", "to": "C" }
+          ]
+        },
+        {
+          "type": "text",
+          "label": "In under 60 words: why is Priti's \"I'll handle it, you go home\" not the same as Rhea's \"you're off rotation for two nights\"?",
+          "maxWords": 60,
+          "rubric": ["Nurturing Parent", "Controlling Parent", "discount", "choice", "boundary", "smother"]
+        }
+      ]
+    }
+  },
+  "echoAfterHours": 48,
+  "echo": {
+    "setting": "48 hours later: Rhea's own mother calls and offers to \"just come over and sort out\" Rhea's kitchen renovation.",
+    "line": "Don't worry about any of it, I'll handle the contractor myself.",
+    "shape": "same CP+/NP- diagnose shape as L1"
+  }
+}

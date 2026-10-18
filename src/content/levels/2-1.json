@@ -1,0 +1,96 @@
+{
+  "id": "2-1",
+  "title": "Who Said That",
+  "world": 2,
+  "engine": "diagnose",
+  "concepts": [7, 8],
+  "source": { "book": "TA Today", "chapter": 2, "quote": "An ego-state is a set of related behaviors, thoughts and feelings." },
+  "setting": "Thursday, 4pm. Sprint retro. The release went out stable this time, and Dev, a senior engineer, agreed to the new deploy schedule two minutes ago.",
+  "playAs": "Priya, the team lead",
+  "levels": {
+    "L1": {
+      "npc": "Dev",
+      "expression": "tense",
+      "line": "Fine. Whatever you say.",
+      "cues": ["arms crossed", "chin lifted", "flat, clipped voice", "\"fine\" / \"whatever\""],
+      "question": "Dev agreed to the schedule two minutes ago, but something's shifted. Which ego state is he speaking from now?",
+      "options": [
+        { "text": "Parent", "feedback": "He sounds like he's handing down a verdict, but a verdict is usually delivered with more energy than this flat compliance." },
+        { "text": "Adult", "feedback": "Adult agreement would sound like agreement - specific, maybe even a question. \"Fine, whatever you say\" with arms crossed is compliance, not agreement." },
+        { "text": "Child", "feedback": "Right. The clipped \"fine, whatever\", the crossed arms, and the lifted chin are Adapted Child doing minimal compliance while registering a protest it won't say out loud." }
+      ],
+      "answer": 2,
+      "lesson": "Ego state is a coherent set of behaviour, thought and feeling, not a single word. \"Fine\" can be said from any of the three states; here the clipped tone, crossed arms, and lifted chin all point to the same Child reading - that consistency across cues, not the word itself, is the diagnosis."
+    },
+    "L2": {
+      "intro": "You (Priya) called this retro to close out the sprint clean, not to re-open an old fight. What do you say to Dev?",
+      "beats": [
+        {
+          "npc": "Dev",
+          "expression": "tense",
+          "line": "Fine. Whatever you say.",
+          "cues": ["arms crossed", "chin lifted", "flat, clipped voice"],
+          "egoState": "AC",
+          "options": [
+            {
+              "text": "Great, glad we're on the same page.",
+              "tag": "game-move",
+              "egoState": "A",
+              "outcome": "Dev shrugs and goes quiet for the rest of the meeting. Nothing gets fixed.",
+              "outcomeExpression": "neutral",
+              "lesson": "Taking \"fine\" at face value when the cues say otherwise lets a Child protest go underground instead of getting named - the content was Adult-sounding, the cues weren't."
+            },
+            {
+              "text": "You don't sound fine. What's actually going on?",
+              "tag": "best",
+              "egoState": "A",
+              "outcome": "Dev's arms drop. \"Honestly? Nobody asked if Friday even works for me.\" Now you have something to work with.",
+              "outcomeExpression": "open",
+              "lesson": "Naming the mismatch between words and cues from Adult invites the real content out - Berne's behavioural diagnosis means checking words against tone, posture and gesture together, not taking any one of them in isolation."
+            },
+            {
+              "text": "We already agreed on this, Dev.",
+              "tag": "game-move",
+              "egoState": "CP",
+              "outcome": "Dev's jaw tightens. \"Sure. Whatever you say.\" Same four words, same flat voice - the loop just repeats.",
+              "outcomeExpression": "tense",
+              "lesson": "Meeting an Adapted Child protest with Controlling Parent pressure is complementary, so it keeps running - it quiets the protest without resolving it."
+            },
+            {
+              "text": "No worries, we can always change the schedule later if it's a problem.",
+              "tag": "ok",
+              "egoState": "NP",
+              "outcome": "Dev relaxes slightly. \"Okay... thanks.\" But Friday is still never actually addressed.",
+              "outcomeExpression": "neutral",
+              "lesson": "Nurturing Parent softens the moment but doesn't ask what's wrong - it treats the symptom (tension) rather than the content (an unaddressed objection)."
+            }
+          ]
+        }
+      ]
+    },
+    "L3": {
+      "fields": [
+        {
+          "type": "vector",
+          "label": "Draw the vectors for Dev's \"fine, whatever\", and for Priya's best response.",
+          "pairs": [
+            { "label": "Dev's opening", "from": "C", "to": "P" },
+            { "label": "Best response", "from": "A", "to": "A" }
+          ]
+        },
+        {
+          "type": "text",
+          "label": "In under 60 words: Dev's words sound almost Adult. Name two nonverbal cues that overrule the words, and say why cues win when they disagree with content.",
+          "maxWords": 60,
+          "rubric": ["crossed arms", "tone", "clipped", "behavioural", "cues", "content"]
+        }
+      ]
+    }
+  },
+  "echoAfterHours": 36,
+  "echo": {
+    "setting": "36 hours later: Leela, a new hire, texts back about a moved deadline.",
+    "line": "Sure, no problem.",
+    "shape": "same diagnose shape as L1 - flat text against a known pattern of cues"
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "id": "2-4",
+  "title": "Four Ways to Know",
+  "world": 2,
+  "engine": "diagnose",
+  "concepts": [12, 22],
+  "source": { "book": "TA Today", "chapter": 5, "quote": "Behavioral diagnosis is the most important of the four. The other three act as checks upon it." },
+  "setting": "Tuesday, 2pm. A tiny typo in Noah's report got fixed before anyone outside the team even saw it.",
+  "playAs": "Dana, Noah's teammate",
+  "levels": {
+    "L1": {
+      "npc": "Noah",
+      "expression": "tense",
+      "line": "I'm so sorry, I'll fix it right now, I promise, it won't happen again—",
+      "cues": [
+        "voice high and fast, shoulders hunched (behavioural)",
+        "coworkers immediately start reassuring him like he's fragile (social)",
+        "he's mentioned teachers calling out his mistakes in front of the class (historical)",
+        "he says \"it's like I'm back in Mrs Carrow's class\" (phenomenological)"
+      ],
+      "question": "Behavioural, social, historical and phenomenological diagnosis all point somewhere. Which ego state is Noah actually in?",
+      "options": [
+        { "text": "Adult - he's just being thorough about fixing a real mistake", "feedback": "A real mistake calls for a calm, specific fix; none of the four diagnoses here point to measured here-and-now problem-solving - they all point to something older." },
+        { "text": "Parent - he's holding himself to a standard", "feedback": "Close, in that a Parental standard is probably driving this from inside him - but the behaviour, the response he's pulling from others, and his own words all describe the state that standard is aimed at, not that state itself." },
+        { "text": "Child", "feedback": "Right. Hunched posture and fast apology (behavioural), coworkers reassuring him like he's small (social), teachers calling him out as a child (historical), and his own \"back in Mrs Carrow's class\" (phenomenological) - all four point to Child, which is Berne's standard for a complete diagnosis." },
+        { "text": "Can't tell without more information", "feedback": "Berne said a complete diagnosis uses all four checks together, and here they agree, not conflict - when behavioural, social, historical and phenomenological evidence all land in the same place, that's as confirmed as a diagnosis gets." }
+      ],
+      "answer": 2,
+      "lesson": "Behavioural diagnosis is the most important and should come first, but checking it against social, historical and phenomenological evidence turns a guess into a diagnosis; getting two or more of Berne's four ways to agree is what makes a call reliable rather than a hunch from tone of voice alone."
+    },
+    "L2": {
+      "intro": "The typo really was tiny. What do you say to Noah?",
+      "beats": [
+        {
+          "npc": "Noah",
+          "expression": "tense",
+          "line": "I'm so sorry, I'll fix it right now, I promise, it won't happen again—",
+          "cues": ["high, fast voice", "shoulders hunched"],
+          "egoState": "AC",
+          "options": [
+            {
+              "text": "It's fine, don't worry about it, I'll just fix it myself.",
+              "tag": "ok",
+              "egoState": "NP",
+              "outcome": "Noah relaxes but still looks small. \"Okay... thank you.\" The pattern isn't challenged, just soothed.",
+              "outcomeExpression": "neutral",
+              "lesson": "Nurturing Parent calms the moment, which matches what his Child is braced for - comfortable, but it keeps the transaction exactly where his Child expects it to land."
+            },
+            {
+              "text": "It's one typo, Noah - this isn't Mrs Carrow's class.",
+              "tag": "best",
+              "egoState": "A",
+              "outcome": "Noah blinks, laughs a little. \"Ha... yeah. Sorry. I mean - thanks.\" Something shifts.",
+              "outcomeExpression": "open",
+              "lesson": "Naming the historical echo directly, from Adult, gives Noah's own Adult something to recognize and step into - this kind of cross can interrupt an old pattern instead of just soothing it."
+            },
+            {
+              "text": "You really don't need to apologize like that for every little thing.",
+              "tag": "game-move",
+              "egoState": "CP",
+              "outcome": "Noah's shoulders hunch further. \"Sorry - sorry, you're right, I'll stop.\" The apology just grew a layer.",
+              "outcomeExpression": "tense",
+              "lesson": "A correction aimed at his Child from Parent gets received by his Child exactly like every other correction always has - it feeds the pattern instead of breaking it."
+            },
+            {
+              "text": "Honestly, it's not a big deal, these things happen to everyone.",
+              "tag": "ok",
+              "egoState": "A",
+              "outcome": "Noah nods, still tense. \"Right. Yeah. Sorry.\" True, but it doesn't land yet.",
+              "outcomeExpression": "neutral",
+              "lesson": "Good Adult content, but it's generic reassurance rather than anything specific to Noah's actual pattern - true, but it doesn't address what's actually happening for him right now."
+            }
+          ]
+        }
+      ]
+    },
+    "L3": {
+      "fields": [
+        {
+          "type": "vector",
+          "label": "Draw the vectors for Noah's apology, and for Dana's best response.",
+          "pairs": [
+            { "label": "Noah's apology", "from": "C", "to": "P" },
+            { "label": "Dana's best response", "from": "A", "to": "A" }
+          ]
+        },
+        {
+          "type": "text",
+          "label": "In under 60 words: name Berne's four ways to diagnose an ego state, and say which one Noah's own words (\"back in Mrs Carrow's class\") provide.",
+          "maxWords": 60,
+          "rubric": ["behavioural", "social", "historical", "phenomenological", "Child"]
+        }
+      ]
+    }
+  },
+  "echoAfterHours": 72,
+  "echo": {
+    "setting": "72 hours later: Dana catches herself over-apologizing to a barista for a wrong order.",
+    "line": "Oh my god, I'm so sorry, that's totally my fault, I should have said it clearer—",
+    "shape": "same four-diagnoses shape as L1, turned on the player"
+  }
+}

@@ -1,0 +1,220 @@
+{
+  "id": "1-4",
+  "title": "The Party",
+  "world": 1,
+  "engine": "floor-plan",
+  "concepts": [5],
+  "source": { "book": "TA Today", "chapter": 9, "quote": "there are six different ways in which they can spend their time" },
+  "setting": "Camellia's housewarming party, 9 p.m. Six little clusters have formed around the apartment, and each one is doing something different with the next twenty minutes.",
+  "playAs": "Mike, a guest",
+  "levels": {
+    "L1": {
+      "npc": "Rosita, by the bookshelf",
+      "expression": "neutral",
+      "line": "Rosita, mid-conversation with two others: \"I did a group like this before - we never did figure out what it was for either.\" The other two nod and trade their own old stories. Nobody suggests doing anything about tonight.",
+      "cues": ["talking about 'back when', not about tonight", "no one proposes doing anything", "comfortable, low-stakes tone"],
+      "question": "Three people are trading stories about past groups and parties, going nowhere in particular. What's this corner doing?",
+      "options": [
+        { "text": "Activity - they're working something out together.", "feedback": "Activity is goal-directed, aimed at a material outcome. Nobody here is trying to produce anything; they're just talking about what happened before." },
+        { "text": "Pastime - familiar talk about something, with no one proposing to do anything about it.", "feedback": "Right. \"Pastime = past time\": comfortable, structured chat about a shared topic that goes nowhere, which is exactly what sets it apart from activity." },
+        { "text": "Game - someone's about to get a bad feeling out of this.", "feedback": "No ulterior transactions here, no switch, no bad-feeling payoff - just low-stakes shared talk. That's a pastime, not a game." },
+        { "text": "Intimacy - they're being completely open with each other.", "feedback": "Intimacy requires authentic, uncensored feelings and wants exchanged directly; swapping old party stories is far more guarded and routine than that." }
+      ],
+      "answer": 1,
+      "lesson": "Pastiming is light, familiar talk about a shared subject with no commitment to act on it - the giveaway is 'pastime = past time,' people recounting what already happened rather than doing anything now. Confusing it with activity misses that nothing here is aimed at a material outcome; confusing it with a game misses that nobody's heading toward a bad-feeling payoff."
+    },
+    "L2": {
+      "intro": "Mike moves through the apartment. Five more corners, five more ways of structuring the same twenty minutes.",
+      "beats": [
+        {
+          "npc": "Arjun, by the window",
+          "expression": "neutral",
+          "line": "He's standing near the window with a drink, eyes somewhere out past the balcony, not looking at anyone.",
+          "cues": ["physically present, not transacting with anyone", "somewhere else entirely"],
+          "options": [
+            {
+              "text": "Walk over and ask what he's thinking about, direct and warm.",
+              "tag": "best",
+              "egoState": "A",
+              "outcome": "Arjun blinks, like coming back from somewhere. \"Oh - sorry, just drifted off. I'm okay, just needed a minute.\" He rejoins the room.",
+              "outcomeExpression": "open",
+              "lesson": "Withdrawal only produces self-strokes; a direct, low-pressure check-in is often enough of an invitation back in, without demanding he perform sociability he doesn't have energy for."
+            },
+            {
+              "text": "Leave him alone - he probably wants space.",
+              "tag": "ok",
+              "egoState": "A",
+              "outcome": "Mike moves on. Arjun stays at the window for another twenty minutes, undisturbed and unstroked.",
+              "outcomeExpression": "neutral",
+              "lesson": "Respecting withdrawal is reasonable, but it's worth remembering that withdrawing only refills the stroke bank from self-strokes, which is never a full replacement for strokes from other people."
+            },
+            {
+              "text": "Announce to the room: \"Hey, somebody go cheer up Arjun, he looks miserable over there.\"",
+              "tag": "game-move",
+              "egoState": "CP",
+              "outcome": "Arjun stiffens, embarrassed, and now has an audience for a feeling he hadn't even named yet.",
+              "outcomeExpression": "tense",
+              "lesson": "Narrating someone's internal state to the room turns quiet withdrawal into a public diagnosis nobody asked for - and diagnosing ego state from the outside is exactly what you can't reliably do during withdrawal, which is why it often can't be confirmed by the people watching."
+            }
+          ]
+        },
+        {
+          "npc": "Troy, by the door",
+          "expression": "neutral",
+          "line": "Troy's shaking hands with each new arrival: \"Hey! Good to see you! Come on in!\" - same four words, same handshake, four times running.",
+          "cues": ["identical script each time", "fast, efficient, friendly"],
+          "egoState": "AC",
+          "options": [
+            {
+              "text": "Match it - same handshake, same warm four words, when it's your turn to be greeted.",
+              "tag": "best",
+              "egoState": "AC",
+              "outcome": "It's seamless. Mike's in the door and in the party in under five seconds, exactly as intended.",
+              "outcomeExpression": "open",
+              "lesson": "A ritual's entire value is its predictability - matching the expected exchange pays the stroke it's designed to pay, cleanly and fast, which is the point."
+            },
+            {
+              "text": "Try to turn the doorway greeting into a real conversation about your week.",
+              "tag": "ok",
+              "egoState": "FC",
+              "outcome": "Troy looks faintly thrown, half-listens while glancing at the next arrival over Mike's shoulder, then repeats his line to them too.",
+              "outcomeExpression": "neutral",
+              "lesson": "A ritual slot is sized for a ritual; pouring something bigger into it doesn't get received, it just creates a mismatch - that something bigger belongs in pastime or intimacy, not the doorway handshake."
+            },
+            {
+              "text": "Walk past without shaking his offered hand.",
+              "tag": "game-move",
+              "egoState": "A",
+              "outcome": "Troy's hand hangs there a second too long. He doesn't say anything, but he notices.",
+              "outcomeExpression": "tense",
+              "lesson": "Ignoring an offered ritual stroke isn't neutral - ritual participants keep a close count, so a skipped handshake registers as a real, if small, negative."
+            }
+          ]
+        },
+        {
+          "npc": "Camellia, in the kitchen",
+          "expression": "neutral",
+          "line": "Camellia's elbow-deep in the sink: \"If you actually want to help, the glasses go on the left, the plates stack here - otherwise just stay out of the splash zone.\"",
+          "cues": ["specific, task-focused instructions"],
+          "egoState": "A",
+          "options": [
+            {
+              "text": "Grab a towel and start drying exactly where she pointed.",
+              "tag": "best",
+              "egoState": "A",
+              "outcome": "The counter clears in minutes. Camellia says, \"Oh - thank you, actually,\" sounding surprised and genuinely pleased.",
+              "outcomeExpression": "open",
+              "lesson": "Activity is goal-directed, and its strokes come at the end, for the outcome - \"thank you, actually\" is a delayed conditional stroke for a job done, not idle chat."
+            },
+            {
+              "text": "Stand in the doorway chatting about the party while she washes alone.",
+              "tag": "ok",
+              "egoState": "C",
+              "outcome": "Camellia keeps washing. The conversation is pleasant pastime, but the dishes don't move any faster.",
+              "outcomeExpression": "neutral",
+              "lesson": "Pastime and activity can happen side by side, but only one of them gets the dishes done - don't mistake friendly talk near a task for contributing to it."
+            },
+            {
+              "text": "Take over without asking and rearrange the kitchen \"more efficiently.\"",
+              "tag": "game-move",
+              "egoState": "CP",
+              "outcome": "Camellia's jaw tightens. \"That's not where any of this goes.\" Now she's redoing Mike's \"help.\"",
+              "outcomeExpression": "tense",
+              "lesson": "Activity strokes are conditional on actually meeting the goal as defined - substituting your own goal for hers doesn't earn the stroke, it just creates more work."
+            }
+          ]
+        },
+        {
+          "npc": "Dev, cornered by the sofa",
+          "expression": "tense",
+          "line": "Dev says, \"I just can't do anything right tonight, can I,\" with a little laugh, after spilling a drink nobody was upset about.",
+          "cues": ["laughs while being self-deprecating", "fishing for a reaction before anyone's reacted"],
+          "egoState": "AC",
+          "options": [
+            {
+              "text": "Say plainly: \"It's a spilled drink, Dev, nobody's mad,\" and change the subject.",
+              "tag": "best",
+              "egoState": "A",
+              "outcome": "Dev blinks, a little deflated, then actually laughs for real. \"Fair. Okay.\" The moment passes without anyone needing to rescue or scold him.",
+              "outcomeExpression": "open",
+              "lesson": "Declining the invitation - not rescuing, not scolding - avoids completing the switch; naming the actual situation from Adult crosses the ulterior invitation instead of answering it."
+            },
+            {
+              "text": "Rush to reassure him: \"Oh no, you're fine, you're always so clumsy, it's endearing!\"",
+              "tag": "ok",
+              "egoState": "NP",
+              "outcome": "Dev soaks it up - and five minutes later does something else self-deprecating, fishing for the same reassurance again.",
+              "outcomeExpression": "neutral",
+              "lesson": "Playing the expected comforting role completes the invitation he put out - it feels kind, but it's the complementary move that keeps this particular exchange running."
+            },
+            {
+              "text": "Say, half-joking, \"Yeah, you kind of are a mess tonight.\"",
+              "tag": "game-move",
+              "egoState": "CP",
+              "outcome": "Dev's face falls for real, then he laughs it off too quickly. Something about the room cools for a second nobody can quite name.",
+              "outcomeExpression": "tense",
+              "lesson": "Taking the bait completes the switch - a sudden, mutual sense of 'what just happened,' right before the bad feelings land for both of you, is the tell that a game just played out."
+            }
+          ]
+        },
+        {
+          "npc": "Priya, on the balcony",
+          "expression": "open",
+          "line": "Priya, quietly, not performing it for anyone: \"I've been dreading tonight. I didn't want to come alone. I'm really glad you're out here.\"",
+          "cues": ["low volume, just for Mike", "no joke softening it, no hidden ask under it"],
+          "egoState": "C",
+          "options": [
+            {
+              "text": "Match it: \"I'm glad too - I almost didn't come either.\" Stay with her instead of changing the subject.",
+              "tag": "best",
+              "egoState": "C",
+              "outcome": "Neither of them says anything for a second. It's comfortable, not awkward. The rest of the party feels easier after that.",
+              "outcomeExpression": "open",
+              "lesson": "Berne's own description of intimacy is specific: a candid Child-to-Child exchange set up by the Adult - straight feelings, no hidden agenda, no discount of what the other person just said."
+            },
+            {
+              "text": "Deflect with a joke to lighten the mood.",
+              "tag": "ok",
+              "egoState": "FC",
+              "outcome": "Priya laughs along, but something closes slightly in her face. The real thing she said doesn't get a real answer.",
+              "outcomeExpression": "neutral",
+              "lesson": "A joke here isn't dishonest, but it declines the invitation to intimacy - trading the one time-structure with no discounting for one that's easier precisely because it's lighter."
+            },
+            {
+              "text": "Say, \"Oh, don't be dramatic, everyone loves a party!\"",
+              "tag": "game-move",
+              "egoState": "CP",
+              "outcome": "Priya's face shuts down. \"Yeah. Sure. Never mind.\" She doesn't say anything else real for the rest of the night.",
+              "outcomeExpression": "tense",
+              "lesson": "This discounts what she actually said instead of answering it - and discounting is specifically what intimacy, by definition, doesn't include; it turns a straight exchange into something closer to a small rejection."
+            }
+          ]
+        }
+      ]
+    },
+    "L3": {
+      "fields": [
+        {
+          "type": "vector",
+          "label": "Draw the vectors for Troy's doorway ritual, and for the moment on the balcony with Priya.",
+          "pairs": [
+            { "label": "Troy's doorway ritual", "from": "P", "to": "C" },
+            { "label": "Priya on the balcony", "from": "C", "to": "C" }
+          ]
+        },
+        {
+          "type": "text",
+          "label": "In under 50 words: why can the same six people, at the same party, be in six different time-structures within twenty minutes of each other?",
+          "maxWords": 50,
+          "rubric": ["structure-hunger", "risk", "intensity", "withdrawal", "intimacy", "choice"]
+        }
+      ]
+    }
+  },
+  "echoAfterHours": 48,
+  "echo": {
+    "setting": "48 hours later: a family group chat lights up.",
+    "line": "[12 new messages about nothing in particular]",
+    "shape": "same six-way sort, applied to a group chat instead of a party"
+  }
+}

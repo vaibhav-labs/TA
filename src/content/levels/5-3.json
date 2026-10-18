@@ -1,0 +1,95 @@
+{
+  "id": "5-3",
+  "title": "Four Levels",
+  "world": 5,
+  "engine": "ladder",
+  "concepts": [39, 40],
+  "source": { "book": "TA Today", "chapter": 18, "quote": "a discount in any box also entails discounts in the boxes below it and to its right." },
+  "setting": "Mike lights another cigarette and coughs hard, twice. Camellia, his friend, winces across the table.",
+  "playAs": "Camellia, Mike's friend",
+  "levels": {
+    "L1": {
+      "npc": "Mike",
+      "expression": "neutral",
+      "line": "Yeah, I really should quit - and plenty of people do manage it. I just... I don't think I've got what it takes.",
+      "cues": ["admits he should quit", "concedes other people succeed at it", "lands the discount only on himself"],
+      "question": "Which level of the Discount Matrix is Mike discounting, regarding his own option to quit?",
+      "options": [
+        { "text": "Existence - he doesn't know quitting is even an option.", "feedback": "No. He says \"I really should quit\", so he's clearly aware the option exists. Existence would sound more like \"Quit? I didn't know that was a thing people did.\"" },
+        { "text": "Significance - he thinks quitting wouldn't actually make a difference.", "feedback": "No. He's not denying it would help - he even says \"plenty of people do manage it\", which concedes that it works." },
+        { "text": "Changeability - he thinks nobody could really succeed at quitting.", "feedback": "No. He just conceded that other people do manage it, so he's not discounting whether quitting is achievable in general." },
+        { "text": "Personal ability - he's conceded the option exists, matters, and works for others, but discounts that he himself could pull it off.", "feedback": "Right. He's already granted existence, significance, and general changeability - the one thing left standing is his belief about his own ability to act on the option, the narrowest, most personal level of the matrix." }
+      ],
+      "answer": 3,
+      "lesson": "The Discount Matrix's four levels run from existence down to personal ability - climb it by checking what the person has already conceded. Mike admits the option exists, matters, and works for others, so his actual discount is narrower and closer to home than his words first suggest."
+    },
+    "L2": {
+      "intro": "You want Mike to actually consider quitting, not just get a sympathetic nod. What do you say?",
+      "beats": [
+        {
+          "npc": "Mike",
+          "line": "Yeah, I really should quit - and plenty of people do manage it. I just... I don't think I've got what it takes.",
+          "expression": "neutral",
+          "cues": ["discounting his own ability, not the option itself"],
+          "egoState": "AC",
+          "options": [
+            {
+              "text": "You're right, it is really hard - lots of people fail at it.",
+              "tag": "game-move",
+              "egoState": "NP",
+              "outcome": "Mike nods, relieved. \"Yeah, exactly, see.\" The discount gets confirmed instead of challenged - nothing moves.",
+              "outcomeExpression": "neutral",
+              "lesson": "Agreeing with the discount, even kindly, reinforces it instead of addressing it - sympathy aimed at the wrong level just adds a nurturing-sounding stroke to the same discount."
+            },
+            {
+              "text": "Come on, of course you can do it, just try harder!",
+              "tag": "ok",
+              "egoState": "CP",
+              "outcome": "Mike shrugs. \"Sure, I guess.\" It sounds like a pep talk; nothing in him actually shifts.",
+              "outcomeExpression": "neutral",
+              "lesson": "A Try-Hard push skips past finding out what, specifically, he thinks he's missing - cheerleading doesn't address a personal-ability discount, it just pressures past it."
+            },
+            {
+              "text": "What is it you think you're missing that other people who quit have?",
+              "tag": "best",
+              "egoState": "A",
+              "outcome": "Mike thinks. \"I don't know... willpower, maybe? Every time I've tried before, I caved by day three.\" Something concrete to work with.",
+              "outcomeExpression": "open",
+              "lesson": "Asking Adult-to-Adult what the specific missing ability is - rather than agreeing with or cheerleading past the discount - meets it exactly where it is, which is how the Discount Matrix says to intervene."
+            },
+            {
+              "text": "Have you actually tried before, or are you just assuming you'd fail?",
+              "tag": "ok",
+              "egoState": "A",
+              "outcome": "\"I tried once, years ago. Lasted three days.\" Useful information comes out, but it's framed more as catching him out than inviting him.",
+              "outcomeExpression": "neutral",
+              "lesson": "A fair Adult question, and real information surfaces - but framed as a challenge rather than curiosity, it gets a short, defensive answer instead of a fuller one."
+            }
+          ]
+        }
+      ]
+    },
+    "L3": {
+      "fields": [
+        {
+          "type": "text",
+          "label": "If Mike were instead discounting at the Existence level about quitting, what might he say? In under 30 words, write a line in his voice.",
+          "maxWords": 30,
+          "rubric": ["existence", "didn't know", "option", "aware", "quit"]
+        },
+        {
+          "type": "text",
+          "label": "In under 60 words: why would telling Mike \"of course you can do it, just try harder\" fail here, given exactly what level he's actually discounting at?",
+          "maxWords": 60,
+          "rubric": ["personal ability", "level", "discount matrix", "specific", "lower diagonal", "wrong level"]
+        }
+      ]
+    }
+  },
+  "echoAfterHours": 48,
+  "echo": {
+    "setting": "Two days later: Camellia catches herself making the same kind of discount about her own gym habit.",
+    "line": "I know plenty of people make time for it. I just don't think I've got the discipline.",
+    "shape": "same four-option diagnose shape as L1"
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "id": "1-3",
+  "title": "Hi-Hi",
+  "world": 1,
+  "engine": "counter",
+  "concepts": [6],
+  "source": { "book": "TA Today", "chapter": 9, "quote": "The participants in a ritual will often keep a close count of the strokes exchanged." },
+  "setting": "Monday morning. Mr. C is back after two weeks away. He's standing by the coffee machine, and the whole floor can see he's waiting to be noticed.",
+  "playAs": "Troy, a coworker",
+  "levels": {
+    "L1": {
+      "npc": "Dev",
+      "expression": "neutral",
+      "line": "Dev walks past Mr. C, says \"Hey\" without stopping, and keeps walking to his desk.",
+      "cues": ["one word", "doesn't stop walking", "no eye contact"],
+      "question": "Mr. C's shoulders drop and he turns back to his coffee. What went wrong with Dev's greeting, in stroke terms?",
+      "options": [
+        { "text": "Nothing - \"Hey\" is a complete ritual greeting.", "feedback": "A one-word \"Hey\" pays what a daily passing nod costs. Mr. C has been gone two weeks and is owed a bigger ritual than that." },
+        { "text": "Dev under-paid the ritual - two weeks away earns more than a one-word, no-stop \"Hey.\"", "feedback": "Right. Rituals are precise stroke exchanges, not empty noise - the length and attention of a greeting has to scale with what it's actually marking." },
+        { "text": "Dev should have asked Mr. C a real question about the trip - this isn't about strokes at all.", "feedback": "That might help, but it's not what diagnosed the failure - the failure here is specifically a stroke shortfall, not a lack of curiosity." }
+      ],
+      "answer": 1,
+      "lesson": "Rituals participants keep a close count of the strokes exchanged - picture holding out a hand for a handshake and having it ignored. A returning-from-vacation greeting carries an implicit price; paying less than that price registers as a snub even though nobody ever states the price out loud."
+    },
+    "L2": {
+      "intro": "Your turn. Mr. C is still standing at the coffee machine. Two weeks of silence doesn't get paid off with a nod.",
+      "beats": [
+        {
+          "npc": "Mr. C",
+          "expression": "open",
+          "line": "Oh, hey. I'm back.",
+          "cues": ["half-smile", "lingering, not walking away - leaving room for more"],
+          "egoState": "AC",
+          "options": [
+            {
+              "text": "\"Hey, welcome back! Two weeks, right? How was it - good to be back, or already missing the beach?\"",
+              "tag": "best",
+              "egoState": "A",
+              "outcome": "Mr. C's whole posture changes - he turns fully toward Troy. \"Honestly, both,\" he says, and tells him about the flight delay while they wait for the coffee.",
+              "outcomeExpression": "open",
+              "lesson": "A greeting that's specific (names the two weeks), asks a real question, and leaves room for an answer pays roughly what's owed - enough to register as a genuine welcome, not so much it reads as performance."
+            },
+            {
+              "text": "\"Hey.\" Keep walking toward your desk.",
+              "tag": "ok",
+              "egoState": "A",
+              "outcome": "Mr. C's smile drops half a notch. He turns back to the coffee machine and doesn't bring it up again - but mentions to Priya later that \"nobody even asked.\"",
+              "outcomeExpression": "tense",
+              "lesson": "Under-paying a scaled-up ritual doesn't just feel rude in the moment - an unmet stroke-hunger here doesn't vanish, it gets carried to the next person, or quietly banked as a small resentment."
+            },
+            {
+              "text": "\"Oh my gosh, welcome back!! Tell me literally everything - the flight, the hotel, the food, ALL of it, I have so many questions!\"",
+              "tag": "ok",
+              "egoState": "FC",
+              "outcome": "Mr. C laughs, a little thrown. \"Whoa - okay! Let me get my coffee first.\" It lands as enthusiasm, slightly too much of it, delivered in the doorway while three people wait behind Troy for the machine.",
+              "outcomeExpression": "tense",
+              "lesson": "Over-paying isn't dishonest the way a discount is, but a ritual that balloons past its slot stops feeling like a ritual and starts feeling like a pitch - the stereotyped, proportionate exchange is exactly what makes a ritual comfortable instead of overwhelming."
+            },
+            {
+              "text": "Avoid eye contact and grab your coffee quickly, hoping someone else greets him first.",
+              "tag": "game-move",
+              "egoState": "AC",
+              "outcome": "Someone else does greet him, enthusiastically. Mr. C beams at them and barely registers that Troy was in the room. Later, Troy feels oddly resentful that he didn't get credit for being friendly.",
+              "outcomeExpression": "neutral",
+              "lesson": "Ducking the exchange entirely while quietly keeping score on who gets social credit for it isn't a neutral non-choice - it's a small setup for exactly the kind of resentment that fuels bigger games later."
+            }
+          ]
+        }
+      ]
+    },
+    "L3": {
+      "fields": [
+        {
+          "type": "vector",
+          "label": "Draw the vectors for a standard ritual greeting, and for Troy's best (matched) greeting.",
+          "pairs": [
+            { "label": "Standard ritual program and response", "from": "P", "to": "C" },
+            { "label": "Troy's matched welcome-back", "from": "A", "to": "A" }
+          ]
+        },
+        {
+          "type": "text",
+          "label": "In under 50 words: why does TA Today say ritual participants 'keep a close count' of strokes, and what does that explain about why Dev's one-word \"Hey\" landed as a snub?",
+          "maxWords": 50,
+          "rubric": ["ritual", "precise", "stroke count", "predictable", "scaled", "deprivation"]
+        }
+      ]
+    }
+  },
+  "echoAfterHours": 168,
+  "echo": {
+    "setting": "A week later: a friend texts back after being unreachable for ten days.",
+    "line": "hey!! sorry, insane week, miss u",
+    "shape": "same counter mechanic - how much greeting does ten days of silence cost now?"
+  }
+}

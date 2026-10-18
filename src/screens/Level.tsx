@@ -14,7 +14,6 @@ export function Level() {
   const levelId = params.levelId;
   const content = levelId ? levels[levelId] : undefined;
   const found = levelId ? levelStub(levelId) : undefined;
-  const [showBook, setShowBook] = useState(false);
   const [replayKey, setReplayKey] = useState(0);
 
   if (!levelId || !found) {
@@ -66,23 +65,6 @@ export function Level() {
 
         {/* Action icons */}
         <div className="flex items-center gap-2">
-          <button
-            aria-label="Toggle Book Source"
-            title="Book Source"
-            onClick={() => {
-              playTap();
-              setShowBook((s) => !s)}
-            }
-            className={`ta-tap px-3 py-1.5 rounded-full border text-xs font-mono flex items-center gap-1.5 transition-all ${
-              showBook
-                ? "bg-ta-yellow text-slate-950 font-bold border-yellow-300 shadow-[0_0_12px_rgba(255,252,0,0.4)]"
-                : "bg-slate-900/80 border-white/10 hover:border-slate-500 text-slate-300"
-            }`}
-          >
-            <span>📖</span>
-            <span className="hidden sm:inline">Source</span>
-          </button>
-
           <button
             aria-label="View Lesson"
             title="Lesson Theory"
@@ -153,41 +135,6 @@ export function Level() {
           </div>
         )}
       </header>
-
-      {/* Book Source Disclosure Card */}
-      {showBook && content && (
-        <div className="ta-fade rounded-2xl bg-gradient-to-r from-slate-900 to-slate-950 border border-white/20 p-4 shadow-xl text-slate-200">
-          <div className="flex items-center gap-2 text-xs font-mono text-ta-yellow font-bold uppercase mb-1">
-            <span>📖</span>
-            <span>Original Source Reference</span>
-          </div>
-          <div className="font-bold text-[16px] text-white">
-            {content.source.book}, Chapter {content.source.chapter}
-          </div>
-          <div className="italic text-[14px] text-slate-300 mt-1 border-l-2 border-ta-yellow/50 pl-2.5 my-1">
-            &ldquo;{content.source.quote}&rdquo;
-          </div>
-        </div>
-      )}
-
-      {showBook && !content && (
-        <div className="ta-fade rounded-2xl bg-slate-900 border border-white/20 p-4 shadow-xl text-slate-200">
-          <div className="text-xs font-mono text-ta-yellow font-bold uppercase mb-2">
-            Theoretical Concepts
-          </div>
-          <div className="flex flex-col gap-1.5">
-            {stub.concepts.map((cid) => {
-              const c = conceptById(cid);
-              return c ? (
-                <div key={cid} className="text-sm">
-                  <span className="font-bold text-white">{c.concept}</span> &mdash;{" "}
-                  <span className="text-slate-400">{c.source}</span>
-                </div>
-              ) : null;
-            })}
-          </div>
-        </div>
-      )}
 
       {/* Honest placeholder for unfinished levels — never show stub.playsLike here,
           it's an internal design note ("the player runs a week...") written for

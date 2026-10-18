@@ -1,0 +1,17 @@
+{
+  "concept": 58,
+  "name": "Contracts",
+  "oneLine": "An explicit, two-sided agreement about what specific change is wanted, what each side will contribute, and how you'll both know it's done.",
+  "whatYouDid": "You helped Dev turn a vague want (\"happier, better relationships\") into a specific, observable goal, then named what each of you would actually contribute - instead of just agreeing, in general, to help him.",
+  "confusion": "People sometimes think a contract has to be formal or written to count, or that naming one out loud is cold. In TA terms a contract is just whatever makes an agreement explicit and two-sided instead of assumed - the opposite of a contract isn't informality, it's one person quietly carrying an agreement the other person never actually signed onto.",
+  "fromBook": {
+    "book": "TA Today",
+    "chapter": 26,
+    "quote": "Berne defined a contract as an explicit bilateral commitment to a well-defined course of action."
+  },
+  "expand": {
+    "definition": "Steiner's four requirements for a sound contract: mutual consent (a clear offer and acceptance, with the goal stated in specific, observable terms, not vague multi-syllable words like \"happiness\"), valid consideration (something each side is giving, agreed by both), competency (both parties actually able to carry out what's agreed), and lawful object (nothing in the agreement violates the law).",
+    "otherFraming": "TA Today frames the same four requirements as what distinguishes a real treatment or coaching contract from informal support - the point isn't paperwork, it's that both parties can say out loud what they're agreeing to and what each one is contributing.",
+    "tryThisToday": "Next time you offer to help with something ongoing, say out loud what you'll do, what you're expecting from the other person, and how you'll both know it's working."
+  }
+}

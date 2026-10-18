@@ -1,0 +1,89 @@
+{
+  "id": "3-1",
+  "title": "Draw the Arrow",
+  "world": 3,
+  "engine": "fields",
+  "concepts": [16, 17, 20],
+  "source": { "book": "TA Today", "chapter": 7, "quote": "the opening communication is called the stimulus. The reply is called the response." },
+  "setting": "Wednesday, 10:05am - before the Friday release goes sideways, back when this is just a normal check-in. Arjun is mid-deploy, headphones on.",
+  "playAs": "Priya, the team lead",
+  "levels": {
+    "L1": {
+      "npc": "Priya",
+      "expression": "neutral",
+      "line": "Hey - did the hotfix actually go out last night?",
+      "cues": ["even tone", "plain factual question", "no \"always\" / \"never\""],
+      "question": "Priya's line lands on Arjun's desk. Which ego state is it coming from, and has a transaction actually happened yet?",
+      "options": [
+        { "text": "Parent - she's checking up on him, which is a Parent move.", "feedback": "The content (checking on someone's work) could sound Parental, but the cues - even tone, plain question, no judgment - don't fit Parent. Diagnose from cues, not content." },
+        { "text": "Adult - a plain request for current information. And no: this is only the stimulus so far, not a transaction yet.", "feedback": "Right. Flat, factual, present-tense is Adult. And by definition a transaction needs a stimulus AND a response - right now there's only a stimulus on the table." },
+        { "text": "Child - she sounds anxious about it underneath.", "feedback": "There's no cue for anxious Child here - no hedging, no rising pitch, no apology. Just a clean request for data." }
+      ],
+      "answer": 1,
+      "lesson": "A transaction is a stimulus plus a response - Berne's \"basic unit of social discourse.\" One line, however clearly it comes from an ego state, is only ever half of one."
+    },
+    "L2": {
+      "intro": "Arjun looks up and answers. Watch where the vectors land before you reply.",
+      "beats": [
+        {
+          "npc": "Arjun",
+          "expression": "neutral",
+          "line": "Yeah, it went out around 11. I ran the smoke tests myself before I called it done.",
+          "cues": ["level voice", "specific detail (11pm, smoke tests)"],
+          "egoState": "A",
+          "options": [
+            {
+              "text": "Good - can you paste the test output in the channel so Deepa can sign off?",
+              "tag": "best",
+              "egoState": "A",
+              "outcome": "\"Sure, give me a sec.\" He pastes it without missing a beat. The exchange stays easy, specific, moving.",
+              "outcomeExpression": "open",
+              "lesson": "A complementary transaction is one where the vectors are parallel and the ego-state addressed is the one that answers - Adult asked, Adult answered, so by rule 1 (answer the exact state you were addressed in, and the exchange can just keep going) this one simply continues."
+            },
+            {
+              "text": "Thank you so much for staying on top of this, you're amazing.",
+              "tag": "ok",
+              "egoState": "NP",
+              "outcome": "\"Oh - thanks.\" He looks pleased but a little unsure what to do with it; the actual question about test output still hasn't been asked.",
+              "outcomeExpression": "neutral",
+              "lesson": "Nurturing Parent to his Free Child is warm and still complementary - it just isn't the same transaction as confirming the work, and the follow-up still needs asking for."
+            },
+            {
+              "text": "Are you sure it's actually fine? I don't love finding this out after the fact.",
+              "tag": "game-move",
+              "egoState": "C",
+              "outcome": "His face shuts. \"I said I tested it.\" The easy exchange is gone; now you're both defending positions instead of looking at test output.",
+              "outcomeExpression": "tense",
+              "lesson": "Crossing is a legitimate tool (rule 2: answer from a different state than the one addressed, and the exchange breaks until someone shifts) but it isn't free - crossing an Adult report with a Child's doubt, when nothing has actually gone wrong yet, manufactures a fight that wasn't there a line ago."
+            }
+          ]
+        }
+      ]
+    },
+    "L3": {
+      "fields": [
+        {
+          "type": "vector",
+          "label": "Draw the vectors for this exchange, and for a version where Arjun answered defensively instead.",
+          "pairs": [
+            { "label": "Priya's question", "from": "A", "to": "A" },
+            { "label": "Arjun's actual reply", "from": "A", "to": "A" },
+            { "label": "If Arjun had answered like a scolded kid instead", "from": "C", "to": "P" }
+          ]
+        },
+        {
+          "type": "text",
+          "label": "In under 50 words: why isn't Priya's opening line, on its own, a transaction? What has to happen for it to become one?",
+          "maxWords": 50,
+          "rubric": ["stimulus", "response", "both", "reply", "basic unit"]
+        }
+      ]
+    }
+  },
+  "echoAfterHours": 6,
+  "echo": {
+    "setting": "Six hours later, a Slack DM from a different teammate.",
+    "line": "quick q - is the staging env up right now?",
+    "shape": "same vector-diagnosis shape as L1"
+  }
+}

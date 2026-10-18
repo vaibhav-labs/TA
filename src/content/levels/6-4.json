@@ -1,0 +1,165 @@
+{
+  "id": "6-4",
+  "title": "Three Banal Scripts",
+  "world": 6,
+  "engine": "choice-story",
+  "concepts": [53, 54, 55],
+  "source": {
+    "book": "Scripts People Live",
+    "chapter": 8,
+    "quote": "The basic training of life includes a systematic attack on three primary human potentials: the potential for intimacy ... the potential for awareness ... and the potential for spontaneity .... I have called the end result of this three-part basic training Lovelessness, Mindlessness, and Joylessness."
+  },
+  "setting": "Thursday. Marcus is describing his week at dinner. Later that same week, Zara gets home from work.",
+  "playAs": "Zara",
+  "levels": {
+    "L1": {
+      "npc": "Marcus",
+      "expression": "neutral",
+      "line": "Yeah, it's been a brutal week - client fires, picked up Jess from school twice because Priya's traveling, then I stayed up redoing the Hendricks deck after everyone else bailed. It's fine though, I'm fine.",
+      "cues": ["laughs it off between each item", "never once says 'I needed help'", "describes himself as 'fine' through a stifled yawn and red eyes"],
+      "question": "Quick primer: Steiner names three everyday, undramatic scripts - Lovelessness, Mindlessness, Joylessness - and, separately, a 'sex-role script': boys commonly trained to switch off their own needs and feelings while calmly handling everything, girls trained the opposite way. Which pattern best names what's going on with Marcus?",
+      "options": [
+        { "text": "He's just got a strong work ethic - this isn't script.", "feedback": "'Just' is doing a lot of work in that sentence. What reads as personality - never asking, never resting, always fine - is exactly the shape Steiner and Wyckoff describe being trained into boys: it doesn't feel like a decision because it was made so early and reinforced so often." },
+        { "text": "He's in the Be Strong driver, nothing more.", "feedback": "Be Strong is present in the half-second tells - the flat 'I'm fine,' the no-ask for help - but that's the moment-to-moment behavior. Marcus's whole week is organized around something bigger than one driver flashing on and off." },
+        { "text": "This is the male sex-role script Steiner and Wyckoff describe: Adult built up for 'handling business,' Nurturing Parent switched on only for others, Natural Child almost entirely shut down.", "feedback": "Right. Notice what's missing from his whole account: anything he felt, wanted, or needed. That's not an accident of the story - it's the training working exactly as designed." },
+        { "text": "This is Lovelessness - he's stroke-starved.", "feedback": "He may well be stroke-starved too, but that's a plausible side effect, not what this particular pattern is naming. The training here is about which ego states he's allowed to use at all, not just a shortage of strokes." }
+      ],
+      "answer": 2,
+      "lesson": "Steiner and Wyckoff's sex-role analysis is structural, not a personality judgment: boys are trained to over-build Adult and Nurturing-Parent-for-others while leaving their own Natural Child almost entirely offline. It looks like a personality - that's the whole point of calling it a script."
+    },
+    "L2": {
+      "intro": "Zara gets home. Across one evening, the Pig Parent in her head narrates three ordinary moments - and she decides, each time, whether to obey it.",
+      "beats": [
+        {
+          "npc": "The Pig Parent (in Zara's head)",
+          "expression": "tense",
+          "line": "Don't let that in. He's just saying it because he wants something.",
+          "cues": ["her partner just said 'you look nice today'", "her shoulders tighten before she's even answered"],
+          "egoState": "CP",
+          "options": [
+            {
+              "text": "\"Thanks.\" (flat, already changing the subject)",
+              "tag": "game-move",
+              "egoState": "AC",
+              "outcome": "He shrugs, a little puzzled. The moment passes with the stroke uncollected.",
+              "outcomeExpression": "neutral",
+              "lesson": "This obeys the Pig Parent's Stroke Economy rule - don't take in a stroke you haven't 'earned' - so cleanly it doesn't even feel like a rule being followed."
+            },
+            {
+              "text": "\"Thank you - that's really nice to hear.\"",
+              "tag": "best",
+              "egoState": "FC",
+              "outcome": "Something in her actually relaxes. 'Oh - thank you,' she says again, meaning it the second time.",
+              "outcomeExpression": "open",
+              "lesson": "Breaking the Stroke Economy isn't complicated: it's letting a stroke land instead of deflecting it. Steiner's whole therapy for Lovelessness is teaching people to do exactly this, on purpose."
+            },
+            {
+              "text": "\"You're just saying that because you want something.\"",
+              "tag": "game-move",
+              "egoState": "CP",
+              "outcome": "He looks hurt. 'I just meant you look nice.' A small fight starts out of nowhere.",
+              "outcomeExpression": "tense",
+              "lesson": "Rejecting a stroke before it can be 'taken away' does the same job as discounting it quietly - same rule, enforced louder."
+            },
+            {
+              "text": "\"Oh, this old thing? I look terrible, actually.\"",
+              "tag": "ok",
+              "egoState": "AC",
+              "outcome": "He reassures her again. She doesn't quite believe it the second time either.",
+              "outcomeExpression": "neutral",
+              "lesson": "Fishing for more strokes looks like the opposite of refusing them, but it runs on the same scarcity belief - that strokes have to be earned or extracted, never simply received."
+            }
+          ]
+        },
+        {
+          "npc": "The Pig Parent (in Zara's head)",
+          "expression": "tense",
+          "line": "Don't make a scene. You probably read it wrong anyway.",
+          "cues": ["Zara spots a number that doesn't add up on the budget slide", "her boss is already moving confidently to the next point"],
+          "egoState": "CP",
+          "options": [
+            {
+              "text": "(Say nothing. Later, wonder if she imagined it.)",
+              "tag": "game-move",
+              "egoState": "AC",
+              "outcome": "The deck goes out with the error in it. Nobody mentions it until a client does, two weeks later.",
+              "outcomeExpression": "neutral",
+              "lesson": "This is Mindlessness exactly as Steiner names it - not failing to notice, but discounting what she did notice. The data was there; she overrode it."
+            },
+            {
+              "text": "\"I think line four might be off - can we check it together?\"",
+              "tag": "best",
+              "egoState": "A",
+              "outcome": "They check. She's right. Her boss says 'good catch' and actually means it.",
+              "outcomeExpression": "open",
+              "lesson": "Countering Mindlessness isn't about being certain - it's about not discounting the Adult data you already have, stated as something checkable instead of swallowed as a private doubt."
+            },
+            {
+              "text": "\"That's completely wrong!\" (blurted, flustered)",
+              "tag": "ok",
+              "egoState": "FC",
+              "outcome": "She's right, but the room reads it as an outburst, and the correction gets lost in the reaction to her tone.",
+              "outcomeExpression": "tense",
+              "lesson": "Right content delivered as an eruption still gets discounted - by other people this time, which teaches the same lesson about staying quiet next time."
+            },
+            {
+              "text": "\"You're probably right, I just wasn't paying attention.\" (though she was)",
+              "tag": "game-move",
+              "egoState": "AC",
+              "outcome": "The error ships. She gets a quiet compliment afterward for being easy to work with.",
+              "outcomeExpression": "neutral",
+              "lesson": "Steiner's point about lying applies here too - lying to herself about what she noticed gets socially rewarded, which is exactly why it's so hard to stop doing."
+            }
+          ]
+        },
+        {
+          "npc": "The Pig Parent (in Zara's head)",
+          "expression": "tense",
+          "line": "You've earned this. Numb out - you don't need to feel anything else today.",
+          "cues": ["she's alone in the kitchen, still in her coat", "hand already reaching for the cabinet where the wine lives", "hasn't noticed yet that her shoulders are up by her ears"],
+          "egoState": "CP",
+          "options": [
+            {
+              "text": "(Pour a drink immediately. No pause.)",
+              "tag": "game-move",
+              "egoState": "AC",
+              "outcome": "She's asleep on the couch by nine, still in her coat, and wakes at midnight just as tense as she started.",
+              "outcomeExpression": "neutral",
+              "lesson": "Reaching for the substance before noticing the body is the exact move Steiner is naming - it skips the sensation instead of answering it, so the tension is still there underneath."
+            },
+            {
+              "text": "(Pause. Notice her shoulders. Breathe. Then decide.)",
+              "tag": "best",
+              "egoState": "A",
+              "outcome": "She notices she's actually hungrier than tense. She makes dinner. The wine stays in the cabinet, and that's fine too.",
+              "outcomeExpression": "open",
+              "lesson": "The counter-move isn't willpower or abstinence - it's reconnecting to what the body is actually saying before acting on autopilot. Steiner calls this Centering."
+            },
+            {
+              "text": "(Keep working past dinner, to 'earn' rest later.)",
+              "tag": "game-move",
+              "egoState": "AC",
+              "outcome": "She finishes the task at 11pm, numb, and feels no satisfaction even though the work is good.",
+              "outcomeExpression": "neutral",
+              "lesson": "Joylessness isn't only substances - any reliable way of not feeling the body counts, overwork included."
+            },
+            {
+              "text": "(Call a friend to vent instead.)",
+              "tag": "ok",
+              "egoState": "FC",
+              "outcome": "She feels genuinely lighter after the call. She still never actually checks in with her own body tonight.",
+              "outcomeExpression": "open",
+              "lesson": "Connecting with another person is good, and it's real - and it's not the same move as reconnecting with her own sensation. The two get confused because both bring relief."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "echoAfterHours": 72,
+  "echo": {
+    "setting": "A week later. Zara's manager tells her, in front of the team, that the client loved her proposal.",
+    "line": "The Pig Parent is already loading: 'Don't let that in, they're just being nice.' This time she catches it before she answers.",
+    "shape": "same take-it-in-or-deflect choice as L2's first beat"
+  }
+}

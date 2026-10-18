@@ -1,0 +1,136 @@
+{
+  "id": "1-1",
+  "title": "Spinal Cord",
+  "world": 1,
+  "engine": "choice-story",
+  "concepts": [1],
+  "source": { "book": "TA Today", "chapter": 8, "quote": "the need for physical and mental stimulation. Berne called this stimulus-hunger." },
+  "setting": "A short-staffed foundling home. Nurse Elena has fourteen infants to feed, clean, and move through on schedule this week. Baby Teo, six months old, is fed well and kept warm - and by the chart, he should be fine.",
+  "playAs": "Elena, a nurse",
+  "levels": {
+    "L1": {
+      "npc": "Dr. Hale",
+      "expression": "neutral",
+      "line": "He's fed, he's clean, he's warm. By every chart he should be fine.",
+      "cues": ["low weight gain despite full feeds", "doesn't track faces or reach for the crib bars", "no crying, no fussing - unusually quiet"],
+      "question": "Teo is physically cared for but failing to thrive. Spitz saw this across a whole ward of infants like him. What's actually missing?",
+      "options": [
+        { "text": "He needs more milk.", "feedback": "He's already being fed well and the chart confirms it - this isn't a nutrition gap, so more milk won't touch the real problem." },
+        { "text": "He needs medicine for an infection.", "feedback": "No infection was found. Spitz's infants were physically healthy by every medical measure available at the time, and many still declined." },
+        { "text": "He needs to be picked up, talked to, played with - not just fed and changed.", "feedback": "Right. Spitz called this stimulus-hunger: the need for physical and mental stimulation, separate from food, warmth, or cleanliness." }
+      ],
+      "answer": 2,
+      "lesson": "Spitz's infants were fed, clean, and warm, and some still declined. Stimulus-hunger is a need in its own right, not a symptom of poor feeding - recognition has to be supplied directly, and nothing else substitutes for it."
+    },
+    "L2": {
+      "intro": "It's a six-day stretch on the ward. The home is short two nurses this week. Levine's rat pups told the same story from the other direction: the ones given mild electric shocks developed better than the ones left in a featureless box with no stimulation at all. Any input beats none. What does Elena do with the little time she has?",
+      "beats": [
+        {
+          "npc": "Agnes, the head matron",
+          "expression": "tense",
+          "line": "Feed, change, move to the next crib. We don't have hands for holding - there are thirteen more behind him.",
+          "cues": ["clipped voice", "already walking to the next crib"],
+          "egoState": "CP",
+          "options": [
+            {
+              "text": "Nod, and keep to the schedule exactly as she says.",
+              "tag": "ok",
+              "egoState": "AC",
+              "outcome": "Teo is fed on time all week. By Wednesday he's stopped reaching toward the crib bars when someone passes.",
+              "outcomeExpression": "neutral",
+              "lesson": "Compliance keeps the ward running, but it doesn't feed stimulus-hunger - being fed and clean was never the missing ingredient."
+            },
+            {
+              "text": "Steal two minutes with Teo at the end of each round - talk to him, let him grip your finger.",
+              "tag": "best",
+              "egoState": "NP",
+              "outcome": "He brightens for the two minutes he has her. The other twenty-two hours are still silent.",
+              "outcomeExpression": "open",
+              "lesson": "Two minutes a round is real stimulation and it genuinely helps him in the moment - but one nurse's two minutes can't cover a need that has to be met continuously. A deficit this size is structural, not something one kind act fixes."
+            },
+            {
+              "text": "Tell Agnes the ward needs a holding rota, not more hands on bottles.",
+              "tag": "game-move",
+              "egoState": "A",
+              "outcome": "Agnes says she'll \"raise it at the next meeting.\" Nothing changes by Friday.",
+              "outcomeExpression": "tense",
+              "lesson": "The diagnosis is correct, but raising it without any power to act on it just relocates the problem upward - it feels like doing something while changing nothing for Teo this week."
+            }
+          ]
+        },
+        {
+          "npc": "Dr. Hale",
+          "expression": "neutral",
+          "line": "His weight's flat. Chart says healthy. I don't have a box to tick for \"nobody talks to him.\"",
+          "cues": ["reading the chart, not looking at the crib"],
+          "egoState": "A",
+          "options": [
+            {
+              "text": "Ask him to write \"needs handling, not just feeding\" on the chart.",
+              "tag": "best",
+              "egoState": "A",
+              "outcome": "He writes it. It still doesn't add a nurse to the floor, but it's now on record that feeding isn't the fix.",
+              "outcomeExpression": "neutral",
+              "lesson": "Naming stimulus-hunger as a real, separate need - not a feeding problem - is the correct diagnosis, even though naming it doesn't by itself supply it."
+            },
+            {
+              "text": "Say nothing; it's not her place to tell a doctor his job.",
+              "tag": "ok",
+              "egoState": "AC",
+              "outcome": "Dr. Hale moves to the next crib. Teo is logged as \"healthy, underweight, cause unclear.\"",
+              "outcomeExpression": "neutral",
+              "lesson": "Staying quiet keeps the peace, but it leaves the real cause - recognition deprivation - undiagnosed and untreated."
+            },
+            {
+              "text": "Suggest he prescribe a vitamin supplement, since that's easier to order.",
+              "tag": "game-move",
+              "egoState": "A",
+              "outcome": "The vitamins arrive Thursday. Teo's weight doesn't move.",
+              "outcomeExpression": "neutral",
+              "lesson": "Treating a stimulus-hunger problem as a nutrition problem is a comfortable, orderable fix that doesn't touch the actual deficit - the chart looks like something was done."
+            }
+          ]
+        },
+        {
+          "npc": "Agnes",
+          "expression": "neutral",
+          "line": "End of the week. How's the quiet one in cot four?",
+          "cues": ["glancing at the clipboard, not at the crib"],
+          "egoState": "A",
+          "options": [
+            {
+              "text": "Tell her the truth: he's stopped crying, stopped reaching, and that's worse, not better.",
+              "tag": "best",
+              "egoState": "A",
+              "outcome": "Agnes pauses. \"Spitz again,\" she says quietly. \"Saw this in '44.\" For the first time all week she looks at the crib instead of the clipboard.",
+              "outcomeExpression": "open",
+              "lesson": "A quiet baby isn't a calm baby - Spitz's observation was that withdrawal and apathy, not crying, are the late sign of stimulus-hunger. Naming it accurately is the first thing that lets anyone act on it."
+            },
+            {
+              "text": "Say he's settled in nicely.",
+              "tag": "game-move",
+              "egoState": "AC",
+              "outcome": "Agnes writes \"settled\" in the log. The real pattern - withdrawal - goes unrecorded for next week's nurse.",
+              "outcomeExpression": "neutral",
+              "lesson": "\"Settled\" and \"shut down\" can look identical on a clipboard; calling withdrawal \"settling in\" erases the exact signal that would get Teo help."
+            },
+            {
+              "text": "Say nothing and hope next week's staffing is better.",
+              "tag": "ok",
+              "egoState": "C",
+              "outcome": "Next week's rota is the same as this one's. Hope wasn't a plan.",
+              "outcomeExpression": "neutral",
+              "lesson": "Waiting for a structural problem to fix itself doesn't meet a hunger that's active right now."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "echoAfterHours": 72,
+  "echo": {
+    "setting": "72 hours later: a slow Sunday. No texts, no plans, nobody's checked in all day.",
+    "line": "Huh. Nobody's reached out today.",
+    "shape": "notice the pull to manufacture some contact, even a small one, rather than go without"
+  }
+}

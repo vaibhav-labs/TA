@@ -103,6 +103,13 @@ export function Diagnose({ level, whyRubric, onComplete }: DiagnoseProps) {
         </Callout>
       )}
 
+      {/* The level's own lesson — distinct from, and in addition to, the
+          per-option feedback above. Every L1 block in the game writes one;
+          skipping it here would silently drop real explanatory content. */}
+      {picked !== null && level.lesson && (
+        <Callout label="Why">{level.lesson}</Callout>
+      )}
+
       {/* L3 free-text why */}
       {picked !== null && needsWhy && !whySubmitted && (
         <div className="ta-fade rounded-2xl bg-slate-900/90 border border-white/10 p-4 flex flex-col gap-3 shadow-xl">

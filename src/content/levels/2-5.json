@@ -1,0 +1,97 @@
+{
+  "id": "2-5",
+  "title": "Little Professor",
+  "world": 2,
+  "engine": "choice-story",
+  "concepts": [15],
+  "source": { "book": "TA Today", "chapter": 4, "quote": "I relied more on intuition, instant impressions." },
+  "setting": "Tuesday, 6:30pm. Dinner. Mike, three years old, has been pushing the same four pieces of broccoli around his plate for ten minutes. Mom is out tonight.",
+  "playAs": "Raj, the father",
+  "levels": {
+    "L1": {
+      "npc": "Mike",
+      "expression": "open",
+      "line": "Mommy said I don't have to eat broccoli when she's not here.",
+      "cues": ["said lightly, not whining", "checks Dad's face right after saying it", "timed for the one night no one can check with Mom"],
+      "question": "Mike isn't crying and he isn't openly refusing. What's actually running underneath this line?",
+      "options": [
+        { "text": "Free Child - he's just saying what he feels", "feedback": "Free Child would look more like a flat refusal or a meltdown over the broccoli itself; this isn't an outburst, it's a claim timed for exactly the moment no one can check it." },
+        { "text": "The Little Professor - intuitive, strategic thinking, not feeling", "feedback": "Right. Berne's \"Professor\" (A1, the Adult in the Child) is the child's intuitive problem-solving power - it doesn't reason like a grown-up, but it's sharp, reads the room, and just worked out that an unverifiable claim made on Mom's night out might get the broccoli waived." },
+        { "text": "He's lying, full stop, there's nothing more to it", "feedback": "It is an invented claim - but calling it just \"lying\" misses what's interesting: a three-year-old timed it, delivered it calmly, and watched for your reaction. That's strategy, which is exactly what the Little Professor names." },
+        { "text": "Adult - he's doing real cost-benefit reasoning", "feedback": "It has the shape of strategy, but it isn't grown-up reasoning with real information - it's childhood intuition, quick and clever but not the reality-tested Adult; TA keeps this filed as Child content (the Little Professor), not Adult." }
+      ],
+      "answer": 1,
+      "lesson": "The common confusion here is that the Child ego-state is pure feeling - but Berne's second-order model puts real thinking inside it too: intuitive, fast, unschooled, but thinking all the same. Mike isn't melting down. He's experimenting."
+    },
+    "L2": {
+      "intro": "You know Mom didn't say any such thing. This is the first move of something, not the whole game yet. What do you do?",
+      "beats": [
+        {
+          "npc": "Mike",
+          "expression": "open",
+          "line": "Mommy said. Really! She said it this morning.",
+          "cues": ["adds a small detail to make it sound more real", "still watching your face closely"],
+          "egoState": "C",
+          "options": [
+            {
+              "text": "Okay, fine, you don't have to eat it tonight.",
+              "tag": "game-move",
+              "egoState": "AC",
+              "outcome": "Mike's eyes light up - just for a flash - before he goes back to his cartoon voice: \"Okay!\" The broccoli goes in the bin. Lesson filed away: that line works.",
+              "outcomeExpression": "open",
+              "lesson": "Taking the bait lets the Little Professor's hypothesis get confirmed - next week it won't be broccoli, it'll be bedtime, or screen time, or Mom's name used again. The game just got its first successful run."
+            },
+            {
+              "text": "Really? That doesn't sound like Mom. Let's call her and ask.",
+              "tag": "best",
+              "egoState": "A",
+              "outcome": "Mike's face flickers - caught - then he laughs and says \"okay, okay, no\" and eats a piece of broccoli, grinning. No fight, no lecture.",
+              "outcomeExpression": "open",
+              "lesson": "Checking the claim against reality from Adult, without anger, answers the Little Professor's experiment on its own terms: the hypothesis doesn't survive contact with a simple reality check, so the game never gets a chance to form."
+            },
+            {
+              "text": "That's a lie, Mike, and lying is wrong.",
+              "tag": "ok",
+              "egoState": "CP",
+              "outcome": "Mike's lip trembles and he goes quiet, pushing the broccoli further away. The claim doesn't get repeated tonight - but it comes back, crying, three nights later.",
+              "outcomeExpression": "tense",
+              "lesson": "This stops tonight's move, but a moral verdict from Controlling Parent teaches Mike to fear getting caught, not that the claim doesn't hold up - the Little Professor just adjusts its strategy for next time instead of retiring it."
+            },
+            {
+              "text": "Just eat two more pieces and you can be done.",
+              "tag": "ok",
+              "egoState": "A",
+              "outcome": "Mike considers, then eats two pieces without further comment. Reasonable tonight, though the claim about Mom is never actually addressed.",
+              "outcomeExpression": "neutral",
+              "lesson": "A fair, concrete trade resolves tonight's dinner, but it sidesteps the actual move Mike made - the invented claim is left unchecked, free to be tried again somewhere else."
+            }
+          ]
+        }
+      ]
+    },
+    "L3": {
+      "fields": [
+        {
+          "type": "vector",
+          "label": "Draw the vectors for Mike's claim, and for the father's best response.",
+          "pairs": [
+            { "label": "Mike's claim", "from": "C", "to": "P" },
+            { "label": "Father's best response", "from": "A", "to": "A" }
+          ]
+        },
+        {
+          "type": "text",
+          "label": "In under 60 words: what does Berne mean by catching a game \"in statu nascendi\", and which response here actually does that?",
+          "maxWords": 60,
+          "rubric": ["in statu nascendi", "Little Professor", "reality check", "before it forms", "Adult"]
+        }
+      ]
+    }
+  },
+  "echoAfterHours": 24,
+  "echo": {
+    "setting": "24 hours later: Raj's own coworker floats a confident-sounding claim about what \"legal already approved\" for a shortcut.",
+    "line": "Legal already signed off on this, I checked yesterday.",
+    "shape": "same reality-check-before-it-forms shape as the best L2 move"
+  }
+}

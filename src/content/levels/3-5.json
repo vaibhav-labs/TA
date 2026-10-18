@@ -1,0 +1,88 @@
+{
+  "id": "3-5",
+  "title": "The Barn",
+  "world": 3,
+  "engine": "fields",
+  "concepts": [19],
+  "source": { "book": "TA Today", "chapter": 7, "quote": "an A->A social message overlies a psychological-level exchange between P and C (less often, C->C or P->P)" },
+  "setting": "Late afternoon at the edge of a ranch road. Hank, passing through on ranch work, has stopped for water. Jo, who grew up on this land, is leaning on the fence, not going anywhere in particular.",
+  "playAs": "Jo",
+  "levels": {
+    "L1": {
+      "npc": "Hank",
+      "expression": "open",
+      "line": "Reckon you'd like to see the barn?",
+      "cues": ["unhurried delivery", "holds eye contact a beat too long", "nobody asked for a barn tour"],
+      "question": "On the social level, this is a plain question about livestock storage. Given the cues, what's actually happening?",
+      "options": [
+        { "text": "Nothing - take it at face value, he's just being neighborly about the property.", "feedback": "The words alone would read that way. But the held eye contact and the unhurried delivery don't match a plain property tour - that incongruity is exactly the clue that something else is riding underneath the words." },
+        { "text": "This is an ulterior transaction: Adult-Adult on the surface, carrying a second Child-to-Child message that has nothing to do with the barn.", "feedback": "Right. The social level is a harmless question; the psychological level, carried in tone and eye contact, is an invitation. Both are true at once." },
+        { "text": "This is a crossed transaction, since he's not sticking to small talk.", "feedback": "Nothing here is crossed - if Jo answers at the social level, the exchange will look perfectly complementary, Adult to Adult. Two things can both be true (an innocent question, a flirtation) without either level breaking down; that's what makes it ulterior, not crossed." }
+      ],
+      "answer": 1,
+      "lesson": "Every transaction carries a social level and a psychological level; most of the time they match. In an ulterior transaction they don't - and by rule 3 (when the two levels disagree, the hidden one is what actually decides what happens next), the outcome is decided at the psychological level, not by whatever the words literally say."
+    },
+    "L2": {
+      "intro": "Hank's waiting on an answer. Whatever Jo says next will be heard on both levels at once.",
+      "beats": [
+        {
+          "npc": "Hank",
+          "expression": "open",
+          "line": "Reckon you'd like to see the barn?",
+          "cues": ["slow delivery", "held eye contact"],
+          "egoState": "A",
+          "options": [
+            {
+              "text": "I've never seen the barn.",
+              "tag": "best",
+              "egoState": "FC",
+              "outcome": "Hank grins, slower than the question needed. \"Well, I reckon I could show you, if you're not too busy.\" The conversation about hay storage is extremely not about hay storage anymore.",
+              "outcomeExpression": "open",
+              "lesson": "By rule 3, the outcome of a duplex transaction is decided at the psychological level, not the social one. Answering Free Child to Free Child matches his hidden invitation exactly, which is why it lands even though the words stayed Adult-Adult the whole time."
+            },
+            {
+              "text": "No, I haven't. Is it the red one past the fence?",
+              "tag": "ok",
+              "egoState": "A",
+              "outcome": "Hank blinks, caught a half-step off balance. \"Uh - yeah, the red one.\" He asked on two levels and got exactly one back. The moment passes, mundane.",
+              "outcomeExpression": "neutral",
+              "lesson": "Answering only the social level isn't a mistake - you always have a choice of which level to respond to - but it does mean the ulterior invitation goes unanswered and the duplex collapses into a plain complementary exchange."
+            },
+            {
+              "text": "Are you trying to get me alone out there?",
+              "tag": "game-move",
+              "egoState": "C",
+              "outcome": "Hank's ears go red. \"No - no, ma'am, I just meant the barn.\" Whatever this was, it's over now; the barn really does just mean the barn for the rest of the afternoon.",
+              "outcomeExpression": "tense",
+              "lesson": "Saying the psychological-level message out loud, instead of answering it on its own level, collapses the whole arrangement - a duplex transaction depends on both tracks staying unspoken; naming one ends it."
+            }
+          ]
+        }
+      ]
+    },
+    "L3": {
+      "fields": [
+        {
+          "type": "vector",
+          "label": "Draw both tracks for Hank's line and Jo's best reply.",
+          "pairs": [
+            { "label": "Social level (S1 -> R1)", "from": "A", "to": "A" },
+            { "label": "Psychological level (S2 -> R2)", "from": "C", "to": "C" }
+          ]
+        },
+        {
+          "type": "text",
+          "label": "In under 55 words: why does TA Today call this kind of transaction \"duplex,\" and which level actually decides what happens next?",
+          "maxWords": 55,
+          "rubric": ["duplex", "social", "psychological", "ulterior", "outcome", "determined"]
+        }
+      ]
+    }
+  },
+  "echoAfterHours": 5,
+  "echo": {
+    "setting": "That evening, back on the porch, Jo's father asks what took so long.",
+    "line": "Barn tour run long?",
+    "shape": "diagnose the question's own level, same shape as L1"
+  }
+}

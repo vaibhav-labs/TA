@@ -1,0 +1,92 @@
+{
+  "id": "7-3",
+  "title": "Three P's",
+  "world": 7,
+  "engine": "choice-story",
+  "concepts": [59],
+  "source": {
+    "book": "TA Today",
+    "chapter": 28,
+    "quote": "Pat Crossman has suggested three P's that the therapist must provide in order to do this effectively: permission, protection and potency."
+  },
+  "setting": "Monday morning. Kabir has quietly taken on a fourth project this quarter because he never says no to the director. Noor, his manager, has noticed and wants that to change today.",
+  "playAs": "Noor, a manager",
+  "levels": {
+    "L1": {
+      "npc": "Kabir",
+      "expression": "tense",
+      "line": "Okay... I guess if you really think I should, I'll tell him no this time.",
+      "cues": ["hesitant, not convinced", "glancing toward the director's office", "agreeing without sounding like he believes it"],
+      "question": "Noor already told Kabir \"it's okay to say no to extra work\" - nothing else. What is Kabir actually short on right now?",
+      "options": [
+        { "text": "Nothing - the permission is enough, the rest is on him.", "feedback": "If that were true he wouldn't look this nervous. Crossman's whole point is that permission alone, with nothing behind it, often isn't enough for someone to actually act on." },
+        { "text": "Protection - he has no assurance of backup if saying no gets him in trouble with the director.", "feedback": "Right. He's been given the green light but no promise of what happens to him if it goes badly - that's the protection half of the three P's, and without it, permission is just exposure." },
+        { "text": "Potency - Noor doesn't have enough authority to grant this kind of permission.", "feedback": "Not quite the gap here - Noor plainly does have standing to say this. The missing piece is what happens after he says no, not whether she's allowed to tell him to." }
+      ],
+      "answer": 1,
+      "lesson": "Crossman's three P's work as a set: permission (it's okay to do this), protection (I'll back you up if it gets scary), and potency (I actually have the standing to make that backup mean something). Permission without the other two is just an invitation to go first, alone."
+    },
+    "L2": {
+      "intro": "Kabir needs more than a green light. What does Noor actually say?",
+      "beats": [
+        {
+          "npc": "Kabir",
+          "expression": "tense",
+          "line": "If I say no and he goes over my head to you anyway... you're not actually going to back me up, are you?",
+          "cues": ["naming the real fear directly", "testing whether the permission has any weight behind it"],
+          "egoState": "C",
+          "options": [
+            {
+              "text": "If he pushes back, send him straight to me - I'll back you up, and it won't cost you anything with me.",
+              "tag": "best",
+              "egoState": "A",
+              "outcome": "Kabir's shoulders actually drop. \"Okay. Okay, I can say no to him then.\"",
+              "outcomeExpression": "open",
+              "lesson": "This is all three P's in one sentence: permission he already has, explicit protection (send him to me), and potency (a credible promise that actually changes what happens if it goes wrong)."
+            },
+            {
+              "text": "I can't promise anything, but I really believe you can handle this.",
+              "tag": "ok",
+              "egoState": "NP",
+              "outcome": "\"...Thanks. I guess I'll try.\" Warm, but nothing about the actual risk changes.",
+              "outcomeExpression": "neutral",
+              "lesson": "Encouragement is not protection. Believing in Kabir doesn't change what happens to him if the director escalates - Crossman's point is specifically that the Parent granting permission has to be willing to back it, not just cheer it on."
+            },
+            {
+              "text": "You're allowed to say no. That's really all there is to it.",
+              "tag": "game-move",
+              "egoState": "P",
+              "outcome": "Kabir nods, says he will - and three days later takes the fourth project anyway, same as always.",
+              "outcomeExpression": "neutral",
+              "lesson": "Bare permission, with no protection behind it, is the exact failure Crossman warns about: the Child can hear the words and still not use them, because nothing actually changed about what it costs to act on them."
+            },
+            {
+              "text": "Just tell him no. It's really not my problem what happens after that.",
+              "tag": "game-move",
+              "egoState": "CP",
+              "outcome": "Kabir's face closes. \"...Sure. Got it.\" He says nothing like that to the director.",
+              "outcomeExpression": "tense",
+              "lesson": "This has potency's bluntness with none of its warmth and no protection at all - a command from the Pig Parent, not permission. Crossman's Parent giving permission has to be the grown-up kind, not this."
+            }
+          ]
+        }
+      ]
+    },
+    "L3": {
+      "fields": [
+        {
+          "type": "text",
+          "label": "In under 50 words: name Crossman's three P's, and explain what specifically goes wrong when someone gives permission with no protection behind it.",
+          "maxWords": 50,
+          "rubric": ["permission", "protection", "potency", "backup", "alone", "scary"]
+        }
+      ]
+    }
+  },
+  "echoAfterHours": 96,
+  "echo": {
+    "setting": "Four days later: the director emails Kabir directly asking him to take on a fifth thing \"just this once.\"",
+    "line": "Kabir, cc'ing Noor on his reply: \"Can you weigh in here before I answer him?\"",
+    "shape": "single-option check-in: did the protection actually hold?"
+  }
+}

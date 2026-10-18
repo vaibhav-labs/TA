@@ -49,7 +49,11 @@ export function ChoiceStory({ level, playerName = "You", onComplete }: ChoiceSto
       playTap();
     }
 
-    if (opt.tag === "game-move" || beatIndex === level.beats.length - 1) {
+    // A game-move is a bad outcome for that beat, not an automatic hard stop —
+    // several levels (e.g. 4-3, 4-5, the 4-6 boss) are built from independent
+    // vignettes/beats the player is meant to see all of, including ones after
+    // a game-move pick earlier on. Only the final beat actually ends the scene.
+    if (beatIndex === level.beats.length - 1) {
       setEnded(true);
     }
   }
@@ -66,6 +70,31 @@ export function ChoiceStory({ level, playerName = "You", onComplete }: ChoiceSto
 
   return (
     <div className="flex flex-col gap-5">
+      {/* Beat progress — only shown for multi-beat scenes, so a long scene (e.g. a
+          6-beat finale) never feels like it might run forever with no sense of how
+          much is left. */}
+      {level.beats.length > 1 && (
+        <div className="flex items-center gap-2">
+          <div className="flex-1 flex gap-1">
+            {level.beats.map((_, i) => (
+              <div
+                key={i}
+                className={`h-1 flex-1 rounded-full ${
+                  i < beatIndex || (i === beatIndex && ended)
+                    ? "bg-ta-yellow"
+                    : i === beatIndex
+                      ? "bg-ta-yellow/40"
+                      : "bg-slate-800"
+                }`}
+              />
+            ))}
+          </div>
+          <span className="text-[11px] font-mono text-slate-400 shrink-0">
+            {beatIndex + 1}/{level.beats.length}
+          </span>
+        </div>
+      )}
+
       {level.intro && (
         <div className="rounded-xl bg-slate-900/70 border border-white/10 p-3.5 text-[15px] leading-relaxed text-slate-300 backdrop-blur-sm">
           <span className="text-ta-yellow font-bold mr-1">&rsaquo;</span>
@@ -130,7 +159,7 @@ export function ChoiceStory({ level, playerName = "You", onComplete }: ChoiceSto
                 <span className="w-6 h-6 rounded-full bg-emerald-500 text-black flex items-center justify-center font-black">
                   ✓
                 </span>
-                <span>Breakthrough &bull; Adult-to-Adult Established</span>
+                <span>Best move</span>
               </div>
               <span className="text-xs font-mono font-bold px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 border border-emerald-400/30">
                 +100 PTS
@@ -142,10 +171,10 @@ export function ChoiceStory({ level, playerName = "You", onComplete }: ChoiceSto
                 <span className="w-6 h-6 rounded-full bg-rose-600 text-white flex items-center justify-center font-black">
                   !
                 </span>
-                <span>Game Move Triggered &bull; The Switch Sprung</span>
+                <span>That's an old pattern repeating</span>
               </div>
               <span className="text-xs font-mono font-bold px-2 py-0.5 rounded bg-rose-500/20 text-rose-300 border border-rose-400/30">
-                LOOP CONTINUES
+                {ended ? "SCENE ENDS HERE" : "0 PTS"}
               </span>
             </div>
           ) : (
@@ -154,7 +183,7 @@ export function ChoiceStory({ level, playerName = "You", onComplete }: ChoiceSto
                 <span className="w-5 h-5 rounded-full bg-amber-400/20 text-amber-300 flex items-center justify-center text-xs">
                   &bull;
                 </span>
-                <span>Complementary &bull; Keeps pattern alive</span>
+                <span>Okay, but not the best move</span>
               </div>
               <span className="text-xs font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-300">
                 +50 PTS

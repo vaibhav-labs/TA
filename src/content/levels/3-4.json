@@ -1,0 +1,103 @@
+{
+  "id": "3-4",
+  "title": "Why Did You Do That?",
+  "world": 3,
+  "engine": "choice-story",
+  "concepts": [18],
+  "source": { "book": "TA Today", "chapter": 7, "quote": "Eric Berne calculated that in theory there are 72 possible varieties of crossed transaction." },
+  "setting": "Tuesday evening, a peer-feedback circle in a borrowed conference room. Nadia runs these sessions. A crossed transaction is just a reply that doesn't answer the ego state it was aimed at - and tonight she wants the group to practice spotting the two ways that keeps showing up before everyone goes home.",
+  "playAs": "Jordan, a member of the peer-feedback circle",
+  "levels": {
+    "L1": {
+      "npc": "Nadia",
+      "expression": "neutral",
+      "line": "Read this one with me. Marcus asks Dana, \"Did you get a chance to review the budget?\" Dana snaps back, \"Why is it always my job to review things around here?\"",
+      "cues": ["Marcus: level, factual, present-tense question (Adult)", "Dana: \"always\", aggrieved pitch, answers up as if scolded (Child to Parent)"],
+      "question": "What kind of transaction is this?",
+      "options": [
+        { "text": "Not crossed - they're both just talking about the budget.", "feedback": "Same topic, different vectors: Marcus addressed Dana's Adult and her reply came back from Child, aimed at a Parent he never occupied. That mismatch is exactly what crossed means - staying on-topic doesn't prevent it." },
+        { "text": "A crossed transaction - specifically the common shape, an Adult stimulus crossed by a Child-to-Parent response.", "feedback": "Right. Marcus offered Adult-Adult; Dana answered Child-to-Parent instead. Vectors not parallel, and the ego-state he addressed isn't the one that answered." },
+        { "text": "A crossed transaction - the rarer shape, where a Parent-pulling stimulus gets answered from Adult.", "feedback": "That's the mirror image of what happened here. Marcus's stimulus was Adult, not Parent or Child, so whatever crossed it has to be a response that didn't answer Adult with Adult - which is the common shape, not the rare one." }
+      ],
+      "answer": 1,
+      "lesson": "Berne calculated 72 theoretically possible varieties of crossed transaction, but TA Today notes only two show up constantly in practice: an Adult-Adult stimulus crossed by a Child-to-Parent response, or by a Parent-to-Child response. Dana's reply is the first of those two."
+    },
+    "L2": {
+      "intro": "\"Let's warm up with the common one,\" Nadia says. \"Marcus, give Jordan a plain Adult question. Jordan - answer the way the common crossed shape looks: Adult stimulus, Child-to-Parent response.\"",
+      "beats": [
+        {
+          "npc": "Marcus",
+          "expression": "neutral",
+          "line": "Jordan, what did you think of the timeline I proposed for the launch?",
+          "cues": ["level tone", "genuine, specific question"],
+          "egoState": "A",
+          "options": [
+            {
+              "text": "Why does it always have to be about your timeline? You never ask what I think until it's already decided.",
+              "tag": "best",
+              "egoState": "C",
+              "outcome": "Nadia nods. \"That's it exactly. He offered Adult, you answered Child-to-Parent - 'always', 'never', aimed up at an authority he never claimed. Vectors cross.\" \"Now the rarer one,\" she says. \"Grant's going to pull for your Parent or Child - answer him from Adult and cross him back.\"",
+              "outcomeExpression": "tense",
+              "lesson": "This reproduces the common crossed shape on purpose: Adult stimulus, Child-to-Parent response. The vectors aren't parallel, and the ego-state he addressed (Adult) isn't the one that answered - textbook crossed transaction."
+            },
+            {
+              "text": "I think it's solid, maybe a little tight in week two.",
+              "tag": "ok",
+              "egoState": "A",
+              "outcome": "\"Good answer,\" Nadia says, \"and completely not what I asked for. That's complementary, not crossed - exactly how you'd want to actually answer him, just not tonight's exercise.\" \"Now the rarer one,\" she adds. \"Grant's going to pull for your Parent or Child - answer him from Adult and cross him back.\"",
+              "outcomeExpression": "neutral",
+              "lesson": "In real life this is the better move - Adult met with Adult, which is rule 1 (answer the exact state you were addressed in, and it just keeps going), communication continues cleanly. For the specific drill (reproduce a crossed transaction on purpose), it's the wrong target: being the healthiest answer and being the assigned exercise are two different jobs."
+            },
+            {
+              "text": "Don't ask me things like that when I haven't even had coffee yet.",
+              "tag": "ok",
+              "egoState": "CP",
+              "outcome": "\"Also crossed,\" Nadia says, \"but the mirror image - Parent down to his Child, not Child up at a Parent. Different shape.\" \"Let's see the rarer one too,\" she says. \"Grant's going to pull for your Parent or Child - answer him from Adult and cross him back.\"",
+              "outcomeExpression": "neutral",
+              "lesson": "Both are crossed, but crossed isn't one thing - TA Today's two common shapes run in opposite directions (Child-to-Parent vs. Parent-to-Child). Confusing which direction you just produced is confusing which ego state actually got addressed."
+            }
+          ]
+        },
+        {
+          "npc": "Grant",
+          "expression": "tense",
+          "line": "Honestly, Jordan, I expected you to have caught this review note before it went out. What were you thinking?",
+          "cues": ["clipped delivery", "rhetorical question", "addressed down, like a subordinate"],
+          "egoState": "P",
+          "options": [
+            {
+              "text": "I missed that line. I'll read the review notes out loud before anything ships from now on.",
+              "tag": "best",
+              "egoState": "A",
+              "outcome": "Grant blinks, caught off guard - his Parent-pulling stimulus just got Adult back. \"...Right. Make sure of it.\" Nadia: \"There it is. He pulled for your Child, you crossed him into Adult. Rarer, and it's the one that gets used in therapy and at work both.\"",
+              "outcomeExpression": "neutral",
+              "lesson": "This reproduces the rarer common shape: a Parent-to-Child stimulus crossed by an Adult-to-Adult response. Crossing is the main tool for getting out of a stuck pattern, not a way of starting a fight - this is what that actually looks like."
+            },
+            {
+              "text": "You're right, I'm sorry, I'll be more careful.",
+              "tag": "ok",
+              "egoState": "AC",
+              "outcome": "\"Make sure it doesn't happen again,\" Grant says, satisfied. Nadia: \"And that's the expected complementary answer - Parent down, Child up, same groove continuing. Not wrong to do in real life. Just not tonight's assignment.\"",
+              "outcomeExpression": "neutral",
+              "lesson": "This completes his Parent-to-Child stimulus instead of crossing it - perfectly complementary, rule 1, and it leaves the pattern exactly where it was instead of breaking it."
+            },
+            {
+              "text": "Maybe if the review process wasn't such a mess, I'd have caught it.",
+              "tag": "game-move",
+              "egoState": "C",
+              "outcome": "Grant's jaw sets. \"So now it's the process's fault?\" The room temperature drops. Nadia calls time: \"Also crossed - interesting, but that's the common shape again, aimed back at him instead of answering from Adult. Let's reset and try it once more next week.\"",
+              "outcomeExpression": "tense",
+              "lesson": "A rebellious Child reply still lands on the common shape (Child-to-Parent, just defiant instead of compliant) rather than the rarer Adult cross the exercise asked for - and either flavor of Child reply keeps the fight going instead of ending it."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "echoAfterHours": 168,
+  "echo": {
+    "setting": "A week later, in a real one-on-one with an actual manager, not a drill.",
+    "line": "Honestly, I expected more from you on this one.",
+    "shape": "same two-beat shape as L2, this time for real"
+  }
+}

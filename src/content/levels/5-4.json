@@ -1,0 +1,79 @@
+{
+  "id": "5-4",
+  "title": "Doing Nothing",
+  "world": 5,
+  "engine": "diagnose",
+  "concepts": [41],
+  "source": { "book": "TA Today", "chapter": 17, "quote": "There are four types of behavior which always indicate that the person concerned is discounting." },
+  "setting": "Monday standup, a few weeks after Rosita's Friday blow-up. Troy, watching more carefully now, asks the team for a volunteer to take an urgent ticket.",
+  "playAs": "Troy, the manager",
+  "levels": {
+    "L1": {
+      "npc": "Rosita",
+      "expression": "neutral",
+      "line": "Sure, I'll take it! No problem at all, happy to help.",
+      "cues": ["said instantly, no pause to think", "nobody asked if it's the best use of her time", "she already has three open tickets today", "same thing she did yesterday, and the day before"],
+      "question": "Rosita looks cooperative and fine. Which passive behavior is this?",
+      "options": [
+        { "text": "Doing nothing - she's not actually taking action.", "feedback": "No. She is acting, immediately and smoothly. Doing nothing looks like silence or freezing, not instant agreement." },
+        { "text": "Agitation - she's covering discomfort with repetitive movement.", "feedback": "No. There's no fidgeting or repetitive activity here; agitation looks restless, not smooth and compliant." },
+        { "text": "Overadaptation - she's complying with what she assumes you want, without checking her own wishes or whether it's even the right call.", "feedback": "Right. She didn't check whether this is actually a good use of her time, didn't ask what you really need, and didn't pause over her own three open tickets - she just adapted. It reads as helpful, which is exactly why it's the easiest of the four to miss." },
+        { "text": "Incapacitation - she's disabling herself to get someone else to solve the problem.", "feedback": "No. Incapacitation looks like becoming unable to function (illness, breakdown); she's functioning fine, just discounting her own options." }
+      ],
+      "answer": 2,
+      "lesson": "Overadaptation is the hardest passive behavior to catch because it's frequently stroked as helpfulness - the tell isn't the compliance itself, it's the missing pause: no check on what you actually need, no check on her own wishes, no weighing of whether it's even the right option."
+    },
+    "L2": {
+      "intro": "She said yes before you'd even finished the sentence. Do you take the easy win, or slow it down?",
+      "beats": [
+        {
+          "npc": "Rosita",
+          "line": "Sure, I'll take it! No problem at all, happy to help.",
+          "expression": "neutral",
+          "cues": ["instant yes", "already stacked with work"],
+          "egoState": "AC",
+          "options": [
+            {
+              "text": "Great, thanks, you're a lifesaver.",
+              "tag": "game-move",
+              "egoState": "NP",
+              "outcome": "Rosita beams and grabs the ticket. By 6pm she's still at her desk, three tickets behind.",
+              "outcomeExpression": "neutral",
+              "lesson": "Taking the yes at face value strokes the overadaptation - it feels good for both of you right now, but it discounts whether this was actually the right option for her workload."
+            },
+            {
+              "text": "Are you sure? You already look pretty stacked today.",
+              "tag": "ok",
+              "egoState": "A",
+              "outcome": "\"Oh - yeah, I'm fine, really!\" she says, already turning back to her screen. The check happened, but she overrides it just as fast.",
+              "outcomeExpression": "neutral",
+              "lesson": "Checking in is the right instinct, but a yes-or-no question is too easy for an overadapted \"fine!\" to swallow whole - it needs a question she actually has to pause and answer."
+            },
+            {
+              "text": "Hang on - before you say yes, what's actually on your plate right now?",
+              "tag": "best",
+              "egoState": "A",
+              "outcome": "Rosita stops mid-nod. \"Oh... I've got the two bug tickets and the client call at 2. I didn't think about that.\" First real pause of the conversation.",
+              "outcomeExpression": "open",
+              "lesson": "Asking her to name her actual situation, instead of accepting or gently checking the instant yes, interrupts the autopilot - it's the pause that overadaptation always skips."
+            },
+            {
+              "text": "You always say yes - you should think about yourself more.",
+              "tag": "ok",
+              "egoState": "CP",
+              "outcome": "Rosita looks stung. \"Sorry, I just wanted to help.\" She takes it as criticism, not an invitation to check in.",
+              "outcomeExpression": "tense",
+              "lesson": "True, but delivered as a judgment about her character rather than a concrete question about today's workload, it lands as a scold - she gets defensive instead of pausing to actually think."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "echoAfterHours": 24,
+  "echo": {
+    "setting": "The next sprint: Troy notices himself giving his own manager the same instant, cheerful yes.",
+    "line": "Sure, I'll take it! No problem at all.",
+    "shape": "same four-option diagnose shape as L1"
+  }
+}

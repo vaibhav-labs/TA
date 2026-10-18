@@ -1,0 +1,17 @@
+{
+  "concept": 32,
+  "name": "Party Games",
+  "oneLine": "Ain't It Awful, Blemish, Schlemiel, and Why Don't You...?-Yes, But... are the games that structure casual social time, usually at first degree.",
+  "whatYouDid": "You classified Karan's running commentary on everyone's flaws as Blemish, a Party game, rather than a Consulting-Room, Underworld, or Good game, and - in the boss round - hunted down the exact antithesis to Why Don't You...?/Yes, But...",
+  "confusion": "Why Don't You...? reads as a genuine offer of help, and Yes, But... reads as a genuine request for it; the tell that it's a Party game instead is that the content of every suggestion is nearly irrelevant - the same shape runs whether it's suggestion three or suggestion thirty.",
+  "fromBook": {
+    "book": "TA Today",
+    "chapter": 25,
+    "quote": "In Blemish, the player finds fault with others, criticizing their appearance, work, dress, etc."
+  },
+  "expand": {
+    "definition": "Party games are first-degree, social-time-structuring games - Blemish picks at others' faults, Why Don't You...? supplies an endless stream of suggestions, and Yes, But... rejects every one of them without ever quite saying \"I don't want advice.\"",
+    "otherFraming": "TA Today prefers to collapse most named games into a small number of basic Drama-Triangle-switch patterns; Why Don't You...? and Yes, But... are the two halves of a single Rescuer-to-Victim / Victim-to-Persecutor pairing, played from opposite chairs.",
+    "tryThisToday": "At your next group hangout, count how many \"why don't you\" suggestions get a \"yes, but\" in response - if it's more than one or two, you're watching the Response stage of a live game."
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "concept": 11,
+  "name": "Egogram",
+  "oneLine": "A quick, intuitive bar chart of how much time you spend in each of the five functional ego states - a snapshot of a pattern, not a fixed trait.",
+  "whatYouDid": "You read Zara's trip-planning message and had to spot which functional bar was tallest - noticing that \"obviously, don't argue, I already booked it\" repeated across four sentences is what makes it diagnosable, not any single line.",
+  "confusion": "People treat an egogram as a fixed personality score, done once and true forever; the tell is Dusay's own constancy hypothesis - raise one bar on purpose and, by his theory, another will quietly drop to compensate, which only makes sense if the shape is dynamic, not fixed.",
+  "fromBook": {
+    "book": "TA Today",
+    "chapter": 3,
+    "quote": "The idea is to draw a vertical bar above each ego-state label. The height of the bar shows how much of the time you use that functional part."
+  },
+  "expand": {
+    "definition": "Jack Dusay's egogram plots relative time spent in CP, NP, A, FC and AC as a bar chart; only the relative heights matter to the comparison, not the absolute scale of any one bar.",
+    "otherFraming": "Dusay's constancy hypothesis treats psychic energy as roughly fixed in total - deliberately raising one bar, by practicing new behaviours, tends to lower another on its own, rather than requiring you to suppress the one you want less of directly.",
+    "tryThisToday": "Draw your own five-bar egogram for \"today so far\", then draw a second one for how you'd like it to look - pick one bar to deliberately raise tomorrow."
+  }
+}

@@ -1,0 +1,123 @@
+{
+  "id": "7-2",
+  "title": "The Contract",
+  "world": 7,
+  "engine": "fields",
+  "concepts": [58],
+  "source": {
+    "book": "TA Today",
+    "chapter": 26,
+    "quote": "Berne defined a contract as an explicit bilateral commitment to a well-defined course of action."
+  },
+  "setting": "First session. Zoya coaches people through career and life transitions; Dev found her through a friend and has shown up ready to \"work on himself.\"",
+  "playAs": "Zoya, a coach",
+  "levels": {
+    "L1": {
+      "npc": "Dev",
+      "expression": "open",
+      "line": "Honestly, I just want to be happier, you know? And have better relationships with people.",
+      "cues": ["\"happier\" and \"better relationships\" - no observable behavior named", "two vague goals, no specifics", "sincere but unspecific"],
+      "question": "Dev states his goal for the coaching contract. Which of Steiner's four requirements is actually missing here?",
+      "options": [
+        { "text": "Competency - Dev might not have what it takes to do the work.", "feedback": "Nothing here suggests he can't do the work. Competency is about capacity to carry out an agreement once it exists, not about whether the goal is stated well." },
+        { "text": "Mutual consent - \"happier\" and \"better relationships\" are too vague for either of you to say what you're actually agreeing to.", "feedback": "Right. Steiner is explicit that vague, multi-syllable goals like \"happiness\" or \"better relationships\" can't satisfy mutual consent, because neither party can specify what they're consenting to." },
+        { "text": "Lawful object - coaching itself needs some kind of legal check first.", "feedback": "Lawful object just means the goal doesn't violate the law or public policy. There's nothing unlawful on the table here - that's not what's missing." }
+      ],
+      "answer": 1,
+      "lesson": "Mutual consent requires the goal stated in specific, observable, behavioral terms. \"Happiness\" and \"better relationships\" are exactly the vague, multi-syllable goals Steiner says can't be used in a contract - not because they're not real wants, but because nobody can agree to something that unclear."
+    },
+    "L2": {
+      "intro": "Zoya asks Dev to get specific. What does she say to turn a real but vague want into something they can actually contract on?",
+      "beats": [
+        {
+          "npc": "Dev",
+          "expression": "neutral",
+          "line": "I don't know... I guess lately I keep canceling plans with people I actually like, last-minute, like three times this month. That's part of it.",
+          "cues": ["a number, finally", "something Zoya could observe", "still testing whether this counts"],
+          "egoState": "A",
+          "options": [
+            {
+              "text": "Good, that's something we can actually work with. What would you be willing to do between now and our next session to practice not canceling?",
+              "tag": "best",
+              "egoState": "A",
+              "outcome": "Dev thinks. \"I guess... I could text the person before I decide to cancel, instead of just doing it.\" A real homework item appears.",
+              "outcomeExpression": "open",
+              "lesson": "This is mutual consent plus mutual effort in one move - the goal is now specific and observable, and asking what he'll do keeps this a contract, not a service Zoya performs on him."
+            },
+            {
+              "text": "Great, that's specific enough - I'll help you build a plan to stop canceling.",
+              "tag": "ok",
+              "egoState": "NP",
+              "outcome": "\"Cool, yeah, you tell me what to do and I'll do it.\" The goal is specific now, but Dev is already handing Zoya the whole plan.",
+              "outcomeExpression": "neutral",
+              "lesson": "The goal cleared the mutual-consent bar, but offering to build the plan for him skips valid consideration and mutual effort - without something Dev contributes, this slides toward a Rescue even with a specific goal."
+            },
+            {
+              "text": "That's such a small thing, honestly - a lot of people cancel plans sometimes, don't be hard on yourself.",
+              "tag": "game-move",
+              "egoState": "NP",
+              "outcome": "\"Oh. Okay, yeah, maybe it's not a big deal.\" Dev relaxes - and the contract never gets made at all.",
+              "outcomeExpression": "neutral",
+              "lesson": "Comforting from Nurturing Parent feels kind, but it talks Dev out of the very goal he just risked naming. No contract gets made when the goal keeps getting minimized before anyone agrees to it."
+            }
+          ]
+        },
+        {
+          "npc": "Dev",
+          "expression": "open",
+          "line": "Okay. So... what do I actually owe you here, besides the money?",
+          "cues": ["asking what his side of the bargain is", "first sign he's thinking about this as two-sided"],
+          "egoState": "A",
+          "options": [
+            {
+              "text": "The fee covers my side. Your consideration is doing the homework between sessions and telling me straight when it's not working.",
+              "tag": "best",
+              "egoState": "A",
+              "outcome": "\"Okay, that's fair. I can do that.\" Both sides of the contract are now explicit.",
+              "outcomeExpression": "neutral",
+              "lesson": "Valid consideration doesn't have to be money on both sides - Steiner's point is that it has to be explicit and agreed, and here it's the client's visible effort, named out loud instead of assumed."
+            },
+            {
+              "text": "Don't worry about that part, just show up and we'll figure it out as we go.",
+              "tag": "ok",
+              "egoState": "NP",
+              "outcome": "\"Sure, okay.\" Friendly, but Dev's half of the bargain stays unnamed.",
+              "outcomeExpression": "neutral",
+              "lesson": "Leaving consideration unspoken feels easygoing, but Steiner is clear that when consideration doesn't exist or stays vague, the situation drifts toward a Rescue even if everyone involved is being nice about it."
+            },
+            {
+              "text": "Honestly, just getting to work with someone as motivated as you is consideration enough for me.",
+              "tag": "game-move",
+              "egoState": "FC",
+              "outcome": "\"Oh, thanks!\" Flattering - and it quietly removes any expectation that Dev contributes anything concrete.",
+              "outcomeExpression": "open",
+              "lesson": "This sounds generous but it cancels mutual effort outright - if Zoya's payoff is just liking Dev, there's no consideration flowing back to balance the relationship, and no way to check later whether the contract was kept."
+            }
+          ]
+        }
+      ]
+    },
+    "L3": {
+      "fields": [
+        {
+          "type": "text",
+          "label": "Write the contract: in under 90 words, state what Dev wants in specific, observable terms, what he'll contribute, what Zoya will do, and how you'll both know it's done.",
+          "maxWords": 90,
+          "rubric": ["specific", "observable", "consideration", "mutual", "both", "agree", "homework"]
+        },
+        {
+          "type": "text",
+          "label": "In under 40 words: what makes a contract \"cooperative\" rather than a Rescue, in Steiner's terms?",
+          "maxWords": 40,
+          "rubric": ["50%", "mutual", "consideration", "effort", "both", "contribute"]
+        }
+      ]
+    }
+  },
+  "echoAfterHours": 168,
+  "echo": {
+    "setting": "One week later, their second session.",
+    "line": "\"So I canceled on someone again Tuesday. Does that mean this isn't working?\"",
+    "shape": "same beat shape as L2 - get specific, then check both sides of the contract"
+  }
+}

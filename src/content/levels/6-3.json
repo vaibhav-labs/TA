@@ -1,0 +1,93 @@
+{
+  "id": "6-3",
+  "title": "Don't",
+  "world": 6,
+  "engine": "diagnose",
+  "concepts": [47, 48],
+  "source": {
+    "book": "TA Today",
+    "chapter": 14,
+    "quote": "Realize too that these names for the injunctions and permissions are only verbal labels we apply for convenience in script analysis. The injunctions and permissions themselves are conveyed to the child in ways that are mainly non-verbal."
+  },
+  "setting": "Saturday evening. Noor, six years old, has been waiting all afternoon to show her father the fort she built out of couch cushions.",
+  "playAs": "Noor",
+  "levels": {
+    "L1": {
+      "npc": "Noor's father",
+      "expression": "neutral",
+      "line": "In a minute.",
+      "cues": ["doesn't look up from his phone", "already walking past her toward the kitchen", "voice flat, not annoyed - just elsewhere", "this is the fourth time this week"],
+      "question": "Quick primer: an 'injunction' is a silent childhood message - never actually said out loud - that a kid picks up purely from tone and body language, about what's not allowed: not existing, not being close, not being important, and so on. Reading only what Noor can see and hear - not what her father intends - which injunction is she most likely decoding from this?",
+      "options": [
+        { "text": "Don't Exist - he wants her gone.", "feedback": "Don't Exist reads as a threat to survival - rejection that intense usually comes with much sharper non-verbals (anger, violence, real withdrawal of care). This is flatter and more habitual than that." },
+        { "text": "Don't Think - he's telling her her ideas are wrong.", "feedback": "Don't Think usually comes with belittling of a specific thought, like 'that's a silly idea.' Nothing here comments on what she thinks - it's about whether she registers at all." },
+        { "text": "Don't Be Important - what she wants doesn't carry enough weight to interrupt anything.", "feedback": "Right. The flat voice, the no-look, the fact that it's the fourth time - this is 'you and your wants are not important around here,' delivered with zero drama, which is exactly why it's so easy to miss and so effective." },
+        { "text": "Don't Grow Up - he wants her to stay small.", "feedback": "Don't Grow Up usually reads as clinginess, or discomfort with a child getting older or more independent. This scene is the opposite - he's not holding onto her at all." }
+      ],
+      "answer": 2,
+      "lesson": "Injunctions are mostly preverbal and non-verbal - Noor isn't parsing 'in a minute' for content, she's reading the flat tone and the no-look. A parent can deliver Don't Be Important with a perfectly reasonable sentence and no raised voice at all."
+    },
+    "L2": {
+      "intro": "Twenty-eight years later. Noor, now a parent herself, is on a work call with her office door half-open when her son Kiran bursts in holding a drawing.",
+      "beats": [
+        {
+          "npc": "Kiran",
+          "expression": "open",
+          "line": "Mama, look what I made! Look, look!",
+          "cues": ["holding the drawing up with both hands", "bouncing slightly on his toes, waiting"],
+          "egoState": "FC",
+          "options": [
+            {
+              "text": "(Wave him off without looking, mouth the words 'not now' behind a muted mic.)",
+              "tag": "game-move",
+              "egoState": "P",
+              "outcome": "Kiran's face falls for half a second before he catches it and shrugs. He doesn't bring the next drawing over quite so fast.",
+              "outcomeExpression": "neutral",
+              "lesson": "This is Fanita English's episcript in miniature - Noor can pass on Don't Be Important without a single word, and without ever intending to, simply by replaying her father's exact non-verbal move."
+            },
+            {
+              "text": "One sec, buddy - let me wrap this up, then I really want to see it.",
+              "tag": "best",
+              "egoState": "A",
+              "outcome": "Kiran waits by the door, a little impatient but steady. Two minutes later he's back, beaming, and she actually looks.",
+              "outcomeExpression": "open",
+              "lesson": "This models a real permission - 'it's OK to be important' - without pretending the call doesn't exist. Permission isn't about never saying not-yet; it's about the respect underneath the not-yet, and following through on it."
+            },
+            {
+              "text": "(Drop the call entirely, mid-sentence, to look at the drawing right now.)",
+              "tag": "ok",
+              "egoState": "AC",
+              "outcome": "Kiran is delighted. The call is derailed and Noor spends an awkward minute apologizing to her colleagues.",
+              "outcomeExpression": "tense",
+              "lesson": "Good intent, but this is a reactive overcorrection, not an Adult choice - it's driven by Noor's own old guilt about being waved off, not by what the moment actually needs."
+            },
+            {
+              "text": "I told you not to interrupt me when the door's closed!",
+              "tag": "game-move",
+              "egoState": "CP",
+              "outcome": "Kiran's face falls further this time, and he doesn't argue - he just quietly puts the drawing away.",
+              "outcomeExpression": "tense",
+              "lesson": "This is the sharper version of the same injunction, easy to mistake for ordinary discipline - the content is about a rule, but the message he actually files away is the same one his grandfather delivered flatly: you're not important enough to interrupt."
+            }
+          ]
+        }
+      ]
+    },
+    "L3": {
+      "fields": [
+        {
+          "type": "text",
+          "label": "In your own words: name the injunction you diagnosed in L1, and the permission that counters it.",
+          "maxWords": 50,
+          "rubric": ["Don't Be Important", "permission", "It's OK", "ask", "important", "nonverbal", "non-verbal"]
+        }
+      ]
+    }
+  },
+  "echoAfterHours": 48,
+  "echo": {
+    "setting": "48 hours later. Noor is in a Monday planning meeting, with a clear idea about the roadmap.",
+    "line": "She opens her mouth to say it, feels the old flinch, and says instead: 'Sorry - never mind, it's probably not important.'",
+    "shape": "same decode-the-injunction prompt as L1"
+  }
+}

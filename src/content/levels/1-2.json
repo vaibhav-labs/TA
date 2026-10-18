@@ -1,0 +1,137 @@
+{
+  "id": "1-2",
+  "title": "Stroke Sorter",
+  "world": 1,
+  "engine": "sort-it",
+  "concepts": [2, 3],
+  "source": { "book": "TA Today", "chapter": 8, "quote": "A stroke is defined as a unit of recognition." },
+  "setting": "Tuesday, 7 a.m. opening shift at the diner. Rosita's run this floor for six years. The lines keep coming - she's sorting what people throw at her faster than she can respond to it.",
+  "playAs": "Rosita, the shift supervisor",
+  "levels": {
+    "L1": {
+      "npc": "Dev, the cook",
+      "expression": "open",
+      "line": "Table six says the eggs were perfect again. You trained them well.",
+      "cues": ["about what she did (training the staff), not about who she is", "warm, specific tone"],
+      "question": "Rosita gets this over the pass window mid-rush. What kind of stroke is it?",
+      "options": [
+        { "text": "Positive, unconditional - warm, and about who she is, not anything she did.", "feedback": "Unconditional would be about who she is (\"you're great\"), not what she did. This one's tied to the training, so it's conditional." },
+        { "text": "Positive, conditional - pleasant to hear, and tied to a specific thing she did.", "feedback": "Right - it's positive (pleasant to receive) and conditional (tied to a specific thing she did: training the staff)." },
+        { "text": "Negative, conditional - painful to hear, tied to something she did.", "feedback": "Negative strokes feel painful to the receiver. This one's warm and complimentary - it's positive, not negative." },
+        { "text": "Negative, unconditional - painful to hear, aimed at who she is.", "feedback": "Neither negative nor unconditional fits - it's warm (positive) and tied to a specific action (conditional)." }
+      ],
+      "answer": 1,
+      "lesson": "Positive/negative is about how a stroke feels to receive; conditional/unconditional is about whether it's tied to what you did or to who you are. The two axes are independent - this one lands as positive and conditional."
+    },
+    "L2": {
+      "intro": "The rush doesn't stop for sorting. Three more strokes come at Rosita before 8am - and the real skill isn't naming them, it's deciding what to do with each one.",
+      "beats": [
+        {
+          "npc": "Dev",
+          "expression": "open",
+          "line": "You trained them well.",
+          "cues": ["same compliment as before - now it's Rosita's move to respond"],
+          "egoState": "NP",
+          "options": [
+            {
+              "text": "Say \"thanks, I'll take that\" and actually let it land.",
+              "tag": "best",
+              "egoState": "A",
+              "outcome": "It sits with her. On the next sprint to table nine, she's a half-step lighter.",
+              "outcomeExpression": "open",
+              "lesson": "Taking in a stroke you agree with, instead of discounting it, is what tops up the stroke bank - a healthy stroke quotient only works if you actually accept the strokes that fit."
+            },
+            {
+              "text": "Say \"eh, they're easy tables, not me.\"",
+              "tag": "ok",
+              "egoState": "AC",
+              "outcome": "Dev shrugs. \"Sure, whatever you say.\" The compliment doesn't stick - it never got taken in.",
+              "outcomeExpression": "neutral",
+              "lesson": "This is the stroke filter in action - discounting a positive that doesn't match how Rosita sees herself, even though nothing about the stroke was dishonest."
+            },
+            {
+              "text": "Say nothing and grab the next ticket.",
+              "tag": "game-move",
+              "egoState": "C",
+              "outcome": "Dev doesn't push it a second time. Rosita stays stroke-hungry and doesn't notice why.",
+              "outcomeExpression": "neutral",
+              "lesson": "Ignoring a stroke isn't neutral - it's a quiet way of staying in a familiar deficit instead of letting in something that might shift how she sees herself."
+            }
+          ]
+        },
+        {
+          "npc": "Priya, a regular customer",
+          "expression": "tense",
+          "line": "You're always so slow at this counter.",
+          "cues": ["said flat, phone already in hand", "not really looking up"],
+          "egoState": "C",
+          "options": [
+            {
+              "text": "Ask: \"Was today specifically slow, or is this a general thing?\"",
+              "tag": "best",
+              "egoState": "A",
+              "outcome": "Priya pauses. \"I guess - just today, the register jammed.\" The real information comes out.",
+              "outcomeExpression": "open",
+              "lesson": "A straight negative gives you a signal you can act on; a discount like \"always\" distorts reality and gives you nothing to work with until you ask past it."
+            },
+            {
+              "text": "Apologize and promise to be faster from now on.",
+              "tag": "ok",
+              "egoState": "AC",
+              "outcome": "Priya nods, mollified. Rosita spends the rest of the shift rushing tables that didn't need rushing.",
+              "outcomeExpression": "neutral",
+              "lesson": "Accepting a discount at face value means acting on a distortion - she's now correcting a problem (\"always slow\") that was never accurately described."
+            },
+            {
+              "text": "Tell her \"you're always so slow\" is unfair.",
+              "tag": "game-move",
+              "egoState": "CP",
+              "outcome": "Priya bristles. \"Forget it.\" Nothing about the register gets fixed, and now there's a second tense moment on top of the first.",
+              "outcomeExpression": "tense",
+              "lesson": "Matching a discount with a counter-accusation keeps the exchange going instead of asking the question that would surface the actual, useful information underneath it."
+            }
+          ]
+        },
+        {
+          "npc": "Camellia, training on her first week",
+          "expression": "open",
+          "line": "Oh my gosh, you're literally the BEST boss I've ever had, this place would fall apart without you!",
+          "cues": ["said loudly, to everyone in earshot", "the exact line she used on the dishwasher yesterday", "big gestures, not much eye contact"],
+          "egoState": "FC",
+          "options": [
+            {
+              "text": "Say thanks warmly, but file it as enthusiasm, not evidence.",
+              "tag": "best",
+              "egoState": "A",
+              "outcome": "Rosita smiles, says thanks, and goes back to the floor - unchanged either way.",
+              "outcomeExpression": "neutral",
+              "lesson": "Over-the-top, indiscriminate praise is what TA Today calls marshmallow-throwing - you don't need to reject it, just not bank it the way you'd bank a specific, sincere stroke."
+            },
+            {
+              "text": "Take it fully to heart - she must really mean it.",
+              "tag": "ok",
+              "egoState": "C",
+              "outcome": "It feels great for an hour. By lunch, Camellia's said the identical line to the dishwasher, and Rosita feels a little foolish.",
+              "outcomeExpression": "neutral",
+              "lesson": "Accepting every stroke at full value regardless of the source is the flip side of too tight a filter - a filter this loose lets in strokes that don't actually hold up."
+            },
+            {
+              "text": "Tell Camellia to stop being so fake.",
+              "tag": "game-move",
+              "egoState": "CP",
+              "outcome": "Camellia goes quiet and stops complimenting anyone - including the times she actually means it.",
+              "outcomeExpression": "tense",
+              "lesson": "Confronting enthusiasm as fake can shut down a new hire's genuine strokes along with the insincere ones - the better move is just not over-weighting it, not punishing her for it."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "echoAfterHours": 24,
+  "echo": {
+    "setting": "24 hours later: a coworker in the elevator.",
+    "line": "Nice shirt.",
+    "shape": "same four-way sort - accept it, deflect it, over-value it, or let it pass unanswered"
+  }
+}

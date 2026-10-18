@@ -1,0 +1,17 @@
+{
+  "concept": 2,
+  "name": "Stroke",
+  "oneLine": "A stroke is any unit of recognition - positive or negative, tied to what you did (conditional) or who you are (unconditional) - and any stroke beats no stroke at all.",
+  "whatYouDid": "You sorted Dev's \"you trained them well\" into positive-and-conditional, then watched what happens once Rosita has to decide whether to let a stroke actually land or deflect it - the sorting only matters once that decision gets made.",
+  "confusion": "People assume a stroke has to be positive to count; the tell is that negative strokes are still strokes, and most people will take a negative stroke over no stroke at all rather than go stroke-deprived.",
+  "fromBook": {
+    "book": "TA Today",
+    "chapter": 8,
+    "quote": "A stroke is defined as a unit of recognition."
+  },
+  "expand": {
+    "definition": "Strokes classify along two independent axes: positive/negative (pleasant or painful to receive) and conditional/unconditional (tied to behavior, or to identity) - any stroke can be any combination of the two.",
+    "otherFraming": "Steiner's Fuzzy Tale makes the same point as a fable: everyone starts out with an unlimited supply of Warm Fuzzies, until a bad witch teaches them to believe the supply is about to run out.",
+    "tryThisToday": "Give one unconditional positive stroke today (\"good to have you around\") instead of your usual conditional one (\"nice work on that\") and notice how differently it lands."
+  }
+}

@@ -1,0 +1,221 @@
+{
+  "id": "1-6",
+  "title": "The Stroke Economy",
+  "world": 1,
+  "engine": "rule-breaker",
+  "concepts": [4],
+  "source": { "book": "Scripts People Live", "chapter": 8, "quote": "Don't give strokes if you have them to give." },
+  "setting": "Fuzzbrook looks like any town, except everyone here was raised on the same five unwritten laws about strokes - and everyone enforces them on everyone else without anyone ever writing them down.",
+  "playAs": "Mike, new in Fuzzbrook",
+  "levels": {
+    "L1": {
+      "npc": "Troy, a coworker",
+      "expression": "tense",
+      "line": "Careful - you don't even know them. Save it for people who've earned it.",
+      "cues": ["unsolicited warning, said to Mike after he complimented a stranger's work", "treats a compliment as a resource that has to be rationed"],
+      "question": "Which of Steiner's five stroke-economy rules is Troy enforcing here?",
+      "options": [
+        { "text": "Don't ask for strokes when you need them.", "feedback": "Troy isn't commenting on anyone asking for anything - Mike was giving a compliment to someone else. Wrong rule." },
+        { "text": "Don't give strokes if you have them to give.", "feedback": "Right - Troy's framing a freely given compliment as something that has to be rationed and 'earned', which is exactly Steiner's first rule in action." },
+        { "text": "Don't give yourself strokes.", "feedback": "That rule is about self-stroking (bragging), not about giving one to someone else. Wrong target." },
+        { "text": "Don't reject strokes when you don't want them.", "feedback": "Nobody's being offered a stroke they don't want here - Mike is giving one, unprompted. Wrong rule." }
+      ],
+      "answer": 1,
+      "lesson": "Steiner's five stroke-economy rules are taught so early they feel like manners rather than rules: don't give, don't ask, don't accept, don't reject, don't self-stroke. Troy enforcing scarcity on someone else's unprompted compliment is rule one in its purest form - treating a stroke like a limited resource that has to be earned."
+    },
+    "L2": {
+      "intro": "Five rules. Five chances to break one and feel exactly how it's enforced - not by law, but by everyone's own discomfort.",
+      "beats": [
+        {
+          "npc": "Camellia, a neighbor",
+          "expression": "tense",
+          "line": "Camellia, startled, steps back half a step after an unprompted compliment: \"Why? What do you want from me?\"",
+          "cues": ["treats a free compliment as suspicious", "looking for the catch"],
+          "egoState": "AC",
+          "options": [
+            {
+              "text": "Say plainly: \"Nothing. I just meant it.\" and let the silence sit instead of over-explaining.",
+              "tag": "best",
+              "egoState": "A",
+              "outcome": "Camellia blinks, off-balance for a second - then, quietly: \"Oh. ...Thank you.\" Nobody in Fuzzbrook says thank you like that without flinching first.",
+              "outcomeExpression": "open",
+              "lesson": "Breaking 'don't give strokes if you have them to give' means tolerating the other person's suspicion without retracting the stroke to make them comfortable - the discomfort is the rule pushing back, not a sign you did it wrong."
+            },
+            {
+              "text": "Backpedal: \"Oh - nothing, forget it, never mind.\"",
+              "tag": "game-move",
+              "egoState": "AC",
+              "outcome": "Camellia relaxes immediately. \"Oh, okay, good.\" The rule holds - the stroke, once offered, got quietly taken back the moment it met resistance.",
+              "outcomeExpression": "neutral",
+              "lesson": "Withdrawing a stroke the instant it's questioned isn't breaking the rule, it's demonstrating exactly how well the rule works - it doesn't need everyone to refuse to give strokes, just enough people to retract them under mild pressure."
+            },
+            {
+              "text": "Explain yourself at length to justify why you said it.",
+              "tag": "ok",
+              "egoState": "A",
+              "outcome": "Camellia accepts the explanation but still seems unsure whether to believe the original compliment underneath all the justification.",
+              "outcomeExpression": "neutral",
+              "lesson": "The stroke survives, but buried under justification it arrives diluted - breaking the rule cleanly doesn't require defending your right to have given it."
+            }
+          ]
+        },
+        {
+          "npc": "Dev, a coworker",
+          "expression": "neutral",
+          "line": "Huh. People don't usually just... ask that.",
+          "cues": ["genuine surprise that asking is even an option", "said after Mike asks directly whether his presentation actually landed"],
+          "egoState": "A",
+          "options": [
+            {
+              "text": "Hold the ask: \"I know. I'm asking anyway - did it land?\"",
+              "tag": "best",
+              "egoState": "A",
+              "outcome": "Dev actually thinks about it. \"Yeah - the opening was strong, the middle dragged a little.\" Mike gets real, useful information instead of a guess.",
+              "outcomeExpression": "open",
+              "lesson": "Rule two trains people to treat their own need for strokes as something to hide; asking directly and not retreating when it's noticed is how you get information instead of having to infer it from silence."
+            },
+            {
+              "text": "Laugh it off: \"Ha, forget I asked, I'm just fishing.\"",
+              "tag": "game-move",
+              "egoState": "AC",
+              "outcome": "Dev laughs too, relieved. \"Yeah, you're fine.\" Mike still doesn't know if the presentation landed.",
+              "outcomeExpression": "neutral",
+              "lesson": "Reframing a real ask as a joke lets everyone off the hook - including Mike, who walks away with reassurance instead of the actual answer he needed."
+            },
+            {
+              "text": "Ask indirectly instead: \"I guess some people thought it went okay?\"",
+              "tag": "ok",
+              "egoState": "AC",
+              "outcome": "Dev says \"probably,\" vaguely. A softer ask gets a softer, less useful answer.",
+              "outcomeExpression": "neutral",
+              "lesson": "Asking indirectly is a half-measure - it avoids the full discomfort of rule two, but it also only gets you half an answer."
+            }
+          ]
+        },
+        {
+          "npc": "Priya",
+          "expression": "open",
+          "line": "Seriously, that was the best-run meeting we've had all quarter.",
+          "cues": ["direct, specific, sincere-sounding praise"],
+          "egoState": "NP",
+          "options": [
+            {
+              "text": "Say: \"Thank you. I'll take that.\" Nothing else.",
+              "tag": "best",
+              "egoState": "A",
+              "outcome": "Priya smiles, a little surprised herself - most people in Fuzzbrook add a 'but' or a shrug. The stroke actually lands.",
+              "outcomeExpression": "open",
+              "lesson": "Accepting a stroke without discounting it, qualifying it, or immediately returning one is rule three's exact target - letting it in fully instead of deflecting it out of habit."
+            },
+            {
+              "text": "Say: \"Oh, it wasn't just me, the whole team pulled it off.\"",
+              "tag": "ok",
+              "egoState": "NP",
+              "outcome": "True and generous - and also a way of distributing the stroke so thin that none of it actually lands on Mike.",
+              "outcomeExpression": "neutral",
+              "lesson": "Sharing credit is often honest and kind, but when it's reflexive and immediate, it can double as a socially acceptable way of avoiding a stroke aimed squarely at you."
+            },
+            {
+              "text": "Say: \"Eh, it was fine, the slides did most of the work.\"",
+              "tag": "game-move",
+              "egoState": "AC",
+              "outcome": "Priya shrugs and doesn't offer another one anytime soon. The stroke bounced off before it landed.",
+              "outcomeExpression": "neutral",
+              "lesson": "This is the textbook discount - minimizing what you did until the compliment no longer fits anything real, which is precisely how rule three enforces itself without anyone having to say it out loud."
+            }
+          ]
+        },
+        {
+          "npc": "Rosita, at the diner",
+          "expression": "tense",
+          "line": "You're always SO organized, I bet your whole life is color-coded, hilarious.",
+          "cues": ["said loudly, in front of two coworkers", "said as a label, not really about him", "she's said this exact line before"],
+          "egoState": "CP",
+          "options": [
+            {
+              "text": "Say: \"Actually, I don't love that one - I'm not that organized, and it kind of flattens me into a joke.\"",
+              "tag": "best",
+              "egoState": "A",
+              "outcome": "Rosita looks genuinely startled. \"Oh - okay, sorry, I didn't realize.\" She doesn't say it again.",
+              "outcomeExpression": "open",
+              "lesson": "Rule four bans openly rejecting an unwanted stroke, so most people privately resent strokes they never agreed to want. Saying so, specifically and without attacking back, is how it actually stops instead of quietly curdling."
+            },
+            {
+              "text": "Smile and go along with it, the way you always do.",
+              "tag": "game-move",
+              "egoState": "AC",
+              "outcome": "Rosita says it again next week, and the week after. Mike's resentment of a stroke he never asked for just keeps compounding, unspoken.",
+              "outcomeExpression": "neutral",
+              "lesson": "Accepting a stroke you don't want, over and over, to avoid the discomfort of rejecting it, is exactly how rule four gets enforced - not through force, through everyone's own politeness."
+            },
+            {
+              "text": "Deflect with a joke of your own instead of naming what's wrong with it.",
+              "tag": "ok",
+              "egoState": "FC",
+              "outcome": "Everyone laughs. The label still stands - it's just been painted over with a lighter one.",
+              "outcomeExpression": "neutral",
+              "lesson": "Humor dodges the discomfort of the moment but leaves the unwanted stroke in place - the label just gets a friendlier coat of paint."
+            }
+          ]
+        },
+        {
+          "npc": "A small group at a Fuzzbrook meeting",
+          "expression": "neutral",
+          "line": "Each of us is going to say one thing we're proud of this month. When it's Mike's turn, the room goes quiet, waiting.",
+          "cues": ["the room's silence is itself a kind of pressure", "everyone else undersold their own answer first"],
+          "egoState": "A",
+          "options": [
+            {
+              "text": "Say something real and specific, without undercutting it: \"I finally finished the project I'd been putting off for a year. I'm proud of that.\"",
+              "tag": "best",
+              "egoState": "A",
+              "outcome": "A beat of silence - then someone says, \"Good for you, actually,\" and means it. Nobody died of the immodesty.",
+              "outcomeExpression": "open",
+              "lesson": "Self-stroking - what Steiner notes gets dismissed as 'bragging' - is rule five's target; saying something good about yourself without a disclaimer attached is what breaks it cleanly."
+            },
+            {
+              "text": "Say it, then immediately add: \"I mean, it's not a big deal, anyone could've done it.\"",
+              "tag": "game-move",
+              "egoState": "AC",
+              "outcome": "The room relaxes, visibly relieved. The self-stroke got said and taken back in the same breath, exactly how rule five likes it.",
+              "outcomeExpression": "neutral",
+              "lesson": "The disclaimer does the rule's work for it - the self-stroke technically got spoken, but the apology attached to it cancels it out before anyone has to feel awkward hearing it."
+            },
+            {
+              "text": "Pass, and let someone else go first instead.",
+              "tag": "ok",
+              "egoState": "AC",
+              "outcome": "Mike comes back to it later with something smaller and safer to say. The real thing he was proud of never quite makes it into the room.",
+              "outcomeExpression": "neutral",
+              "lesson": "Deferring avoids the discomfort of rule five for one more turn, but the specific, real thing Mike was proud of never actually gets said out loud."
+            }
+          ]
+        }
+      ]
+    },
+    "L3": {
+      "fields": [
+        {
+          "type": "vector",
+          "label": "Draw the vectors for Troy enforcing the rule, and for Mike's clean break of it.",
+          "pairs": [
+            { "label": "Troy enforcing scarcity", "from": "P", "to": "C" },
+            { "label": "Mike's clean break (accepting the compliment)", "from": "A", "to": "A" }
+          ]
+        },
+        {
+          "type": "text",
+          "label": "In under 70 words: Steiner argues the five rules aren't natural, they're taught. Who benefits from everyone believing strokes are scarce?",
+          "maxWords": 70,
+          "rubric": ["stroke monopolist", "scarcity", "control", "taught", "parents", "profit", "oppression"]
+        }
+      ]
+    }
+  },
+  "echoAfterHours": 720,
+  "echo": {
+    "setting": "A month later: a performance-review memo about 'recognition budgets.'",
+    "line": "\"Please nominate no more than one colleague per quarter for public recognition.\"",
+    "shape": "same five-rule breaking, now against an actual written policy instead of an unwritten one"
+  }
+}

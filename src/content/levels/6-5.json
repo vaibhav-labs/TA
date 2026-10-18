@@ -1,0 +1,134 @@
+{
+  "id": "6-5",
+  "title": "Script Process",
+  "world": 6,
+  "engine": "match",
+  "concepts": [50, 52],
+  "source": {
+    "book": "TA Today",
+    "chapter": 15,
+    "quote": "Study of the life-script has revealed a fascinating fact. It is that there seem to be only six main patterns of script process."
+  },
+  "setting": "Saturday night, a housewarming party. Sam is the kind of friend people end up talking to for a while.",
+  "playAs": "Sam",
+  "levels": {
+    "L1": {
+      "npc": "Teodora",
+      "expression": "tense",
+      "line": "Once the kitchen's actually finished - not just 'mostly' finished, I mean properly done - then I'll finally sit down and relax.",
+      "cues": ["the word 'once' doing double duty, twice over", "a parenthetical correction inserted mid-sentence", "no mention yet of when 'then' might actually arrive"],
+      "question": "Quick primer: a 'script process pattern' isn't about what someone's story is, but its timing shape - Until, After, Never, Always, Almost, or Open-ended - how a life (or even one sentence) decides when good things are finally 'allowed' to happen. Which script process pattern is Teodora's sentence structure itself demonstrating?",
+      "options": [
+        { "text": "After - she's setting up to pay for today's pleasure tomorrow.", "feedback": "After has its own tell: a 'high,' then a hard 'but,' then a 'low' ('great party, but I'll regret it tomorrow'). There's no high here at all yet - everything is deferred forward, not paid for backward." },
+        { "text": "Until - nothing good can happen until something less-good is finished first.", "feedback": "Right - and the sentence does it too: she interrupts herself to add one more condition before she'll let herself get to the relaxing part. The structure enacts the belief." },
+        { "text": "Always - the same unsatisfying thing keeps repeating.", "feedback": "Always shows up as tangents and repetition ('what I'm trying to tell you is... oh, and by the way...'). This sentence is linear and single-pointed, just endlessly gated." },
+        { "text": "Open-ended - there's no plan for what happens after the goal.", "feedback": "Open-ended's tell is a void after the finish line, not a gate before it. Teodora has a very clear 'then' - she's just never finished qualifying what counts as 'done.'" }
+      ],
+      "answer": 1,
+      "lesson": "Script process patterns show up in sentence structure, not just life events. The parenthetical self-interruption ('not just mostly finished, I mean properly done') is Until playing out in miniature, in real time, inside a single sentence."
+    },
+    "L2": {
+      "intro": "Two friends, two patterns, same party.",
+      "beats": [
+        {
+          "npc": "Yusuf",
+          "expression": "open",
+          "line": "This is such a great night! ...but my head is going to be killing me tomorrow, I just know it.",
+          "cues": ["high energy on the first half", "the word 'but' as a hinge", "already resigned to the hangover before it's happened"],
+          "egoState": "FC",
+          "options": [
+            {
+              "text": "Yeah, enjoy it while it lasts, I guess.",
+              "tag": "ok",
+              "egoState": "AC",
+              "outcome": "Yusuf nods, a little too readily, and orders another round 'to get it in before the crash.'",
+              "outcomeExpression": "neutral",
+              "lesson": "Sympathetic agreement still colludes with the sword-of-Damocles framing - even kindly meant, it confirms that tonight has to be paid for tomorrow."
+            },
+            {
+              "text": "What if tonight didn't have to cost you tomorrow? Pace yourself and you might get both.",
+              "tag": "best",
+              "egoState": "A",
+              "outcome": "Yusuf laughs. 'Wait, that's allowed?' He switches to water for a round, genuinely surprised at the idea.",
+              "outcomeExpression": "open",
+              "lesson": "TA Today's actual antidote to After is concrete and behavioral - decide to enjoy tomorrow too, before tonight, then act accordingly. Not advice to relax; a specific move."
+            },
+            {
+              "text": "Don't worry about tomorrow, that's such an Always thing to say.",
+              "tag": "ok",
+              "egoState": "A",
+              "outcome": "Yusuf looks confused. 'That's not really what I meant, though.'",
+              "outcomeExpression": "neutral",
+              "lesson": "Script process patterns are specific - naming the wrong one (Always instead of After) misses the actual lever, even when the instinct to name a pattern at all was right."
+            },
+            {
+              "text": "Ugh, same old Yusuf, you always do this.",
+              "tag": "game-move",
+              "egoState": "CP",
+              "outcome": "Yusuf's face falls a little. 'Okay, sorry for having a good time,' he says, and the night sours.",
+              "outcomeExpression": "tense",
+              "lesson": "Naming someone's pattern from Parent judgment invites defensiveness, not insight - the difference between diagnosing with someone and diagnosing at them."
+            }
+          ]
+        },
+        {
+          "npc": "Lina",
+          "expression": "neutral",
+          "line": "I keep meaning to update my resume. I will, though - definitely, maybe next week.",
+          "cues": ["roughly the same sentence as last month", "no concrete next step attached to 'will'", "says it almost cheerfully, like it's not really a problem"],
+          "egoState": "AC",
+          "options": [
+            {
+              "text": "Why haven't you done it yet?",
+              "tag": "ok",
+              "egoState": "A",
+              "outcome": "Lina gives another perfectly reasonable excuse. Nothing changes.",
+              "outcomeExpression": "neutral",
+              "lesson": "Content-level questions don't touch a Never script - there's always a plausible reason, and that's the point of the pattern, not a flaw in it."
+            },
+            {
+              "text": "Let's pick one concrete thing you could do about it - this week, right now.",
+              "tag": "best",
+              "egoState": "A",
+              "outcome": "Lina blinks, then actually names one real, small action - and looks oddly relieved to have been asked that way.",
+              "outcomeExpression": "open",
+              "lesson": "The step out of Never is almost absurdly concrete: name the want, list five small actions, do one. It breaks Tantalus's stillness by making the next step too small to defer."
+            },
+            {
+              "text": "Maybe you don't actually want a new job.",
+              "tag": "ok",
+              "egoState": "A",
+              "outcome": "Lina gets defensive - maybe it's true, maybe it isn't, but it lands as a guess dressed up as insight.",
+              "outcomeExpression": "tense",
+              "lesson": "It's tempting to interpret the motive behind a Never pattern; often the simpler, more useful move is just asking for the next concrete step."
+            },
+            {
+              "text": "You'll get there eventually, don't stress about it.",
+              "tag": "game-move",
+              "egoState": "NP",
+              "outcome": "Lina relaxes, relieved - and nothing about this week changes either.",
+              "outcomeExpression": "neutral",
+              "lesson": "Reassurance that removes urgency can feed a Never pattern instead of interrupting it: it confirms that no step is needed right now, which is exactly the belief keeping Tantalus still."
+            }
+          ]
+        }
+      ]
+    },
+    "L3": {
+      "fields": [
+        {
+          "type": "text",
+          "label": "Which of the six process patterns - Until, After, Never, Always, Almost, Open-ended - fits a day in your own life best? Name one concrete, specific behavior (not just 'relax more') that would break it.",
+          "maxWords": 70,
+          "rubric": ["Until", "After", "Never", "Always", "Almost", "Open-ended", "concrete", "specific"]
+        }
+      ]
+    }
+  },
+  "echoAfterHours": 720,
+  "echo": {
+    "setting": "A month later. Sam, scrolling their own calendar at 11pm.",
+    "line": "Sam catches themselves thinking 'I'll relax once this week calms down' - the same thing they thought about last week, and the week before that.",
+    "shape": "same six-pattern menu"
+  }
+}

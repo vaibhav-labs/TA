@@ -1,0 +1,17 @@
+{
+  "concept": 16,
+  "name": "Transaction",
+  "oneLine": "The basic unit of communication: one person's stimulus plus the other's response.",
+  "whatYouDid": "Priya's question to Arjun about the hotfix was only a stimulus; you had to wait for his reply before there was an actual transaction to diagnose.",
+  "confusion": "People often count a single line - a question, a greeting, a complaint - as a transaction on its own; the tell is that nothing has actually been exchanged yet until someone replies.",
+  "fromBook": {
+    "book": "TA Today",
+    "chapter": 7,
+    "quote": "the opening communication is called the stimulus. The reply is called the response."
+  },
+  "expand": {
+    "definition": "A transaction is a transactional stimulus plus a transactional response - Berne called it \"the basic unit of social discourse.\" One line, however loaded, is at most half of one.",
+    "otherFraming": "TA Today notes that a real conversation is a chain of transactions, where each response becomes the stimulus for the next - so a transaction is also the smallest repeating unit you can cut a conversation into.",
+    "tryThisToday": "Next time you catch yourself reacting hard to just one line someone said, notice that you're already building the response half of a transaction neither of you has finished yet."
+  }
+}

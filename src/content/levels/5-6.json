@@ -1,0 +1,312 @@
+{
+  "id": "5-6",
+  "title": "The Discount Matrix",
+  "world": 5,
+  "engine": "ladder",
+  "concepts": [39, 40, 41, 42, 43],
+  "boss": true,
+  "source": { "book": "TA Today", "chapter": 18, "quote": "a discount in any box also entails discounts in the boxes below it and to its right." },
+  "setting": "Months after the standing-desk blow-up. Priya has pulled Arjun into a quiet room for a check-in about a missed deadline - a longer, slower conversation than any they've had before.",
+  "playAs": "Priya, the team lead",
+  "levels": {
+    "L1": {
+      "npc": "Arjun",
+      "expression": "neutral",
+      "line": "Well, when we talked about this in standup Monday, I said I was blocked on the staging environment.",
+      "cues": ["Priya's question was about today", "his answer shifts to \"Monday\"", "same general topic (the migration), different time frame"],
+      "question": "Priya asked how the migration script is coming along today. Arjun answered about Monday's blocker instead. What is this?",
+      "options": [
+        { "text": "A blocking transaction - he's disputing what \"progress\" means.", "feedback": "No. He's not questioning the definition of her question at all - he's answered an adjacent question instead. Blocking would sound more like \"What do you mean by progress, exactly?\"" },
+        { "text": "A tangential transaction - he's answering a related but different question (then, instead of now), which quietly avoids the one she actually asked.", "feedback": "Right. Stimulus and response address the same general topic but from a different angle - here, a different time frame. It feels like an answer, but the actual question never gets addressed." },
+        { "text": "A crossed transaction - he's refusing to engage with her question at all.", "feedback": "No. A crossed transaction breaks the flow and forces a shift; this one flows smoothly, which is exactly what makes a tangential transaction easy to miss." }
+      ],
+      "answer": 1,
+      "lesson": "A tangential transaction answers a nearby question instead of the one actually asked - same general topic, different angle, here a different time frame - and it's easy to miss because it still sounds like a real answer."
+    },
+    "L2": {
+      "intro": "This conversation is going to take more than one move. Watch for what each of Arjun's responses is actually protecting, and choose the move that addresses it rather than the one that's easiest.",
+      "beats": [
+        {
+          "npc": "Arjun",
+          "line": "Well, when we talked about this in standup Monday, I said I was blocked on the staging environment.",
+          "expression": "neutral",
+          "cues": ["shifts to Monday instead of today"],
+          "egoState": "AC",
+          "options": [
+            {
+              "text": "Okay, well, is staging fixed now?",
+              "tag": "ok",
+              "egoState": "A",
+              "outcome": "\"It should be, I think,\" Arjun says vaguely. Still no real answer about today.",
+              "outcomeExpression": "neutral",
+              "lesson": "This follows him onto his tangent instead of pulling back to the original question - a common response to a tangential transaction, but it keeps the loop going instead of closing it."
+            },
+            {
+              "text": "Right, but how's it going today, right now?",
+              "tag": "best",
+              "egoState": "A",
+              "outcome": "Arjun pauses. \"Today... honestly, I haven't touched it since Monday.\" The real information finally surfaces.",
+              "outcomeExpression": "open",
+              "lesson": "Naming the gap and returning to the original question is the straight way to handle a tangential transaction - don't follow the tangent, pull back to what you actually asked."
+            },
+            {
+              "text": "That's not what I asked.",
+              "tag": "game-move",
+              "egoState": "CP",
+              "outcome": "Arjun stiffens. \"Okay, sorry, jeez.\" He shuts down rather than answering either question.",
+              "outcomeExpression": "tense",
+              "lesson": "Technically correct, but delivered as a correction from Controlling Parent, it triggers defensiveness instead of inviting the actual answer - right diagnosis, wrong ego state."
+            },
+            {
+              "text": "No worries, Monday's blocker makes sense.",
+              "tag": "game-move",
+              "egoState": "NP",
+              "outcome": "Arjun relaxes, relieved. The conversation moves on without today's actual status ever getting covered.",
+              "outcomeExpression": "neutral",
+              "lesson": "Accepting the tangent as if it answered the question lets the avoidance succeed - comfortable for both of you, but the original question never gets addressed."
+            }
+          ]
+        },
+        {
+          "npc": "Arjun",
+          "line": "Depends what you mean by \"done\" - fully tested, or just working?",
+          "expression": "neutral",
+          "cues": ["disputes the definition of \"done\" instead of committing", "avoids naming a date"],
+          "egoState": "AC",
+          "options": [
+            {
+              "text": "Just - done. Working.",
+              "tag": "ok",
+              "egoState": "A",
+              "outcome": "\"Okay... I guess by Thursday then, maybe,\" Arjun says, still vague.",
+              "outcomeExpression": "neutral",
+              "lesson": "Answering the definitional question gets you unstuck for a moment, but it still doesn't get a real commitment - the block achieved exactly what it was for."
+            },
+            {
+              "text": "Fully tested and working - either way, can you commit to Thursday or not?",
+              "tag": "best",
+              "egoState": "A",
+              "outcome": "Arjun exhales. \"Honestly... probably not fully tested by Thursday. Maybe Monday.\" A real, if disappointing, answer.",
+              "outcomeExpression": "open",
+              "lesson": "Answering the block and immediately returning to the actual question - a commitment, not a definition - is how you get past a blocking transaction instead of getting drawn into arguing the definition."
+            },
+            {
+              "text": "Why are you avoiding the question?",
+              "tag": "game-move",
+              "egoState": "CP",
+              "outcome": "\"I'm not avoiding anything!\" Arjun says, getting defensive. Now there's a new fight about whether he's avoiding, and still no date.",
+              "outcomeExpression": "tense",
+              "lesson": "Naming avoidance as an accusation invites him to defend himself instead of answer - the right instinct, but it opens a new argument rather than closing the original gap."
+            },
+            {
+              "text": "Fully tested, obviously - don't be difficult.",
+              "tag": "game-move",
+              "egoState": "CP",
+              "outcome": "Arjun goes quiet and just says \"fine.\" Compliance, not commitment.",
+              "outcomeExpression": "tense",
+              "lesson": "This forces a surface answer through pressure rather than clarity - you may get a word out of him, but not an actual Adult commitment you can rely on."
+            }
+          ]
+        },
+        {
+          "npc": "Arjun",
+          "line": "(a long silence - he stares at his screen and doesn't answer)",
+          "expression": "tense",
+          "cues": ["long pause after being asked what he needs from Priya", "doesn't say \"pass\" or anything else", "staring, not fidgeting"],
+          "egoState": "AC",
+          "options": [
+            {
+              "text": "(wait him out in silence)",
+              "tag": "ok",
+              "egoState": "A",
+              "outcome": "After a long, uncomfortable pause, Arjun mutters \"I don't know\" and goes quiet again.",
+              "outcomeExpression": "neutral",
+              "lesson": "Silence can sometimes invite someone to fill it, but \"doing nothing\" is itself a discount of his own ability to act - open silence alone doesn't address that discount, it just waits on it."
+            },
+            {
+              "text": "Take your time, there's no rush.",
+              "tag": "game-move",
+              "egoState": "NP",
+              "outcome": "Arjun relaxes and says nothing further. The question goes unanswered, comfortably.",
+              "outcomeExpression": "neutral",
+              "lesson": "This soothes the discomfort of the silence, but it also lets the discount of his own ability to think stand unchallenged - comfortable for both of you, with no actual answer."
+            },
+            {
+              "text": "I notice you've gone quiet - what's going on for you right now?",
+              "tag": "best",
+              "egoState": "A",
+              "outcome": "Arjun looks up. \"I just... I don't think anything I say is going to fix this anyway.\" First honest thing he's said all meeting.",
+              "outcomeExpression": "open",
+              "lesson": "Naming the passive behavior itself - the silence - and asking what's underneath it addresses the discount directly: doing nothing discounts his own ability to act, and this is the move that invites him back into it."
+            },
+            {
+              "text": "If you don't know, just guess.",
+              "tag": "ok",
+              "egoState": "CP",
+              "outcome": "\"...Tuesday?\" he says, clearly just picking a word to end the silence. Not a real answer.",
+              "outcomeExpression": "neutral",
+              "lesson": "This gets a word out of him, but a forced guess isn't the same as him actually re-engaging his own thinking - it treats the silence as a blank to fill rather than a discount to address."
+            }
+          ]
+        },
+        {
+          "npc": "Arjun",
+          "line": "Look, you're better at planning this stuff than me anyway - just tell me what you need and I'll do it.",
+          "expression": "neutral",
+          "cues": ["invites Priya to do all the deciding", "offers only compliance, no input of his own"],
+          "egoState": "AC",
+          "options": [
+            {
+              "text": "Okay - here's exactly what I need from you, and by when.",
+              "tag": "game-move",
+              "egoState": "P",
+              "outcome": "Arjun nods along, writing it down without comment. The pattern locks into place - Priya thinking and deciding, Arjun just complying.",
+              "outcomeExpression": "neutral",
+              "lesson": "This accepts the Parent-and-Adult role he's offering you - it solves today's logistics, but it confirms a symbiosis: between the two of you, three ego states are now doing the work of six."
+            },
+            {
+              "text": "I can help you plan it, but I need your read on it too - what do you think is realistic?",
+              "tag": "best",
+              "egoState": "A",
+              "outcome": "Arjun hesitates, then says, \"Actually... I think Monday is realistic if I stop context-switching onto other tickets.\" His own Adult shows up.",
+              "outcomeExpression": "open",
+              "lesson": "Offering to think alongside him, rather than for him, declines the symbiotic invitation - it hands the thinking back to his own Adult instead of absorbing it into yours."
+            },
+            {
+              "text": "No, you figure it out, it's your ticket.",
+              "tag": "game-move",
+              "egoState": "CP",
+              "outcome": "Arjun goes quiet again, looking stung. Nothing gets planned.",
+              "outcomeExpression": "tense",
+              "lesson": "Refusing the invitation outright at least avoids absorbing it, but delivered this way it reads as a rebuff rather than an invitation back into his own Adult - he withdraws instead of stepping up."
+            },
+            {
+              "text": "Sure, let's figure it out together, step by step.",
+              "tag": "ok",
+              "egoState": "A",
+              "outcome": "They go through it together, but Priya ends up supplying most of the structure while Arjun just agrees along the way.",
+              "outcomeExpression": "neutral",
+              "lesson": "Better than deciding for him outright, but if Priya is still supplying most of the structure, the symbiosis is only partly declined - watch who's actually doing the thinking, not just who's in the room for it."
+            }
+          ]
+        },
+        {
+          "npc": "Arjun",
+          "line": "Ha, it's fine, it's always me who ends up behind anyway. Story of my life.",
+          "expression": "tense",
+          "cues": ["bitter half-laugh", "\"story of my life\"", "doesn't name what's different about this week specifically"],
+          "egoState": "AC",
+          "options": [
+            {
+              "text": "That's not true, you're doing great actually!",
+              "tag": "game-move",
+              "egoState": "NP",
+              "outcome": "Arjun shrugs it off. \"Sure.\" The racket feeling gets smoothed over, not addressed - and it'll be back next sprint.",
+              "outcomeExpression": "neutral",
+              "lesson": "Reassurance feels kind, but it doesn't touch the racket, and because it doesn't ask what's actually true about this week, it's a stroke for the feeling rather than an answer to the problem."
+            },
+            {
+              "text": "Yeah, it does seem to keep happening to you.",
+              "tag": "game-move",
+              "egoState": "NP",
+              "outcome": "\"Exactly! Thank you,\" Arjun says, satisfied. Agreeing with the line pays the stamp - nothing about the workload changes.",
+              "outcomeExpression": "neutral",
+              "lesson": "Agreeing with a recycled line is racketeering - trading strokes for the racket feeling rather than engaging the actual, specific problem underneath it."
+            },
+            {
+              "text": "What's actually different about this week, compared to one where it goes fine?",
+              "tag": "best",
+              "egoState": "A",
+              "outcome": "The laugh drops. \"Honestly, I took on the Monday fire drill without telling anyone, and I didn't ask for help.\" A real, specific, solvable fact.",
+              "outcomeExpression": "open",
+              "lesson": "A specific question about this week - not agreeing with or soothing the general story - gets past the racket feeling to the actual event underneath it, which is where a real fix can start."
+            },
+            {
+              "text": "Why do you always say that?",
+              "tag": "ok",
+              "egoState": "A",
+              "outcome": "Arjun gets defensive: \"I don't always say it!\" Now there's an argument about the pattern instead of today's actual facts.",
+              "outcomeExpression": "tense",
+              "lesson": "A fair observation, but asked as a challenge about his character rather than today's specifics, it invites defending the pattern instead of answering what's actually true this week."
+            }
+          ]
+        },
+        {
+          "npc": "Arjun",
+          "line": "Okay. So... Monday, for real this time, if I stop picking up random fire drills.",
+          "expression": "open",
+          "cues": ["first concrete commitment of the whole conversation", "names his own condition himself"],
+          "egoState": "A",
+          "options": [
+            {
+              "text": "Great, see you Monday then!",
+              "tag": "ok",
+              "egoState": "A",
+              "outcome": "The meeting ends on a friendly note, but the one condition he named (fire drills) is never actually written down anywhere.",
+              "outcomeExpression": "neutral",
+              "lesson": "Warm and quick, but letting the one concrete condition evaporate without confirming it risks discounting the very thing that makes this commitment different from the last one."
+            },
+            {
+              "text": "Good. Let's write down \"no unplanned fire drills until Monday\" so it's real, and I'll check in Wednesday.",
+              "tag": "best",
+              "egoState": "A",
+              "outcome": "Arjun nods. \"Yeah - that actually helps.\" For the first time in the conversation, there's a concrete, checkable plan that's his, not Priya's.",
+              "outcomeExpression": "open",
+              "lesson": "Confirming the specific condition and setting a concrete checkpoint treats his Adult commitment as real, instead of letting it discount itself into just another nice-sounding promise."
+            },
+            {
+              "text": "I'm so proud of you for finally stepping up!",
+              "tag": "game-move",
+              "egoState": "NP",
+              "outcome": "Arjun's smile tightens slightly. \"Uh, thanks,\" he says, already looking deflated.",
+              "outcomeExpression": "neutral",
+              "lesson": "Praising the person rather than confirming the plan pulls the conversation back toward Parent-Child - it feels nice to say, but it doesn't lock in the one concrete thing that just happened."
+            },
+            {
+              "text": "Let's just see how it goes, no need to overplan.",
+              "tag": "game-move",
+              "egoState": "A",
+              "outcome": "Monday arrives. Without a written condition or checkpoint, the fire-drill ticket lands on Arjun's desk again by Tuesday morning.",
+              "outcomeExpression": "tense",
+              "lesson": "This discounts the significance of the one real option that just surfaced - \"no need to overplan\" sounds reasonable, but it quietly throws away the specific, checkable thing that made this commitment different."
+            }
+          ]
+        }
+      ]
+    },
+    "L3": {
+      "fields": [
+        {
+          "type": "text",
+          "label": "Beat 1: Arjun answers about Monday when Priya asked about today. Name the transaction type, and in under 50 words say why it's easy to mistake for a real answer.",
+          "maxWords": 50,
+          "rubric": ["tangential", "same topic", "different", "time frame", "avoids", "feels like an answer"]
+        },
+        {
+          "type": "text",
+          "label": "Beat 2: Arjun disputes what \"done\" means instead of committing to a date. Name the transaction type, and name the level of discount it's protecting about his option to commit.",
+          "maxWords": 60,
+          "rubric": ["blocking", "definition", "existence", "significance", "changeability", "personal ability", "commit"]
+        },
+        {
+          "type": "text",
+          "label": "Beat 3: Arjun goes silent instead of answering. In under 40 words, name this passive behavior and the ability it discounts.",
+          "maxWords": 40,
+          "rubric": ["doing nothing", "passive", "discount", "own ability", "act"]
+        },
+        {
+          "type": "text",
+          "label": "Beat 4: Arjun says \"you're better at planning this than me - just tell me what you need.\" In under 60 words, name which two ego states Priya would supply if she just answered with the plan, and why that makes it a symbiosis rather than simple delegation.",
+          "maxWords": 60,
+          "rubric": ["Parent", "Adult", "Child", "symbiosis", "discount", "three ego states"]
+        }
+      ]
+    }
+  },
+  "echoAfterHours": 72,
+  "echo": {
+    "setting": "Months later: Priya and Arjun's working relationship holds, now with real Wednesday check-ins built into the sprint.",
+    "line": "Monday, for real this time.",
+    "shape": "same six-beat shape as L2"
+  }
+}

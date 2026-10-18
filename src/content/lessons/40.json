@@ -1,0 +1,17 @@
+{
+  "concept": 40,
+  "name": "The Discount Matrix",
+  "oneLine": "A systematic way to find exactly where someone is discounting: start at the top of the ladder (does the problem even exist?) and work down - a discount at any level drags every level below it down too.",
+  "whatYouDid": "You checked what Mike had already conceded before locating his real discount, instead of guessing or arguing at whatever level his words happened to land on.",
+  "confusion": "People often intervene at the lowest diagonal, arguing a specific option, when the real discount is higher up at existence or significance - the intervention itself then just gets discounted too.",
+  "fromBook": {
+    "book": "TA Today",
+    "chapter": 18,
+    "quote": "a discount in any box also entails discounts in the boxes below it and to its right."
+  },
+  "expand": {
+    "definition": "The practical rule: always check from the top of the ladder down. If someone's discounting existence (\"that's not even a problem\"), they're automatically also discounting significance, changeability, and their own ability - so find the highest level where the discount actually starts, rather than guessing at whichever level their words happen to land on. (The full matrix also splits each level by whether it's a stimulus, a problem, or an option - a finer-grained version of the same top-down idea, useful once you've got the four-level ladder solid.)",
+    "otherFraming": "The smoker who says \"once you're hooked, you're hooked\" sounds like he's discounting whether quitting is solvable - but if he's really discounting the existence of his cough as a problem, arguing solvability will just bounce off, because that argument assumes a problem he hasn't admitted exists.",
+    "tryThisToday": "Before you try to fix someone's stuck problem, including your own, check the highest level first: does the person actually agree the problem exists, before you argue about whether it's solvable."
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "concept": 46,
+  "name": "The Script Matrix",
+  "oneLine": "A diagram of three channels parents' ego states use to hand down script material: injunctions (Child to Child), counter-injunctions (Parent to Parent), and programme (Adult to Adult).",
+  "whatYouDid": "You sorted one of Imran's father's lines into the right matrix slot - a verbal, content-ful Be Perfect command, which makes it a counter-injunction, not the injunction underneath it.",
+  "confusion": null,
+  "fromBook": {
+    "book": "TA Today",
+    "chapter": 13,
+    "quote": "Messages which originate from mother's and father's Parent ego-states are called counterinjunctions... Messages sent from the Child ego-state of mother and father can be of two kinds: injunctions or permissions."
+  },
+  "expand": {
+    "definition": "Claude Steiner's original matrix used 'injunction' and 'counterscript' rather than the now-standard 'counter-injunction' - the three-channel structure (Parent-to-Parent, Adult-to-Adult, Child-to-Child) is the same model wearing slightly different labels depending on the author.",
+    "otherFraming": "Steiner's own term for the whole complex of injunction plus the decisions made in compliance with it is 'counterscript,' which is broader than the single word 'counter-injunction' TA Today now uses for the Parent-to-Parent channel alone.",
+    "tryThisToday": "Draw a blank matrix and fill in one real counter-injunction you can still hear in a specific parent's voice, verbatim, plus one 'here's how to...' programme message you learned by watching rather than being told."
+  }
+}

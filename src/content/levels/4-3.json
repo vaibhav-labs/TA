@@ -1,0 +1,185 @@
+{
+  "id": "4-3",
+  "title": "Life Games",
+  "world": 4,
+  "engine": "choice-story",
+  "concepts": [30, 27, 28],
+  "source": { "book": "TA Today", "chapter": 23, "quote": "Jack is playing the game called Kick Me." },
+  "setting": "A week of catching up with old friends, one at a time, and noticing the same shapes keep showing up.",
+  "playAs": "Priya",
+  "levels": {
+    "L1": {
+      "npc": "Omar",
+      "expression": "tense",
+      "line": "Yeah, I knew she'd bail eventually. They always do.",
+      "cues": ["fourth breakup, same line as the last three", "small satisfied shrug, not tears"],
+      "question": "Omar grumbles to his drinking buddies about yet another breakup - same story as the last three, same shrug at the end, everyone at the bar nodding along. Is this Kick Me at the first, second, or third degree?",
+      "options": [
+        { "text": "First degree", "feedback": "Right. A first-degree game has an outcome the player is willing to share with his social circle - first-degree games make up a large share of time-structuring at bars and parties. Omar is grumbling openly, and the room treats it as completely normal." },
+        { "text": "Second degree", "feedback": "Not quite - second-degree outcomes are heavier, ones the player would rather keep private. Omar is telling this story to a room full of friends over drinks, not hiding it from anyone - that openness is what actually marks this as first degree instead." },
+        { "text": "Third degree", "feedback": "Not quite - third degree, in Berne's words, ends \"in the surgery, the courtroom or the morgue.\" Nobody here is hurt or in legal trouble, this is much lighter than that - casual and public is the mark of first degree instead." }
+      ],
+      "answer": 0,
+      "lesson": "Degree isn't about how often you play; it's about how publicly you can survive the outcome. First degree stays shareable at a bar; second degree gets hidden from your social circle; third degree, in Berne's words, \"...is one which is played for keeps, and which ends in the surgery, the courtroom, or the morgue.\""
+    },
+    "L2": {
+      "intro": "Same week, three different friends, three different Life Games - and one that needs a whole cast of five to run: the Alcoholic game, which shows up later in the questions below.",
+      "beats": [
+        {
+          "npc": "Omar",
+          "expression": "tense",
+          "line": "Of course she left. They always leave eventually. Guess I'm just not relationship material.",
+          "cues": ["fourth breakup, same line", "shrug, not tears"],
+          "egoState": "C",
+          "options": [
+            {
+              "text": "Aw, don't say that, you're great, she didn't deserve you.",
+              "tag": "ok",
+              "egoState": "NP",
+              "outcome": "Omar perks up for a second, then sighs. \"Yeah, well. Story of my life.\" The same shrug returns within the hour.",
+              "outcomeExpression": "neutral",
+              "lesson": "Comforting the \"I'm not-OK\" belief feels supportive and quietly confirms it - he collects the sympathy as more evidence for the same script."
+            },
+            {
+              "text": "You keep ending up back here. What do you think you do, before it gets to the leaving part?",
+              "tag": "best",
+              "egoState": "A",
+              "outcome": "Long pause. \"I mean... I do pick fights right when things are going well. Huh.\"",
+              "outcomeExpression": "open",
+              "lesson": "Asking what his own part in the repeat pattern is - without supplying the kick, without rescuing him from the question - is the opening that lets him see the game instead of just re-feeling it."
+            },
+            {
+              "text": "Honestly? Maybe you ARE doing something wrong.",
+              "tag": "game-move",
+              "egoState": "CP",
+              "outcome": "Omar's face falls exactly the way it fell with her. \"Yeah. Figured you'd say that too.\" Kick delivered, right on schedule.",
+              "outcomeExpression": "tense",
+              "lesson": "This hands him the exact kick his game was built to collect - Persecutor to his Victim, completing the Payoff instead of interrupting it."
+            }
+          ]
+        },
+        {
+          "npc": "Leah",
+          "expression": "tense",
+          "line": "I knew it. I KNEW he'd do this eventually. I've got three months of texts proving he never cared. We're done.",
+          "cues": ["\"I knew it\" said with satisfaction, not sadness", "pulls out a saved folder of evidence"],
+          "egoState": "CP",
+          "options": [
+            {
+              "text": "Wow, yeah, show me everything, he's the worst.",
+              "tag": "game-move",
+              "egoState": "C",
+              "outcome": "Leah lights up, scrolling faster. You spend the next hour co-signing the verdict; she looks almost cheerful by the end.",
+              "outcomeExpression": "open",
+              "lesson": "Joining the Persecutor case confirms the collected evidence was worth collecting - it's fun in the room, and it reloads Leah's \"I'm OK, you're not-OK\" position for the next relationship."
+            },
+            {
+              "text": "You've been saving these up for a while, huh.",
+              "tag": "best",
+              "egoState": "A",
+              "outcome": "Leah stops scrolling. \"...Yeah. I guess I have.\" First flicker of noticing the collection itself.",
+              "outcomeExpression": "neutral",
+              "lesson": "Naming the collecting, not the content, is the Adult cross here - it points at the stamp book instead of grading the evidence inside it."
+            },
+            {
+              "text": "Maybe give him a chance to explain before you decide that.",
+              "tag": "ok",
+              "egoState": "A",
+              "outcome": "\"Don't you dare take his side,\" Leah snaps, and now you're also on trial.",
+              "outcomeExpression": "tense",
+              "lesson": "Technically reasonable, and it answers the wrong question - Leah isn't actually deciding anything; the verdict was reached months ago. This moment is Formula G's Switch, not a search for fresh facts."
+            }
+          ]
+        },
+        {
+          "npc": "Divya",
+          "expression": "tense",
+          "line": "See, THIS is what happens! Now look what you made me do!",
+          "cues": ["the glass broke because she was mid-yell, waving her arm", "blames the kid for her own spilled glass"],
+          "egoState": "CP",
+          "options": [
+            {
+              "text": "He really shouldn't leave his stuff around like that.",
+              "tag": "game-move",
+              "egoState": "P",
+              "outcome": "Divya nods hard. \"Exactly! Thank you!\" The kid gets sent to his room; Divya never notices whose hand actually hit the glass.",
+              "outcomeExpression": "neutral",
+              "lesson": "Validating the blame hands Divya her Payoff cleanly - she gets to be the reasonable Persecutor, with responsibility fully relocated onto the kid."
+            },
+            {
+              "text": "Hang on - the glass went over when you were waving your arm, not when he did anything.",
+              "tag": "best",
+              "egoState": "A",
+              "outcome": "Divya opens her mouth to argue, stops. \"I... okay, that's fair, that's fair.\" She actually looks at the glass.",
+              "outcomeExpression": "open",
+              "lesson": "Pointing at the literal mechanics of what happened, flatly, is enough to interrupt See What You Made Me Do - the game depends on nobody checking the physical facts."
+            },
+            {
+              "text": "You seem really stressed, let me help clean this up.",
+              "tag": "ok",
+              "egoState": "NP",
+              "outcome": "You clean the glass. Divya's shoulders relax, already composing the next version of this story for later.",
+              "outcomeExpression": "neutral",
+              "lesson": "Helpful and kind, and it doesn't touch the blame-shift at all - the mess gets fixed, the belief that it was the kid's fault doesn't."
+            }
+          ]
+        },
+        {
+          "npc": "Farid",
+          "expression": "open",
+          "line": "I'll pay you back the second this freelance thing comes through, I swear, you know I'm good for it.",
+          "cues": ["the freelance thing has been \"coming through\" for two years", "introduces himself to new people by joking about how broke he is"],
+          "egoState": "AC",
+          "options": [
+            {
+              "text": "Don't worry about it, seriously, whenever works.",
+              "tag": "game-move",
+              "egoState": "NP",
+              "outcome": "Farid relaxes completely. \"You're the only one who gets it.\" The debt becomes permanent furniture in the friendship.",
+              "outcomeExpression": "open",
+              "lesson": "Lifting the deadline removes the one thing that could ever end the game - Debtor needs an unpaid balance to keep structuring the relationship around."
+            },
+            {
+              "text": "I need an actual date, even a bad one, by Friday.",
+              "tag": "best",
+              "egoState": "A",
+              "outcome": "Farid blinks - no joke ready for this one. \"Oh. Uh... Friday. Okay. Let me actually check.\"",
+              "outcomeExpression": "neutral",
+              "lesson": "A real deadline does what sympathy can't: it forces the balance to become a fact in the room instead of a permanent mood."
+            },
+            {
+              "text": "This is getting ridiculous, you need to grow up.",
+              "tag": "ok",
+              "egoState": "CP",
+              "outcome": "Farid laughs it off - \"yeah, yeah, story of my life\" - and somehow the joke absorbs the criticism without anything changing.",
+              "outcomeExpression": "neutral",
+              "lesson": "True, and delivered as judgment rather than a request, it gives him a new self-deprecating bit to perform instead of a deadline to meet."
+            }
+          ]
+        }
+      ]
+    },
+    "L3": {
+      "fields": [
+        {
+          "type": "text",
+          "label": "Pick one of the four games above (Kick Me, NIGYSOB, See What You Made Me Do, or Debtor) and write its six advantages: internal psychological, external psychological, internal social, external social, biological, and existential.",
+          "maxWords": 120,
+          "rubric": ["internal psychological", "external psychological", "internal social", "external social", "biological", "existential", "stamps", "strokes", "life position"]
+        },
+        {
+          "type": "text",
+          "label": "Alcoholic is played with five roles, not two: Alcoholic, Persecutor, Rescuer, Patsy, and Connection. In under 40 words, who plays Patsy and Connection in a real drinking circle, and why does the game run longer when both are filled by different people?",
+          "maxWords": 40,
+          "rubric": ["Patsy", "Connection", "Rescuer", "Persecutor", "enabler", "supplier"]
+        }
+      ]
+    }
+  },
+  "echoAfterHours": 168,
+  "echo": {
+    "setting": "A week later. Omar texts about a new breakup, same four months, same shrug in text form.",
+    "line": "lol of course. you've heard this one before",
+    "shape": "same beat-one shape as L2"
+  }
+}
