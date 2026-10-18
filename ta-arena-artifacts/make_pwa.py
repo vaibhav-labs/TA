@@ -13,7 +13,7 @@ BASE = "https://vaibhav-labs.github.io/TA/arena/"
 PATH = "/TA/arena/"
 OUT = os.path.join(HERE, "..", "public", "arena")
 TMP = os.path.join(HERE, "out-pwa")
-VERSION = "arena-v1"
+VERSION = "arena-v2"
 THEME = "#171233"
 
 games = {}

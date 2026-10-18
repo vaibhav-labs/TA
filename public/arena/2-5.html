@@ -6,7 +6,7 @@
 <title>Little Professor · TA Arena</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
 <style>
   :root {
     color-scheme: light;
@@ -30,7 +30,7 @@
       radial-gradient(ellipse 680px 520px at 108% 12%, #2c1f4a, transparent),
       radial-gradient(ellipse 600px 420px at 60% 110%, #2a1840, transparent);
     color: var(--on-bg);
-    font-family: "IBM Plex Sans", system-ui, sans-serif;
+    font-family: Inter, system-ui, sans-serif;
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -49,7 +49,7 @@
   .card:focus { outline: none; }
   .card-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; margin-bottom: 18px; }
   .card-head > div:first-child { min-width: 0; }
-  h1 { font-family: "Fraunces", Georgia, serif; font-weight: 500; font-size: 27px; line-height: 1.2; margin: 0 0 6px; text-wrap: balance; letter-spacing: -0.01em; }
+  h1 { font-family: Inter, system-ui, sans-serif; font-weight: 500; font-size: 27px; line-height: 1.2; margin: 0 0 6px; text-wrap: balance; letter-spacing: -0.01em; }
   h1.h2 { font-size: 21px; margin: 0 0 12px; }
   .deck { font-size: 14.5px; color: var(--text-dim); margin: 0; max-width: 40ch; line-height: 1.5; }
   .case-no { font-family: "IBM Plex Mono", monospace; font-size: 11px; color: var(--text-dim); text-align: right; white-space: nowrap; padding-top: 4px; }
@@ -71,14 +71,14 @@
   .exchange .cue { font-size: 13.5px; color: var(--text-dim); font-style: italic; margin: 6px 0 12px; }
   .exchange .cue:last-child { margin-bottom: 0; }
 
-  .lede { font-family: "Fraunces", Georgia, serif; font-size: 17.5px; font-weight: 500; font-style: italic; color: var(--accent-deep); line-height: 1.5; margin: 0 0 14px; }
+  .lede { font-family: Inter, system-ui, sans-serif; font-size: 17.5px; font-weight: 500; font-style: italic; color: var(--accent-deep); line-height: 1.5; margin: 0 0 14px; }
   .prompt { font-size: 16.5px; line-height: 1.55; margin: 0 0 18px; font-weight: 500; }
   .setting { font-size: 15px; line-height: 1.55; color: var(--text-dim); font-style: italic; margin: 0 0 16px; }
-  .scene-title { font-family: "Fraunces", Georgia, serif; font-size: 19px; font-weight: 500; line-height: 1.3; margin: 0 0 6px; }
+  .scene-title { font-family: Inter, system-ui, sans-serif; font-size: 19px; font-weight: 500; line-height: 1.3; margin: 0 0 6px; }
 
   .choices { display: flex; flex-direction: column; gap: 10px; }
   button.choice {
-    font-family: "IBM Plex Sans", sans-serif; font-size: 15px; font-weight: 500; text-align: left;
+    font-family: Inter, system-ui, sans-serif; font-size: 15px; font-weight: 500; text-align: left;
     padding: 14px 17px; min-height: 44px; border-radius: 14px; border: none; background: var(--surface-2); color: var(--text);
     cursor: pointer; transition: background 120ms, transform 80ms, box-shadow 120ms; line-height: 1.4;
   }
@@ -138,7 +138,7 @@
   .meter .num { text-align: right; color: var(--text); font-weight: 600; }
 
   .total { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 12px; font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--text-dim); margin: 0 0 8px; }
-  .total b { font-family: "Fraunces", Georgia, serif; font-size: 28px; font-weight: 500; color: var(--text); }
+  .total b { font-family: Inter, system-ui, sans-serif; font-size: 28px; font-weight: 500; color: var(--text); }
   .band { position: relative; height: 10px; border-radius: 999px; background: var(--surface-2); overflow: hidden; margin: 0 0 8px; }
   .band .fill { position: absolute; left: 0; top: 0; bottom: 0; width: 0; background: linear-gradient(90deg, var(--accent), var(--pink)); transition: width 300ms ease; }
   .band .fill.over { background: var(--wrong); }
@@ -167,7 +167,7 @@
   .rules-list .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); flex: none; margin-top: 7px; }
   .ask { background: var(--bg-2); color: var(--on-bg); border-radius: 16px; padding: 14px 16px 15px; margin: 0 0 18px; }
   .ask .kicker { color: var(--on-bg-dim); margin-bottom: 6px; }
-  .ask p { font-family: "Fraunces", Georgia, serif; font-size: 17px; line-height: 1.45; margin: 0; }
+  .ask p { font-family: Inter, system-ui, sans-serif; font-size: 17px; line-height: 1.45; margin: 0; }
 
   .end-badge { font-family: "IBM Plex Mono", monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ok); margin-bottom: 8px; }
   .source { margin-top: 20px; padding: 14px 16px; border-radius: 14px; background: var(--surface-2); font-size: 12.5px; color: var(--text-dim); line-height: 1.5; }
@@ -175,7 +175,7 @@
   .end-nav { margin-top: 18px; }
 
   .reflect-tag { font-family: "IBM Plex Mono", monospace; font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #fff; background: linear-gradient(135deg, var(--accent), var(--pink)); display: inline-block; padding: 5px 12px; border-radius: 999px; margin-bottom: 14px; }
-  textarea.reflect-box { display: block; width: 100%; min-height: 120px; resize: vertical; font-family: "IBM Plex Sans", sans-serif; font-size: 15.5px; line-height: 1.55; color: var(--text); background: var(--surface-2); border: none; border-radius: 16px; padding: 14px 16px; margin-bottom: 18px; box-shadow: 0 0 0 2px transparent inset; }
+  textarea.reflect-box { display: block; width: 100%; min-height: 120px; resize: vertical; font-family: Inter, system-ui, sans-serif; font-size: 15.5px; line-height: 1.55; color: var(--text); background: var(--surface-2); border: none; border-radius: 16px; padding: 14px 16px; margin-bottom: 18px; box-shadow: 0 0 0 2px transparent inset; }
   textarea.reflect-box::placeholder { color: var(--text-dim); }
   textarea.reflect-box:focus { outline: none; box-shadow: 0 0 0 2px var(--accent) inset; }
 
@@ -189,6 +189,88 @@
   @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
   }
+
+  /* ===== Visual refresh: dark console look from docs/VISUAL_GUIDE.md (presentation only) ===== */
+  :root {
+    color-scheme: dark;
+    --wc: #fffc00;
+    --bg: #080a10; --bg-2: #0f131f;
+    --surface: #151a2a; --surface-2: #1e243b; --surface-3: #2a3250;
+    --accent: var(--wc); --accent-deep: color-mix(in srgb, var(--wc) 70%, #fff);
+    --pink: color-mix(in srgb, var(--wc) 55%, #ffb800); --blue: #06b6d4;
+    --ok: #10b981; --wrong: #f43f5e; --alt: #fbbf24;
+    --text: #f1f5f9; --text-dim: #a3b1c6;
+    --on-bg: #f1f5f9; --on-bg-dim: #94a3b8;
+    --shadow: rgba(0, 0, 0, 0.5);
+    --parent: #be123c; --adult: #0e7490; --childv: #b45309;
+  }
+  [data-world="1"] { --wc: #ff9500; } [data-world="2"] { --wc: #00e5ff; }
+  [data-world="3"] { --wc: #a855f7; } [data-world="4"] { --wc: #f43f5e; }
+  [data-world="5"] { --wc: #06b6d4; } [data-world="6"] { --wc: #10b981; }
+  [data-world="7"] { --wc: #f59e0b; }
+  body {
+    background-color: var(--bg);
+    background-image:
+      radial-gradient(ellipse 820px 560px at 12% -8%, color-mix(in srgb, var(--wc) 14%, transparent), transparent),
+      radial-gradient(ellipse 680px 520px at 108% 12%, rgba(168, 85, 247, 0.07), transparent),
+      radial-gradient(ellipse 600px 420px at 60% 110%, rgba(6, 182, 212, 0.07), transparent);
+    background-attachment: fixed;
+  }
+  .card { background: rgba(21, 26, 42, 0.88); border: 1px solid rgba(255, 255, 255, 0.12); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 24px 60px var(--shadow), inset 0 2px 0 color-mix(in srgb, var(--wc) 70%, transparent); }
+  h1, h1.h2, .scene-title { font-weight: 800; letter-spacing: -0.02em; }
+  .lede { font-style: italic; color: var(--accent-deep); }
+  .series { color: var(--wc); }
+  .tagline { background: var(--surface-2); color: var(--text-dim); }
+  .progress i.done { background: linear-gradient(90deg, var(--wc), #10b981); }
+  .progress i.current::after { background: var(--wc); }
+
+  /* Speech bubbles with tails */
+  .exchange { background: transparent; padding: 0; display: flex; flex-direction: column; gap: 12px; }
+  .exchange .line { position: relative; margin: 0; padding: 10px 14px; background: #f1f5f9; color: #0f172a; border: 1px solid #e2e8f0; border-radius: 14px; box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3); max-width: 92%; }
+  .exchange .line::before { content: ""; position: absolute; left: -6px; bottom: 10px; width: 10px; height: 12px; background: #f1f5f9; clip-path: polygon(100% 0, 0 100%, 100% 100%); }
+  .exchange .who { color: #475569; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; font-size: 10.5px; }
+  .exchange .cue { color: var(--text-dim); margin: 2px 0 0; }
+
+  /* Options */
+  button.choice { background: var(--surface-2); color: var(--text); border: 1px solid rgba(255, 255, 255, 0.12); border-left: 4px solid var(--wc); }
+  button.choice:hover { background: var(--surface-3); transform: translateY(-2px); box-shadow: 0 10px 22px rgba(0, 0, 0, 0.4); }
+  button.choice.correct { background: color-mix(in srgb, var(--ok) 20%, var(--surface)); border-color: var(--ok); box-shadow: none; }
+  button.choice.wrong { background: color-mix(in srgb, var(--wrong) 22%, var(--surface)); border-color: var(--wrong); box-shadow: 0 0 18px color-mix(in srgb, var(--wrong) 45%, transparent); animation: ta-shake 400ms cubic-bezier(.36,.07,.19,.97) both; }
+  button.choice.amber { background: color-mix(in srgb, var(--alt) 18%, var(--surface)); border-color: var(--alt); box-shadow: none; }
+  button.choice[disabled]:hover { background: var(--surface-2); transform: none; box-shadow: none; }
+  button.choice.correct[disabled]:hover { background: color-mix(in srgb, var(--ok) 20%, var(--surface)); }
+  button.choice.wrong[disabled]:hover { background: color-mix(in srgb, var(--wrong) 22%, var(--surface)); }
+  button.choice.amber[disabled]:hover { background: color-mix(in srgb, var(--alt) 18%, var(--surface)); }
+  .card.shake { animation: ta-shake 400ms cubic-bezier(.36,.07,.19,.97) both; }
+  @keyframes ta-shake { 10%, 90% { transform: translate3d(-1px, 0, 0); } 20%, 80% { transform: translate3d(2px, 0, 0); } 30%, 50%, 70% { transform: translate3d(-3px, 0, 0); } 40%, 60% { transform: translate3d(3px, 0, 0); } }
+
+  /* Feedback and examples */
+  .stamp, .pill { color: #fff; }
+  .stamp.ok { background: #047857; } .stamp.cross { background: #be123c; } .stamp.amber { background: #b45309; }
+  .why-box { box-shadow: 0 8px 22px rgba(0, 0, 0, 0.3); border: 1px solid rgba(255, 255, 255, 0.08); border-left-width: 5px; }
+  .why-box.ok { background: color-mix(in srgb, var(--ok) 16%, var(--surface)); }
+  .why-box.cross { background: color-mix(in srgb, var(--wrong) 16%, var(--surface)); }
+  .why-box.amber { background: color-mix(in srgb, var(--alt) 14%, var(--surface)); }
+  .why-box.neutral { background: color-mix(in srgb, var(--wc) 12%, var(--surface)); }
+  .example { background: color-mix(in srgb, var(--wc) 11%, var(--surface)); color: var(--text); }
+  .ex-label, .end-badge { color: var(--accent-deep); }
+  .end-badge { color: var(--ok); }
+  .ask { background: rgba(255, 255, 255, 0.05); border-left: 4px solid var(--wc); color: var(--text); }
+
+  /* Buttons, meters, chips */
+  button.next, a.next { background: linear-gradient(135deg, var(--wc), var(--pink)); color: #080a10; box-shadow: 0 10px 24px color-mix(in srgb, var(--wc) 35%, transparent); }
+  button.ghost { color: var(--text); border-color: rgba(255, 255, 255, 0.25); }
+  .val { background: var(--surface-3); color: var(--text); }
+  .meter .fill, .band .fill { background: linear-gradient(90deg, var(--wc), var(--pink)); }
+  .meter.them .fill { background: linear-gradient(90deg, #06b6d4, #10b981); }
+  .reflect-tag { color: #080a10; }
+  textarea.reflect-box { background: var(--surface-2); color: var(--text); border-color: rgba(255, 255, 255, 0.15); }
+
+  /* Sound toggle */
+  button.sfx { font-family: "IBM Plex Mono", monospace; font-size: 11px; font-weight: 600; letter-spacing: 0.06em; color: var(--on-bg-dim); background: transparent; border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 999px; padding: 4px 10px; min-height: 28px; cursor: pointer; }
+  button.sfx:hover { color: var(--wc); border-color: var(--wc); }
+  .masthead .right { display: flex; align-items: center; gap: 12px; }
 </style>
 <link rel="manifest" href="/TA/arena/manifest.json">
 <meta name="theme-color" content="#171233">
@@ -203,7 +285,7 @@
 <div class="stage">
   <div class="masthead">
     <div class="series" id="series">TA Arena</div>
-    <a class="tag" id="hubLink" href="#" hidden>← All games</a>
+    <div class="right"><button type="button" class="sfx" id="sfx" aria-pressed="true">SFX ON</button><a class="tag" id="hubLink" href="#" hidden>← All games</a></div>
   </div>
   <main class="card" id="card" tabindex="-1">
     <p class="deck">Loading the game.</p>
@@ -806,6 +888,60 @@
 })();
 </script>
 
+<script>
+/* Visual refresh: world colour, synthesized sound (no audio files) and trap shake. Presentation only. */
+(function () {
+  "use strict";
+  var G = window.TA_GAME;
+  if (G && G.world) document.documentElement.setAttribute("data-world", String(G.world));
+  var card = document.getElementById("card"), btn = document.getElementById("sfx");
+  var on = true, ctx = null;
+  try { on = window.localStorage.getItem("ta-sfx") !== "off"; } catch (e) {}
+  function label() { btn.textContent = on ? "SFX ON" : "SFX OFF"; btn.setAttribute("aria-pressed", on ? "true" : "false"); }
+  label();
+  btn.addEventListener("click", function () {
+    on = !on; label();
+    try { window.localStorage.setItem("ta-sfx", on ? "on" : "off"); } catch (e) {}
+  });
+  function audio() {
+    if (!ctx) { var AC = window.AudioContext || window.webkitAudioContext; if (AC) { try { ctx = new AC(); } catch (e) {} } }
+    if (ctx && ctx.state === "suspended") ctx.resume();
+    return ctx;
+  }
+  function tone(type, f0, f1, t0, dur, vol) {
+    var c = audio(); if (!c || !on) return;
+    var o = c.createOscillator(), g = c.createGain(), t = c.currentTime + t0;
+    o.type = type; o.frequency.setValueAtTime(f0, t);
+    if (f1 !== f0) o.frequency.exponentialRampToValueAtTime(f1, t + dur);
+    g.gain.setValueAtTime(vol, t); g.gain.exponentialRampToValueAtTime(0.0001, t + dur);
+    o.connect(g); g.connect(c.destination); o.start(t); o.stop(t + dur + 0.02);
+  }
+  function tap() { tone("sine", 440, 220, 0, 0.05, 0.12); }
+  function success() { [523.25, 659.25, 783.99, 1046.5].forEach(function (f, i) { tone("triangle", f, f, i * 0.08, 0.18, 0.12); }); }
+  function thud() { tone("sawtooth", 140, 55, 0, 0.28, 0.12); }
+  function victory() { [523.25, 659.25, 783.99, 1046.5, 1318.5].forEach(function (f, i) { tone("triangle", f, f, i * 0.1, 0.3, 0.12); }); }
+  document.addEventListener("click", function (e) {
+    if (e.target.closest && e.target.closest("button.choice, button.next, button.ghost")) tap();
+  }, true);
+  function shake() {
+    var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduce) return;
+    card.classList.remove("shake"); void card.offsetWidth; card.classList.add("shake");
+    setTimeout(function () { card.classList.remove("shake"); }, 450);
+  }
+  new MutationObserver(function (muts) {
+    muts.forEach(function (m) {
+      m.addedNodes.forEach(function (n) {
+        if (n.nodeType !== 1) return;
+        var q = function (sel) { return n.matches(sel) || n.querySelector(sel); };
+        if (q(".end-badge")) victory();
+        else if (q(".why-box.ok")) success();
+        else if (q(".why-box.cross")) { thud(); shake(); }
+      });
+    });
+  }).observe(card, { childList: true, subtree: true });
+})();
+</script>
 <script>if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('sw.js',{scope:'/TA/arena/'}).catch(function(){});});}</script>
 </body>
 </html>

@@ -509,6 +509,16 @@ Publishing: each file in `out/` is published with the Artifact tool, passing `ur
 
 `python3 make_pwa.py` (from `ta-arena-artifacts/`) builds the 42 games and the hub with absolute GitHub Pages links (`engine/nav-pwa.json`), adds manifest, theme colour and service-worker registration, and writes everything to `public/arena/` (hub = `index.html`, games = `1-1.html` to `7-6.html`, plus `manifest.json` and `sw.js`). The existing deploy workflow publishes it. Live at `https://vaibhav-labs.github.io/TA/arena/` (installable; scope `/TA/arena/`). `public/arena/` is generated: change `ta-arena-artifacts/content/*.json`, rerun `make_pwa.py`, and bump `VERSION` in `make_pwa.py` so installed clients refresh. The service worker is network first with cache fallback, like First Transaction. `vite.config.ts` lists `arena/**` in `globIgnores` so the root service worker leaves these pages to their own. Google Fonts load from the network and fall back to system fonts offline.
 
+### Visual refresh of the PWA games (branch `visual-refresh`, tag `pre-visual-refresh`)
+
+`docs/VISUAL_GUIDE.md` describes the React app's look, and the React app already implements it (tokens, avatars, PAC orbs, laser vectors, Web Audio sounds). The refresh brings that look to the 42 PWA games and their hub, as a presentation layer only: no content, answers, scoring or book sources changed (`content/*.json` untouched; smoke test still 42 of 42).
+
+Applied: dark obsidian background with glass cards; a signature accent colour per world (1 ember, 2 cyan, 3 violet, 4 ruby, 5 teal, 6 emerald, 7 gold) set through `data-world`; Inter plus IBM Plex Mono instead of Fraunces and IBM Plex Sans; light speech bubbles with tails for the dialogue lines; option buttons with an accent bar, hover lift, and a shake on trap or wrong picks (off when reduced motion is requested); synthesized sounds (tap, success, thud, victory) with an SFX toggle remembered on the device; route stops and chips coloured per world on the hub. The sound and shake are driven by a MutationObserver watching for the existing feedback boxes, so no game logic changed.
+
+Deliberately not copied from the guide: the "Berne's rule" citation badge (removed from the UI by request), the old character names in its examples (Priya is now Ella), and its gold-gradient option cards (dark glass is easier to read for long answers). Avatars, PAC orbs and world emblem art were not ported to the PWA. All the CSS lives in the "Visual refresh" blocks at the end of `engine/template.html` and `engine/hub-template.html`.
+
+Roll back: `git checkout main` keeps the old look (the branch is not merged until you choose), or `git checkout pre-visual-refresh -- public/arena ta-arena-artifacts` to restore the earlier files. To adopt it: merge `visual-refresh` into `main` and push. After any change, rerun `make_pwa.py` and bump `VERSION` in it.
+
 ### Writing rules (humanize)
 
 No em dashes. Curly quotes in dialogue. British spelling. No triads, no "not X but Y", no drumroll openers, no participial tails, no significance inflation. Vary sentence length. The score script (`humanize-writing/scripts/score.js`, line "AI-likeness N/100") must stay under 30 per game. Current scores are 0 to 6 for all 42 games.

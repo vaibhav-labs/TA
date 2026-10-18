@@ -6,7 +6,7 @@
 <title>TA Arena</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
 <style>
   :root {
     color-scheme: light;
@@ -29,7 +29,7 @@
       radial-gradient(ellipse 680px 520px at 108% 12%, #2c1f4a, transparent),
       radial-gradient(ellipse 600px 420px at 60% 110%, #2a1840, transparent);
     color: var(--on-bg);
-    font-family: "IBM Plex Sans", system-ui, sans-serif;
+    font-family: Inter, system-ui, sans-serif;
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -40,10 +40,10 @@
 
   .card { background: var(--surface); color: var(--text); border-radius: 22px; box-shadow: 0 24px 60px var(--shadow); padding: 26px 22px 22px; position: relative; min-width: 0; overflow-wrap: anywhere; margin-bottom: 18px; }
 
-  h1 { font-family: "Fraunces", Georgia, serif; font-weight: 500; font-size: 30px; line-height: 1.15; margin: 0 0 8px; letter-spacing: -0.01em; }
+  h1 { font-family: Inter, system-ui, sans-serif; font-weight: 500; font-size: 30px; line-height: 1.15; margin: 0 0 8px; letter-spacing: -0.01em; }
   .deck { font-size: 16px; line-height: 1.5; color: var(--text-dim); margin: 0; max-width: 40ch; }
 
-  .note h2 { font-family: "Fraunces", Georgia, serif; font-weight: 500; font-size: 20px; line-height: 1.25; margin: 0 0 8px; }
+  .note h2 { font-family: Inter, system-ui, sans-serif; font-weight: 500; font-size: 20px; line-height: 1.25; margin: 0 0 8px; }
   .note p { font-size: 15px; line-height: 1.55; margin: 0; }
 
   /* Route map: seven numbered stops on one line. Each stop jumps to its world. */
@@ -60,7 +60,7 @@
   /* World sections */
   .world { padding: 24px 20px 20px; scroll-margin-top: 12px; }
   .kicker { font-family: "IBM Plex Mono", monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-dim); margin: 0 0 8px; }
-  .world h2 { font-family: "Fraunces", Georgia, serif; font-weight: 500; font-size: 26px; line-height: 1.2; margin: 0 0 10px; }
+  .world h2 { font-family: Inter, system-ui, sans-serif; font-weight: 500; font-size: 26px; line-height: 1.2; margin: 0 0 10px; }
   .intro { font-size: 16px; line-height: 1.55; margin: 0 0 12px; }
   .why { font-size: 14px; line-height: 1.5; color: var(--text-dim); margin: 0 0 10px; }
   .label { font-family: "IBM Plex Mono", monospace; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent-deep); font-weight: 600; margin-right: 2px; }
@@ -98,7 +98,7 @@
     .route { padding: 22px 28px 20px; }
     .world { padding: 30px 28px 26px; }
     .route-list a { gap: 6px; }
-    .sname { position: static; width: auto; height: auto; overflow: visible; clip: auto; white-space: normal; text-align: center; font-family: "IBM Plex Sans", system-ui, sans-serif; font-size: 12px; line-height: 1.25; color: var(--text-dim); }
+    .sname { position: static; width: auto; height: auto; overflow: visible; clip: auto; white-space: normal; text-align: center; font-family: Inter, system-ui, sans-serif; font-size: 12px; line-height: 1.25; color: var(--text-dim); }
     ol.chips { grid-template-columns: repeat(5, minmax(0, 1fr)) minmax(0, 1.5fr); gap: 10px; }
     .chip { flex-direction: column; align-items: flex-start; flex-wrap: nowrap; gap: 6px; padding: 12px 10px 13px; }
     .chip:not(:last-child)::before { left: 100%; top: 50%; width: 10px; height: 2px; }
@@ -108,6 +108,57 @@
     .state { font-size: 9.5px; letter-spacing: 0.04em; padding: 3px 7px; }
   }
   @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition: none !important; animation: none !important; } }
+
+  /* ===== Visual refresh: dark console look from docs/VISUAL_GUIDE.md (presentation only) ===== */
+  :root {
+    color-scheme: dark;
+    --wc: #fffc00;
+    --bg: #080a10; --bg-2: #0f131f;
+    --surface: #151a2a; --surface-2: #1e243b; --surface-3: #2a3250;
+    --accent: var(--wc); --accent-deep: color-mix(in srgb, var(--wc) 70%, #fff);
+    --pink: color-mix(in srgb, var(--wc) 55%, #ffb800);
+    --text: #f1f5f9; --text-dim: #a3b1c6; --on-bg: #f1f5f9; --on-bg-dim: #94a3b8;
+    --shadow: rgba(0, 0, 0, 0.5);
+  }
+  #world-1 { --wc: #ff9500; } #world-2 { --wc: #00e5ff; } #world-3 { --wc: #a855f7; } #world-4 { --wc: #f43f5e; }
+  #world-5 { --wc: #06b6d4; } #world-6 { --wc: #10b981; } #world-7 { --wc: #f59e0b; }
+  body {
+    background-color: var(--bg);
+    background-image:
+      radial-gradient(ellipse 820px 560px at 12% -8%, rgba(255, 252, 0, 0.08), transparent),
+      radial-gradient(ellipse 680px 520px at 108% 12%, rgba(168, 85, 247, 0.08), transparent),
+      radial-gradient(ellipse 600px 420px at 60% 110%, rgba(6, 182, 212, 0.08), transparent);
+    background-attachment: fixed;
+  }
+  .card { background: rgba(21, 26, 42, 0.88); border: 1px solid rgba(255, 255, 255, 0.12); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 24px 60px var(--shadow), inset 0 2px 0 color-mix(in srgb, var(--wc) 70%, transparent); }
+  h1, .note h2, .world h2 { font-weight: 800; letter-spacing: -0.02em; }
+  h1 { background: linear-gradient(90deg, #fffc00, #ffb800); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .world h2 { color: var(--wc); }
+  .kicker, .label { color: var(--wc); }
+  .boss-line { color: color-mix(in srgb, var(--wc) 70%, #fff); }
+  .route-list li:not(:last-child)::after { background: var(--surface-3); }
+  .route-list .num { background: var(--wc); color: #080a10; font-weight: 700; box-shadow: 0 0 14px color-mix(in srgb, var(--wc) 55%, transparent); }
+  .route-list a:hover .num { background: var(--pink); }
+  .chip { background: var(--surface-2); border-color: rgba(255, 255, 255, 0.12); border-left: 4px solid var(--wc); }
+  .chip:not(:last-child)::before { background: var(--wc); }
+  .chip a { color: var(--text); }
+  .chip a:hover { color: var(--wc); }
+  .chip:hover { background: var(--surface-3); }
+  .chip.soon { background: var(--surface); }
+  .chip.boss { background: color-mix(in srgb, var(--wc) 12%, var(--surface)); border-color: var(--wc); }
+  .boss-tag { background: var(--wc); color: #080a10; }
+  .state { background: var(--surface); border-color: var(--surface-3); color: var(--text-dim); }
+  .slot { color: var(--wc); }
+
+  .route-list a { --wc: #fffc00; }
+  .route-list a[href$="#world-1"] { --wc: #ff9500; }
+  .route-list a[href$="#world-2"] { --wc: #00e5ff; }
+  .route-list a[href$="#world-3"] { --wc: #a855f7; }
+  .route-list a[href$="#world-4"] { --wc: #f43f5e; }
+  .route-list a[href$="#world-5"] { --wc: #06b6d4; }
+  .route-list a[href$="#world-6"] { --wc: #10b981; }
+  .route-list a[href$="#world-7"] { --wc: #f59e0b; }
 </style>
 </head>
 <body>
