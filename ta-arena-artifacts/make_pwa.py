@@ -13,7 +13,7 @@ BASE = "https://vaibhav-labs.github.io/TA/arena/"
 PATH = "/TA/arena/"
 OUT = os.path.join(HERE, "..", "public", "arena")
 TMP = os.path.join(HERE, "out-pwa")
-VERSION = "arena-v4"
+VERSION = "arena-v5"
 THEME = "#171233"
 
 games = {}
@@ -39,7 +39,7 @@ HEAD = (f'<link rel="manifest" href="{PATH}manifest.json">\n'
         '<meta name="apple-mobile-web-app-capable" content="yes">\n'
         '<meta name="apple-mobile-web-app-title" content="You">\n'
         f'<link rel="icon" href="{PATH}icon.svg" type="image/svg+xml">\n'
-        f'<link rel="apple-touch-icon" href="{PATH}icon-192.png">\n')
+        f'<link rel="apple-touch-icon" href="{PATH}apple-touch-icon.png">\n')
 REG = ("<script>if('serviceWorker' in navigator){window.addEventListener('load',function(){"
        "navigator.serviceWorker.register('sw.js',{scope:'%s'}).catch(function(){});});}</script>\n" % PATH)
 
@@ -61,7 +61,7 @@ json.dump({
               {"src": PATH + "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable"}]},
     open(os.path.join(OUT, "manifest.json"), "w"), indent=2)
 
-for ic in ("icon-192.png", "icon-512.png", "icon.svg"):
+for ic in ("icon-192.png", "icon-512.png", "apple-touch-icon.png", "icon.svg"):
     shutil.copy(os.path.join(HERE, "pwa-icons", ic), os.path.join(OUT, ic))
 assets = ["./"] + ["./" + p for p in pages] + ["./manifest.json"]
 sw = f"""// Bump VERSION on every deploy that changes content.
