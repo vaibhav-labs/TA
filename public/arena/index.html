@@ -9,157 +9,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
 <style>
   :root {
-    color-scheme: light;
-    --bg: #171233; --bg-2: #241c47;
-    --surface: #f2eefb; --surface-2: #c9b8e6; --surface-3: #bda8e2;
-    --accent: #6c5fe0; --accent-deep: #4a3fa0;
-    --pink: #d9699f; --blue: #5b8fd9;
-    --ok: #1f7568; --wrong: #a8407a; --alt: #5c4fb0;
-    --text: #231c3f; --text-dim: #675f82;
-    --on-bg: #ece7fb; --on-bg-dim: #b4abd9;
-    --shadow: rgba(23, 18, 51, 0.28);
-    --stop: 34px;
-  }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    background: var(--bg);
-    background-image:
-      radial-gradient(ellipse 820px 560px at 12% -8%, var(--bg-2), transparent),
-      radial-gradient(ellipse 680px 520px at 108% 12%, #2c1f4a, transparent),
-      radial-gradient(ellipse 600px 420px at 60% 110%, #2a1840, transparent);
-    color: var(--on-bg);
-    font-family: Inter, system-ui, sans-serif;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    padding: 28px 16px 56px;
-  }
-  .stage { width: 100%; max-width: 800px; min-width: 0; }
-  a:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
-
-  .card { background: var(--surface); color: var(--text); border-radius: 22px; box-shadow: 0 24px 60px var(--shadow); padding: 26px 22px 22px; position: relative; min-width: 0; overflow-wrap: anywhere; margin-bottom: 18px; }
-
-  h1 { font-family: Inter, system-ui, sans-serif; font-weight: 500; font-size: 30px; line-height: 1.15; margin: 0 0 8px; letter-spacing: -0.01em; }
-  .deck { font-size: 16px; line-height: 1.5; color: var(--text-dim); margin: 0; max-width: 40ch; }
-
-  .note h2 { font-family: Inter, system-ui, sans-serif; font-weight: 500; font-size: 20px; line-height: 1.25; margin: 0 0 8px; }
-  .note p { font-size: 15px; line-height: 1.55; margin: 0; }
-
-  /* Route map: seven numbered stops on one line. Each stop jumps to its world. */
-  .route { padding: 18px 16px 16px; }
-  .route-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); }
-  .route-list li { position: relative; min-width: 0; display: flex; justify-content: center; }
-  .route-list li:not(:last-child)::after { content: ""; position: absolute; top: calc(var(--stop) / 2 - 1.5px); left: 50%; width: 100%; height: 3px; background: var(--surface-3); }
-  .route-list a { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; text-decoration: none; color: var(--text); min-width: 0; max-width: 100%; }
-  .route-list .num { display: inline-flex; align-items: center; justify-content: center; width: var(--stop); height: var(--stop); border-radius: 50%; background: var(--accent-deep); color: #fff; font-family: "IBM Plex Mono", monospace; font-weight: 600; font-size: 14px; }
-  .route-list a:hover .num { background: var(--pink); }
-  .route-list a:focus-visible { border-radius: 50%; }
-  .sname { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
-
-  /* World sections */
-  .world { padding: 24px 20px 20px; scroll-margin-top: 12px; }
-  .kicker { font-family: "IBM Plex Mono", monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-dim); margin: 0 0 8px; }
-  .world h2 { font-family: Inter, system-ui, sans-serif; font-weight: 500; font-size: 26px; line-height: 1.2; margin: 0 0 10px; }
-  .intro { font-size: 16px; line-height: 1.55; margin: 0 0 12px; }
-  .why { font-size: 14px; line-height: 1.5; color: var(--text-dim); margin: 0 0 10px; }
-  .label { font-family: "IBM Plex Mono", monospace; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent-deep); font-weight: 600; margin-right: 2px; }
-  .can { font-size: 15px; line-height: 1.5; margin: 0 0 8px; }
-  .boss-line { font-size: 14.5px; line-height: 1.5; color: var(--accent-deep); margin: 0 0 16px; }
-  .boss-line strong { font-weight: 600; }
-
-  /* Game chips: a vertical path on a phone, a row from 640px wide. Each thin line joins one chip to the next. */
-  ol.chips { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
-  .chip { position: relative; display: flex; flex-wrap: wrap; align-items: center; gap: 4px 12px; background: #fff; border: 1.5px solid var(--surface-2); border-radius: 14px; padding: 10px 14px; min-width: 0; }
-  .chip:not(:last-child)::before { content: ""; position: absolute; left: 21px; top: 100%; width: 2px; height: 10px; background: var(--accent); }
-  .chip:has(:focus-visible) { outline: 3px solid var(--accent); outline-offset: 3px; }
-  .slot { flex: none; width: 34px; font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--text-dim); }
-  .chip a { flex: 1 1 calc(100% - 46px); min-width: 0; font-size: 15px; font-weight: 600; line-height: 1.35; color: var(--accent-deep); text-decoration: none; }
-  .chip a::after { content: ""; position: absolute; inset: 0; border-radius: 14px; }
-  .chip a:hover { color: var(--pink); }
-  .chip a:focus-visible { outline: none; }
-  .gtitle { flex: 1 1 calc(100% - 46px); min-width: 0; font-size: 15px; font-weight: 600; line-height: 1.35; color: var(--text-dim); }
-  /* On a phone the title takes the full row after the slot, and the tags sit on the line below it. */
-  .boss-tag, .state { flex: none; margin-left: 46px; overflow-wrap: normal; font-family: "IBM Plex Mono", monospace; font-size: 10.5px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; border-radius: 999px; padding: 3px 9px; }
-  .boss-tag { background: var(--accent-deep); color: #fff; }
-  .boss-tag + .state { margin-left: 8px; }
-  .state { color: var(--text-dim); background: var(--surface); border: 1px dashed var(--surface-3); }
-  .chip.soon { background: var(--surface); }
-  .chip.boss { background: #f8f5ff; border-color: var(--accent-deep); border-width: 2px; }
-
-  /* Connector between worlds */
-  .leads { display: flex; flex-direction: column; align-items: center; gap: 2px; margin: -4px 0 14px; color: var(--on-bg-dim); font-family: "IBM Plex Mono", monospace; font-size: 13px; letter-spacing: 0.02em; }
-  .arrow { width: 18px; height: 26px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
-
-  .foot { text-align: center; font-size: 15px; color: var(--on-bg-dim); margin: 8px 0 0; line-height: 1.5; }
-
-  @media (min-width: 640px) {
-    .card { padding: 30px 28px 26px; }
-    .route { padding: 22px 28px 20px; }
-    .world { padding: 30px 28px 26px; }
-    .route-list a { gap: 6px; }
-    .sname { position: static; width: auto; height: auto; overflow: visible; clip: auto; white-space: normal; text-align: center; font-family: Inter, system-ui, sans-serif; font-size: 12px; line-height: 1.25; color: var(--text-dim); }
-    ol.chips { grid-template-columns: repeat(5, minmax(0, 1fr)) minmax(0, 1.5fr); gap: 10px; }
-    .chip { flex-direction: column; align-items: flex-start; flex-wrap: nowrap; gap: 6px; padding: 12px 10px 13px; }
-    .chip:not(:last-child)::before { left: 100%; top: 50%; width: 10px; height: 2px; }
-    .slot { width: auto; }
-    .chip a, .gtitle { flex: none; width: 100%; font-size: 13.5px; }
-    .boss-tag, .state { margin-left: 0; }
-    .state { font-size: 9.5px; letter-spacing: 0.04em; padding: 3px 7px; }
-  }
-  @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition: none !important; animation: none !important; } }
-
-  /* ===== Visual refresh: dark console look from docs/VISUAL_GUIDE.md (presentation only) ===== */
-  :root {
-    color-scheme: dark;
-    --wc: #fffc00;
-    --bg: #080a10; --bg-2: #0f131f;
-    --surface: #151a2a; --surface-2: #1e243b; --surface-3: #2a3250;
-    --accent: var(--wc); --accent-deep: color-mix(in srgb, var(--wc) 70%, #fff);
-    --pink: color-mix(in srgb, var(--wc) 55%, #ffb800);
-    --text: #f1f5f9; --text-dim: #a3b1c6; --on-bg: #f1f5f9; --on-bg-dim: #94a3b8;
-    --shadow: rgba(0, 0, 0, 0.5);
-  }
-  #world-1 { --wc: #ff9500; } #world-2 { --wc: #00e5ff; } #world-3 { --wc: #a855f7; } #world-4 { --wc: #f43f5e; }
-  #world-5 { --wc: #06b6d4; } #world-6 { --wc: #10b981; } #world-7 { --wc: #f59e0b; }
-  body {
-    background-color: var(--bg);
-    background-image:
-      radial-gradient(ellipse 820px 560px at 12% -8%, rgba(255, 252, 0, 0.08), transparent),
-      radial-gradient(ellipse 680px 520px at 108% 12%, rgba(168, 85, 247, 0.08), transparent),
-      radial-gradient(ellipse 600px 420px at 60% 110%, rgba(6, 182, 212, 0.08), transparent);
-    background-attachment: fixed;
-  }
-  .card { background: rgba(21, 26, 42, 0.88); border: 1px solid rgba(255, 255, 255, 0.12); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
-    box-shadow: 0 24px 60px var(--shadow), inset 0 2px 0 color-mix(in srgb, var(--wc) 70%, transparent); }
-  h1, .note h2, .world h2 { font-weight: 800; letter-spacing: -0.02em; }
-  h1 { background: linear-gradient(90deg, #fffc00, #ffb800); -webkit-background-clip: text; background-clip: text; color: transparent; }
-  .world h2 { color: var(--wc); }
-  .kicker, .label { color: var(--wc); }
-  .boss-line { color: color-mix(in srgb, var(--wc) 70%, #fff); }
-  .route-list li:not(:last-child)::after { background: var(--surface-3); }
-  .route-list .num { background: var(--wc); color: #080a10; font-weight: 700; box-shadow: 0 0 14px color-mix(in srgb, var(--wc) 55%, transparent); }
-  .route-list a:hover .num { background: var(--pink); }
-  .chip { background: var(--surface-2); border-color: rgba(255, 255, 255, 0.12); border-left: 4px solid var(--wc); }
-  .chip:not(:last-child)::before { background: var(--wc); }
-  .chip a { color: var(--text); }
-  .chip a:hover { color: var(--wc); }
-  .chip:hover { background: var(--surface-3); }
-  .chip.soon { background: var(--surface); }
-  .chip.boss { background: color-mix(in srgb, var(--wc) 12%, var(--surface)); border-color: var(--wc); }
-  .boss-tag { background: var(--wc); color: #080a10; }
-  .state { background: var(--surface); border-color: var(--surface-3); color: var(--text-dim); }
-  .slot { color: var(--wc); }
-
-  .route-list a { --wc: #fffc00; }
-  .route-list a[href$="#world-1"] { --wc: #ff9500; }
-  .route-list a[href$="#world-2"] { --wc: #00e5ff; }
-  .route-list a[href$="#world-3"] { --wc: #a855f7; }
-  .route-list a[href$="#world-4"] { --wc: #f43f5e; }
-  .route-list a[href$="#world-5"] { --wc: #06b6d4; }
-  .route-list a[href$="#world-6"] { --wc: #10b981; }
-  .route-list a[href$="#world-7"] { --wc: #f59e0b; }
-  :root {
     --i-check: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Ccircle cx=%2212%22 cy=%2212%22 r=%229%22/%3E%3Cpath d=%22m8 12 3 3 5-6%22/%3E%3C/svg%3E");
     --i-cross: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Ccircle cx=%2212%22 cy=%2212%22 r=%229%22/%3E%3Cpath d=%22m9 9 6 6M15 9l-6 6%22/%3E%3C/svg%3E");
     --i-bolt: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M13 2 4 14h7l-1 8 9-12h-7z%22/%3E%3C/svg%3E");
@@ -178,27 +27,123 @@
     --i-flag: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M5 21V4M5 4h11l-2 4 2 4H5%22/%3E%3C/svg%3E");
   }
 
-  /* Line icons (CSS masks) */
-  .stamp::before, .ex-label::before, .end-badge::before, .reflect-tag::before, .source b::before, .ask .kicker::before,
-  .round-label::before, .boss-tag::before, .state::before, a.tag::before, button.sfx::before {
-    content: ""; display: inline-block; width: 1.2em; height: 1.2em; margin-right: 0.4em; vertical-align: -0.24em;
-    background: currentColor; -webkit-mask: var(--ic) center / contain no-repeat; mask: var(--ic) center / contain no-repeat; }
-  .stamp::before { margin-right: 0; width: 1.3em; height: 1.3em; vertical-align: middle; }
-  .stamp.ok { --ic: var(--i-check); } .stamp.cross { --ic: var(--i-cross); } .stamp.amber { --ic: var(--i-help); }
-  .ex-label { --ic: var(--i-spark); } .end-badge { --ic: var(--i-trophy); } .reflect-tag { --ic: var(--i-pencil); }
-  .source b { --ic: var(--i-book); } .ask .kicker { --ic: var(--i-help); } .boss-tag { --ic: var(--i-crown); }
-  .state { --ic: var(--i-lock); } a.tag { --ic: var(--i-home); } button.sfx { --ic: var(--i-speaker); }
-  .round-label { --ic: var(--i-help); }
-  .round-label[data-lv="spot"] { --ic: var(--i-eye); } .round-label[data-lv="play"] { --ic: var(--i-play); }
-  .round-label[data-lv="analyse"] { --ic: var(--i-search); } .round-label[data-lv="debrief"] { --ic: var(--i-spark); }
-  .boss-tag::before, .state::before { width: 1.1em; height: 1.1em; margin-right: 0.3em; }
+  :root {
+    color-scheme: dark;
+    --wc: #fffc00;
+    --bg: #080a10; --surface: #151a2a; --surface-2: #1e243b; --surface-3: #2a3250;
+    --text: #f1f5f9; --text-dim: #a3b1c6; --on-bg-dim: #94a3b8;
+    --accent-soft: color-mix(in srgb, var(--wc) 70%, #fff);
+  }
+  [hidden] { display: none !important; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background-color: var(--bg); color: var(--text);
+    background-image:
+      radial-gradient(ellipse 820px 560px at 12% -8%, rgba(255, 252, 0, 0.08), transparent),
+      radial-gradient(ellipse 680px 520px at 108% 12%, rgba(168, 85, 247, 0.09), transparent),
+      radial-gradient(ellipse 600px 420px at 60% 110%, rgba(6, 182, 212, 0.09), transparent);
+    background-attachment: fixed;
+    font-family: Inter, system-ui, sans-serif; min-height: 100vh;
+    display: flex; justify-content: center; padding: 28px 16px 56px;
+  }
+  .stage { width: 100%; max-width: 640px; min-width: 0; }
+  a:focus-visible, button:focus-visible { outline: 3px solid var(--wc); outline-offset: 3px; border-radius: 8px; }
+  h1:focus, h2:focus { outline: none; }
+
+  .card { background: rgba(21, 26, 42, 0.88); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 22px;
+    backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); padding: 26px 22px 24px; margin: 0 0 16px;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5), inset 0 2px 0 color-mix(in srgb, var(--wc) 70%, transparent); }
+  h1 { font-weight: 800; font-size: 44px; line-height: 1.05; letter-spacing: -0.03em; margin: 0 0 10px;
+    background: linear-gradient(90deg, #fffc00, #ffb800); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  h2 { font-weight: 800; letter-spacing: -0.02em; margin: 0 0 10px; }
+  .lede { font-size: 18px; line-height: 1.45; font-weight: 500; margin: 0 0 16px; }
+  p { font-size: 15.5px; line-height: 1.6; margin: 0 0 14px; }
+  p:last-child { margin-bottom: 0; }
+  .dim { color: var(--text-dim); }
+  .small { font-size: 13.5px; }
+  .kicker { font-family: "IBM Plex Mono", monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--wc); margin: 0 0 8px; }
+
+  .steps { list-style: none; margin: 18px 0; padding: 0; display: grid; gap: 10px; }
+  .steps li { display: flex; gap: 12px; align-items: flex-start; background: var(--surface-2); border-radius: 14px; padding: 12px 14px; border: 1px solid rgba(255, 255, 255, 0.08); }
+  .steps .ic { flex: none; width: 34px; height: 34px; border-radius: 50%; background: color-mix(in srgb, var(--wc) 18%, var(--surface)); color: var(--wc); display: grid; place-items: center; }
+  .steps .ic i { display: block; width: 18px; height: 18px; background: currentColor; -webkit-mask: var(--ic) center / contain no-repeat; mask: var(--ic) center / contain no-repeat; }
+  .steps b { display: block; font-size: 15px; margin-bottom: 2px; }
+  .steps span { font-size: 14px; line-height: 1.45; color: var(--text-dim); }
+  @media (min-width: 560px) { .steps { grid-template-columns: repeat(3, 1fr); } .steps li { flex-direction: column; } }
+
+  /* The map: you in the middle, seven worlds in a ring, clockwise from the top */
+  .orbit { position: relative; width: min(100%, 460px); aspect-ratio: 100 / 130; margin: 6px auto 0; }
+  .ring { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .ring .spoke { stroke: rgba(255, 255, 255, 0.10); stroke-width: 0.35; stroke-dasharray: 1.2 1.6; }
+  .ring .loop { fill: none; stroke: rgba(255, 252, 0, 0.28); stroke-width: 0.5; stroke-dasharray: 1.6 1.6; }
+  .ring .tip { fill: rgba(255, 252, 0, 0.6); }
+  .you { position: absolute; left: 50%; top: var(--cy); width: 25%; aspect-ratio: 1; transform: translate(-50%, -50%); border-radius: 50%;
+    display: grid; place-items: center; text-align: center;
+    background: radial-gradient(circle at 50% 35%, rgba(255, 252, 0, 0.22), rgba(21, 26, 42, 0.95) 70%);
+    border: 2px solid rgba(255, 252, 0, 0.55); box-shadow: 0 0 34px rgba(255, 252, 0, 0.28); }
+  .you svg { width: 62%; height: 62%; }
+  .you span { position: absolute; bottom: 13%; font-weight: 800; font-size: 13px; color: #fffc00; letter-spacing: 0.04em; }
+  .node { position: absolute; left: var(--x); top: var(--y); width: 0; height: 0; text-decoration: none; color: var(--text); --wc: #fffc00; }
+  .node .disc { position: absolute; left: 0; top: 0; width: var(--d); height: var(--d); transform: translate(-50%, -50%); border-radius: 50%;
+    background: color-mix(in srgb, var(--wc) 16%, #10141f); border: 2px solid var(--wc); display: grid; place-items: center;
+    box-shadow: 0 0 20px color-mix(in srgb, var(--wc) 40%, transparent); transition: transform 140ms, box-shadow 140ms; }
+  .node:hover .disc, .node:focus-visible .disc { transform: translate(-50%, -50%) scale(1.1); box-shadow: 0 0 30px color-mix(in srgb, var(--wc) 70%, transparent); }
+  .node .emb-wrap { width: 62%; height: 62%; filter: none; }
+  .node .num { position: absolute; left: calc(var(--d) / 2 - 8px); top: calc(var(--d) / -2 - 4px); width: 20px; height: 20px; border-radius: 50%; background: var(--wc); color: #080a10;
+    font-family: "IBM Plex Mono", monospace; font-size: 11px; font-weight: 700; display: grid; place-items: center; }
+  .node .nm { position: absolute; left: 0; top: calc(var(--d) / 2 + 5px); width: 104px; transform: translateX(-50%); text-align: center; font-size: 12.5px; font-weight: 600; line-height: 1.2; }
+  .node:hover .nm { color: var(--wc); }
+  .start { position: absolute; top: calc(var(--d) / -2 - 30px); left: 0; transform: translateX(-50%); white-space: nowrap; font-family: "IBM Plex Mono", monospace; font-size: 10.5px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #080a10; background: #fffc00; border-radius: 999px; padding: 3px 9px; }
+  .orbit { --d: 58px; }
+  @media (min-width: 520px) { .orbit { --d: 70px; } .node .nm { font-size: 13.5px; width: 124px; } }
+  @media (max-width: 380px) { .orbit { --d: 50px; } .node .nm { font-size: 11.5px; width: 92px; } }
+  .mapcard { padding-left: 10px; padding-right: 10px; }
+  .mapcard > p, .mapcard > h2, .mapcard > .kicker { padding: 0 12px; }
+  .hint { text-align: center; margin-top: 14px; }
+
+  /* World page */
+  .back { display: inline-flex; align-items: center; gap: 6px; font-family: "IBM Plex Mono", monospace; font-size: 12px; font-weight: 600; color: var(--on-bg-dim); text-decoration: none; margin: 0 0 14px 4px; }
+  .back:hover { color: var(--wc); }
+  .back::before, .tag::before, .state::before, .boss-tag::before { content: ""; display: inline-block; width: 1.2em; height: 1.2em; background: currentColor; -webkit-mask: var(--ic) center / contain no-repeat; mask: var(--ic) center / contain no-repeat; }
+  .back { --ic: var(--i-home); }
+  .world { padding: 26px 20px 22px; }
+  .world .head { display: flex; align-items: center; gap: 14px; margin-bottom: 12px; }
+  .world h2 { font-size: 30px; line-height: 1.1; color: var(--wc); margin: 0; }
+  .emb-wrap { display: block; flex: none; width: 56px; height: 56px; filter: drop-shadow(0 0 10px color-mix(in srgb, var(--wc) 45%, transparent)); }
   .emb { display: block; width: 100%; height: 100%; overflow: visible; }
-  .emb-wrap { display: block; flex: none; width: 46px; height: 46px; filter: drop-shadow(0 0 10px color-mix(in srgb, var(--wc) 45%, transparent)); }
-  .world h2 { display: flex; align-items: center; gap: 12px; }
-  .world h2 .emb-wrap { width: 48px; height: 48px; }
-  h1 .emb-wrap { display: inline-block; width: 44px; height: 44px; vertical-align: -9px; margin-right: 10px; }
-  .stop-emb { display: block; width: 28px; height: 28px; margin-top: 6px; }
-  @media (min-width: 640px) { .stop-emb { width: 34px; height: 34px; } }
+  .intro { font-size: 16.5px; line-height: 1.6; margin: 0 0 14px; }
+  .box { background: var(--surface-2); border-left: 4px solid var(--wc); border-radius: 14px; padding: 12px 14px; margin: 0 0 12px; font-size: 14.5px; line-height: 1.5; }
+  .label { font-family: "IBM Plex Mono", monospace; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--wc); font-weight: 600; display: block; margin-bottom: 4px; }
+  .boss-line { color: var(--accent-soft); font-size: 14.5px; line-height: 1.5; margin: 0 0 18px; }
+  .boss-line strong { font-weight: 700; }
+
+  ol.chips { list-style: none; margin: 0 0 18px; padding: 0; display: grid; gap: 10px; }
+  .chip { position: relative; display: flex; flex-wrap: wrap; align-items: center; gap: 4px 12px; background: var(--surface-2); border: 1px solid rgba(255, 255, 255, 0.12); border-left: 4px solid var(--wc); border-radius: 14px; padding: 13px 14px; }
+  .chip:not(:last-child)::before { content: ""; position: absolute; left: 21px; top: 100%; width: 2px; height: 10px; background: var(--wc); }
+  .chip:hover { background: var(--surface-3); }
+  .chip:has(:focus-visible) { outline: 3px solid var(--wc); outline-offset: 3px; }
+  .slot { flex: none; width: 34px; font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--wc); }
+  .chip a { flex: 1 1 calc(100% - 46px); min-width: 0; font-size: 15.5px; font-weight: 600; line-height: 1.35; color: var(--text); text-decoration: none; }
+  .chip a::after { content: ""; position: absolute; inset: 0; border-radius: 14px; }
+  .chip a:hover { color: var(--wc); }
+  .chip a:focus-visible { outline: none; }
+  .gtitle { flex: 1 1 calc(100% - 46px); min-width: 0; font-size: 15.5px; font-weight: 600; line-height: 1.35; color: var(--text-dim); }
+  .boss-tag, .state { flex: none; margin-left: 46px; font-family: "IBM Plex Mono", monospace; font-size: 10.5px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; border-radius: 999px; padding: 3px 9px; display: inline-flex; align-items: center; gap: 4px; }
+  .boss-tag { background: var(--wc); color: #080a10; --ic: var(--i-crown); }
+  .boss-tag + .state { margin-left: 8px; }
+  .state { color: var(--text-dim); background: var(--surface); border: 1px dashed var(--surface-3); --ic: var(--i-lock); }
+  .chip.soon { background: var(--surface); }
+  .chip.boss { background: color-mix(in srgb, var(--wc) 12%, var(--surface)); border-color: var(--wc); }
+  .chip .boss-tag::before, .chip .state::before { width: 1.1em; height: 1.1em; }
+
+  .worldnav { display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
+  .worldnav a { font-family: "IBM Plex Mono", monospace; font-size: 12.5px; font-weight: 600; text-decoration: none; color: var(--text); background: var(--surface-2); border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 999px; padding: 10px 16px; min-height: 44px; display: inline-flex; align-items: center; }
+  .worldnav a:hover { border-color: var(--wc); color: var(--wc); }
+  .worldnav .next { margin-left: auto; background: linear-gradient(135deg, var(--wc), color-mix(in srgb, var(--wc) 55%, #ffb800)); color: #080a10; border: none; }
+  .worldnav .next:hover { filter: brightness(1.08); color: #080a10; }
+
+  @media (min-width: 640px) { .card { padding: 30px 28px 26px; } .world { padding: 30px 28px 26px; } }
+  @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition: none !important; animation: none !important; } }
 </style>
 <link rel="manifest" href="/TA/arena/manifest.json">
 <meta name="theme-color" content="#171233">
@@ -211,40 +156,45 @@
 <body>
 
 <div class="stage">
-  <header class="card">
-    <h1>You</h1>
-    <p class="deck">Forty-two short games in seven worlds. Each world builds on the one before it.</p>
-  </header>
+  <div id="view-home">
+    <header class="card hero">
+      <h1>You</h1>
+      <p class="lede">Forty-two short games about how people talk to each other, and why you talk the way you do.</p>
+      <p>You is a set of games built on Transactional Analysis, or TA, a way of understanding conversations that the psychiatrist Eric Berne began in the 1950s. Each game puts you inside a small story: a phone call with your mum, a meeting that goes sideways, an argument over the washing-up. You make a choice, then find out what it really did.</p>
+      <ul class="steps">
+        <li><span class="ic"><i style="--ic: var(--i-eye)"></i></span><div><b>Spot</b><span>Notice what is going on in a short exchange.</span></div></li>
+        <li><span class="ic"><i style="--ic: var(--i-play)"></i></span><div><b>Play</b><span>Step into a live scene and choose what to say.</span></div></li>
+        <li><span class="ic"><i style="--ic: var(--i-search)"></i></span><div><b>Analyse</b><span>Work out why it went the way it did.</span></div></li>
+      </ul>
+      <p>Every answer, right or wrong, comes with a plain explanation and a real example. A game takes about ten minutes, and you need no background in psychology.</p>
+      <p class="dim small">The games follow books by Eric Berne, Claude Steiner, and Ian Stewart and Vann Joines. They teach ideas. They are not therapy.</p>
+    </header>
 
-  <section class="card note" aria-labelledby="what-ta">
-    <h2 id="what-ta">What is Transactional Analysis?</h2>
-    <p>Transactional Analysis, or TA, is a way of understanding how people talk to each other and why the same conversations keep going wrong. These games let you practise it, one short story at a time.</p>
-  </section>
+    <section class="card mapcard" aria-labelledby="pick">
+      <p class="kicker">The map</p>
+      <h2 id="pick">Choose a world</h2>
+      <p class="dim">Seven worlds sit around you. Each one builds on the one before it, so start at the top and go clockwise. Tap a world to open it.</p>
+<style>#node-1 { --wc: #ff9500; }#node-2 { --wc: #00e5ff; }#node-3 { --wc: #a855f7; }#node-4 { --wc: #f43f5e; }#node-5 { --wc: #06b6d4; }#node-6 { --wc: #10b981; }#node-7 { --wc: #f59e0b; }</style>
+<div class="orbit" style="--cy:50.77%"><svg class="ring" viewBox="0 0 100 130" aria-hidden="true" focusable="false"><line class="spoke" x1="50.0" y1="66.0" x2="50.00" y2="23.00"/><line class="spoke" x1="50.0" y1="66.0" x2="78.15" y2="39.19"/><line class="spoke" x1="50.0" y1="66.0" x2="85.10" y2="75.57"/><line class="spoke" x1="50.0" y1="66.0" x2="65.62" y2="104.74"/><line class="spoke" x1="50.0" y1="66.0" x2="34.38" y2="104.74"/><line class="spoke" x1="50.0" y1="66.0" x2="14.90" y2="75.57"/><line class="spoke" x1="50.0" y1="66.0" x2="21.85" y2="39.19"/><ellipse class="loop" cx="50.0" cy="66.0" rx="36.0" ry="43.0"/></svg><div class="you" aria-hidden="true"><svg viewBox="0 0 64 64" aria-hidden="true" focusable="false" fill="none" stroke="#fffc00" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="32" cy="21" r="9"/><path d="M13 54c1-12 9-18 19-18s18 6 19 18"/></svg><span>You</span></div>
+<a class="node" id="node-1" href="#world-1" style="--x:50.00%;--y:17.69%" aria-label="World 1: Being Noticed"><span class="disc"><span class="emb-wrap"><svg class="emb" viewBox="0 0 36 36" aria-hidden="true" focusable="false"><linearGradient id="w1g" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#FFA000"/><stop offset="100%" stop-color="#FF3D00"/></linearGradient><g stroke="url(#w1g)" stroke-width="3" stroke-linecap="round"><line x1="8" y1="8" x2="8" y2="28"/><line x1="14" y1="8" x2="14" y2="28"/><line x1="20" y1="8" x2="20" y2="28"/><line x1="26" y1="8" x2="26" y2="28"/></g><line x1="4" y1="24" x2="30" y2="12" stroke="#FFFC00" stroke-width="2.5" stroke-linecap="round"/><circle cx="31" cy="11" r="2.5" fill="#FFFC00"/></svg></span></span><span class="num">1</span><span class="start">Start here</span><span class="nm">Being Noticed</span></a>
+<a class="node" id="node-2" href="#world-2" style="--x:78.15%;--y:30.15%" aria-label="World 2: Who’s Talking"><span class="disc"><span class="emb-wrap"><svg class="emb" viewBox="0 0 36 36" aria-hidden="true" focusable="false"><line x1="18" y1="6" x2="18" y2="30" stroke="rgba(255,255,255,0.3)" stroke-width="2" stroke-dasharray="2 2"/><circle cx="18" cy="8" r="4.5" fill="#F43F5E" stroke="#fff" stroke-width="1.5"/><circle cx="18" cy="18" r="6" fill="#06B6D4" stroke="#FFFC00" stroke-width="2"/><circle cx="18" cy="28" r="4.5" fill="#F59E0B" stroke="#fff" stroke-width="1.5"/></svg></span></span><span class="num">2</span><span class="nm">Who’s Talking</span></a>
+<a class="node" id="node-3" href="#world-3" style="--x:85.10%;--y:58.13%" aria-label="World 3: Back and Forth"><span class="disc"><span class="emb-wrap"><svg class="emb" viewBox="0 0 36 36" aria-hidden="true" focusable="false"><linearGradient id="w3a" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#C084FC"/><stop offset="100%" stop-color="#9333EA"/></linearGradient><linearGradient id="w3b" x1="100%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#FFFC00"/><stop offset="100%" stop-color="#F59E0B"/></linearGradient><line x1="6" y1="6" x2="30" y2="30" stroke="url(#w3a)" stroke-width="3.2" stroke-linecap="round"/><line x1="30" y1="6" x2="6" y2="30" stroke="url(#w3b)" stroke-width="3.2" stroke-linecap="round"/><polygon points="30,30 24,29 29,24" fill="#C084FC"/><polygon points="6,30 12,29 7,24" fill="#FFFC00"/><circle cx="18" cy="18" r="3" fill="#fff"/><circle cx="18" cy="18" r="6" fill="none" stroke="#FFFC00" stroke-width="1.2" opacity="0.8"/></svg></span></span><span class="num">3</span><span class="nm">Back and Forth</span></a>
+<a class="node" id="node-4" href="#world-4" style="--x:65.62%;--y:80.57%" aria-label="World 4: Conversation Traps"><span class="disc"><span class="emb-wrap"><svg class="emb" viewBox="0 0 36 36" aria-hidden="true" focusable="false"><linearGradient id="w4g" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#FB7185"/><stop offset="100%" stop-color="#E11D48"/></linearGradient><path d="M18 9 C13 7 7 7 4 8 L4 26 C8 25 13 25 18 28 C23 25 28 25 32 26 L32 8 C29 7 23 7 18 9 Z" fill="url(#w4g)" stroke="#fff" stroke-width="1.5"/><line x1="18" y1="9" x2="18" y2="28" stroke="#FFE4E6" stroke-width="2"/><polygon points="18,14 14,21 22,21" fill="#FFFC00" stroke="#000" stroke-width="1"/></svg></span></span><span class="num">4</span><span class="nm">Conversation Traps</span></a>
+<a class="node" id="node-5" href="#world-5" style="--x:34.38%;--y:80.57%" aria-label="World 5: Under the Surface"><span class="disc"><span class="emb-wrap"><svg class="emb" viewBox="0 0 36 36" aria-hidden="true" focusable="false"><linearGradient id="w5g" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#FFFFFF"/><stop offset="40%" stop-color="#67E8F9"/><stop offset="100%" stop-color="#0E7490"/></linearGradient><line x1="3" y1="13" x2="33" y2="13" stroke="#22D3EE" stroke-width="2" stroke-dasharray="3 1"/><polygon points="18,6 23,13 13,13" fill="#fff" stroke="#67E8F9" stroke-width="1.2"/><polygon points="13,13 23,13 27,29 9,29" fill="url(#w5g)" stroke="#0891B2" stroke-width="1.5"/><path d="M12 32 Q18 35 24 32" stroke="#06B6D4" stroke-width="1.5" fill="none" opacity="0.6" stroke-linecap="round"/></svg></span></span><span class="num">5</span><span class="nm">Under the Surface</span></a>
+<a class="node" id="node-6" href="#world-6" style="--x:14.90%;--y:58.13%" aria-label="World 6: The Story You Wrote"><span class="disc"><span class="emb-wrap"><svg class="emb" viewBox="0 0 36 36" aria-hidden="true" focusable="false"><linearGradient id="w6g" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#34D399"/><stop offset="100%" stop-color="#059669"/></linearGradient><circle cx="18" cy="6" r="3.5" fill="#FFFC00" stroke="#fff" stroke-width="1"/><path d="M18 9.5 V16 M18 16 L9 26 M18 16 L27 26" stroke="#34D399" stroke-width="2.5" stroke-linecap="round" fill="none"/><circle cx="9" cy="27" r="4" fill="url(#w6g)" stroke="#fff" stroke-width="1.2"/><circle cx="27" cy="27" r="4" fill="url(#w6g)" stroke="#fff" stroke-width="1.2"/><line x1="12.5" y1="24" x2="23.5" y2="24" stroke="#FFFC00" stroke-width="1.5" stroke-dasharray="2 2"/></svg></span></span><span class="num">6</span><span class="nm">The Story You Wrote</span></a>
+<a class="node" id="node-7" href="#world-7" style="--x:21.85%;--y:30.15%" aria-label="World 7: Free to Choose"><span class="disc"><span class="emb-wrap"><svg class="emb" viewBox="0 0 36 36" aria-hidden="true" focusable="false"><radialGradient id="w7g" cx="50%" cy="100%" r="80%"><stop offset="0%" stop-color="#FFFC00"/><stop offset="60%" stop-color="#F59E0B"/><stop offset="100%" stop-color="#D97706"/></radialGradient><path d="M7 23 A11 11 0 0 1 29 23 Z" fill="url(#w7g)" stroke="#FFFC00" stroke-width="1.5"/><line x1="3" y1="23" x2="33" y2="23" stroke="#FDE68A" stroke-width="2.5" stroke-linecap="round"/><g stroke="#FFFC00" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="5" x2="18" y2="9"/><line x1="8" y1="9" x2="11" y2="12"/><line x1="28" y1="9" x2="25" y2="12"/><line x1="31" y1="17" x2="27" y2="18"/><line x1="5" y1="17" x2="9" y2="18"/></g></svg></span></span><span class="num">7</span><span class="nm">Free to Choose</span></a></div>
+    </section>
+  </div>
 
-  <section class="card note" aria-labelledby="how-map">
-    <h2 id="how-map">How the map works</h2>
-    <p>Go down the map from world 1 to world 7. Each game leads to the next, and the sixth game in each world is the Sunday boss.</p>
-  </section>
-
-  <nav class="card route" aria-label="World map">
-<ol class="route-list">
-    <li><a href="#world-1"><span class="num">1</span><span class="stop-emb"><svg class="emb" viewBox="0 0 36 36" aria-hidden="true" focusable="false"><linearGradient id="w1g" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#FFA000"/><stop offset="100%" stop-color="#FF3D00"/></linearGradient><g stroke="url(#w1g)" stroke-width="3" stroke-linecap="round"><line x1="8" y1="8" x2="8" y2="28"/><line x1="14" y1="8" x2="14" y2="28"/><line x1="20" y1="8" x2="20" y2="28"/><line x1="26" y1="8" x2="26" y2="28"/></g><line x1="4" y1="24" x2="30" y2="12" stroke="#FFFC00" stroke-width="2.5" stroke-linecap="round"/><circle cx="31" cy="11" r="2.5" fill="#FFFC00"/></svg></span><span class="sname">Hunger</span></a></li>
-    <li><a href="#world-2"><span class="num">2</span><span class="stop-emb"><svg class="emb" viewBox="0 0 36 36" aria-hidden="true" focusable="false"><line x1="18" y1="6" x2="18" y2="30" stroke="rgba(255,255,255,0.3)" stroke-width="2" stroke-dasharray="2 2"/><circle cx="18" cy="8" r="4.5" fill="#F43F5E" stroke="#fff" stroke-width="1.5"/><circle cx="18" cy="18" r="6" fill="#06B6D4" stroke="#FFFC00" stroke-width="2"/><circle cx="18" cy="28" r="4.5" fill="#F59E0B" stroke="#fff" stroke-width="1.5"/></svg></span><span class="sname">Three Voices</span></a></li>
-    <li><a href="#world-3"><span class="num">3</span><span class="stop-emb"><svg class="emb" viewBox="0 0 36 36" aria-hidden="true" focusable="false"><linearGradient id="w3a" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#C084FC"/><stop offset="100%" stop-color="#9333EA"/></linearGradient><linearGradient id="w3b" x1="100%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#FFFC00"/><stop offset="100%" stop-color="#F59E0B"/></linearGradient><line x1="6" y1="6" x2="30" y2="30" stroke="url(#w3a)" stroke-width="3.2" stroke-linecap="round"/><line x1="30" y1="6" x2="6" y2="30" stroke="url(#w3b)" stroke-width="3.2" stroke-linecap="round"/><polygon points="30,30 24,29 29,24" fill="#C084FC"/><polygon points="6,30 12,29 7,24" fill="#FFFC00"/><circle cx="18" cy="18" r="3" fill="#fff"/><circle cx="18" cy="18" r="6" fill="none" stroke="#FFFC00" stroke-width="1.2" opacity="0.8"/></svg></span><span class="sname">Vectors</span></a></li>
-    <li><a href="#world-4"><span class="num">4</span><span class="stop-emb"><svg class="emb" viewBox="0 0 36 36" aria-hidden="true" focusable="false"><linearGradient id="w4g" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#FB7185"/><stop offset="100%" stop-color="#E11D48"/></linearGradient><path d="M18 9 C13 7 7 7 4 8 L4 26 C8 25 13 25 18 28 C23 25 28 25 32 26 L32 8 C29 7 23 7 18 9 Z" fill="url(#w4g)" stroke="#fff" stroke-width="1.5"/><line x1="18" y1="9" x2="18" y2="28" stroke="#FFE4E6" stroke-width="2"/><polygon points="18,14 14,21 22,21" fill="#FFFC00" stroke="#000" stroke-width="1"/></svg></span><span class="sname">The Thesaurus</span></a></li>
-    <li><a href="#world-5"><span class="num">5</span><span class="stop-emb"><svg class="emb" viewBox="0 0 36 36" aria-hidden="true" focusable="false"><linearGradient id="w5g" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#FFFFFF"/><stop offset="40%" stop-color="#67E8F9"/><stop offset="100%" stop-color="#0E7490"/></linearGradient><line x1="3" y1="13" x2="33" y2="13" stroke="#22D3EE" stroke-width="2" stroke-dasharray="3 1"/><polygon points="18,6 23,13 13,13" fill="#fff" stroke="#67E8F9" stroke-width="1.2"/><polygon points="13,13 23,13 27,29 9,29" fill="url(#w5g)" stroke="#0891B2" stroke-width="1.5"/><path d="M12 32 Q18 35 24 32" stroke="#06B6D4" stroke-width="1.5" fill="none" opacity="0.6" stroke-linecap="round"/></svg></span><span class="sname">Underneath</span></a></li>
-    <li><a href="#world-6"><span class="num">6</span><span class="stop-emb"><svg class="emb" viewBox="0 0 36 36" aria-hidden="true" focusable="false"><linearGradient id="w6g" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#34D399"/><stop offset="100%" stop-color="#059669"/></linearGradient><circle cx="18" cy="6" r="3.5" fill="#FFFC00" stroke="#fff" stroke-width="1"/><path d="M18 9.5 V16 M18 16 L9 26 M18 16 L27 26" stroke="#34D399" stroke-width="2.5" stroke-linecap="round" fill="none"/><circle cx="9" cy="27" r="4" fill="url(#w6g)" stroke="#fff" stroke-width="1.2"/><circle cx="27" cy="27" r="4" fill="url(#w6g)" stroke="#fff" stroke-width="1.2"/><line x1="12.5" y1="24" x2="23.5" y2="24" stroke="#FFFC00" stroke-width="1.5" stroke-dasharray="2 2"/></svg></span><span class="sname">The Plan</span></a></li>
-    <li><a href="#world-7"><span class="num">7</span><span class="stop-emb"><svg class="emb" viewBox="0 0 36 36" aria-hidden="true" focusable="false"><radialGradient id="w7g" cx="50%" cy="100%" r="80%"><stop offset="0%" stop-color="#FFFC00"/><stop offset="60%" stop-color="#F59E0B"/><stop offset="100%" stop-color="#D97706"/></radialGradient><path d="M7 23 A11 11 0 0 1 29 23 Z" fill="url(#w7g)" stroke="#FFFC00" stroke-width="1.5"/><line x1="3" y1="23" x2="33" y2="23" stroke="#FDE68A" stroke-width="2.5" stroke-linecap="round"/><g stroke="#FFFC00" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="5" x2="18" y2="9"/><line x1="8" y1="9" x2="11" y2="12"/><line x1="28" y1="9" x2="25" y2="12"/><line x1="31" y1="17" x2="27" y2="18"/><line x1="5" y1="17" x2="9" y2="18"/></g></svg></span><span class="sname">Autonomy</span></a></li>
-  </ol>
-  </nav>
-
-<section class="card world" id="world-1" aria-labelledby="world-1-title">
-  <p class="kicker">World 1 of 7 · Week 1 · Invisible</p>
-  <h2 id="world-1-title"><span class="emb-wrap"><svg class="emb" viewBox="0 0 36 36" aria-hidden="true" focusable="false"><linearGradient id="w1g" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#FFA000"/><stop offset="100%" stop-color="#FF3D00"/></linearGradient><g stroke="url(#w1g)" stroke-width="3" stroke-linecap="round"><line x1="8" y1="8" x2="8" y2="28"/><line x1="14" y1="8" x2="14" y2="28"/><line x1="20" y1="8" x2="20" y2="28"/><line x1="26" y1="8" x2="26" y2="28"/></g><line x1="4" y1="24" x2="30" y2="12" stroke="#FFFC00" stroke-width="2.5" stroke-linecap="round"/><circle cx="31" cy="11" r="2.5" fill="#FFFC00"/></svg></span>Hunger</h2>
-  <p class="intro">Every person needs small signs that they are seen: a hello, a smile, a nod, even a cross look. Transactional Analysis calls these signs strokes. This world is about noticing them. Which ones do you give? Which ones do you take? What happens when you go without?</p>
-  <p class="why"><span class="label">Why it comes here:</span> This world comes first because nothing else makes sense until you can see the small moments between people. Strokes are the first thing to notice.</p>
-  <p class="can">After this world you can tell a warm nod from a cold one, and notice what a day with almost none costs you.</p>
-  <p class="boss-line">Sunday boss: <strong>The Stroke Economy</strong>: break the five unwritten rules people use to hand out nods, and say who benefits from them</p>
+<style>#world-1 { --wc: #ff9500; }#world-2 { --wc: #00e5ff; }#world-3 { --wc: #a855f7; }#world-4 { --wc: #f43f5e; }#world-5 { --wc: #06b6d4; }#world-6 { --wc: #10b981; }#world-7 { --wc: #f59e0b; }</style>
+<section class="card world" id="world-1" aria-labelledby="world-1-title" hidden>
+  <a class="back" href="#home">The map</a>
+  <p class="kicker">World 1 of 7</p>
+  <div class="head"><span class="emb-wrap"><svg class="emb" viewBox="0 0 36 36" aria-hidden="true" focusable="false"><linearGradient id="w1g" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#FFA000"/><stop offset="100%" stop-color="#FF3D00"/></linearGradient><g stroke="url(#w1g)" stroke-width="3" stroke-linecap="round"><line x1="8" y1="8" x2="8" y2="28"/><line x1="14" y1="8" x2="14" y2="28"/><line x1="20" y1="8" x2="20" y2="28"/><line x1="26" y1="8" x2="26" y2="28"/></g><line x1="4" y1="24" x2="30" y2="12" stroke="#FFFC00" stroke-width="2.5" stroke-linecap="round"/><circle cx="31" cy="11" r="2.5" fill="#FFFC00"/></svg></span><h2 id="world-1-title">Being Noticed</h2></div>
+  <p class="intro">Every person needs small signs that they matter: a hello, a smile, a nod, even a cross look. Psychologists call these signs strokes. This world is about spotting them. Which ones do you give, which ones do you take, and what does a day with almost none feel like?</p>
+  <div class="box"><span class="label">Why it comes here</span>This world comes first because the rest of the game is built on small moments between people. Strokes are the first thing to notice.</div>
+  <div class="box"><span class="label">After this world you can</span>tell a warm nod from a cold one, and notice what a day with almost none costs you.</div>
+  <p class="boss-line">Final challenge: <strong>The Stroke Economy</strong>: break the five unwritten rules people use to hand out nods, and say who benefits from them</p>
   <ol class="chips">
     <li class="chip"><span class="slot">1.1</span><a href="https://vaibhav-labs.github.io/TA/arena/1-1.html">Spinal Cord</a></li>
     <li class="chip"><span class="slot">1.2</span><a href="https://vaibhav-labs.github.io/TA/arena/1-2.html">Stroke Sorter</a></li>
@@ -253,15 +203,16 @@
     <li class="chip"><span class="slot">1.5</span><a href="https://vaibhav-labs.github.io/TA/arena/1-5.html">PTA Three Ways</a></li>
     <li class="chip boss"><span class="slot">1.6</span><a href="https://vaibhav-labs.github.io/TA/arena/1-6.html">Boss: The Stroke Economy</a><span class="boss-tag">Boss</span></li>
   </ol>
+  <nav class="worldnav" aria-label="Worlds"><a class="prev" href="#home">← The map</a><a class="next" href="#world-2">Who’s Talking →</a></nav>
 </section>
-<div class="leads"><span>leads to</span><svg class="arrow" viewBox="0 0 20 30" aria-hidden="true" focusable="false"><path d="M10 1v23M3.5 17.5 10 24l6.5-6.5"/></svg></div>
-<section class="card world" id="world-2" aria-labelledby="world-2-title">
-  <p class="kicker">World 2 of 7 · Week 2 · Three Voices</p>
-  <h2 id="world-2-title"><span class="emb-wrap"><svg class="emb" viewBox="0 0 36 36" aria-hidden="true" focusable="false"><line x1="18" y1="6" x2="18" y2="30" stroke="rgba(255,255,255,0.3)" stroke-width="2" stroke-dasharray="2 2"/><circle cx="18" cy="8" r="4.5" fill="#F43F5E" stroke="#fff" stroke-width="1.5"/><circle cx="18" cy="18" r="6" fill="#06B6D4" stroke="#FFFC00" stroke-width="2"/><circle cx="18" cy="28" r="4.5" fill="#F59E0B" stroke="#fff" stroke-width="1.5"/></svg></span>Three Voices</h2>
-  <p class="intro">Inside each of us there are three voices. The Boss repeats the rules we were taught as children. The Pilot works out what is true today. The Kid feels and wants, the way it did when we were small. In this world you learn to hear which voice is speaking.</p>
-  <p class="why"><span class="label">Why it comes here:</span> This world comes second because once you can see the moments between people, the next question is who is talking. The same words can come from any of the three voices.</p>
-  <p class="can">After this world you can name which voice is talking, from the words, the tone and the posture.</p>
-  <p class="boss-line">Sunday boss: <strong>The Contaminated Adult</strong>: spot a Boss leak or a Kid leak in a sensible-sounding room, and bring it back to facts</p>
+<section class="card world" id="world-2" aria-labelledby="world-2-title" hidden>
+  <a class="back" href="#home">The map</a>
+  <p class="kicker">World 2 of 7</p>
+  <div class="head"><span class="emb-wrap"><svg class="emb" viewBox="0 0 36 36" aria-hidden="true" focusable="false"><line x1="18" y1="6" x2="18" y2="30" stroke="rgba(255,255,255,0.3)" stroke-width="2" stroke-dasharray="2 2"/><circle cx="18" cy="8" r="4.5" fill="#F43F5E" stroke="#fff" stroke-width="1.5"/><circle cx="18" cy="18" r="6" fill="#06B6D4" stroke="#FFFC00" stroke-width="2"/><circle cx="18" cy="28" r="4.5" fill="#F59E0B" stroke="#fff" stroke-width="1.5"/></svg></span><h2 id="world-2-title">Who’s Talking</h2></div>
+  <p class="intro">Inside each of us there are three voices. The Boss repeats the rules we were taught as children. The Pilot works out what is true today. The Kid feels and wants, the way it did when we were small. This world trains your ear to hear which one is speaking.</p>
+  <div class="box"><span class="label">Why it comes here</span>This world comes second because once you can see the small moments between people, the next question is who is talking. The same words can come from any of the three voices.</div>
+  <div class="box"><span class="label">After this world you can</span>name which voice is talking, from the words, the tone and the posture.</div>
+  <p class="boss-line">Final challenge: <strong>The Contaminated Adult</strong>: spot a Boss leak or a Kid leak in a sensible-sounding room, and bring it back to facts</p>
   <ol class="chips">
     <li class="chip"><span class="slot">2.1</span><a href="https://vaibhav-labs.github.io/TA/arena/2-1.html">Who Said That</a></li>
     <li class="chip"><span class="slot">2.2</span><a href="https://vaibhav-labs.github.io/TA/arena/2-2.html">Five Faces</a></li>
@@ -270,15 +221,16 @@
     <li class="chip"><span class="slot">2.5</span><a href="https://vaibhav-labs.github.io/TA/arena/2-5.html">Little Professor</a></li>
     <li class="chip boss"><span class="slot">2.6</span><a href="https://vaibhav-labs.github.io/TA/arena/2-6.html">Boss: The Contaminated Adult</a><span class="boss-tag">Boss</span></li>
   </ol>
+  <nav class="worldnav" aria-label="Worlds"><a class="prev" href="#world-1">← Being Noticed</a><a class="next" href="#world-3">Back and Forth →</a></nav>
 </section>
-<div class="leads"><span>leads to</span><svg class="arrow" viewBox="0 0 20 30" aria-hidden="true" focusable="false"><path d="M10 1v23M3.5 17.5 10 24l6.5-6.5"/></svg></div>
-<section class="card world" id="world-3" aria-labelledby="world-3-title">
-  <p class="kicker">World 3 of 7 · Week 3 · Volleys</p>
-  <h2 id="world-3-title"><span class="emb-wrap"><svg class="emb" viewBox="0 0 36 36" aria-hidden="true" focusable="false"><linearGradient id="w3a" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#C084FC"/><stop offset="100%" stop-color="#9333EA"/></linearGradient><linearGradient id="w3b" x1="100%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#FFFC00"/><stop offset="100%" stop-color="#F59E0B"/></linearGradient><line x1="6" y1="6" x2="30" y2="30" stroke="url(#w3a)" stroke-width="3.2" stroke-linecap="round"/><line x1="30" y1="6" x2="6" y2="30" stroke="url(#w3b)" stroke-width="3.2" stroke-linecap="round"/><polygon points="30,30 24,29 29,24" fill="#C084FC"/><polygon points="6,30 12,29 7,24" fill="#FFFC00"/><circle cx="18" cy="18" r="3" fill="#fff"/><circle cx="18" cy="18" r="6" fill="none" stroke="#FFFC00" stroke-width="1.2" opacity="0.8"/></svg></span>Vectors</h2>
-  <p class="intro">A vector is an arrow that shows a direction. In this world every line you hear is an arrow: it starts with one voice and lands on another. Some arrows land where they were aimed. Others cross over and land somewhere else. This world teaches you to draw the arrows and see where they go.</p>
-  <p class="why"><span class="label">Why it comes here:</span> This world comes third because you need the three voices to know where each arrow starts. Only then can you see where it lands.</p>
-  <p class="can">After this world you can draw the arrow for any line, and say whether the reply matches it or cuts across it.</p>
-  <p class="boss-line">Sunday boss: <strong>The Salesman</strong>: find the sting in a friendly sales line, and answer both of its targets</p>
+<section class="card world" id="world-3" aria-labelledby="world-3-title" hidden>
+  <a class="back" href="#home">The map</a>
+  <p class="kicker">World 3 of 7</p>
+  <div class="head"><span class="emb-wrap"><svg class="emb" viewBox="0 0 36 36" aria-hidden="true" focusable="false"><linearGradient id="w3a" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#C084FC"/><stop offset="100%" stop-color="#9333EA"/></linearGradient><linearGradient id="w3b" x1="100%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#FFFC00"/><stop offset="100%" stop-color="#F59E0B"/></linearGradient><line x1="6" y1="6" x2="30" y2="30" stroke="url(#w3a)" stroke-width="3.2" stroke-linecap="round"/><line x1="30" y1="6" x2="6" y2="30" stroke="url(#w3b)" stroke-width="3.2" stroke-linecap="round"/><polygon points="30,30 24,29 29,24" fill="#C084FC"/><polygon points="6,30 12,29 7,24" fill="#FFFC00"/><circle cx="18" cy="18" r="3" fill="#fff"/><circle cx="18" cy="18" r="6" fill="none" stroke="#FFFC00" stroke-width="1.2" opacity="0.8"/></svg></span><h2 id="world-3-title">Back and Forth</h2></div>
+  <p class="intro">Every conversation is a string of throws and catches. One person says something aimed at one of your voices, and you answer from one of yours. Some replies keep the talk going. Others cut it off. This world shows you where each line is aimed and where the answer comes from.</p>
+  <div class="box"><span class="label">Why it comes here</span>This world comes third because you need to know the three voices first. Only then can you tell where a line starts and where it lands.</div>
+  <div class="box"><span class="label">After this world you can</span>draw the arrow for any line, and say whether the reply matches it or cuts across it.</div>
+  <p class="boss-line">Final challenge: <strong>The Salesman</strong>: find the sting in a friendly sales line, and answer both of its targets</p>
   <ol class="chips">
     <li class="chip"><span class="slot">3.1</span><a href="https://vaibhav-labs.github.io/TA/arena/3-1.html">Draw the Arrow</a></li>
     <li class="chip"><span class="slot">3.2</span><a href="https://vaibhav-labs.github.io/TA/arena/3-2.html">Keep It Going</a></li>
@@ -287,15 +239,16 @@
     <li class="chip"><span class="slot">3.5</span><a href="https://vaibhav-labs.github.io/TA/arena/3-5.html">The Barn</a></li>
     <li class="chip boss"><span class="slot">3.6</span><a href="https://vaibhav-labs.github.io/TA/arena/3-6.html">Boss: The Salesman</a><span class="boss-tag">Boss</span></li>
   </ol>
+  <nav class="worldnav" aria-label="Worlds"><a class="prev" href="#world-2">← Who’s Talking</a><a class="next" href="#world-4">Conversation Traps →</a></nav>
 </section>
-<div class="leads"><span>leads to</span><svg class="arrow" viewBox="0 0 20 30" aria-hidden="true" focusable="false"><path d="M10 1v23M3.5 17.5 10 24l6.5-6.5"/></svg></div>
-<section class="card world" id="world-4" aria-labelledby="world-4-title">
-  <p class="kicker">World 4 of 7 · Week 4 · Traps</p>
-  <h2 id="world-4-title"><span class="emb-wrap"><svg class="emb" viewBox="0 0 36 36" aria-hidden="true" focusable="false"><linearGradient id="w4g" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#FB7185"/><stop offset="100%" stop-color="#E11D48"/></linearGradient><path d="M18 9 C13 7 7 7 4 8 L4 26 C8 25 13 25 18 28 C23 25 28 25 32 26 L32 8 C29 7 23 7 18 9 Z" fill="url(#w4g)" stroke="#fff" stroke-width="1.5"/><line x1="18" y1="9" x2="18" y2="28" stroke="#FFE4E6" stroke-width="2"/><polygon points="18,14 14,21 22,21" fill="#FFFC00" stroke="#000" stroke-width="1"/></svg></span>The Thesaurus</h2>
-  <p class="intro">A thesaurus is a list of words that belong together. This world is a list of the repeating patterns that people fall into, and in this world we call them traps. Each trap has a hook, a switch and a payoff. You learn to spot which trap is running.</p>
-  <p class="why"><span class="label">Why it comes here:</span> This world comes fourth because once you can follow a line and its reply, you can notice when the same exchange keeps coming back. A repeating exchange is a trap, and this world gives each one a name.</p>
-  <p class="can">After this world you can tell a trap from real talk by listening for the hook, the switch and what the trap pays.</p>
-  <p class="boss-line">Sunday boss: <strong>Why Don’t You, Yes But</strong>: step out of a loop of yes-buts without leaving the room</p>
+<section class="card world" id="world-4" aria-labelledby="world-4-title" hidden>
+  <a class="back" href="#home">The map</a>
+  <p class="kicker">World 4 of 7</p>
+  <div class="head"><span class="emb-wrap"><svg class="emb" viewBox="0 0 36 36" aria-hidden="true" focusable="false"><linearGradient id="w4g" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#FB7185"/><stop offset="100%" stop-color="#E11D48"/></linearGradient><path d="M18 9 C13 7 7 7 4 8 L4 26 C8 25 13 25 18 28 C23 25 28 25 32 26 L32 8 C29 7 23 7 18 9 Z" fill="url(#w4g)" stroke="#fff" stroke-width="1.5"/><line x1="18" y1="9" x2="18" y2="28" stroke="#FFE4E6" stroke-width="2"/><polygon points="18,14 14,21 22,21" fill="#FFFC00" stroke="#000" stroke-width="1"/></svg></span><h2 id="world-4-title">Conversation Traps</h2></div>
+  <p class="intro">Some arguments and awkward chats keep coming back with new faces and the same ending. Psychologists call them games. Here we call them traps, because each one has a hook, a switch and a payoff that nobody wanted. You learn to spot the trap and step out of it.</p>
+  <div class="box"><span class="label">Why it comes here</span>This world comes fourth because once you can follow a line and its reply, you can notice when the same exchange keeps coming back. A repeating exchange is a trap, and this world gives each one a name.</div>
+  <div class="box"><span class="label">After this world you can</span>tell a trap from real talk by listening for the hook, the switch and what the trap pays.</div>
+  <p class="boss-line">Final challenge: <strong>Why Don’t You, Yes But</strong>: step out of a loop of yes-buts without leaving the room</p>
   <ol class="chips">
     <li class="chip"><span class="slot">4.1</span><a href="https://vaibhav-labs.github.io/TA/arena/4-1.html">Is It a Game?</a></li>
     <li class="chip"><span class="slot">4.2</span><a href="https://vaibhav-labs.github.io/TA/arena/4-2.html">Formula G</a></li>
@@ -304,15 +257,16 @@
     <li class="chip"><span class="slot">4.5</span><a href="https://vaibhav-labs.github.io/TA/arena/4-5.html">Room Games</a></li>
     <li class="chip boss"><span class="slot">4.6</span><a href="https://vaibhav-labs.github.io/TA/arena/4-6.html">Boss: Why Don’t You–Yes But</a><span class="boss-tag">Boss</span></li>
   </ol>
+  <nav class="worldnav" aria-label="Worlds"><a class="prev" href="#world-3">← Back and Forth</a><a class="next" href="#world-5">Under the Surface →</a></nav>
 </section>
-<div class="leads"><span>leads to</span><svg class="arrow" viewBox="0 0 20 30" aria-hidden="true" focusable="false"><path d="M10 1v23M3.5 17.5 10 24l6.5-6.5"/></svg></div>
-<section class="card world" id="world-5" aria-labelledby="world-5-title">
-  <p class="kicker">World 5 of 7 · Week 5 · Underneath</p>
-  <h2 id="world-5-title"><span class="emb-wrap"><svg class="emb" viewBox="0 0 36 36" aria-hidden="true" focusable="false"><linearGradient id="w5g" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#FFFFFF"/><stop offset="40%" stop-color="#67E8F9"/><stop offset="100%" stop-color="#0E7490"/></linearGradient><line x1="3" y1="13" x2="33" y2="13" stroke="#22D3EE" stroke-width="2" stroke-dasharray="3 1"/><polygon points="18,6 23,13 13,13" fill="#fff" stroke="#67E8F9" stroke-width="1.2"/><polygon points="13,13 23,13 27,29 9,29" fill="url(#w5g)" stroke="#0891B2" stroke-width="1.5"/><path d="M12 32 Q18 35 24 32" stroke="#06B6D4" stroke-width="1.5" fill="none" opacity="0.6" stroke-linecap="round"/></svg></span>Underneath</h2>
-  <p class="intro">Under many traps is a feeling that does not fit the moment: a sting, a grudge, a guilt that never goes away. Some people save these feelings like stamps, to cash them in later. In this world you learn to tell a real feeling from a stand-in one.</p>
-  <p class="why"><span class="label">Why it comes here:</span> This world comes fifth because you can only find the real feeling once you have spotted the trap that is covering it.</p>
-  <p class="can">After this world you can tell a real feeling, which finishes something, from a stand-in feeling, which never does.</p>
-  <p class="boss-line">Sunday boss: <strong>The Discount Matrix</strong>: see the kind-sounding line that keeps a trap going, and say what a real step would look like</p>
+<section class="card world" id="world-5" aria-labelledby="world-5-title" hidden>
+  <a class="back" href="#home">The map</a>
+  <p class="kicker">World 5 of 7</p>
+  <div class="head"><span class="emb-wrap"><svg class="emb" viewBox="0 0 36 36" aria-hidden="true" focusable="false"><linearGradient id="w5g" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#FFFFFF"/><stop offset="40%" stop-color="#67E8F9"/><stop offset="100%" stop-color="#0E7490"/></linearGradient><line x1="3" y1="13" x2="33" y2="13" stroke="#22D3EE" stroke-width="2" stroke-dasharray="3 1"/><polygon points="18,6 23,13 13,13" fill="#fff" stroke="#67E8F9" stroke-width="1.2"/><polygon points="13,13 23,13 27,29 9,29" fill="url(#w5g)" stroke="#0891B2" stroke-width="1.5"/><path d="M12 32 Q18 35 24 32" stroke="#06B6D4" stroke-width="1.5" fill="none" opacity="0.6" stroke-linecap="round"/></svg></span><h2 id="world-5-title">Under the Surface</h2></div>
+  <p class="intro">Under many traps is a feeling that does not fit the moment: a sting, a grudge, a guilt that never goes away. Some people save these feelings like loyalty stamps, to cash in later. This world teaches you to tell a real feeling from a stand-in one.</p>
+  <div class="box"><span class="label">Why it comes here</span>This world comes fifth because you can only find the real feeling once you have spotted the trap that is covering it.</div>
+  <div class="box"><span class="label">After this world you can</span>tell a real feeling, which finishes something, from a stand-in feeling, which never does.</div>
+  <p class="boss-line">Final challenge: <strong>The Discount Matrix</strong>: see the kind-sounding line that keeps a trap going, and say what a real step would look like</p>
   <ol class="chips">
     <li class="chip"><span class="slot">5.1</span><a href="https://vaibhav-labs.github.io/TA/arena/5-1.html">Real or Racket</a></li>
     <li class="chip"><span class="slot">5.2</span><a href="https://vaibhav-labs.github.io/TA/arena/5-2.html">Stamp Book</a></li>
@@ -321,15 +275,16 @@
     <li class="chip"><span class="slot">5.5</span><a href="https://vaibhav-labs.github.io/TA/arena/5-5.html">Two Halves</a></li>
     <li class="chip boss"><span class="slot">5.6</span><a href="https://vaibhav-labs.github.io/TA/arena/5-6.html">Boss: The Discount Matrix</a><span class="boss-tag">Boss</span></li>
   </ol>
+  <nav class="worldnav" aria-label="Worlds"><a class="prev" href="#world-4">← Conversation Traps</a><a class="next" href="#world-6">The Story You Wrote →</a></nav>
 </section>
-<div class="leads"><span>leads to</span><svg class="arrow" viewBox="0 0 20 30" aria-hidden="true" focusable="false"><path d="M10 1v23M3.5 17.5 10 24l6.5-6.5"/></svg></div>
-<section class="card world" id="world-6" aria-labelledby="world-6-title">
-  <p class="kicker">World 6 of 7 · Week 6 · The Plan</p>
-  <h2 id="world-6-title"><span class="emb-wrap"><svg class="emb" viewBox="0 0 36 36" aria-hidden="true" focusable="false"><linearGradient id="w6g" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#34D399"/><stop offset="100%" stop-color="#059669"/></linearGradient><circle cx="18" cy="6" r="3.5" fill="#FFFC00" stroke="#fff" stroke-width="1"/><path d="M18 9.5 V16 M18 16 L9 26 M18 16 L27 26" stroke="#34D399" stroke-width="2.5" stroke-linecap="round" fill="none"/><circle cx="9" cy="27" r="4" fill="url(#w6g)" stroke="#fff" stroke-width="1.2"/><circle cx="27" cy="27" r="4" fill="url(#w6g)" stroke="#fff" stroke-width="1.2"/><line x1="12.5" y1="24" x2="23.5" y2="24" stroke="#FFFC00" stroke-width="1.5" stroke-dasharray="2 2"/></svg></span>The Plan</h2>
-  <p class="intro">Many people live by a plan they made as children. It tells them what they must do, what they must never do, and how their life should end. When the same traps keep coming back, the plan is usually behind them. In this world you learn to read the plan.</p>
-  <p class="why"><span class="label">Why it comes here:</span> This world comes sixth because the traps add up to a plan. You need to know the traps before you can see the plan they build.</p>
-  <p class="can">After this world you can hear the rule running under a line, and read the plan a life story is following.</p>
-  <p class="boss-line">Sunday boss: <strong>The Script Matrix</strong>: place a life story’s rules and plan on one board, and suggest a new line that can be acted on this month</p>
+<section class="card world" id="world-6" aria-labelledby="world-6-title" hidden>
+  <a class="back" href="#home">The map</a>
+  <p class="kicker">World 6 of 7</p>
+  <div class="head"><span class="emb-wrap"><svg class="emb" viewBox="0 0 36 36" aria-hidden="true" focusable="false"><linearGradient id="w6g" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#34D399"/><stop offset="100%" stop-color="#059669"/></linearGradient><circle cx="18" cy="6" r="3.5" fill="#FFFC00" stroke="#fff" stroke-width="1"/><path d="M18 9.5 V16 M18 16 L9 26 M18 16 L27 26" stroke="#34D399" stroke-width="2.5" stroke-linecap="round" fill="none"/><circle cx="9" cy="27" r="4" fill="url(#w6g)" stroke="#fff" stroke-width="1.2"/><circle cx="27" cy="27" r="4" fill="url(#w6g)" stroke="#fff" stroke-width="1.2"/><line x1="12.5" y1="24" x2="23.5" y2="24" stroke="#FFFC00" stroke-width="1.5" stroke-dasharray="2 2"/></svg></span><h2 id="world-6-title">The Story You Wrote</h2></div>
+  <p class="intro">Many people live by a plan they made as children. It says what they must do, what they must never do, and how their story should end. When the same traps keep coming back, that plan is usually behind them. This world teaches you to read it.</p>
+  <div class="box"><span class="label">Why it comes here</span>This world comes sixth because the traps add up to a plan. You need to know the traps before you can see the plan they build.</div>
+  <div class="box"><span class="label">After this world you can</span>hear the rule running under a line, and read the plan a life story is following.</div>
+  <p class="boss-line">Final challenge: <strong>The Script Matrix</strong>: place a life story’s rules and plan on one board, and suggest a new line that can be acted on this month</p>
   <ol class="chips">
     <li class="chip"><span class="slot">6.1</span><a href="https://vaibhav-labs.github.io/TA/arena/6-1.html">OK Corral</a></li>
     <li class="chip"><span class="slot">6.2</span><a href="https://vaibhav-labs.github.io/TA/arena/6-2.html">Hear the Driver</a></li>
@@ -338,15 +293,16 @@
     <li class="chip"><span class="slot">6.5</span><a href="https://vaibhav-labs.github.io/TA/arena/6-5.html">Script Process</a></li>
     <li class="chip boss"><span class="slot">6.6</span><a href="https://vaibhav-labs.github.io/TA/arena/6-6.html">Boss: The Script Matrix</a><span class="boss-tag">Boss</span></li>
   </ol>
+  <nav class="worldnav" aria-label="Worlds"><a class="prev" href="#world-5">← Under the Surface</a><a class="next" href="#world-7">Free to Choose →</a></nav>
 </section>
-<div class="leads"><span>leads to</span><svg class="arrow" viewBox="0 0 20 30" aria-hidden="true" focusable="false"><path d="M10 1v23M3.5 17.5 10 24l6.5-6.5"/></svg></div>
-<section class="card world" id="world-7" aria-labelledby="world-7-title">
-  <p class="kicker">World 7 of 7 · Week 7 · Your Own Person</p>
-  <h2 id="world-7-title"><span class="emb-wrap"><svg class="emb" viewBox="0 0 36 36" aria-hidden="true" focusable="false"><radialGradient id="w7g" cx="50%" cy="100%" r="80%"><stop offset="0%" stop-color="#FFFC00"/><stop offset="60%" stop-color="#F59E0B"/><stop offset="100%" stop-color="#D97706"/></radialGradient><path d="M7 23 A11 11 0 0 1 29 23 Z" fill="url(#w7g)" stroke="#FFFC00" stroke-width="1.5"/><line x1="3" y1="23" x2="33" y2="23" stroke="#FDE68A" stroke-width="2.5" stroke-linecap="round"/><g stroke="#FFFC00" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="5" x2="18" y2="9"/><line x1="8" y1="9" x2="11" y2="12"/><line x1="28" y1="9" x2="25" y2="12"/><line x1="31" y1="17" x2="27" y2="18"/><line x1="5" y1="17" x2="9" y2="18"/></g></svg></span>Autonomy</h2>
-  <p class="intro">Autonomy means being free to choose your own moves, instead of running the moves you learned as a child. In this world you learn to help without rescuing, to make clear agreements, to say yes with a safety net, and to pick the response that is truly yours.</p>
-  <p class="why"><span class="label">Why it comes here:</span> This world comes last because once you can see your plan, you can change it. The worlds before this one help you see. This one helps you act.</p>
-  <p class="can">After this world you can help without rescuing, make clear agreements, and keep a hard conversation honest.</p>
-  <p class="boss-line">Sunday boss: <strong>After Games, What?</strong>: keep a candid conversation real for six turns, without rescuing or blaming anyone</p>
+<section class="card world" id="world-7" aria-labelledby="world-7-title" hidden>
+  <a class="back" href="#home">The map</a>
+  <p class="kicker">World 7 of 7</p>
+  <div class="head"><span class="emb-wrap"><svg class="emb" viewBox="0 0 36 36" aria-hidden="true" focusable="false"><radialGradient id="w7g" cx="50%" cy="100%" r="80%"><stop offset="0%" stop-color="#FFFC00"/><stop offset="60%" stop-color="#F59E0B"/><stop offset="100%" stop-color="#D97706"/></radialGradient><path d="M7 23 A11 11 0 0 1 29 23 Z" fill="url(#w7g)" stroke="#FFFC00" stroke-width="1.5"/><line x1="3" y1="23" x2="33" y2="23" stroke="#FDE68A" stroke-width="2.5" stroke-linecap="round"/><g stroke="#FFFC00" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="5" x2="18" y2="9"/><line x1="8" y1="9" x2="11" y2="12"/><line x1="28" y1="9" x2="25" y2="12"/><line x1="31" y1="17" x2="27" y2="18"/><line x1="5" y1="17" x2="9" y2="18"/></g></svg></span><h2 id="world-7-title">Free to Choose</h2></div>
+  <p class="intro">Being free means choosing your own moves instead of replaying the ones you learned as a child. In this world you learn to help without rescuing, make clear agreements, say yes with a safety net, and pick the reply that is truly yours.</p>
+  <div class="box"><span class="label">Why it comes here</span>This world comes last because once you can see your plan, you can change it. The worlds before this one help you see. This one helps you act.</div>
+  <div class="box"><span class="label">After this world you can</span>help without rescuing, make clear agreements, and keep a hard conversation honest.</div>
+  <p class="boss-line">Final challenge: <strong>After Games, What?</strong>: keep a candid conversation real for six turns, without rescuing or blaming anyone</p>
   <ol class="chips">
     <li class="chip"><span class="slot">7.1</span><a href="https://vaibhav-labs.github.io/TA/arena/7-1.html">Help or Rescue</a></li>
     <li class="chip"><span class="slot">7.2</span><a href="https://vaibhav-labs.github.io/TA/arena/7-2.html">The Contract</a></li>
@@ -355,13 +311,28 @@
     <li class="chip"><span class="slot">7.5</span><a href="https://vaibhav-labs.github.io/TA/arena/7-5.html">Awareness, Spontaneity, Intimacy</a></li>
     <li class="chip boss"><span class="slot">7.6</span><a href="https://vaibhav-labs.github.io/TA/arena/7-6.html">After Games, What?</a><span class="boss-tag">Boss</span></li>
   </ol>
+  <nav class="worldnav" aria-label="Worlds"><a class="prev" href="#world-6">← The Story You Wrote</a><a class="next" href="#home">Back to the map</a></nav>
 </section>
-
-  <footer class="foot">
-    <p>Start at 1.1 and go in order. Each game takes about ten minutes.</p>
-  </footer>
 </div>
 
+<script>
+(function () {
+  "use strict";
+  var home = document.getElementById("view-home");
+  var worlds = document.querySelectorAll("section.world");
+  function route() {
+    var m = /^#world-([1-7])$/.exec(window.location.hash || "");
+    home.hidden = !!m;
+    Array.prototype.forEach.call(worlds, function (s) { s.hidden = !(m && s.id === "world-" + m[1]); });
+    var t = document.querySelector(m ? "#world-" + m[1] + "-title" : "h1");
+    document.title = m && t ? t.textContent + " · You" : "You";
+    window.scrollTo(0, 0);
+    if (t) { t.setAttribute("tabindex", "-1"); try { t.focus({ preventScroll: true }); } catch (e) { t.focus(); } }
+  }
+  window.addEventListener("hashchange", route);
+  route();
+})();
+</script>
 <script>if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('sw.js',{scope:'/TA/arena/'}).catch(function(){});});}</script>
 </body>
 </html>

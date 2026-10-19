@@ -878,10 +878,15 @@
     bindNext(advance);
   }
 
+  function worldHub() {
+    var h = safeUrl(NAV.hub);
+    return h && GAME && GAME.world ? h.replace(/#.*$/, "") + "#world-" + GAME.world : h;
+  }
+
   function renderEnd() {
-    var hub = safeUrl(NAV.hub);
+    var hub = worldHub();
     var nxt = NAV.next || null;
-    var links = hub ? '<a class="next" href="' + esc(hub) + '">All games</a>' : "";
+    var links = hub ? '<a class="next" href="' + esc(hub) + '">Back to the world</a>' : "";
     if (nxt) {
       var nxtUrl = safeUrl(nxt.url);
       links += nxtUrl
@@ -908,8 +913,9 @@
       return;
     }
     series.innerHTML = '<span class="emb-wrap">' + ((window.TA_EMB || {})[String(GAME.world)] || "") + '</span>You <small>· World ' + esc(GAME.world) + ' · Game ' + esc(GAME.slot) + '</small>';
-    var hub = safeUrl(NAV.hub);
+    var hub = worldHub();
     if (hub) {
+      hubLink.textContent = "World map";
       hubLink.setAttribute("href", hub);
       hubLink.hidden = false;
     }

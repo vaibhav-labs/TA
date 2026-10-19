@@ -20,7 +20,7 @@ import os
 import re
 import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from emblems import EMBLEMS
+from emblems import EMBLEMS, icon_vars_css
 
 ENGINE = os.path.dirname(os.path.abspath(__file__))
 TA = os.path.dirname(ENGINE)
@@ -657,7 +657,7 @@ def safe_url(u):
     return u if isinstance(u, str) and re.match(r"^https?://", u) else None
 
 
-BOSS_SLOT = 6  # the sixth game in each world is the Sunday boss
+BOSS_SLOT = 6  # the sixth game in each world is the final challenge
 ARROW = ('<svg class="arrow" viewBox="0 0 20 30" aria-hidden="true" focusable="false">'
          '<path d="M10 1v23M3.5 17.5 10 24l6.5-6.5"/></svg>')
 LEADS = f'<div class="leads"><span>leads to</span>{ARROW}</div>'
@@ -686,42 +686,72 @@ def world_html(n, w, games, nav):
     chips = "\n    ".join(chip_html(f"{n}.{k}", games, nav) for k in range(1, 7))
     name, rest = split_boss(w["boss"])
     boss = f"<strong>{plain(name)}</strong>: {plain(rest)}" if name else plain(w["boss"])
+    prev_a = (f'<a class="prev" href="#world-{n-1}">← {plain(INTRO_NAMES[n-1])}</a>' if n > 1
+              else '<a class="prev" href="#home">← The map</a>')
+    next_a = (f'<a class="next" href="#world-{n+1}">{plain(INTRO_NAMES[n+1])} →</a>' if n < 7
+              else '<a class="next" href="#home">Back to the map</a>')
     return (
-        f'<section class="card world" id="world-{n}" aria-labelledby="world-{n}-title">\n'
-        f'  <p class="kicker">World {n} of 7 · Week {n} · {plain(w["weekName"])}</p>\n'
-        f'  <h2 id="world-{n}-title"><span class="emb-wrap">{EMBLEMS[n]}</span>{plain(w["name"])}</h2>\n'
+        f'<section class="card world" id="world-{n}" aria-labelledby="world-{n}-title" hidden>\n'
+        f'  <a class="back" href="#home">The map</a>\n'
+        f'  <p class="kicker">World {n} of 7</p>\n'
+        f'  <div class="head"><span class="emb-wrap">{EMBLEMS[n]}</span><h2 id="world-{n}-title">{plain(w["name"])}</h2></div>\n'
         f'  <p class="intro">{plain(w["intro"])}</p>\n'
-        f'  <p class="why"><span class="label">Why it comes here:</span> {plain(w["why"])}</p>\n'
-        f'  <p class="can">After this world you can {plain(w["can"])}.</p>\n'
-        f'  <p class="boss-line">Sunday boss: {boss}</p>\n'
+        f'  <div class="box"><span class="label">Why it comes here</span>{plain(w["why"])}</div>\n'
+        f'  <div class="box"><span class="label">After this world you can</span>{plain(w["can"])}.</div>\n'
+        f'  <p class="boss-line">Final challenge: {boss}</p>\n'
         f'  <ol class="chips">\n    {chips}\n  </ol>\n'
+        f'  <nav class="worldnav" aria-label="Worlds">{prev_a}{next_a}</nav>\n'
         "</section>")
 
 
+INTRO_NAMES = {}
+PERSON = ('<svg viewBox="0 0 64 64" aria-hidden="true" focusable="false" fill="none" stroke="#fffc00" '
+          'stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">'
+          '<circle cx="32" cy="21" r="9"/><path d="M13 54c1-12 9-18 19-18s18 6 19 18"/></svg>')
+
+
+def map_html(intro):
+    """Seven worlds on a ring around a person, clockwise from the top. Each node opens its world."""
+    import math
+    cx, cy, rx, ry, H = 50.0, 66.0, 36.0, 43.0, 130.0
+    pts = []
+    for i in range(7):
+        a = math.radians(-90 + i * 360 / 7)
+        pts.append((cx + rx * math.cos(a), cy + ry * math.sin(a)))
+    spokes = "".join(f'<line class="spoke" x1="{cx}" y1="{cy}" x2="{x:.2f}" y2="{y:.2f}"/>' for x, y in pts)
+    svg = (f'<svg class="ring" viewBox="0 0 100 130" aria-hidden="true" focusable="false">{spokes}'
+           f'<ellipse class="loop" cx="{cx}" cy="{cy}" rx="{rx}" ry="{ry}"/></svg>')
+    nodes = []
+    for n, (x, y) in zip(WORLD_NUMBERS, pts):
+        start = '<span class="start">Start here</span>' if n == 1 else ""
+        nodes.append(
+            f'<a class="node" id="node-{n}" href="#world-{n}" style="--x:{x:.2f}%;--y:{y / H * 100:.2f}%" '
+            f'aria-label="World {n}: {html.escape(plain(intro[n]["name"]))}">'
+            f'<span class="disc"><span class="emb-wrap">{EMBLEMS[n]}</span></span>'
+            f'<span class="num">{n}</span>{start}<span class="nm">{plain(intro[n]["name"])}</span></a>')
+    colours = "".join(f'#node-{n} {{ --wc: {c}; }}' for n, c in zip(WORLD_NUMBERS, WORLD_COLOURS))
+    return (f'<style>{colours}</style>\n<div class="orbit" style="--cy:{cy / H * 100:.2f}%">{svg}'
+            f'<div class="you" aria-hidden="true">{PERSON}<span>You</span></div>\n' + "\n".join(nodes) + "</div>")
+
+
+WORLD_COLOURS = ["#ff9500", "#00e5ff", "#a855f7", "#f43f5e", "#06b6d4", "#10b981", "#f59e0b"]
+
+
 def worlds_html(games, nav, intro):
-    return "\n".join(
-        world_html(n, intro[n], games, nav) + ("\n" + LEADS if n < 7 else "")
-        for n in WORLD_NUMBERS)
-
-
-def route_html(intro):
-    """The seven numbered stops at the top. Each stop jumps to its world section."""
-    stops = [f'<li><a href="#world-{n}"><span class="num">{n}</span>'
-             f'<span class="stop-emb">{EMBLEMS[n]}</span>'
-             f'<span class="sname">{plain(intro[n]["name"])}</span></a></li>'
-             for n in WORLD_NUMBERS]
-    return '<ol class="route-list">\n    ' + "\n    ".join(stops) + "\n  </ol>"
+    css = "<style>" + "".join(f"#world-{n} {{ --wc: {c}; }}" for n, c in zip(WORLD_NUMBERS, WORLD_COLOURS)) + "</style>\n"
+    return css + "\n".join(world_html(n, intro[n], games, nav) for n in WORLD_NUMBERS)
 
 
 def build_hub(args, nav):
     hub_path = os.path.join(ENGINE, "hub-template.html")
     with open(hub_path, encoding="utf-8") as fh:
         template = fh.read()
-    for marker in ("<!--TA_ROUTE-->", "<!--TA_WORLDS-->"):
+    for marker in ("<!--TA_MAP-->", "<!--TA_WORLDS-->", "/*__ICON_VARS__*/"):
         if template.count(marker) != 1:
             print(f"ERROR    hub-template.html: needs exactly one {marker} marker")
             return 1
     intro, intro_p = load_intro(args.intro)
+    INTRO_NAMES.update({n: w["name"] for n, w in intro.items()})
     report(os.path.basename(args.intro), intro_p)
     if intro_p.has_error():
         print(f"skipped  hub.html: {os.path.basename(args.intro)} has errors, not written")
@@ -748,7 +778,8 @@ def build_hub(args, nav):
     for n, wn in sorted(mismatch.items()):
         print(f"WARNING  world {n}: content worldName {wn!r} differs from world-intro.json name "
               f"{intro[n]['name']!r}, the hub uses the world-intro name")
-    page = (template.replace("<!--TA_ROUTE-->", route_html(intro))
+    page = (template.replace("<!--TA_MAP-->", map_html(intro))
+                    .replace("/*__ICON_VARS__*/", icon_vars_css())
                     .replace("<!--TA_WORLDS-->", worlds_html(games, nav, intro)))
     os.makedirs(args.out_dir, exist_ok=True)
     out = os.path.join(args.out_dir, "hub.html")

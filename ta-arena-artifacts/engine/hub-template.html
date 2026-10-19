@@ -8,227 +8,171 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
 <style>
-  :root {
-    color-scheme: light;
-    --bg: #171233; --bg-2: #241c47;
-    --surface: #f2eefb; --surface-2: #c9b8e6; --surface-3: #bda8e2;
-    --accent: #6c5fe0; --accent-deep: #4a3fa0;
-    --pink: #d9699f; --blue: #5b8fd9;
-    --ok: #1f7568; --wrong: #a8407a; --alt: #5c4fb0;
-    --text: #231c3f; --text-dim: #675f82;
-    --on-bg: #ece7fb; --on-bg-dim: #b4abd9;
-    --shadow: rgba(23, 18, 51, 0.28);
-    --stop: 34px;
-  }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    background: var(--bg);
-    background-image:
-      radial-gradient(ellipse 820px 560px at 12% -8%, var(--bg-2), transparent),
-      radial-gradient(ellipse 680px 520px at 108% 12%, #2c1f4a, transparent),
-      radial-gradient(ellipse 600px 420px at 60% 110%, #2a1840, transparent);
-    color: var(--on-bg);
-    font-family: Inter, system-ui, sans-serif;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    padding: 28px 16px 56px;
-  }
-  .stage { width: 100%; max-width: 800px; min-width: 0; }
-  a:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
-
-  .card { background: var(--surface); color: var(--text); border-radius: 22px; box-shadow: 0 24px 60px var(--shadow); padding: 26px 22px 22px; position: relative; min-width: 0; overflow-wrap: anywhere; margin-bottom: 18px; }
-
-  h1 { font-family: Inter, system-ui, sans-serif; font-weight: 500; font-size: 30px; line-height: 1.15; margin: 0 0 8px; letter-spacing: -0.01em; }
-  .deck { font-size: 16px; line-height: 1.5; color: var(--text-dim); margin: 0; max-width: 40ch; }
-
-  .note h2 { font-family: Inter, system-ui, sans-serif; font-weight: 500; font-size: 20px; line-height: 1.25; margin: 0 0 8px; }
-  .note p { font-size: 15px; line-height: 1.55; margin: 0; }
-
-  /* Route map: seven numbered stops on one line. Each stop jumps to its world. */
-  .route { padding: 18px 16px 16px; }
-  .route-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); }
-  .route-list li { position: relative; min-width: 0; display: flex; justify-content: center; }
-  .route-list li:not(:last-child)::after { content: ""; position: absolute; top: calc(var(--stop) / 2 - 1.5px); left: 50%; width: 100%; height: 3px; background: var(--surface-3); }
-  .route-list a { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; text-decoration: none; color: var(--text); min-width: 0; max-width: 100%; }
-  .route-list .num { display: inline-flex; align-items: center; justify-content: center; width: var(--stop); height: var(--stop); border-radius: 50%; background: var(--accent-deep); color: #fff; font-family: "IBM Plex Mono", monospace; font-weight: 600; font-size: 14px; }
-  .route-list a:hover .num { background: var(--pink); }
-  .route-list a:focus-visible { border-radius: 50%; }
-  .sname { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
-
-  /* World sections */
-  .world { padding: 24px 20px 20px; scroll-margin-top: 12px; }
-  .kicker { font-family: "IBM Plex Mono", monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-dim); margin: 0 0 8px; }
-  .world h2 { font-family: Inter, system-ui, sans-serif; font-weight: 500; font-size: 26px; line-height: 1.2; margin: 0 0 10px; }
-  .intro { font-size: 16px; line-height: 1.55; margin: 0 0 12px; }
-  .why { font-size: 14px; line-height: 1.5; color: var(--text-dim); margin: 0 0 10px; }
-  .label { font-family: "IBM Plex Mono", monospace; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent-deep); font-weight: 600; margin-right: 2px; }
-  .can { font-size: 15px; line-height: 1.5; margin: 0 0 8px; }
-  .boss-line { font-size: 14.5px; line-height: 1.5; color: var(--accent-deep); margin: 0 0 16px; }
-  .boss-line strong { font-weight: 600; }
-
-  /* Game chips: a vertical path on a phone, a row from 640px wide. Each thin line joins one chip to the next. */
-  ol.chips { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
-  .chip { position: relative; display: flex; flex-wrap: wrap; align-items: center; gap: 4px 12px; background: #fff; border: 1.5px solid var(--surface-2); border-radius: 14px; padding: 10px 14px; min-width: 0; }
-  .chip:not(:last-child)::before { content: ""; position: absolute; left: 21px; top: 100%; width: 2px; height: 10px; background: var(--accent); }
-  .chip:has(:focus-visible) { outline: 3px solid var(--accent); outline-offset: 3px; }
-  .slot { flex: none; width: 34px; font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--text-dim); }
-  .chip a { flex: 1 1 calc(100% - 46px); min-width: 0; font-size: 15px; font-weight: 600; line-height: 1.35; color: var(--accent-deep); text-decoration: none; }
-  .chip a::after { content: ""; position: absolute; inset: 0; border-radius: 14px; }
-  .chip a:hover { color: var(--pink); }
-  .chip a:focus-visible { outline: none; }
-  .gtitle { flex: 1 1 calc(100% - 46px); min-width: 0; font-size: 15px; font-weight: 600; line-height: 1.35; color: var(--text-dim); }
-  /* On a phone the title takes the full row after the slot, and the tags sit on the line below it. */
-  .boss-tag, .state { flex: none; margin-left: 46px; overflow-wrap: normal; font-family: "IBM Plex Mono", monospace; font-size: 10.5px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; border-radius: 999px; padding: 3px 9px; }
-  .boss-tag { background: var(--accent-deep); color: #fff; }
-  .boss-tag + .state { margin-left: 8px; }
-  .state { color: var(--text-dim); background: var(--surface); border: 1px dashed var(--surface-3); }
-  .chip.soon { background: var(--surface); }
-  .chip.boss { background: #f8f5ff; border-color: var(--accent-deep); border-width: 2px; }
-
-  /* Connector between worlds */
-  .leads { display: flex; flex-direction: column; align-items: center; gap: 2px; margin: -4px 0 14px; color: var(--on-bg-dim); font-family: "IBM Plex Mono", monospace; font-size: 13px; letter-spacing: 0.02em; }
-  .arrow { width: 18px; height: 26px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
-
-  .foot { text-align: center; font-size: 15px; color: var(--on-bg-dim); margin: 8px 0 0; line-height: 1.5; }
-
-  @media (min-width: 640px) {
-    .card { padding: 30px 28px 26px; }
-    .route { padding: 22px 28px 20px; }
-    .world { padding: 30px 28px 26px; }
-    .route-list a { gap: 6px; }
-    .sname { position: static; width: auto; height: auto; overflow: visible; clip: auto; white-space: normal; text-align: center; font-family: Inter, system-ui, sans-serif; font-size: 12px; line-height: 1.25; color: var(--text-dim); }
-    ol.chips { grid-template-columns: repeat(5, minmax(0, 1fr)) minmax(0, 1.5fr); gap: 10px; }
-    .chip { flex-direction: column; align-items: flex-start; flex-wrap: nowrap; gap: 6px; padding: 12px 10px 13px; }
-    .chip:not(:last-child)::before { left: 100%; top: 50%; width: 10px; height: 2px; }
-    .slot { width: auto; }
-    .chip a, .gtitle { flex: none; width: 100%; font-size: 13.5px; }
-    .boss-tag, .state { margin-left: 0; }
-    .state { font-size: 9.5px; letter-spacing: 0.04em; padding: 3px 7px; }
-  }
-  @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition: none !important; animation: none !important; } }
-
-  /* ===== Visual refresh: dark console look from docs/VISUAL_GUIDE.md (presentation only) ===== */
+/*__ICON_VARS__*/
   :root {
     color-scheme: dark;
     --wc: #fffc00;
-    --bg: #080a10; --bg-2: #0f131f;
-    --surface: #151a2a; --surface-2: #1e243b; --surface-3: #2a3250;
-    --accent: var(--wc); --accent-deep: color-mix(in srgb, var(--wc) 70%, #fff);
-    --pink: color-mix(in srgb, var(--wc) 55%, #ffb800);
-    --text: #f1f5f9; --text-dim: #a3b1c6; --on-bg: #f1f5f9; --on-bg-dim: #94a3b8;
-    --shadow: rgba(0, 0, 0, 0.5);
+    --bg: #080a10; --surface: #151a2a; --surface-2: #1e243b; --surface-3: #2a3250;
+    --text: #f1f5f9; --text-dim: #a3b1c6; --on-bg-dim: #94a3b8;
+    --accent-soft: color-mix(in srgb, var(--wc) 70%, #fff);
   }
-  #world-1 { --wc: #ff9500; } #world-2 { --wc: #00e5ff; } #world-3 { --wc: #a855f7; } #world-4 { --wc: #f43f5e; }
-  #world-5 { --wc: #06b6d4; } #world-6 { --wc: #10b981; } #world-7 { --wc: #f59e0b; }
+  [hidden] { display: none !important; }
+  * { box-sizing: border-box; }
   body {
-    background-color: var(--bg);
+    margin: 0; background-color: var(--bg); color: var(--text);
     background-image:
       radial-gradient(ellipse 820px 560px at 12% -8%, rgba(255, 252, 0, 0.08), transparent),
-      radial-gradient(ellipse 680px 520px at 108% 12%, rgba(168, 85, 247, 0.08), transparent),
-      radial-gradient(ellipse 600px 420px at 60% 110%, rgba(6, 182, 212, 0.08), transparent);
+      radial-gradient(ellipse 680px 520px at 108% 12%, rgba(168, 85, 247, 0.09), transparent),
+      radial-gradient(ellipse 600px 420px at 60% 110%, rgba(6, 182, 212, 0.09), transparent);
     background-attachment: fixed;
+    font-family: Inter, system-ui, sans-serif; min-height: 100vh;
+    display: flex; justify-content: center; padding: 28px 16px 56px;
   }
-  .card { background: rgba(21, 26, 42, 0.88); border: 1px solid rgba(255, 255, 255, 0.12); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
-    box-shadow: 0 24px 60px var(--shadow), inset 0 2px 0 color-mix(in srgb, var(--wc) 70%, transparent); }
-  h1, .note h2, .world h2 { font-weight: 800; letter-spacing: -0.02em; }
-  h1 { background: linear-gradient(90deg, #fffc00, #ffb800); -webkit-background-clip: text; background-clip: text; color: transparent; }
-  .world h2 { color: var(--wc); }
-  .kicker, .label { color: var(--wc); }
-  .boss-line { color: color-mix(in srgb, var(--wc) 70%, #fff); }
-  .route-list li:not(:last-child)::after { background: var(--surface-3); }
-  .route-list .num { background: var(--wc); color: #080a10; font-weight: 700; box-shadow: 0 0 14px color-mix(in srgb, var(--wc) 55%, transparent); }
-  .route-list a:hover .num { background: var(--pink); }
-  .chip { background: var(--surface-2); border-color: rgba(255, 255, 255, 0.12); border-left: 4px solid var(--wc); }
-  .chip:not(:last-child)::before { background: var(--wc); }
-  .chip a { color: var(--text); }
-  .chip a:hover { color: var(--wc); }
+  .stage { width: 100%; max-width: 640px; min-width: 0; }
+  a:focus-visible, button:focus-visible { outline: 3px solid var(--wc); outline-offset: 3px; border-radius: 8px; }
+  h1:focus, h2:focus { outline: none; }
+
+  .card { background: rgba(21, 26, 42, 0.88); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 22px;
+    backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); padding: 26px 22px 24px; margin: 0 0 16px;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5), inset 0 2px 0 color-mix(in srgb, var(--wc) 70%, transparent); }
+  h1 { font-weight: 800; font-size: 44px; line-height: 1.05; letter-spacing: -0.03em; margin: 0 0 10px;
+    background: linear-gradient(90deg, #fffc00, #ffb800); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  h2 { font-weight: 800; letter-spacing: -0.02em; margin: 0 0 10px; }
+  .lede { font-size: 18px; line-height: 1.45; font-weight: 500; margin: 0 0 16px; }
+  p { font-size: 15.5px; line-height: 1.6; margin: 0 0 14px; }
+  p:last-child { margin-bottom: 0; }
+  .dim { color: var(--text-dim); }
+  .small { font-size: 13.5px; }
+  .kicker { font-family: "IBM Plex Mono", monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--wc); margin: 0 0 8px; }
+
+  .steps { list-style: none; margin: 18px 0; padding: 0; display: grid; gap: 10px; }
+  .steps li { display: flex; gap: 12px; align-items: flex-start; background: var(--surface-2); border-radius: 14px; padding: 12px 14px; border: 1px solid rgba(255, 255, 255, 0.08); }
+  .steps .ic { flex: none; width: 34px; height: 34px; border-radius: 50%; background: color-mix(in srgb, var(--wc) 18%, var(--surface)); color: var(--wc); display: grid; place-items: center; }
+  .steps .ic i { display: block; width: 18px; height: 18px; background: currentColor; -webkit-mask: var(--ic) center / contain no-repeat; mask: var(--ic) center / contain no-repeat; }
+  .steps b { display: block; font-size: 15px; margin-bottom: 2px; }
+  .steps span { font-size: 14px; line-height: 1.45; color: var(--text-dim); }
+  @media (min-width: 560px) { .steps { grid-template-columns: repeat(3, 1fr); } .steps li { flex-direction: column; } }
+
+  /* The map: you in the middle, seven worlds in a ring, clockwise from the top */
+  .orbit { position: relative; width: min(100%, 460px); aspect-ratio: 100 / 130; margin: 6px auto 0; }
+  .ring { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .ring .spoke { stroke: rgba(255, 255, 255, 0.10); stroke-width: 0.35; stroke-dasharray: 1.2 1.6; }
+  .ring .loop { fill: none; stroke: rgba(255, 252, 0, 0.28); stroke-width: 0.5; stroke-dasharray: 1.6 1.6; }
+  .ring .tip { fill: rgba(255, 252, 0, 0.6); }
+  .you { position: absolute; left: 50%; top: var(--cy); width: 25%; aspect-ratio: 1; transform: translate(-50%, -50%); border-radius: 50%;
+    display: grid; place-items: center; text-align: center;
+    background: radial-gradient(circle at 50% 35%, rgba(255, 252, 0, 0.22), rgba(21, 26, 42, 0.95) 70%);
+    border: 2px solid rgba(255, 252, 0, 0.55); box-shadow: 0 0 34px rgba(255, 252, 0, 0.28); }
+  .you svg { width: 62%; height: 62%; }
+  .you span { position: absolute; bottom: 13%; font-weight: 800; font-size: 13px; color: #fffc00; letter-spacing: 0.04em; }
+  .node { position: absolute; left: var(--x); top: var(--y); width: 0; height: 0; text-decoration: none; color: var(--text); --wc: #fffc00; }
+  .node .disc { position: absolute; left: 0; top: 0; width: var(--d); height: var(--d); transform: translate(-50%, -50%); border-radius: 50%;
+    background: color-mix(in srgb, var(--wc) 16%, #10141f); border: 2px solid var(--wc); display: grid; place-items: center;
+    box-shadow: 0 0 20px color-mix(in srgb, var(--wc) 40%, transparent); transition: transform 140ms, box-shadow 140ms; }
+  .node:hover .disc, .node:focus-visible .disc { transform: translate(-50%, -50%) scale(1.1); box-shadow: 0 0 30px color-mix(in srgb, var(--wc) 70%, transparent); }
+  .node .emb-wrap { width: 62%; height: 62%; filter: none; }
+  .node .num { position: absolute; left: calc(var(--d) / 2 - 8px); top: calc(var(--d) / -2 - 4px); width: 20px; height: 20px; border-radius: 50%; background: var(--wc); color: #080a10;
+    font-family: "IBM Plex Mono", monospace; font-size: 11px; font-weight: 700; display: grid; place-items: center; }
+  .node .nm { position: absolute; left: 0; top: calc(var(--d) / 2 + 5px); width: 104px; transform: translateX(-50%); text-align: center; font-size: 12.5px; font-weight: 600; line-height: 1.2; }
+  .node:hover .nm { color: var(--wc); }
+  .start { position: absolute; top: calc(var(--d) / -2 - 30px); left: 0; transform: translateX(-50%); white-space: nowrap; font-family: "IBM Plex Mono", monospace; font-size: 10.5px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #080a10; background: #fffc00; border-radius: 999px; padding: 3px 9px; }
+  .orbit { --d: 58px; }
+  @media (min-width: 520px) { .orbit { --d: 70px; } .node .nm { font-size: 13.5px; width: 124px; } }
+  @media (max-width: 380px) { .orbit { --d: 50px; } .node .nm { font-size: 11.5px; width: 92px; } }
+  .mapcard { padding-left: 10px; padding-right: 10px; }
+  .mapcard > p, .mapcard > h2, .mapcard > .kicker { padding: 0 12px; }
+  .hint { text-align: center; margin-top: 14px; }
+
+  /* World page */
+  .back { display: inline-flex; align-items: center; gap: 6px; font-family: "IBM Plex Mono", monospace; font-size: 12px; font-weight: 600; color: var(--on-bg-dim); text-decoration: none; margin: 0 0 14px 4px; }
+  .back:hover { color: var(--wc); }
+  .back::before, .tag::before, .state::before, .boss-tag::before { content: ""; display: inline-block; width: 1.2em; height: 1.2em; background: currentColor; -webkit-mask: var(--ic) center / contain no-repeat; mask: var(--ic) center / contain no-repeat; }
+  .back { --ic: var(--i-home); }
+  .world { padding: 26px 20px 22px; }
+  .world .head { display: flex; align-items: center; gap: 14px; margin-bottom: 12px; }
+  .world h2 { font-size: 30px; line-height: 1.1; color: var(--wc); margin: 0; }
+  .emb-wrap { display: block; flex: none; width: 56px; height: 56px; filter: drop-shadow(0 0 10px color-mix(in srgb, var(--wc) 45%, transparent)); }
+  .emb { display: block; width: 100%; height: 100%; overflow: visible; }
+  .intro { font-size: 16.5px; line-height: 1.6; margin: 0 0 14px; }
+  .box { background: var(--surface-2); border-left: 4px solid var(--wc); border-radius: 14px; padding: 12px 14px; margin: 0 0 12px; font-size: 14.5px; line-height: 1.5; }
+  .label { font-family: "IBM Plex Mono", monospace; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--wc); font-weight: 600; display: block; margin-bottom: 4px; }
+  .boss-line { color: var(--accent-soft); font-size: 14.5px; line-height: 1.5; margin: 0 0 18px; }
+  .boss-line strong { font-weight: 700; }
+
+  ol.chips { list-style: none; margin: 0 0 18px; padding: 0; display: grid; gap: 10px; }
+  .chip { position: relative; display: flex; flex-wrap: wrap; align-items: center; gap: 4px 12px; background: var(--surface-2); border: 1px solid rgba(255, 255, 255, 0.12); border-left: 4px solid var(--wc); border-radius: 14px; padding: 13px 14px; }
+  .chip:not(:last-child)::before { content: ""; position: absolute; left: 21px; top: 100%; width: 2px; height: 10px; background: var(--wc); }
   .chip:hover { background: var(--surface-3); }
+  .chip:has(:focus-visible) { outline: 3px solid var(--wc); outline-offset: 3px; }
+  .slot { flex: none; width: 34px; font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--wc); }
+  .chip a { flex: 1 1 calc(100% - 46px); min-width: 0; font-size: 15.5px; font-weight: 600; line-height: 1.35; color: var(--text); text-decoration: none; }
+  .chip a::after { content: ""; position: absolute; inset: 0; border-radius: 14px; }
+  .chip a:hover { color: var(--wc); }
+  .chip a:focus-visible { outline: none; }
+  .gtitle { flex: 1 1 calc(100% - 46px); min-width: 0; font-size: 15.5px; font-weight: 600; line-height: 1.35; color: var(--text-dim); }
+  .boss-tag, .state { flex: none; margin-left: 46px; font-family: "IBM Plex Mono", monospace; font-size: 10.5px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; border-radius: 999px; padding: 3px 9px; display: inline-flex; align-items: center; gap: 4px; }
+  .boss-tag { background: var(--wc); color: #080a10; --ic: var(--i-crown); }
+  .boss-tag + .state { margin-left: 8px; }
+  .state { color: var(--text-dim); background: var(--surface); border: 1px dashed var(--surface-3); --ic: var(--i-lock); }
   .chip.soon { background: var(--surface); }
   .chip.boss { background: color-mix(in srgb, var(--wc) 12%, var(--surface)); border-color: var(--wc); }
-  .boss-tag { background: var(--wc); color: #080a10; }
-  .state { background: var(--surface); border-color: var(--surface-3); color: var(--text-dim); }
-  .slot { color: var(--wc); }
+  .chip .boss-tag::before, .chip .state::before { width: 1.1em; height: 1.1em; }
 
-  .route-list a { --wc: #fffc00; }
-  .route-list a[href$="#world-1"] { --wc: #ff9500; }
-  .route-list a[href$="#world-2"] { --wc: #00e5ff; }
-  .route-list a[href$="#world-3"] { --wc: #a855f7; }
-  .route-list a[href$="#world-4"] { --wc: #f43f5e; }
-  .route-list a[href$="#world-5"] { --wc: #06b6d4; }
-  .route-list a[href$="#world-6"] { --wc: #10b981; }
-  .route-list a[href$="#world-7"] { --wc: #f59e0b; }
-  :root {
-    --i-check: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Ccircle cx=%2212%22 cy=%2212%22 r=%229%22/%3E%3Cpath d=%22m8 12 3 3 5-6%22/%3E%3C/svg%3E");
-    --i-cross: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Ccircle cx=%2212%22 cy=%2212%22 r=%229%22/%3E%3Cpath d=%22m9 9 6 6M15 9l-6 6%22/%3E%3C/svg%3E");
-    --i-bolt: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M13 2 4 14h7l-1 8 9-12h-7z%22/%3E%3C/svg%3E");
-    --i-eye: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z%22/%3E%3Ccircle cx=%2212%22 cy=%2212%22 r=%223%22/%3E%3C/svg%3E");
-    --i-play: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M7 4v16l13-8z%22/%3E%3C/svg%3E");
-    --i-search: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Ccircle cx=%2211%22 cy=%2211%22 r=%227%22/%3E%3Cpath d=%22m20 20-4-4%22/%3E%3C/svg%3E");
-    --i-trophy: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M8 4h8v5a4 4 0 0 1-8 0zM8 6H4v1a3 3 0 0 0 4 3M16 6h4v1a3 3 0 0 1-4 3M12 13v4M8 21h8M10 17h4%22/%3E%3C/svg%3E");
-    --i-pencil: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M4 20l1-4L16 5l3 3L8 19z%22/%3E%3C/svg%3E");
-    --i-book: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M4 5a2 2 0 0 1 2-2h13v14H6a2 2 0 0 0-2 2zM4 19a2 2 0 0 0 2 2h13v-4%22/%3E%3C/svg%3E");
-    --i-help: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Ccircle cx=%2212%22 cy=%2212%22 r=%229%22/%3E%3Cpath d=%22M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.7.4-1 .9-1 1.7M12 17h.01%22/%3E%3C/svg%3E");
-    --i-crown: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M3 8l4 4 5-7 5 7 4-4-2 11H5z%22/%3E%3C/svg%3E");
-    --i-lock: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Crect x=%225%22 y=%2211%22 width=%2214%22 height=%229%22 rx=%222%22/%3E%3Cpath d=%22M8 11V8a4 4 0 0 1 8 0v3%22/%3E%3C/svg%3E");
-    --i-home: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M3 11l9-8 9 8M5 10v10h14V10%22/%3E%3C/svg%3E");
-    --i-speaker: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M4 9v6h4l5 4V5L8 9zM16 9a4 4 0 0 1 0 6%22/%3E%3C/svg%3E");
-    --i-spark: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M12 3l2 6 6 2-6 2-2 6-2-6-6-2 6-2z%22/%3E%3C/svg%3E");
-    --i-flag: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M5 21V4M5 4h11l-2 4 2 4H5%22/%3E%3C/svg%3E");
-  }
+  .worldnav { display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
+  .worldnav a { font-family: "IBM Plex Mono", monospace; font-size: 12.5px; font-weight: 600; text-decoration: none; color: var(--text); background: var(--surface-2); border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 999px; padding: 10px 16px; min-height: 44px; display: inline-flex; align-items: center; }
+  .worldnav a:hover { border-color: var(--wc); color: var(--wc); }
+  .worldnav .next { margin-left: auto; background: linear-gradient(135deg, var(--wc), color-mix(in srgb, var(--wc) 55%, #ffb800)); color: #080a10; border: none; }
+  .worldnav .next:hover { filter: brightness(1.08); color: #080a10; }
 
-  /* Line icons (CSS masks) */
-  .stamp::before, .ex-label::before, .end-badge::before, .reflect-tag::before, .source b::before, .ask .kicker::before,
-  .round-label::before, .boss-tag::before, .state::before, a.tag::before, button.sfx::before {
-    content: ""; display: inline-block; width: 1.2em; height: 1.2em; margin-right: 0.4em; vertical-align: -0.24em;
-    background: currentColor; -webkit-mask: var(--ic) center / contain no-repeat; mask: var(--ic) center / contain no-repeat; }
-  .stamp::before { margin-right: 0; width: 1.3em; height: 1.3em; vertical-align: middle; }
-  .stamp.ok { --ic: var(--i-check); } .stamp.cross { --ic: var(--i-cross); } .stamp.amber { --ic: var(--i-help); }
-  .ex-label { --ic: var(--i-spark); } .end-badge { --ic: var(--i-trophy); } .reflect-tag { --ic: var(--i-pencil); }
-  .source b { --ic: var(--i-book); } .ask .kicker { --ic: var(--i-help); } .boss-tag { --ic: var(--i-crown); }
-  .state { --ic: var(--i-lock); } a.tag { --ic: var(--i-home); } button.sfx { --ic: var(--i-speaker); }
-  .round-label { --ic: var(--i-help); }
-  .round-label[data-lv="spot"] { --ic: var(--i-eye); } .round-label[data-lv="play"] { --ic: var(--i-play); }
-  .round-label[data-lv="analyse"] { --ic: var(--i-search); } .round-label[data-lv="debrief"] { --ic: var(--i-spark); }
-  .boss-tag::before, .state::before { width: 1.1em; height: 1.1em; margin-right: 0.3em; }
-  .emb { display: block; width: 100%; height: 100%; overflow: visible; }
-  .emb-wrap { display: block; flex: none; width: 46px; height: 46px; filter: drop-shadow(0 0 10px color-mix(in srgb, var(--wc) 45%, transparent)); }
-  .world h2 { display: flex; align-items: center; gap: 12px; }
-  .world h2 .emb-wrap { width: 48px; height: 48px; }
-  h1 .emb-wrap { display: inline-block; width: 44px; height: 44px; vertical-align: -9px; margin-right: 10px; }
-  .stop-emb { display: block; width: 28px; height: 28px; margin-top: 6px; }
-  @media (min-width: 640px) { .stop-emb { width: 34px; height: 34px; } }
+  @media (min-width: 640px) { .card { padding: 30px 28px 26px; } .world { padding: 30px 28px 26px; } }
+  @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition: none !important; animation: none !important; } }
 </style>
 </head>
 <body>
 
 <div class="stage">
-  <header class="card">
-    <h1>You</h1>
-    <p class="deck">Forty-two short games in seven worlds. Each world builds on the one before it.</p>
-  </header>
+  <div id="view-home">
+    <header class="card hero">
+      <h1>You</h1>
+      <p class="lede">Forty-two short games about how people talk to each other, and why you talk the way you do.</p>
+      <p>You is a set of games built on Transactional Analysis, or TA, a way of understanding conversations that the psychiatrist Eric Berne began in the 1950s. Each game puts you inside a small story: a phone call with your mum, a meeting that goes sideways, an argument over the washing-up. You make a choice, then find out what it really did.</p>
+      <ul class="steps">
+        <li><span class="ic"><i style="--ic: var(--i-eye)"></i></span><div><b>Spot</b><span>Notice what is going on in a short exchange.</span></div></li>
+        <li><span class="ic"><i style="--ic: var(--i-play)"></i></span><div><b>Play</b><span>Step into a live scene and choose what to say.</span></div></li>
+        <li><span class="ic"><i style="--ic: var(--i-search)"></i></span><div><b>Analyse</b><span>Work out why it went the way it did.</span></div></li>
+      </ul>
+      <p>Every answer, right or wrong, comes with a plain explanation and a real example. A game takes about ten minutes, and you need no background in psychology.</p>
+      <p class="dim small">The games follow books by Eric Berne, Claude Steiner, and Ian Stewart and Vann Joines. They teach ideas. They are not therapy.</p>
+    </header>
 
-  <section class="card note" aria-labelledby="what-ta">
-    <h2 id="what-ta">What is Transactional Analysis?</h2>
-    <p>Transactional Analysis, or TA, is a way of understanding how people talk to each other and why the same conversations keep going wrong. These games let you practise it, one short story at a time.</p>
-  </section>
-
-  <section class="card note" aria-labelledby="how-map">
-    <h2 id="how-map">How the map works</h2>
-    <p>Go down the map from world 1 to world 7. Each game leads to the next, and the sixth game in each world is the Sunday boss.</p>
-  </section>
-
-  <nav class="card route" aria-label="World map">
-<!--TA_ROUTE-->
-  </nav>
+    <section class="card mapcard" aria-labelledby="pick">
+      <p class="kicker">The map</p>
+      <h2 id="pick">Choose a world</h2>
+      <p class="dim">Seven worlds sit around you. Each one builds on the one before it, so start at the top and go clockwise. Tap a world to open it.</p>
+<!--TA_MAP-->
+    </section>
+  </div>
 
 <!--TA_WORLDS-->
-
-  <footer class="foot">
-    <p>Start at 1.1 and go in order. Each game takes about ten minutes.</p>
-  </footer>
 </div>
 
+<script>
+(function () {
+  "use strict";
+  var home = document.getElementById("view-home");
+  var worlds = document.querySelectorAll("section.world");
+  function route() {
+    var m = /^#world-([1-7])$/.exec(window.location.hash || "");
+    home.hidden = !!m;
+    Array.prototype.forEach.call(worlds, function (s) { s.hidden = !(m && s.id === "world-" + m[1]); });
+    var t = document.querySelector(m ? "#world-" + m[1] + "-title" : "h1");
+    document.title = m && t ? t.textContent + " · You" : "You";
+    window.scrollTo(0, 0);
+    if (t) { t.setAttribute("tabindex", "-1"); try { t.focus({ preventScroll: true }); } catch (e) { t.focus(); } }
+  }
+  window.addEventListener("hashchange", route);
+  route();
+})();
+</script>
 </body>
 </html>

@@ -1,56 +1,56 @@
 {
   "1": {
-    "name": "Hunger",
-    "weekName": "Invisible",
-    "intro": "Every person needs small signs that they are seen: a hello, a smile, a nod, even a cross look. Transactional Analysis calls these signs strokes. This world is about noticing them. Which ones do you give? Which ones do you take? What happens when you go without?",
-    "why": "This world comes first because nothing else makes sense until you can see the small moments between people. Strokes are the first thing to notice.",
+    "name": "Being Noticed",
+    "weekName": "Being Noticed",
+    "intro": "Every person needs small signs that they matter: a hello, a smile, a nod, even a cross look. Psychologists call these signs strokes. This world is about spotting them. Which ones do you give, which ones do you take, and what does a day with almost none feel like?",
+    "why": "This world comes first because the rest of the game is built on small moments between people. Strokes are the first thing to notice.",
     "can": "tell a warm nod from a cold one, and notice what a day with almost none costs you",
     "boss": "The Stroke Economy: break the five unwritten rules people use to hand out nods, and say who benefits from them"
   },
   "2": {
-    "name": "Three Voices",
-    "weekName": "Three Voices",
-    "intro": "Inside each of us there are three voices. The Boss repeats the rules we were taught as children. The Pilot works out what is true today. The Kid feels and wants, the way it did when we were small. In this world you learn to hear which voice is speaking.",
-    "why": "This world comes second because once you can see the moments between people, the next question is who is talking. The same words can come from any of the three voices.",
+    "name": "Who's Talking",
+    "weekName": "Who's Talking",
+    "intro": "Inside each of us there are three voices. The Boss repeats the rules we were taught as children. The Pilot works out what is true today. The Kid feels and wants, the way it did when we were small. This world trains your ear to hear which one is speaking.",
+    "why": "This world comes second because once you can see the small moments between people, the next question is who is talking. The same words can come from any of the three voices.",
     "can": "name which voice is talking, from the words, the tone and the posture",
     "boss": "The Contaminated Adult: spot a Boss leak or a Kid leak in a sensible-sounding room, and bring it back to facts"
   },
   "3": {
-    "name": "Vectors",
-    "weekName": "Volleys",
-    "intro": "A vector is an arrow that shows a direction. In this world every line you hear is an arrow: it starts with one voice and lands on another. Some arrows land where they were aimed. Others cross over and land somewhere else. This world teaches you to draw the arrows and see where they go.",
-    "why": "This world comes third because you need the three voices to know where each arrow starts. Only then can you see where it lands.",
+    "name": "Back and Forth",
+    "weekName": "Back and Forth",
+    "intro": "Every conversation is a string of throws and catches. One person says something aimed at one of your voices, and you answer from one of yours. Some replies keep the talk going. Others cut it off. This world shows you where each line is aimed and where the answer comes from.",
+    "why": "This world comes third because you need to know the three voices first. Only then can you tell where a line starts and where it lands.",
     "can": "draw the arrow for any line, and say whether the reply matches it or cuts across it",
     "boss": "The Salesman: find the sting in a friendly sales line, and answer both of its targets"
   },
   "4": {
-    "name": "The Thesaurus",
-    "weekName": "Traps",
-    "intro": "A thesaurus is a list of words that belong together. This world is a list of the repeating patterns that people fall into, and in this world we call them traps. Each trap has a hook, a switch and a payoff. You learn to spot which trap is running.",
+    "name": "Conversation Traps",
+    "weekName": "Conversation Traps",
+    "intro": "Some arguments and awkward chats keep coming back with new faces and the same ending. Psychologists call them games. Here we call them traps, because each one has a hook, a switch and a payoff that nobody wanted. You learn to spot the trap and step out of it.",
     "why": "This world comes fourth because once you can follow a line and its reply, you can notice when the same exchange keeps coming back. A repeating exchange is a trap, and this world gives each one a name.",
     "can": "tell a trap from real talk by listening for the hook, the switch and what the trap pays",
     "boss": "Why Don't You, Yes But: step out of a loop of yes-buts without leaving the room"
   },
   "5": {
-    "name": "Underneath",
-    "weekName": "Underneath",
-    "intro": "Under many traps is a feeling that does not fit the moment: a sting, a grudge, a guilt that never goes away. Some people save these feelings like stamps, to cash them in later. In this world you learn to tell a real feeling from a stand-in one.",
+    "name": "Under the Surface",
+    "weekName": "Under the Surface",
+    "intro": "Under many traps is a feeling that does not fit the moment: a sting, a grudge, a guilt that never goes away. Some people save these feelings like loyalty stamps, to cash in later. This world teaches you to tell a real feeling from a stand-in one.",
     "why": "This world comes fifth because you can only find the real feeling once you have spotted the trap that is covering it.",
     "can": "tell a real feeling, which finishes something, from a stand-in feeling, which never does",
     "boss": "The Discount Matrix: see the kind-sounding line that keeps a trap going, and say what a real step would look like"
   },
   "6": {
-    "name": "The Plan",
-    "weekName": "The Plan",
-    "intro": "Many people live by a plan they made as children. It tells them what they must do, what they must never do, and how their life should end. When the same traps keep coming back, the plan is usually behind them. In this world you learn to read the plan.",
+    "name": "The Story You Wrote",
+    "weekName": "The Story You Wrote",
+    "intro": "Many people live by a plan they made as children. It says what they must do, what they must never do, and how their story should end. When the same traps keep coming back, that plan is usually behind them. This world teaches you to read it.",
     "why": "This world comes sixth because the traps add up to a plan. You need to know the traps before you can see the plan they build.",
     "can": "hear the rule running under a line, and read the plan a life story is following",
     "boss": "The Script Matrix: place a life story's rules and plan on one board, and suggest a new line that can be acted on this month"
   },
   "7": {
-    "name": "Autonomy",
-    "weekName": "Your Own Person",
-    "intro": "Autonomy means being free to choose your own moves, instead of running the moves you learned as a child. In this world you learn to help without rescuing, to make clear agreements, to say yes with a safety net, and to pick the response that is truly yours.",
+    "name": "Free to Choose",
+    "weekName": "Free to Choose",
+    "intro": "Being free means choosing your own moves instead of replaying the ones you learned as a child. In this world you learn to help without rescuing, make clear agreements, say yes with a safety net, and pick the reply that is truly yours.",
     "why": "This world comes last because once you can see your plan, you can change it. The worlds before this one help you see. This one helps you act.",
     "can": "help without rescuing, make clear agreements, and keep a hard conversation honest",
     "boss": "After Games, What?: keep a candid conversation real for six turns, without rescuing or blaming anyone"
