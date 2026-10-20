@@ -1,0 +1,902 @@
+{
+  "baseBlurb": "Gran's kitchen on a Saturday: two neighbours, a sulking Leo and a table that keeps changing gear.",
+  "stories": [
+    {
+      "setting": "Home & Flatmates",
+      "blurb": "Lentil bake in apartment 3B: a neighbour's boiler, Maya on her feet, Sam hiding a message.",
+      "opener": {
+        "setting": "Saturday, 11:00. Apartment 3B at Hawthorn Court, the kitchen. You came up for the lentil bake Maya promised. Mr Pell from the ground floor is already at the table.",
+        "lines": [
+          { "who": "Maya", "text": "“Sit. Ten minutes, I said, and I meant twelve.”", "cue": "stirring onions, the extractor fan roaring" },
+          { "who": "Mr Pell", "text": "“It's the thumping I came about. Not that I'm complaining.”", "cue": "coat still on, tea going cold" },
+          { "who": "Sam", "text": "“...”", "cue": "on the counter, thumb going on his phone, not looking up" }
+        ],
+        "ask": "What level is this table talking at, and which line joins it without getting you dropped?"
+      },
+      "rounds": [
+        {
+          "level": "Spot",
+          "label": "Spot, round 1",
+          "intro": "Three lines from three corners of the building. Tap the level each one is running at.",
+          "items": [
+            {
+              "type": "pick",
+              "who": "Mr Pell",
+              "text": "“Nobody puts the lids down on the bins any more, do they?”",
+              "cue": "the bin store, Sunday evening",
+              "options": ["Problem-solving", "Grumbling", "Sharing"],
+              "answer": 1,
+              "why": "Grumbling. The line complains about people in general and asks nobody for anything. Anyone passing can agree without risking a thing.",
+              "traps": {
+                "0": "Problem-solving would have a fix in it, like a rota or a sign on the door. This line only complains.",
+                "2": "Sharing would tell you something about Mr Pell himself. This line is about what other people do."
+              },
+              "example": "A bus stop.<br>“Nobody queues properly now.” “Disgraceful.”<br>Two people agree, and nobody has to do anything."
+            },
+            {
+              "type": "pick",
+              "who": "Ines",
+              "text": "“Two years in the building, and I only learned your names last week.”",
+              "cue": "the lift, going up",
+              "options": ["Problem-solving", "Grumbling", "Sharing"],
+              "answer": 2,
+              "why": "Sharing. She tells you something about herself, and she waits to see if you'll say something back.",
+              "traps": {
+                "0": "Problem-solving would offer a fix, like a street party. She hasn't asked for one, and a fix would jump the level.",
+                "1": "Grumbling would blame the building or the neighbours. She is talking about her own distance from them."
+              },
+              "example": "A new job.<br>“Six weeks in, and I still eat lunch at my desk.” “I did that for my whole first month.”<br>One share, and the other person feels safer."
+            },
+            {
+              "type": "pick",
+              "who": "Maya",
+              "text": "“Put a slice of bread in with the brown sugar and it goes soft again.”",
+              "cue": "the kitchen, a block of sugar like a brick",
+              "options": ["Problem-solving", "Grumbling", "Sharing"],
+              "answer": 0,
+              "why": "Problem-solving. It offers a specific fix for a specific problem. That helps if someone asked, and it can sound like a lecture if they didn't.",
+              "traps": {
+                "1": "Grumbling would be a complaint, like “this sugar is always rock hard.” This line comes with a fix attached.",
+                "2": "Sharing would tell a story about Maya. A slice of bread is a tool, not a confession."
+              },
+              "example": "A school bake sale.<br>“My biscuits spread flat.” “Chill the dough first.”<br>A fix, and it lands well because she asked."
+            }
+          ]
+        },
+        {
+          "level": "Play",
+          "label": "Play, the week in motion",
+          "intro": "The kitchen table runs at a level, and the level moves. Join it at the level it's running, or you get dropped.",
+          "items": [
+            {
+              "type": "scene",
+              "title": "Saturday, 11:00, the kitchen in 3B",
+              "setting": "Mr Pell (68, ground floor) and Ines (31, the flat above) sit at the table with tea. Sam is on the counter with his phone. Maya is at the stove.",
+              "meters": { "you": 60, "them": 50 },
+              "beats": [
+                {
+                  "who": "Mr Pell",
+                  "text": "“The agent never picks up. Three weeks for one tap.” Ines: “And the lift's out again.” Maya: “They send a text and that's the lot.”",
+                  "cue": "the topic is the letting agent, and it's running at the grumbling level. Sam hasn't looked up in ten minutes.",
+                  "lines": [
+                    {
+                      "text": "“Our agent took a month to fix a fridge door last year.”",
+                      "tag": "ok",
+                      "you": 0,
+                      "them": 6,
+                      "outcome": "You're in. Mr Pell pushes the sugar bowl across to you.",
+                      "why": "You added one more complaint at the same size as the others. It costs nothing, and it shows the table you can sit with them before anything real comes up."
+                    },
+                    {
+                      "text": "“Sam, who's lighting your phone up like that?”",
+                      "tag": "best",
+                      "you": 0,
+                      "them": -2,
+                      "outcome": "The grown-ups barely glance over. Sam does. “A recruiter. Interview Tuesday. Don't tell Maya.” Maya, without turning: “I can hear you.”",
+                      "why": "Sam was the one person at the table who wasn't grumbling. A question about his side of the room got the only real answer in it."
+                    },
+                    {
+                      "text": "“Strictly, the lease gives the agent 28 days to repair anything.”",
+                      "tag": "ok",
+                      "you": 0,
+                      "them": -7,
+                      "outcome": "Silence. Mr Pell: “Twenty-eight.” Ines tops up the teapot and starts on the lift again.",
+                      "why": "You brought a clause to a grumble. The table was at one level, you stepped up to another, and the talk carried on without you."
+                    }
+                  ]
+                },
+                {
+                  "who": "Mr Pell",
+                  "text": "“I don't know if I'm doing this right. I put the notice up for the residents' meeting, and nobody has come in two years.”",
+                  "cue": "quieter. Maya turns the gas down. Ines stops mid-sip.",
+                  "lines": [
+                    {
+                      "text": "“People never come to those.”",
+                      "tag": "ok",
+                      "you": 0,
+                      "them": 2,
+                      "outcome": "“No,” says Ines, and the moment closes.",
+                      "why": "A line that agrees and asks nothing back is small talk again. It is kind, and it shuts the door on him."
+                    },
+                    {
+                      "text": "“Have you tried putting the notice in the building chat?”",
+                      "tag": "ok",
+                      "you": -3,
+                      "them": -4,
+                      "outcome": "“Twice,” says Mr Pell. Flat. He studies his cup.",
+                      "why": "Nobody asked for advice. He had already tried it, so now he is the man who got it wrong.",
+                      "flags": ["advised_pell"]
+                    },
+                    {
+                      "text": "“Who came the first year?”",
+                      "tag": "best",
+                      "you": 2,
+                      "them": 8,
+                      "outcome": "Mr Pell sits up. “Eleven people. A woman brought a cake shaped like the building.”",
+                      "why": "A question about his story moves the talk to a real level. He answers at once because it was about him."
+                    }
+                  ]
+                },
+                {
+                  "who": "Maya",
+                  "text": "“I'm fine. I just haven't sat down since Thursday's shift.”",
+                  "cue": "from the stove, not turning round. Sam has stopped scrolling.",
+                  "lines": [
+                    {
+                      "text": "“You're fine, Maya. You always are.”",
+                      "tag": "ok",
+                      "you": -2,
+                      "them": -5,
+                      "outcome": "Her back stiffens. “Right,” she says, and stirs harder. Sam looks at you.",
+                      "why": "Telling someone she is fine, just after she said she is worn out, closes the door. Sam sees it, and so does she."
+                    },
+                    {
+                      "text": "Say nothing and watch.",
+                      "tag": "ok",
+                      "you": -3,
+                      "them": 0,
+                      "outcome": "Sam, from the counter: “She says that after every night run.” Mr Pell: “Leave her.” Maya puts the lid down hard.",
+                      "why": "Watching is allowed, and it is what the table does. Nothing you say changes what happens next, so the pattern shows without anyone calling it out."
+                    },
+                    {
+                      "text": "“What happened on Thursday?”",
+                      "tag": "best",
+                      "you": 2,
+                      "them": 6,
+                      "outcome": "Maya turns round with the spoon, checking your face before she answers. “A long one. Nine days with the same patient, and his bed was made up by lunch.”",
+                      "why": "Asking what happened treats it as a real question. It also shows you what she is checking for in your face, and that is the first thing to notice."
+                    }
+                  ]
+                }
+              ],
+              "example": "A shared house.<br>“I'm fine, just tired.” “Course you are.”<br>Half the house moves on. One person asks, “Tired from what?”"
+            },
+            {
+              "type": "scene",
+              "title": "Saturday, 12:10, the table changes gear",
+              "setting": "The same kitchen, an hour on. The lentil bake is in the oven. Mr Pell's tablet lies on the table and Ines has the boiler manual open. Sam has put his phone face down.",
+              "meters": { "you": 60, "them": 50 },
+              "beats": [
+                {
+                  "who": "Mr Pell",
+                  "text": "“The boiler pressure drops every night.” Ines: “Mine did that. It was the little valve.” Maya: “Top it up from the tap.”",
+                  "cue": "12:10. The grumbling has run out, and now every line is a fix.",
+                  "lines": [
+                    {
+                      "text": "“Mine nearly froze me out last winter. I was livid.”",
+                      "tag": "ok",
+                      "you": -2,
+                      "them": -3,
+                      "outcome": "“Hm,” says Mr Pell, and Ines asks Maya about the tap again. The talk goes round you.",
+                      "why": "You brought a feeling to a table that was trading fixes. Nobody minded, and nobody picked it up."
+                    },
+                    {
+                      "text": "“Landlords never fix anything these days.”",
+                      "tag": "ok",
+                      "you": -1,
+                      "them": -2,
+                      "outcome": "“Mm,” says Ines. Maya holds up the filling loop.",
+                      "why": "A grumble is the level the table has just left. It is polite, and it goes nowhere."
+                    },
+                    {
+                      "text": "“Does the gauge drop all at once, or a little each night?”",
+                      "tag": "best",
+                      "you": 2,
+                      "them": 6,
+                      "outcome": "“Little by little,” says Mr Pell. Ines taps the manual. “Then it's the valve.”",
+                      "why": "A question aimed at the fix keeps you on the level the table is at. You are in, and you have added something."
+                    }
+                  ]
+                },
+                {
+                  "who": "Mr Pell",
+                  "text": "“You're the computer one, aren't you? My tablet says it can't update.”",
+                  "cue": "he slides it over. The screen is frozen at forty per cent.",
+                  "lines": [
+                    {
+                      "text": "“Oh, I'm no expert.”",
+                      "tag": "ok",
+                      "you": -3,
+                      "them": -2,
+                      "outcome": "“Come on,” says Ines. Mr Pell draws the tablet back an inch.",
+                      "why": "Waving off what you know costs you twice. He asked because he trusts you, and now he feels turned down."
+                    },
+                    {
+                      "text": "“It's probably full. Plug it in overnight on the wifi, and I'll look at the storage after lunch if you like.”",
+                      "tag": "best",
+                      "you": 4,
+                      "them": 6,
+                      "outcome": "“Would you?” Mr Pell lets go of it.",
+                      "why": "He asked for a fact, so a fact is welcome. You answered at the size of his question and offered one more step."
+                    },
+                    {
+                      "text": "“Well, the update needs headroom for the cache, and depending on the build and how the storage is split, it can fail without saying so...”",
+                      "tag": "ok",
+                      "you": -2,
+                      "them": -5,
+                      "outcome": "Maya checks the oven. Ines looks out of the window.",
+                      "why": "You were asked, and you gave far more than the table wanted. The facts were right and the size was wrong."
+                    }
+                  ]
+                },
+                {
+                  "who": "Mr Pell",
+                  "text": "“My wife's photos are on it. All of her garden.”",
+                  "cue": "quieter. Maya turns the oven off. Sam lays a hand flat on the table.",
+                  "lines": [
+                    {
+                      "text": "“You could copy them to a stick. It takes ten minutes.”",
+                      "tag": "ok",
+                      "you": -3,
+                      "them": -5,
+                      "outcome": "“I know what a stick is,” says Mr Pell. Maya gives you a look.",
+                      "why": "You answered a feeling with a fix. The talk had gone down a level, and you stayed behind on the old one."
+                    },
+                    {
+                      "text": "“Shall I get the plates out?”",
+                      "tag": "ok",
+                      "you": -3,
+                      "them": -1,
+                      "outcome": "“Not yet, love,” says Maya. The quiet is waiting for someone, and it isn't the plates.",
+                      "why": "Leaving the table the moment it turns real costs you a nod you could have given. It is a gentle way of stepping out."
+                    },
+                    {
+                      "text": "“That's worth keeping safe.”",
+                      "tag": "best",
+                      "you": 3,
+                      "them": 8,
+                      "outcome": "“It is,” he says. For the first time all morning he leans back.",
+                      "why": "The table dropped to a personal level and you went down with it. One plain, warm line was all it needed."
+                    }
+                  ]
+                }
+              ],
+              "example": "A flat's group chat.<br>“Heating's making that noise again.” “Bleed the radiator.” “That fixed mine.”<br>Everyone is trading fixes. A long confession dropped in here would stop the chat."
+            }
+          ]
+        },
+        {
+          "level": "Analyse",
+          "label": "Analyse, explain it",
+          "items": [
+            {
+              "type": "pick",
+              "who": "You",
+              "text": "Mr Pell's table was grumbling about the agent. Why did your line about the 28 days get you dropped?",
+              "options": [
+                "The 28 days was out of date, and Mr Pell knew the newer rule well",
+                "You gave a fact to a table that was only grumbling, so the talk moved on",
+                "Mr Pell dislikes anyone who has read a tenancy agreement from start to end"
+              ],
+              "answer": 1,
+              "why": "Small talk runs in levels, and a table sits at one of them. A clause dropped into a grumble changes the level, and nobody at the table asked for that.",
+              "traps": {
+                "0": "A wrong date would only earn a correction, and a correction is another change of level. Nobody had asked whether the number was right.",
+                "2": "Mr Pell's reading habits have nothing to do with it. The whole table was grumbling, and you stepped out of it."
+              },
+              "example": "Friends outside a pub.<br>“Trains are always late.” “Never fails.”<br>Someone says, “Actually, only one in ten runs late,” and the chat turns to the weather."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "setting": "Work",
+      "blurb": "Release is tomorrow at five, and one canteen lunch with Daniel and Omar turns on Clara's red build.",
+      "opener": {
+        "setting": "Thursday, 12:30. The canteen at Halden, the long table by the window. Release is tomorrow at five. You sat down with a tray and the wrong sandwich.",
+        "lines": [
+          { "who": "Daniel", "text": "“Forty minutes to log one taxi fare. Forty.”", "cue": "scrolling the expenses tool, fork still in his hand" },
+          { "who": "Omar", "text": "“They moved the receipt box again. I clicked everything.”", "cue": "easing into his chair, one hand on his back" },
+          { "who": "Clara", "text": "“Hang on, one more pass of the checklist.”", "cue": "laptop propped against the salt, not looking up" }
+        ],
+        "ask": "What level is this table talking at, and which line joins it without getting you dropped?"
+      },
+      "rounds": [
+        {
+          "level": "Spot",
+          "label": "Spot, round 1",
+          "intro": "Three lines from three corners of the office. Tap the level each one is running at.",
+          "items": [
+            {
+              "type": "pick",
+              "who": "Omar",
+              "text": "“Restart it with the cable out. That usually wakes it up.”",
+              "cue": "the team room, a dead projector",
+              "options": ["Sharing", "Problem-solving", "Grumbling"],
+              "answer": 1,
+              "why": "Problem-solving. It offers a specific fix for a specific problem. It helps if someone asked, and it can feel bossy if they didn't.",
+              "traps": {
+                "0": "Sharing would tell a story about Omar, like the last time the projector died on him. This line is a tool for the job.",
+                "2": "Grumbling would be a complaint, like “this projector is useless.” This line comes with a fix attached."
+              },
+              "example": "A kitchen at a family party.<br>“The oven door won't shut.” “Lift it slightly as you push.”<br>A fix, and it lands because the host asked."
+            },
+            {
+              "type": "pick",
+              "who": "Clara",
+              "text": "“Three months in, and I still don't know where to put my mug.”",
+              "cue": "the canteen, tray in hand",
+              "options": ["Sharing", "Problem-solving", "Grumbling"],
+              "answer": 0,
+              "why": "Sharing. She tells you something about herself, in a light voice, and waits to see whether you'll answer in kind.",
+              "traps": {
+                "1": "Problem-solving would hand her a place for the mug. She hasn't asked for one, and a fix would jump the level.",
+                "2": "Grumbling would blame the kitchen or the people who leave mugs about. She is talking about her own feeling of being new."
+              },
+              "example": "A language class.<br>“Four weeks in, and I still freeze when she asks me anything.” “Same. My knees go.”<br>A small share, and the other person relaxes."
+            },
+            {
+              "type": "pick",
+              "who": "Daniel",
+              "text": "“Meetings that could have been an email. Every single day.”",
+              "cue": "the corridor after standup",
+              "options": ["Sharing", "Problem-solving", "Grumbling"],
+              "answer": 2,
+              "why": "Grumbling. It complains about work in general and asks nobody for anything. Anyone in earshot can agree at no cost.",
+              "traps": {
+                "0": "Sharing would say something about Daniel, such as how tired he is. This line is aimed at the meetings.",
+                "1": "Problem-solving would suggest dropping a meeting or writing an agenda. There is no fix in this line, only a complaint."
+              },
+              "example": "A lift going down at five.<br>“These Fridays never end.” “Tell me about it.”<br>Two people agree, and nobody has to do anything."
+            }
+          ]
+        },
+        {
+          "level": "Play",
+          "label": "Play, the week in motion",
+          "intro": "The canteen table runs at a level, and the level moves. Join it at the level it's running, or you get dropped.",
+          "items": [
+            {
+              "type": "scene",
+              "title": "Thursday, 12:30, the canteen",
+              "setting": "Daniel (44) and Omar (35) sit with their trays. Hugh from finance has pulled up a chair. Clara has her laptop propped against the salt.",
+              "meters": { "you": 60, "them": 50 },
+              "beats": [
+                {
+                  "who": "Daniel",
+                  "text": "“They changed the form again and told nobody.” Omar: “Third time this year.” Hugh: “I only hear about it when you all complain.”",
+                  "cue": "the topic is the expenses tool, and it's running at the grumbling level. Clara has been on the same screen for ten minutes.",
+                  "lines": [
+                    {
+                      "text": "“Clara, what's on that screen?”",
+                      "tag": "best",
+                      "you": 0,
+                      "them": -2,
+                      "outcome": "The men barely look up. Clara does. “The release checklist. Third pass. There's one line I can't tick.”",
+                      "why": "Clara was the one person not grumbling. A question about her screen got the only real answer at the table."
+                    },
+                    {
+                      "text": "“I waited six weeks for my last claim.”",
+                      "tag": "ok",
+                      "you": 0,
+                      "them": 6,
+                      "outcome": "You're in. Daniel nods, slowly, as if he's writing it down.",
+                      "why": "You added one more complaint at the same size as the others. It costs nothing, and it shows the table you can sit with them before anything real comes up."
+                    },
+                    {
+                      "text": "“Technically the policy gives finance thirty days to pay out.”",
+                      "tag": "ok",
+                      "you": 0,
+                      "them": -7,
+                      "outcome": "Silence. Hugh: “Thirty working days.” Daniel pushes his tray aside and starts on the lift.",
+                      "why": "You brought a policy clause to a grumble. The table was at one level, you stepped up to another, and the talk carried on without you."
+                    }
+                  ]
+                },
+                {
+                  "who": "Omar",
+                  "text": "“I don't know if I'm doing this right. Tobias hasn't asked me a question in a month.”",
+                  "cue": "quieter. His hand goes to his back. Daniel stops chewing.",
+                  "lines": [
+                    {
+                      "text": "“Juniors go through that.”",
+                      "tag": "ok",
+                      "you": 0,
+                      "them": 2,
+                      "outcome": "“Probably,” says Hugh, and the moment closes.",
+                      "why": "A reassurance that asks nothing back is small talk again. It is kind, and it shuts the door on him."
+                    },
+                    {
+                      "text": "“What did he used to ask you about?”",
+                      "tag": "best",
+                      "you": 2,
+                      "them": 8,
+                      "outcome": "Omar sets his fork down. “Everything. Build errors, then which sandwich shop. He stopped around the reorg.”",
+                      "why": "A question about the two of them moves the talk to a real level. He answers because you asked about his story, not about the topic."
+                    },
+                    {
+                      "text": "“Have you tried a weekly one to one with him?”",
+                      "tag": "ok",
+                      "you": -3,
+                      "them": -4,
+                      "outcome": "“Yes. He cancels.” Flat. Omar looks at his plate.",
+                      "why": "Nobody asked for advice. He had already tried it, so now he is the one who got it wrong.",
+                      "flags": ["advised_omar"]
+                    }
+                  ]
+                },
+                {
+                  "who": "Clara",
+                  "text": "“I think I broke the staging build.”",
+                  "cue": "she laughs first. Her eyes go to Daniel's face to see how it lands.",
+                  "lines": [
+                    {
+                      "text": "“It's only staging, Clara. Nobody dies.”",
+                      "tag": "ok",
+                      "you": -2,
+                      "them": -5,
+                      "outcome": "Her laugh stops half way. “Right. Of course.” She turns the screen away from you.",
+                      "why": "Telling someone it is small, just after she has said it is hers, closes the door. She was watching for how big it would be."
+                    },
+                    {
+                      "text": "Say nothing and watch.",
+                      "tag": "ok",
+                      "you": -3,
+                      "them": 0,
+                      "outcome": "Daniel: “That's twice this sprint.” Omar: “Leave her.” Clara laughs again, a beat too late.",
+                      "why": "Watching is allowed, and it is what the table does. Nothing you say changes what happens next, so the pattern shows without anyone calling it out."
+                    },
+                    {
+                      "text": "“Which build? Show me the error.”",
+                      "tag": "best",
+                      "you": 2,
+                      "them": 6,
+                      "outcome": "She tilts the laptop towards you, checking your face. “Here. It's the migration. I ran it twice.”",
+                      "why": "Asking for the error treats it as a real problem. It also shows you what she is watching for, and that is the first thing to notice."
+                    }
+                  ]
+                }
+              ],
+              "example": "A team chat.<br>“VPN's down again.” “Always on Mondays.” “Ugh.”<br>Everyone agrees, and nobody has to do anything."
+            },
+            {
+              "type": "scene",
+              "title": "Thursday, 14:10, the team room",
+              "setting": "After lunch. The grumbling about the form has run out. A red build sits on the big screen and Daniel has his arms folded. Omar lowers himself into his chair. Clara is on her third coffee.",
+              "meters": { "you": 60, "them": 50 },
+              "beats": [
+                {
+                  "who": "Omar",
+                  "text": "“It fails on one test only, and only on the build machine.” Daniel: “Clear the cache.” Clara: “I did. Twice.”",
+                  "cue": "14:10. The talk has turned to fixing things, and every line is a fix.",
+                  "lines": [
+                    {
+                      "text": "“Last release I was here till one in the morning. I was furious.”",
+                      "tag": "ok",
+                      "you": -2,
+                      "them": -3,
+                      "outcome": "“Hm,” says Daniel, and Omar asks Clara about the cache again. The talk steps round you.",
+                      "why": "You brought a feeling to a table that was trading fixes. Nobody minded, and nobody picked it up."
+                    },
+                    {
+                      "text": "“Does it fail the same way every run, or does the error change?”",
+                      "tag": "best",
+                      "you": 2,
+                      "them": 6,
+                      "outcome": "“Changes,” says Clara. Omar sits up. “Then it's a timing issue.”",
+                      "why": "A question aimed at the fix keeps you on the level the table is at. You are in, and you have added something."
+                    },
+                    {
+                      "text": "“Nothing works first time here.”",
+                      "tag": "ok",
+                      "you": -1,
+                      "them": -2,
+                      "outcome": "“Mm,” says Daniel. Clara types something and deletes it.",
+                      "why": "A grumble is the level the table has just left. It is polite, and it goes nowhere."
+                    }
+                  ]
+                },
+                {
+                  "who": "Daniel",
+                  "text": "“You wrote the deploy script last quarter. What would you do?”",
+                  "cue": "he turns his chair round to face you",
+                  "lines": [
+                    {
+                      "text": "“Well, it depends on the runner image and how the caching layer resolves versions, which varies by...”",
+                      "tag": "ok",
+                      "you": -2,
+                      "them": -5,
+                      "outcome": "Omar studies the ceiling. Daniel's eyes drift to the red build.",
+                      "why": "You were asked, and you gave far more than the table wanted. The facts were right and the size was wrong."
+                    },
+                    {
+                      "text": "“Oh, I only half remember it.”",
+                      "tag": "ok",
+                      "you": -3,
+                      "them": -2,
+                      "outcome": "“Come on,” says Omar, and Daniel turns his chair back round.",
+                      "why": "Waving off what you know costs you twice. Daniel asked because he trusts you, and now he feels turned down."
+                    },
+                    {
+                      "text": "“Pin the version in the config. I can re-run it after standup if you want.”",
+                      "tag": "best",
+                      "you": 4,
+                      "them": 6,
+                      "outcome": "“Do that.” Daniel unfolds his arms for the first time today.",
+                      "why": "He asked for a fact, so a fact is welcome. You answered at the size of his question and offered one more step."
+                    }
+                  ]
+                },
+                {
+                  "who": "Clara",
+                  "text": "“I wrote the first version of this test in my second week. I still can't bring myself to delete it.”",
+                  "cue": "quieter. Omar stops rubbing his back. Daniel looks away from the screen.",
+                  "lines": [
+                    {
+                      "text": "“Then it's earned its place in the repo.”",
+                      "tag": "best",
+                      "you": 3,
+                      "them": 8,
+                      "outcome": "“Has it,” she says, and for a moment she doesn't laugh at herself.",
+                      "why": "The table dropped to a personal level and you went down with it. One plain, warm line was all it needed."
+                    },
+                    {
+                      "text": "“You could rewrite it in an afternoon.”",
+                      "tag": "ok",
+                      "you": -3,
+                      "them": -5,
+                      "outcome": "“I know I could,” says Clara. Omar gives you a look.",
+                      "why": "You answered a feeling with a fix. The talk had gone down a level, and you stayed behind on the old one."
+                    },
+                    {
+                      "text": "“Shall I get the coffees?”",
+                      "tag": "ok",
+                      "you": -3,
+                      "them": -1,
+                      "outcome": "“Not now,” says Omar. The quiet is waiting for someone, and it isn't the coffees.",
+                      "why": "Leaving the table the moment it turns real costs you a nod you could have given. It is a gentle way of stepping out."
+                    }
+                  ]
+                }
+              ],
+              "example": "An office thread.<br>“Printer's jammed.” “Open the back tray.” “That worked for me.”<br>Everyone is trading fixes. A long feeling dropped in here would stop the thread."
+            }
+          ]
+        },
+        {
+          "level": "Analyse",
+          "label": "Analyse, explain it",
+          "items": [
+            {
+              "type": "pick",
+              "who": "You",
+              "text": "Daniel's table was grumbling about the expenses form. Why did your line about the thirty days get you dropped?",
+              "options": [
+                "Hugh from finance was in the next chair, and nobody wants a clause read out in front of finance",
+                "Thirty days was the wrong figure, and everyone at the table knew it",
+                "You raised a fact at a table that was only grumbling, so the talk moved on"
+              ],
+              "answer": 2,
+              "why": "Small talk runs in levels, and a table sits at one of them. A policy dropped into a grumble changes the level, and nobody at the table asked for that.",
+              "traps": {
+                "0": "Hugh made it more awkward, but the table would have dropped the line anyway. A fact in a grumble changes the level whoever is listening.",
+                "1": "Even a right figure would have gone the same way. Being correct is another way of leaving the level the table is at."
+              },
+              "example": "A group of parents at a swimming lesson.<br>“Lessons cost more every term.” “Don't they just.”<br>Someone says, “The pool's costs rose eight per cent,” and the chat turns to the weather."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "setting": "Relationships",
+      "blurb": "Omar and Clara share a booth with her too-honest friend, and one text sat unanswered since Tuesday.",
+      "opener": {
+        "setting": "Saturday, 11:00. The Corner Table, the booth by the window. Omar asked Clara for a second coffee, and she brought Josie. You only stopped by to give Omar back his drill.",
+        "lines": [
+          { "who": "Josie", "text": "“So who actually replies to texts these days? Nobody I know does.”", "cue": "stirring her tea, looking straight at Omar" },
+          { "who": "Omar", "text": "“...”", "cue": "turning a sugar sachet over, jaw set" },
+          { "who": "Clara", "text": "“Josie.”", "cue": "smiling too brightly, phone face down by the napkins" }
+        ],
+        "ask": "What level is this table talking at, and which line joins it without getting you dropped?"
+      },
+      "rounds": [
+        {
+          "level": "Spot",
+          "label": "Spot, round 1",
+          "intro": "Three lines from three tables. Tap the level each one is running at.",
+          "items": [
+            {
+              "type": "pick",
+              "who": "Omar",
+              "text": "“I was nervous all the way here. Second coffees are harder than first ones.”",
+              "cue": "the Corner Table, waiting for Clara",
+              "options": ["Grumbling", "Sharing", "Problem-solving"],
+              "answer": 1,
+              "why": "Sharing. He tells you something about himself and leaves a gap for you to say something back.",
+              "traps": {
+                "0": "Grumbling would be a complaint about coffee dates or other people. He is talking about his own nerves.",
+                "2": "Problem-solving would offer a fix, like picking a calmer place. He hasn't asked for one, and a fix would jump the level."
+              },
+              "example": "A wedding table.<br>“I hate speeches. My hands shake the whole time.” “Mine too, I count the ceiling tiles.”<br>One share, and the stranger beside you is no longer a stranger."
+            },
+            {
+              "type": "pick",
+              "who": "Josie",
+              "text": "“Put your phone on do-not-disturb after nine. You'll stop checking it.”",
+              "cue": "the booth, Clara's phone buzzing against the table",
+              "options": ["Grumbling", "Sharing", "Problem-solving"],
+              "answer": 2,
+              "why": "Problem-solving. It offers a specific fix for a specific habit. That helps if she asked, and it can sound like a verdict if she didn't.",
+              "traps": {
+                "0": "Grumbling would be a complaint, like “phones ruin everything.” This line comes with a fix attached.",
+                "1": "Sharing would tell a story about Josie's own phone habits. A setting on a phone is a tool, not a confession."
+              },
+              "example": "A flatshare.<br>“I can never sleep.” “Try the fan on low.”<br>A fix, and it works best when the person has asked."
+            },
+            {
+              "type": "pick",
+              "who": "Clara",
+              "text": "“Nobody picks a place and sticks to it any more, do they?”",
+              "cue": "a group chat about Friday night, three changes of plan",
+              "options": ["Grumbling", "Sharing", "Problem-solving"],
+              "answer": 0,
+              "why": "Grumbling. It complains about people in general and asks nobody for anything. Anyone reading can agree without risking a thing.",
+              "traps": {
+                "1": "Sharing would say something about Clara, such as how much she hates the muddle. This line is aimed at other people.",
+                "2": "Problem-solving would suggest booking a table. There is no fix in this line, only a complaint."
+              },
+              "example": "A queue for a gig.<br>“Doors never open on time.” “Never.”<br>Two people agree, and nobody has to do anything."
+            }
+          ]
+        },
+        {
+          "level": "Play",
+          "label": "Play, the week in motion",
+          "intro": "The booth runs at a level, and the level moves. Join it at the level it's running, or you get dropped.",
+          "items": [
+            {
+              "type": "scene",
+              "title": "Saturday, 11:00, the booth",
+              "setting": "Clara (29), Omar (35) and Josie, Clara's oldest friend, share the booth. Clara's phone lies face down by the napkins. Omar's coffee has gone cold.",
+              "meters": { "you": 60, "them": 50 },
+              "beats": [
+                {
+                  "who": "Josie",
+                  "text": "“Nobody replies to anything any more. Days, it takes them. Days.” Clara: “Not everyone's like that.”",
+                  "cue": "the topic is texts, and it's running at the grumbling level. Omar hasn't said a word, thumb on the sugar sachet.",
+                  "lines": [
+                    {
+                      "text": "“My cousin waited nine days for a reply once.”",
+                      "tag": "ok",
+                      "you": 0,
+                      "them": 6,
+                      "outcome": "“Nine!” Josie slaps the table. Omar looks at his cup.",
+                      "why": "You added one more tale at the same size as hers. It keeps you in, and it puts a little more heat on the man looking at his coffee."
+                    },
+                    {
+                      "text": "“Studies say a typical reply takes a few hours, though it varies by age.”",
+                      "tag": "ok",
+                      "you": 0,
+                      "them": -7,
+                      "outcome": "“Studies,” says Josie. Clara moves the talk to the weather.",
+                      "why": "You brought a figure to a grumble. The table was at one level, you stepped up to another, and the talk carried on without you."
+                    },
+                    {
+                      "text": "“Omar, how was your week?”",
+                      "tag": "best",
+                      "you": 0,
+                      "them": -2,
+                      "outcome": "The women glance over, and Omar looks up. “Long. Mum had a scan on Tuesday.” Clara's hand goes still on her phone.",
+                      "why": "Omar was the only one at the booth not complaining. A question about his week got the only real answer at the table."
+                    }
+                  ]
+                },
+                {
+                  "who": "Clara",
+                  "text": "“I never know if I'm doing this right. If I'm too much.”",
+                  "cue": "lighter than she means it. Josie opens her mouth and shuts it again.",
+                  "lines": [
+                    {
+                      "text": "“You're not too much. You're brilliant.”",
+                      "tag": "ok",
+                      "you": 0,
+                      "them": 2,
+                      "outcome": "“Stop it,” she laughs, and waves it away. The moment closes.",
+                      "why": "A compliment she hasn't earned in her own mind just bounces off. It is kind, and it asks nothing back, so the door shuts."
+                    },
+                    {
+                      "text": "“Have you tried texting him first?”",
+                      "tag": "ok",
+                      "you": -3,
+                      "them": -4,
+                      "outcome": "“I did. Tuesday.” Flat. Omar stares at the sachet.",
+                      "why": "Nobody asked for advice. She had already tried it, so now she is the one who got it wrong, in front of him.",
+                      "flags": ["advised_clara"]
+                    },
+                    {
+                      "text": "“What do you do when you think you are?”",
+                      "tag": "best",
+                      "you": 2,
+                      "them": 8,
+                      "outcome": "Clara blinks. “I get useful. I tidy things. I offer to drive.” Omar: “You drove me to the station.”",
+                      "why": "A question about what she does moves the talk to a real level. She answers because it was about her, and not about whether she deserves praise."
+                    }
+                  ]
+                },
+                {
+                  "who": "Clara",
+                  "text": "“It's only a text. I'd forgotten it by Wednesday.”",
+                  "cue": "her eyes on Omar's face, to see whether that is working",
+                  "lines": [
+                    {
+                      "text": "“It's only a text, Clara. Let it go.”",
+                      "tag": "ok",
+                      "you": -2,
+                      "them": -5,
+                      "outcome": "Her smile stays on, but her shoulders drop. Omar looks at you sharply.",
+                      "why": "Telling someone to let go of what she has just said she forgot closes the door. Omar sees it, and so does she."
+                    },
+                    {
+                      "text": "“Did it sting, though?”",
+                      "tag": "best",
+                      "you": 2,
+                      "them": 6,
+                      "outcome": "Clara laughs once. “A bit. I checked it more than I'd like to say.” Omar: “I'm sorry.”",
+                      "why": "Asking if it stung treats the text as a real thing. It also shows you what she is checking for in his face, and that is the first thing to notice."
+                    },
+                    {
+                      "text": "Say nothing and watch.",
+                      "tag": "ok",
+                      "you": -3,
+                      "them": 0,
+                      "outcome": "Josie, dry: “She checked her phone nine times on Wednesday.” Clara: “Josie!” Omar: “Leave her.”",
+                      "why": "Watching is allowed, and it is what the booth does. Nothing you say changes what happens next, so the pattern shows without anyone calling it out."
+                    }
+                  ]
+                }
+              ],
+              "example": "A group of friends.<br>“Nobody commits to plans any more.” “I know, it's hopeless.”<br>Everyone agrees, and nobody has to say whose plan fell through."
+            },
+            {
+              "type": "scene",
+              "title": "Saturday, 12:10, the booth changes gear",
+              "setting": "The booth again, an hour on. The grumbling about replies has run out. Josie's phone lies open on a photo of a damp patch on her ceiling. Omar has put the drill bag on the seat beside him.",
+              "meters": { "you": 60, "them": 50 },
+              "beats": [
+                {
+                  "who": "Josie",
+                  "text": "“It's spread to the corner now.” Omar: “Is it the roof or the pipe?” Clara: “Mine was the gutter.”",
+                  "cue": "12:10. The talk has turned to fixing things, and every line is a fix.",
+                  "lines": [
+                    {
+                      "text": "“Is the damp on an outside wall, or on the inside of the flat?”",
+                      "tag": "best",
+                      "you": 2,
+                      "them": 6,
+                      "outcome": "“Outside wall,” says Josie. Omar nods. “Then look at the gutter.”",
+                      "why": "A question aimed at the fix keeps you on the level the booth is at. You are in, and you have added something."
+                    },
+                    {
+                      "text": "“My old flat had mould and I cried for a week.”",
+                      "tag": "ok",
+                      "you": -2,
+                      "them": -3,
+                      "outcome": "“Aw,” says Josie, and asks Omar about the pipe again. The talk goes round you.",
+                      "why": "You brought a feeling to a table that was trading fixes. Nobody minded, and nobody picked it up."
+                    },
+                    {
+                      "text": "“Landlords never fix anything.”",
+                      "tag": "ok",
+                      "you": -1,
+                      "them": -2,
+                      "outcome": "“Mm,” says Clara. Josie scrolls to a second photo.",
+                      "why": "A grumble is the level the booth has just left. It is polite, and it goes nowhere."
+                    }
+                  ]
+                },
+                {
+                  "who": "Josie",
+                  "text": "“You had that place with the mould, didn't you? What did you actually do?”",
+                  "cue": "she turns the phone round to face you",
+                  "lines": [
+                    {
+                      "text": "“Oh, I was lucky. I don't really know.”",
+                      "tag": "ok",
+                      "you": -3,
+                      "them": -2,
+                      "outcome": "“Don't be daft,” says Josie, and turns the phone back round.",
+                      "why": "Waving off what you know costs you twice. Josie asked because she trusts you, and now she feels turned down."
+                    },
+                    {
+                      "text": "“Well, condensation and rising damp are different things, and the tell is the tide mark, which varies by...”",
+                      "tag": "ok",
+                      "you": -2,
+                      "them": -5,
+                      "outcome": "Omar studies his cup. Clara checks the time.",
+                      "why": "You were asked, and you gave far more than the booth wanted. The facts were right and the size was wrong."
+                    },
+                    {
+                      "text": "“Dated photos, then the council's housing line. I can send you the number after this.”",
+                      "tag": "best",
+                      "you": 4,
+                      "them": 6,
+                      "outcome": "“Would you?” Josie lowers the phone. “That's all I wanted.”",
+                      "why": "She asked for a fact, so a fact is welcome. You answered at the size of her question and offered one more step."
+                    }
+                  ]
+                },
+                {
+                  "who": "Omar",
+                  "text": "“I sat in the car outside the clinic for an hour on Tuesday. That's why the text sat.”",
+                  "cue": "quieter. Clara has stopped stirring. Josie, for once, says nothing.",
+                  "lines": [
+                    {
+                      "text": "“You could send a one-word reply next time. It takes ten seconds.”",
+                      "tag": "ok",
+                      "you": -3,
+                      "them": -5,
+                      "outcome": "“I know,” says Omar. Clara gives you a look.",
+                      "why": "You answered a feeling with a fix. The talk had gone down a level, and you stayed behind on the old one."
+                    },
+                    {
+                      "text": "“That sounds like the right place to sit.”",
+                      "tag": "best",
+                      "you": 3,
+                      "them": 8,
+                      "outcome": "“It was,” he says. For the first time all morning Clara reaches across the table.",
+                      "why": "The table dropped to a personal level and you went down with it. One plain, warm line was all it needed."
+                    },
+                    {
+                      "text": "“Shall I get us more tea?”",
+                      "tag": "ok",
+                      "you": -3,
+                      "them": -1,
+                      "outcome": "“Not yet,” says Clara. The quiet is waiting for someone, and it isn't the tea.",
+                      "why": "Leaving the table the moment it turns real costs you a nod you could have given. It is a gentle way of stepping out."
+                    }
+                  ]
+                }
+              ],
+              "example": "A group chat for a flat hunt.<br>“Damp patch in the bedroom.” “Ask about the gutters.” “Did that for mine.”<br>Everyone is trading fixes. A long, sad story dropped in here would stop the chat."
+            }
+          ]
+        },
+        {
+          "level": "Analyse",
+          "label": "Analyse, explain it",
+          "items": [
+            {
+              "type": "pick",
+              "who": "You",
+              "text": "Josie's table was grumbling about replies. Why did your line about typical reply times get you dropped?",
+              "options": [
+                "You brought a figure to a table that was only grumbling, so the talk moved on",
+                "The figure sounded like a defence of people who leave texts unanswered, and Josie took it as taking a side",
+                "Clara dislikes anyone who quotes studies at a coffee table, and she steered the talk away"
+              ],
+              "answer": 0,
+              "why": "Small talk runs in levels, and a table sits at one of them. A figure dropped into a grumble changes the level, and nobody at the booth asked for that.",
+              "traps": {
+                "1": "Josie may have heard it that way, but even a flattering figure would have dropped. A fact in a grumble changes the level.",
+                "2": "Clara's taste in conversation is not the reason. The whole booth was grumbling, and you stepped out of it."
+              },
+              "example": "Colleagues in a lift.<br>“Parking here is a nightmare.” “Isn't it.”<br>Someone says, “The car park has 240 spaces,” and everyone studies the floor numbers."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

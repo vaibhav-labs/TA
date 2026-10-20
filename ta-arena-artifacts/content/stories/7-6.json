@@ -1,0 +1,1124 @@
+{
+ "baseBlurb": "After the Sunday group, Nadia sits you down with tea and tries every old hook on you.",
+ "stories": [
+  {
+   "setting": "Home & Flatmates",
+   "blurb": "Maya makes tea after the rota meeting, and Sam's late gas share sits between you.",
+   "opener": {
+    "setting": "Sunday, 5:40pm, the flat, the kitchen. Sam is out on a shift. Maya has two mugs of tea and the rota sheet face down.",
+    "lines": [
+     {
+      "who": "Maya",
+      "text": "“Sit down. I've made tea, and I've turned the sheet over.”",
+      "cue": "sliding a mug across the table, not smiling yet"
+     },
+     {
+      "who": "Maya",
+      "text": "“It's nine days, by the way. I'm not counting.”",
+      "cue": "squaring her mug on its coaster"
+     }
+    ],
+    "ask": "Can you keep this conversation real for six turns, without rescuing anyone or blaming them?"
+   },
+   "rounds": [
+    {
+     "level": "Spot",
+     "label": "Spot, round 1",
+     "intro": "Her lines can hook you. Tap what each one is doing, and listen for the one with no hook in it.",
+     "items": [
+      {
+       "type": "pick",
+       "who": "Maya",
+       "text": "“You're the only one in this flat who actually reads the rota, you know.”",
+       "cue": "tapping the face-down sheet with one finger",
+       "options": [
+        "A hook: flattery to make you her ally",
+        "A plain thank you for reading the rota",
+        "A joke about how dull the rota is to read"
+       ],
+       "answer": 0,
+       "why": "She praises you in a way that puts Sam below you. If you take it, you become the good flatmate, and that seat needs a bad one to sit across from it.",
+       "traps": {
+        "1": "A plain thank you. It feels polite, but it accepts the seat she is offering, and Sam is already in the other one.",
+        "2": "A joke about the rota. It is light, but it laughs along with her and leaves the praise exactly where she put it."
+       },
+       "example": "Bus stop, Monday, 8:10am.<br>Neighbour: “You're the only one who sorts the recycling properly. The rest are hopeless.”<br>You: “Everyone's got a different bin day. I just wrote mine on the fridge.”"
+      },
+      {
+       "type": "pick",
+       "who": "Maya",
+       "text": "“Sam will find the gas money, won't he? I'd hate to think it lands on you.”",
+       "cue": "turning the mug by its handle, not looking up",
+       "options": [
+        "A plain answer about when the bill is due",
+        "A real question about how Sam is getting on",
+        "A hook: she is handing you his debt"
+       ],
+       "answer": 2,
+       "why": "Her question puts Sam's money on your shoulders. If you answer it, you take the saviour's chair for a man who is out on a shift and is not even at the table.",
+       "traps": {
+        "0": "A plain answer about the bill. It sounds sensible, but it accepts her frame, that his lateness is yours to cover, and answers inside it.",
+        "1": "A real question about Sam. It sounds kind, but it asks you to forecast his job and his luck, and that is the same chair with a softer label."
+       },
+       "example": "Allotment committee, Saturday.<br>Chair: “Ravi will pay his plot fee, won't he? It'd be a shame if you had to cover.”<br>You: “It's Ravi's fee. Ask Ravi.”"
+      },
+      {
+       "type": "pick",
+       "who": "Maya",
+       "text": "“Mr Pell's been impossible about the damp. Anyone would have moved out by now, wouldn't they?”",
+       "cue": "pen tapping the table, waiting",
+       "options": [
+        "A plain feeling about the damp, said aloud",
+        "Joining in: the blamer's chair",
+        "A question about the repair date"
+       ],
+       "answer": 1,
+       "why": "She wants you to agree and add a charge, so the case against Mr Pell grows. That is the blamer's chair, and a wet bedroom wall makes it easy to sit in.",
+       "traps": {
+        "0": "A plain feeling about the damp. It is honest, but this line is asking for a verdict on Mr Pell, and a feeling is not a verdict.",
+        "2": "A question about the repair date. It sounds like a way to change the subject, but the subject walks back to Mr Pell within five minutes."
+       },
+       "example": "Launderette, Wednesday.<br>Woman: “The management is a disgrace. Everyone says so, don't they?”<br>You: “I've only seen the broken dryer. Is yours the one that eats coins?”"
+      },
+      {
+       "type": "pick",
+       "who": "Maya",
+       "text": "“I'm not fishing, and I'm not going to fix anything. I'd like to hear how the month actually went for you.”",
+       "cue": "both hands round the mug, looking straight at you",
+       "options": [
+        "Small talk to fill the gap before the real thing",
+        "A hook: she wants you to need her for the answer",
+        "A plain question with no game in it"
+       ],
+       "answer": 2,
+       "why": "She says what she wants and leaves the answer to you. There is no praise to grab, no rescue on offer and nobody to blame. This is how a conversation sounds once the traps are gone.",
+       "traps": {
+        "0": "Small talk. The tone is friendly, but small talk would not ask for the actual answer, and she just did.",
+        "1": "A hook that wants you to need her. She has said she will fix nothing, so there is no rescue to lean on."
+       },
+       "example": "Driving lesson, Tuesday, 4:30pm.<br>Instructor: “I won't grab the wheel. Tell me what felt hard today.”<br>Learner: “The roundabout. I froze.”"
+      }
+     ]
+    },
+    {
+     "level": "Play",
+     "label": "Play, the week in motion",
+     "intro": "Two short conversations, three turns each. She leaves doors open. Some lead somewhere useful, and some lead back to the old chairs.",
+     "items": [
+      {
+       "type": "scene",
+       "title": "Sunday, 5:40pm, the kitchen table",
+       "setting": "The flat. The bin bags wait by the door, the rota sheet is face down, and the kettle ticks as it cools.",
+       "meters": {
+        "you": 50,
+        "them": 50
+       },
+       "beats": [
+        {
+         "who": "Maya",
+         "text": "“Tell me one thing you did this month that you're proud of, and one you aren't. No jokes.”",
+         "cue": "pen capped, the sheet still face down",
+         "lines": [
+          {
+           "text": "“I said the bins thing out loud to Sam. And I still tidy up after him before you see it, so I'm not finished.”",
+           "tag": "best",
+           "you": 4,
+           "them": 3,
+           "outcome": "Maya turns the sheet a quarter turn, then leaves it. “That's the honest version. I'll take it.”",
+           "why": "You name the win and the old habit in one go. Candid means giving both halves, the part you like and the part that stings."
+          },
+          {
+           "text": "“I said the bins thing out loud. The rest is fine.”",
+           "tag": "ok",
+           "you": 1,
+           "them": 0,
+           "outcome": "She waits for the rest, and the kettle ticks through the gap.",
+           "why": "Half an answer, and “fine” shuts the door on the other half. It is honest as far as it goes, which is not far."
+          },
+          {
+           "text": "“I'm proud of most of it. You've seen the sheet, you'd know.”",
+           "tag": "ok",
+           "you": -4,
+           "them": -4,
+           "outcome": "Maya says “Mm” and uncaps the pen, just to have something to hold.",
+           "why": "This asks her record to do the answering for you. You swap a real reply for her approval, and then you are looking for the approval."
+          }
+         ]
+        },
+        {
+         "who": "Maya",
+         "text": "“Sam will find the gas money, won't he? I'd hate to think it's on you if he doesn't.”",
+         "cue": "turning the mug, not looking at you",
+         "lines": [
+          {
+           "text": "“It's totally Sam's fault. He never pays on time.”",
+           "tag": "ok",
+           "you": -5,
+           "them": -6,
+           "outcome": "Maya says “There it is,” and writes a date in the margin.",
+           "why": "You take the blamer's chair and give Sam the villain's. It sounds like agreement, and it locks you both into one story about him."
+          },
+          {
+           "text": "“I hope so. I'll cover the gap if I have to.”",
+           "tag": "ok",
+           "you": -2,
+           "them": 0,
+           "outcome": "She nods, and “if I have to” sits between the mugs.",
+           "why": "Kind on the surface. “If I have to” is a promise to keep rescuing, the saviour's chair in a soft voice."
+          },
+          {
+           "text": "“That's Sam's to sort. If the gas is late, I'm not covering it.”",
+           "tag": "best",
+           "you": 4,
+           "them": 2,
+           "outcome": "Maya's mouth twitches. “Good. Tell him that, not me.”",
+           "why": "You leave Sam's share with Sam and turn down the rescue out loud. The bill stays in his lap, where it belongs."
+          }
+         ]
+        },
+        {
+         "who": "Maya",
+         "text": "“You make this flat look easy, you know. Some of us find it harder.”",
+         "cue": "a smile that stops before her eyes",
+         "lines": [
+          {
+           "text": "“Thanks. I've had a lot of practice with milk.”",
+           "tag": "ok",
+           "you": 0,
+           "them": 1,
+           "outcome": "She laughs once, shortly, and the sheet stays face down.",
+           "why": "A polite thank you with a joke on top. No hook in it, and nothing real in it either."
+          },
+          {
+           "text": "“It isn't easy. I snapped at Sam on Tuesday over a spoon. Is it hard for you too?”",
+           "tag": "best",
+           "you": 3,
+           "them": 4,
+           "outcome": "Maya's smile finally reaches her eyes. “Most nights, yes. Thank you for asking.”",
+           "why": "You turn down the compliment without a speech, then hand the question back to her as one adult to another."
+          },
+          {
+           "text": "“I think I'm the only one here who really gets how to live with people.”",
+           "tag": "ok",
+           "you": -6,
+           "them": -6,
+           "outcome": "Maya picks up her mug and looks at the door.",
+           "why": "You have taken the praise and turned it into a rank. Now you need someone below you, and that is the old game."
+          }
+         ]
+        }
+       ],
+       "fallout": {
+        "them": "Maya takes both mugs to the sink, says she has an early shift, and goes before you can answer."
+       }
+      },
+      {
+       "type": "scene",
+       "title": "Sunday, 6:10pm, the same table",
+       "setting": "The second round of tea has come out and the rota sheet is turned over at last. The balcony door rattles in the wind.",
+       "meters": {
+        "you": 55,
+        "them": 50
+       },
+       "beats": [
+        {
+         "who": "Maya",
+         "text": "“Have you heard how Mr Pell talks to you on the phone? You should write to the council. I'm on your side, and so is anyone who's heard him.”",
+         "cue": "leaning in, voice dropped to the table",
+         "lines": [
+          {
+           "text": "“Maybe. I'll think about the council.”",
+           "tag": "ok",
+           "you": -2,
+           "them": 0,
+           "outcome": "She says “Do,” and her voice goes back to its usual pitch.",
+           "why": "You don't join the case, but you don't catch the move either. The almost-game passes by, and so does the chance to name it."
+          },
+          {
+           "text": "“Yes, he's a nightmare. Let's write it all down.”",
+           "tag": "ok",
+           "you": -6,
+           "them": -6,
+           "outcome": "Maya's pen starts moving, and half a page fills with dates.",
+           "why": "You take her invitation and add a charge. Now two people hold the file, and the flat will feel it on Monday."
+          },
+          {
+           "text": "“That sounded like you're on my side against him. I'd rather decide what to do about Mr Pell myself.”",
+           "tag": "best",
+           "you": 4,
+           "them": 4,
+           "outcome": "Maya sits back and looks at you for a long moment. “Fair. I was about to do the whole thing for you.”",
+           "why": "You catch her almost playing saviour on your behalf, and you say so plainly. She can thank you because the move she nearly made would have trapped you both."
+          }
+         ]
+        },
+        {
+         "who": "Maya",
+         "text": "“You never ask Sam for the money back out loud, do you? Why's that?”",
+         "cue": "head on one side, like she is checking a total",
+         "lines": [
+          {
+           "text": "“Because if I ask, he'll apologise for ten minutes and I'll end up comforting him. I'd rather ask once, with the number, and let him answer.”",
+           "tag": "best",
+           "you": 3,
+           "them": 4,
+           "outcome": "Maya nods. “Then ask once. See what he does with a number instead of a sigh.”",
+           "why": "You name what asking costs you, then choose the plain ask anyway. A straight request is the way out of waiting."
+          },
+          {
+           "text": "“He's got a lot on. Let him be.”",
+           "tag": "ok",
+           "you": -1,
+           "them": -1,
+           "outcome": "Maya says, “Is that what you think, or what he told you?”",
+           "why": "A kind excuse. It keeps the wish buried, and it speaks for Sam, which is a small rescue of its own."
+          },
+          {
+           "text": "“Because he'd make it all about how sorry he is, like always.”",
+           "tag": "ok",
+           "you": -5,
+           "them": -6,
+           "outcome": "Maya turns her mug a quarter turn on the table.",
+           "why": "This makes Sam the one who spoils every ask, so you can stay the patient one. It keeps the asking out of the picture."
+          }
+         ]
+        },
+        {
+         "who": "Maya",
+         "text": "“Last one, and then the tea's cold. What will you stop doing this week, and who will you tell?”",
+         "cue": "pen in her hand now",
+         "lines": [
+          {
+           "text": "“Nothing, really. Who would I tell? Nobody in this flat listens.”",
+           "tag": "ok",
+           "you": -6,
+           "them": -7,
+           "outcome": "Maya caps the pen without writing anything.",
+           "why": "This is the old routine in two lines: a verdict on everyone else, and no one to tell. It leaves the week exactly as it was."
+          },
+          {
+           "text": "“I'll stop covering Sam's bin week, and I'll tell him on Friday, out loud, with the date on the sheet.”",
+           "tag": "best",
+           "you": 4,
+           "them": 4,
+           "outcome": "Maya writes it down. “Friday. I'll make sure the sheet is on the fridge.”",
+           "why": "You stop the rescue and name the person and the day. Letting him feel the cost is the way out for someone who keeps saving."
+          },
+          {
+           "text": "“I'll drop the file on Mr Pell, and I'll ring him myself on Monday and ask for a date for the damp.”",
+           "tag": "best",
+           "you": 4,
+           "them": 4,
+           "outcome": "Maya nods slowly. “Monday. Ring him from the balcony, the signal's better.”",
+           "why": "You let go of the case and take the talk to the one person it concerns. That is the way out for someone who keeps blaming."
+          },
+          {
+           "text": "“I'll ask you to swap bin weeks, straight out, and I won't wait for you to offer.”",
+           "tag": "best",
+           "you": 4,
+           "them": 4,
+           "outcome": "Maya smiles properly, for the first time all evening. “Then I'll say yes or no. Either way you'll know.”",
+           "why": "You stop waiting to be offered and you ask. That is the way out for someone who keeps suffering, and it turns the wait into a request."
+          }
+         ]
+        }
+       ],
+       "fallout": {
+        "them": "Maya stands, says the next rota meeting is Sunday at six, and goes to run the bath before you can answer."
+       }
+      }
+     ]
+    },
+    {
+     "level": "Analyse",
+     "label": "Analyse, explain it",
+     "intro": "Two to read back. Name the chair in the first, and say what Berne's last chapter makes of the wobble in the second.",
+     "items": [
+      {
+       "type": "pick",
+       "who": "Maya",
+       "text": "“Have you heard how Mr Pell talks to you? I'm on your side here.”",
+       "cue": "Which explanation fits?",
+       "options": [
+        "Plain concern and nothing more. She heard the phone call, she wants you looked after in your own flat, and there is no hook anywhere in it.",
+        "A saviour's move for you and a blamer's move against Mr Pell. It asks you to sign the case, and people swap seats on Karpman's triangle.",
+        "A test of your temper, to see whether you will get upset. She only wants to know if you can be pushed, so the line holds no trap at all."
+       ],
+       "answer": 1,
+       "why": "She offered to rescue you by going after Mr Pell. The saviour's chair and the blamer's chair are both in the line, and the swap between them is the trap. Steiner's rescue triangle, taken from Karpman's drama triangle, is these seats with people moving between them.",
+       "traps": {
+        "0": "Plain concern. It sounds caring, and she may mean part of it. But the line asks you to join a case against him, and that is the trap whatever her heart is doing.",
+        "2": "A test of your temper. It is a reasonable guess, but the line has a clear hook: a case and a rescue, with you as the one who signs."
+       },
+       "example": "Residents' meeting, Sunday, 6:30pm.<br>Neighbour: “The caretaker's been useless. I'm on your side, just say it.”<br>You: “I'll talk to the caretaker myself, thanks.”"
+      },
+      {
+       "type": "pick",
+       "who": "You",
+       "text": "You carry the mugs to the sink. Saying true things out loud felt risky, and a small voice says the old chairs were safer.",
+       "cue": "What does Berne's last chapter say about that?",
+       "options": [
+        "Awareness, spontaneity and intimacy can feel risky to someone unprepared. His hope is for people who get ready, so a wobble is normal.",
+        "Life after games is easy once you know the moves, so the wobble means you did something wrong tonight and should go back to the old chairs.",
+        "Once enough flatmates drop their games, everyone else will follow, so the wobble will pass by itself in a week or two without any effort from you."
+       ],
+       "answer": 0,
+       "why": "Berne ends the book by saying that some people can rise above the bleak picture of life as a wait filled with pastimes and games. He also warns that the way out can be frightening and even risky for the unprepared. His hope rests with individuals, not with the human race as a whole.",
+       "traps": {
+        "1": "Easy once you know the moves. It would be comforting, but Berne says the opposite: the way past games can be frightening, so a wobble is no sign of a mistake.",
+        "2": "Everyone else will follow. Berne is not that hopeful. He doubts the human race as a whole will change, and puts his hope in individual people."
+       },
+       "example": "Climbing wall, Saturday, 11:00am.<br>Beginner: “My legs are shaking, so I must be doing it wrong.”<br>Instructor: “First time on the high wall? Shaking means it's new. Rest a minute, then go on.”"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "setting": "School & College",
+   "blurb": "Helen waits in the library after class, with Sam's unfinished page due on Friday.",
+   "opener": {
+    "setting": "Thursday, 8:50pm, the library, second floor. Class finished at eight. Sam has gone for the last bus with page four still empty. Helen has two cups of machine coffee and the feedback sheet face down.",
+    "lines": [
+     {
+      "who": "Helen",
+      "text": "“Sit. I got you the one that tastes less of soup.”",
+      "cue": "sliding a paper cup across the table, not smiling yet"
+     },
+     {
+      "who": "Helen",
+      "text": "“Page four is blank, by the way. I'm not counting. It's one page.”",
+      "cue": "squaring the stapler against the table edge"
+     }
+    ],
+    "ask": "Can you keep this conversation real for six turns, without rescuing anyone or blaming them?"
+   },
+   "rounds": [
+    {
+     "level": "Spot",
+     "label": "Spot, round 1",
+     "intro": "Her lines can hook you. Tap what each one is doing, and listen for the one with no hook in it.",
+     "items": [
+      {
+       "type": "pick",
+       "who": "Helen",
+       "text": "“You're the only one in this group who actually reads the brief, you know.”",
+       "cue": "tapping the face-down feedback sheet",
+       "options": [
+        "A joke about how long the brief runs on",
+        "A plain thank you for reading it so closely",
+        "A hook: flattery to make you her ally"
+       ],
+       "answer": 2,
+       "why": "She praises you in a way that lowers the others. If you take it, you become the one who does the reading, and the group splits into readers and the rest.",
+       "traps": {
+        "0": "A joke about the brief. It is light, but it laughs along and leaves the praise sitting where she put it.",
+        "1": "A plain thank you. It feels polite, and it accepts the seat she is offering, with Sam in the other one."
+       },
+       "example": "Pub quiz, Wednesday.<br>Captain: “You're the only one who reads the questions properly. The others just shout.”<br>You: “They get the right answer sometimes. Who's got the pen?”"
+      },
+      {
+       "type": "pick",
+       "who": "Helen",
+       "text": "“Sam will do page four tonight, won't he? I'd hate for it to land on you again.”",
+       "cue": "straightening the stapler on the table",
+       "options": [
+        "A real question about how Sam's week has been",
+        "A hook: she is handing you his page",
+        "A plain answer about when the poster is due"
+       ],
+       "answer": 1,
+       "why": "Her question hands you Sam's page before he has said a word about it. If you answer, you take the saviour's chair for someone who caught the last bus home.",
+       "traps": {
+        "0": "A real question about Sam. It sounds kind, but it asks you to guess at his week, and the guess is the first step to doing his page.",
+        "2": "A plain answer about the deadline. It sounds practical, and it accepts her frame that his page is yours to worry about."
+       },
+       "example": "Netball club, Thursday.<br>Captain: “Jo will bring the bibs, won't she? Awful if you had to.”<br>You: “Jo's bringing them. Ask Jo.”"
+      },
+      {
+       "type": "pick",
+       "who": "Helen",
+       "text": "“Mr Dawson's feedback this term has been unbearable. Anyone would have dropped the course by now, wouldn't they?”",
+       "cue": "a long breath out through her nose",
+       "options": [
+        "Joining in: the blamer's chair",
+        "A plain feeling you can name about the marks",
+        "A question about his office hours"
+       ],
+       "answer": 0,
+       "why": "She wants you to agree and add a charge, so the case against Mr Dawson grows. That is the blamer's chair, and a harsh feedback sheet makes it comfortable.",
+       "traps": {
+        "1": "A plain feeling about the marks. It is honest, but this line asks for a verdict on Mr Dawson, and a feeling is not a verdict.",
+        "2": "A question about his office hours. It sounds like a way out, but the talk comes back to Mr Dawson before the cups are empty."
+       },
+       "example": "Canteen queue, Friday.<br>Student: “The lecturer's hopeless. Everybody thinks so, don't they?”<br>You: “I got one good lecture out of him. Did you try the soup?”"
+      },
+      {
+       "type": "pick",
+       "who": "Helen",
+       "text": "“I'm not fishing, and I'm not going to fix anything. I'd like to hear how the course actually went for you.”",
+       "cue": "looking straight at you over the cup",
+       "options": [
+        "A hook: she wants you to lean on her",
+        "A plain question with no game in it",
+        "Small talk to fill the time before the last bus"
+       ],
+       "answer": 1,
+       "why": "She says what she wants and leaves the answer to you. There is nothing to flatter, no rescue on offer and no one to blame. This is a conversation once the traps are gone.",
+       "traps": {
+        "0": "A hook that wants you to lean on her. She has said she will fix nothing, so there is nothing to lean against.",
+        "2": "Small talk before the bus. It is friendly, but small talk would not ask for the real answer, and she is asking for it."
+       },
+       "example": "Allotment gate, Sunday.<br>Neighbour: “I won't tell you what to plant. What did you try this year?”<br>You: “Beans. They did nothing.”"
+      }
+     ]
+    },
+    {
+     "level": "Play",
+     "label": "Play, the week in motion",
+     "intro": "Two short conversations, three turns each. She leaves doors open. Some lead somewhere useful, and some lead back to the old chairs.",
+     "items": [
+      {
+       "type": "scene",
+       "title": "Thursday, 8:50pm, the study table",
+       "setting": "The library, second floor. The vending machine hums, a stapler sits between the two cups, and the feedback sheet is face down.",
+       "meters": {
+        "you": 50,
+        "them": 50
+       },
+       "beats": [
+        {
+         "who": "Helen",
+         "text": "“Tell me one thing you did on this course that you're proud of, and one you aren't. No jokes.”",
+         "cue": "stapler in her hand, the sheet still face down",
+         "lines": [
+          {
+           "text": "“I'm proud of most of it. You were in the group, you saw.”",
+           "tag": "ok",
+           "you": -4,
+           "them": -4,
+           "outcome": "Helen says “Mm” and clicks the stapler twice.",
+           "why": "This leans on her memory to do your answering. You trade a real reply for her approval, and then you are waiting for it."
+          },
+          {
+           "text": "“The mock presentation, and I'm not sure about the rest.”",
+           "tag": "ok",
+           "you": 1,
+           "them": 1,
+           "outcome": "She waits for the rest. A trolley squeaks somewhere between the shelves.",
+           "why": "Half an answer. You gave one side, and the quiet after it is where the test is."
+          },
+          {
+           "text": "“Standing up in the mock presentation. And I still rewrite other people's slides at midnight and tell nobody, so I'm not finished.”",
+           "tag": "best",
+           "you": 4,
+           "them": 3,
+           "outcome": "Helen puts the stapler down. “Right. That's the one. Keep it.”",
+           "why": "You name the win and the old habit together. Candid means both halves, the one you like and the one that stings."
+          }
+         ]
+        },
+        {
+         "who": "Helen",
+         "text": "“Sam will do page four tonight, won't he? I'd hate to think it's on you if he doesn't.”",
+         "cue": "cup halfway to her mouth, not looking at you",
+         "lines": [
+          {
+           "text": "“That's Sam's page. If it's late, I'm not writing it for him.”",
+           "tag": "best",
+           "you": 4,
+           "them": 2,
+           "outcome": "Helen breathes out through her nose. “Good. Tell him that, not me.”",
+           "why": "You leave the page with its owner and turn the rescue down out loud. It stays his problem, and he can feel it."
+          },
+          {
+           "text": "“I hope so. I'll look over page four if he's stuck.”",
+           "tag": "ok",
+           "you": -2,
+           "them": 0,
+           "outcome": "She nods, and “look over” sits on the table like a promise.",
+           "why": "It sounds generous. “Look over” turns into “write” by Thursday night, and that is the saviour's chair in a soft voice."
+          },
+          {
+           "text": "“It's all Sam's fault. He always leaves it to the last night.”",
+           "tag": "ok",
+           "you": -5,
+           "them": -6,
+           "outcome": "Helen says “Well,” and sips the coffee she did not want.",
+           "why": "You take the blamer's chair and give Sam the villain's. It feels like agreement, and it locks you both into a story about him."
+          }
+         ]
+        },
+        {
+         "who": "Helen",
+         "text": "“You make this course look easy, you know. Some of us are drowning.”",
+         "cue": "a smile that does not hold",
+         "lines": [
+          {
+           "text": "“I think I'm the only one here who's got the hang of studying.”",
+           "tag": "ok",
+           "you": -6,
+           "them": -6,
+           "outcome": "Helen picks up her cup and checks the clock on the wall.",
+           "why": "You accepted the praise and made it a rank. Now you need someone below you, and that is the old game."
+          },
+          {
+           "text": "“Thanks. I've had a lot of coffee.”",
+           "tag": "ok",
+           "you": 0,
+           "them": 1,
+           "outcome": "She laughs once, and the sheet stays face down.",
+           "why": "A polite thank you with a joke on top. No hook in it, and nothing real either."
+          },
+          {
+           "text": "“It isn't easy. I cried over the reading list on Sunday. How bad is it for you?”",
+           "tag": "best",
+           "you": 3,
+           "them": 4,
+           "outcome": "Helen's smile holds this time. “Bad on Tuesdays. Thank you for asking.”",
+           "why": "You turn down the compliment without a fuss, then hand the question back to her as one adult to another."
+          }
+         ]
+        }
+       ],
+       "fallout": {
+        "them": "Helen gathers her cups, says her bus goes in six minutes, and leaves before you can answer."
+       }
+      },
+      {
+       "type": "scene",
+       "title": "Thursday, 9:20pm, the same table",
+       "setting": "The library is nearly empty. Helen has turned the feedback sheet over at last, and a cleaner's trolley rattles past the shelves.",
+       "meters": {
+        "you": 55,
+        "them": 50
+       },
+       "beats": [
+        {
+         "who": "Helen",
+         "text": "“Have you read what Mr Dawson wrote on your poster? You should go to the head of department. I'm on your side, and so is everyone who's had him.”",
+         "cue": "leaning across the table, voice low",
+         "lines": [
+          {
+           "text": "“That sounded like you're on my side against him. I'd rather decide what to do about Mr Dawson myself.”",
+           "tag": "best",
+           "you": 4,
+           "them": 4,
+           "outcome": "Helen sits back. “Fair. I was about to write the whole email for you.”",
+           "why": "You catch her almost playing saviour on your behalf and you say so plainly. She can thank you because the move would have trapped you both."
+          },
+          {
+           "text": "“Maybe. I'll think about the head of department.”",
+           "tag": "ok",
+           "you": -2,
+           "them": 0,
+           "outcome": "She says “Do,” and her voice drops back to normal.",
+           "why": "You don't join the case, and you don't catch the move either. The almost-game passes by with its lesson."
+          },
+          {
+           "text": "“Yes, he's useless. Let's put it in an email.”",
+           "tag": "ok",
+           "you": -6,
+           "them": -6,
+           "outcome": "Helen opens her laptop and starts on a subject line.",
+           "why": "You take her invitation and add a charge. Now two people have a case, and the class will feel it next week."
+          }
+         ]
+        },
+        {
+         "who": "Helen",
+         "text": "“You never ask Tom for his notes from the week you missed, do you? Why's that?”",
+         "cue": "head tilted, reading your face",
+         "lines": [
+          {
+           "text": "“He's busy with his own deadline. Leave him.”",
+           "tag": "ok",
+           "you": -1,
+           "them": -1,
+           "outcome": "Helen says, “Is that what you think, or what he said?”",
+           "why": "A kind excuse. It keeps the want buried, and it speaks for Tom, which is a small rescue of its own."
+          },
+          {
+           "text": "“Because he'd lecture me about why I missed it, like always.”",
+           "tag": "ok",
+           "you": -5,
+           "them": -6,
+           "outcome": "Helen turns her cup a quarter turn on the table.",
+           "why": "This makes Tom the one who spoils every ask, so you can stay the patient one. Asking drops out of the picture."
+          },
+          {
+           "text": "“Because if I ask, he'll say yes and remind me for a month. I'd rather ask him straight tomorrow, and thank him once.”",
+           "tag": "best",
+           "you": 3,
+           "them": 4,
+           "outcome": "Helen nods. “Then ask. See what he does with a straight question.”",
+           "why": "You name what asking costs you, then choose the plain request anyway. That is the way out of waiting to be offered."
+          }
+         ]
+        },
+        {
+         "who": "Helen",
+         "text": "“Last one, and then they lock up. What will you stop doing this week, and who will you tell?”",
+         "cue": "bag already on her shoulder",
+         "lines": [
+          {
+           "text": "“I'll stop rewriting Sam's slides, and I'll tell him before class tomorrow, out loud, with the page number.”",
+           "tag": "best",
+           "you": 4,
+           "them": 4,
+           "outcome": "Helen writes it on the back of her hand. “Before class. I'll ask you on Friday.”",
+           "why": "You stop the rescue and name the person and the moment. Letting him feel the cost is the way out for someone who keeps saving."
+          },
+          {
+           "text": "“Nothing, really. Who would I tell? It's all down to the marking anyway.”",
+           "tag": "ok",
+           "you": -6,
+           "them": -7,
+           "outcome": "Helen zips her bag without a word.",
+           "why": "A verdict on the marking, and nobody told. It keeps the week exactly as it was."
+          },
+          {
+           "text": "“I'll drop the case against Mr Dawson, and I'll take the feedback sheet to his office hour on Monday and ask what he means.”",
+           "tag": "best",
+           "you": 4,
+           "them": 4,
+           "outcome": "Helen nods slowly. “Monday. Take a pen, not the email.”",
+           "why": "You let go of the case and take the question to the one person it concerns. That is the way out for someone who keeps blaming."
+          },
+          {
+           "text": "“I'll ask you to check my reference list, straight out, and I won't wait for you to offer.”",
+           "tag": "best",
+           "you": 4,
+           "them": 4,
+           "outcome": "Helen smiles, properly. “Send it tonight. I'll say if it's too much.”",
+           "why": "You stop waiting to be offered and you ask. That is the way out for someone who keeps suffering, and it turns the wait into a request."
+          }
+         ]
+        }
+       ],
+       "fallout": {
+        "them": "Helen shoulders her bag, says the library shuts in five minutes, and goes before you can answer."
+       }
+      }
+     ]
+    },
+    {
+     "level": "Analyse",
+     "label": "Analyse, explain it",
+     "intro": "Two to read back. Name the chair in the first, and say what Berne's last chapter makes of the wobble in the second.",
+     "items": [
+      {
+       "type": "pick",
+       "who": "Helen",
+       "text": "“Have you read what Mr Dawson wrote on your poster? I'm on your side here.”",
+       "cue": "Which explanation fits?",
+       "options": [
+        "A saviour's move for you and a blamer's move against Mr Dawson. It asks you to sign the case, and the seats swap fast.",
+        "Sincere concern and nothing more. She read the sheet over your shoulder, she wants you looked after, and there is no hook anywhere in the line.",
+        "A test of your nerve, to see whether you will lose your temper. She only wants to know if you can be pushed, so the line holds no trap."
+       ],
+       "answer": 0,
+       "why": "She offered to rescue you by going after Mr Dawson. The saviour's chair and the blamer's chair are both in the line, and the swap is the trap. Steiner's rescue triangle, from Karpman's drama triangle, is these seats with people moving between them.",
+       "traps": {
+        "1": "Sincere concern. It sounds warm, and she may mean some of it. But the line asks you to join a case against him, and that is the trap whatever she feels.",
+        "2": "A test of your nerve. It is a fair guess, but the line has a clear hook: a case and a rescue, with you as the one who signs."
+       },
+       "example": "Committee room, Tuesday, 7:30pm.<br>Member: “The chairman's impossible. I'm on your side, just say it.”<br>You: “I'll speak to the chairman myself, thanks.”"
+      },
+      {
+       "type": "pick",
+       "who": "You",
+       "text": "Walking to the bus stop your hands shake a little. Saying true things out loud felt risky, and a small voice says the old chairs were safer.",
+       "cue": "What does Berne's last chapter say about that?",
+       "options": [
+        "Life after games is easy once you know the moves, so shaking hands mean you got something wrong in there.",
+        "Once enough students drop their games, the whole college will follow, so the shake will pass without any effort on your side.",
+        "Awareness, spontaneity and intimacy can feel risky to the unprepared. His hope is for people who get ready, so a wobble is normal."
+       ],
+       "answer": 2,
+       "why": "Berne ends the book by saying some people can rise above the bleak picture of life as a wait filled with pastimes and games. He also warns that the way out can be frightening and even risky for the unprepared. His hope rests with individuals, not with the human race as a whole.",
+       "traps": {
+        "0": "Easy once you know the moves. It would be a comfort, but Berne says the opposite: the way past games can be frightening, so shaking hands are no sign of a mistake.",
+        "1": "Everyone will follow. Berne is not that hopeful. He doubts the human race as a whole will change, and puts his hope in individuals."
+       },
+       "example": "Swimming pool, Saturday, 9:00am.<br>Beginner: “My arms are shaking, so I must be doing it wrong.”<br>Coach: “First time off the wall? Shaking means it's new. Rest, then go again.”"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "setting": "Work",
+   "blurb": "Clara stays late after the release, and Daniel's doubt about her hangs over the team room.",
+   "opener": {
+    "setting": "Friday, 5:40pm, Halden, the team room. The release went out at four and everyone else has gone. Clara has two canteen teas and her laptop shut.",
+    "lines": [
+     {
+      "who": "Clara",
+      "text": "“Sit. I got you the tea, and I've closed the laptop.”",
+      "cue": "lid down, both hands flat on it"
+     },
+     {
+      "who": "Clara",
+      "text": "“I'm not asking for anything. I just didn't want to go home yet.”",
+      "cue": "straightening a pen that is already straight"
+     }
+    ],
+    "ask": "Can you keep this conversation real for six turns, without rescuing anyone or blaming them?"
+   },
+   "rounds": [
+    {
+     "level": "Spot",
+     "label": "Spot, round 1",
+     "intro": "Her lines can hook you. Tap what each one is doing, and listen for the one with no hook in it.",
+     "items": [
+      {
+       "type": "pick",
+       "who": "Clara",
+       "text": "“You're the only one on this team who actually reads my pull requests, you know.”",
+       "cue": "thumb resting on the closed lid",
+       "options": [
+        "A plain thank you for the careful reviews",
+        "A hook: flattery to make you her ally",
+        "A joke about how long her pull requests are"
+       ],
+       "answer": 1,
+       "why": "She praises you in a way that sets the others below you. If you take it, you become the one who reads, and that seat needs people who don't.",
+       "traps": {
+        "0": "A plain thank you. It sounds polite, and it accepts the seat she is offering, with the rest of the team in the other seats.",
+        "2": "A joke about the length. It is light, but it laughs along and leaves the praise exactly where she put it."
+       },
+       "example": "Choir rehearsal, Tuesday.<br>Leader: “You're the only one who learns the words. The others just hum.”<br>You: “Some of them are new. Shall I lend my copy?”"
+      },
+      {
+       "type": "pick",
+       "who": "Clara",
+       "text": "“Sam will get the migration done by Monday, won't he? I'd hate to think it lands on you.”",
+       "cue": "straightening a pen that is already straight",
+       "options": [
+        "A hook: she is handing you his ticket",
+        "A real question about how Sam's week is going",
+        "A plain answer about the Monday deadline"
+       ],
+       "answer": 0,
+       "why": "Her question puts Sam's ticket on your desk before he has said a word about it. If you answer, you take the saviour's chair for someone who has already gone home.",
+       "traps": {
+        "1": "A real question about Sam. It sounds kind, but it asks you to forecast his week, and the forecast is the first step to doing his work.",
+        "2": "A plain answer about Monday. It sounds sensible, and it accepts her frame that his ticket is yours to worry about."
+       },
+       "example": "Rugby club, Thursday.<br>Captain: “Jo will bring the kit bag, won't she? Awful if you had to.”<br>You: “Jo's bringing it. Ask Jo.”"
+      },
+      {
+       "type": "pick",
+       "who": "Clara",
+       "text": "“Daniel's been unbearable this quarter. Anyone would have put in their notice by now, wouldn't they?”",
+       "cue": "eyes on the dark monitor, waiting",
+       "options": [
+        "A question about the next release date",
+        "A plain feeling about the quarter, said aloud",
+        "Joining in: the blamer's chair"
+       ],
+       "answer": 2,
+       "why": "She wants you to agree and add a charge, so the case against Daniel grows. That is the blamer's chair, and a long release week makes it easy to sit in.",
+       "traps": {
+        "0": "A question about the release date. It sounds like a way to change the subject, but the talk walks back to Daniel before the tea is cold.",
+        "1": "A plain feeling about the quarter. It is honest, but this line asks for a verdict on Daniel, and a feeling is not a verdict."
+       },
+       "example": "Train platform, 7:10am.<br>Commuter: “This line is a joke. Everyone says so, don't they?”<br>You: “It's late today, yes. Is that your usual train?”"
+      },
+      {
+       "type": "pick",
+       "who": "Clara",
+       "text": "“I'm not fishing, and I'm not going to fix anything. I'd like to hear how the quarter actually went for you.”",
+       "cue": "hands flat on the lid, looking straight at you",
+       "options": [
+        "A plain question with no game in it",
+        "Small talk to fill the time while the lift comes",
+        "A hook: she wants you to need her for the answer"
+       ],
+       "answer": 0,
+       "why": "She says what she wants and leaves the answer to you. There is no praise to take, no rescue on offer and nobody to blame. This is how talk sounds once the traps are gone.",
+       "traps": {
+        "1": "Small talk while the lift comes. The tone is friendly, but small talk would not ask for the real answer, and she just did.",
+        "2": "A hook that wants you to need her. She has said she will fix nothing, so there is no rescue to lean on."
+       },
+       "example": "Piano lesson, Saturday.<br>Teacher: “I won't correct anything today. Play me the piece you've been avoiding.”<br>Student: “All right. The slow one.”"
+      }
+     ]
+    },
+    {
+     "level": "Play",
+     "label": "Play, the week in motion",
+     "intro": "Two short conversations, three turns each. She leaves doors open. Some lead somewhere useful, and some lead back to the old chairs.",
+     "items": [
+      {
+       "type": "scene",
+       "title": "Friday, 5:40pm, the team room",
+       "setting": "Halden. The release went out at four, the monitors are dim, and the canteen tea in Clara's cup has grown a skin.",
+       "meters": {
+        "you": 50,
+        "them": 50
+       },
+       "beats": [
+        {
+         "who": "Clara",
+         "text": "“Tell me one thing you did this quarter that you're proud of, and one you aren't. No jokes.”",
+         "cue": "hands flat on the shut laptop",
+         "lines": [
+          {
+           "text": "“I'm proud of most of it. You've seen the whole thing, you'd know.”",
+           "tag": "ok",
+           "you": -4,
+           "them": -4,
+           "outcome": "Clara says “Mm” and moves her pen a centimetre to the left.",
+           "why": "This leans on her record to do your answering. You trade a real reply for her approval, and then you wait for it."
+          },
+          {
+           "text": "“I shipped the invoice fix without waiting to be asked. And I still take Sam's tickets when he's stuck and tell nobody, so I'm not finished.”",
+           "tag": "best",
+           "you": 4,
+           "them": 3,
+           "outcome": "Clara lifts her hands off the lid. “Both halves. That's the version I can use.”",
+           "why": "You name the win and the old habit in one go. Candid means giving both halves, the part you like and the part that stings."
+          },
+          {
+           "text": "“The invoice fix, and I'm not sure about the rest.”",
+           "tag": "ok",
+           "you": 1,
+           "them": 1,
+           "outcome": "She waits for the rest. The air conditioning clicks off.",
+           "why": "Half an answer. You gave one side, and the silence after it is where the test is."
+          }
+         ]
+        },
+        {
+         "who": "Clara",
+         "text": "“Sam will get the migration done by Monday, won't he? I'd hate to think it's on you if he doesn't.”",
+         "cue": "turning her cup, not looking at you",
+         "lines": [
+          {
+           "text": "“I hope so. I'll pick up what's left if I have to.”",
+           "tag": "ok",
+           "you": -2,
+           "them": 0,
+           "outcome": "She nods, and “what's left” stays on the desk between you.",
+           "why": "It sounds generous. “If I have to” is a promise to keep rescuing, the saviour's chair in a soft voice."
+          },
+          {
+           "text": "“It's all Sam's fault. He never closes a ticket on time.”",
+           "tag": "ok",
+           "you": -5,
+           "them": -6,
+           "outcome": "Clara says “Well,” and writes nothing down.",
+           "why": "You take the blamer's chair and give Sam the villain's. It feels like agreement, and it locks you both into a story about him."
+          },
+          {
+           "text": "“That's Sam's ticket. If it slips, I'm not finishing it for him.”",
+           "tag": "best",
+           "you": 4,
+           "them": 2,
+           "outcome": "Clara's mouth twitches. “Good. Say that to him, not to me.”",
+           "why": "You leave the migration with its owner and turn the rescue down out loud. The work stays his, and he can feel it."
+          }
+         ]
+        },
+        {
+         "who": "Clara",
+         "text": "“You make this look easy, you know. Some of us find it harder to look half as calm.”",
+         "cue": "a smile that wavers",
+         "lines": [
+          {
+           "text": "“It isn't easy. I got the date wrong at Tuesday's standup and I'm still thinking about it. Is it hard for you too?”",
+           "tag": "best",
+           "you": 3,
+           "them": 4,
+           "outcome": "Clara's smile steadies. “Most days. Thank you for asking.”",
+           "why": "You turn down the compliment without a speech, then hand the question back to her as one adult to another."
+          },
+          {
+           "text": "“Thanks. I've had good coffee.”",
+           "tag": "ok",
+           "you": 0,
+           "them": 1,
+           "outcome": "She laughs once, and the laptop stays shut.",
+           "why": "A polite thank you with a joke on top. No hook in it, and nothing real in it either."
+          },
+          {
+           "text": "“I think I'm the only one on this team who has really got the hang of Halden.”",
+           "tag": "ok",
+           "you": -6,
+           "them": -6,
+           "outcome": "Clara lifts her cup and finds it empty.",
+           "why": "You took the praise and made it a rank. Now you need someone below you, and that is the old game."
+          }
+         ]
+        }
+       ],
+       "fallout": {
+        "them": "Clara pours her cold tea into the pot plant, says she has a train to catch, and leaves before you can answer."
+       }
+      },
+      {
+       "type": "scene",
+       "title": "Friday, 6:10pm, the same desks",
+       "setting": "Halden. The lights over the far desks have gone off on their timer, and Clara has reopened the laptop at last.",
+       "meters": {
+        "you": 55,
+        "them": 50
+       },
+       "beats": [
+        {
+         "who": "Clara",
+         "text": "“Have you seen how Daniel talks to you in review? You should take it to his director. I'm on your side, and so is everyone who's sat through it.”",
+         "cue": "leaning in, voice dropped to the desk",
+         "lines": [
+          {
+           "text": "“Maybe. I'll think about the director.”",
+           "tag": "ok",
+           "you": -2,
+           "them": 0,
+           "outcome": "She says “Do,” and her voice returns to its usual pitch.",
+           "why": "You don't join the case, and you don't catch the move either. The almost-game goes by with its lesson."
+          },
+          {
+           "text": "“Yes, he's a nightmare. Let's start a list.”",
+           "tag": "ok",
+           "you": -6,
+           "them": -6,
+           "outcome": "Clara's fingers go to the keys, and a list opens with today's date at the top.",
+           "why": "You take her invitation and add a charge. Now two people hold the list, and the team room will feel it on Monday."
+          },
+          {
+           "text": "“That sounded like you're on my side against him. I'd rather decide what to do about Daniel myself.”",
+           "tag": "best",
+           "you": 4,
+           "them": 4,
+           "outcome": "Clara sits back and looks at you for a while. “Fair. I was about to write it for you.”",
+           "why": "You catch her almost playing saviour on your behalf and say so plainly. She can thank you because the move would have trapped you both."
+          }
+         ]
+        },
+        {
+         "who": "Clara",
+         "text": "“You never ask Omar to look at your code before the review, do you? Why's that?”",
+         "cue": "head tilted, reading your face",
+         "lines": [
+          {
+           "text": "“He's got his own work. Leave him.”",
+           "tag": "ok",
+           "you": -1,
+           "them": -1,
+           "outcome": "Clara says, “Is that what you think, or what he told you?”",
+           "why": "A kind excuse. It keeps the want buried, and it speaks for Omar, which is a small rescue of its own."
+          },
+          {
+           "text": "“Because if I ask, he'll say yes and be kind about it, and I'll feel I owe him. I'd rather ask straight on Monday and say thanks once.”",
+           "tag": "best",
+           "you": 3,
+           "them": 4,
+           "outcome": "Clara nods. “Then ask. See what he does with a straight question.”",
+           "why": "You name what asking costs you, then choose the plain request anyway. A straight ask is the way out of waiting to be offered."
+          },
+          {
+           "text": "“Because he'd see how many mistakes I make, like always.”",
+           "tag": "ok",
+           "you": -5,
+           "them": -6,
+           "outcome": "Clara turns her cup a quarter turn on the desk.",
+           "why": "This makes Omar the judge of every ask, so you can stay the quiet one. Asking drops out of the picture."
+          }
+         ]
+        },
+        {
+         "who": "Clara",
+         "text": "“Last one, and then I'll shut this for real. What will you stop doing this week, and who will you tell?”",
+         "cue": "pen in her hand now",
+         "lines": [
+          {
+           "text": "“I'll stop picking up Sam's tickets, and I'll tell him at Monday standup, out loud, with the ticket number.”",
+           "tag": "best",
+           "you": 4,
+           "them": 4,
+           "outcome": "Clara writes it on a sticky note. “Monday. I'll hold you to the number.”",
+           "why": "You stop the rescue and name the person and the moment. Letting him feel the cost is the way out for someone who keeps saving."
+          },
+          {
+           "text": "“I'll drop the file on Daniel, and I'll book ten minutes with him on Monday and take him the estimates myself.”",
+           "tag": "best",
+           "you": 4,
+           "them": 4,
+           "outcome": "Clara nods slowly. “Ten minutes. Take the estimates, not the file.”",
+           "why": "You let go of the case and take the talk to the one person it concerns. That is the way out for someone who keeps blaming."
+          },
+          {
+           "text": "“Nothing, really. Who would I tell? Nobody here listens to a developer.”",
+           "tag": "ok",
+           "you": -6,
+           "them": -7,
+           "outcome": "Clara closes the laptop for good.",
+           "why": "A verdict on everyone and nobody told. It keeps the week exactly as it was."
+          },
+          {
+           "text": "“I'll ask Omar for a review before Wednesday, straight out, and I won't wait for him to offer.”",
+           "tag": "best",
+           "you": 4,
+           "them": 4,
+           "outcome": "Clara smiles properly, for the first time since five. “Then you'll know what he thinks. And he'll know you asked.”",
+           "why": "You stop waiting to be offered and you ask. That is the way out for someone who keeps suffering, and it turns the wait into a request."
+          }
+         ]
+        }
+       ],
+       "fallout": {
+        "them": "Clara packs her bag, says the cleaners come at seven, and goes before you can answer."
+       }
+      }
+     ]
+    },
+    {
+     "level": "Analyse",
+     "label": "Analyse, explain it",
+     "intro": "Two to read back. Name the chair in the first, and say what Berne's last chapter makes of the wobble in the second.",
+     "items": [
+      {
+       "type": "pick",
+       "who": "Clara",
+       "text": "“Have you seen how Daniel talks to you in review? I'm on your side here.”",
+       "cue": "Which explanation fits?",
+       "options": [
+        "Sincere concern and nothing more. She sat through the review, she wants you looked after at work, and there is no hook anywhere in the line.",
+        "A test of your patience, to see whether you will complain. She only wants to know if you can be pushed, so the line holds no trap at all.",
+        "A saviour's move for you and a blamer's move against Daniel. It asks you to sign the case, and the seats swap fast."
+       ],
+       "answer": 2,
+       "why": "She offered to rescue you by going after Daniel. The saviour's chair and the blamer's chair are both in the line, and the swap is the trap. Steiner's rescue triangle, from Karpman's drama triangle, is these seats with people moving between them.",
+       "traps": {
+        "0": "Sincere concern. It sounds caring, and she may mean some of it. But the line asks you to join a case against him, and that is the trap whatever she feels.",
+        "1": "A test of your patience. It is a fair guess, but the line has a clear hook: a case and a rescue, with you as the one who signs."
+       },
+       "example": "Tenants' association, Sunday, 6:30pm.<br>Neighbour: “The agent's been useless. I'm on your side, just say it.”<br>You: “I'll ring the agent myself, thanks.”"
+      },
+      {
+       "type": "pick",
+       "who": "You",
+       "text": "In the lift down, your knees feel loose. Saying true things out loud felt risky, and a small voice says the old chairs were safer.",
+       "cue": "What does Berne's last chapter say about that?",
+       "options": [
+        "Life after games is easy once you know the moves, so loose knees mean you got something wrong up there.",
+        "Awareness, spontaneity and intimacy can feel risky to the unprepared. His hope is for people who get ready, so a wobble is normal.",
+        "Once enough colleagues drop their games, the whole office will follow, so the wobble will pass without any effort on your side."
+       ],
+       "answer": 1,
+       "why": "Berne ends the book by saying some people can rise above the bleak picture of life as a wait filled with pastimes and games. He also warns that the way out can be frightening and even risky for the unprepared. His hope rests with individuals, not with the human race as a whole.",
+       "traps": {
+        "0": "Easy once you know the moves. It would be a comfort, but Berne says the opposite: the way past games can be frightening, so loose knees are no sign of a mistake.",
+        "2": "Everyone will follow. Berne is not that hopeful. He doubts the human race as a whole will change, and puts his hope in individuals."
+       },
+       "example": "Ski lift, Sunday, 10:00am.<br>Beginner: “My knees are going, so I must be doing it wrong.”<br>Instructor: “First time up the big slope? Wobbly means new. Stand a minute, then go.”"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

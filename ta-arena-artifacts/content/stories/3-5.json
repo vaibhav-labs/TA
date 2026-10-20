@@ -1,0 +1,506 @@
+{
+  "baseBlurb": "Two colleagues at a farm stay talk about horses and torches while saying something else underneath.",
+  "stories": [
+    {
+      "setting": "Home & Flatmates",
+      "blurb": "Sam made too much pasta and Maya has been counting the gas money all week.",
+      "opener": {
+        "setting": "Tuesday, 21:40, Hawthorn Court, apartment 3B. A pan of pasta on the hob, the gas bill under the pineapple magnet.",
+        "lines": [
+          {
+            "who": "Sam",
+            "text": "“I made far too much pasta. Tragic, really. Somebody should save me from it.”",
+            "cue": "stirring with the wooden spoon, not looking at Maya's notebook"
+          }
+        ],
+        "ask": "Can you hear the plain chat on top and the second chat underneath, and answer both in one reply?"
+      },
+      "rounds": [
+        {
+          "level": "Spot",
+          "label": "Spot, round 1",
+          "intro": "<b>How this one works:</b> you read a short chat between two people. On top, two Pilots are talking about something plain. Some chats have a second chat running underneath, one Kid talking to another. Tap what the underneath chat is saying, or say there is none.",
+          "items": [
+            {
+              "type": "pick",
+              "who": "Sam and Maya, at the hob",
+              "text": "Sam: “I made far too much pasta. Do you want a bowl, if you haven't eaten?” Maya: “I haven't. I'll have one, if there's enough.”",
+              "cue": "the gas bill is pinned under the pineapple magnet, and Maya's notebook is shut on the table",
+              "options": [
+                "Both: whoever takes the bigger bowl wins",
+                "Sam: I'm hiding something. Maya: I don't believe you.",
+                "Sam: sorry about the gas. Maya: I'll stop counting tonight."
+              ],
+              "answer": 2,
+              "why": "On top it is pasta. Underneath, Sam's Kid is saying sorry about the gas money and Maya's Kid is saying she will put the notebook down for one evening. Four voices, and the two underneath are why the bowl gets filled.",
+              "traps": {
+                "0": "Neither of them mentions size, and nobody reaches for the ladle first. A contest over portions would sound sharper than this.",
+                "1": "Sam's offer is open and Maya's answer is easy. Suspicion would make the pasta awkward, and this chat is the opposite."
+              },
+              "example": "A Sunday lunch, two brothers after a row: “There's a bit of cake left. Want half?” “Go on, then.”<br>On top it is cake. Underneath, each is saying the row is over."
+            },
+            {
+              "type": "pick",
+              "who": "Maya and you, by the front door",
+              "text": "Maya: “Shall I take the bins down? I'm up anyway, it's no trouble.” You: “Wait for me. I'll carry the heavy bag.”",
+              "cue": "her coat is on over her uniform and her keys are already in her hand",
+              "options": [
+                "Maya: I'm worn out, so notice. You: I've noticed.",
+                "Maya: you never do the bins. You: here we go.",
+                "Nothing, it is only bins and a bag."
+              ],
+              "answer": 0,
+              "why": "The top chat is bins and a bag. Underneath, Maya's Kid says she is worn out and would like someone to see it, and your Kid says it has. Two Kids under two Pilots, which is why you leave together.",
+              "traps": {
+                "1": "Nobody sounds cross. A row over the bins would have a sharper edge than “no trouble”, and your reply is a warm one.",
+                "2": "The bag is real, and it does not explain why you offer to go with her. A second job is being done underneath."
+              },
+              "example": "A cold station platform, a colleague with a heavy case: “I can get this, I'm going that way.” “Wait, I'll take the other handle.”<br>On top it is a case. Underneath, she is tired and he has seen it."
+            },
+            {
+              "type": "pick",
+              "who": "Sam and Maya, in the hallway",
+              "text": "Sam: “Is the recycling Thursday?” Maya: “Thursday. Green bin, lids flat.”",
+              "cue": "Sam is looking at the calendar by the door, Maya at her phone",
+              "options": [
+                "Yes, Sam's Kid is begging forgiveness under the question.",
+                "No, it is two Pilots swapping a plain fact.",
+                "Yes, Maya's Boss is checking up on Sam."
+              ],
+              "answer": 1,
+              "why": "Sam asks for a fact and Maya gives one in the same flat voice. Nothing points to a second chat, so it is a plain matched volley. Hearing a hidden message in every line would be a mistake of its own.",
+              "traps": {
+                "0": "Nothing in his voice or the cue leans that way. He is looking at a calendar, and the exchange ends when the answer does.",
+                "2": "Maya is not checking anything. He asked, she answered, and her voice stayed level the whole way."
+              },
+              "example": "A bus stop, one commuter to another: “Is this the number nine?” “Yes, it's due now.”<br>A question and an answer, with nothing underneath."
+            }
+          ]
+        },
+        {
+          "level": "Play",
+          "label": "Play, the week in motion",
+          "intro": "<b>Now you answer.</b> When a second chat is running underneath, pick the reply that answers the plain top line and the Kid under it. When nothing is underneath, a plain answer is the whole job.",
+          "items": [
+            {
+              "type": "pick",
+              "who": "Maya, at the front door",
+              "text": "“The bins are full again. I'll take them down, I'm up anyway.”",
+              "cue": "her keys are in her hand and the notebook is nowhere in sight",
+              "prompt": "On top it is the bins. Underneath, Maya's Kid is saying she is worn out and wants it seen. Which reply answers both?",
+              "options": [
+                "Sit down, Maya, you've had a long shift, I'll do the lot myself.",
+                "Yes please, and I'll carry the heavy box down with you. Tea after.",
+                "Great, the bins are all yours then. I have a film to catch up on."
+              ],
+              "answer": 1,
+              "why": "The top line gets a plain yes about the bins, and the underneath gets a reply from your Kid: you will be right there with her. Both tracks answered in one reply, and she keeps the job she chose.",
+              "traps": {
+                "0": "That answers only the underneath, and it takes the job from her. Maya came to the door to do something, so she is sent back to the sofa with her tiredness unspoken.",
+                "2": "That answers the bins and leaves the tiredness alone in the stairwell. Maya hears a yes to the job and nothing to the person."
+              },
+              "example": "A night shift ending, a nurse who says: “I'll lock up, I'm last out anyway.”<br>“Yes please, and I'll walk you to the car park.” The first part answers the locking and the second answers the wish not to go alone."
+            },
+            {
+              "type": "pick",
+              "who": "Sam, at the fridge",
+              "text": "“Take the top shelf, I don't need it. I've been taking up too much room anyway.”",
+              "cue": "he is lifting out a jar of pickle, with his milk front and centre",
+              "prompt": "On top it is a shelf. Underneath, Sam's Kid is hoping to be told he is easy to live with. Which reply answers both?",
+              "options": [
+                "Don't be silly, you're no trouble at all. Keep your shelf, Sam.",
+                "Thanks, the top shelf is mine then, and we'll say no more about it.",
+                "Yes, I'll take the top shelf. And you're fine to live with, Sam, milk and all."
+              ],
+              "answer": 2,
+              "why": "The top line gets a plain yes about the shelf, and the underneath gets a reply from your Kid: you are fine to live with. Both tracks answered, with a small joke that keeps it light.",
+              "traps": {
+                "0": "That answers only the underneath and hands back the shelf. Sam gets his reassurance, then the same cramped fridge, so the sorry goes round again tomorrow.",
+                "1": "That takes the shelf and moves on. Sam wanted to hear he was fine to live with, and the line he is waiting for never comes."
+              },
+              "example": "A shared desk at a college, a girl who says: “Have my drawer, I never use it. I'm always in your way.”<br>“Thanks, I'll take it. You're not in the way at all.” One part answers the drawer and the other answers the worry."
+            },
+            {
+              "type": "pick",
+              "who": "Maya, in the hallway",
+              "text": "“Has anyone seen the torch? The hall bulb's gone.”",
+              "cue": "she is feeling along the shelf with one hand, phone clamped under her chin",
+              "prompt": "Nothing is underneath this one. Which reply fits?",
+              "options": [
+                "Second drawer, under the kettle. Here.",
+                "You always lose things when you're tired, Maya.",
+                "You sound lonely out there. Come and tell me about your shift."
+              ],
+              "answer": 0,
+              "why": "It is a question about a torch, so a plain answer from your Pilot is the right size. Reading a second chat into it would answer something Maya never said.",
+              "traps": {
+                "1": "That is a verdict on Maya, built from nothing in the line. It turns a lost torch into a row.",
+                "2": "That answers a feeling she has not shown. A plain question can stay plain, and hunting for a second chat makes the exchange awkward."
+              },
+              "example": "A café till, a barista asks: “Do you need a receipt?” “No thanks.”<br>A question and a plain answer. Nothing else is being asked."
+            }
+          ]
+        },
+        {
+          "level": "Analyse",
+          "label": "Analyse, explain it",
+          "intro": "<b>Count the voices.</b> Pick the description that fits the first chat in the story.",
+          "items": [
+            {
+              "type": "pick",
+              "who": "Nadia, after the pasta",
+              "text": "“Count the voices in the pasta chat. On top, two Pilots. Underneath, two Kids. How many voices are talking, and which ones decide how the evening goes?”",
+              "cue": "setting down two mugs",
+              "options": [
+                "Two voices, since a second chat nobody says is not a voice",
+                "Four voices, and the two Kids underneath decide",
+                "Three voices, and the Pilots on top decide"
+              ],
+              "answer": 1,
+              "why": "Sam and Maya are each speaking twice at once: a plain Pilot chat about pasta on top and a Kid-to-Kid chat underneath. That is four voices. The Pilots look to be running things, yet the Kids decide how the evening goes.",
+              "traps": {
+                "0": "Unsaid does not mean absent. The underneath chat is the reason there is a bowl on the table at all.",
+                "2": "Three voices is the kind of double-talk where only one side hides something. Here Sam and Maya both have a message underneath, so the count is four."
+              },
+              "example": "A wedding buffet, two cousins: “There's a spare chair by the window.” “Then I'll take the one next to it.”<br>Two Pilots on top and two Kids underneath, four voices. The chair talk is only the surface."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "setting": "School & College",
+      "blurb": "In Thursday's evening class, Sam wants a partner and Tessa wants a seat, and neither says so.",
+      "opener": {
+        "setting": "Thursday, 18:50, Room 12 of the college annexe. Evening class in basic accounting, group project due in six weeks.",
+        "lines": [
+          {
+            "who": "Sam",
+            "text": "“Does anyone want to pair up? I'll only slow you down, but I do bring biscuits.”",
+            "cue": "holding up the packet, eyes on the door"
+          }
+        ],
+        "ask": "Can you hear the plain chat on top and the second chat underneath, and answer both in one reply?"
+      },
+      "rounds": [
+        {
+          "level": "Spot",
+          "label": "Spot, round 1",
+          "intro": "<b>How this one works:</b> you read a short chat between two people. On top, two Pilots are talking about something plain. Some chats have a second chat running underneath, one Kid talking to another. Tap what the underneath chat is saying, or say there is none.",
+          "items": [
+            {
+              "type": "pick",
+              "who": "Tessa and Sam, at the long table",
+              "text": "Tessa: “Is anyone sitting with you two? I'll join you if there's room.” Sam: “There's room. There's always room, it's a big table.”",
+              "cue": "Tessa has her coat half off and is looking at the empty chair, Sam is pushing it out with his foot",
+              "options": [
+                "Tessa: I'm nervous. Sam: so am I, stay with us.",
+                "Tessa: I'm better than you. Sam: prove it.",
+                "Tessa: I don't need you. Sam: I don't need you either."
+              ],
+              "answer": 0,
+              "why": "On top it is a chair. Underneath, Tessa's Kid says she is nervous about being on her own in a new class, and Sam's Kid says he is too and she should sit down. The foot on the chair gives it away.",
+              "traps": {
+                "1": "Nobody in the chat is measuring anyone. A contest would have a sharper edge than an open chair.",
+                "2": "Sam pushes the chair out with his foot, and nobody pushes a chair out for a person they do not need."
+              },
+              "example": "A new job's first lunch, one newcomer to another: “Is this seat taken? I'll move if it is.” “Take it. It's a long table.”<br>On top it is a seat. Underneath, both are glad not to eat alone."
+            },
+            {
+              "type": "pick",
+              "who": "Sam and you, with the marked sheets",
+              "text": "Sam: “Shall we swap sheets? Mine is a sea of red. I'd love to see what a good one looks like.” You: “Swap. Mine has red on it too, you know.”",
+              "cue": "Sam's sheet is face down on the desk, with a six at the top circled twice",
+              "options": [
+                "Sam: I want your answers. You: no chance.",
+                "Sam: I must be the worst, tell me I'm not. You: you're not.",
+                "Nothing, it is two sheets of paper."
+              ],
+              "answer": 1,
+              "why": "The top chat is about swapping sheets. Underneath, Sam's Kid is asking to hear he is not the worst in the room, and your Kid is answering that he is not. Two Kids under two Pilots, and the face-down sheet is the clue.",
+              "traps": {
+                "0": "Nothing in the voices is competitive, and nobody is grabbing. Copying answers would sound hungry, not rueful.",
+                "2": "The sheets are real, and they do not explain why Sam turned his over first. The chat is doing a second job underneath."
+              },
+              "example": "A driving theory class, one learner to another: “Fancy comparing scores? Mine was dreadful.” “Go on, I only just scraped it.”<br>On top it is scores. Underneath, each is checking they are not alone."
+            },
+            {
+              "type": "pick",
+              "who": "Tessa and Sam, at the door",
+              "text": "Tessa: “What time does the library shut tonight?” Sam: “Nine. They ring a bell at ten to.”",
+              "cue": "Tessa is zipping her bag, Sam is checking his phone",
+              "options": [
+                "Yes, Tessa's Kid is asking Sam to stay till it shuts.",
+                "Yes, Sam's Boss is telling Tessa to hurry.",
+                "No, it is two Pilots swapping a fact about opening hours."
+              ],
+              "answer": 2,
+              "why": "Tessa asks for a time and Sam gives one. Nothing in the cue or the voices points to a second chat, so it is a plain volley. Hearing a hidden message in every line would be a mistake of its own.",
+              "traps": {
+                "0": "Nothing in the words or the cue leans that way. Both are busy with their bags and phones, and the chat ends with the answer.",
+                "1": "Sam is not ordering anyone about. He was asked and he answered in the same easy voice."
+              },
+              "example": "A pool reception, a swimmer asks: “What time does the shallow end close?” “Eight. They blow a whistle.”<br>A question and an answer, with nothing underneath."
+            }
+          ]
+        },
+        {
+          "level": "Play",
+          "label": "Play, the week in motion",
+          "intro": "<b>Now you answer.</b> When a second chat is running underneath, pick the reply that answers the plain top line and the Kid under it. When nothing is underneath, a plain answer is the whole job.",
+          "items": [
+            {
+              "type": "pick",
+              "who": "Sam, over the project folder",
+              "text": "“If you'd rather work with Tessa on your own, I'll get out of the way. I'm slower than you two.”",
+              "cue": "peeling the label off the biscuit packet, eyes on the door",
+              "prompt": "On top it is an offer to step aside. Underneath, Sam's Kid is hoping you will say stay. Which reply answers both?",
+              "options": [
+                "You're slower than nobody, Sam, so stop saying that and just sit down.",
+                "Sure, if that's easier. Tessa and I will start the chart tonight.",
+                "No, stay. Pull your chair in and we'll do the first page as three."
+              ],
+              "answer": 2,
+              "why": "The top line gets a plain no about getting out of the way, and the underneath gets a reply from your Kid: you want him in. Both tracks answered, and Sam gets a job rather than a speech.",
+              "traps": {
+                "0": "That answers only the underneath, and it argues with it. Sam never said he felt useless, so he has to defend himself while the offer to leave is still open.",
+                "1": "That takes his offer at face value. Sam hears his Kid's fear confirmed, and he is out of the project before the chart is drawn."
+              },
+              "example": "A running club, a slow runner who says: “Go on ahead, I'll only hold you up.”<br>“No, we'll all go at your pace, and I'll run beside you.” One part answers the pace and the other answers the fear of being left."
+            },
+            {
+              "type": "pick",
+              "who": "Tessa, pulling the laptop closer",
+              "text": "“I'll do the slides and the charts. You two can just do the talking, it's easier.”",
+              "cue": "her hair is over her face and the laptop is already turned away from the others",
+              "prompt": "On top it is a split of the jobs. Underneath, Tessa's Kid is afraid of being dropped unless she does the lot. Which reply answers both?",
+              "options": [
+                "Yes to the slides. I'll sit next to you and draw the charts, so it's both of us.",
+                "Great, I hate slides. They're all yours, and I'll practise the speaking part.",
+                "You don't have to prove anything to us, Tessa, so stop taking everything on."
+              ],
+              "answer": 0,
+              "why": "The top line gets a plain yes about the slides, and the underneath gets a reply from your Kid: she does not have to carry it alone. Both tracks answered, and she is not argued with.",
+              "traps": {
+                "1": "That takes her offer and runs. Tessa does the whole job, and her fear that she is only wanted for the work is confirmed.",
+                "2": "That answers only the underneath, and it names something she has not said out loud. Tessa has to defend herself while the slides sit unstarted."
+              },
+              "example": "A school science fair, a girl who says: “I'll do the poster, you can do the talking, I'm better at the neat bit.”<br>“Yes to the poster, and I'll stick the labels on with you.” The first part answers the poster and the second part answers the wish to be part of the team."
+            },
+            {
+              "type": "pick",
+              "who": "Mr Penrose, at the whiteboard",
+              "text": "“Has anyone got a spare pen? Mine has just died.”",
+              "cue": "capping and uncapping a dry marker, chalk on his sleeve",
+              "prompt": "Nothing is underneath this one. Which reply fits?",
+              "options": [
+                "You sound stressed, Mr Penrose. Do you want to talk about it?",
+                "Here, a blue one. Keep it.",
+                "You always lose a pen when the class is going well."
+              ],
+              "answer": 1,
+              "why": "It is a question about a pen, so a plain answer from your Pilot is the right size. Reading a second chat into it would answer something the tutor never said.",
+              "traps": {
+                "0": "That answers a feeling he has not shown. A plain question can stay plain, and hunting for a second chat makes the room awkward.",
+                "2": "That is a verdict on Mr Penrose, built from nothing in the line. It turns a dead pen into a joke at his cost."
+              },
+              "example": "A bank queue, someone behind asks: “Have you got the time?” “Ten past two.”<br>A question and a plain answer. Nothing else is being asked."
+            }
+          ]
+        },
+        {
+          "level": "Analyse",
+          "label": "Analyse, explain it",
+          "intro": "<b>Count the voices.</b> Pick the description that fits the first chat in the story.",
+          "items": [
+            {
+              "type": "pick",
+              "who": "Nadia, after class",
+              "text": "“Count the voices in the table chat. On top, two Pilots. Underneath, two Kids. How many voices are talking, and which ones decide where the evening goes?”",
+              "cue": "wiping the whiteboard with her sleeve",
+              "options": [
+                "Two voices, because a seat is only a seat",
+                "Three voices, and the Pilots on top decide",
+                "Four voices, and the two Kids underneath decide"
+              ],
+              "answer": 2,
+              "why": "Tessa and Sam are each speaking twice at once: a plain Pilot chat about a chair on top and a Kid-to-Kid chat underneath. That is four voices. The Pilots seem to be in charge, but the Kids are the ones who decide the evening.",
+              "traps": {
+                "0": "A seat is only a seat if nothing else is going on, and the foot pushing the chair out says otherwise.",
+                "1": "Three voices is the kind of double-talk where only one side hides something. Here both Tessa and Sam have a message underneath, so the count is four."
+              },
+              "example": "A wedding buffet, two cousins: “There's a spare chair by the window.” “Then I'll take the one next to it.”<br>Two Pilots on top and two Kids underneath, four voices. The chair talk is only the surface."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "setting": "Work",
+      "blurb": "Release night at Halden, and Clara offers to stay late while Daniel watches the clock.",
+      "opener": {
+        "setting": "Friday, 17:40, the team room at Halden. The release goes out at seven, and the red-screened laptop is glowing again.",
+        "lines": [
+          {
+            "who": "Daniel",
+            "text": "“Seven o'clock. I want it boring. Boring, Clara, do you hear me?”",
+            "cue": "tapping his watch, not looking up from the release board"
+          }
+        ],
+        "ask": "Can you hear the plain chat on top and the second chat underneath, and answer both in one reply?"
+      },
+      "rounds": [
+        {
+          "level": "Spot",
+          "label": "Spot, round 1",
+          "intro": "<b>How this one works:</b> you read a short chat between two people. On top, two Pilots are talking about something plain. Some chats have a second chat running underneath, one Kid talking to another. Tap what the underneath chat is saying, or say there is none.",
+          "items": [
+            {
+              "type": "pick",
+              "who": "Clara and Omar, at the red-screened laptop",
+              "text": "Clara: “I could stay and run the checks again, if you want to go home.” Omar: “I'll stay and run them with you. I've no plans, and the kettle's on.”",
+              "cue": "her eyes are on the red screen, his coat is already back on its hook",
+              "options": [
+                "Clara: I'm better than you. Omar: I doubt it.",
+                "Clara: I must earn my place. Omar: I'm staying with you.",
+                "Omar: I'll check your work. Clara: I know you will."
+              ],
+              "answer": 1,
+              "why": "On top it is a set of checks. Underneath, Clara's Kid says she has to earn her place by staying late, and Omar's Kid answers that he is staying with her. The coat back on the hook gives it away.",
+              "traps": {
+                "0": "Nobody is competing. Omar's offer is warm and Clara's is generous, and a rivalry would not hang his coat up.",
+                "2": "Omar is not auditing her. He offers company and a kettle, and Clara's voice stays soft the whole way."
+              },
+              "example": "A shop stockroom on a Friday, one assistant to another: “I'll count the tills again, you can go.” “I'll count with you. I've nowhere to be.”<br>On top it is tills. Underneath, one is anxious and the other will not leave her alone with it."
+            },
+            {
+              "type": "pick",
+              "who": "Daniel and you, in the canteen",
+              "text": "Daniel: “Is the demo deck sent? The thread has gone quiet.” You: “Sent at four. Want to go through it before seven?”",
+              "cue": "Daniel is turning his phone over and over on the table, a cold coffee beside it",
+              "options": [
+                "Daniel: you are late. You: I am not.",
+                "Nothing, it is only a deck.",
+                "Daniel: I'm worried about tonight. You: I'll stay with you till it's out."
+              ],
+              "answer": 2,
+              "why": "The top chat is a deck and a time. Underneath, Daniel's Kid is saying he is worried about the release, and your Kid is answering that you will stay with him. The turned phone and the cold coffee give it away.",
+              "traps": {
+                "0": "Nobody is accusing anyone. Daniel asked, you answered with a time, and your offer is gentle rather than defensive.",
+                "1": "The deck is real, and it does not explain why Daniel keeps turning his phone over. The chat is doing a second job underneath."
+              },
+              "example": "An airport gate, a nervous traveller and a friend: “Is your passport in the bag?” “Yes. Do you want to sit with me till boarding?”<br>On top it is a passport. Underneath, one is worried and the other will not leave."
+            },
+            {
+              "type": "pick",
+              "who": "Omar and Clara, at the pinned message",
+              "text": "Omar: “Is the staging link in the channel or the wiki?” Clara: “Channel, pinned at the top.”",
+              "cue": "Omar is scrolling on his phone, Clara is typing without looking up",
+              "options": [
+                "No, it is two Pilots swapping a link and nothing else.",
+                "Yes, Omar's Kid is hiding a worry under the question.",
+                "Yes, Clara's Boss is brushing Omar off."
+              ],
+              "answer": 0,
+              "why": "Omar asks for a fact and Clara gives one in the same easy voice. Nothing in the cue points to a second chat, so it is a plain matched volley. Hearing a hidden message in every line would be a mistake of its own.",
+              "traps": {
+                "1": "Nothing in the cue or the words leans that way. Both are busy with their screens, and the exchange ends with the answer.",
+                "2": "Clara is not brushing anyone off. She answered at once and her voice stayed friendly."
+              },
+              "example": "A school office, a parent asks: “Which door is for the hall?” “The blue one, at the end.”<br>A question and an answer, with nothing underneath."
+            }
+          ]
+        },
+        {
+          "level": "Play",
+          "label": "Play, the week in motion",
+          "intro": "<b>Now you answer.</b> When a second chat is running underneath, pick the reply that answers the plain top line and the Kid under it. When nothing is underneath, a plain answer is the whole job.",
+          "items": [
+            {
+              "type": "pick",
+              "who": "Clara, eyes on the red screen",
+              "text": "“I'll stay and run the checks again. You go home, I'm quicker on my own.”",
+              "cue": "already scrolling, a cold tea beside her",
+              "prompt": "On top it is the checks. Underneath, Clara's Kid is saying she has to earn her place by staying late. Which reply answers both?",
+              "options": [
+                "Yes to the checks. I'll read the output out beside you and we'll finish together.",
+                "Great, thanks Clara. I'll get my coat, and the checks are in good hands.",
+                "You don't need to keep earning your place here. You're enough as you are."
+              ],
+              "answer": 0,
+              "why": "The top line gets a plain yes about the checks, and the underneath gets a reply from your Kid: she does not have to do it alone. Both tracks answered, and the checks still get done.",
+              "traps": {
+                "1": "That answers the checks and leaves Clara alone with them. She hears that her extra hours worked, which feeds the habit.",
+                "2": "That answers only the underneath, and it argues with it. Clara never said she felt she had to earn anything, so she has to defend herself while the checks wait."
+              },
+              "example": "A bakery at closing, a trainee who says: “I'll mop up, you go home, I'm quicker on my own.”<br>“Yes please, and I'll dry as you go.” The first part answers the mopping and the second keeps her company."
+            },
+            {
+              "type": "pick",
+              "who": "Daniel, tapping his watch",
+              "text": "“Don't be late with the sign-off, whatever happens. Seven, not five past.”",
+              "cue": "jaw tight, the release board open behind him",
+              "prompt": "On top it is a deadline. Underneath, Daniel's Kid is worried and wants someone close. Which reply answers both?",
+              "options": [
+                "Daniel, you say this before every release. Take a breath.",
+                "Seven sharp. I'll be at the desk next to yours until it goes live.",
+                "Seven sharp, got it. I'll send the sign-off and leave you to it."
+              ],
+              "answer": 1,
+              "why": "The top line gets a plain yes about seven o'clock, and the underneath gets a reply from your Kid: you will be right beside him. Both tracks answered, and the sign-off is not at risk.",
+              "traps": {
+                "0": "That answers only the underneath, and it is a verdict on his habit. Daniel never said he was anxious, so he fires back about the clock.",
+                "2": "That answers the deadline and walks away from the worry. Daniel is left with his watch and the red board, alone."
+              },
+              "example": "A kitchen before a big service, a head chef who says: “Plates out at seven, not five past.”<br>“Seven. I'll be on the pass beside you.” The first part answers the time and the second answers the nerves."
+            },
+            {
+              "type": "pick",
+              "who": "Omar, at the kettle",
+              "text": "“Is the kettle on? I'm after a tea.”",
+              "cue": "holding up an empty mug, waiting by the shelf",
+              "prompt": "Nothing is underneath this one. Which reply fits?",
+              "options": [
+                "You sound like you want company. Come and sit with me.",
+                "You only want tea when you're avoiding the release.",
+                "Just boiled. Mugs are on the shelf."
+              ],
+              "answer": 2,
+              "why": "The question is only a question, so a plain answer from your Pilot is the right size. Reading a second chat into it would answer something Omar never said.",
+              "traps": {
+                "0": "That answers a feeling Omar has not shown. A plain question can stay plain, and hunting for a second chat makes the kitchen awkward.",
+                "1": "That is a verdict on Omar, built from nothing in the line. It starts a row over a mug of tea."
+              },
+              "example": "A hotel breakfast room, a guest asks: “Is the toast ready?” “Just popped up, here.”<br>A question and a plain answer. Nothing else is being asked."
+            }
+          ]
+        },
+        {
+          "level": "Analyse",
+          "label": "Analyse, explain it",
+          "intro": "<b>Count the voices.</b> Pick the description that fits the first chat in the story.",
+          "items": [
+            {
+              "type": "pick",
+              "who": "Nadia, after the release",
+              "text": "“Count the voices in the late-checks chat between Clara and Omar. On top, two Pilots. Underneath, two Kids. How many voices are talking, and which ones decide how the night goes?”",
+              "cue": "turning a mug in her hands",
+              "options": [
+                "Four voices, with the Kids underneath in charge",
+                "Three voices, since only Clara is hiding anything",
+                "Two voices, because a check is only a check"
+              ],
+              "answer": 0,
+              "why": "Clara and Omar are each speaking twice at once: a plain Pilot chat about checks on top and a Kid-to-Kid chat underneath. That is four voices. The Pilots seem to be running the night, but the Kids decide it, which is why the coat stays on the hook.",
+              "traps": {
+                "1": "Three voices is the kind of double-talk where only one side has a hidden message. Omar has one too, so the count is four.",
+                "2": "A check is only a check if nothing else is going on. The coat back on its hook says the underneath chat is still running."
+              },
+              "example": "A wedding buffet, two cousins: “There's a spare chair by the window.” “Then I'll take the one next to it.”<br>Two Pilots on top and two Kids underneath, four voices. The chair talk is only the surface."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

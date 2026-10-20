@@ -1,0 +1,680 @@
+{
+ "baseBlurb": "Gran turns the pages of her photo album while Leo asks whether the waiting ever ended.",
+ "stories": [
+  {
+   "setting": "Work",
+   "blurb": "Daniel will not talk rota until the client signs, and Clara has not sent one email to him.",
+   "opener": {
+    "setting": "Thursday, 5:40pm. Halden, the team room. The release board is still amber, and Clara's chair has not moved since lunch.",
+    "lines": [
+     {
+      "who": "Daniel",
+      "text": "“Nobody goes home before the client signs. After that, we'll talk about the rota.”",
+      "cue": "eyes on the red laptop"
+     },
+     {
+      "who": "Clara",
+      "text": "“I'll ask about the senior role when the appendix is finished. It's nearly finished.”",
+      "cue": "typing without a pause"
+     },
+     {
+      "who": "Omar",
+      "text": "“Is nearly the same as finished? I'm asking about the chips.”",
+      "cue": "holding the canteen menu up like a flag"
+     }
+    ],
+    "ask": "Every plan has a shape. Match each life story to the shape it takes over time, then say what the shape costs the person living it."
+   },
+   "rounds": [
+    {
+     "level": "Spot",
+     "label": "Spot, round 1",
+     "intro": "Every life has a plan, and every plan has a shape. Three short stories. Pick the shape that fits each one.",
+     "items": [
+      {
+       "type": "pick",
+       "who": "Daniel",
+       "text": "“Once the client has signed, we'll sort the on-call rota. Until then, don't ask.”",
+       "cue": "a hand up, still reading the screen",
+       "options": [
+        "after this, the price",
+        "not until",
+        "almost makes it"
+       ],
+       "answer": 1,
+       "why": "The rota waits for one event, and nothing moves before it. That is 'not until': the start has a gate on it, and the gate belongs to someone else.",
+       "traps": {
+        "0": "This would be 'after this, the price' if there were a treat now and a bill later. Nobody is enjoying anything here. A decision is simply parked.",
+        "2": "This would be 'almost makes it' if the rota had reached the last step and slipped. It has not been started yet."
+       },
+       "example": "A landlord who says the repairs will be looked at once the new tenant moves in. The tenant has not moved in, and the tap still drips."
+      },
+      {
+       "type": "pick",
+       "who": "Clara",
+       "text": "“The email asking Daniel about the senior role? I've written it four times. He hasn't said no. I just never press send.”",
+       "cue": "angling the screen away from Omar",
+       "options": [
+        "not until",
+        "almost makes it",
+        "never gets it"
+       ],
+       "answer": 2,
+       "why": "The want is real, the draft exists, and the finger never reaches the button. That is 'never gets it': the thing she wants stays in the drafts folder.",
+       "traps": {
+        "0": "This would be 'not until' if she had named a condition and was waiting for it. Here there is a draft and no reason given, only the stopping.",
+        "1": "This would be 'almost makes it' if she had sent it and been turned down at the last step. She has not got that far."
+       },
+       "example": "A man who has the library form filled in for years and never hands it over at the desk."
+      },
+      {
+       "type": "pick",
+       "who": "Omar",
+       "text": "“The build went green at 10:12. The demo slot closed at 10:00. So close.”",
+       "cue": "reading the timestamp aloud",
+       "options": [
+        "almost makes it",
+        "plan runs out",
+        "always the same"
+       ],
+       "answer": 0,
+       "why": "The plan got to the last step and missed it by minutes. That is 'almost makes it': close enough to count, and still outside the door.",
+       "traps": {
+        "1": "This would be 'plan runs out' if nothing had been planned for after a point. Here a lot was planned, and the clock beat it.",
+        "2": "This would be 'always the same' if this exact miss kept coming round every release. One close finish is a different shape."
+       },
+       "example": "A relay runner who hands over the baton a stride after the line."
+      }
+     ]
+    },
+    {
+     "level": "Play",
+     "label": "Play, the week in motion",
+     "intro": "Two boards of six. Each story is a plan with a shape. Match the story to the shape it takes over time, whatever the mood of the moment.",
+     "items": [
+      {
+       "type": "sort",
+       "prompt": "Six plans. Match each story to the shape it takes over time.",
+       "bins": [
+        "not until",
+        "after this, the price",
+        "never gets it",
+        "always the same",
+        "almost makes it",
+        "plan runs out"
+       ],
+       "items": [
+        {
+         "text": "“I'll take my holiday once this quarter is over. Then I'll book the coast and switch the phone off for a week.”",
+         "answer": 0,
+         "why": "The holiday waits for a condition, the quarter ending. Until then the plan has no start. That is 'not until'."
+        },
+        {
+         "text": "“Another all-nighter, and the release is out. I'll feel it on Monday, and on Tuesday too, and I'll still say yes next time.”",
+         "answer": 1,
+         "why": "The relief comes now and the bill follows, and keeps following. That is 'after this, the price'."
+        },
+        {
+         "text": "“I've had an idea for a small tool that tidies the test logs for a year. I've sketched it twice. That's not for someone at my grade.”",
+         "answer": 2,
+         "why": "The wish is real and old, and the person talks themselves out of reaching. That is 'never gets it'."
+        },
+        {
+         "text": "“Every release, Daniel shouts at four, I fix it by six, and nobody says a word. Same night, new version number.”",
+         "answer": 3,
+         "why": "The same scene, the same people, the same ending. The plan loops. That is 'always the same'."
+        },
+        {
+         "text": "“One vote short of the team lead job. And last year, one vote short as well.”",
+         "answer": 4,
+         "why": "Each time the story gets to the final step and falls just short. That is 'almost makes it'."
+        },
+        {
+         "text": "“The project ends on Friday. I planned every sprint up to it. On Monday I have no idea what I'm meant to be doing.”",
+         "answer": 5,
+         "why": "Everything is planned up to a point and nothing after it. The plan has given out. That is 'plan runs out'."
+        }
+       ]
+      },
+      {
+       "type": "sort",
+       "prompt": "Six more. Match each one to its shape.",
+       "bins": [
+        "not until",
+        "after this, the price",
+        "never gets it",
+        "always the same",
+        "almost makes it",
+        "plan runs out"
+       ],
+       "items": [
+        {
+         "text": "“I'll tell Daniel the estimate is wrong once the demo is over. Not a minute before.”",
+         "answer": 0,
+         "why": "The honest talk is parked behind one event. That is 'not until': the start is tied to something else."
+        },
+        {
+         "text": "“Client dinner, a late flight, a huge pudding. I'll be wrecked on Thursday, and I'll deal with Thursday when it comes.”",
+         "answer": 1,
+         "why": "The treat is now and the cost is later. That is 'after this, the price'."
+        },
+        {
+         "text": "“I'd love to run a workshop for the new starters. The slides are done. I never booked the room.”",
+         "answer": 2,
+         "why": "The want is there and the reaching never happens. That is 'never gets it'."
+        },
+        {
+         "text": "“Omar asks if I'm okay. I say fine. He lets it go. Then I stay till eight again.”",
+         "answer": 3,
+         "why": "The same question, the same answer, the same evening. The plan comes round again. That is 'always the same'."
+        },
+        {
+         "text": "“We passed every item on the audit but one. The auditor found the one. Third audit running.”",
+         "answer": 4,
+         "why": "The story keeps stopping one item short of clear. That is 'almost makes it'."
+        },
+        {
+         "text": "“Daniel's handover notes are very thorough, and they stop at his last day on Friday. There is nothing after.”",
+         "answer": 5,
+         "why": "The plan is clear up to a point and silent after it. That is 'plan runs out'."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "level": "Analyse",
+     "label": "Analyse, explain it",
+     "items": [
+      {
+       "type": "pick",
+       "who": "Omar",
+       "text": "“Clara will ask Daniel for the senior role once the appendix is perfect. Which reading names the price of that plan?”",
+       "cue": "passing her a mug",
+       "options": [
+        "It is an Always script. The same late night comes round with every release, so the price is simply being tired again and again.",
+        "It is an Almost script. She keeps getting to the final step and missing it, so the price is the sting at the finish line each time.",
+        "It is an Until script. The ask waits for a condition that never fully arrives, so the price is the role itself."
+       ],
+       "answer": 2,
+       "why": "The books call this the Until script. Asking for the role is put behind a condition, and a perfect appendix is a condition that always has one more fix in it. The price is paid each week the role stays out of reach.",
+       "traps": {
+        "0": "This reading would send everyone to the late nights. Nobody would ask about the email in the drafts, and the real wait would stay hidden.",
+        "1": "This reading would treat her as someone who tried and fell short. She has not tried yet. That is what the waiting hides."
+       },
+       "example": "A friend who will apply for the better flat once the spare room is decluttered. The room is never quite done, and the listing goes."
+      },
+      {
+       "type": "pick",
+       "who": "Omar",
+       "text": "“Halden's old billing project ends on Friday. Daniel's plan has a cake, a speech and no Monday. Which shape is it, and what does it cost?”",
+       "cue": "looking at the calendar",
+       "options": [
+        "Open-ended: the plan gives out here, and the cost is a blank Monday.",
+        "Open-ended: he is free to choose anything now, so the shape has no real cost to him, only room.",
+        "Until: he is holding everything back until a condition is met, and the cost is the long wait."
+       ],
+       "answer": 0,
+       "why": "The books call this the open-ended shape. The script runs out at a set point, and nothing is written for after it. Everything up to Friday was planned, and the blank that follows is what it costs.",
+       "traps": {
+        "1": "This reading hears the gap as freedom. Nobody would ask what he does on Monday, and the blank would arrive unprepared.",
+        "2": "Until would mean something is held back for a condition. Nothing is held back here. The plan has simply stopped."
+       },
+       "example": "A footballer whose last game is Saturday and whose diary is empty from Sunday."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "setting": "Friends & Community",
+   "blurb": "Joseph keeps postponing the five-a-side, and Ruby is holding the pen at his birthday card.",
+   "opener": {
+    "setting": "Saturday, 11:15am. The Corner Table, the back table. Joseph's birthday card is half signed, and Ruby is holding the pen.",
+    "lines": [
+     {
+      "who": "Ruby",
+      "text": "“Joseph says he'll book the pitch once his knee is better. That was in April.”",
+      "cue": "turning the card over"
+     },
+     {
+      "who": "Joseph",
+      "text": "“It's nearly better. Ask me in a month.”",
+      "cue": "stirring a coffee that went cold an hour ago"
+     },
+     {
+      "who": "Nadia",
+      "text": "“Who has a pen that works for the left corner?”",
+      "cue": "not looking at either of them"
+     }
+    ],
+    "ask": "Every plan has a shape. Match each life story to the shape it takes over time, then say what the shape costs the person living it."
+   },
+   "rounds": [
+    {
+     "level": "Spot",
+     "label": "Spot, round 1",
+     "intro": "Every life has a plan, and every plan has a shape. Three short stories. Pick the shape that fits each one.",
+     "items": [
+      {
+       "type": "pick",
+       "who": "Ruby",
+       "text": "“Every year I say I'll join Nadia's Sunday group. I write my name on the list by the door and then I walk past.”",
+       "cue": "tapping the card against the table",
+       "options": [
+        "almost makes it",
+        "not until",
+        "never gets it"
+       ],
+       "answer": 2,
+       "why": "She wants it, she writes the name, and she walks past. The wish and the not-getting go together. That is 'never gets it'.",
+       "traps": {
+        "0": "This would be 'almost makes it' if she had walked in and been sent home at the last step. She never gets near the door.",
+        "1": "This would be 'not until' if she had named a condition to wait for. She gives no reason, only the walking past."
+       },
+       "example": "A neighbour who keeps meaning to knock on the new family's door and always ends up carrying the bins instead."
+      },
+      {
+       "type": "pick",
+       "who": "Joseph",
+       "text": "“I'll book the pitch when the knee is better. Not a day before.”",
+       "cue": "one hand on his knee",
+       "options": [
+        "not until",
+        "after this, the price",
+        "plan runs out"
+       ],
+       "answer": 0,
+       "why": "The booking waits for a condition, the knee, and nothing moves before it. That is 'not until': the start belongs to something else.",
+       "traps": {
+        "1": "This would be 'after this, the price' if he were having a treat now and paying later. There is no treat, only a postponed booking.",
+        "2": "This would be 'plan runs out' if nothing had been planned past a point. Here the plan is simply held."
+       },
+       "example": "A man who says he will visit his sister once the house is painted. The house is never painted."
+      },
+      {
+       "type": "pick",
+       "who": "A man at the next table",
+       "text": "“Another round for everyone, it's my birthday. The card is maxed, but never mind. I'll worry about it in the new year.”",
+       "cue": "raising two fingers at the counter",
+       "options": [
+        "always the same",
+        "after this, the price",
+        "not until"
+       ],
+       "answer": 1,
+       "why": "The treat comes now and the bill comes later. That is 'after this, the price': the good feeling is paid for in advance of the cost.",
+       "traps": {
+        "0": "This would be 'always the same' if this evening had happened exactly like this every year. It is one round, with a bill behind it.",
+        "2": "This would be 'not until' if he were putting something off. He is doing the opposite, spending first."
+       },
+       "example": "A friend who books a weekend away on a credit card, then spends March eating beans on toast."
+      }
+     ]
+    },
+    {
+     "level": "Play",
+     "label": "Play, the week in motion",
+     "intro": "Two boards of six. Each story is a plan with a shape. Match the story to the shape it takes over time, whatever the mood of the moment.",
+     "items": [
+      {
+       "type": "sort",
+       "prompt": "Six plans. Match each story to the shape it takes over time.",
+       "bins": [
+        "not until",
+        "after this, the price",
+        "never gets it",
+        "always the same",
+        "almost makes it",
+        "plan runs out"
+       ],
+       "items": [
+        {
+         "text": "“We'll have the street party once the council signs off the road closure. Until then nobody buys a single flag.”",
+         "answer": 0,
+         "why": "The party waits for one condition. That is 'not until'."
+        },
+        {
+         "text": "“Third birthday dinner this month. The card will cry next week, and I'll say yes again anyway.”",
+         "answer": 1,
+         "why": "The nice evenings come first and the bill follows, over and over. That is 'after this, the price'."
+        },
+        {
+         "text": "“I've wanted to join the choir at the church hall for ten years. I stand outside the door on Thursdays and then I go home.”",
+         "answer": 2,
+         "why": "A real want that never reaches the door. That is 'never gets it'."
+        },
+        {
+         "text": "“Every five-a-side I end up in goal. I let in the same soft shot, we say 'next week', and next week is the same.”",
+         "answer": 3,
+         "why": "The same scene again and again. That is 'always the same'."
+        },
+        {
+         "text": "“We reached the park league final. Lost on the last kick, same as the year before.”",
+         "answer": 4,
+         "why": "Close enough to taste it, and out again at the last step. That is 'almost makes it'."
+        },
+        {
+         "text": "“The bake sale was my whole summer for twenty years. It closed last week, and I don't know what Saturdays are for now.”",
+         "answer": 5,
+         "why": "A plan that was clear up to its end and says nothing after it. That is 'plan runs out'."
+        }
+       ]
+      },
+      {
+       "type": "sort",
+       "prompt": "Six more. Match each one to its shape.",
+       "bins": [
+        "not until",
+        "after this, the price",
+        "never gets it",
+        "always the same",
+        "almost makes it",
+        "plan runs out"
+       ],
+       "items": [
+        {
+         "text": "“I'll invite the new family on our street over once the spare room is painted. It can't be seen like that.”",
+         "answer": 0,
+         "why": "The invitation sits behind a condition that is always a little off. That is 'not until'."
+        },
+        {
+         "text": "“A whole weekend at the festival, no sleep, and the cost of a tent. The comedown arrives on Monday and lasts all week.”",
+         "answer": 1,
+         "why": "The fun is up front and the cost lands afterwards. That is 'after this, the price'."
+        },
+        {
+         "text": "“I've written to my old school friend a dozen times. The message is in drafts. It always will be.”",
+         "answer": 2,
+         "why": "The want and the not-reaching live side by side. That is 'never gets it'."
+        },
+        {
+         "text": "“Every Sunday Peter tells the story about the bus. We laugh at the same place and then change the subject.”",
+         "answer": 3,
+         "why": "The same story, the same laugh, the same change of subject. That is 'always the same'."
+        },
+        {
+         "text": "“We were two points short of the quiz trophy. The fourth quiz where we've been two points short.”",
+         "answer": 4,
+         "why": "Each time, the finish is one step out of reach. That is 'almost makes it'."
+        },
+        {
+         "text": "“Joseph's club wound up on Friday. There was a speech and a send-off, and no plan for what the Tuesday regulars do now.”",
+         "answer": 5,
+         "why": "The plan is clear to a point and then blank. That is 'plan runs out'."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "level": "Analyse",
+     "label": "Analyse, explain it",
+     "items": [
+      {
+       "type": "pick",
+       "who": "Nadia",
+       "text": "“Joseph's plan says the pitch gets booked when the knee is better. Which explanation names the price of that plan?”",
+       "cue": "pointing at the card",
+       "options": [
+        "It is an Until script. Playing waits for a condition, and the months of not playing are the price.",
+        "It is an Until script. Once the knee is better the plan ends well, so there is no real price for anyone to pay.",
+        "It is an Always script. The same excuse comes round each month, so the price is simply the same excuse."
+       ],
+       "answer": 0,
+       "why": "The books call this the Until script. The start of the game is tied to a condition, and the condition keeps moving. The price is the months nobody plays, paid a little each week.",
+       "traps": {
+        "1": "This reading would wish Joseph well and move on. Nobody would ask what the waiting has cost the whole team, and the months would vanish.",
+        "2": "This reading would turn it into an argument about excuses. The Until plan is one start held behind a gate, so the real price stays hidden."
+       },
+       "example": "A cousin who says he will start the course once the baby sleeps through. Two years on, the baby is a toddler and the course is still on the list."
+      },
+      {
+       "type": "pick",
+       "who": "Nadia",
+       "text": "“The club wound up on Friday: a speech, a cake and nothing for Tuesday. Which shape is that, and what does it cost?”",
+       "cue": "the pen still in her hand",
+       "options": [
+        "Almost: the club got to the last step and missed it, so the cost is a trophy that never came.",
+        "Open-ended: the plan gives out at that point, and the cost is a blank Tuesday.",
+        "Never: the wish for something else sits there and is never reached, so the cost is the wish."
+       ],
+       "answer": 1,
+       "why": "The books call this the open-ended shape. The script ran out on Friday, and nothing was written for Tuesday. The cost is the blank where the club used to be.",
+       "traps": {
+        "0": "Almost would need a final step they missed. The club did not fall short. It finished, and that is the trouble.",
+        "2": "Never would need a wish that is not reached. Nobody here is wishing for anything yet. The plan has just stopped."
+       },
+       "example": "A mother of grown-up children, Sunday. “I did all of it, and now the house is quiet and I don't know what comes next.”"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "setting": "Relationships",
+   "blurb": "Clara says she will answer Omar's text properly once the project is done, and he is still hungry.",
+   "opener": {
+    "setting": "Friday, 7:20pm. The Corner Table, a window seat. Omar's phone is face down by the sugar, and Clara has read the menu three times.",
+    "lines": [
+     {
+      "who": "Clara",
+      "text": "“I'll tell you what I actually think when the project is done. It wouldn't be fair before.”",
+      "cue": "squaring the menu to the table edge"
+     },
+     {
+      "who": "Omar",
+      "text": "“I only asked if you wanted chips.”",
+      "cue": "smiling, half a step behind"
+     },
+     {
+      "who": "Tolu",
+      "text": "“Two of you, and you're both reading the sugar packets.”",
+      "cue": "pausing with the coffee pot, then moving on"
+     }
+    ],
+    "ask": "Every plan has a shape. Match each life story to the shape it takes over time, then say what the shape costs the person living it."
+   },
+   "rounds": [
+    {
+     "level": "Spot",
+     "label": "Spot, round 1",
+     "intro": "Every life has a plan, and every plan has a shape. Three short stories. Pick the shape that fits each one.",
+     "items": [
+      {
+       "type": "pick",
+       "who": "Clara",
+       "text": "“I'll answer your text properly once the project's done. Not before.”",
+       "cue": "her thumb over the phone",
+       "options": [
+        "not until",
+        "never gets it",
+        "always the same"
+       ],
+       "answer": 0,
+       "why": "The answer waits for a condition, and nothing moves before it. That is 'not until': what she feels is held behind the project.",
+       "traps": {
+        "1": "This would be 'never gets it' if she were wishing to answer and never would. She has named a date, so the answer is parked, not given up.",
+        "2": "This would be 'always the same' if the same reply came round every week. This is a single postponed answer."
+       },
+       "example": "A man who says he will propose once the house is finished. The house is never finished."
+      },
+      {
+       "type": "pick",
+       "who": "Tolu",
+       "text": "“Same worry on every second date. I cancel at six with a headache, and by seven I feel awful about it.”",
+       "cue": "wiping the counter, not looking up",
+       "options": [
+        "almost makes it",
+        "always the same",
+        "plan runs out"
+       ],
+       "answer": 1,
+       "why": "The same cancel, the same guilt, the same evening. The plan loops back to the start. That is 'always the same'.",
+       "traps": {
+        "0": "This would be 'almost makes it' if she got to the last step and fell short. She never leaves the flat, so there is no last step.",
+        "2": "This would be 'plan runs out' if nothing had been planned after a point. Here the plan keeps coming round."
+       },
+       "example": "A friend who agrees to every party and texts “can't make it” at the door, three times a year, for ten years."
+      },
+      {
+       "type": "pick",
+       "who": "Clara",
+       "text": "“I've wanted to say it to him since March. I rehearse it on the bus, and I get off two stops early.”",
+       "cue": "looking out of the window at the bus stop",
+       "options": [
+        "not until",
+        "after this, the price",
+        "never gets it"
+       ],
+       "answer": 2,
+       "why": "The want is clear, and the reaching never happens. That is 'never gets it': she rehearses the words and gets off the bus.",
+       "traps": {
+        "0": "This would be 'not until' if she had set a condition to wait for. She sets none, so there is nothing to wait for.",
+        "1": "This would be 'after this, the price' if she were enjoying a treat now. The bus ride is a rehearsal, not a pleasure."
+       },
+       "example": "A student who has wanted to ask the teacher for extra help since term began, and walks past the office every Monday."
+      }
+     ]
+    },
+    {
+     "level": "Play",
+     "label": "Play, the week in motion",
+     "intro": "Two boards of six. Each story is a plan with a shape. Match the story to the shape it takes over time, whatever the mood of the moment.",
+     "items": [
+      {
+       "type": "sort",
+       "prompt": "Six plans. Match each story to the shape it takes over time.",
+       "bins": [
+        "not until",
+        "after this, the price",
+        "never gets it",
+        "always the same",
+        "almost makes it",
+        "plan runs out"
+       ],
+       "items": [
+        {
+         "text": "“I'll let him meet my friends once the flat is sorted and I'm less of a mess. Not before.”",
+         "answer": 0,
+         "why": "The meeting waits for a condition that keeps moving. That is 'not until'."
+        },
+        {
+         "text": "“Texting till two is wonderful. I'll be ill on the train tomorrow, and the day after, and I'll do it again anyway.”",
+         "answer": 1,
+         "why": "The pleasure is now and the cost follows. That is 'after this, the price'."
+        },
+        {
+         "text": "“I want someone to say 'I'm proud of you' and mean it. Whenever someone tries, I change the subject.”",
+         "answer": 2,
+         "why": "The want is real and the reaching never comes. That is 'never gets it'."
+        },
+        {
+         "text": "“Every time we get close, I make a joke, he laughs, and we're back to being colleagues.”",
+         "answer": 3,
+         "why": "The same step forward, the same joke, the same step back. That is 'always the same'."
+        },
+        {
+         "text": "“We got as far as the cinema queue, then her phone rang and she went home. Third time that has happened.”",
+         "answer": 4,
+         "why": "Every time the evening gets one step from the finish and stops. That is 'almost makes it'."
+        },
+        {
+         "text": "“He had a plan for the first six months of us. Past the holiday in July, there is nothing, and he's nervous about it.”",
+         "answer": 5,
+         "why": "The plan is clear up to a point and silent beyond. That is 'plan runs out'."
+        }
+       ]
+      },
+      {
+       "type": "sort",
+       "prompt": "Six more. Match each one to its shape.",
+       "bins": [
+        "not until",
+        "after this, the price",
+        "never gets it",
+        "always the same",
+        "almost makes it",
+        "plan runs out"
+       ],
+       "items": [
+        {
+         "text": "“I'll tell you what I think of your friend once we've been together a year. Not before.”",
+         "answer": 0,
+         "why": "The honest word is held behind a milestone. That is 'not until'."
+        },
+        {
+         "text": "“I flirted all evening and it felt wonderful. I'll pay for it with an awkward Monday and a shared lift.”",
+         "answer": 1,
+         "why": "The good time first, the awkwardness after. That is 'after this, the price'."
+        },
+        {
+         "text": "“I've wanted to ask her to the lake since spring. I look up the bus times every Friday, and I never ask.”",
+         "answer": 2,
+         "why": "A clear want that never gets asked. That is 'never gets it'."
+        },
+        {
+         "text": "“We argue about who pays, I give in, and I'm cross all the way home. It happens each time.”",
+         "answer": 3,
+         "why": "The same disagreement, the same giving in, the same walk home. That is 'always the same'."
+        },
+        {
+         "text": "“He said 'I think I' on the phone and then the signal dropped. Twice now it has stopped one word short.”",
+         "answer": 4,
+         "why": "The sentence keeps stopping a word before the end. That is 'almost makes it'."
+        },
+        {
+         "text": "“We've done the first date, the second, meeting the parents. Now there is no next thing on the list, and we sit there.”",
+         "answer": 5,
+         "why": "Everything was planned up to a point and nothing after it. That is 'plan runs out'."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "level": "Analyse",
+     "label": "Analyse, explain it",
+     "items": [
+      {
+       "type": "pick",
+       "who": "Omar",
+       "text": "“Clara says she'll answer my text once the project is done. Which reading names the price of that plan?”",
+       "cue": "turning his phone over at last",
+       "options": [
+        "It is an Always script. The same pause comes round each time they get close, so the price is one more long pause.",
+        "It is an Until script. Closeness waits for a condition, and the price is the weeks she stays out of reach.",
+        "It is an Almost script. She keeps reaching the last step and missing it, so the price is the finish line itself."
+       ],
+       "answer": 1,
+       "why": "The books call this the Until script. Closeness is put behind a condition, and the project always has a next stage. The price is paid in the weeks of distance, while both of them tell themselves it is only for now.",
+       "traps": {
+        "0": "This reading would turn it into a pattern of pauses and send the talk to the old argument. The single postponed start would go unnamed.",
+        "2": "This reading would treat her as someone who tried and fell short. She has not tried yet, and that is what the waiting hides."
+       },
+       "example": "A cousin who says he will start the course once the baby sleeps through the night."
+      },
+      {
+       "type": "pick",
+       "who": "Tolu",
+       "text": "“They have done the first date, the second, and meeting the parents. Now there is no next thing, and they sit there. Which shape is it, and what does it cost?”",
+       "cue": "setting down two cups",
+       "options": [
+        "Until: they are holding everything back for a condition, and the cost is the long wait.",
+        "Almost: they reach the last step and fall one short, so the cost is the sting of missing the finish line.",
+        "Open-ended: the plan gives out here, and the cost is a blank where the next step was."
+       ],
+       "answer": 2,
+       "why": "The books call this the open-ended shape. The script ran out after the last thing on the list, and nothing is written for what comes next. The cost is the silence at the table.",
+       "traps": {
+        "0": "Until would mean something is being held back for a condition. Nothing is held back here. The list has simply run out.",
+        "1": "Almost would need a last step they missed. They have done every step. The trouble is what comes after."
+       },
+       "example": "A couple at the end of a holiday, with no plan for the first Monday home."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,1115 @@
+{
+ "baseBlurb": "Omar waves away a broken release at the Corner Table, and Nadia watches how you answer.",
+ "stories": [
+  {
+   "setting": "Home & Flatmates",
+   "blurb": "Sam shrugs off the red gas letter in the flat, Maya keeps score, and you stand between.",
+   "opener": {
+    "setting": "Tuesday, 10:40pm. Hawthorn Court, apartment 3B, the kitchen. The red envelope has been on the fridge since Saturday, and the agent from the lettings office visits on Friday.",
+    "lines": [
+     {
+      "who": "Maya",
+      "text": "“Three days that letter's been up there. I'm not saying anything. I'm only saying it's red.”",
+      "cue": "wiping a counter that is already clean"
+     },
+     {
+      "who": "Sam",
+      "text": "“Really, it's nothing. They send those to everyone.”",
+      "cue": "stirring noodles, back to the room"
+     }
+    ],
+    "ask": "Can you keep the gas letter on the table through six turns, and name each shrink Sam makes before you answer it?"
+   },
+   "rounds": [
+    {
+     "level": "Spot",
+     "label": "Spot, round 1",
+     "intro": "Four lines, four levels. Each line shrinks the problem at one of four plain levels: it isn't there, it doesn't matter, it can't change, or I can't do anything about it. Tap the level the line lands on.",
+     "items": [
+      {
+       "type": "pick",
+       "who": "Maya",
+       "text": "<i>Maya folds the red envelope in half, then in half again. “It's only a late fee. I've paid worse and never said a word.”</i>",
+       "cue": "Saturday, 8:15am, apartment 3B, by the fridge",
+       "options": [
+        "It doesn't matter",
+        "It isn't there",
+        "It can't change"
+       ],
+       "answer": 0,
+       "why": "Maya admits the payment failed and calls it a late fee. What she shrinks is how much it counts, since she has paid worse. That is the level it doesn't matter: the problem is there, and it is made to look small.",
+       "traps": {
+        "1": "It isn't there would mean Maya denied the late fee. She names it, so she is making it small, not wiping it out.",
+        "2": "It can't change would be a line about something that cannot move. Maya says nothing about change, only that the fee is trivial."
+       },
+       "example": "A bus stop, Monday.<br>Rider: “It's only a parking ticket. I've had worse.”<br>Friend: “So you're not going to pay it?”"
+      },
+      {
+       "type": "pick",
+       "who": "Sam",
+       "text": "<i>Sam pats his pockets, the corner of an envelope showing from his jacket. “What letter? I haven't seen any letter.”</i>",
+       "cue": "Sunday, 11:05am, the hallway, one shoe on",
+       "options": [
+        "It can't change",
+        "It doesn't matter",
+        "It isn't there"
+       ],
+       "answer": 2,
+       "why": "Sam says there is no letter while its corner pokes out of his jacket. That is it isn't there: the problem is denied, and the evidence is in his pocket.",
+       "traps": {
+        "0": "It can't change would say the letter exists and nothing can alter it. Sam says there is no letter at all.",
+        "1": "It doesn't matter would admit the letter and call it small. Sam admits nothing."
+       },
+       "example": "A doctor's waiting room, Thursday.<br>Patient: “What cough? I don't have a cough.” Then she coughs into her scarf for a full minute."
+      },
+      {
+       "type": "pick",
+       "who": "Maya",
+       "text": "<i>Maya turns her phone face down on the sofa arm. “Mr Pryce hasn't answered a message since spring. That's how this flat works.”</i>",
+       "cue": "Monday, 7:30pm, the sofa",
+       "options": [
+        "It doesn't matter",
+        "It can't change",
+        "I can't do anything about it"
+       ],
+       "answer": 1,
+       "why": "Maya says the agent ignores every message and that is how the flat works. The problem is real, and the change is called impossible. That is it can't change.",
+       "traps": {
+        "0": "It doesn't matter would call the problem small. Maya is not calling it small, she says it will not move.",
+        "2": "I can't do anything about it would be about Maya's own hands. She speaks about the agent and the flat, the things outside her."
+       },
+       "example": "A lift in an office block, Wednesday.<br>Colleague: “It's been broken for a year. Facilities never answer. That's just how it is.”"
+      },
+      {
+       "type": "pick",
+       "who": "Sam",
+       "text": "<i>Sam turns the bin bag over in his hands. “I'm hopeless with bills. If I ring them I'll only make it worse.”</i>",
+       "cue": "Monday, 9:02pm, by the bins",
+       "options": [
+        "I can't do anything about it",
+        "It isn't there",
+        "It can't change"
+       ],
+       "answer": 0,
+       "why": "Sam does not say the bills are fine, and he does not say the account is stuck. He says he is hopeless and would make it worse. That is I can't do anything about it: the problem is real and he sets himself aside.",
+       "traps": {
+        "1": "It isn't there would deny the bills. Sam admits there is something to ring about, so it is not that.",
+        "2": "It can't change would put the stuck part in the system. Sam puts it in himself."
+       },
+       "example": "A choir rehearsal, Tuesday.<br>Singer: “I'm tone deaf, I'd only spoil the harmony.”<br>Leader: “Then stand next to me and we'll try one line.”"
+      }
+     ]
+    },
+    {
+     "level": "Play",
+     "label": "Play, the week in motion",
+     "intro": "The Sunday boss, moved into the flat. Six turns with Sam, and a closed door down the hall. At each turn ask what he is making smaller, and what your line does with it.",
+     "items": [
+      {
+       "type": "scene",
+       "title": "Tuesday, 22:40, the kitchen",
+       "setting": "Apartment 3B. The gas payment bounced twice, Mr Pryce from the lettings office visits on Friday at ten, and Maya has gone to her room with the door open a crack.",
+       "meters": {
+        "you": 50,
+        "them": 50
+       },
+       "beats": [
+        {
+         "who": "Sam",
+         "text": "“It's only two missed payments. Nobody cuts the gas off over two.”",
+         "cue": "stirring noodles, back to the room",
+         "lines": [
+          {
+           "text": "“It's two bounced payments and a red letter, and the agent visits on Friday. Which account did they come out of?”",
+           "tag": "best",
+           "you": 4,
+           "them": 2,
+           "outcome": "He taps the spoon on the pan. “The bills one. The joint one. It's, yeah, it's empty.”",
+           "why": "You say what happened in plain facts and ask for the one he is dodging. The problem keeps its full size and he is not accused."
+          },
+          {
+           "text": "“Probably. Let's see if a third one comes.”",
+           "tag": "ok",
+           "you": -1,
+           "them": 1,
+           "outcome": "He nods, glad the post can decide.",
+           "why": "It is true that nobody has cut anything off, but waiting to see makes the bounce small and leaves it alone."
+          },
+          {
+           "text": "“Nobody cuts it off? You forgot to top it up, again.”",
+           "tag": "game",
+           "you": -5,
+           "them": -6,
+           "outcome": "The scene stops there. Sam says “Right, so I'm the one who ruins things,” and turns the hob off.",
+           "why": "You turn his shrink into a charge. Now he can say you are blaming him, and the account drops out of the talk."
+          }
+         ]
+        },
+        {
+         "who": "Sam",
+         "text": "“Maya will go on about it in that notebook anyway. She writes everything down, so what's the point?”",
+         "cue": "a glance at Maya's door",
+         "lines": [
+          {
+           "text": "“Her notebook is a different talk. Tonight I need the gas account looked at before Friday.”",
+           "tag": "ok",
+           "you": 1,
+           "them": 1,
+           "outcome": "He sighs. “Okay. I'll look.” He does not move.",
+           "why": "This names the side step and returns to the deadline, but it gives him nothing to do, so the looking stays a wish."
+          },
+          {
+           "text": "“She does keep a lot of score. Want to talk about that?”",
+           "tag": "ok",
+           "you": -2,
+           "them": 3,
+           "outcome": "Sam brightens. “Eleven pages. I counted once, and...”",
+           "why": "This sounds like listening, and it is kind. But it follows him off the gas and into Maya's notebook, so the side step becomes the whole talk."
+          },
+          {
+           "text": "“Her notebook is a separate question. Open the bank app and tell me what's in the bills account right now.”",
+           "tag": "best",
+           "you": 4,
+           "them": 2,
+           "outcome": "He fishes out his phone. “Four pounds. Okay. Four pounds.”",
+           "why": "You label the tangent and bring him back with one small task. The notebook gets no seat, and the number comes out."
+          }
+         ]
+        },
+        {
+         "who": "Sam",
+         "text": "“The gas people never fix a payment. It's been like this since we moved in. It is what it is.”",
+         "cue": "lifting the pan lid, putting it back",
+         "lines": [
+          {
+           "text": "“Two winters of the same letters. That wears you down, Sam.”",
+           "tag": "ok",
+           "you": -1,
+           "them": 4,
+           "outcome": "He nods and slumps. “It does. Nobody tells you it goes on.”",
+           "why": "The sympathy is real, and it still agrees the thing is fixed. The talk stays on how long it has lasted, not on what could move."
+          },
+          {
+           "text": "“Then give up. I'll tell Mr Pryce that you did.”",
+           "tag": "game",
+           "you": -6,
+           "them": -5,
+           "outcome": "The scene stops there. Sam looks up sharply. “Don't. It isn't hopeless.”",
+           "why": "You hand him the whole level for free and add a threat. He wins the point, and the agent is dragged into the shrink."
+          },
+          {
+           "text": "“They haven't fixed it so far. What would get it fixed? Name one thing we could try, even a small one.”",
+           "tag": "best",
+           "you": 4,
+           "them": 2,
+           "outcome": "He thinks. “A new payment date. After pay day, maybe.”",
+           "why": "You take the failed attempts as information and ask for one change. The situation gets a test it can fail, and it can't change stops being the last word."
+          }
+         ]
+        },
+        {
+         "who": "Sam",
+         "text": "“I'm hopeless with bills. Maya does the numbers. I'd only make it worse.”",
+         "cue": "rubbing one eye with the heel of his hand",
+         "lines": [
+          {
+           "text": "“You're not hopeless, you're tired. Leave it, I'll look at it for you.”",
+           "tag": "ok",
+           "you": -1,
+           "them": 4,
+           "outcome": "He says “Thanks, you're a star,” and sits down. The app stays shut.",
+           "why": "A caring line that takes the I can't at face value. It keeps his tiredness in the talk and his ability out of it."
+          },
+          {
+           "text": "“You set up the direct debit, so you can move the date. Open the app and we'll do it now.”",
+           "tag": "best",
+           "you": 4,
+           "them": 3,
+           "outcome": "He straightens. “Yeah. Fine. It's under payments. Give me a second.”",
+           "why": "You answer the I can't with the part he does control. You name what he can do, and leave the word hopeless alone."
+          },
+          {
+           "text": "“Then you've given up, and you're the one Mr Pryce will ask on Friday.”",
+           "tag": "game",
+           "you": -5,
+           "them": -6,
+           "outcome": "The scene stops there. Sam's face closes. “Thanks for that,” he says, and means the opposite.",
+           "why": "This is a charge with a deadline. It makes him defend the I can't, instead of looking at it."
+          }
+         ]
+        },
+        {
+         "who": "Sam",
+         "text": "“Anyway, did you see the plant Maya put out on the balcony? It's actually doing well.”",
+         "cue": "brightening, the way people do when a subject is closed",
+         "lines": [
+          {
+           "text": "“I haven't looked. Good for her. It's lovely out there.”",
+           "tag": "ok",
+           "you": -1,
+           "them": 3,
+           "outcome": "He grins and the talk drifts. “Right? It has two new leaves.”",
+           "why": "This is friendly and agrees about the plant. But the tangent has taken the place of the question, and nobody comes back to the gas."
+          },
+          {
+           "text": "“You always change the subject when a problem gets real. Don't you think?”",
+           "tag": "game",
+           "you": -5,
+           "them": -6,
+           "outcome": "The scene stops there. Sam says nothing, and the fridge hums.",
+           "why": "This is a charge about his habit, and it makes the talk about the two of you. He can now defend the subject change while the account drops out of the scene."
+          },
+          {
+           "text": "“I haven't looked. Back to the account, though. Which date works after pay day?”",
+           "tag": "best",
+           "you": 4,
+           "them": 1,
+           "outcome": "He laughs once. “The twenty-eighth. Fine. The twenty-eighth.”",
+           "why": "You say you have not seen the plant, which closes the tangent, then return to the question. The side step gets a short answer, and the question stays open."
+          }
+         ]
+        },
+        {
+         "who": "Sam",
+         "text": "“Look, can we leave it till the weekend? I'm shattered. I'll sort it, I promise.”",
+         "cue": "switching off the hob, the recycling bag already in hand",
+         "lines": [
+          {
+           "text": "“Weekend, then. Go to bed, Sam, you've had a long day.”",
+           "tag": "ok",
+           "you": -2,
+           "them": 4,
+           "outcome": "He smiles, relieved. “Thanks. You're the best flatmate.”",
+           "why": "This is the kind-looking line, and it keeps the trap running. It cares for him and feels good, but it accepts the shut door and leaves the account for the weekend with nobody on it."
+          },
+          {
+           "text": "“Fine, leave it. It's only the gas, after all. They won't cut it off.”",
+           "tag": "game",
+           "you": -6,
+           "them": -6,
+           "outcome": "The scene stops there. Sam shrugs and takes the bag out, and a door closes down the hall.",
+           "why": "You say the shrink back in his own words and close the door with a shrug. The whole evening's trap is in those last few words."
+          },
+          {
+           "text": "“The weekend is fine, if you tell me tonight which payment you'll move first. Then I'll tell Maya it's in hand.”",
+           "tag": "best",
+           "you": 4,
+           "them": 3,
+           "outcome": "He stops with the bag half lifted. “The gas one, on the twenty-eighth. And you tell Maya. Yes.”",
+           "why": "You accept the weekend as a date and not as a shut door. You ask for one commitment now, so the leaving has to turn into a plan."
+          }
+         ]
+        }
+       ],
+       "payoff": "Tuesday, 23:10. The noodles are cold, the envelope is still red, and Maya's door has shut all the way. Friday is three days off.",
+       "fallout": {
+        "them": "Sam takes the bin bag out and stays away for twenty minutes."
+       }
+      },
+      {
+       "type": "pick",
+       "who": "Nadia",
+       "text": "“Let's stop there. What happened in that kitchen? Say it in plain words.”",
+       "cue": "Sunday, the back table, after you have told her all of it",
+       "options": [
+        "He was tired after a long day, so the talk got short and ended early.",
+        "He kept making the problem smaller, then shut it until the weekend.",
+        "He asked the flat for help with the bills, and nobody picked it up."
+       ],
+       "answer": 1,
+       "why": "He moved from it doesn't matter to it can't change, then to I can't do anything, then changed the subject and shut the door until the weekend. Each step made the gas letter smaller until nobody had to act.",
+       "traps": {
+        "0": "It would blame his tiredness and let the talk off the hook. He may well have been tired, but the turns show him shrinking the letter step by step.",
+        "2": "It would take his words at face value as a request. He never named a task anyone could take, so it was a shrink dressed as a request."
+       },
+       "example": "A family WhatsApp group, Thursday.<br>Cousin: “The roof leaks a bit, nothing to be done, it's always been like this.”<br>Brother: “Yeah. Anyway, who's watching the cricket?”"
+      }
+     ]
+    },
+    {
+     "level": "Analyse",
+     "label": "Analyse, explain it",
+     "intro": "Two questions to explain back. Use the book words: the level.",
+     "items": [
+      {
+       "type": "pick",
+       "who": "Nadia",
+       "text": "“At the third turn, Sam said it is what it is. Which level of the Discount Matrix is that?”",
+       "cue": "pen tapping once on the notebook",
+       "options": [
+        "Existence: he says the problem does not exist at all, so nothing needs doing.",
+        "Significance: he calls the gas problem small, so nobody looks at it closely.",
+        "Change possibilities: he calls it fixed, so nothing gets tried."
+       ],
+       "answer": 2,
+       "why": "It is what it is lands on change possibilities, the third of the four levels: the problem stays, and the change is called impossible. The Discount Matrix is the diagram that lays these levels out.",
+       "traps": {
+        "0": "Existence would deny the letter. Sam had already admitted two payments bounced, so the problem is there, and what he shuts is the chance of changing it.",
+        "1": "Significance would call the problem small. At the third turn Sam calls it fixed, so the level is the other one."
+       },
+       "example": "A shared garden, Saturday.<br>Neighbour: “The gate has jammed since spring and the council never come. That's just how it is.”<br>You: “Then let's send them a photo this week.”"
+      },
+      {
+       "type": "pick",
+       "who": "Nadia",
+       "text": "“Weekend, then. Go to bed, Sam. That sounded kind, so why was it a trap?”",
+       "cue": "looking at you over the notebook",
+       "options": [
+        "It accepted the shut door and wrapped it in care, so the letter stayed as small as Sam made it.",
+        "It made a clear plan for the weekend, so it cannot belong to a trap, whatever the tone.",
+        "It was rude, because it ended the talk before Sam had finished saying everything he wanted."
+       ],
+       "answer": 0,
+       "why": "Kindness is not the test here. The line agreed to the shut door, so the letter stayed exactly as small as Sam had made it. Sam felt looked after, which lifted the meters, but the account was still empty on Friday. The books call the shrinking discounting, and a kind line that accepts it leaves the discount in place.",
+       "traps": {
+        "1": "A plan can still be a trap when nobody owns it. This plan had no task on it, so it was a shut door with a day written on it.",
+        "2": "Ending a talk can be a cut, but Sam had already closed it himself. The line agreed with him instead of stopping him, so rude is the wrong reason."
+       },
+       "example": "A team chat, Friday.<br>Colleague: “The build's been flaky for weeks. It'll sort itself out.”<br>You: “Fair enough. Take the weekend.” The build is still flaky on Monday."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "setting": "Work",
+   "blurb": "Clara waves away a wrong figure in the client pack the evening before the call.",
+   "opener": {
+    "setting": "Tuesday, 5:20pm. Halden, the team room. Daniel is at a client dinner, the cleaner's hoover is two rooms away, and Clara's desk lamp is still on.",
+    "lines": [
+     {
+      "who": "Omar",
+      "text": "“Her totals are out by one line. I saw it when I opened the file.”",
+      "cue": "coat on, keeping his voice low at your desk"
+     },
+     {
+      "who": "Clara",
+      "text": "“It's fine. It's one small thing. Go home, both of you.”",
+      "cue": "not looking up from her screen"
+     }
+    ],
+    "ask": "Can you keep the appendix on the table through six turns, and name each shrink Clara makes before you answer it?"
+   },
+   "rounds": [
+    {
+     "level": "Spot",
+     "label": "Spot, round 1",
+     "intro": "Four lines, four levels. Each line shrinks the problem at one of four plain levels: it isn't there, it doesn't matter, it can't change, or I can't do anything about it. Tap the level the line lands on.",
+     "items": [
+      {
+       "type": "pick",
+       "who": "Clara",
+       "text": "<i>Clara tilts her screen away from the door. “It's one line in the appendix. The client won't even read the appendix.”</i>",
+       "cue": "Tuesday, 5:24pm, the team room, her desk lamp on",
+       "options": [
+        "It isn't there",
+        "I can't do anything about it",
+        "It doesn't matter"
+       ],
+       "answer": 2,
+       "why": "Clara admits the line is wrong and says the client will not read it. What she shrinks is how much it counts. That is the level it doesn't matter: the problem is there, and it is made to look small.",
+       "traps": {
+        "0": "It isn't there would mean she denied the wrong figure. She admits it is one line out, so she is making it small, not wiping it out.",
+        "1": "I can't do anything about it would be about what she is able to do. She is not saying that, she is saying the line is minor."
+       },
+       "example": "A school sports day, Saturday.<br>Mum: “It was only the relay. He dropped the baton once, and nobody got hurt.”<br>Friend: “Right, so it's nothing, then.”"
+      },
+      {
+       "type": "pick",
+       "who": "Daniel",
+       "text": "<i>Daniel taps the printed pack once. “The numbers are right. I checked the sum column myself.” He never opened the appendix tab.</i>",
+       "cue": "Tuesday, 1:10pm, the canteen queue",
+       "options": [
+        "It isn't there",
+        "It can't change",
+        "It doesn't matter"
+       ],
+       "answer": 0,
+       "why": "Daniel says the numbers are right, and the one tab with the mistake is the one he skipped. That is it isn't there: the problem is denied, and the proof is what he left unopened.",
+       "traps": {
+        "1": "It can't change would say the numbers are wrong and nothing can alter them. Daniel says they are right.",
+        "2": "It doesn't matter would admit the mistake and call it small. Daniel does not admit one exists."
+       },
+       "example": "A bus ride, Tuesday, 7pm.<br>Commuter: “I'm not even hungry, I had a big lunch.” Then she eats the whole packet of biscuits before the bus reaches the station."
+      },
+      {
+       "type": "pick",
+       "who": "Clara",
+       "text": "<i>Clara saves the file to a second folder. “Daniel made up his mind about me in March. He'll think what he thinks. That's how it is here.”</i>",
+       "cue": "Tuesday, 5:33pm, saving the file twice",
+       "options": [
+        "It isn't there",
+        "It can't change",
+        "It doesn't matter"
+       ],
+       "answer": 1,
+       "why": "Clara does not call the doubt small, and she does not deny it. She says it will not move. That is the level it can't change, where the problem is real and the change is called impossible.",
+       "traps": {
+        "0": "It isn't there would mean she said Daniel had no doubt about her. She names the doubt, so she is not denying it.",
+        "2": "It doesn't matter would call the doubt trivial. Clara says it is fixed, which is a different level."
+       },
+       "example": "A pothole on the road to the station, Monday.<br>Rider: “It's been like that for years. The council won't touch it. That's just how it is.”"
+      },
+      {
+       "type": "pick",
+       "who": "Clara",
+       "text": "<i>She shrugs, eyes on the total. “I'm the newest one here. It's not my place to ask anyone to check my work.”</i>",
+       "cue": "Tuesday, 5:41pm, one hand on the mouse",
+       "options": [
+        "It can't change",
+        "I can't do anything about it",
+        "It isn't there"
+       ],
+       "answer": 1,
+       "why": "Clara moves the fix out of her reach and sets herself aside. She does not say the pack is fine, and she does not say the review habit is fixed. She says it is not her place, which is the level I can't do anything about it.",
+       "traps": {
+        "0": "It can't change would be about the review habit again. Here Clara talks about who may act, and that is herself.",
+        "2": "It isn't there would deny that the pack needs a second look. She admits it does and says the asking is not hers to do."
+       },
+       "example": "A village committee, Sunday.<br>Member: “I only take the minutes. I can't decide anything about the hall.”<br>Chair: “Then write down who can, and we'll ask them.”"
+      }
+     ]
+    },
+    {
+     "level": "Play",
+     "label": "Play, the week in motion",
+     "intro": "The Sunday boss, moved into the team room. Six turns with Clara, with Omar by the door. At each turn ask what she is making smaller, and what your line does with it.",
+     "items": [
+      {
+       "type": "scene",
+       "title": "Tuesday, 17:20, the team room",
+       "setting": "Halden. The client call is Wednesday at nine, the appendix totals are out by one line, Daniel is at a dinner with his phone off, and Omar waits by the door with his coat on.",
+       "meters": {
+        "you": 50,
+        "them": 50
+       },
+       "beats": [
+        {
+         "who": "Clara",
+         "text": "“It's a small slip. The client will never notice.”",
+         "cue": "scrolling, her face lit blue",
+         "lines": [
+          {
+           "text": "“It's a wrong total in a client pack, and they get the pack tomorrow. Which line is it?”",
+           "tag": "best",
+           "you": 4,
+           "them": 2,
+           "outcome": "She rubs her neck. “Line fourteen. Fine. Line fourteen.”",
+           "why": "You name the event and ask for the line, so the problem stays where it is. You refuse the shrink without calling her careless, which is the hard bit."
+          },
+          {
+           "text": "“Maybe not. Let's see what they say on the call.”",
+           "tag": "ok",
+           "you": -1,
+           "them": 1,
+           "outcome": "She nods, glad the slip can stay small.",
+           "why": "It may be true that the client will not notice, but let's see accepts that waiting is the plan. The problem is made small and left alone."
+          },
+          {
+           "text": "“Never notice? They have a finance team. You should have checked it twice.”",
+           "tag": "game",
+           "you": -5,
+           "them": -6,
+           "outcome": "The scene stops there. Clara says “So it's my fault,” and closes the laptop lid.",
+           "why": "You turn her shrink into a charge. Now she can say you are blaming her, and the total drops out of the talk."
+          }
+         ]
+        },
+        {
+         "who": "Clara",
+         "text": "“Daniel will only say he told me so. He always does, so there's no point showing him.”",
+         "cue": "a look at the empty manager's office",
+         "lines": [
+          {
+           "text": "“Daniel can be a lot. Do you want to talk about how he is?”",
+           "tag": "ok",
+           "you": -2,
+           "them": 3,
+           "outcome": "Clara brightens. “He called my last deck a draft, in front of everyone, and...”",
+           "why": "This sounds like listening, and it is kind. But it follows her off the total and into Daniel, so the side step becomes the whole talk."
+          },
+          {
+           "text": "“Daniel's reaction is a separate question. Right now I need that total checked before nine tomorrow.”",
+           "tag": "best",
+           "you": 4,
+           "them": 2,
+           "outcome": "She sighs. “Okay. Line fourteen. It's the discount column.”",
+           "why": "You name the side step for what it is, a different question, and bring her back with a deadline. The tangent gets a label instead of a seat."
+          },
+          {
+           "text": "“He shouts, so stop using him as an excuse for the pack.”",
+           "tag": "game",
+           "you": -5,
+           "them": -6,
+           "outcome": "The scene stops there. Clara snaps, “Great, thanks,” and turns her chair to the window.",
+           "why": "This pins the failure on Daniel and makes Clara defend him. The blame moves onto someone who is not in the room."
+          }
+         ]
+        },
+        {
+         "who": "Clara",
+         "text": "“Nobody has ever reviewed the appendix. It's how the team does it. It is what it is.”",
+         "cue": "looking at the carpet, voice flat",
+         "lines": [
+          {
+           "text": "“Years of no review. That's a hard thing to be new into, Clara.”",
+           "tag": "ok",
+           "you": -1,
+           "them": 4,
+           "outcome": "She nods and looks tired. “It is. Nobody tells you the unwritten parts.”",
+           "why": "The sympathy is real, and it still agrees the habit is fixed. The talk stays on how long it has lasted, not on what could move."
+          },
+          {
+           "text": "“Nobody has reviewed it so far, so what would help? Name one check you'd try tonight, even a small one.”",
+           "tag": "best",
+           "you": 4,
+           "them": 2,
+           "outcome": "She thinks for a second. “Add the column up by hand. And a second pair of eyes on the table.”",
+           "why": "You take the missing review as information and ask for one change. The habit gets a test it can fail, and it can't change stops being the last word."
+          },
+          {
+           "text": "“Then it's hopeless, and you can stop trying. I'll tell Daniel that.”",
+           "tag": "game",
+           "you": -6,
+           "them": -5,
+           "outcome": "The scene stops there. Clara looks up sharply, then away. “Don't. It isn't hopeless.”",
+           "why": "You hand her the whole level for free and add a threat. She gets her victory, and Daniel is pulled into the shrink."
+          }
+         ]
+        },
+        {
+         "who": "Clara",
+         "text": "“I'm the newest one here. It's not my place to ask anyone to look at it.”",
+         "cue": "straightening the pens, not sitting back",
+         "lines": [
+          {
+           "text": "“You wrote the appendix, so you can ask for a check. Omar has twenty minutes, and he's standing right there.”",
+           "tag": "best",
+           "you": 4,
+           "them": 3,
+           "outcome": "She looks at the door. Omar lifts a hand. “Yes,” she says. “Fine. Twenty minutes.”",
+           "why": "You answer the I can't with the part she does control. You name what she can do and leave her newness out of it."
+          },
+          {
+           "text": "“Then you've already given up, and you're the one Daniel will ask at nine.”",
+           "tag": "game",
+           "you": -5,
+           "them": -6,
+           "outcome": "The scene stops there. Clara's face closes. “Thanks for that,” she says, and means the opposite.",
+           "why": "This is a charge with a deadline. It makes her defend the I can't, instead of looking at it."
+          },
+          {
+           "text": "“You don't need to ask anyone for anything. You've done more than your share.”",
+           "tag": "ok",
+           "you": -1,
+           "them": 4,
+           "outcome": "She says “Thank you,” and sits back, the total still wrong.",
+           "why": "A caring line that takes the I can't at face value. It keeps her workload in the talk and her ability out of it."
+          }
+         ]
+        },
+        {
+         "who": "Clara",
+         "text": "“Anyway, have you tried the new biscuits in the canteen? They're actually good.”",
+         "cue": "brightening, closing a tab",
+         "lines": [
+          {
+           "text": "“I haven't. Back to the totals, though. Which tab do you check first?”",
+           "tag": "best",
+           "you": 4,
+           "them": 1,
+           "outcome": "She laughs once. “The discount tab. Then the sum column. Fine.”",
+           "why": "You say you have not tried them, which stops the tangent, and then you return to the question. The side step gets a short answer, and the question stays open."
+          },
+          {
+           "text": "“I haven't, but I'll look tomorrow. Good to know.”",
+           "tag": "ok",
+           "you": -1,
+           "them": 3,
+           "outcome": "She grins, and the talk drifts. “The ginger ones. Best thing in that machine.”",
+           "why": "This is friendly. But the tangent has now taken the place of the question, and nobody comes back to the appendix."
+          },
+          {
+           "text": "“You always change the subject when work gets real. Don't you think?”",
+           "tag": "game",
+           "you": -5,
+           "them": -6,
+           "outcome": "The scene stops there. Clara says nothing, and the hoover hums two rooms away.",
+           "why": "This is a charge about her habit, and it makes the talk about the two of you. She can now defend the subject change, and the pack drops out of the scene."
+          }
+         ]
+        },
+        {
+         "who": "Clara",
+         "text": "“Look, let's leave it till the morning. I'll come in early and sort it. Go home, I'm fine.”",
+         "cue": "pulling the lamp closer, shoulders already up",
+         "lines": [
+          {
+           "text": "“Okay, the morning. Go home and rest, Clara. You've carried this team all week.”",
+           "tag": "ok",
+           "you": -2,
+           "them": 4,
+           "outcome": "She smiles, relieved. “Thanks. You're really kind to me.”",
+           "why": "This is the kind-looking line, and it keeps the trap running. It praises her and makes you both feel good, but it accepts the shut door and leaves the appendix for the morning with one tired person on it."
+          },
+          {
+           "text": "“Morning works, if you tell me tonight who checks it with you. Then I'll book the small room for eight.”",
+           "tag": "best",
+           "you": 4,
+           "them": 3,
+           "outcome": "She stops with her hand on the mouse. “Omar, at eight. And you book the room. Yes.”",
+           "why": "You accept the morning as a time and not as a shut door. You ask for one commitment now, so the leaving has to turn into a plan before you go."
+          },
+          {
+           "text": "“Fine, leave it. It's only the appendix, after all. The client won't notice.”",
+           "tag": "game",
+           "you": -6,
+           "them": -6,
+           "outcome": "The scene stops there. Clara shrugs and pulls the lamp closer, and Omar puts his coat back on the hook.",
+           "why": "You say the shrink back in her own words and close the door with a shrug. The whole evening's trap is in those last few words."
+          }
+         ]
+        }
+       ],
+       "payoff": "Tuesday, 18:05. The lamp is still on, the total is still wrong, and the cleaner has reached the next room. Nine tomorrow is fifteen hours away.",
+       "fallout": {
+        "them": "Clara stays until the lights go off at eight, and does not look up when you leave."
+       }
+      },
+      {
+       "type": "pick",
+       "who": "Nadia",
+       "text": "“Let's stop there. What happened in that room? Say it in plain words.”",
+       "cue": "Sunday, the back table, after you have told her all of it",
+       "options": [
+        "She made the total smaller turn by turn, then shut it until the morning.",
+        "She was shy about being new, so the talk went quiet and stopped early.",
+        "She asked the team for help with the appendix, and nobody offered any."
+       ],
+       "answer": 0,
+       "why": "She moved from it doesn't matter to it can't change, then to I can't do anything, then changed the subject and shut the door until the morning. Each step made the wrong total smaller until nobody had to act.",
+       "traps": {
+        "1": "It would put the whole thing down to shyness and let the talk off the hook. Her newness is real, but the turns show her shrinking the total step by step.",
+        "2": "It would take her words at face value as a request. She never named a task anyone could take, so it was a shrink dressed as a request."
+       },
+       "example": "A parents' group chat, Thursday.<br>Parent: “The school gate is a mess every morning, nothing to be done, it's always been like this.”<br>Another: “Yeah. Anyway, who's bringing cakes on Friday?”"
+      }
+     ]
+    },
+    {
+     "level": "Analyse",
+     "label": "Analyse, explain it",
+     "intro": "Two questions to explain back. Use the book words: the level.",
+     "items": [
+      {
+       "type": "pick",
+       "who": "Nadia",
+       "text": "“At the third turn, Clara said it is how the team does it. Which level of the Discount Matrix is that?”",
+       "cue": "pen tapping once on the notebook",
+       "options": [
+        "Significance: she calls the wrong total small, so nobody checks it.",
+        "Change possibilities: she calls the habit fixed, so nothing gets tried.",
+        "Existence: she says the problem is not there, so nothing needs doing."
+       ],
+       "answer": 1,
+       "why": "It is how the team does it lands on change possibilities, the third of the four levels: the problem stays, and the change is called impossible. The Discount Matrix is the diagram that lays these levels out.",
+       "traps": {
+        "0": "Significance would be a line about how small the problem is. At the third turn Clara calls the habit fixed, so the level is the other one.",
+        "2": "Existence would deny the problem. Clara had already agreed the total was wrong, so the problem is there, and what she shuts is the chance of changing it."
+       },
+       "example": "A water pipe in the building, Wednesday.<br>Neighbour: “The leak's been there since spring, and the office never fixes anything. That's just how it is.”<br>You: “Then let's write to them with photos this week.”"
+      },
+      {
+       "type": "pick",
+       "who": "Nadia",
+       "text": "“Okay, the morning. Go home and rest, Clara. That sounded kind, so why was it a trap?”",
+       "cue": "looking at you over the notebook",
+       "options": [
+        "It was rude, because it sent her home before she had finished the work she wanted to do.",
+        "It made a plan for the morning, so it cannot be part of a trap, whatever the tone of it.",
+        "It accepted the shut door and wrapped it in praise, so the total sat there wrong."
+       ],
+       "answer": 2,
+       "why": "Kindness is not the test here. The line agreed to the shut door, so the problem stayed exactly as small as Clara had made it. Clara felt looked after, which lifted the meters, but nothing moved on the appendix. The books call the shrinking discounting, and a kind line that accepts it leaves the discount in place.",
+       "traps": {
+        "0": "Sending someone home can be a cut, but Clara had already closed the talk herself. The line agreed with her instead of stopping her, so rude is the wrong reason.",
+        "1": "A plan can still be a trap when it puts the work with nobody. This plan had one tired person and no second pair of eyes, so it was a shut door with a morning on it."
+       },
+       "example": "A flat-share, Saturday.<br>Flatmate: “The boiler's been broken for ages. Nothing to be done, it'll be fine.”<br>You: “Okay, we'll talk about it when you're rested.” The boiler is still broken the next Saturday."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "setting": "Family",
+   "blurb": "Gran says she only stumbled on the back step, Dad has driven down, and Leo saw the fall.",
+   "opener": {
+    "setting": "Sunday, 1:10pm. Hawthorn Court, Gran's kitchen downstairs. Soup on the hob, Leo under the table with the tablet, and Dad has just come in with his keys still in his hand.",
+    "lines": [
+     {
+      "who": "Dad",
+      "text": "“Leo says you fell on the back step on Thursday.”",
+      "cue": "standing at the door, keys in his fist"
+     },
+     {
+      "who": "Gran",
+      "text": "“It was a stumble, that's all. Eat your soup before it gets a skin.”",
+      "cue": "pulling her sleeve over her wrist"
+     }
+    ],
+    "ask": "Can you keep Gran's fall on the table through six turns, and name each shrink she makes before you answer it?"
+   },
+   "rounds": [
+    {
+     "level": "Spot",
+     "label": "Spot, round 1",
+     "intro": "Four lines, four levels. Each line shrinks the problem at one of four plain levels: it isn't there, it doesn't matter, it can't change, or I can't do anything about it. Tap the level the line lands on.",
+     "items": [
+      {
+       "type": "pick",
+       "who": "Gran",
+       "text": "<i>Gran pulls her sleeve down over the mark on her forearm. “It's only a bruise. I've had worse off the oven door.”</i>",
+       "cue": "Sunday, 1:12pm, Gran's kitchen, the soup on",
+       "options": [
+        "It isn't there",
+        "It doesn't matter",
+        "It can't change"
+       ],
+       "answer": 1,
+       "why": "Gran admits the bruise and says the oven door has done worse. What she shrinks is how much it counts. That is the level it doesn't matter: the problem is there, and it is made to look small.",
+       "traps": {
+        "0": "It isn't there would mean Gran denied the bruise. She names it, so she is making it small, not wiping it out.",
+        "2": "It can't change would be a line about something that cannot move. Gran says nothing about change, only that the bruise is minor."
+       },
+       "example": "A school sports day, Saturday.<br>Mum: “It was only the relay. He dropped the baton once, and nobody got hurt.”<br>Friend: “Right, so it's nothing, then.”"
+      },
+      {
+       "type": "pick",
+       "who": "Mum",
+       "text": "<i>Mum's voice comes small over the speaker. “Gran's fine, she told me herself. There's nothing wrong with her at all.”</i>",
+       "cue": "Saturday, 7pm, on speaker, 600 km away",
+       "options": [
+        "It isn't there",
+        "I can't do anything about it",
+        "It doesn't matter"
+       ],
+       "answer": 0,
+       "why": "Mum says nothing is wrong, on the strength of Gran's own word, while the fall happened two days before. That is it isn't there: the problem is denied, and nobody has looked.",
+       "traps": {
+        "1": "I can't do anything about it would be Mum saying she is too far away to help. She says there is nothing to help with.",
+        "2": "It doesn't matter would admit something happened and call it small. Mum admits nothing."
+       },
+       "example": "A bus ride, Tuesday, 7pm.<br>Commuter: “I'm not even hungry, I had a big lunch.” Then she eats the whole packet of biscuits before the bus reaches the station."
+      },
+      {
+       "type": "pick",
+       "who": "Dad",
+       "text": "<i>Dad jingles the car keys. “That step has been loose since before you were born. It's how the building is.”</i>",
+       "cue": "Sunday, 1:25pm, in the kitchen doorway",
+       "options": [
+        "It doesn't matter",
+        "I can't do anything about it",
+        "It can't change"
+       ],
+       "answer": 2,
+       "why": "Dad does not call the step harmless, and he does not say he is helpless. He says the step has always been like this and always will be. That is the level it can't change, where the problem is real and the change is called impossible.",
+       "traps": {
+        "0": "It doesn't matter would call the step trivial. Dad is not calling it trivial, he says it will not move.",
+        "1": "I can't do anything about it would be about Dad's own hands. He speaks about the building, the thing outside him."
+       },
+       "example": "A pothole on the road to the station, Monday.<br>Rider: “It's been like that for years. The council won't touch it. That's just how it is.”"
+      },
+      {
+       "type": "pick",
+       "who": "Gran",
+       "text": "<i>Gran stirs the soup without looking up. “I'm only the old woman downstairs. Who would listen to me?”</i>",
+       "cue": "Sunday, 1:40pm, her back to the room",
+       "options": [
+        "It isn't there",
+        "It can't change",
+        "I can't do anything about it"
+       ],
+       "answer": 2,
+       "why": "Gran does not say the step is fine, and she does not say the building is fixed. She says she is only the old woman downstairs. That is I can't do anything about it: the problem is real and she sets herself aside.",
+       "traps": {
+        "0": "It isn't there would deny the step. Gran admits it is a problem and says she is the wrong person to raise it.",
+        "1": "It can't change would put the stuck part in the building. Gran puts it in herself."
+       },
+       "example": "A village committee, Sunday.<br>Member: “I only take the minutes. I can't decide anything about the hall.”<br>Chair: “Then write down who can, and we'll ask them.”"
+      }
+     ]
+    },
+    {
+     "level": "Play",
+     "label": "Play, the week in motion",
+     "intro": "The Sunday boss, moved into Gran's kitchen. Six turns with Gran, with Dad in the doorway and Leo under the table. At each turn ask what she is making smaller, and what your line does with it.",
+     "items": [
+      {
+       "type": "scene",
+       "title": "Sunday, 13:10, Gran's kitchen",
+       "setting": "Hawthorn Court, the flat downstairs. Soup on the hob, Leo under the table with the tablet, and Dad due back on the road at four. Gran says she will manage alone all week.",
+       "meters": {
+        "you": 50,
+        "them": 50
+       },
+       "beats": [
+        {
+         "who": "Gran",
+         "text": "“It was a little stumble. Nobody's hurt. Eat your soup before it gets a skin.”",
+         "cue": "pulling the sleeve over her wrist",
+         "lines": [
+          {
+           "text": "“You stumbled on Thursday and Leo saw you land. Which hand did you put out, Gran?”",
+           "tag": "best",
+           "you": 4,
+           "them": 2,
+           "outcome": "She turns the left hand over slowly. “The left. It's tender. That's all it is.”",
+           "why": "You name the event and ask for the part, so the problem stays where it is. You refuse the shrink without calling her a fibber, which is the hard bit."
+          },
+          {
+           "text": "“Okay, a stumble. Let's see how the arm is tomorrow.”",
+           "tag": "ok",
+           "you": -1,
+           "them": 1,
+           "outcome": "She nods, glad the stumble can stay small.",
+           "why": "It is true that she stumbled, but let's see accepts that waiting is the plan. The fall gets made small and left alone."
+          },
+          {
+           "text": "“Nobody's hurt? Leo says you cried out. You should have called someone.”",
+           "tag": "game",
+           "you": -5,
+           "them": -6,
+           "outcome": "The scene stops there. Gran says “So I'm a nuisance now,” and puts the ladle down.",
+           "why": "You turn her shrink into a charge. Now she can say you are scolding her, and the fall drops out of the talk."
+          }
+         ]
+        },
+        {
+         "who": "Gran",
+         "text": "“Your father will fuss for an hour and then drive home. He always does, so there's no point.”",
+         "cue": "a look at Dad in the doorway",
+         "lines": [
+          {
+           "text": "“Dad fussing is a separate talk. Right now I need to see that wrist before he leaves.”",
+           "tag": "best",
+           "you": 4,
+           "them": 2,
+           "outcome": "She sighs. “Oh, all right. It's the left one. Hold it gently.”",
+           "why": "You name the side step for what it is, a different question, and bring her back with a deadline. The tangent gets a label instead of a seat."
+          },
+          {
+           "text": "“Dad can be a lot. Do you want to talk about how he is?”",
+           "tag": "ok",
+           "you": -2,
+           "them": 3,
+           "outcome": "Gran brightens. “He never sits down in this kitchen. Forty minutes, and he's checking the car.”",
+           "why": "This sounds like listening, and it is kind. But it follows her off the fall and into Dad, so the side step becomes the whole talk."
+          },
+          {
+           "text": "“Dad fusses because you hide things, so stop blaming him.”",
+           "tag": "game",
+           "you": -5,
+           "them": -6,
+           "outcome": "The scene stops there. Dad says “Thanks very much,” and walks out to the car.",
+           "why": "This pins the failure on Dad and makes Gran defend him. The blame moves onto someone who is not at the table."
+          }
+         ]
+        },
+        {
+         "who": "Gran",
+         "text": "“That step has been loose since your grandfather's day. The building office never comes. It is what it is.”",
+         "cue": "stirring, not turning round",
+         "lines": [
+          {
+           "text": "“Then it's hopeless, and you can stop asking. I'll tell Mrs Kale you said so.”",
+           "tag": "game",
+           "you": -6,
+           "them": -5,
+           "outcome": "The scene stops there. Gran turns sharply. “Don't. It isn't hopeless.”",
+           "why": "You hand her the whole level for free and add a threat. She gets her victory, and Mrs Kale is pulled into the shrink."
+          },
+          {
+           "text": "“Forty years of that step. It must wear you down, Gran.”",
+           "tag": "ok",
+           "you": -1,
+           "them": 4,
+           "outcome": "She nods and looks tired. “It does. Nobody sees how long.”",
+           "why": "The sympathy is real, and it still agrees the step is fixed. The talk stays on how long it has lasted, not on what could move."
+          },
+          {
+           "text": "“They haven't come so far. What might make them come? Name one thing to try, even a small one.”",
+           "tag": "best",
+           "you": 4,
+           "them": 2,
+           "outcome": "She thinks. “Mrs Kale has photos from the winter. A letter with photos, maybe.”",
+           "why": "You take the office's silence as information and ask for one change. The step gets a test it can fail, and it can't change stops being the last word."
+          }
+         ]
+        },
+        {
+         "who": "Gran",
+         "text": "“I'm only the old woman downstairs. Nobody listens to me, so what could I do?”",
+         "cue": "one hand flat on the counter",
+         "lines": [
+          {
+           "text": "“You shouldn't have to chase anyone at your age. Sit down, I'll do all of it.”",
+           "tag": "ok",
+           "you": -1,
+           "them": 4,
+           "outcome": "She says “Bless you,” and sits, rubbing her wrist. The letter stays unwritten.",
+           "why": "A caring line that takes the I can't at face value. It keeps her age in the talk and her ability out of it."
+          },
+          {
+           "text": "“Then you've given up, and you're the one who'll be on that step in the dark.”",
+           "tag": "game",
+           "you": -5,
+           "them": -6,
+           "outcome": "The scene stops there. Gran's face closes. “Thank you for that,” she says, and means the opposite.",
+           "why": "This is a charge with a deadline. It makes her defend the I can't, instead of looking at it."
+          },
+          {
+           "text": "“You can sign a letter, and you know the whole building. Mrs Kale will sign under you. Start with the photos.”",
+           "tag": "best",
+           "you": 4,
+           "them": 3,
+           "outcome": "She straightens a little. “Yes. Fine. They're in the biscuit tin. Fetch it.”",
+           "why": "You answer the I can't with the part she does control. You name what she can do and leave her age out of it."
+          }
+         ]
+        },
+        {
+         "who": "Gran",
+         "text": "“Anyway, have you seen Leo's new tablet game? And this soup has come out lovely.”",
+         "cue": "brightening, the way people do when a subject is closed",
+         "lines": [
+          {
+           "text": "“I haven't. And the soup is lovely, you've outdone yourself.”",
+           "tag": "ok",
+           "you": -1,
+           "them": 3,
+           "outcome": "She smiles and the talk drifts. “Leeks. A little pepper, that's all.”",
+           "why": "This is friendly and agrees the soup is good. But the tangent has now taken the place of the question, and nobody comes back to the step."
+          },
+          {
+           "text": "“I haven't seen it. Back to the step, though. Which day is the office open?”",
+           "tag": "best",
+           "you": 4,
+           "them": 1,
+           "outcome": "She laughs once. “Tuesdays, till noon. Fine. Tuesdays.”",
+           "why": "You say you have not seen the game, which stops the tangent, and then you return to the question. The side step gets a short answer, and the question stays open."
+          },
+          {
+           "text": "“You always change the subject when it gets real. Don't you think?”",
+           "tag": "game",
+           "you": -5,
+           "them": -6,
+           "outcome": "The scene stops there. Gran says nothing, and Leo looks up from under the table.",
+           "why": "This is a charge about her habit, and it makes the talk about the two of you. She can now defend the subject change, and the step drops out of the scene."
+          }
+         ]
+        },
+        {
+         "who": "Gran",
+         "text": "“Let's leave it till Tuesday, shall we? Eat. I'll see how the arm is.”",
+         "cue": "ladle in hand, back already turned",
+         "lines": [
+          {
+           "text": "“Tuesday is fine, if you tell me now what you'll do first. Then I'll photograph the step before I go.”",
+           "tag": "best",
+           "you": 4,
+           "them": 3,
+           "outcome": "She stops with the ladle in the air. “The letter first. You take the photographs. Yes.”",
+           "why": "You accept Tuesday as a day and not as a shut door. You ask for one commitment now, so the leaving has to turn into a plan before Dad goes."
+          },
+          {
+           "text": "“Fine, leave it. It's only a step, after all. Nobody gets hurt.”",
+           "tag": "game",
+           "you": -6,
+           "them": -6,
+           "outcome": "The scene stops there. Gran shrugs and sets out the bowls, and Dad's keys go back in his pocket.",
+           "why": "You say the shrink back in her own words and close the door with a shrug. The whole lunch's trap is in those last few words."
+          },
+          {
+           "text": "“Tuesday, then. Rest that arm, Gran, you've done enough for all of us.”",
+           "tag": "ok",
+           "you": -2,
+           "them": 4,
+           "outcome": "She smiles, relieved. “Thank you, love. You're a good one.”",
+           "why": "This is the kind-looking line, and it keeps the trap running. It cares for her and makes you both feel warm, but it accepts the shut door and leaves the step and the wrist for Tuesday with nobody on them."
+          }
+         ]
+        }
+       ],
+       "payoff": "Sunday, 13:45. The soup goes cold, the step stays loose, and Leo looks up from the tablet for the first time. Dad's keys are still in his hand.",
+       "fallout": {
+        "them": "Gran draws her sleeve down over the bruise and says nothing more until the dishes."
+       }
+      },
+      {
+       "type": "pick",
+       "who": "Nadia",
+       "text": "“Let's stop there. What happened in that kitchen? Say it in plain words.”",
+       "cue": "Sunday evening, the back table, after you have told her all of it",
+       "options": [
+        "She kept making the fall smaller, then shut it until Tuesday.",
+        "She was proud and stubborn, so the talk got short and ended before lunch.",
+        "She asked the family for help with the step, and nobody gave her any."
+       ],
+       "answer": 0,
+       "why": "She moved from it doesn't matter to it can't change, then to I can't do anything, then changed the subject and shut the door until Tuesday. Each step made the fall smaller until nobody had to act.",
+       "traps": {
+        "1": "It would blame her pride and let the talk off the hook. She may be proud, but the turns show her shrinking the fall step by step.",
+        "2": "It would take her words at face value as a request. She never named a task anyone could take, so it was a shrink dressed as a request."
+       },
+       "example": "A family WhatsApp group, Thursday.<br>Cousin: “The rent is too high, nothing to be done, it's always been like this.”<br>Brother: “Yeah, whatever. Let's talk about the cricket instead.”"
+      }
+     ]
+    },
+    {
+     "level": "Analyse",
+     "label": "Analyse, explain it",
+     "intro": "Two questions to explain back. Use the book words: the level.",
+     "items": [
+      {
+       "type": "pick",
+       "who": "Nadia",
+       "text": "“At the third turn, Gran said it is what it is. Which level of the Discount Matrix is that?”",
+       "cue": "pen tapping once on the notebook",
+       "options": [
+        "Existence: she says the fall did not happen, so nothing needs doing.",
+        "Change possibilities: she calls the step fixed, so nothing gets tried.",
+        "Significance: she calls the stumble small, so nobody looks at it."
+       ],
+       "answer": 1,
+       "why": "It is what it is lands on change possibilities, the third of the four levels: the problem stays, and the change is called impossible. The Discount Matrix is the diagram that lays these levels out.",
+       "traps": {
+        "0": "Existence would deny the fall. Gran had already admitted she stumbled, so the problem is there, and what she shuts is the chance of changing it.",
+        "2": "Significance would call the problem small. At the third turn Gran calls the step fixed, so the level is the other one."
+       },
+       "example": "A water pipe in the building, Wednesday.<br>Neighbour: “The leak's been there since spring, and the office never fixes anything. That's just how it is.”<br>You: “Then let's write to them with photos this week.”"
+      },
+      {
+       "type": "pick",
+       "who": "Nadia",
+       "text": "“Tuesday, then. Rest that arm, Gran. That sounded kind, so why was it a trap?”",
+       "cue": "looking at you over the notebook",
+       "options": [
+        "It was rude, because it stopped Gran before she had finished what she meant to say.",
+        "It made a plan for Tuesday, so it cannot be part of a trap, however warm it was.",
+        "It accepted the shut door and wrapped it in care, so the step stayed loose."
+       ],
+       "answer": 2,
+       "why": "Kindness is not the test here. The line agreed to the shut door, so the problem stayed exactly as small as Gran had made it. Gran felt looked after, which lifted the meters, but nothing moved on the step or the wrist. The books call the shrinking discounting, and a kind line that accepts it leaves the discount in place.",
+       "traps": {
+        "0": "Stopping someone can be a cut, but Gran had already closed the talk herself. The line agreed with her instead of stopping her, so rude is the wrong reason.",
+        "1": "A plan can still be a trap when nobody owns it. This plan had no task on it, so it was a shut door with a day written on it."
+       },
+       "example": "A team chat, Friday.<br>Colleague: “The build's been flaky for weeks. It'll sort itself out.”<br>You: “Fair enough. Take the weekend.” The build is still flaky on Monday."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

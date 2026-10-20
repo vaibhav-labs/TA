@@ -1,0 +1,537 @@
+{
+ "baseBlurb": "Gran, a broken lift and Sam's late rent, all made to sound smaller than they are.",
+ "stories": [
+  {
+   "setting": "Home & Flatmates",
+   "blurb": "A drip in the bathroom ceiling, a noon repair deadline, and flatmates who would rather not ask.",
+   "opener": {
+    "setting": "Thursday, 7:10pm. Hawthorn Court, apartment 3B, the bathroom. A mixing bowl sits under the ceiling.",
+    "lines": [
+     {
+      "who": "Sam",
+      "text": "“It's condensation. It's from my showers. Look, it's even stopped dripping.”",
+      "cue": "wringing a mop over the bath; a drop lands in the bowl as he says it"
+     },
+     {
+      "who": "Maya",
+      "text": "“The agent's list closes at noon tomorrow. I'm on shift till seven, so.”",
+      "cue": "coat still on, sleeve pulled down over her hand"
+     }
+    ],
+    "ask": "Each line makes part of a problem look smaller. Which part is it: whether it is there, whether it matters, whether it can change, or whether you can do anything about it?"
+   },
+   "rounds": [
+    {
+     "level": "Spot",
+     "label": "Spot, round 1",
+     "intro": "Each line makes one part of a problem smaller. Three parts are offered for each line. Pick the one the line is shrinking.",
+     "items": [
+      {
+       "type": "pick",
+       "who": "Sam",
+       "text": "“There's no leak. That's condensation off my showers. It always looks like that.”",
+       "cue": "tipping the bowl into the sink, a fresh drop already ticking into it",
+       "options": [
+        "The problem doesn't matter much",
+        "The problem isn't there at all",
+        "The problem can't be changed"
+       ],
+       "answer": 1,
+       "why": "He says there is no leak at all. The bowl on the floor and the tick of the drop say there is one. That is the first level of shrinking: the problem is made so small it is not there, so nobody has to ring anyone.",
+       "traps": {
+        "0": "'It doesn't matter much' would let him admit the drip and shrug at it. He has gone further and said there is no drip. The talk would turn to how small a drip is, and whether it exists would never come up.",
+        "2": "'It can't be changed' would treat the drip as a fixed fact of the flat. Nobody would ask whether it is a leak, and the bowl would stay on the bathroom floor."
+       },
+       "example": "A kitchen, Sunday.<br>Dad: “That's not smoke, that's steam off the toast.”<br>Mum, pointing up: “The alarm is going off.”"
+      },
+      {
+       "type": "pick",
+       "who": "Maya",
+       "text": "“It's a brown patch about the size of a saucer. Nobody gets worked up over a saucer.”",
+       "cue": "ticking boxes in her notebook, not looking up",
+       "options": [
+        "The problem doesn't matter much",
+        "The problem isn't there at all",
+        "I can't do anything about it"
+       ],
+       "answer": 0,
+       "why": "She can see the patch and she says so. She makes it small by calling it a saucer's worth, which is the second level: it does not matter much. If it is small, nobody has to report it.",
+       "traps": {
+        "1": "'It isn't there at all' would deny the patch. She has just given its size and colour, so she grants it exists. The talk would go to whether the patch is real, and her point about size would slip by.",
+        "2": "'I can't do anything about it' would put the patch on her shoulders. She has not said that. The talk would move to what she is unable to do, and whether a saucer of damp deserves a report would go unasked."
+       },
+       "example": "A car park, Saturday.<br>Driver: “It's a scratch the size of a thumb. Nobody looks at a thumb.”<br>Passenger: “If it rusts, the whole door goes.”"
+      },
+      {
+       "type": "pick",
+       "who": "Sam",
+       "text": "“Landlords never fix anything. That's renting. You get a bowl and a bit of luck.”",
+       "cue": "nudging the bowl straight with his foot",
+       "options": [
+        "The problem isn't there at all",
+        "The problem doesn't matter much",
+        "The problem can't be changed"
+       ],
+       "answer": 2,
+       "why": "The drip is real and he says so. He makes it small by saying landlords never fix things, so nothing can change. That is the third level. If nothing ever changes, there is no reason to send the email.",
+       "traps": {
+        "0": "'It isn't there at all' would say the damp is imaginary. He has just mentioned the bowl, so he grants it. The talk would circle round whether it exists, and 'never' would pass unchallenged.",
+        "1": "'It doesn't matter much' would sound like a shrug over a ceiling. He has not said it is small. He says nothing gets fixed, and the talk would miss the word 'never'."
+       },
+       "example": "A train platform, Monday.<br>Commuter: “The 7:40 is always late. Nothing ever changes on this line.”<br>Guard: “Fill in the form on the board. Someone did last week and they added a carriage.”"
+      },
+      {
+       "type": "pick",
+       "who": "Maya",
+       "text": "“The tenancy's in Sam's name. An email from me would go straight in a folder. There's nothing I can do.”",
+       "cue": "nodding at the bathroom door as she says it",
+       "options": [
+        "The problem isn't there at all",
+        "The problem can't be changed",
+        "I can't do anything about it"
+       ],
+       "answer": 2,
+       "why": "The damp is real and an agent could repair it. She makes her own part small: from where she stands she can do nothing. That is the fourth level, the most personal one, and it keeps her out of the email.",
+       "traps": {
+        "0": "'It isn't there at all' would deny the patch. She has not done that. The talk would turn to whether there is damp, and her own part would go unquestioned.",
+        "1": "'It can't be changed' would blame the building. She has said something about her place in the tenancy. The talk would go to whether a ceiling can be mended, and she would not be asked to write."
+       },
+       "example": "A gym, Friday.<br>Member: “The showers are freezing, but the booking is in my brother's name, so I couldn't complain.”<br>Receptionist: “Fill in the form. Anyone who uses the pool can.”"
+      }
+     ]
+    },
+    {
+     "level": "Play",
+     "label": "Play, the week in motion",
+     "intro": "Harder now. All four parts of the problem are on the table, and each line can seem to fit more than one. Pick the part the line is working hardest to shrink.",
+     "items": [
+      {
+       "type": "pick",
+       "who": "Sam",
+       "text": "“It's a bowl and a mop. Three minutes a day, I've timed it. Hardly worth ringing the agent over.”",
+       "cue": "holding his phone, thumb not moving",
+       "options": [
+        "I can't do anything about it",
+        "The problem isn't there at all",
+        "The problem can't be changed",
+        "The problem doesn't matter much"
+       ],
+       "answer": 3,
+       "why": "'Hardly worth ringing' makes the damp small. The three minutes give it the look of something managed, and the phone in his hand shows he knows the call exists. It is the second level: it does not matter much, so no call is needed.",
+       "traps": {
+        "0": "'I can't do anything about it' would fit the phone he does not use. He says the opposite: he can cope, and the call is the small thing. The talk would turn to what he cannot do, and 'hardly worth' would go through.",
+        "1": "'It isn't there at all' would deny the damp. He has just timed the mopping, so he grants it. The talk would circle whether the ceiling is wet, and 'hardly worth' would stand.",
+        "2": "'It can't be changed' would turn his three minutes into a life sentence. He has not said it will always drip. He says it is too small to bother with, and the talk would miss that."
+       },
+       "example": "A cafe, Wednesday.<br>Waiter: “The tap drips, but it's one cup a day. Hardly worth calling a plumber.”<br>Owner: “One cup a day is a bucket a month, and the bill is on my desk.”"
+      },
+      {
+       "type": "pick",
+       "who": "Maya",
+       "text": "“I've put 'bathroom, ongoing' on the sheet. These old blocks drag on for years. Nothing speeds a repair along.”",
+       "cue": "pressing the pen so hard into the fridge sheet that it dents the paper",
+       "options": [
+        "The problem can't be changed",
+        "The problem doesn't matter much",
+        "The problem isn't there at all",
+        "I can't do anything about it"
+       ],
+       "answer": 0,
+       "why": "'Nothing speeds a repair along' says the damp is stuck. That is the third level: it cannot change. Writing 'ongoing' makes it look tracked, and a tracked problem seems looked after, so nobody sends the email.",
+       "traps": {
+        "1": "'It doesn't matter much' would fit her calm tone. She has not said it is small. She says repairs never speed up, and the talk would drift to whether damp is worth worrying about.",
+        "2": "'It isn't there at all' would deny it, yet she has written it on the sheet. The talk would miss that she grants the problem and then closes the door on a fix.",
+        "3": "'I can't do anything about it' would make the delay her own burden. She puts the delay on old blocks and slow repairs, so the talk would turn to her power, and the idea that repairs cannot be hurried would stay untested."
+       },
+       "example": "A garage, Thursday.<br>Customer: “They put 'parts on order' on the board. Parts always take weeks. Nothing speeds it up.”<br>Mechanic: “I can ring the supplier now and ask for a date.”"
+      }
+     ]
+    },
+    {
+     "level": "Analyse",
+     "label": "Analyse, explain it",
+     "items": [
+      {
+       "type": "pick",
+       "who": "Nadia",
+       "text": "Sam, forty minutes before the agent's noon deadline, the draft email open on his laptop: “I'm useless with agents. They talk over me and I fold. Best if I don't send anything.” Which level of discounting is that, and what would a real step look like?",
+       "cue": "turning her cup, eyes on the laptop screen",
+       "options": [
+        "Existence. He says the damp is not worth an email, so it is not really there. A real step would be to photograph the patch with today's date on the screen and attach it to the report.",
+        "Significance. He says one email will change nothing important. A real step would be to put a weekly cost on the damp and ask the agent to weigh it against the price of a visit.",
+        "Personal abilities. He says he has no pull with agents. A real step would be three lines and a photo sent before noon, asking for a repair date, with Maya reading it first.",
+        "Change possibilities. He says agents talk over tenants and always will. A real step would be to ask the agent for the name of whoever books repairs, and for a day for the visit."
+       ],
+       "answer": 2,
+       "why": "Plain words first: he is making his own part small. The books call this discounting, and this is the personal abilities level, the one that says nobody could expect anything of him. A real step is short and dated: three lines and a photo before noon, a repair date asked for, and Maya's eyes on it first.",
+       "traps": {
+        "0": "Existence would say the damp is not there. Sam has just said what he would send if he could, so he grants the damp. A photo helps, but it leaves untouched the part he has made small: himself.",
+        "1": "Significance would say the email does not matter. Sam has said it matters enough to dread. The talk would turn to costs and visits, and he would still be sitting with an unsent draft.",
+        "3": "Change possibilities would say agents never act. Sam says something about himself, that he folds. A booking name is useful, but the step would skip the fear that keeps the draft unsent."
+       },
+       "example": "A parents' evening, Tuesday.<br>Dad: “I'm no good with teachers. They talk over me, so I'd better not ask about the grade.”<br>Mum: “Write your question on a card and read it out. I'll sit next to you.”"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "setting": "Relationships",
+   "blurb": "Omar's text to Clara has sat unanswered for four days, and everyone nearby has a theory.",
+   "opener": {
+    "setting": "Thursday, 8:20pm. The Corner Table, the back table by the radiator. Two teas going cold.",
+    "lines": [
+     {
+      "who": "Gareth",
+      "text": "“Four days, Omar. She read it on Sunday. The tick's gone blue and nothing since.”",
+      "cue": "dragging a chip through the ketchup"
+     },
+     {
+      "who": "Omar",
+      "text": "“She's got the release on Friday. It's nothing. I'll see her at standup.”",
+      "cue": "turning his phone face down, then face up again"
+     }
+    ],
+    "ask": "Each line makes part of a problem look smaller. Which part is it: whether it is there, whether it matters, whether it can change, or whether you can do anything about it?"
+   },
+   "rounds": [
+    {
+     "level": "Spot",
+     "label": "Spot, round 1",
+     "intro": "Each line makes one part of a problem smaller. Three parts are offered for each line. Pick the one the line is shrinking.",
+     "items": [
+      {
+       "type": "pick",
+       "who": "Clara",
+       "text": "“There's nothing to answer. Nothing has happened. I don't know what anyone thinks they've seen.”",
+       "cue": "phone face down under her saucer, thumb flat on top",
+       "options": [
+        "The problem isn't there at all",
+        "The problem doesn't matter much",
+        "I can't do anything about it"
+       ],
+       "answer": 0,
+       "why": "She says nothing has happened. The phone under the saucer says a message is waiting. That is the first level: the problem is made so small it is not there, so nothing needs answering.",
+       "traps": {
+        "1": "'It doesn't matter much' would let her admit the text and shrug at it. She goes further and says there is nothing at all. The talk would turn to how small the text is, and the phone under the saucer would stay hidden.",
+        "2": "'I can't do anything about it' would sound like a woman stuck with a phone. She says no message and no event. The talk would turn to what she cannot do, and her claim that nothing exists would go by."
+       },
+       "example": "A staff kitchen, Monday.<br>Colleague: “There was no row with Theo. Nothing happened.”<br>Friend, looking at the two empty chairs: “He moved his desk to the other floor.”"
+      },
+      {
+       "type": "pick",
+       "who": "Gareth",
+       "text": "“Four days is nothing. People leave texts for a week. It doesn't mean a thing, mate.”",
+       "cue": "dragging a chip through the ketchup",
+       "options": [
+        "The problem isn't there at all",
+        "The problem doesn't matter much",
+        "The problem can't be changed"
+       ],
+       "answer": 1,
+       "why": "He agrees the text has sat there and then shrinks it: four days is nothing. That is the second level, it does not matter much. If it is nothing, Omar has no reason to do anything.",
+       "traps": {
+        "0": "'It isn't there at all' would deny the four days. Gareth counted them himself a minute ago, so he grants it. The talk would circle whether the text exists, and 'it doesn't mean a thing' would slide through.",
+        "2": "'It can't be changed' would make the silence permanent. He says the opposite: a week is normal, which is a different shrug. The talk would miss that he is calling it small."
+       },
+       "example": "A garden fence, Saturday.<br>Neighbour: “The parcel has sat in the hall for a fortnight. It's nothing.”<br>Other neighbour: “It's addressed to the woman who moved out in March.”"
+      },
+      {
+       "type": "pick",
+       "who": "Clara",
+       "text": "“It's been too long now. Once a text has sat four days, there's no answering it. Any reply looks wrong.”",
+       "cue": "tearing a sugar sachet into strips",
+       "options": [
+        "The problem doesn't matter much",
+        "The problem can't be changed",
+        "I can't do anything about it"
+       ],
+       "answer": 1,
+       "why": "The text is there and she knows how long it has sat. She makes it small by saying no reply can fix it. That is the third level: it cannot change. A problem nobody can mend is one nobody has to try to mend.",
+       "traps": {
+        "0": "'It doesn't matter much' would sound like a woman who has stopped caring. She is plainly caring, because she has torn a sachet to strips. She says no reply can work, and the talk would miss that.",
+        "2": "'I can't do anything about it' would make the silence her weakness. She puts the blame on time, not on herself. The talk would turn to her, and the idea that four days is a wall would stay in place."
+       },
+       "example": "A group chat, Wednesday.<br>Friend: “It's been a month since the birthday, so I can't say sorry now. It would be weird.”<br>Sister: “It's weirder to say nothing for another month.”"
+      },
+      {
+       "type": "pick",
+       "who": "Omar",
+       "text": "“I asked. That was my go. I can't make anyone answer, so it's out of my hands.”",
+       "cue": "flattening a paper napkin with the side of his hand",
+       "options": [
+        "I can't do anything about it",
+        "The problem can't be changed",
+        "The problem isn't there at all"
+       ],
+       "answer": 0,
+       "why": "What he did is fair: he asked, plainly. He makes his own part small by saying there is nothing more he can do. That is the fourth level, the most personal one. It keeps him from the next step, which is to ask her in person.",
+       "traps": {
+        "1": "'It can't be changed' would make the silence a law of nature. He talks about his own reach, not about time or the world. The talk would go to whether silences can end, and his own next move would go unasked.",
+        "2": "'It isn't there at all' would deny the text. He has just said he sent it, so he grants it. The talk would circle whether there is a problem and miss what he says he cannot do."
+       },
+       "example": "A phone call, Sunday.<br>Brother: “I left a voicemail. I can't make Dad ring back, so it's out of my hands.”<br>Sister: “Pop round on Saturday. He's in all afternoon.”"
+      }
+     ]
+    },
+    {
+     "level": "Play",
+     "label": "Play, the week in motion",
+     "intro": "Harder now. All four parts of the problem are on the table, and each line can seem to fit more than one. Pick the part the line is working hardest to shrink.",
+     "items": [
+      {
+       "type": "pick",
+       "who": "Clara",
+       "text": "“I was going to answer. I'm hopeless at texting, always have been. Whatever I wrote would come out wrong.”",
+       "cue": "laughing, pulling her cuff down over her hand",
+       "options": [
+        "The problem doesn't matter much",
+        "I can't do anything about it",
+        "The problem isn't there at all",
+        "The problem can't be changed"
+       ],
+       "answer": 1,
+       "why": "'Hopeless at texting' puts the trouble in her own hands: she says she cannot. That is the fourth level. The laugh and the cuff make it sound small and charming, which is how it stays unfixed. She could say it aloud now.",
+       "traps": {
+        "0": "'It doesn't matter much' would fit the laugh. She treats the texting as a quirk, but what she says is that she cannot do it. The talk would drift to whether quirks matter, and 'hopeless' would stand.",
+        "2": "'It isn't there at all' would deny the text, yet she says she meant to answer it. The talk would circle whether there is a gap and miss the claim about her own skill.",
+        "3": "'It can't be changed' would make her one fixed sort of person. She says 'whatever I wrote' about this one text, so the line is about her power in this moment. The talk would go to her character."
+       },
+       "example": "A school office, Tuesday.<br>Dad: “I'm hopeless at forms, always have been. Whatever I put would be wrong.”<br>Secretary: “Write it in pencil. I'll look it over with you.”"
+      },
+      {
+       "type": "pick",
+       "who": "Gareth",
+       "text": "“Ask her outright, over a text? You'd look daft. It's hardly worth a conversation.”",
+       "cue": "peeling the label off a bottle",
+       "options": [
+        "The problem isn't there at all",
+        "The problem can't be changed",
+        "The problem doesn't matter much",
+        "I can't do anything about it"
+       ],
+       "answer": 2,
+       "why": "'Hardly worth a conversation' makes the question small. The 'you'd look daft' tugs at Omar's pride, which makes the shrink easier to swallow. It is the second level: it does not matter much, so no one has to ask.",
+       "traps": {
+        "0": "'It isn't there at all' would deny any gap between them. Gareth has just counted the days, so he grants it. The talk would circle whether there is a silence, and 'hardly worth' would stand.",
+        "1": "'It can't be changed' would fit 'you'd look daft', as if asking will always fail. His words are about the size of the matter. The talk would turn to whether asking works, and the small-making would go by.",
+        "3": "'I can't do anything about it' would make Omar powerless. Gareth says Omar could ask but should not bother. The talk would move to what Omar cannot do, which is not what was said."
+       },
+       "example": "A work chat, Thursday.<br>Colleague: “Ask the manager about the rota in person? It's hardly worth a conversation.”<br>Friend: “It's her who decides who works Christmas.”"
+      }
+     ]
+    },
+    {
+     "level": "Analyse",
+     "label": "Analyse, explain it",
+     "items": [
+      {
+       "type": "pick",
+       "who": "Nadia",
+       "text": "Clara, at the counter after closing: “People on the same team can't go out together. It always turns awkward. There's no way to make that work.” Which level of discounting is that, and what would a real step look like?",
+       "cue": "wiping a clean counter, not looking up",
+       "options": [
+        "Existence. She says there is nothing going on between them. A real step would be to reread Omar's message and answer the one question it asks, with a yes or a no.",
+        "Significance. She says an awkward week is small beside a good job. A real step would be to write down the two sides plainly and look at which one weighs more for her.",
+        "Personal abilities. She says she cannot cope with the awkwardness. A real step would be to practise the reply with a friend and send it before the end of the weekend.",
+        "Change possibilities. She says no arrangement can work. A real step would be to ask Omar what he wants and agree what each does at the office if it goes badly."
+       ],
+       "answer": 3,
+       "why": "Plain words first: she is saying the situation cannot change. The books call this discounting, and this is the change possibilities level. Real teams have found ways to do this, and a real step starts with a plain question to Omar and one agreed rule for the office.",
+       "traps": {
+        "0": "Existence would say nothing is going on. Clara has just described what might go on, so she grants it. A yes or no helps, but it would skip the belief that no arrangement could hold.",
+        "1": "Significance would say the awkwardness does not matter. Clara thinks it matters a great deal, which is why she is wiping a clean counter. A list of sides would sit beside the claim that nothing can work.",
+        "2": "Personal abilities would say she cannot cope. She says no arrangement can work for anyone. Practising a reply is a fair idea, and it would leave 'always turns awkward' untouched."
+       },
+       "example": "A break room, Friday.<br>Manager: “Two people from sales can't share a lift to the client. It never works out.”<br>Colleague: “They did it for three years at my old firm. They took separate cars on bad days.”"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "setting": "Work",
+   "blurb": "A test that fails one run in five, a release at four tomorrow, and nobody looking.",
+   "opener": {
+    "setting": "Thursday, 3:40pm. Halden, the team room. The red-screened laptop is back on the end desk.",
+    "lines": [
+     {
+      "who": "Daniel",
+      "text": "“Release is tomorrow at four. The pipeline's green, so we're fine. Nobody touch anything.”",
+      "cue": "halfway into his coat"
+     },
+     {
+      "who": "Clara",
+      "text": "“It went red twice this morning. The third run came up green.”",
+      "cue": "both hands flat on the desk, voice low"
+     },
+     {
+      "who": "Omar",
+      "text": "“Which test?”",
+      "cue": "swivelling his chair round"
+     },
+     {
+      "who": "Daniel",
+      "text": "“Green is green, Omar.”",
+      "cue": "already at the door"
+     }
+    ],
+    "ask": "Each line makes part of a problem look smaller. Which part is it: whether it is there, whether it matters, whether it can change, or whether you can do anything about it?"
+   },
+   "rounds": [
+    {
+     "level": "Spot",
+     "label": "Spot, round 1",
+     "intro": "Each line makes one part of a problem smaller. Three parts are offered for each line. Pick the one the line is shrinking.",
+     "items": [
+      {
+       "type": "pick",
+       "who": "Clara",
+       "text": "“I'm eight months in. A word from me to Daniel about the pipeline would go nowhere. There's nothing I can do.”",
+       "cue": "pulling her chair closer to the desk, voice low",
+       "options": [
+        "The problem doesn't matter much",
+        "I can't do anything about it",
+        "The problem can't be changed"
+       ],
+       "answer": 1,
+       "why": "The test is a real problem and she has seen it fail. She makes her own part small: from her seat she can do nothing. That is the fourth level, the most personal one, and it keeps her out of Daniel's office.",
+       "traps": {
+        "0": "'It doesn't matter much' would turn a red run into trivia. She has not said it is small. She says her voice carries no weight, and the talk would miss that.",
+        "2": "'It can't be changed' would blame the pipeline. She talks about herself and Daniel. The talk would go to whether pipelines get fixed, and she would not be asked to speak up."
+       },
+       "example": "A shop floor, Wednesday.<br>New hire: “I'm only on probation. A word from me about the till would go nowhere.”<br>Colleague: “Put it on the sheet by the door. The manager reads it on Fridays.”"
+      },
+      {
+       "type": "pick",
+       "who": "Daniel",
+       "text": "“There's no flaky test. The pipeline's green. Show me red on the dashboard and I'll listen.”",
+       "cue": "not looking up from his phone",
+       "options": [
+        "The problem isn't there at all",
+        "The problem can't be changed",
+        "I can't do anything about it"
+       ],
+       "answer": 0,
+       "why": "He says there is no flaky test at all. Clara has just told him it went red twice, so the evidence is in the room. That is the first level: the problem is made so small it is not there. He closes the door on it before anyone opens it.",
+       "traps": {
+        "1": "'It can't be changed' would make the flakiness a given. He has not granted it exists. The talk would turn to whether flaky tests can be fixed, and his 'there is no flaky test' would go by.",
+        "2": "'I can't do anything about it' would put the test out of his reach. He says it does not exist, which is a different shrug. The talk would move to what he cannot do, and the evidence would stay unexamined."
+       },
+       "example": "A bakery, Monday.<br>Owner: “There's no mouse. I've never seen one. Show me a dropping and I'll listen.”<br>Cleaner, holding a bag: “Here.”"
+      },
+      {
+       "type": "pick",
+       "who": "Sam",
+       "text": "“One red in five. You hit rerun and it clears. A ticket for that would be daft, it's a rounding error.”",
+       "cue": "headphones on, one ear out",
+       "options": [
+        "The problem doesn't matter much",
+        "The problem isn't there at all",
+        "The problem can't be changed"
+       ],
+       "answer": 0,
+       "why": "He grants the failures and shrinks them: one in five is a rounding error. That is the second level, it does not matter much. If it is only rounding, a ticket looks silly and the test stays as it is.",
+       "traps": {
+        "1": "'It isn't there at all' would deny the failures. Sam gives the number himself, so he grants them. The talk would circle whether the test fails, and 'rounding error' would go by.",
+        "2": "'It can't be changed' would turn one in five into a permanent figure. He says it is too small for a ticket, not that it is stuck. The talk would miss the shrug at the size."
+       },
+       "example": "A kitchen, Tuesday.<br>Housemate: “The oven runs one in five a bit hot. A repair would be daft, it's a rounding error.”<br>Other housemate: “The cake you burnt on Sunday was that one in five.”"
+      },
+      {
+       "type": "pick",
+       "who": "Daniel",
+       "text": "“Every team has flaky tests. They've always been flaky, they always will be. You live with it.”",
+       "cue": "tapping the red-screened laptop with a pen",
+       "options": [
+        "The problem isn't there at all",
+        "The problem doesn't matter much",
+        "The problem can't be changed"
+       ],
+       "answer": 2,
+       "why": "He grants the test is flaky and says it will always be so. That is the third level: it cannot change. A problem that is always there asks nothing of anybody. It also gets handed to the next team.",
+       "traps": {
+        "0": "'It isn't there at all' would deny the flakiness. He has just called it flaky, so he grants it. The talk would circle whether there is a problem and miss 'always will be'.",
+        "1": "'It doesn't matter much' would fit 'you live with it'. The talk would turn to how little it costs, and the word 'always' would pass."
+       },
+       "example": "A workshop, Thursday.<br>Foreman: “The saw has always wandered. All saws wander. You live with it.”<br>Apprentice: “The new one in the catalogue says it holds a line.”"
+      }
+     ]
+    },
+    {
+     "level": "Play",
+     "label": "Play, the week in motion",
+     "intro": "Harder now. All four parts of the problem are on the table, and each line can seem to fit more than one. Pick the part the line is working hardest to shrink.",
+     "items": [
+      {
+       "type": "pick",
+       "who": "Clara",
+       "text": "“It passed on the fourth go, so I've pasted the log into the release notes. The suite's just built like that. It can't be steadier before four.”",
+       "cue": "nodding along, already typing 'green' into the form",
+       "options": [
+        "The problem can't be changed",
+        "The problem doesn't matter much",
+        "The problem isn't there at all",
+        "I can't do anything about it"
+       ],
+       "answer": 0,
+       "why": "'It can't be steadier before four' says the flakiness cannot change. The pasted log makes it look handled, which is the trick: a recorded problem seems dealt with. It is the third level, and the nod keeps the matter shut.",
+       "traps": {
+        "1": "'It doesn't matter much' would fit the calm typing. She has put the log in the notes, which shows it matters to her. The talk would drift to how small it is, and 'can't be steadier' would stand.",
+        "2": "'It isn't there at all' would deny it, yet she pasted the log. The talk would miss that she grants the problem and says it is fixed in place.",
+        "3": "'I can't do anything about it' would put the matter on her alone. She says the suite is built that way, which is about the suite. The talk would turn to her, and nobody would ask for the time to fix it."
+       },
+       "example": "A kitchen, Thursday.<br>Cook: “I've written 'sauce splits' on the board. The sauce just splits. It can't be steadier on a busy night.”<br>Chef: “Add the butter off the heat and it holds.”"
+      },
+      {
+       "type": "pick",
+       "who": "Sam",
+       "text": "“Red screen? Nobody's flagged a red screen to me. If it were real, someone would have said by now.”",
+       "cue": "one ear of the headphones off, eyes on his own monitor",
+       "options": [
+        "The problem doesn't matter much",
+        "The problem can't be changed",
+        "The problem isn't there at all",
+        "I can't do anything about it"
+       ],
+       "answer": 2,
+       "why": "'Nobody's flagged' says the red screen is not there. The laptop on the end desk shows it plainly. That is the first level: the problem is made so small it does not exist, and 'someone would have said' leaves Clara, who has said, unheard.",
+       "traps": {
+        "0": "'It doesn't matter much' would fit his easy tone. He does not say the red screen is small. He says it has not been reported, and the talk would miss the claim that it does not exist.",
+        "1": "'It can't be changed' would turn the red screen into a given. He has not granted it exists. The talk would go to whether red screens can be cleared, and nobody would look at the end desk.",
+        "3": "'I can't do anything about it' would sound like a man who cannot act. Sam says there is nothing to act on. The talk would move to what he is unable to do, and he would not be asked to look."
+       },
+       "example": "A library, Wednesday.<br>Assistant: “Nobody's told me the roof leaks. If it were real someone would have said.”<br>Reader, holding a wet book: “I'm saying it now.”"
+      }
+     ]
+    },
+    {
+     "level": "Analyse",
+     "label": "Analyse, explain it",
+     "items": [
+      {
+       "type": "pick",
+       "who": "Nadia",
+       "text": "Daniel, to the room at ten past four: “One failed run on a Thursday is nothing. Hardly worth stopping the team for.” Which level of discounting is that, and what would a real step look like?",
+       "cue": "turning her cup, eyes on the red-screened laptop",
+       "options": [
+        "Existence. He says the failed run did not happen. A real step would be to put the red result from the dashboard on the shared screen where the team can read it.",
+        "Significance. He says one failed run hardly matters. A real step would be to name the test that fails and say what a red run at four tomorrow would cost the client demo.",
+        "Change possibilities. He says flaky tests cannot be mended. A real step would be to ask Omar for two hours tonight to look for the cause, and to report by Friday morning.",
+        "Personal abilities. He says the build is out of the team's hands. A real step would be to ask the owner of the build for the log and a date when they could look at it."
+       ],
+       "answer": 1,
+       "why": "Plain words first: he is making a failed run look small. The books call this discounting, and this is the significance level, the one that says the problem does not matter much. A real step names the test and puts a cost on a red run at four tomorrow, so the problem is treated as one that matters.",
+       "traps": {
+        "0": "Existence would say the run did not fail. Daniel has just said it did, so he grants it. The talk would turn to the dashboard, and the shrug about its size would go by.",
+        "2": "Change possibilities would say tests cannot be mended. Daniel says the run is nothing, not that it is stuck. Two hours with Omar is a good move, and it would not touch the claim that the failure is small.",
+        "3": "Personal abilities would say the team has no hand in the build. Daniel gives no sign of that. Asking the owner for the log would help, and it would leave 'nothing' unchallenged."
+       },
+       "example": "A bus depot, Monday.<br>Supervisor: “One bus off the road is nothing. Hardly worth a meeting.”<br>Planner: “It was the one on the school run. Three schools start late tomorrow.”"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

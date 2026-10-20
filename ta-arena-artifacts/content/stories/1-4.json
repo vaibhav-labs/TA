@@ -1,0 +1,830 @@
+{
+  "baseBlurb": "Sam's plus-one night at Halden's monthly, six corners of a loud brewery, and one private balcony.",
+  "stories": [
+    {
+      "setting": "Home & Flatmates",
+      "blurb": "Maya's flat party in apartment 3B, and something she has not yet said to Sam.",
+      "opener": {
+        "setting": "Saturday, 20:15. Hawthorn Court, apartment 3B. Maya's party, forty minutes in, and the bins are still by the door.",
+        "lines": [
+          { "who": "Maya", "text": "“Just be normal tonight. Eleven people. Eleven.”", "cue": "handing you a bowl of crisps with both hands" },
+          { "who": "You", "text": "“...”", "cue": "the sofa, the kitchen, the hall, the balcony, and nobody has said where to stand" }
+        ],
+        "ask": "Which corner of this flat has real talk in it, and which one only sounds like it?"
+      },
+      "rounds": [
+        {
+          "level": "Spot",
+          "label": "Spot, round 1",
+          "intro": "Three lines from the party. Tap what the people in them were doing with that hour.",
+          "items": [
+            {
+              "type": "pick",
+              "who": "Tom and Priti",
+              "text": "“Is the heating always this loud?” “Only after eight. You get used to it.”",
+              "cue": "the sofa, paper plates on their knees",
+              "options": ["Small talk", "Routine", "Real"],
+              "answer": 0,
+              "why": "Small talk. One shared topic, a couple of easy lines each, and nothing at stake. That safety is what it is for.",
+              "traps": {
+                "1": "Routine is the same words every time, like a hello at the door. Tom and Priti met ten minutes ago, and this is new to them.",
+                "2": "Real would need something true to be said. A noisy radiator is safe, which is why it works."
+              },
+              "example": "A launderette.<br>“Is this dryer broken?” “Takes forever, doesn't it.”<br>One topic, little at stake, and both people are glad of it."
+            },
+            {
+              "type": "pick",
+              "who": "Maya",
+              "text": "“I haven't told Sam yet. I've got a room across the river from March.”",
+              "cue": "the coat cupboard, door half shut, her voice low",
+              "options": ["Work", "Trap", "Real"],
+              "answer": 2,
+              "why": "Real. Something true and a bit risky was said, and it can't be laughed off. Real talk is rare because something can happen in it.",
+              "traps": {
+                "0": "Work would be about getting a job done. This is about Maya and Sam, and she isn't asking you to do anything.",
+                "1": "Trap would need a hook with a sting. Nobody is being pulled in. She said it plainly."
+              },
+              "example": "A lunch break at a desk.<br>“I failed the driving test again. I told my mum it was cancelled.”<br>The other person stops chewing and listens."
+            },
+            {
+              "type": "pick",
+              "who": "Sam",
+              "text": "“Can someone take the bins down before the neighbours' lot arrive? Four bags, by the door.”",
+              "cue": "shouting from the kitchen, oven glove on",
+              "options": ["Routine", "Work", "Trap"],
+              "answer": 1,
+              "why": "Work. It is a job with a time limit in it, and it ends when the bags are down.",
+              "traps": {
+                "0": "Routine is the same words each time, like “Morning, all right?” This is one request about four bags tonight.",
+                "2": "Trap would be a favour with a price on it, like “Do this and I'll owe you.” Nothing is offered or hidden here."
+              },
+              "example": "A school fair.<br>“Can you carry the chairs out before it rains?”<br>A task and a clock, so it is work."
+            }
+          ]
+        },
+        {
+          "level": "Play",
+          "label": "Play, the week in motion",
+          "intro": "Six corners of the flat. Put each one in its bin, then choose where you go.",
+          "items": [
+            {
+              "type": "sort",
+              "prompt": "Six corners of the flat. For each one, what are people doing with that hour?",
+              "bins": ["Alone", "Routine", "Small talk", "Work", "Trap", "Real"],
+              "items": [
+                {
+                  "text": "The balcony, Maya and her friend Jo:<br>“I keep starting the sentence in my head.”<br>“Then start it out loud. I'm here.”<br>The door is pulled shut behind them.",
+                  "answer": 5,
+                  "why": "Something true was said, and someone stayed to hear it. Real talk is rare because something can happen in it."
+                },
+                {
+                  "text": "The doorway, Sam and each new arrival:<br>“Mind the step.”<br>“Thanks for having us.”<br>“Shoes anywhere. Coats on the bed.”",
+                  "answer": 1,
+                  "why": "The same words for every guest, and no one needs to answer them. Routine fills the hour and asks nothing back."
+                },
+                {
+                  "text": "The kitchen, Ella and Peter from the floor above, phone torch on:<br>“The tap's dripping again.”<br>“Landlord said Thursday.”<br>“Photograph it. Send it with the date.”",
+                  "answer": 3,
+                  "why": "A dripping tap, a date and a photograph. This talk ends with a job to do."
+                },
+                {
+                  "text": "By the fridge, Sam and a guest called Dougie:<br>“Take the match tomorrow, come on. I'll do your bins week.”<br>“I said I'd see my mum…”<br>“Four weeks of bins, Dougie.”",
+                  "answer": 4,
+                  "why": "“Four weeks of bins” is a hook. The offer sounds generous, and the cost arrives tomorrow, when Dougie has no Sunday left."
+                },
+                {
+                  "text": "The sofa, Tom and Priti:<br>“Where did you park?”<br>“Round the back, by the bin store.”<br>“Brave. Is the permit thing still on?”",
+                  "answer": 2,
+                  "why": "Parking permits. Easy to say, easy to drop, and it keeps the room friendly."
+                },
+                {
+                  "text": "The shoe rack in the hall, Fergus from across the landing:<br>Coat still on, phone face-up.<br>Nobody has offered him a drink.",
+                  "answer": 0,
+                  "why": "His coat is on and his phone is up. He is spending the hour alone, even with eleven people in the flat."
+                }
+              ],
+              "example": "A train carriage on a long ride.<br>Most people have earphones in. Two friends chat, and one person stares at the window.<br>Each is spending the same hour in a different way."
+            },
+            {
+              "type": "scene",
+              "title": "Saturday, 20:15, apartment 3B",
+              "setting": "Maya's party. You have a cup of tea nobody noticed you making.",
+              "meters": { "you": 60, "them": 50 },
+              "beats": [
+                {
+                  "who": "You",
+                  "text": "“...”",
+                  "cue": "where do you go?",
+                  "lines": [
+                    {
+                      "text": "Sit on the sofa with Tom and Priti and ask about parking.",
+                      "tag": "ok",
+                      "you": 2,
+                      "them": 5,
+                      "outcome": "Twenty minutes of permits and bin stores. Pleasant, and nothing happens. Priti, at some point: “We should actually talk sometime.”",
+                      "why": "Small talk is safe because little can happen in it. You get a warm nod with almost no risk, and that is the trade.",
+                      "flags": ["priti_wants_real"]
+                    },
+                    {
+                      "text": "Sit on the floor by the shoe rack next to Fergus and say nothing for ten seconds.",
+                      "tag": "best",
+                      "you": 2,
+                      "them": 6,
+                      "outcome": "After a while, Fergus: “Maya asked me out of manners. I don't know a single person in here.”",
+                      "why": "Silence can be company. He spoke because nothing was asked of him, and what he said was true.",
+                      "flags": ["fergus_opened"]
+                    },
+                    {
+                      "text": "Step out onto the balcony and join Maya and Jo.",
+                      "tag": "ok",
+                      "you": 0,
+                      "them": -8,
+                      "outcome": "They stop. Maya looks at her glass, and Jo says “Lovely night, isn't it.” The moment is gone.",
+                      "why": "Real talk is private, so you can't join it by stepping in. Only an invitation gets you in."
+                    },
+                    {
+                      "text": "Go over to Fergus and say “Hey.”",
+                      "tag": "ok",
+                      "you": -2,
+                      "them": 0,
+                      "outcome": "“Hey.” “Hey.” He goes back to his phone.",
+                      "why": "One hello is polite, and it leaves Fergus on his phone. The hour stays his."
+                    }
+                  ]
+                },
+                {
+                  "who": "You",
+                  "text": "“...”",
+                  "cue": "ten minutes on, the music louder. Where now?",
+                  "lines": [
+                    {
+                      "text": "Go to the kitchen, where Sam is holding out a deal. “Cover my bins week and come to the match. Go on.”",
+                      "tag": "ok",
+                      "you": -5,
+                      "them": 2,
+                      "outcome": "“Good man,” Sam says, and writes it on the rota in marker. Your Sunday is gone.",
+                      "why": "A deal handed across the kitchen feels like being included, and it costs you your Sunday. The hook is in the offer.",
+                      "flags": ["agreed_match"]
+                    },
+                    {
+                      "text": "Walk over to Sam in the doorway.",
+                      "tag": "ok",
+                      "you": -3,
+                      "them": 1,
+                      "outcome": "“Mind the step,” he says to you as well, then turns to the next arrival.",
+                      "why": "Routine. “Mind the step” is the line Sam gives every guest, so it fills the hour and asks nothing back."
+                    },
+                    {
+                      "text": "Go to the kitchen and turn the deal down. “I'll keep my bins, thanks. Sunday's taken.”",
+                      "tag": "best",
+                      "you": 5,
+                      "them": -4,
+                      "outcome": "“Selfish!” Sam shouts, and grins anyway. He hands you a plate of crisps.",
+                      "why": "A clear no, said lightly, with no lecture in it. It costs a little of Sam's warmth, and it keeps your Sunday."
+                    }
+                  ]
+                },
+                {
+                  "who": "Maya",
+                  "text": "“You're alright, you know. Sam said you'd leave the rota to rot.”",
+                  "cue": "the kitchen at 22:40, wiping a glass, a bit drunk",
+                  "lines": [
+                    {
+                      "text": "“Sam says a lot.”",
+                      "tag": "ok",
+                      "you": -2,
+                      "them": -3,
+                      "outcome": "“He does.” She puts the glass down and looks at the window.",
+                      "why": "It turns her nod into a dig at Sam. She offered something warm, and you handed it back as a jab."
+                    },
+                    {
+                      "text": "“Thanks, Maya. I'm glad you're having a good night.”",
+                      "tag": "best",
+                      "you": 3,
+                      "them": 5,
+                      "outcome": "“Yeah? Okay. Okay.” She rests her chin on the glass.",
+                      "why": "She gave a warm nod wrapped around a cold one, the rota bit. Taking the warm part and leaving the jab alone keeps it clean."
+                    },
+                    {
+                      "text": "“Thanks. Sam said you'd hide in the loo.”",
+                      "tag": "ok",
+                      "you": 2,
+                      "them": 3,
+                      "outcome": "She laughs, then glances at the balcony. “Fair.”",
+                      "why": "A joke back is a warm nod too, and it lands on the fun part of what she said."
+                    }
+                  ]
+                },
+                {
+                  "who": "Maya",
+                  "text": "“Have you got a minute? Just you. I want to say it out loud once before Monday.”",
+                  "cue": "the balcony door, 00:20, the party thinning out behind her",
+                  "lines": [
+                    {
+                      "text": "“Just tell Sam tonight. He's right there.”",
+                      "tag": "ok",
+                      "you": -3,
+                      "them": -6,
+                      "outcome": "“I can't, not tonight.” She pulls the door half shut and the minute is over.",
+                      "why": "It pushes her toward the hard part before she has said a word of it. She asked to be heard, and you handed her a task."
+                    },
+                    {
+                      "text": "“Let's do it over breakfast tomorrow. I'll make the tea.”",
+                      "tag": "ok",
+                      "you": 0,
+                      "them": 1,
+                      "outcome": "“Okay,” she says, and goes to find her shoes.",
+                      "why": "A promise for later keeps the door open, though it is a blurred answer. She wanted the minute tonight, and tomorrow she may not."
+                    },
+                    {
+                      "text": "“Yes. Take your time.” Step out and pull the door to.",
+                      "tag": "best",
+                      "you": 4,
+                      "them": 8,
+                      "outcome": "She breathes in twice. “Right. So. March.” The kettle in the flat clicks off behind the glass.",
+                      "why": "She asked, so you can be in it. Staying and not fixing anything is what lets real talk happen."
+                    }
+                  ]
+                }
+              ],
+              "example": "A cousin's engagement party.<br>Three people talk about the venue. One person sits alone by the cake, and one couple whispers in the garden.<br>Nobody is wrong to be where they are."
+            }
+          ]
+        },
+        {
+          "level": "Analyse",
+          "label": "Analyse, explain it",
+          "items": [
+            {
+              "type": "pick",
+              "who": "You",
+              "text": "From the kitchen, the balcony looked like two friends having a breather. It was real. Why couldn't you just step out and join them?",
+              "options": [
+                "Years of sharing a flat decide who gets asked out there",
+                "Real talk is private, so you can only be invited into it",
+                "You had no drink in your hand, so they had nothing to answer"
+              ],
+              "answer": 1,
+              "why": "Real talk is private, and it is rare because something can happen in it. You don't join it by stepping in. Someone has to ask you in.",
+              "traps": {
+                "0": "Knowing someone for years does not, by itself, get you in. You could share a kitchen with Maya for ages and still not be asked out.",
+                "2": "A drink or a topic is what gets you into small talk, because small talk runs on whatever is to hand. The balcony was not small talk, so a better opener would still have broken in on something private."
+              },
+              "example": "A wedding reception.<br>Two cousins whisper by the window.<br>You walk over, and they stop. That talk was theirs, and you wait to be asked."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "setting": "Family",
+      "blurb": "Sunday lunch in Gran's flat downstairs, with Leo scheming and Gran holding something back from Mum.",
+      "opener": {
+        "setting": "Sunday, 13:10. Gran's flat downstairs. Mum has laid for nine, and the gravy is skinning over.",
+        "lines": [
+          { "who": "Mum", "text": "“Sit anywhere. Not there, that's Dad's. Not there, that's Leo's.”", "cue": "carrying the roasting tin with a tea towel" },
+          { "who": "You", "text": "“...”", "cue": "the front room, the kitchen, the hall, the back step, and no one has waved" }
+        ],
+        "ask": "Which corner of this lunch has real talk in it, and which one only sounds like it?"
+      },
+      "rounds": [
+        {
+          "level": "Spot",
+          "label": "Spot, round 1",
+          "intro": "Three lines from the day. Tap what the people in them were doing with that hour.",
+          "items": [
+            {
+              "type": "pick",
+              "who": "Mum and Mrs Kale",
+              "text": "“Terrible weather.” “Isn't it. Lovely for the garden, though.”",
+              "cue": "the front door, Mrs Kale holding a tin of shortbread",
+              "options": ["Trap", "Real", "Small talk"],
+              "answer": 2,
+              "why": "Small talk. One safe topic, two easy lines, and nothing is at stake. That is its job.",
+              "traps": {
+                "0": "Trap would need a hook and a sting. Nobody is being drawn into anything, so it doesn't fit.",
+                "1": "Real would need something true to be said. Talking about rain is safe, which is why people reach for it."
+              },
+              "example": "A queue at the post office.<br>“Busy today.” “It's always busy on a Friday.”<br>Two lines on one topic, and both are glad of them."
+            },
+            {
+              "type": "pick",
+              "who": "Gran",
+              "text": "“I haven't told your mum. The eye doctor wants a second look in March, and I said it was a check-up.”",
+              "cue": "her kitchen, the door pushed to, a tea towel twisted in her hands",
+              "options": ["Real", "Alone", "Work"],
+              "answer": 0,
+              "why": "Real. Something true and a little frightening was said, and it can't be joked away. Real talk is rare because something can happen in it.",
+              "traps": {
+                "1": "Alone would mean nobody is talking. Gran is talking to you, and she chose you on purpose.",
+                "2": "Work would be about getting something done. She isn't asking you to do a thing. She wants it heard."
+              },
+              "example": "A car parked outside a school.<br>“I didn't get the job. I told them I did.”<br>The engine is off, and neither of them fills the gap."
+            },
+            {
+              "type": "pick",
+              "who": "Dad",
+              "text": "“Can you carry the gravy through before it skins over?”",
+              "cue": "not turning round, one hand on the oven door",
+              "options": ["Routine", "Work", "Trap"],
+              "answer": 1,
+              "why": "Work. A jug, a doorway and a deadline: it ends the moment the gravy is on the table.",
+              "traps": {
+                "0": "Routine would be the same words every Sunday, like “Pass the salt.” This is one jug, and it is going cold.",
+                "2": "Trap would dress a favour up with a price, like “Do this and you're my favourite.” This is just a request."
+              },
+              "example": "A school sports day.<br>“Can you hold the finish tape for a second?”<br>A task, a place and a time, so it is work."
+            }
+          ]
+        },
+        {
+          "level": "Play",
+          "label": "Play, the week in motion",
+          "intro": "Six corners of the lunch. Put each one in its bin, then choose where you go.",
+          "items": [
+            {
+              "type": "sort",
+              "prompt": "Six corners of the lunch. For each one, what are people doing with that hour?",
+              "bins": ["Alone", "Routine", "Small talk", "Work", "Trap", "Real"],
+              "items": [
+                {
+                  "text": "The hall, Dad and each arriving relative:<br>“Smells good.”<br>“Always does.”<br>“Same as last week, then.”",
+                  "answer": 1,
+                  "why": "Word for word what was said last Sunday. Routine fills the hour and asks nothing back."
+                },
+                {
+                  "text": "The back step, Gran and Grace from upstairs:<br>“I keep leaving the cooker on.”<br>“That sounds frightening.”<br>“It is. Thank you for not calling me silly.”<br>The door is pulled shut.",
+                  "answer": 5,
+                  "why": "Something true was said, and it was met with care. Real talk is rare because something can happen in it."
+                },
+                {
+                  "text": "The sofa, Mum and Auntie Jean:<br>“Is the bypass still shut?”<br>“Till Easter, they say.”<br>“Mad. Absolutely mad.”",
+                  "answer": 2,
+                  "why": "A closed road. Safe, shared and easy to drop. Small talk keeps the room friendly."
+                },
+                {
+                  "text": "The kitchen counter, Dad and Leo:<br>“Lid on, towel under, lift.”<br>“It's heavy!”<br>“That's why there's two of us. Other side now.”",
+                  "answer": 3,
+                  "why": "A hot dish, two people and a clear job. The talk is there to get it onto the table."
+                },
+                {
+                  "text": "Under the table, Leo and his cousin Ned:<br>“Say you broke the vase and I'll let you have my tablet.”<br>“But I didn't…”<br>“Just say it. Then it's yours.”",
+                  "answer": 4,
+                  "why": "The tablet is bait. The offer sounds like a gift, and the cost lands on Ned when the grown-ups ask who broke it."
+                },
+                {
+                  "text": "The armchair by the telly, Uncle Tony:<br>Plate on his knee, match on mute.<br>Nobody has spoken to him since the soup.",
+                  "answer": 0,
+                  "why": "Plate untouched, eyes on a muted screen. He is spending the hour alone in a full room."
+                }
+              ],
+              "example": "A train carriage on a long ride.<br>Most people have earphones in. Two friends chat, and one person stares at the window.<br>Each is spending the same hour in a different way."
+            },
+            {
+              "type": "scene",
+              "title": "Sunday, 13:10, Gran's flat downstairs",
+              "setting": "Sunday lunch. Everybody is in the hall at once, and you are holding a coat that isn't yours.",
+              "meters": { "you": 60, "them": 50 },
+              "beats": [
+                {
+                  "who": "You",
+                  "text": "“...”",
+                  "cue": "where do you go?",
+                  "lines": [
+                    {
+                      "text": "Go out to the back step and join Gran and Grace.",
+                      "tag": "ok",
+                      "you": 0,
+                      "them": -8,
+                      "outcome": "They stop talking. Grace studies her tea, and Gran says “Lovely day, isn't it.” The moment has gone.",
+                      "why": "Real talk is private, so you can't join it by stepping in. Only an invitation gets you in."
+                    },
+                    {
+                      "text": "Go over to Uncle Tony and say “Hi.”",
+                      "tag": "ok",
+                      "you": -2,
+                      "them": 0,
+                      "outcome": "“Hi.” “Hi.” His eyes go back to the mute match.",
+                      "why": "One hello is polite, and it leaves Tony with his screen. The hour stays his."
+                    },
+                    {
+                      "text": "Sit sofa-side with Mum and Auntie Jean and ask about the bypass.",
+                      "tag": "ok",
+                      "you": 2,
+                      "them": 5,
+                      "outcome": "Twenty minutes of roadworks and detours. Pleasant, and nothing happens. Auntie Jean, at some point: “We should actually talk sometime.”",
+                      "why": "Small talk is safe because little can happen in it. You get a warm nod with almost no risk, and that is the trade.",
+                      "flags": ["jean_wants_real"]
+                    },
+                    {
+                      "text": "Perch on the arm of the other chair by Uncle Tony and watch the muted match with him.",
+                      "tag": "best",
+                      "you": 2,
+                      "them": 6,
+                      "outcome": "After a while, Tony: “Nobody asks about the new hip. They ask about the weather.”",
+                      "why": "Silence can be company. He spoke because nothing was asked of him, and what he said was true.",
+                      "flags": ["tony_opened"]
+                    }
+                  ]
+                },
+                {
+                  "who": "You",
+                  "text": "“...”",
+                  "cue": "ten minutes on, plates being passed. Where now?",
+                  "lines": [
+                    {
+                      "text": "Walk over to Dad in the hall.",
+                      "tag": "ok",
+                      "you": -3,
+                      "them": 1,
+                      "outcome": "“Smells good,” he says, before you have said anything. Then he turns back to Uncle Barry.",
+                      "why": "Routine. “Smells good” is the line Dad gives every Sunday, so it fills the hour and asks nothing back."
+                    },
+                    {
+                      "text": "Go into the kitchen and turn Leo down. “Keep the pudding, I'll help you wipe it up.”",
+                      "tag": "best",
+                      "you": 5,
+                      "them": -4,
+                      "outcome": "“Boring!” says Leo, and hands you the cloth anyway.",
+                      "why": "A clear no, said lightly, with no lecture in it. It costs a little of Leo's warmth, and it keeps Mum's look off you."
+                    },
+                    {
+                      "text": "Go into the kitchen, where Leo has the gravy jug. “Tell Mum you spilled it and I'll give you my pudding.”",
+                      "tag": "ok",
+                      "you": -5,
+                      "them": 2,
+                      "outcome": "“Good,” Leo says, and slides off the stool. Mum's face, when she sees the tablecloth, is going to be for you.",
+                      "why": "A pudding handed across a counter feels like being included, and the cost is Mum's face. The hook is in the offer.",
+                      "flags": ["took_blame"]
+                    }
+                  ]
+                },
+                {
+                  "who": "Mum",
+                  "text": "“You're easier than your father, you know. He said you'd sulk about Sunday lunch.”",
+                  "cue": "the sink at 15:40, sleeves pushed up, frazzled",
+                  "lines": [
+                    {
+                      "text": "“Thanks, Mum. I'm glad it's gone well.”",
+                      "tag": "best",
+                      "you": 3,
+                      "them": 5,
+                      "outcome": "“Yeah? Good. Good.” She flicks suds at you, nearly.",
+                      "why": "She gave a warm nod wrapped around a cold one, the sulking bit. Taking the warm part and leaving the jab alone keeps it clean."
+                    },
+                    {
+                      "text": "“Dad says a lot.”",
+                      "tag": "ok",
+                      "you": -2,
+                      "them": -3,
+                      "outcome": "“He does.” She turns the tap on harder.",
+                      "why": "It turns her nod into a dig at Dad. She offered something warm, and you handed it back as a jab."
+                    },
+                    {
+                      "text": "“Thanks. Dad said you'd burn the roast.”",
+                      "tag": "ok",
+                      "you": 2,
+                      "them": 3,
+                      "outcome": "She laughs and flicks the tea towel at you. “Fair.”",
+                      "why": "A joke back is a warm nod too, and it lands on the fun part of what she said."
+                    }
+                  ]
+                },
+                {
+                  "who": "Gran",
+                  "text": "“Stay a minute? Just you. I want to say it before your mum gets it wrong.”",
+                  "cue": "her front door, 16:30, coats on, Gran's hand on your sleeve",
+                  "lines": [
+                    {
+                      "text": "“Tell Mum first, Gran. She'd want to know.”",
+                      "tag": "ok",
+                      "you": -3,
+                      "them": -6,
+                      "outcome": "“I can't tell her first.” She lets go of your sleeve and the minute is over.",
+                      "why": "It sends her to the hard conversation before she has said a word of it. She asked to be heard, and you handed her a task."
+                    },
+                    {
+                      "text": "“Yes. Take your time.” Close the door and sit with her.",
+                      "tag": "best",
+                      "you": 4,
+                      "them": 8,
+                      "outcome": "She breathes out. “It's the March appointment. I'm frightened of what they'll say.” The clock on her mantel ticks twice.",
+                      "why": "She asked, so you can be in it. Staying and not fixing anything is what lets real talk happen."
+                    },
+                    {
+                      "text": "“Tell me Wednesday, I'll bring cake.”",
+                      "tag": "ok",
+                      "you": 0,
+                      "them": 1,
+                      "outcome": "“Wednesday, then,” she says, and the moment shrinks back into her cardigan.",
+                      "why": "A promise for later keeps the door open, though it is a blurred answer. She wanted the minute now, and by Wednesday she may not."
+                    }
+                  ]
+                }
+              ],
+              "example": "A cousin's engagement party.<br>Three people talk about the venue. One person sits alone by the cake, and one couple whispers in the garden.<br>Nobody is wrong to be where they are."
+            }
+          ]
+        },
+        {
+          "level": "Analyse",
+          "label": "Analyse, explain it",
+          "items": [
+            {
+              "type": "pick",
+              "who": "You",
+              "text": "The back step looked like two women with a cup of tea. It was real. Why couldn't you just go out and sit with them?",
+              "options": [
+                "Real talk is private, so you can only be invited into it",
+                "You came out with no topic ready, so they had nothing to answer",
+                "Being family decides who is allowed onto the step"
+              ],
+              "answer": 0,
+              "why": "Real talk is private, and it is rare because something can happen in it. You don't join it by stepping in. Someone has to ask you in.",
+              "traps": {
+                "1": "A topic is what gets you into small talk, because small talk runs on one subject at a time. The step was not small talk, so a better opener would still have broken in on something private.",
+                "2": "Being related does not, by itself, get you into a private moment. You can share a Sunday table for years and still not be asked out."
+              },
+              "example": "A funeral tea.<br>Two aunts whisper by the urn.<br>You walk over, and they stop. That talk was theirs, and you wait to be asked."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "setting": "Friends & Community",
+      "blurb": "Ruby's thirtieth at the Corner Table, a lemon cake, and Joseph, who is joking a little too hard.",
+      "opener": {
+        "setting": "Saturday, 15:00. The Corner Table, near the station. Ruby's thirtieth, with the back room booked for twenty and fourteen here.",
+        "lines": [
+          { "who": "Ruby", "text": "“Don't make a speech. Please. Just eat the cake.”", "cue": "holding a knife over a lemon sponge" },
+          { "who": "You", "text": "“...”", "cue": "the back room, the counter, the window seat, the pavement, and nobody has waved" }
+        ],
+        "ask": "Which corner of this party has real talk in it, and which one only sounds like it?"
+      },
+      "rounds": [
+        {
+          "level": "Spot",
+          "label": "Spot, round 1",
+          "intro": "Three lines from the party. Tap what the people in them were doing with that hour.",
+          "items": [
+            {
+              "type": "pick",
+              "who": "Two guests",
+              "text": "“Did you get through the roadworks by the station?” “Don't. Forty minutes I sat there.”",
+              "cue": "the queue for the toilets",
+              "options": ["Work", "Small talk", "Real"],
+              "answer": 1,
+              "why": "Small talk. One shared topic, a couple of easy lines each, and little at stake. That safety is the point of it.",
+              "traps": {
+                "0": "Work would be about getting something done. Nobody is planning a route or fixing a road, only complaining about one.",
+                "2": "Real would need something true to be said. Grumbling about traffic is safe, which is why people reach for it."
+              },
+              "example": "A school bus stop.<br>“They've put the fares up again.” “Don't I know it.”<br>Two lines on one topic, and both are glad of them."
+            },
+            {
+              "type": "pick",
+              "who": "Joseph",
+              "text": "“I haven't been at work since March. Ruby thinks I'm on nights.”",
+              "cue": "no joke this time, staring at the tray of sausage rolls",
+              "options": ["Work", "Trap", "Real"],
+              "answer": 2,
+              "why": "Real. Something true was said, and he didn't wrap it in a joke. Real talk is rare because something can happen in it.",
+              "traps": {
+                "0": "Work would be about a job to get done. Joseph's own work is the subject, but he isn't asking you to do anything about it.",
+                "1": "Trap would need a hook and a sting. Nobody is being drawn in. He told you plainly."
+              },
+              "example": "A car park after a football match.<br>“I haven't told my brother I lost the flat.”<br>The other person puts the keys back in their pocket and stays."
+            },
+            {
+              "type": "pick",
+              "who": "Nadia",
+              "text": "“Can you carry the second cake out before the candles drip?”",
+              "cue": "already holding the kitchen door open with her hip",
+              "options": ["Work", "Routine", "Trap"],
+              "answer": 0,
+              "why": "Work. A cake, a door and a deadline: the talk ends when the cake is on the table.",
+              "traps": {
+                "1": "Routine would be the same words every time, like “Happy birthday” to each guest. This is a one-off request about one cake.",
+                "2": "Trap would dress a favour up with a price. This is just a request, with candle wax as the clock."
+              },
+              "example": "A village hall quiz night.<br>“Can you bring the answer sheets round before the break?”<br>A task and a time, so it is work."
+            }
+          ]
+        },
+        {
+          "level": "Play",
+          "label": "Play, the week in motion",
+          "intro": "Six corners of the party. Put each one in its bin, then choose where you go.",
+          "items": [
+            {
+              "type": "sort",
+              "prompt": "Six corners of the party. For each one, what are people doing with that hour?",
+              "bins": ["Alone", "Routine", "Small talk", "Work", "Trap", "Real"],
+              "items": [
+                {
+                  "text": "The counter, Nadia and Dennis, who runs the café:<br>“Forty slices, so eight to a cake.”<br>“And the candles?”<br>“Drawer by the till. Tell the kitchen to hold the second cake.”",
+                  "answer": 3,
+                  "why": "Slices, candles and a kitchen to tell. This talk ends with jobs done."
+                },
+                {
+                  "text": "The window table, two people from the five-a-side match:<br>“Is it me, or is the heating on?”<br>“It's the oven next door.”<br>“Always is.”",
+                  "answer": 2,
+                  "why": "A warm room and an oven. Safe, shared and easy to drop. Small talk keeps the party friendly."
+                },
+                {
+                  "text": "The door, Nadia and each new arrival:<br>“Happy birthday!”<br>“Thanks for coming!”<br>“Wouldn't miss it!”",
+                  "answer": 1,
+                  "why": "The same words for every guest, and nobody needs to think. Routine fills the hour and asks nothing back."
+                },
+                {
+                  "text": "A stool at the counter, Abdul from Ruby's street:<br>Phone face-up, plate untouched.<br>Nobody has spoken to him in twenty minutes.",
+                  "answer": 0,
+                  "why": "Phone up, plate untouched. He is spending the hour alone, even in a crowded room."
+                },
+                {
+                  "text": "The pavement outside, Ruby and her brother:<br>“I didn't think thirty would feel like this.”<br>“Then say what it feels like.”<br>“I'm saying it to you.”<br>The door swings shut.",
+                  "answer": 5,
+                  "why": "Something true was said, and someone asked for more. Real talk is rare because something can happen in it."
+                },
+                {
+                  "text": "The corner, Gavin and a friend of Ruby's:<br>“Put your name down for the trip. You can't be the only one out.”<br>“I'm not sure I can drive.”<br>“I'll cover your share if you do. Go on.”",
+                  "answer": 4,
+                  "why": "“I'll cover your share if you do” is a hook. It sounds generous, and the cost arrives later, when he needs a driver."
+                }
+              ],
+              "example": "A train carriage on a long ride.<br>Most people have earphones in. Two friends chat, and one person stares at the window.<br>Each is spending the same hour in a different way."
+            },
+            {
+              "type": "scene",
+              "title": "Saturday, 15:00, the Corner Table",
+              "setting": "Ruby's thirtieth. You have a gift bag in one hand and no idea where to put it.",
+              "meters": { "you": 60, "them": 50 },
+              "beats": [
+                {
+                  "who": "You",
+                  "text": "“...”",
+                  "cue": "where do you go?",
+                  "lines": [
+                    {
+                      "text": "Go out to the pavement and join Ruby and her brother.",
+                      "tag": "ok",
+                      "you": 0,
+                      "them": -8,
+                      "outcome": "They stop. Ruby looks at her shoes, and her brother says “Cold out, isn't it.” The moment is gone.",
+                      "why": "Real talk is private, so you can't join it by stepping in. Only an invitation gets you in."
+                    },
+                    {
+                      "text": "Go over to Abdul and say “Hey.”",
+                      "tag": "ok",
+                      "you": -2,
+                      "them": 0,
+                      "outcome": "“Hey.” “Hey.” He turns back to his phone.",
+                      "why": "One hello is polite, and it leaves Abdul on his phone. The hour stays his."
+                    },
+                    {
+                      "text": "Take the next stool at the counter and say nothing for ten seconds.",
+                      "tag": "best",
+                      "you": 2,
+                      "them": 6,
+                      "outcome": "After a while, Abdul: “Ruby fed my cat in August. I know nobody here, and I'm holding a present for a woman I've met twice.”",
+                      "why": "Silence can be company. He spoke because nothing was asked of him, and what he said was true.",
+                      "flags": ["abdul_opened"]
+                    },
+                    {
+                      "text": "Sit at the window table and ask about the heating.",
+                      "tag": "ok",
+                      "you": 2,
+                      "them": 5,
+                      "outcome": "Twenty minutes of ovens and radiators. Pleasant, and nothing happens. One of them, at some point: “We should actually talk sometime.”",
+                      "why": "Small talk is safe because little can happen in it. You get a warm nod with almost no risk, and that is the trade.",
+                      "flags": ["window_wants_real"]
+                    }
+                  ]
+                },
+                {
+                  "who": "You",
+                  "text": "“...”",
+                  "cue": "ten minutes on, the sponge being cut. Where now?",
+                  "lines": [
+                    {
+                      "text": "Go over to Gavin in the corner, who is holding out a deal. “Name down for the trip, I'll cover your share if you drive.”",
+                      "tag": "ok",
+                      "you": -5,
+                      "them": 2,
+                      "outcome": "“Good man,” Gavin says, and writes your name on the back of a napkin. You are the driver now.",
+                      "why": "A deal pushed across a table feels like being included, and it costs you the driving. The hook is in the offer.",
+                      "flags": ["agreed_trip"]
+                    },
+                    {
+                      "text": "Go over to Gavin and turn the deal down. “Not for me. I'll get the cake plates.”",
+                      "tag": "best",
+                      "you": 5,
+                      "them": -4,
+                      "outcome": "“Tight!” Gavin shouts, and laughs anyway. You get the plates.",
+                      "why": "A clear no, said lightly, with no lecture in it. It costs a little of Gavin's warmth, and it keeps your weekend free."
+                    },
+                    {
+                      "text": "Walk over to Nadia at the door.",
+                      "tag": "ok",
+                      "you": -3,
+                      "them": 1,
+                      "outcome": "“Happy birthday!” she says to you as if you had just arrived, then turns to the next coat.",
+                      "why": "Routine. “Happy birthday!” is the line Nadia gives every guest, so it fills the hour and asks nothing back."
+                    }
+                  ]
+                },
+                {
+                  "who": "Ruby",
+                  "text": "“You're alright, you know. Joseph said you'd go home after the first hour.”",
+                  "cue": "the cake table at 16:20, icing on her thumb, a bit emotional",
+                  "lines": [
+                    {
+                      "text": "“Thanks. Joseph said you'd cry into the sponge.”",
+                      "tag": "ok",
+                      "you": 2,
+                      "them": 3,
+                      "outcome": "She laughs and licks her thumb. “Fair.”",
+                      "why": "A joke back is a warm nod too, and it lands on the fun part of what she said."
+                    },
+                    {
+                      "text": "“Joseph says a lot.”",
+                      "tag": "ok",
+                      "you": -2,
+                      "them": -3,
+                      "outcome": "“He does.” She looks across at Joseph, who is laughing too loudly at nothing.",
+                      "why": "It turns her nod into a dig at Joseph. She offered something warm, and you handed it back as a jab."
+                    },
+                    {
+                      "text": "“Thanks, Ruby. I'm glad you're having a good day.”",
+                      "tag": "best",
+                      "you": 3,
+                      "them": 5,
+                      "outcome": "“Yeah? Okay. Okay.” She slides a slice of cake toward you.",
+                      "why": "She gave a warm nod wrapped around a cold one, the going-home bit. Taking the warm part and leaving the jab alone keeps it clean."
+                    }
+                  ]
+                },
+                {
+                  "who": "Joseph",
+                  "text": "“Got a minute? Not for the group chat. Just you. I haven't said it out loud yet.”",
+                  "cue": "by the bike rack at 17:30, jacket zipped to the chin, not joking",
+                  "lines": [
+                    {
+                      "text": "“Just tell everyone. It'll be a weight off.”",
+                      "tag": "ok",
+                      "you": -3,
+                      "them": -6,
+                      "outcome": "“Right. Yeah. Maybe.” He fiddles with the lock and the minute is over.",
+                      "why": "It pushes him to the hard part before he has said a word of it. He asked to be heard, and you handed him a task."
+                    },
+                    {
+                      "text": "“Come to Thursday's match and we'll talk after.”",
+                      "tag": "ok",
+                      "you": 0,
+                      "them": 1,
+                      "outcome": "“Thursday, then,” he says, and unlocks his bike.",
+                      "why": "A promise for later keeps the door open, though it is a blurred answer. He wanted the minute now, and by Thursday he may have his joke back."
+                    },
+                    {
+                      "text": "“Yes. Take your time.” Lean on the rack beside him.",
+                      "tag": "best",
+                      "you": 4,
+                      "them": 8,
+                      "outcome": "He breathes out. “It's been eight months.” A bus goes past, and neither of you looks up.",
+                      "why": "He asked, so you can be in it. Staying and not fixing anything is what lets real talk happen."
+                    }
+                  ]
+                }
+              ],
+              "example": "A cousin's engagement party.<br>Three people talk about the venue. One person sits alone by the cake, and one couple whispers in the garden.<br>Nobody is wrong to be where they are."
+            }
+          ]
+        },
+        {
+          "level": "Analyse",
+          "label": "Analyse, explain it",
+          "items": [
+            {
+              "type": "pick",
+              "who": "You",
+              "text": "The pavement looked like a smoke break, and it was real. Why couldn't you just go out and join Ruby and her brother?",
+              "options": [
+                "How long you have known Ruby decides who gets asked out",
+                "You had no topic ready, so they had nothing to answer",
+                "Real talk is private, so you can only be invited into it"
+              ],
+              "answer": 2,
+              "why": "Real talk is private, and it is rare because something can happen in it. You don't join it by stepping in. Someone has to ask you in.",
+              "traps": {
+                "0": "Years of friendship do not, by themselves, get you into a private moment. You could know Ruby well and still not be asked out.",
+                "1": "A topic is what gets you into small talk, because small talk runs on one subject at a time. The pavement was not small talk, so a better opener would still have broken in on something private."
+              },
+              "example": "A wedding reception.<br>Two cousins whisper by the window.<br>You walk over, and they stop. That talk was theirs, and you wait to be asked."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

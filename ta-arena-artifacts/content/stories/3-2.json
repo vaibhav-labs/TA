@@ -1,0 +1,1007 @@
+{
+ "baseBlurb": "Omar sits down in the canteen, and a few replies keep a thin conversation alive.",
+ "stories": [
+  {
+   "setting": "Friends & Community",
+   "blurb": "Joseph's knee is wrapped in frozen peas, and he wants someone to ask how it is.",
+   "opener": {
+    "setting": "Sunday, 10:50, The Corner Table, the table by the radiator. Joseph sits down with a tea towel of frozen peas, and Ruby is at the counter ordering for the whole team.",
+    "lines": [
+     {
+      "who": "Joseph",
+      "text": "“Mind if I sit here? Everyone else is at the counter with Ruby's list.”",
+      "cue": "a tea towel of peas over one knee, a cup in the other hand"
+     },
+     {
+      "who": "Joseph",
+      "text": "“Don't read anything into the knee.”",
+      "cue": "not quite looking at you, then doing it"
+     }
+    ],
+    "ask": "Can you keep Joseph talking by answering from the voice he spoke to, rather than cutting him off or taking his fixture list off his hands?"
+   },
+   "rounds": [
+    {
+     "level": "Spot",
+     "label": "Spot, round 1",
+     "intro": "<b>How this one works:</b> someone speaks, and you pick the voice that answers so the talk keeps going. Four quick questions, then the scene.",
+     "items": [
+      {
+       "type": "pick",
+       "who": "Joseph",
+       "text": "“Pitch is booked for nine, the nets are in Ruby's boot, and the bibs are still wet from last week.”",
+       "cue": "ice pack on his knee, counting on his fingers",
+       "options": [
+        "The Boss",
+        "The Kid",
+        "The Pilot"
+       ],
+       "answer": 2,
+       "why": "He is giving plain facts with a week of history behind them, and he wants a reply about the nets. That is the Pilot talking to your Pilot, so the matched reply comes from yours and goes straight back to his.",
+       "traps": {
+        "0": "A Boss reply would be “Then Ruby should have dried the bibs, and that's the end of it.” That is a ruling on the facts, so Joseph has nothing left to say and the talk drops.",
+        "1": "A Kid reply would be “Sorry, I'm no good with bibs, I'll only make it worse.” It apologises instead of answering, so the nets stay in the boot and the talk stalls."
+       },
+       "example": "A bus stop, one woman to her neighbour: “The bin lorry comes at seven and the lid is frozen shut.”<br>“Kettle of hot water on the hinge? I'll hold the bag.” keeps it going. “Not my bin.” ends it."
+      },
+      {
+       "type": "pick",
+       "who": "Joseph",
+       "text": "“Sorry, sorry, I can't even jog to the car park. I've let the whole lot of you down.”",
+       "cue": "apologising to the table before anyone has said a word",
+       "options": [
+        "The Boss",
+        "The Pilot",
+        "The Kid"
+       ],
+       "answer": 0,
+       "why": "The apology is aimed at someone who could be cross or could forgive. A Boss reply, “It happens. We'll find a sub for Saturday and you sit the first half out,” answers from the voice he spoke to, so the talk keeps going.",
+       "traps": {
+        "1": "A Pilot reply would be “The pitch fee is due Friday, so who pays what?” It is a sensible plan, but it skips the apology, so the apology hangs there and the talk stops.",
+        "2": "A Kid reply would be “Oh, I was worse, I missed the whole of March.” Two Kids apologising can feel close, but the reply came from a different voice than the one addressed, so the line is cut."
+       },
+       "example": "A kitchen, a grandfather who has dropped a tray: “Sorry, sorry, I'm clumsy.”<br>“Happens. Pass me the cloth,” and the line runs on."
+      },
+      {
+       "type": "pick",
+       "who": "Ruby",
+       "text": "“Don't hover. Pick up the cones and carry them to the boot, we're late.”",
+       "cue": "not looking up from her clipboard",
+       "options": [
+        "The Boss",
+        "The Kid",
+        "The Pilot"
+       ],
+       "answer": 1,
+       "why": "The order comes from the Boss and is aimed at the Kid in you. The Kid's reply, “Okay, cones first, then the boot,” is the voice that was spoken to, so the line matches and keeps running.",
+       "traps": {
+        "0": "A Boss reply, “Don't boss me, Ruby, I'll carry them when I'm ready,” answers an order with an order from another seat. The line is cut and the cones stay where they are.",
+        "2": "A Pilot reply, “The boot's full of nets, it won't fit,” is a sensible fact, but it comes after an order and never answers the voice the order was aimed at. The talk stops there."
+       },
+       "example": "A garage forecourt, a father to his son: “Put the cap back on and get in the car.”<br>“Okay, cap, then the car.” is the matched reply. “Stop ordering me about.” is the cut."
+      },
+      {
+       "type": "pick",
+       "who": "Joseph",
+       "text": "“Did the fixture list reach you, or should I text it round again?”",
+       "cue": "a real question, thumb hovering over the screen",
+       "prompt": "Which kind of reply keeps the talk going?",
+       "options": [
+        "A cut, it stops the talk",
+        "A matched volley, it keeps going"
+       ],
+       "answer": 1,
+       "why": "He asks a plain question from the Pilot, and a plain Pilot answer keeps the volley alive: “Got it, thanks. Which Saturday is the cup tie?”",
+       "traps": {
+        "0": "A cut would be “Please don't text it again, my phone is full of football.” It answers from the Kid, a different voice than the one he asked from, so the question drops and the talk goes with it."
+       },
+       "example": "An allotment gate, one neighbour to another: “Did the water rota reach you, or shall I post another?”<br>“Got it, thanks, am I on the second week?” keeps them talking. “Please don't ask again.” ends it."
+      }
+     ]
+    },
+    {
+     "level": "Play",
+     "label": "Play, the week in motion",
+     "intro": "<b>Now you keep it going.</b> Each line you pick is a reply. Matched replies keep the talk alive, and a matched reply can keep running for the wrong reasons too.",
+     "items": [
+      {
+       "type": "scene",
+       "title": "Sunday, 11:00, The Corner Table, the table by the radiator",
+       "setting": "Joseph has sat down opposite you with a tea towel of frozen peas on his knee, which he never does. Ruby is at the counter ordering for the whole team.",
+       "meters": {
+        "you": 70,
+        "them": 50
+       },
+       "beats": [
+        {
+         "who": "Joseph",
+         "text": "“Eleven names on the sheet and nine at the pitch. Again. I've been ringing round since seven.”",
+         "cue": "peeling the tea towel off, not looking up",
+         "lines": [
+          {
+           "text": "“Again? Which two dropped out, and did they say why?”",
+           "tag": "best",
+           "you": 4,
+           "them": 7,
+           "outcome": "Joseph looks up. “Theo and the new lad. No reason. Nobody ever asks which two.”",
+           "why": "A plain question in the same voice he used gives him a fact to answer. The talk keeps going because you answered the Pilot he spoke to."
+          },
+          {
+           "text": "“Ugh, that's so annoying, sorry. Hope it sorts itself out.”",
+           "tag": "ok",
+           "you": -1,
+           "them": -3,
+           "outcome": "Joseph nods at the peas. “Yeah. Sure.” The names are left hanging and he has nothing to add.",
+           "why": "The sympathy comes from the caring side of the Boss, but he spoke to the Pilot with a fact. A reply from another voice is a cut, so the line stops even though it sounds kind."
+          },
+          {
+           "text": "“Not your fault, mate. People flake. Let them.”",
+           "tag": "ok",
+           "you": -2,
+           "them": -5,
+           "outcome": "Joseph puts the tea towel down. “Right. Fine.” He turns to look at Ruby's back.",
+           "why": "The Boss answers a fact with a ruling. That closes the talk, because he now has to defend the nine instead of talking about who is missing."
+          }
+         ]
+        },
+        {
+         "who": "Joseph",
+         "text": "“Nobody asks how I am, you know. The knee's been clicking since Friday.”",
+         "cue": "pressing it with two fingers under the table",
+         "lines": [
+          {
+           "text": "“That sounds sore. Is it going up the stairs or coming down that catches?”",
+           "tag": "best",
+           "you": 4,
+           "them": 6,
+           "outcome": "He half laughs. “Coming down. Every stair at the station feels like a dare.”",
+           "why": "Warmth answers the caring voice he spoke to, and the question hands him a real choice. The line matches and keeps going, and the job stays with him."
+          },
+          {
+           "text": "“Oh, poor you. Give me the nets and the fixture list, I'll run the whole season. Put your leg up.”",
+           "tag": "game",
+           "you": -6,
+           "them": 8,
+           "outcome": "Joseph's shoulders drop. “You're a star. I owe you one.” He slides the list across the table and does not look at his phone again.",
+           "why": "You took the job off him. The reply is still matched, so the chain runs on, but he is now the Kid being looked after and you are running his season. This is a trap move, and it ends the scene here."
+          },
+          {
+           "text": "“Same here, my knee's rubbish too.”",
+           "tag": "ok",
+           "you": -1,
+           "them": 2,
+           "outcome": "Joseph nods slowly. “Yeah. Everyone's knee is rubbish.” The moment is shared, and then it is gone.",
+           "why": "He asked for care from a caring voice, and you answered from the Kid. The reply matches in feeling and cuts in voice, so he gets company instead of the care he was asking for."
+          }
+         ]
+        },
+        {
+         "who": "Joseph",
+         "text": "“Anyway. The pitch fee is due Friday and three of them still owe me.”",
+         "cue": "back to the facts, a bit embarrassed",
+         "lines": [
+          {
+           "text": "“How much is each, and which of them pays quickest if you ask?”",
+           "tag": "best",
+           "you": 4,
+           "them": 5,
+           "outcome": "Joseph grins at the peas. “A bus fare each. And Theo last, obviously.”",
+           "why": "You stayed in the Pilot and asked for the facts he needs. He is answered in his own voice, so the talk can keep running on the thing he cares about."
+          },
+          {
+           "text": "“Don't be embarrassed to ask. You're allowed to chase them.”",
+           "tag": "ok",
+           "you": -3,
+           "them": -1,
+           "outcome": "Joseph looks surprised, then a bit cross. “I'm not embarrassed. I'm telling you they owe me.”",
+           "why": "You answered a fact with a parent's permission, which is a cut. He did not ask to be told how to feel, so the fee drops out of the conversation."
+          }
+         ]
+        }
+       ],
+       "payoff": "Joseph takes the peas back to the counter, a job lighter. By Thursday the fee list is yours as well as the nets, and on Saturday he stands by the fence with his bag."
+      },
+      {
+       "type": "scene",
+       "title": "Sunday, 11:20, The Corner Table, the same table",
+       "setting": "Joseph is back with a second tea he has not touched. He is looking at the window, not at you, and Ruby's laugh carries from the counter.",
+       "meters": {
+        "you": 70,
+        "them": 50
+       },
+       "beats": [
+        {
+         "who": "Joseph",
+         "text": "“You coming to the quiz on Thursday? Don't tell the lads I asked.”",
+         "cue": "turning the saucer round on the table",
+         "lines": [
+          {
+           "text": "“Yeah, I'm in. Are you? Ruby says there's a spare seat on the team.”",
+           "tag": "best",
+           "you": 4,
+           "them": 7,
+           "outcome": "Joseph snorts. “Ruby always has a spare seat. It's the only thing she's tidy about.” He almost smiles.",
+           "why": "You answered his question with a real answer and asked one back. That gives him a next step, and he can still choose what to do with it."
+          },
+          {
+           "text": "“Nobody's asking you to be anywhere, Joseph. Don't overthink it.”",
+           "tag": "ok",
+           "you": -2,
+           "them": -4,
+           "outcome": "He shrugs and lifts the cup. “Right. Fine.”",
+           "why": "A ruling from the Boss answers a question he asked as the Pilot. He is told not to think about it, so the question drops and the seat stays empty."
+          },
+          {
+           "text": "“Same, I'm not sure I'll come either.”",
+           "tag": "ok",
+           "you": -1,
+           "them": -1,
+           "outcome": "Joseph looks at you as if you had said something else. “Right. Okay.”",
+           "why": "The Kid answers a Pilot question. You matched the mood, though the voice was wrong, so it is a cut, and his question stops in the air."
+          }
+         ]
+        },
+        {
+         "who": "Joseph",
+         "text": "“I always say I'll play, and then I stand by the fence with my bag for ten minutes.”",
+         "cue": "quiet, not joking",
+         "lines": [
+          {
+           "text": "“What stops you, once you're at the fence? Tell me the actual thing.”",
+           "tag": "best",
+           "you": 4,
+           "them": 6,
+           "outcome": "He thinks about it. “The gate, I think. Walking onto a pitch where everyone already has a bib.”",
+           "why": "You answered from the Pilot, the voice he was speaking from, and asked for the real thing. He gets room to say something true, which keeps the volley alive."
+          },
+          {
+           "text": "“You should just walk on. Say hello to Theo and grab a bib.”",
+           "tag": "ok",
+           "you": -2,
+           "them": -3,
+           "outcome": "He goes quiet. “Yeah. Maybe.” The line runs out with his hands round the cup.",
+           "why": "Advice from the Boss is kindly meant, but it jumps past what he said. Nothing he feels has been asked about, so the talk closes."
+          }
+         ]
+        },
+        {
+         "who": "Joseph",
+         "text": "“Anyway. Nets are in Ruby's boot, the knee's fine, and I've got the dentist at two.”",
+         "cue": "standing up, tea untouched, already leaving",
+         "lines": [
+          {
+           "text": "“Go on, then. Thanks for the tip about Thursday. I'll think about it.”",
+           "tag": "best",
+           "you": 3,
+           "them": 5,
+           "outcome": "Joseph nods, almost warm. “Maybe see you there.” He goes out past the counter.",
+           "why": "You let the volley end on a Pilot note, with a thanks and a real intention. Nothing is cut, so he leaves knowing the talk was welcome."
+          },
+          {
+           "text": "“Yes, Joseph, you're busy. Off you go.”",
+           "tag": "ok",
+           "you": -2,
+           "them": -4,
+           "outcome": "He nods and leaves without looking back at the table.",
+           "why": "You sent him off from the Boss's chair. It does no harm, though it answers his plan with a dismissal, so the volley is cut right at the end."
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "level": "Analyse",
+     "label": "Analyse, explain it",
+     "items": [
+      {
+       "type": "pick",
+       "who": "You, replaying the table",
+       "text": "“Give me the nets and the list, I'll run it.” “You're a star. I owe you one.” Two lines, and the talk ran on between them.",
+       "cue": "the tea going cold, the fixture list in your bag",
+       "options": [
+        "A cut, it stops the talk",
+        "A matched volley, it keeps going",
+        "A nod, one warm line"
+       ],
+       "answer": 1,
+       "why": "Each reply came from the voice that was spoken to: the Kid answered the caring voice, and the caring voice answered the Kid. The chain ran on for as long as both kept their parts, even though the knee and the fixtures went unsorted.",
+       "traps": {
+        "0": "A cut needs a reply from a different voice than the one addressed. Here both lines landed in the seat they were aimed at, so nothing stopped them.",
+        "2": "A nod is one line of warmth. This was a loop of replies, and each reply set up the next one, so the one-line label misses the chain."
+       },
+       "example": "A family WhatsApp group, an aunt who writes: “Leave the washing up, I'll do it.” Her nephew replies: “You're the best.”<br>Next week the dishes come round the same way. Every reply was in the right seat, and the chain keeps going."
+      },
+      {
+       "type": "pick",
+       "who": "You, the next time he says it",
+       "text": "“The knee's been clicking since Friday.” How do you keep him talking, and leave the fixture list with him?",
+       "cue": "you already know which answer is the easy one",
+       "options": [
+        "A matched volley that takes the job off him",
+        "A cut to the pitch fee",
+        "A matched volley that hands the job back"
+       ],
+       "answer": 2,
+       "why": "A caring question and a rescue are both matched, so both keep the line going. The difference is whether the job goes back to Joseph. A question about the stairs gives him a choice and leaves the list with him.",
+       "traps": {
+        "0": "Taking the job is matched too, which is why it feels like help. It keeps the line running, but Joseph stays in the Kid's chair and you end up holding his season.",
+        "1": "A cut to the pitch fee changes the subject to money, so the knee is dropped mid-sentence and nobody gets to finish saying it."
+       },
+       "example": "A shop counter, a customer who groans: “This printer's been broken all week.”<br>“Which error does it show? Read it out and we'll sort it.” keeps the job with the customer, and the line keeps going."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "setting": "Home & Flatmates",
+   "blurb": "Sam has lost the yard key, the bins go out tonight, and Maya is on a double.",
+   "opener": {
+    "setting": "Tuesday, 22:10, Hawthorn Court, the shared flat. The bins go out tonight, the gas bill is on the fridge, and Maya is on a double until midnight.",
+    "lines": [
+     {
+      "who": "Sam",
+      "text": "“Bins are mine tonight. I've got it written on my hand, look.”",
+      "cue": "holding up a blue biro scrawl"
+     },
+     {
+      "who": "Sam",
+      "text": "“Don't read anything into the yard key. It's probably in a coat.”",
+      "cue": "checking the third pocket of the same coat"
+     }
+    ],
+    "ask": "Can you keep Sam talking by answering from the voice he spoke to, rather than cutting him off or taking his chores off his hands?"
+   },
+   "rounds": [
+    {
+     "level": "Spot",
+     "label": "Spot, round 1",
+     "intro": "<b>How this one works:</b> someone speaks, and you pick the voice that answers so the talk keeps going. Four quick questions, then the scene.",
+     "items": [
+      {
+       "type": "pick",
+       "who": "Sam",
+       "text": "“I think the gas bill is eighty-four, probably, and the meter reading is on the fridge sheet.”",
+       "cue": "soft and over-qualified, reading off the sheet",
+       "options": [
+        "The Boss",
+        "The Pilot",
+        "The Kid"
+       ],
+       "answer": 1,
+       "why": "He is giving a plain figure and pointing at where the proof is. That is the Pilot talking to your Pilot, so the matched reply asks about the figure and goes straight back to his.",
+       "traps": {
+        "0": "A Boss reply would be “Then Maya should have paid it already, and that's that.” It is a ruling on the facts, so Sam has nothing to add and the talk drops.",
+        "2": "A Kid reply would be “Sorry, I'm hopeless with bills, I'll only get it wrong.” It apologises instead of answering, so the sum is left hanging on the fridge."
+       },
+       "example": "A launderette, one woman to another: “The big dryer takes coins only, and it's four a cycle.”<br>“I've got a pocketful. Hold my basket?” keeps it going. “Not my dryer.” ends it."
+      },
+      {
+       "type": "pick",
+       "who": "Sam",
+       "text": "“Sorry, sorry, I left the balcony door open all night and Maya's basil has gone black.”",
+       "cue": "apologising from the doorway, both hands up",
+       "options": [
+        "The Pilot",
+        "The Kid",
+        "The Boss"
+       ],
+       "answer": 2,
+       "why": "The apology is aimed at someone who could be cross or could forgive. A Boss reply, “It happens. We'll get a new one on Saturday, and the door gets shut first,” answers from the voice he spoke to, so the talk keeps going.",
+       "traps": {
+        "0": "A Pilot reply would be “A new plant is a fair price, and the shop opens at eight.” It is a sensible plan, but it skips the apology, so the apology hangs there and the talk stops.",
+        "1": "A Kid reply would be “Oh, I killed her mint last month, I'm worse.” Two Kids apologising can feel close, but the reply came from a different voice than the one addressed, so the line is cut."
+       },
+       "example": "An office kitchen, a man who has spilled the last of the coffee: “Sorry, sorry, I'm a disaster.”<br>“Happens. There's a tin in the cupboard,” and the line runs on."
+      },
+      {
+       "type": "pick",
+       "who": "Maya",
+       "text": "“Don't stand there saying sorry. Get the mop and do the hall before I'm back.”",
+       "cue": "a voice note from the bus, tired, the engine loud behind her",
+       "options": [
+        "The Kid",
+        "The Boss",
+        "The Pilot"
+       ],
+       "answer": 0,
+       "why": "The order comes from the Boss and is aimed at the Kid in you. The Kid's reply, “Okay, mop, then the hall,” is the voice that was spoken to, so the line matches and keeps running.",
+       "traps": {
+        "1": "A Boss reply, “Don't talk to me like that, Maya, I'll do it when I've eaten,” answers an order with an order from another seat. The line is cut and the hall stays wet.",
+        "2": "A Pilot reply, “The mop is in the cupboard under the stairs, and that's locked,” is a sensible fact, but it comes after an order and never answers the voice the order was aimed at. The talk stops there."
+       },
+       "example": "A car park, a mother to her daughter: “Put your coat on and wait by the barrier.”<br>“Okay, coat, then the barrier.” is the matched reply. “Stop nagging, I'm not cold.” is the cut."
+      },
+      {
+       "type": "pick",
+       "who": "Maya",
+       "text": "“Did the rota reach you, or shall I stick it on the door again?”",
+       "cue": "a real question, the bus engine still behind her",
+       "prompt": "Which kind of reply keeps the talk going?",
+       "options": [
+        "A matched volley, it keeps going",
+        "A cut, it stops the talk"
+       ],
+       "answer": 0,
+       "why": "She asks a plain question from the Pilot, and a plain Pilot answer keeps the volley alive: “Got it, thanks. Am I on the bins for the whole month?”",
+       "traps": {
+        "1": "A cut would be “Please don't stick it up again, the door is already covered.” It answers from the Kid, a different voice than the one she asked from, so the question drops and the talk goes with it."
+       },
+       "example": "A swimming pool, a lifeguard to a dad: “Did the lane times reach you, or shall I print them again?”<br>“Got them, thanks. Is Thursday early or late?” keeps them talking. “Please don't print any more.” ends it."
+      }
+     ]
+    },
+    {
+     "level": "Play",
+     "label": "Play, the week in motion",
+     "intro": "<b>Now you keep it going.</b> Each line you pick is a reply. Matched replies keep the talk alive, and a matched reply can keep running for the wrong reasons too.",
+     "items": [
+      {
+       "type": "scene",
+       "title": "Tuesday, 22:10, Hawthorn Court, the shared kitchen",
+       "setting": "Sam has pulled out the chair opposite you, which he never does, and two bin bags are by his feet. His name is in red on the fridge sheet beside the bins.",
+       "meters": {
+        "you": 70,
+        "them": 50
+       },
+       "beats": [
+        {
+         "who": "Sam",
+         "text": "“Maya's on a double again. The bins are mine tonight and I've lost the yard key.”",
+         "cue": "patting the third coat on the hook, not looking up",
+         "lines": [
+          {
+           "text": "“Where did you last have it, the coat or the hook by the door?”",
+           "tag": "best",
+           "you": 4,
+           "them": 7,
+           "outcome": "Sam looks up. “The hook. Probably the hook. Nobody ever asks which.”",
+           "why": "A plain question in the same voice he used gives him a fact to answer. The talk keeps going because you answered the Pilot he spoke to."
+          },
+          {
+           "text": "“Ugh, that's rubbish, sorry. Hope it turns up.”",
+           "tag": "ok",
+           "you": -1,
+           "them": -3,
+           "outcome": "Sam nods at the bags. “Yeah. Probably.” The key is left hanging and he has nothing to add.",
+           "why": "The sympathy comes from the caring side of the Boss, but he spoke to the Pilot with a fact. A reply from another voice is a cut, so the line stops even though it sounds kind."
+          },
+          {
+           "text": "“Not your problem, the landlord only left us one key. Ask him.”",
+           "tag": "ok",
+           "you": -2,
+           "them": -5,
+           "outcome": "Sam puts his hand flat on the table. “Right. Fine.” He looks at the coats again.",
+           "why": "The Boss answers a fact with a ruling. That closes the talk, because he now has to defend the lost key instead of talking about where it went."
+          }
+         ]
+        },
+        {
+         "who": "Sam",
+         "text": "“Nobody in this flat asks how I am, you know. My head's been pounding since Sunday.”",
+         "cue": "pressing a thumb to his temple",
+         "lines": [
+          {
+           "text": "“That sounds rough. Is it worse when you wake up or by the evening?”",
+           "tag": "best",
+           "you": 4,
+           "them": 6,
+           "outcome": "He half laughs. “The evening. Around the time Maya's key turns in the door, funnily.”",
+           "why": "Warmth answers the caring voice he spoke to, and the question hands him a real choice. The line matches and keeps going, and the job stays with him."
+          },
+          {
+           "text": "“Oh, poor you. Leave the bins and the whole rota to me, I'll do the month. Go to bed.”",
+           "tag": "game",
+           "you": -6,
+           "them": 8,
+           "outcome": "Sam's shoulders drop. “You're a star. I owe you one.” He leaves the bags by the door and goes to his room without looking at the sheet again.",
+           "why": "You took the job off him. The reply is still matched, so the chain runs on, but he is now the Kid being looked after and you are doing his month. This is a trap move, and it ends the scene here."
+          },
+          {
+           "text": "“Same here, my head's been awful too.”",
+           "tag": "ok",
+           "you": -1,
+           "them": 2,
+           "outcome": "Sam nods slowly. “Yeah. Everyone's head is awful.” The moment is shared, and then it is gone.",
+           "why": "He asked for care from a caring voice, and you answered from the Kid. The reply matches in feeling and cuts in voice, so he gets company instead of the care he was asking for."
+          }
+         ]
+        },
+        {
+         "who": "Sam",
+         "text": "“Anyway. The gas money is due Friday and I'm eleven fares short.”",
+         "cue": "back to the facts, a bit embarrassed",
+         "lines": [
+          {
+           "text": "“How much is your share, and could you do half tonight and half on Friday?”",
+           "tag": "best",
+           "you": 4,
+           "them": 5,
+           "outcome": "Sam grins at the bags. “Twenty-eight. So fourteen and fourteen. Maya likes things in halves.”",
+           "why": "You stayed in the Pilot and asked for the facts he needs. He is answered in his own voice, so the talk can keep running on the thing he cares about."
+          },
+          {
+           "text": "“Don't be embarrassed. You're allowed to be skint.”",
+           "tag": "ok",
+           "you": -3,
+           "them": -1,
+           "outcome": "Sam looks surprised, then a bit cross. “I'm not embarrassed. I'm telling you I'm short.”",
+           "why": "You answered a fact with a parent's permission, which is a cut. He did not ask to be told how to feel, so the gas money drops out of the conversation."
+          }
+         ]
+        }
+       ],
+       "payoff": "Sam goes to bed a job lighter. By Friday the bins are yours, then the gas, and Maya's fridge sheet has your name on every line and his on none."
+      },
+      {
+       "type": "scene",
+       "title": "Tuesday, 23:20, Hawthorn Court, the kitchen again",
+       "setting": "Maya is home from her double with her coat still on and the kettle going. She is facing the window, not you, and the sheet on the fridge has a new tick on it.",
+       "meters": {
+        "you": 70,
+        "them": 50
+       },
+       "beats": [
+        {
+         "who": "Maya",
+         "text": "“Did the rota survive the day? Don't tell Sam I asked.”",
+         "cue": "filling the kettle, back to you",
+         "lines": [
+          {
+           "text": "“Mostly. Bins are out and the gas is down for Friday. Did you eat on shift?”",
+           "tag": "best",
+           "you": 4,
+           "them": 7,
+           "outcome": "Maya turns round. “A cheese roll. Standing up. It counts.” She almost laughs.",
+           "why": "You answered her question with a real answer and asked one back. That gives her a next step, and she can still choose what to do with it."
+          },
+          {
+           "text": "“Nobody's keeping score, Maya. Don't overthink it.”",
+           "tag": "ok",
+           "you": -2,
+           "them": -4,
+           "outcome": "She shrugs and lifts the lid of the kettle. “Right. Fine.”",
+           "why": "A ruling from the Boss answers a question she asked as the Pilot. She is told not to think about it, so the question drops and the sheet stays unmentioned."
+          },
+          {
+           "text": "“Same, I'm not sure it survived either.”",
+           "tag": "ok",
+           "you": -1,
+           "them": -1,
+           "outcome": "Maya looks at you as if you had said something else. “Right. Okay.”",
+           "why": "The Kid answers a Pilot question. You matched the mood, though the voice was wrong, so it is a cut, and her question stops in the air."
+          }
+         ]
+        },
+        {
+         "who": "Maya",
+         "text": "“I always say I'll ask him to wash up, and then I do it myself at midnight.”",
+         "cue": "quiet, not joking",
+         "lines": [
+          {
+           "text": "“What stops you, once you're at the sink? Tell me the actual thing.”",
+           "tag": "best",
+           "you": 4,
+           "them": 6,
+           "outcome": "She thinks about it. “The look. He says sorry so fast that I end up comforting him.”",
+           "why": "You answered from the Pilot, the voice she was speaking from, and asked for the real thing. She gets room to say something true, which keeps the volley alive."
+          },
+          {
+           "text": "“You should just ask him. Put it on the sheet.”",
+           "tag": "ok",
+           "you": -2,
+           "them": -3,
+           "outcome": "She goes quiet. “Yeah. Maybe.” The line runs out with her hands round the mug.",
+           "why": "Advice from the Boss is kindly meant, but it jumps past what she said. Nothing she feels has been asked about, so the talk closes."
+          }
+         ]
+        },
+        {
+         "who": "Maya",
+         "text": "“Anyway. Six o'clock start, so I'm going to bed.”",
+         "cue": "mug in hand, already at the door",
+         "lines": [
+          {
+           "text": "“Go on, then. Thanks for asking about the rota. I'll think about the sink.”",
+           "tag": "best",
+           "you": 3,
+           "them": 5,
+           "outcome": "Maya nods, almost warm. “Leave me the left-hand side of the draining board.” She goes down the hall.",
+           "why": "You let the volley end on a Pilot note, with a thanks and a real intention. Nothing is cut, so she leaves knowing the talk was welcome."
+          },
+          {
+           "text": "“Yes, Maya, you're tired. Off you go.”",
+           "tag": "ok",
+           "you": -2,
+           "them": -4,
+           "outcome": "She nods and leaves without looking back at the kettle.",
+           "why": "You sent her off from the Boss's chair. It does no harm, though it answers her plan with a dismissal, so the volley is cut right at the end."
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "level": "Analyse",
+     "label": "Analyse, explain it",
+     "items": [
+      {
+       "type": "pick",
+       "who": "You, replaying the kitchen",
+       "text": "“Leave the bins and the whole rota to me.” “You're a star. I owe you one.” Two lines, and the talk ran on between them.",
+       "cue": "the kettle cold, the red name on the fridge sheet",
+       "options": [
+        "A cut, it stops the talk",
+        "A nod, one warm line",
+        "A matched volley, it keeps going"
+       ],
+       "answer": 2,
+       "why": "Each reply came from the voice that was spoken to: the Kid answered the caring voice, and the caring voice answered the Kid. The chain ran on for as long as both kept their parts, even though the head and the bins went unsorted.",
+       "traps": {
+        "0": "A cut needs a reply from a different voice than the one addressed. Here both lines landed in the seat they were aimed at, so nothing stopped them.",
+        "1": "A nod is one line of warmth. This was a loop of replies, and each reply set up the next one, so the one-line label misses the chain."
+       },
+       "example": "A family WhatsApp group, an uncle who writes: “Leave the car to me, I'll drive everyone.” His niece replies: “You're a hero.”<br>Next month the lifts come round the same way. Every reply was in the right seat, and the chain keeps going."
+      },
+      {
+       "type": "pick",
+       "who": "You, the next time he says it",
+       "text": "“My head's been pounding since Sunday.” How do you keep him talking, and leave the bins with him?",
+       "cue": "you already know which answer is the easy one",
+       "options": [
+        "A matched volley that hands the job back",
+        "A matched volley that takes the job off him",
+        "A cut to the gas bill"
+       ],
+       "answer": 0,
+       "why": "A caring question and a rescue are both matched, so both keep the line going. The difference is whether the job goes back to Sam. A question about when it is worst gives him a choice and leaves the bins with him.",
+       "traps": {
+        "1": "Taking the job is matched too, which is why it feels like help. It keeps the line running, but Sam stays in the Kid's chair and you end up holding his bins.",
+        "2": "A cut to the gas bill changes the subject to money, so the head is dropped mid-sentence and nobody gets to finish saying it."
+       },
+       "example": "A shop counter, a customer who groans: “This printer's been broken all week.”<br>“Which error does it show? Read it out and we'll sort it.” keeps the job with the customer, and the line keeps going."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "setting": "Family",
+   "blurb": "Gran has a brown envelope and sore hands, and Dad has a phone he keeps putting down.",
+   "opener": {
+    "setting": "Sunday, 12:30, Hawthorn Court, Gran's kitchen downstairs. A pan of lentils on the hob, Leo under the table with a tablet, and a brown envelope Gran keeps turning over.",
+    "lines": [
+     {
+      "who": "Gran",
+      "text": "“The council wrote again. Don't read anything into the envelope, I haven't opened it yet.”",
+      "cue": "pressing it flat under the teapot"
+     },
+     {
+      "who": "Gran",
+      "text": "“Sit. I made too much, as usual.”",
+      "cue": "pushing a bowl across, eyes on the envelope"
+     }
+    ],
+    "ask": "Can you keep Gran talking by answering from the voice she spoke to, rather than cutting her off or taking her letters off her hands?"
+   },
+   "rounds": [
+    {
+     "level": "Spot",
+     "label": "Spot, round 1",
+     "intro": "<b>How this one works:</b> someone speaks, and you pick the voice that answers so the talk keeps going. Four quick questions, then the scene.",
+     "items": [
+      {
+       "type": "pick",
+       "who": "Gran",
+       "text": "“The letter says the bins move to Thursdays from the fourteenth, and the old calendar is still on the fridge.”",
+       "cue": "reading the envelope at arm's length",
+       "options": [
+        "The Pilot",
+        "The Boss",
+        "The Kid"
+       ],
+       "answer": 0,
+       "why": "She is giving plain facts and pointing at the proof. That is the Pilot talking to your Pilot, so the matched reply asks about the date and goes straight back to hers.",
+       "traps": {
+        "1": "A Boss reply would be “Then the council should have posted a new one, and you can ignore it.” It is a ruling on the facts, so Gran has nothing left to say and the talk drops.",
+        "2": "A Kid reply would be “Sorry, Gran, I can't read these, I'd only get it wrong.” It apologises instead of answering, so the calendar stays on the fridge."
+       },
+       "example": "A lift lobby, one neighbour to another: “The lift is out until Friday, and the stairs door sticks.”<br>“I'll lean on it while you go through.” keeps it going. “Not my lift.” ends it."
+      },
+      {
+       "type": "pick",
+       "who": "Gran",
+       "text": "“Sorry, sorry, I put salt in the custard again. I'm getting hopeless in my old age.”",
+       "cue": "tasting from the spoon, wincing at the pan",
+       "options": [
+        "The Kid",
+        "The Boss",
+        "The Pilot"
+       ],
+       "answer": 1,
+       "why": "The apology is aimed at someone who could be cross or could forgive. A Boss reply, “It happens, Gran. We'll have it with jam and nobody will mind,” answers from the voice she spoke to, so the talk keeps going.",
+       "traps": {
+        "0": "A Kid reply would be “Oh, I burnt the toast this morning, I'm worse.” Two Kids apologising can feel close, but the reply came from a different voice than the one addressed, so the line is cut.",
+        "2": "A Pilot reply would be “The salt is in the blue tin and the sugar in the white.” It is a sensible fix, but it skips the apology, so the apology hangs there and the talk stops."
+       },
+       "example": "A school canteen, a dinner lady who has dropped a tray: “Sorry, sorry, I'm all fingers today.”<br>“Happens. Pass me the cloth,” and the line runs on."
+      },
+      {
+       "type": "pick",
+       "who": "Mum",
+       "text": "“Don't sit up on that laptop. Eat something warm and ring your father.”",
+       "cue": "on the phone speaker, a kettle clicking off behind her",
+       "options": [
+        "The Boss",
+        "The Pilot",
+        "The Kid"
+       ],
+       "answer": 2,
+       "why": "The order comes from the Boss and is aimed at the Kid in you. The Kid's reply, “Okay, something warm, then Dad,” is the voice that was spoken to, so the line matches and keeps running.",
+       "traps": {
+        "0": "A Boss reply, “Mum, I'm an adult, don't tell me what to eat,” answers an order with an order from another seat. The line is cut and the kettle goes cold.",
+        "1": "A Pilot reply, “The train to you takes nine hours, so I'd rather call than visit,” is a sensible fact, but it comes after an order and never answers the voice the order was aimed at. The talk stops there."
+       },
+       "example": "A park bench, a grandmother to her grandson: “Zip your coat up and hold my hand at the road.”<br>“Okay, zip, then hand.” is the matched reply. “I'm not a baby.” is the cut."
+      },
+      {
+       "type": "pick",
+       "who": "Dad",
+       "text": "“Did my text come through, or shall I send it again?”",
+       "cue": "a real question, the television on mute behind him",
+       "prompt": "Which kind of reply keeps the talk going?",
+       "options": [
+        "A cut, it stops the talk",
+        "A matched volley, it keeps going"
+       ],
+       "answer": 1,
+       "why": "He asks a plain question from the Pilot, and a plain Pilot answer keeps the volley alive: “Got it, thanks. Is Sunday still the day you'll ring?”",
+       "traps": {
+        "0": "A cut would be “Please don't send it again, my phone buzzes all day.” It answers from the Kid, a different voice than the one he asked from, so the question drops and the talk goes with it."
+       },
+       "example": "A bike rack at school, one dad to another: “Did the trip form reach you, or should I sign another?”<br>“Got it, thanks, which box did it need?” keeps them talking. “Please don't ask me again.” ends it."
+      }
+     ]
+    },
+    {
+     "level": "Play",
+     "label": "Play, the week in motion",
+     "intro": "<b>Now you keep it going.</b> Each line you pick is a reply. Matched replies keep the talk alive, and a matched reply can keep running for the wrong reasons too.",
+     "items": [
+      {
+       "type": "scene",
+       "title": "Sunday, 12:30, Gran's kitchen downstairs",
+       "setting": "Gran has put the brown envelope under the teapot and sat down opposite you. Leo is under the table, tapping his tablet and half listening.",
+       "meters": {
+        "you": 70,
+        "them": 50
+       },
+       "beats": [
+        {
+         "who": "Gran",
+         "text": "“The gas people want a meter reading by Friday and the dial's behind the cooker. I've been on my knees since eight.”",
+         "cue": "rubbing her knee through her skirt",
+         "lines": [
+          {
+           "text": "“Which dial, Gran, the round one or the one with the numbers?”",
+           "tag": "best",
+           "you": 4,
+           "them": 7,
+           "outcome": "Gran looks up. “The numbers. Nobody ever asks which.”",
+           "why": "A plain question in the same voice she used gives her a fact to answer. The talk keeps going because you answered the Pilot she spoke to."
+          },
+          {
+           "text": "“Ugh, that's so annoying, sorry. Hope it isn't too bad.”",
+           "tag": "ok",
+           "you": -1,
+           "them": -3,
+           "outcome": "Gran nods at the teapot. “Yes. Well.” The dial is left hanging and she has nothing to add.",
+           "why": "The sympathy comes from the caring side of the Boss, but she spoke to the Pilot with a fact. A reply from another voice is a cut, so the line stops even though it sounds kind."
+          },
+          {
+           "text": "“Not your job, Gran. The gas people should send a man.”",
+           "tag": "ok",
+           "you": -2,
+           "them": -5,
+           "outcome": "Gran folds her hands. “Right. Fine.” She gets up to stir the pan.",
+           "why": "The Boss answers a fact with a ruling. That closes the talk, because she now has to defend the reading instead of talking about the dial."
+          }
+         ]
+        },
+        {
+         "who": "Gran",
+         "text": "“Nobody down here asks how I am, you know. My hands have been like this since Friday.”",
+         "cue": "opening and closing her fingers under the table",
+         "lines": [
+          {
+           "text": "“That sounds sore. Is it the gripping or the cold that's worse?”",
+           "tag": "best",
+           "you": 4,
+           "them": 6,
+           "outcome": "She half laughs. “The cold. The tap in the morning is a punishment.”",
+           "why": "Warmth answers the caring voice she spoke to, and the question hands her a real choice. The line matches and keeps going, and the job stays with her."
+          },
+          {
+           "text": "“Oh, Gran. Leave the letters and the gas man to me, I'll do all of it. Sit down.”",
+           "tag": "game",
+           "you": -6,
+           "them": 8,
+           "outcome": "Gran's shoulders drop. “You're a lifesaver. I'd be lost without you.” She pushes the envelope across and turns back to the custard without a glance. Leo looks up from under the table, then down again.",
+           "why": "You took the job off her. The reply is still matched, so the chain runs on, but she is now the Kid being looked after and you are reading her post. This is a trap move, and it ends the scene here."
+          },
+          {
+           "text": "“Same here, my hands are rubbish too.”",
+           "tag": "ok",
+           "you": -1,
+           "them": 2,
+           "outcome": "Gran nods slowly. “Yes. Everyone's hands are rubbish.” The moment is shared, and then it is gone.",
+           "why": "She asked for care from a caring voice, and you answered from the Kid. The reply matches in feeling and cuts in voice, so she gets company instead of the care she was asking for."
+          }
+         ]
+        },
+        {
+         "who": "Gran",
+         "text": "“Anyway. The form is due Friday and I've lost the pen.”",
+         "cue": "patting her apron pockets, a bit embarrassed",
+         "lines": [
+          {
+           "text": "“Which part of the form is stuck, and where did you last put the pen down?”",
+           "tag": "best",
+           "you": 4,
+           "them": 5,
+           "outcome": "Gran smiles at the table. “The part about income. And the pen is with Mrs Kale's crossword, I'd say.”",
+           "why": "You stayed in the Pilot and asked for the facts she needs. She is answered in her own voice, so the talk can keep running on the thing she cares about."
+          },
+          {
+           "text": "“Don't be embarrassed, Gran. You're allowed to need help.”",
+           "tag": "ok",
+           "you": -3,
+           "them": -1,
+           "outcome": "Gran looks surprised, then a bit cross. “I'm not embarrassed. I'm telling you I've lost a pen.”",
+           "why": "You answered a fact with a parent's permission, which is a cut. She did not ask to be told how to feel, so the form drops out of the conversation."
+          }
+         ]
+        }
+       ],
+       "payoff": "Gran sits back, a job lighter. By Friday every envelope in the building comes down to you, and Gran has stopped opening her own post."
+      },
+      {
+       "type": "scene",
+       "title": "Sunday, 18:00, the phone, Dad",
+       "setting": "Your phone has lit up with Dad's name, which it almost never does. Behind his voice the television is on mute and a football score keeps flickering.",
+       "meters": {
+        "you": 70,
+        "them": 50
+       },
+       "beats": [
+        {
+         "who": "Dad",
+         "text": "“Your mother says you're coming at Christmas. Don't tell her I asked.”",
+         "cue": "a low voice, a door being pulled shut",
+         "lines": [
+          {
+           "text": "“Yes, the twenty-third, if the trains run. Will you be at the station?”",
+           "tag": "best",
+           "you": 4,
+           "them": 7,
+           "outcome": "Dad clears his throat. “If the car starts. It's started once since September.” You hear him almost laugh.",
+           "why": "You answered his question with a real answer and asked one back. That gives him a next step, and he can still choose what to do with it."
+          },
+          {
+           "text": "“Nobody's making you say anything, Dad. Don't overthink it.”",
+           "tag": "ok",
+           "you": -2,
+           "them": -4,
+           "outcome": "He coughs. “Right. Fine.” The score flickers on the muted screen.",
+           "why": "A ruling from the Boss answers a question he asked as the Pilot. He is told not to think about it, so the question drops and the station stays empty."
+          },
+          {
+           "text": "“Same, I'm not sure I'm coming either.”",
+           "tag": "ok",
+           "you": -1,
+           "them": -1,
+           "outcome": "Dad pauses as if you had said something else. “Right. Okay.”",
+           "why": "The Kid answers a Pilot question. You matched the mood, though the voice was wrong, so it is a cut, and his question stops in the air."
+          }
+         ]
+        },
+        {
+         "who": "Dad",
+         "text": "“I always pick the phone up to ring you, and then I put it back down again.”",
+         "cue": "quiet, not joking",
+         "lines": [
+          {
+           "text": "“What stops you, once it's in your hand? Tell me the actual thing.”",
+           "tag": "best",
+           "you": 4,
+           "them": 6,
+           "outcome": "He thinks about it. “I run out of things before it rings. The football and the car, that's all I've got.”",
+           "why": "You answered from the Pilot, the voice he was speaking from, and asked for the real thing. He gets room to say something true, which keeps the volley alive."
+          },
+          {
+           "text": "“You should just ring. Call any time, Dad.”",
+           "tag": "ok",
+           "you": -2,
+           "them": -3,
+           "outcome": "He goes quiet. “Yes. Maybe.” The line runs out with the television still flickering.",
+           "why": "Advice from the Boss is kindly meant, but it jumps past what he said. Nothing he feels has been asked about, so the talk closes."
+          }
+         ]
+        },
+        {
+         "who": "Dad",
+         "text": "“Anyway. Match is back on and the dog wants out.”",
+         "cue": "already half gone, a lead jingling",
+         "lines": [
+          {
+           "text": "“Go on, then. Thanks for ringing today. I'll text you which train.”",
+           "tag": "best",
+           "you": 3,
+           "them": 5,
+           "outcome": "Dad is almost warm. “Do that. I'll look at the text.” The line clicks off.",
+           "why": "You let the volley end on a Pilot note, with a thanks and a real intention. Nothing is cut, so he leaves knowing the talk was welcome."
+          },
+          {
+           "text": "“Yes, Dad, you're busy. Off you go.”",
+           "tag": "ok",
+           "you": -2,
+           "them": -4,
+           "outcome": "He says “Right” and the line goes dead before you have put the phone down.",
+           "why": "You sent him off from the Boss's chair. It does no harm, though it answers his plan with a dismissal, so the volley is cut right at the end."
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "level": "Analyse",
+     "label": "Analyse, explain it",
+     "items": [
+      {
+       "type": "pick",
+       "who": "You, replaying the kitchen",
+       "text": "“Leave the letters and the gas man to me.” “You're a lifesaver. I'd be lost without you.” Two lines, and the talk ran on between them.",
+       "cue": "the custard going cold, the envelope still under the teapot",
+       "options": [
+        "A matched volley, it keeps going",
+        "A cut, it stops the talk",
+        "A nod, one warm line"
+       ],
+       "answer": 0,
+       "why": "Each reply came from the voice that was spoken to: the Kid answered the caring voice, and the caring voice answered the Kid. The chain ran on for as long as both kept their parts, even though the hands and the letters went unsorted.",
+       "traps": {
+        "1": "A cut needs a reply from a different voice than the one addressed. Here both lines landed in the seat they were aimed at, so nothing stopped them.",
+        "2": "A nod is one line of warmth. This was a loop of replies, and each reply set up the next one, so the one-line label misses the chain."
+       },
+       "example": "A family WhatsApp group, a mother who writes: “Leave the shopping, I'll pick it up.” Her son replies: “You're the best, Mum.”<br>Next week the bills come round the same way. Every reply was in the right seat, and the chain keeps going."
+      },
+      {
+       "type": "pick",
+       "who": "You, the next time she says it",
+       "text": "“My hands have been like this since Friday.” How do you keep her talking, and leave the letters with her?",
+       "cue": "you already know which answer is the easy one",
+       "options": [
+        "A matched volley that takes the job off her",
+        "A matched volley that hands the job back",
+        "A cut to the meter reading"
+       ],
+       "answer": 1,
+       "why": "A caring question and a rescue are both matched, so both keep the line going. The difference is whether the job goes back to Gran. A question about the cold gives her a choice and leaves the letters with her.",
+       "traps": {
+        "0": "Taking the job is matched too, which is why it feels like help. It keeps the line running, but Gran stays in the Kid's chair and you end up holding her post.",
+        "2": "A cut to the meter reading changes the subject to the gas, so the hands are dropped mid-sentence and nobody gets to finish saying it."
+       },
+       "example": "A shop counter, a customer who groans: “This printer's been broken all week.”<br>“Which error does it show? Read it out and we'll sort it.” keeps the job with the customer, and the line keeps going."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

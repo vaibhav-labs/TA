@@ -1,0 +1,878 @@
+{
+  "baseBlurb": "Maya sorts a week of other people's nods with you on the 3B balcony, line by line.",
+  "stories": [
+    {
+      "setting": "Friends & Community",
+      "blurb": "Joseph's birthday tea went well, and Ruby wants to know what you actually took in.",
+      "opener": {
+        "setting": "Saturday, 16:40. The Corner Table, the back booth. Joseph's birthday tea is over, and the cake box sits on the seat beside you.",
+        "lines": [
+          { "who": "Ruby", "text": "“Nine people thanked you today. I counted.”", "cue": "turns the bill over and uncaps a pen" },
+          { "who": "Ruby", "text": "“And you handed every one of them back.”", "cue": "pen hovering, waiting" }
+        ],
+        "ask": "Which of the nods you got today did you actually let in, and which did you wave away?"
+      },
+      "rounds": [
+        {
+          "level": "Spot",
+          "label": "Spot, round 1",
+          "intro": "Each card is one line from this week. Tap what kind of nod it was.",
+          "items": [
+            {
+              "type": "pick",
+              "who": "Joseph",
+              "text": "“Goalie again. Fine.”",
+              "cue": "Thursday, five-a-side, lacing a boot, not looking up",
+              "options": ["Warm", "Cold"],
+              "answer": 1,
+              "why": "Cold. He registers that you are there and puts no warmth in it. It is still a nod, only a flat one.",
+              "traps": {
+                "0": "Warm would need some pleasure in it. He kept his eyes on his boot, so warm reads in more than he gave."
+              },
+              "example": "A foreman at the site gate.<br>“Oh. You again.”<br>He sees you, and nothing else comes with it."
+            },
+            {
+              "type": "pick",
+              "who": "Ruby",
+              "text": "“Come Saturday. The table's short without you.”",
+              "cue": "Wednesday, a voice note recorded between buses",
+              "options": ["For doing", "For being"],
+              "answer": 1,
+              "why": "For being. She wants you at the table and names nothing you did. It is warm, and you keep it even if you do nothing at all.",
+              "traps": {
+                "0": "For doing would mean she was praising something you made or fixed. She asks for you, with no job attached."
+              },
+              "example": "A neighbour on the stairs.<br>“Do come to the street party. It's dull when you're away.”<br>She asks for you, and no favour is attached."
+            },
+            {
+              "type": "pick",
+              "who": "Nadia",
+              "text": "“Table for nine at three. You're a star for sorting it.”",
+              "cue": "Friday, the Sunday group chat",
+              "options": ["Warm", "Cold"],
+              "answer": 0,
+              "why": "Warm. She is thanking you for something you did. Most of us live on this kind, and it is easy to bounce.",
+              "traps": {
+                "1": "Cold would mean she was brushing you off. She is thanking you by name, so cold misses the warmth."
+              },
+              "example": "A teammate after a match.<br>“Cheers for driving everyone today.”<br>Warm, and it is for the lift."
+            }
+          ]
+        },
+        {
+          "level": "Play",
+          "label": "Play, the week in motion",
+          "intro": "Ruby has the bill and a pen. Sort the day, then tell her which nods you took in.",
+          "items": [
+            {
+              "type": "scene",
+              "title": "Saturday, 16:45, the back booth",
+              "setting": "Ruby earns her place by being useful, and she has turned the bill over to write on. She wants your day, line by line.",
+              "meters": { "you": 60, "them": 50 },
+              "beats": [
+                {
+                  "who": "Ruby",
+                  "text": "“You stood by the door like staff the whole time. What was that?”",
+                  "cue": "tapping the pen on the sugar bowl",
+                  "lines": [
+                    {
+                      "text": "“I didn't know where to stand.”",
+                      "tag": "best",
+                      "you": 0,
+                      "them": 5,
+                      "outcome": "Ruby snorts. “Nobody does. Go on.”",
+                      "why": "Saying the small true thing gives her something to work with. She asked a real question and got a real answer."
+                    },
+                    {
+                      "text": "“Someone had to watch the cake.”",
+                      "tag": "ok",
+                      "you": -4,
+                      "them": 0,
+                      "outcome": "One eyebrow goes up. “It was in a box.”",
+                      "why": "A tidy excuse sounds useful and hides the answer she asked for. Ruby knows a job when she hears one."
+                    }
+                  ]
+                },
+                {
+                  "who": "Ruby",
+                  "text": "“Everything anyone said to you today. I'll write it on the bill, and we'll say which ones were real.”",
+                  "cue": "clicks the pen",
+                  "lines": [
+                    {
+                      "text": "“Go on, then.”",
+                      "tag": "best",
+                      "you": 2,
+                      "them": 3,
+                      "outcome": "She writes a number one and waits for your first line.",
+                      "why": "Agreeing to the list lets you see which nods you carried home. The checking is the point of the sort."
+                    },
+                    {
+                      "text": "“Can we split the bill first?”",
+                      "tag": "ok",
+                      "you": -2,
+                      "them": -2,
+                      "outcome": "“The bill is the list. Sit.”",
+                      "why": "Asking to pay first is reasonable, and it only puts the sorting off. She still wants the day, and so do you."
+                    }
+                  ]
+                },
+                {
+                  "who": "Ruby",
+                  "text": "“Twelve lines. Warm or cold, for what you did or for who you are. A corner each.”",
+                  "cue": "fans out napkins, one line on each",
+                  "lines": [
+                    {
+                      "text": "“Right. Deal them out.”",
+                      "tag": "best",
+                      "you": 2,
+                      "them": 2,
+                      "outcome": "The first napkin slides across the table. Your day is in front of you, one line at a time.",
+                      "why": "Reading each line as plain information, with no verdict on you attached, keeps the sort fair."
+                    },
+                    {
+                      "text": "“Can't I just say it went well?”",
+                      "tag": "ok",
+                      "you": -4,
+                      "them": -2,
+                      "outcome": "“It went well, you said. Pick up a napkin.”",
+                      "why": "Saying it went well is the bounce in short form. Ruby won't take the summary, so you get the list instead."
+                    }
+                  ]
+                }
+              ],
+              "example": "A group chat after a party.<br>Host: “Thanks for coming, it meant a lot.”<br>You reply “It was nothing.” The thanks is still there, and it has nowhere to land."
+            },
+            {
+              "type": "sort",
+              "prompt": "Put each line in its corner. Warm or cold, for doing or for being.",
+              "bins": ["Warm, for doing", "Warm, for being", "Cold, for doing", "Cold, for being"],
+              "items": [
+                { "text": "The woman at the till says “Next.” without looking up.", "answer": 3, "why": "She registered you and asked for nothing more. Cold, and it is for being in the queue at all." },
+                { "text": "“You've put the candles on crooked.”", "answer": 2, "why": "A remark about one thing you did. Cold, and aimed at your doing." },
+                { "text": "“The cake's perfect. Who found a place that does lemon?”", "answer": 0, "why": "She is pleased with your choice and says so. Warm, aimed at something you did." },
+                { "text": "“Come and sit by me.”", "answer": 1, "why": "Joseph's mum wants you near. Nothing you did earned it. Warm, for being." },
+                { "text": "Joseph's brother-in-law shakes your hand and looks at the door behind you.", "answer": 3, "why": "He registers you and puts no warmth in it. Cold, for being there." },
+                { "text": "“Ruby said you'd be late, and I said we'd wait.”", "answer": 1, "why": "Joseph held the cake back for you. The nod is for who you are, and it asks nothing. Warm, for being." },
+                { "text": "“Table for nine was meant to be by the window.”", "answer": 2, "why": "A complaint about one thing you arranged. Cold, and for doing." },
+                { "text": "“You remembered he hates nuts. Brilliant.”", "answer": 0, "why": "Praise for a detail you got right. Warm, and for doing." },
+                { "text": "The barista has your tea on the counter before you ask.", "answer": 1, "why": "She remembered you, and no task earned it. Warm, for being." },
+                { "text": "“Usual?” (said to the milk jug)", "answer": 3, "why": "The barista knows you exist and gives it no warmth. The line is about who you are, and the milk jug gets the eye contact. Cold, for being." },
+                { "text": "“Good, you're here. Now we can start.”", "answer": 1, "why": "Nadia was waiting for you in particular. Warm, for being." },
+                { "text": "Ruby saves the end of the booth with her coat, and she sits on her hands to keep it.", "answer": 1, "why": "She holds a place for you with her own coat. Warm, for being." }
+              ],
+              "example": "A neighbours' group chat.<br>“Lovely cake!” gets four hearts.<br>“Who's bringing chairs?” gets silence."
+            },
+            {
+              "type": "scene",
+              "title": "Saturday, 17:15, the back booth",
+              "setting": "The napkins are sorted. Ruby wants to know which nods you let in, and then she has chairs to stack.",
+              "meters": { "you": 60, "them": 50 },
+              "beats": [
+                {
+                  "who": "Ruby",
+                  "text": "“Which of those did you actually let in?”",
+                  "cue": "the warm napkins in a row beside the sugar",
+                  "lines": [
+                    {
+                      "text": "“I bounced most of them. That's mine.”",
+                      "tag": "best",
+                      "you": 6,
+                      "them": 4,
+                      "outcome": "She doesn't smile. She holds your eye, though. “Right. Let's go through them.”",
+                      "why": "Naming the bounce is what breaks it. A warm nod you can see is a warm nod you can take.",
+                      "flags": ["bounce_count_w1"]
+                    },
+                    {
+                      "text": "“Joseph's mum, and the barista. I took those two.”",
+                      "tag": "ok",
+                      "you": 2,
+                      "them": 3,
+                      "outcome": "She nods, slowly. “Good. Keep those.”",
+                      "why": "Taking a warm nod in is the fix. Two of them is a start, and it shows you can let one land."
+                    },
+                    {
+                      "text": "“None. Everybody says that at a party.”",
+                      "tag": "ok",
+                      "you": -6,
+                      "them": -4,
+                      "outcome": "“Then they'll keep being nothing to you,” she says, and caps the pen.",
+                      "why": "Ruling out every warm nod keeps the day cold. The nods were there, and you decided they didn't count."
+                    }
+                  ]
+                },
+                {
+                  "who": "Ruby",
+                  "text": "“Nadia said the table was perfect and you said anyone can ring a cafe. Joseph's mum said she was glad you came and you said you only came for the cake. Two bounces.”",
+                  "cue": "reading the napkins back, one at a time",
+                  "lines": [
+                    {
+                      "text": "“Fair. Next time I'll just say thank you.”",
+                      "tag": "best",
+                      "you": 3,
+                      "them": 3,
+                      "outcome": "She smiles. “That's the fix. Noticing it.”",
+                      "why": "Seeing a bounce while it happens is most of the fix. The next nod has a chance to land."
+                    },
+                    {
+                      "text": "“Anyone could have rung, though.”",
+                      "tag": "ok",
+                      "you": -4,
+                      "them": -2,
+                      "outcome": "“There it goes again.”",
+                      "why": "That is the same bounce with a new excuse. The nod goes back across the table, and the giver feels brushed off."
+                    },
+                    {
+                      "text": "“Are you having the last slice?”",
+                      "tag": "ok",
+                      "you": -3,
+                      "them": -1,
+                      "outcome": "“Slice when we're done. You're dodging.”",
+                      "why": "Changing the subject is a bounce too. It works for a minute and stops the nod before you can look at it."
+                    }
+                  ]
+                },
+                {
+                  "who": "Ruby",
+                  "text": "“Right. I'm stacking the chairs and getting the boxes to the car.”",
+                  "cue": "already holding two chairs by their backs",
+                  "lines": [
+                    {
+                      "text": "“You've been on your feet since noon. Sit, I'll do the boxes.”",
+                      "tag": "best",
+                      "you": 4,
+                      "them": 4,
+                      "outcome": "She stops with a chair in the air. “…Nobody says that to me.”",
+                      "why": "Taking the job off the person who always does it hands her a nod she rarely gets. It asks nothing back, so it lands."
+                    },
+                    {
+                      "text": "“Ruby, you're a legend.”",
+                      "tag": "ok",
+                      "you": 0,
+                      "them": 2,
+                      "outcome": "She is already at the door with the chairs and doesn't hear it.",
+                      "why": "A warm nod for doing, handed to someone who lives on those. It is kind, and it can't land while her arms are full."
+                    },
+                    {
+                      "text": "Sit and watch her.",
+                      "tag": "ok",
+                      "you": -3,
+                      "them": -2,
+                      "outcome": "The chairs go up one by one. Nobody speaks.",
+                      "why": "Watching without an offer keeps her in the job she always has."
+                    }
+                  ]
+                }
+              ],
+              "example": "A friend who always hosts.<br>“Sit down, I'll wash up.”<br>The offer that comes back is the one that changes the evening."
+            }
+          ]
+        },
+        {
+          "level": "Analyse",
+          "label": "Analyse, explain it",
+          "items": [
+            {
+              "type": "pick",
+              "who": "You",
+              "text": "Nadia said the table was perfect, and you told her anyone can ring a cafe. Why does batting that away cost you?",
+              "options": [
+                "It keeps the party easy, because nobody has to fuss over who did what and the cake gets the attention",
+                "It only matters at big events like a birthday, and everyday thank-yous are too small to bother with",
+                "It sends the thanks back before it lands, so she feels brushed off and you go home short"
+              ],
+              "answer": 2,
+              "why": "The bounce waves a warm nod away before it lands. Nadia gave you a nod for doing, you passed it back, and you leave with less than she meant you to have.",
+              "traps": {
+                "0": "Keeping it easy feels kind. Nobody was fussing, and the nod still bounced, so Nadia is left holding it.",
+                "1": "The bounce works the same on a small thank-you. A big day only gives you more of them to wave off."
+              },
+              "example": "A lift home from a friend.<br>“Thanks for driving, you're a lifesaver.”<br>You answer “Oh, it was on my way,” and the thanks goes back unopened."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "setting": "Family",
+      "blurb": "Dad grunted at your first-aid certificate, and Gran has the washing-up cloth and a lot of questions.",
+      "opener": {
+        "setting": "Sunday, 14:20. Gran's kitchen, downstairs. Lunch is over, the washing-up is half done, and Leo is under the table with a pack of spelling cards.",
+        "lines": [
+          { "who": "Gran", "text": "“Dry. Don't stand there like a visitor. Your father said one thing about that certificate and you've been chewing it since the soup.”", "cue": "hands you a tea towel without turning round" },
+          { "who": "Leo", "text": "“Can I do the cards for him, Gran?”", "cue": "from under the table, a pencil in his fist" }
+        ],
+        "ask": "Which of the nods you got this week did you actually let in, and which did you wave away?"
+      },
+      "rounds": [
+        {
+          "level": "Spot",
+          "label": "Spot, round 1",
+          "intro": "Each card is one line from this week. Tap what kind of nod it was.",
+          "items": [
+            {
+              "type": "pick",
+              "who": "Leo",
+              "text": "“You smell like rain! Can I wear your hat?”",
+              "cue": "Monday, the school gate, tugging your sleeve",
+              "options": ["Cold", "Warm"],
+              "answer": 1,
+              "why": "Warm. He is pleased you are there and wants to be close to you. He asks for nothing you did.",
+              "traps": {
+                "0": "Cold would mean he was shrugging you off. He is tugging your sleeve and asking for your hat, so cold misreads him."
+              },
+              "example": "A niece at the door.<br>“You're here! Come and see my room!”<br>She wants you, and you did nothing to earn it."
+            },
+            {
+              "type": "pick",
+              "who": "Gran",
+              "text": "“Sit. I kept the soft chair for you.”",
+              "cue": "Wednesday, the stairwell door, already open",
+              "options": ["For being", "For doing"],
+              "answer": 0,
+              "why": "For being. She kept the chair because you were coming, and nothing you did made her do it. It is warm, and you keep it whatever you do next.",
+              "traps": {
+                "1": "For doing would mean she was rewarding something you made or fixed. She saved the chair for you, whatever you had done that day."
+              },
+              "example": "An aunt at a wedding.<br>“I've kept you a seat by me.”<br>The seat is for you, and no deed earned it."
+            },
+            {
+              "type": "pick",
+              "who": "Dad",
+              "text": "“Hm.”",
+              "cue": "Sunday, behind the paper, after you said you'd passed the first-aid course",
+              "options": ["Warm", "Cold"],
+              "answer": 1,
+              "why": "Cold. He heard you, and the grunt carries no warmth. A cold nod is still a nod, and he did give you one.",
+              "traps": {
+                "0": "Warm would need a word or a smile in it. A grunt from behind a newspaper gives you nothing to read as warm."
+              },
+              "example": "A driver at a roundabout.<br>A flat nod with his eyes on the road.<br>He saw you, and that is all it says."
+            }
+          ]
+        },
+        {
+          "level": "Play",
+          "label": "Play, the week in motion",
+          "intro": "Gran has the cards and a pencil. Sort the week, then tell her which nods you took in.",
+          "items": [
+            {
+              "type": "scene",
+              "title": "Sunday, 14:30, Gran's kitchen",
+              "setting": "Gran is up to her elbows in suds. Leo has his spelling cards, and she wants every line anybody said to you this week.",
+              "meters": { "you": 60, "them": 50 },
+              "beats": [
+                {
+                  "who": "Gran",
+                  "text": "“Your mother says you went grey at the table. What happened?”",
+                  "cue": "passing a wet plate without looking",
+                  "lines": [
+                    {
+                      "text": "“Dad grunted at the certificate and I couldn't read it.”",
+                      "tag": "best",
+                      "you": 0,
+                      "them": 5,
+                      "outcome": "Gran gives a short laugh. “A grunt. That's a speech, for him. Go on.”",
+                      "why": "Saying the real thing lets her help. She asked a real question, and the small truth gave her something to work with."
+                    },
+                    {
+                      "text": "“I'm fine, Gran. I'm just full.”",
+                      "tag": "ok",
+                      "you": -4,
+                      "them": 0,
+                      "outcome": "“Full people don't dry a plate like that.”",
+                      "why": "Saying you're full closes the door on the one person offering to listen. Gran has heard that line before, and she says so."
+                    }
+                  ]
+                },
+                {
+                  "who": "Gran",
+                  "text": "“Right. Every word anyone said to you this week, family or stairwell. Leo writes, I judge.”",
+                  "cue": "slides the spelling cards across the table to Leo",
+                  "lines": [
+                    {
+                      "text": "“Go on, then.”",
+                      "tag": "best",
+                      "you": 2,
+                      "them": 3,
+                      "outcome": "Leo licks his pencil. Gran waits for your first line.",
+                      "why": "Saying yes to the list lets you see which nods you have been carrying. Checking them is the whole point of the sort."
+                    },
+                    {
+                      "text": "“Can we do the pudding first?”",
+                      "tag": "ok",
+                      "you": -2,
+                      "them": -2,
+                      "outcome": "“Pudding after. The cards are not going anywhere.”",
+                      "why": "Asking to skip it is reasonable, but it only moves the sorting later. She still wants the week, and so do you."
+                    }
+                  ]
+                },
+                {
+                  "who": "Gran",
+                  "text": "“Twelve cards. Warm or cold, for what you did or for who you are. Leo, a corner each.”",
+                  "cue": "taps the table twice",
+                  "lines": [
+                    {
+                      "text": "“Right. Let's do it.”",
+                      "tag": "best",
+                      "you": 2,
+                      "them": 2,
+                      "outcome": "Leo slides the first card across. He has spelt “certificate” with an s in the middle, and you leave it alone.",
+                      "why": "Looking at each line as data, not as a verdict on you, keeps the sort fair."
+                    },
+                    {
+                      "text": "“Can't I just say it was a good week?”",
+                      "tag": "ok",
+                      "you": -4,
+                      "them": -2,
+                      "outcome": "“A good week, you said. Sort the cards.”",
+                      "why": "A quick “good week” is the bounce in another form. Gran won't take the summary, so you get the cards."
+                    }
+                  ]
+                }
+              ],
+              "example": "A family group chat.<br>Aunt: “Well done on the course!”<br>You reply “It was nothing.” The praise is still there, and it has nowhere to land."
+            },
+            {
+              "type": "sort",
+              "prompt": "Put each line in its corner. Warm or cold, for doing or for being.",
+              "bins": ["Warm, for doing", "Warm, for being", "Cold, for doing", "Cold, for being"],
+              "items": [
+                { "text": "Dad lifts his chin at you from the sofa, eyes still on the football.", "answer": 3, "why": "He registered you and put no warmth in it. Cold, and it is for being there at all." },
+                { "text": "“You've left the tap dripping again.”", "answer": 2, "why": "Mum is talking about one thing you did. Cold, for doing." },
+                { "text": "“You did my knee up in a minute. I barely felt it.”", "answer": 0, "why": "Grace is pleased with what you did, and she says so. Warm, for doing." },
+                { "text": "“Sit by me!”", "answer": 1, "why": "Leo wants you next to him and asks for no favour. Warm, for being." },
+                { "text": "“Oh. It's you.” (through a gap in Mrs Kale's door)", "answer": 3, "why": "She registers who is on the landing and puts nothing warm in it. The line is about who you are. Cold, for being." },
+                { "text": "Mum touches your sleeve to check it is dry.", "answer": 1, "why": "She checks because you are on her mind, and you did nothing to earn it. Warm, for being." },
+                { "text": "“Your folder is on my chair.”", "answer": 2, "why": "Dad is talking about one thing you left behind. Cold, and aimed at what you did." },
+                { "text": "“Good. Somebody in this house should know what to do.”", "answer": 0, "why": "Gruff, and still praise for the course you finished. Warm, for doing." },
+                { "text": "“There he is.”", "answer": 1, "why": "Gran says it every time you walk in. She is glad of you. Warm, for being." },
+                { "text": "Dad passes the salt without looking up.", "answer": 3, "why": "Small and cold, but it reaches you as a person and asks nothing of you. Cold, for being." },
+                { "text": "“Come down Sunday. I'll make the pie you like.”", "answer": 1, "why": "Mum plans a pie around you. She cares that you are there and fed. Warm, for being." },
+                { "text": "“Come up for tea whenever. The door's always on the latch.”", "answer": 1, "why": "Grace is offering you a place in her day with nothing owed. Warm, for being." }
+              ],
+              "example": "A family dinner chat.<br>“Lovely photo!” gets three hearts.<br>“Who's collecting Gran?” gets silence."
+            },
+            {
+              "type": "scene",
+              "title": "Sunday, 15:00, Gran's kitchen",
+              "setting": "The cards are sorted. Gran wants to know which nods you let in, and then she means to take the bin bags out to the yard.",
+              "meters": { "you": 60, "them": 50 },
+              "beats": [
+                {
+                  "who": "Gran",
+                  "text": "“Now. Which of those did you actually let in?”",
+                  "cue": "dries her hands on her apron, the warm cards lined up",
+                  "lines": [
+                    {
+                      "text": "“Grace's one, and Mum's sleeve one. Those two.”",
+                      "tag": "ok",
+                      "you": 2,
+                      "them": 3,
+                      "outcome": "She nods, slowly. “Good. Keep those.”",
+                      "why": "Taking a warm nod in is the fix. Two of them is a start, and it shows you can let one land."
+                    },
+                    {
+                      "text": "“None. Family says that kind of thing out of habit.”",
+                      "tag": "ok",
+                      "you": -6,
+                      "them": -4,
+                      "outcome": "“Then they'll keep being nothing to you,” she says, and turns the cards face down.",
+                      "why": "Ruling out every warm nod keeps the week cold. The nods were there, and you decided they didn't count."
+                    },
+                    {
+                      "text": "“I bounced most of them. That's mine to own.”",
+                      "tag": "best",
+                      "you": 6,
+                      "them": 4,
+                      "outcome": "She doesn't smile. She holds your eye, though. “Right. Let's go through them.”",
+                      "why": "Naming the bounce is what breaks it. A warm nod you can see is a warm nod you can take.",
+                      "flags": ["bounce_count_w1"]
+                    }
+                  ]
+                },
+                {
+                  "who": "Gran",
+                  "text": "“Your father said somebody in this house should know what to do, and you told him anyone can pass that course. Leo said sit by me, and you said later. Two bounces.”",
+                  "cue": "reading from the cards, one eyebrow up",
+                  "lines": [
+                    {
+                      "text": "“Fair. The next one I'll take.”",
+                      "tag": "best",
+                      "you": 3,
+                      "them": 3,
+                      "outcome": "She smiles. “That's the fix. Noticing it.”",
+                      "why": "Seeing a bounce while it happens is most of the fix. The next nod has a chance to land."
+                    },
+                    {
+                      "text": "“It really was a short course, Gran.”",
+                      "tag": "ok",
+                      "you": -4,
+                      "them": -2,
+                      "outcome": "“There it goes again.”",
+                      "why": "That is the same bounce with a new excuse. The nod goes back across the table, and the giver feels brushed off."
+                    },
+                    {
+                      "text": "“Is the kettle on?”",
+                      "tag": "ok",
+                      "you": -3,
+                      "them": -1,
+                      "outcome": "“Kettle in two minutes. You're still dodging.”",
+                      "why": "Changing the subject is a bounce too. It works for a minute and stops the nod before you can look at it."
+                    }
+                  ]
+                },
+                {
+                  "who": "Gran",
+                  "text": "“Now I'm taking the bin bags out to the yard, and nobody is stopping me.”",
+                  "cue": "already gripping two bags in each hand",
+                  "lines": [
+                    {
+                      "text": "“You've been on your feet since seven. I'll take them.”",
+                      "tag": "best",
+                      "you": 4,
+                      "them": 4,
+                      "outcome": "She stops at the door. “…Nobody asks me that.”",
+                      "why": "Taking the job off the person who always does it hands her a nod she rarely gets. It asks nothing back, so it lands."
+                    },
+                    {
+                      "text": "“Thanks, Gran, you're an angel.”",
+                      "tag": "ok",
+                      "you": 0,
+                      "them": 2,
+                      "outcome": "The back door swings shut before you finish.",
+                      "why": "A warm nod for doing, handed to someone who gets plenty of those. It is kind, and it misses her through a closing door."
+                    },
+                    {
+                      "text": "Sit and wait for her to come back.",
+                      "tag": "ok",
+                      "you": -3,
+                      "them": -2,
+                      "outcome": "The bags thump across the yard. The kettle clicks off by itself.",
+                      "why": "Letting her do everything without an offer keeps her in the same job, which is where she already is."
+                    }
+                  ]
+                }
+              ],
+              "example": "A grandmother who always cooks.<br>“Sit down, I'll carry that.”<br>The offer that comes back is the one she remembers."
+            }
+          ]
+        },
+        {
+          "level": "Analyse",
+          "label": "Analyse, explain it",
+          "items": [
+            {
+              "type": "pick",
+              "who": "You",
+              "text": "Dad said somebody in this house should know what to do, and you told him anyone can pass that course. Why does batting that away cost you?",
+              "options": [
+                "It sends the nod back before it lands, so Dad feels brushed off and you stay short",
+                "It shows you are modest, and a modest son is easier for a gruff father to respect, so nothing is lost",
+                "It only matters when the giver is a boss or a teacher, and a father's praise is too ordinary to count"
+              ],
+              "answer": 0,
+              "why": "The bounce is waving a warm nod away before it lands. Dad managed a rare bit of praise, you said it was nothing, and he is left feeling brushed off while you go short.",
+              "traps": {
+                "1": "Modesty feels safe, but the nod still never sinks in. A gruff father says little, so a bounced nod means a long wait for the next.",
+                "2": "The bounce works the same whoever gives the nod. A father's praise is rare, which makes it the one to take in."
+              },
+              "example": "A parent at a graduation.<br>“I'm proud of you.”<br>You reply “It's only a diploma,” and the pride has nowhere to go."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "setting": "Relationships",
+      "blurb": "Clara's text has sat unanswered for nineteen hours, and Gemma, who is too honest, wants the whole week.",
+      "opener": {
+        "setting": "Sunday, 18:10. Gemma's sofa. Your phone lies face down on the cushion, and Clara's text from Saturday breakfast is still unanswered.",
+        "lines": [
+          { "who": "Gemma", "text": "“Nineteen hours. Show me what she said.”", "cue": "holds out a hand without looking up from the lasagne" },
+          { "who": "Gemma", "text": "“...”", "cue": "waits, oven glove still on" }
+        ],
+        "ask": "Which of the nods you got this week did you actually let in, and which did you wave away?"
+      },
+      "rounds": [
+        {
+          "level": "Spot",
+          "label": "Spot, round 1",
+          "intro": "Each card is one line from this week. Tap what kind of nod it was.",
+          "items": [
+            {
+              "type": "pick",
+              "who": "Clara",
+              "text": "“Morning.” (to her laptop)",
+              "cue": "Monday, standup, three feet away",
+              "options": ["Cold", "Warm"],
+              "answer": 0,
+              "why": "Cold. She registers you and puts no warmth in it. A flat morning is still a nod, only a cold one.",
+              "traps": {
+                "1": "Warm would need something in her voice or her face. She said it to the laptop, so warm reads in more than she gave."
+              },
+              "example": "A colleague in the lift.<br>“Morning.” (eyes on her phone)<br>You were seen, and that is the whole message."
+            },
+            {
+              "type": "pick",
+              "who": "Clara",
+              "text": "“I'm glad it was you.”",
+              "cue": "Friday, outside the restaurant, coat half on",
+              "options": ["For doing", "For being"],
+              "answer": 1,
+              "why": "For being. She is glad it was you in particular, and nothing you did earned that. It is warm, and it needs nothing back.",
+              "traps": {
+                "0": "For doing would mean she was praising something you did, like the booking. She is glad about you, whatever you booked."
+              },
+              "example": "A friend at a station.<br>“I'm glad it's you meeting me.”<br>The gladness is about who walked up, with no job attached."
+            },
+            {
+              "type": "pick",
+              "who": "Clara",
+              "text": "“Thank you for last night. You made it easy.”",
+              "cue": "Saturday, 10:12, the text that is still unanswered",
+              "options": ["Warm", "Cold"],
+              "answer": 0,
+              "why": "Warm. She is thanking you for how the evening went, and she said it plainly. It is still sitting there, and the waiting is a bounce of its own.",
+              "traps": {
+                "1": "Cold would mean she was brushing you off. She wrote to thank you, and for Clara that is a big step."
+              },
+              "example": "A text after a party.<br>“Thanks for having us, lovely night.”<br>Warm, and it waits for an answer."
+            }
+          ]
+        },
+        {
+          "level": "Play",
+          "label": "Play, the week in motion",
+          "intro": "Gemma has the whole week typed into her phone. Sort it, then tell her which nods you took in.",
+          "items": [
+            {
+              "type": "scene",
+              "title": "Sunday, 18:15, Gemma's sofa",
+              "setting": "Gemma is too honest to be tactful and too fond of you to stop. She has an oven glove on one hand and your whole week to go through.",
+              "meters": { "you": 60, "them": 50 },
+              "beats": [
+                {
+                  "who": "Gemma",
+                  "text": "“Nineteen hours. Her text has sat there since Saturday breakfast, and you've been walking round it like a puddle.”",
+                  "cue": "pulls the lasagne out and shuts the oven with her hip",
+                  "lines": [
+                    {
+                      "text": "“I read it eleven times. I couldn't think what to say.”",
+                      "tag": "best",
+                      "you": 0,
+                      "them": 5,
+                      "outcome": "Gemma puts the dish down. “There. That wasn't hard. Go on.”",
+                      "why": "Saying the true thing gives Gemma something to work with. She asked about the silence, and the number eleven is the real answer."
+                    },
+                    {
+                      "text": "“She's busy. She'll know I'm busy too.”",
+                      "tag": "ok",
+                      "you": -4,
+                      "them": 0,
+                      "outcome": "“You are not busy. You are on my sofa.”",
+                      "why": "Calling it busy closes the question. Gemma has watched you hold that phone for an hour, and she says so."
+                    }
+                  ]
+                },
+                {
+                  "who": "Gemma",
+                  "text": "“Right. Everything Clara has said to you since Monday. I'll type it in, and you tell me what kind of nod it was.”",
+                  "cue": "thumbs ready over her screen",
+                  "lines": [
+                    {
+                      "text": "“Fine. Start with Monday.”",
+                      "tag": "best",
+                      "you": 2,
+                      "them": 3,
+                      "outcome": "She types a word and looks up.",
+                      "why": "Saying yes to a list of the week lets you see which nods you have been carrying. Checking them is the whole point of the sort."
+                    },
+                    {
+                      "text": "“Can we eat first?”",
+                      "tag": "ok",
+                      "you": -2,
+                      "them": -2,
+                      "outcome": "“Lasagne in twenty minutes. List now.”",
+                      "why": "Asking to eat first is reasonable, but it only moves the sorting later. She still wants the week, and so do you."
+                    }
+                  ]
+                },
+                {
+                  "who": "Gemma",
+                  "text": "“Twelve lines. Warm or cold, for what you did or for who you are. I read, you place.”",
+                  "cue": "turns the screen so you can see it",
+                  "lines": [
+                    {
+                      "text": "“Go on. Read the first one.”",
+                      "tag": "best",
+                      "you": 2,
+                      "them": 2,
+                      "outcome": "She reads it flat, like a register. Clara's week comes out one line at a time.",
+                      "why": "Hearing each line read out plainly takes your worry off it. You can judge it as information."
+                    },
+                    {
+                      "text": "“It's just her being polite, isn't it?”",
+                      "tag": "ok",
+                      "you": -4,
+                      "them": -2,
+                      "outcome": "“Polite is a nod too. Place it.”",
+                      "why": "Calling all of it politeness is the bounce before you have looked. Gemma won't take a verdict until the lines are sorted."
+                    }
+                  ]
+                }
+              ],
+              "example": "A friend who reads your texts aloud.<br>“She said what? Say it again, slowly.”<br>Heard in someone else's voice, the line is easier to weigh."
+            },
+            {
+              "type": "sort",
+              "prompt": "Put each line in its corner. Warm or cold, for doing or for being.",
+              "bins": ["Warm, for doing", "Warm, for being", "Cold, for doing", "Cold, for being"],
+              "items": [
+                { "text": "“Two? Follow me.” (said by the waiter, already walking)", "answer": 3, "why": "He registers you as a table of two and adds no warmth. Cold, and it is for being there at all." },
+                { "text": "“The deploy note went out a day late.”", "answer": 2, "why": "Daniel is talking about one thing you did, and he said it with no warmth. Cold, for doing." },
+                { "text": "“You picked somewhere quiet. Thank you.”", "answer": 0, "why": "Clara is thanking you for a choice you made. Warm, and aimed at what you did." },
+                { "text": "Clara laughs at your joke before you have finished it.", "answer": 1, "why": "She laughs because she is with you, and the joke only starts it. Warm, for being." },
+                { "text": "“Oh, you're in.” (Daniel, to his monitor)", "answer": 3, "why": "Daniel registered that you turned up and put no warmth into it. The line is about you being there. Cold, for being." },
+                { "text": "Clara keeps a chair for you in the canteen, bag on the seat.", "answer": 1, "why": "She holds a place for you and asks nothing. Warm, for being." },
+                { "text": "“That's the wrong link.” (Clara, in the team chat)", "answer": 2, "why": "A plain correction about your work. Cold, and aimed at what you did." },
+                { "text": "“Good, you booked a table. I expected you to say wherever.”", "answer": 0, "why": "Gemma is pleased you made a plan. Warm, and for doing." },
+                { "text": "The bus driver gives you a flat nod as you tap your card.", "answer": 3, "why": "Small and cold, but it reaches you as a person and asks nothing of you. Cold, for being." },
+                { "text": "“You've got ink on your ear.” (Clara reaches over and wipes it)", "answer": 1, "why": "A tiny fuss over you looking all right. Warm, for being." },
+                { "text": "“Sit down. You look like you lost a fight with a shopping trolley.”", "answer": 1, "why": "The complaint is the affection. Gemma cares that you are here in one piece. Warm, for being." },
+                { "text": "“Text me after. I mean it.”", "answer": 1, "why": "She wants to hear about you, with nothing earned. Warm, for being." }
+              ],
+              "example": "A chat with a friend about a date.<br>“Did she laugh?” gets an answer in a minute.<br>“Did you reply?” gets nothing."
+            },
+            {
+              "type": "scene",
+              "title": "Sunday, 18:50, Gemma's sofa",
+              "setting": "The lines are sorted and the lasagne is cooling. Gemma wants to know which nods you let in, and then she has a job for your thumbs.",
+              "meters": { "you": 60, "them": 50 },
+              "beats": [
+                {
+                  "who": "Gemma",
+                  "text": "“Which of those did you actually let in?”",
+                  "cue": "reading the warm lines back off her phone",
+                  "lines": [
+                    {
+                      "text": "“The chair one. I took that.”",
+                      "tag": "ok",
+                      "you": 2,
+                      "them": 3,
+                      "outcome": "She nods. “Good. Keep that one.”",
+                      "why": "Taking a warm nod in is the fix. One of them is a start, and it shows you can let one land."
+                    },
+                    {
+                      "text": "“I bounced most of them. I'll own that.”",
+                      "tag": "best",
+                      "you": 6,
+                      "them": 4,
+                      "outcome": "She doesn't smile. She holds your eye, though. “Right. Let's go through them.”",
+                      "why": "Naming the bounce is what breaks it. A warm nod you can see is a warm nod you can take.",
+                      "flags": ["bounce_count_w1"]
+                    },
+                    {
+                      "text": "“None. She was being polite.”",
+                      "tag": "ok",
+                      "you": -6,
+                      "them": -4,
+                      "outcome": "“Then you'll keep hearing nothing,” she says, and locks the screen.",
+                      "why": "Ruling out every warm nod keeps the week cold. The nods were there, and you decided they didn't count."
+                    }
+                  ]
+                },
+                {
+                  "who": "Gemma",
+                  "text": "“Clara said she was glad it was you, and you told her anyone would have asked. She said you made it easy, and you said it was only dinner. Two bounces, both to her face.”",
+                  "cue": "puts the phone down on her knee",
+                  "lines": [
+                    {
+                      "text": "“Okay. I see it. The next one is mine to take.”",
+                      "tag": "best",
+                      "you": 3,
+                      "them": 3,
+                      "outcome": "She smiles. “That's the fix. Noticing it.”",
+                      "why": "Seeing a bounce while it happens is most of the fix. The next nod has a chance to land."
+                    },
+                    {
+                      "text": "“It was only dinner, though.”",
+                      "tag": "ok",
+                      "you": -4,
+                      "them": -2,
+                      "outcome": "“There it goes again.”",
+                      "why": "That is the same bounce with a new excuse. The nod goes back across the table, and the giver feels brushed off."
+                    },
+                    {
+                      "text": "“Is the lasagne cool enough yet?”",
+                      "tag": "ok",
+                      "you": -3,
+                      "them": -1,
+                      "outcome": "“Lasagne after the text. You're stalling.”",
+                      "why": "Changing the subject is a bounce too. It works for a minute and stops the nod before you can look at it."
+                    }
+                  ]
+                },
+                {
+                  "who": "Gemma",
+                  "text": "“Phone. Reply to her. I'm not cutting this lasagne until you've pressed send.”",
+                  "cue": "holds the knife over the dish",
+                  "lines": [
+                    {
+                      "text": "“Friday was good because it was you. Thursday, same table?”",
+                      "tag": "best",
+                      "you": 4,
+                      "them": 4,
+                      "outcome": "Gemma lowers the knife. “She gets to keep that one. Send it.”",
+                      "why": "Telling her it was good because of who she is gives her a nod with no usefulness behind it. Clara finds that hard to take, and that is why it matters."
+                    },
+                    {
+                      "text": "“Thanks, glad it was easy. Busy week, talk soon.”",
+                      "tag": "ok",
+                      "you": -3,
+                      "them": -2,
+                      "outcome": "Gemma reads it aloud. “That's a bounce with a stamp on it.”",
+                      "why": "A neat reply that hands the thanks straight back is the bounce in a text. It is polite, and she will read it as a closed door."
+                    },
+                    {
+                      "text": "“I'll send something after I've eaten.”",
+                      "tag": "ok",
+                      "you": -3,
+                      "them": -2,
+                      "outcome": "The knife goes in. The phone stays face down.",
+                      "why": "Putting it off is a bounce by delay. Another hour on the cushion makes it twenty hours, and the silence says something too."
+                    }
+                  ]
+                }
+              ],
+              "example": "A friend who is slow to text back.<br>“Say it plainly. It was good because of you.”<br>The plain line is the one that stays."
+            }
+          ]
+        },
+        {
+          "level": "Analyse",
+          "label": "Analyse, explain it",
+          "items": [
+            {
+              "type": "pick",
+              "who": "You",
+              "text": "Clara said you made it easy, and you told her it was only dinner. Why does batting that away cost you?",
+              "options": [
+                "It keeps things light on a second date, where anything heavier would scare her off and spoil the mood",
+                "It makes no difference, because a few words over dinner are too small to count as a nod at all",
+                "It sends her thanks back before it lands, so she feels brushed off and you stay short"
+              ],
+              "answer": 2,
+              "why": "The bounce waves a warm nod away before it lands. Clara said something hard for her to say, you passed it back as only dinner, and she is left feeling brushed off while you go short.",
+              "traps": {
+                "0": "Keeping it light feels safe. Clara can't take a compliment she hasn't earned, so a bounced one only confirms for her that it was worth nothing.",
+                "1": "Small nods are the ones people live on. The words were short, and the nod still never landed."
+              },
+              "example": "A colleague after a presentation.<br>“That slide of yours was great.”<br>You say “Oh, it was just a template,” and the praise goes back unopened."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

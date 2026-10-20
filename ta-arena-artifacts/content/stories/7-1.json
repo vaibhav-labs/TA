@@ -1,0 +1,659 @@
+{
+ "baseBlurb": "Sam asks for small favours while Maya quietly covers the bigger gaps behind his back.",
+ "stories": [
+  {
+   "setting": "Relationships",
+   "blurb": "Clara fixes Omar's flat before his sister's dinner, and a two-day-old text sits between them.",
+   "opener": {
+    "setting": "Saturday, 10:15am. Omar's flat, the hallway. A stepladder, a screwdriver and a foil tray of lasagne on the shoe rack.",
+    "lines": [
+     {
+      "who": "Clara",
+      "text": "“Your light has flickered since Tuesday, you said so. I've redone the fitting, and the lasagne is a spare. I made two, it's no trouble.”",
+      "cue": "on the top step, a hair grip between her teeth"
+     },
+     {
+      "who": "Omar",
+      "text": "“I said it flickered. You haven't answered my text since Thursday.”",
+      "cue": "holding the ladder very level, looking at the bulb"
+     }
+    ],
+    "ask": "Which of these acts are helping, and which are saving?"
+   },
+   "rounds": [
+    {
+     "level": "Spot",
+     "label": "Spot, round 1",
+     "intro": "Helping leaves the other person their share, and saving takes it. Three checks tell them apart: someone asked, you want to do it, and you are doing no more than half. If any one check fails, it is saving.",
+     "items": [
+      {
+       "type": "pick",
+       "who": "Clara",
+       "text": "“I took Omar's CV home and rewrote every line. It's much better. He doesn't need to read it first.”",
+       "cue": "sliding a printout under his fruit bowl, smiling",
+       "options": [
+        "Helping",
+        "Saving"
+       ],
+       "answer": 1,
+       "why": "Omar never asked for a rewrite, and Clara did every line of it. Two checks fail. The CV stops being his own account of his work.",
+       "traps": {
+        "0": "Helping. It looks generous, and the CV may well read better. But the job was never offered to her, and Omar will sit in the interview unable to explain his own sentences."
+       },
+       "example": "Fish and chip shop, Friday.<br>Dad: “I've filled your form in for you, it was quicker.”<br>Son: “I wanted to do the date of birth myself.”<br>Dad: “It's done now.”"
+      },
+      {
+       "type": "pick",
+       "who": "Clara",
+       "text": "“Omar asked me to read his cover letter and tell him if the second paragraph drags. Ten minutes with a pen. I like doing it.”",
+       "cue": "already uncapping a red pen",
+       "options": [
+        "Helping",
+        "Saving"
+       ],
+       "answer": 0,
+       "why": "He asked, she wants to, and her part is a read and a comment. The letter stays his, so all three checks pass.",
+       "traps": {
+        "1": "Saving. It can feel like a trap because Clara is eager. But eager is not the same as unwilling, and the letter is still Omar's to write."
+       },
+       "example": "Bus stop, 8am.<br>Neighbour: “Could you tell me if this email sounds rude?”<br>You: “A bit sharp in the second line.”<br>Neighbour: “Thanks, I'll change it.”"
+      },
+      {
+       "type": "pick",
+       "who": "Clara",
+       "text": "“He asked me to come to his sister's engagement dinner. Four hours with his aunts, and there's a speech. I said I'd love to.”",
+       "cue": "wincing at her phone, already choosing a dress",
+       "options": [
+        "Helping",
+        "Saving"
+       ],
+       "answer": 1,
+       "why": "He asked, and her part is small. The check that fails is the one about wanting it. She says yes to a long evening she dreads, in case a no costs her his good opinion.",
+       "traps": {
+        "0": "Helping. She was asked and she showed up, and turning up is often a kindness. But she is paying for it with an evening she dreads, and Omar thinks she is looking forward to it."
+       },
+       "example": "Playground, 3:15pm.<br>Parent: “Would you mind running the cake stall on Saturday?”<br>You: “Of course, no problem.”<br>On the way home you realise you booked a haircut."
+      },
+      {
+       "type": "pick",
+       "who": "Omar",
+       "text": "“Clara asked me to hold the ladder while she did the light. I'm not going near the wiring. I'm holding the ladder.”",
+       "cue": "gripping the sides, one foot on the bottom rung",
+       "options": [
+        "Helping",
+        "Saving"
+       ],
+       "answer": 0,
+       "why": "She asked, he is willing, and he is doing a small part while she does the main job. The wiring stays hers and the ladder stays his.",
+       "traps": {
+        "1": "Saving. He is not doing her job for her. He is holding a ladder at her request, and that leaves her fully in charge of the wiring."
+       },
+       "example": "Garden fence, Sunday.<br>Neighbour: “Could you hold this panel while I knock the post in?”<br>You: “Go on.”<br>He does the hammering, you do the holding, and it takes five minutes."
+      }
+     ]
+    },
+    {
+     "level": "Play",
+     "label": "Play, the week in motion",
+     "intro": "Now the options look alike. Run the checks one at a time: did anyone ask, do you want to do it, and who is carrying more than half?",
+     "items": [
+      {
+       "type": "pick",
+       "who": "Clara",
+       "text": "“Omar's recycling box has been missed twice. I rang the council this morning and got him a new date. It took ten minutes and I like a good phone call. He's already bought the new bags.”",
+       "cue": "tipping a bin liner into the kitchen bin, pleased with herself",
+       "options": [
+        "Helping",
+        "Saving: more than half",
+        "Saving: you do what you don't want to",
+        "Saving: nobody asked"
+       ],
+       "answer": 3,
+       "why": "Nobody asked her to ring the council, so that check fails. She wanted to, and the call was small, so the other two pass. Omar had it in hand with the bags, which is why the call is a take-over and not a share.",
+       "traps": {
+        "0": "Helping. Ten minutes, a willing caller and a missed collection sorted. But Omar never said she could, and the call was his to make.",
+        "1": "Saving: more than half. She did the call, but the call was small and Omar was doing the rest. The amount is not what goes wrong here.",
+        "2": "Saving: you do what you don't want to. The cue says she likes a phone call like this one. The want check passes, so it cannot be the one that fails."
+       },
+       "example": "Housing estate, Saturday.<br>Neighbour: “I phoned the lift engineer for you.”<br>You: “I was going to ring on Monday.”<br>Neighbour: “Now you don't have to.”"
+      },
+      {
+       "type": "pick",
+       "who": "Omar",
+       "text": "“Stuck on the toast for Yasmin's dinner. Would you tell me straight if the second page drags? Fifteen minutes on the phone, whenever suits.”",
+       "cue": "reading it aloud to his own hallway wall first. You like speeches, and you are free tonight",
+       "options": [
+        "Helping",
+        "Saving: more than half",
+        "Saving: you do what you don't want to",
+        "Saving: nobody asked"
+       ],
+       "answer": 0,
+       "why": "He asked, you want to, and your part is a listen and a comment. The speech stays his. All three checks pass.",
+       "traps": {
+        "1": "Saving: more than half. You would only be doing more than half if you took the draft and rewrote it. Here you are listening and answering.",
+        "2": "Saving: you do what you don't want to. The cue says you like speeches and have the evening free. Nothing in it is against your wishes.",
+        "3": "Saving: nobody asked. He asked you by name, with a time and a length. This answer would turn a plain request into an accusation."
+       },
+       "example": "Train carriage, 6pm.<br>Colleague: “Can you listen to my pitch once on the way home?”<br>You: “Go on, from the top.”<br>You nod, ask one question, and he writes it down."
+      },
+      {
+       "type": "pick",
+       "who": "Omar",
+       "text": "“Stuck on the speech for Yasmin. Could you just write it for me? I'll read it out on Saturday and say thanks after.”",
+       "cue": "forwarded with a shrug; you enjoy writing, and you would be happy to",
+       "options": [
+        "Helping",
+        "Saving: more than half",
+        "Saving: you do what you don't want to",
+        "Saving: nobody asked"
+       ],
+       "answer": 1,
+       "why": "He asked, and you would enjoy it, so two checks pass. But you would write all of it, and he would read out words he has never heard. That is more than half, and the speech stops being his own.",
+       "traps": {
+        "0": "Helping. He asked and you want to, so it feels like a gift. But the speech is for his sister and written by you, and he will carry it in his jacket without knowing what it says.",
+        "2": "Saving: you do what you don't want to. The cue says you would be glad to write it, so the want check passes.",
+        "3": "Saving: nobody asked. He did ask, in so many words. This answer would be unfair on him."
+       },
+       "example": "Wedding planning, a phone call.<br>Bride: “Could you write the vows for me? I can't think.”<br>You: “Sure.”<br>On the day she reads them out and your phrases land oddly in her mouth."
+      }
+     ]
+    },
+    {
+     "level": "Analyse",
+     "label": "Analyse, explain it",
+     "intro": "Time for the book's word. Steiner calls saving a rescue. First explain one, then sort four more acts.",
+     "items": [
+      {
+       "type": "pick",
+       "who": "Clara",
+       "text": "“Omar's text about Sunday is still waiting. But I've ironed his shirt for Yasmin's dinner, booked his taxi and printed a seating plan with a note for each aunt. Once he's sorted, I'll reply.”",
+       "cue": "one thumb hovering over his unanswered message",
+       "options": [
+        "A rescue. Omar did not ask for any of it, and Clara is carrying all of the preparation, so his own dinner has become her job. It also stands in for the plain reply that he is still waiting for.",
+        "Helping: the shirt, the taxi and the plan make an evening easier for a man who is nervous, and that is what a good partner does for him.",
+        "Not a rescue. Clara is doing it out of kindness and plainly wants to, and Steiner counts a rescue only when you do something you don't want to do."
+       ],
+       "answer": 0,
+       "why": "Two checks fail at once: nobody asked, and Clara carries the whole of the preparation. Any one failure is enough. The work also lets her put off the one thing Omar did ask, which was a text.",
+       "traps": {
+        "1": "Helping: the shirt and the taxi are a kindness. But Omar never asked, and kindness is not the test. He is left waiting for a text while she presses his collar.",
+        "2": "Not a rescue. Steiner names more than one way into a rescue, and failing any of them is enough. Wanting to do it does not rescue her from the other two."
+       },
+       "example": "Office kitchen, 9am.<br>Colleague: “I've drafted your reply to the client.”<br>You: “I haven't even read the email yet.”<br>Colleague: “I know, I didn't want you to worry.”"
+      },
+      {
+       "type": "sort",
+       "prompt": "Four more acts from Omar and Clara's week. Put each one where Steiner's checks place it.",
+       "bins": [
+        "Helping",
+        "Saving: more than half",
+        "Saving: you do what you don't want to",
+        "Saving: nobody asked"
+       ],
+       "items": [
+        {
+         "text": "Omar asks Clara to explain the pension form from work. She talks him through each box once and he fills it in himself.",
+         "answer": 0,
+         "why": "He asked, she was glad to, and her part was an explanation. The form stays his, so every check passes."
+        },
+        {
+         "text": "Omar asks if she'll look over his tax form. She takes it home, fills in every box and sends it back with a smile.",
+         "answer": 1,
+         "why": "He asked, and she was glad to. But she did all of the work, so the form is hers and Omar learns nothing about his own money."
+        },
+        {
+         "text": "Omar asks if she'll spend Sunday at his uncle's model railway fair. She finds it dull and he can see it, but she says she'd love to.",
+         "answer": 2,
+         "why": "He asked, and she gave one day. The check that fails is that she went along with something she didn't want to do, afraid he'd be hurt if she said no."
+        },
+        {
+         "text": "Clara sees that Omar's bike chain is rusty. While he is in the shower she oils it, adjusts the brakes and retapes the bars. She enjoys it.",
+         "answer": 3,
+         "why": "She likes the job, so the want check passes. But nobody asked, and help that starts without a request takes over a job that was his."
+        }
+       ],
+       "example": "Book group, Friday, 7:30pm.<br>Host: “Could someone bring the wine?”<br>You: “I'll bring wine, cook the starter and wash up.”<br>Host: “Lovely.” Next month it is the same, and nobody else offers."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "setting": "School & College",
+   "blurb": "Brenda finishes Sam's section of a group poster the night before it is due, and nobody asked her to.",
+   "opener": {
+    "setting": "Thursday, 6:40pm. The library, second floor, the table by the radiator. The group poster is due at nine tomorrow and the radiator ticks.",
+    "lines": [
+     {
+      "who": "Brenda",
+      "text": "“I've done your section. Same colours as mine, so nobody sees the join. Go home, Sam, you look wrecked.”",
+      "cue": "peeling a label off a stapler, her laptop open on both columns"
+     },
+     {
+      "who": "Sam",
+      "text": "“Are you sure? I was going to do it. I was going to start at seven.”",
+      "cue": "already zipping his bag"
+     }
+    ],
+    "ask": "Which of these acts are helping, and which are saving?"
+   },
+   "rounds": [
+    {
+     "level": "Spot",
+     "label": "Spot, round 1",
+     "intro": "Helping leaves the other person their share, and saving takes it. Three checks tell them apart: someone asked, you want to do it, and you are doing no more than half. If any one check fails, it is saving.",
+     "items": [
+      {
+       "type": "pick",
+       "who": "Tuan",
+       "text": "“Sam asked if I'd check that his references are in the right order. Two minutes. Sure.”",
+       "cue": "scrolling down Sam's bibliography, glad of the break",
+       "options": [
+        "Helping",
+        "Saving"
+       ],
+       "answer": 0,
+       "why": "Sam asked, Tuan is willing, and the job is two minutes of checking. The references stay Sam's, so all three checks pass.",
+       "traps": {
+        "1": "Saving. Tuan is not rewriting anything. He is checking an order at Sam's request, and the bibliography stays Sam's work."
+       },
+       "example": "Allotment, Saturday.<br>Neighbour: “Can you look at my bean rows and say if they're straight?”<br>You: “Third one wanders.”<br>Neighbour: “Ha, I'll move it.”"
+      },
+      {
+       "type": "pick",
+       "who": "Brenda",
+       "text": "“I've reworded your whole conclusion so it flows with mine. You didn't ask, but it'll save you the stress.”",
+       "cue": "already pasting it in, not looking up",
+       "options": [
+        "Helping",
+        "Saving"
+       ],
+       "answer": 1,
+       "why": "Sam never asked for a rewrite, and Brenda wrote the whole conclusion. Two checks fail. The last paragraph of the poster is no longer his.",
+       "traps": {
+        "0": "Helping. It sounds like a favour, and the conclusion may read smoothly. But Sam never learns how to write his own ending, and Brenda's name is on the next one too."
+       },
+       "example": "Family kitchen, Sunday.<br>Aunt: “I've rewritten your CV, it reads much better.”<br>Cousin: “I only wanted a second pair of eyes.”<br>Aunt: “Well, it's done now.”"
+      },
+      {
+       "type": "pick",
+       "who": "Tuan",
+       "text": "“Ms Hollis asked who'd present the poster at the open evening. Everyone looked at the floor, so I said I would. I'd rather clean the lab.”",
+       "cue": "tugging his sleeve down over his wrist",
+       "options": [
+        "Helping",
+        "Saving"
+       ],
+       "answer": 1,
+       "why": "She asked, and presenting is one slot among several. The check that fails is wanting it. He took a job he'd rather skip, so the silence in the room ended with him.",
+       "traps": {
+        "0": "Helping. He was asked and he said yes, and filling a gap feels generous. But he will be dreading Tuesday evening, and the group thinks he is happy to do it."
+       },
+       "example": "School gate, 8:50am.<br>Teacher: “Who can help with the cake stall?”<br>Parent: “I can.”<br>She had planned a quiet day and spends it in the hall."
+      },
+      {
+       "type": "pick",
+       "who": "Ms Hollis",
+       "text": "“Send me a draft by Tuesday and I'll write questions in the margins. The next version is yours.”",
+       "cue": "pen behind her ear, handing back a feedback sheet",
+       "options": [
+        "Helping",
+        "Saving"
+       ],
+       "answer": 0,
+       "why": "Sam has asked for feedback, she enjoys giving it, and the writing stays with him. The margins hold her questions and the pages stay his.",
+       "traps": {
+        "1": "Saving. She is not writing his essay. She asks questions and leaves the answers to him."
+       },
+       "example": "Football club, Saturday.<br>Coach: “Send me a clip of your serve and I'll tell you what I see.”<br>Player: “Thanks.”<br>He films it and sends it. The practising is still his."
+      }
+     ]
+    },
+    {
+     "level": "Play",
+     "label": "Play, the week in motion",
+     "intro": "Now the options look alike. Run the checks one at a time: did anyone ask, do you want to do it, and who is carrying more than half?",
+     "items": [
+      {
+       "type": "pick",
+       "who": "Brenda",
+       "text": "“Sam's section needs a second pair of eyes. Can you stay till ten tonight to check it against the marking sheet? Be honest, it's a long night.”",
+       "cue": "tapping the sheet; you wanted to be on the nine o'clock bus, and your coat is already on",
+       "options": [
+        "Helping",
+        "Saving: more than half",
+        "Saving: you do what you don't want to",
+        "Saving: nobody asked"
+       ],
+       "answer": 2,
+       "why": "She asked, and checking one section is a small share. The check that fails is that you would rather go home. If you say yes to keep her happy, you pay for it with a night you wanted.",
+       "traps": {
+        "0": "Helping. She asked, it is a small job, and Sam's section needs checking. But the cue says you would rather be on the bus, and a yes given to keep the peace is not a wanted one.",
+        "1": "Saving: more than half. You would check, not write, so your part is small. The amount is fine here.",
+        "3": "Saving: nobody asked. Brenda asked you by name, with a time. This answer would turn a plain request into an accusation."
+       },
+       "example": "Office corridor, 5:30pm.<br>Manager: “Could you stay for the late call? Only an hour.”<br>You: “Of course.”<br>You text your sister to cancel the cinema and resent the call."
+      },
+      {
+       "type": "pick",
+       "who": "Tuan",
+       "text": "“Sam hasn't answered the group chat since Monday. I emailed Ms Hollis to say he's ill and asked her to move his deadline. He'll be relieved. It took one email and I like emailing.”",
+       "cue": "scrolling the group chat with the screen turned to you",
+       "options": [
+        "Helping",
+        "Saving: more than half",
+        "Saving: you do what you don't want to",
+        "Saving: nobody asked"
+       ],
+       "answer": 3,
+       "why": "Nobody asked Tuan to email the tutor, and Sam didn't even say he was ill. Tuan wanted to and the email was small, so those two pass. The one that fails is the invitation.",
+       "traps": {
+        "0": "Helping. One email, a willing sender and a deadline moved. But Sam may not be ill, and Tuan has spoken for him without being asked.",
+        "1": "Saving: more than half. One email is not more than half of a project. The size of the job is not what is wrong.",
+        "2": "Saving: you do what you don't want to. The cue says Tuan likes emailing, so the want check passes."
+       },
+       "example": "Flat shares, Tuesday.<br>Flatmate: “I told the landlord you'd pay late. I knew you'd be short.”<br>You: “I wasn't short.”<br>Flatmate: “Oh. Well, now it's said.”"
+      },
+      {
+       "type": "pick",
+       "who": "Sam",
+       "text": "“I've done the intro and the method. I'm stuck on the stats table. Could you show me how to do the totals row, and I'll do the rest?”",
+       "cue": "his screen turned to you, the table three rows from empty. You like spreadsheets, and the library stays open another hour",
+       "options": [
+        "Helping",
+        "Saving: more than half",
+        "Saving: you do what you don't want to",
+        "Saving: nobody asked"
+       ],
+       "answer": 0,
+       "why": "He asked, you want to, and you would show him one thing while he does the rest. The table stays his. All three checks pass.",
+       "traps": {
+        "1": "Saving: more than half. You would only be doing more than half if you filled in the table. Here you are showing a method.",
+        "2": "Saving: you do what you don't want to. The cue says you like spreadsheets and have time. Nothing in it goes against you.",
+        "3": "Saving: nobody asked. Sam asked you directly. This answer would be unfair on him."
+       },
+       "example": "Kitchen table, evening.<br>Daughter: “Show me how to do long division and I'll try the rest.”<br>Parent: “Right, watch this one.”<br>She does the next three herself."
+      }
+     ]
+    },
+    {
+     "level": "Analyse",
+     "label": "Analyse, explain it",
+     "intro": "Time for the book's word. Steiner calls saving a rescue. First explain one, then sort four more acts.",
+     "items": [
+      {
+       "type": "pick",
+       "who": "Brenda",
+       "text": "“Sam's reflection essay is due Friday. He says he'll write it tonight. He won't. So I've written it in his voice, and he can sign it. Ms Hollis will never know.”",
+       "cue": "closing her laptop with a decided click",
+       "options": [
+        "Not a rescue. Brenda is doing it out of kindness and plainly wants to help, and Steiner counts a rescue only when you do something you don't want to do, which is not the case here.",
+        "Helping: Sam is struggling, Brenda has the time, and the essay is done. A group member who steps in is just being a good friend.",
+        "A rescue. Sam did not ask, and Brenda is writing the whole essay, so his reflection on his own course is hers. Helping would be to offer him an hour of her company while he writes it."
+       ],
+       "answer": 2,
+       "why": "Two checks fail at once: nobody asked, and Brenda is doing all of the work. Any one failure is enough. Sam will sign an essay about his own learning that he has never read.",
+       "traps": {
+        "0": "Not a rescue. Steiner names more than one way into a rescue, and failing any of them is enough. Wanting to help does not rescue her from the other two.",
+        "1": "Helping: she has the time and he is struggling. But kindness is not the test. Sam never asked, and he ends up with a signature on words he did not write."
+       },
+       "example": "Group chat, Monday.<br>Friend: “I've booked your driving test for you.”<br>You: “I haven't decided yet.”<br>Friend: “You will, though. I've put you down for Friday.”"
+      },
+      {
+       "type": "sort",
+       "prompt": "Four more acts from the evening class. Put each one where Steiner's checks place it.",
+       "bins": [
+        "Helping",
+        "Saving: more than half",
+        "Saving: you do what you don't want to",
+        "Saving: nobody asked"
+       ],
+       "items": [
+        {
+         "text": "Sam asks Tuan how to cite a website. Tuan shows him the format once and Sam types the reference himself.",
+         "answer": 0,
+         "why": "He asked, Tuan was glad to, and the part was small. The reference stays Sam's, so every check passes."
+        },
+        {
+         "text": "Sam asks Brenda to look at his poster layout. She rebuilds it overnight from scratch and sends it back finished.",
+         "answer": 1,
+         "why": "He asked, and she was glad to. But she did all of the work, so the poster is hers and Sam learns nothing about layout."
+        },
+        {
+         "text": "Ms Hollis asks who will run the sign-up sheet for the field trip. Tuan hates admin and says he'd be glad to.",
+         "answer": 2,
+         "why": "She asked, and the job is small. The check that fails is that he took something he didn't want, because the silence in the room felt worse."
+        },
+        {
+         "text": "Brenda sees Sam's half-finished table in the shared document. Without a word she completes it, because she likes tables.",
+         "answer": 3,
+         "why": "She likes the job, so the want check passes. But nobody asked, and finishing someone's work unprompted takes away their chance to finish it."
+        }
+       ],
+       "example": "Neighbours' street, Saturday.<br>Neighbour: “I've weeded your front bed.”<br>You: “I was going to do it tomorrow.”<br>Neighbour: “Now you have your Sunday free.”"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "setting": "Work",
+   "blurb": "The night before a release, Clara does Sam's job and Daniel does everyone else's.",
+   "opener": {
+    "setting": "Wednesday, 4:50pm. Halden, the team room. The release is at ten tomorrow and one laptop has a red screen.",
+    "lines": [
+     {
+      "who": "Daniel",
+      "text": "“Who owns the migration script? Anyone? I'll do it myself if I have to.”",
+      "cue": "marker pointed at the whiteboard, not at a person"
+     },
+     {
+      "who": "Clara",
+      "text": "“It's done. Don't worry about it. I finished Sam's tickets at lunch and his test notes.”",
+      "cue": "not looking up, nine tabs open"
+     }
+    ],
+    "ask": "Which of these acts are helping, and which are saving?"
+   },
+   "rounds": [
+    {
+     "level": "Spot",
+     "label": "Spot, round 1",
+     "intro": "Helping leaves the other person their share, and saving takes it. Three checks tell them apart: someone asked, you want to do it, and you are doing no more than half. If any one check fails, it is saving.",
+     "items": [
+      {
+       "type": "pick",
+       "who": "Clara",
+       "text": "“Sam's release notes were a mess, so I rewrote all of them last night. Nobody needs to know.”",
+       "cue": "a sticky note over the file name",
+       "options": [
+        "Helping",
+        "Saving"
+       ],
+       "answer": 1,
+       "why": "Nobody asked her to rewrite the notes, and she wrote every one. Two checks fail. Sam never finds out what his notes lacked.",
+       "traps": {
+        "0": "Helping. The notes are better now, and Clara meant well. But Sam never asked, and he will go on writing them the old way."
+       },
+       "example": "Corridor, Friday.<br>Colleague: “I tidied your slides last night.”<br>You: “They were fine.”<br>Colleague: “Now they're better.”"
+      },
+      {
+       "type": "pick",
+       "who": "Omar",
+       "text": "“You asked me to look at one failing test. It's the date format on line forty. The fix is yours if you want it.”",
+       "cue": "leaning back, mug in hand",
+       "options": [
+        "Helping",
+        "Saving"
+       ],
+       "answer": 0,
+       "why": "You asked, he wanted to, and his part was spotting one line. The fix stays yours. All three checks pass.",
+       "traps": {
+        "1": "Saving. Omar is not taking over the test. He pointed at one line and left the rest to you."
+       },
+       "example": "Garage, Saturday.<br>Neighbour: “Have a look, it's the belt, I think.”<br>Mechanic: “Yes, that one. You can swap it.”<br>He hands over the spanner."
+      },
+      {
+       "type": "pick",
+       "who": "Sam",
+       "text": "“Could you show me how to roll back the build? If it breaks on Thursday, I'll do it myself.”",
+       "cue": "notebook open, pen ready",
+       "options": [
+        "Helping",
+        "Saving"
+       ],
+       "answer": 0,
+       "why": "He asked, you want to, and you would be showing one thing once. The rollback stays his. All three checks pass.",
+       "traps": {
+        "1": "Saving. Showing someone a method they will run leaves the job in their hands."
+       },
+       "example": "Bike shop, Sunday.<br>Customer: “Could you show me how to fix a flat?”<br>Mechanic: “Watch this once.”<br>He does the next one himself."
+      },
+      {
+       "type": "pick",
+       "who": "Daniel",
+       "text": "“Nobody's booked the client dial-in. I'll do it, it's quicker. I'll do the agenda as well, and chase their lawyer.”",
+       "cue": "typing already, a sigh at the end of each line",
+       "options": [
+        "Helping",
+        "Saving"
+       ],
+       "answer": 1,
+       "why": "Nobody asked him to take it, and he is taking the lot. He also sighs at every line, which says he'd rather not. Several checks fail at once.",
+       "traps": {
+        "0": "Helping. Someone has to do it, and he is the one with the authority. But the sighing says he'd prefer not to, and the team learns that Daniel will pick up anything."
+       },
+       "example": "Parent chat, Sunday.<br>Parent: “I'll organise the whole trip, forget the rota.”<br>Others: “Great.”<br>By Wednesday she is exhausted and nobody else knows the dates."
+      }
+     ]
+    },
+    {
+     "level": "Play",
+     "label": "Play, the week in motion",
+     "intro": "Now the options look alike. Run the checks one at a time: did anyone ask, do you want to do it, and who is carrying more than half?",
+     "items": [
+      {
+       "type": "pick",
+       "who": "Sam",
+       "text": "“Could you take the whole export bug off me? I haven't started. I'll owe you a coffee.”",
+       "cue": "hands pressed together; you like bugs, and Thursday is quiet for you",
+       "options": [
+        "Helping",
+        "Saving: more than half",
+        "Saving: you do what you don't want to",
+        "Saving: nobody asked"
+       ],
+       "answer": 1,
+       "why": "He asked, and you would enjoy it. But the ticket is his entire job, so you would carry more than half, and Sam would go through Thursday without learning the module.",
+       "traps": {
+        "0": "Helping. He asked and you want to, so it reads as a favour between colleagues. But taking the whole ticket leaves Sam with nothing to learn.",
+        "2": "Saving: you do what you don't want to. The cue says you like bugs, so the want check passes.",
+        "3": "Saving: nobody asked. He asked you directly, with an offer of coffee. This answer would turn a plain request into an accusation."
+       },
+       "example": "Neighbour's door, Monday.<br>Neighbour: “Could you do my whole tax return? I'll buy you lunch.”<br>You: “Sure.”<br>She never opens the form again."
+      },
+      {
+       "type": "pick",
+       "who": "Daniel",
+       "text": "“Release night, I need someone on call from nine to midnight. Clara did last time and Omar the time before. You're the only one left. You don't mind, do you?”",
+       "cue": "the question is an answer; you have a dentist at eight and hoped for an early night",
+       "options": [
+        "Helping",
+        "Saving: more than half",
+        "Saving: you do what you don't want to",
+        "Saving: nobody asked"
+       ],
+       "answer": 2,
+       "why": "He asked, and the slot is three hours, so a small share. The check that fails is that you would rather not, and his last question makes a no hard to say.",
+       "traps": {
+        "0": "Helping. He asked and the slot is fair. But the cue says you would rather not, and a yes given under pressure is not a wanted one.",
+        "1": "Saving: more than half. One slot is not the majority of the release night. The size is fine.",
+        "3": "Saving: nobody asked. He asked you by name. This answer would turn a plain request into an accusation."
+       },
+       "example": "Staff room, 3pm.<br>Head: “You don't mind covering Friday, do you?”<br>You: “No, of course.”<br>You cancel your plans and say nothing."
+      },
+      {
+       "type": "pick",
+       "who": "Daniel",
+       "text": "“I merged Sam's branch myself, fixed the typo in the config and cleared the conflict. I like a clean history. Nobody had to ask.”",
+       "cue": "wiping the whiteboard with a flourish",
+       "options": [
+        "Helping",
+        "Saving: more than half",
+        "Saving: you do what you don't want to",
+        "Saving: nobody asked"
+       ],
+       "answer": 3,
+       "why": "Nobody asked him to touch Sam's branch. He wanted to, and the fix was small, so the other two checks pass. The one that fails is the request.",
+       "traps": {
+        "0": "Helping. The typo is gone and the history is clean. But Sam's branch was Sam's to fix, and he never learns about the conflict.",
+        "1": "Saving: more than half. A typo and a conflict are small. Quantity is not where it fails.",
+        "2": "Saving: you do what you don't want to. The cue says he likes a clean history, so the want check passes."
+       },
+       "example": "Flat landing, Sunday.<br>Neighbour: “I fixed your door so it stops sticking.”<br>You: “I like that door the way it is.”<br>Neighbour: “Oh. Well, too late.”"
+      }
+     ]
+    },
+    {
+     "level": "Analyse",
+     "label": "Analyse, explain it",
+     "intro": "Time for the book's word. Steiner calls saving a rescue. First explain one, then sort four more acts.",
+     "items": [
+      {
+       "type": "pick",
+       "who": "Clara",
+       "text": "“Sam says he'll write his demo tonight. He won't. So I've written it, and I'll put his name on the slides. Daniel won't see a gap.”",
+       "cue": "the cursor blinking in a slide that says Sam at the bottom",
+       "options": [
+        "Not a rescue. Clara is choosing to do it, she is plainly willing, and Steiner counts a rescue only when you do something you don't want to do, so her willingness settles the question.",
+        "A rescue. Nobody asked Clara, and she is writing all of Sam's demo, so Sam never has to say he can't and Daniel never sees the gap. Helping would be to offer Sam an hour of her time and let him write it.",
+        "Helping: Sam is behind, Clara is good at slides, and the demo is saved. A strong colleague is expected to step in."
+       ],
+       "answer": 1,
+       "why": "Two checks fail at once: nobody asked, and Clara is doing all the work. Any one failure is enough. Sam never has to say he is behind, and Daniel believes he is on track.",
+       "traps": {
+        "0": "Not a rescue. Steiner names more than one way into a rescue, and failing any of them is enough. Wanting to do it does not rescue Clara from the other two.",
+        "2": "Helping: Clara is good at slides and the demo is done. But no one asked, and Sam's problem is hidden. Next release he does the same."
+       },
+       "example": "Canteen, Thursday.<br>Colleague: “I filled in your timesheet. You were slow.”<br>You: “I would have told them.”<br>Colleague: “Now you don't have to.”"
+      },
+      {
+       "type": "sort",
+       "prompt": "Four more acts from the release week. Put each one where Steiner's checks place it.",
+       "bins": [
+        "Helping",
+        "Saving: more than half",
+        "Saving: you do what you don't want to",
+        "Saving: nobody asked"
+       ],
+       "items": [
+        {
+         "text": "Omar asks Clara to explain how the deployment checklist works. She walks him through it once and he runs it himself.",
+         "answer": 0,
+         "why": "He asked, she was glad to, and her part was an explanation. The run stays his, so every check passes."
+        },
+        {
+         "text": "Sam asks Clara for help with the rollback plan. She writes every step and sends it back finished.",
+         "answer": 1,
+         "why": "He asked, and she was glad to. But she did all of the work, so the plan is hers and Sam reads it for the first time in the meeting."
+        },
+        {
+         "text": "Daniel asks who will take the minutes on the client call. Nobody speaks. Sam, who hates it, says he will.",
+         "answer": 2,
+         "why": "Daniel asked, and the job is small. The check that fails is that Sam took something he didn't want to do, because the quiet felt worse."
+        },
+        {
+         "text": "Clara notices Omar's folder of test scripts is untidy. Before anyone is in she renames the files, rewrites the comments and deletes duplicates. She enjoys it.",
+         "answer": 3,
+         "why": "She likes the job, so the want check passes. But nobody asked, and Omar's way of filing was his to keep or change."
+        }
+       ],
+       "example": "Allotment shed, Saturday.<br>Neighbour: “I've sorted your seed tins into rows.”<br>You: “I knew where everything was.”<br>Neighbour: “It looks tidier now.”"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,908 @@
+{
+  "baseBlurb": "At Gran's kitchen table, a boy copies his cousin's stomach ache just as the bitter gourd arrives.",
+  "stories": [
+    {
+      "setting": "Work",
+      "blurb": "A new starter copies the headache that sent Clara home, just as the Friday on-call rota goes up.",
+      "opener": {
+        "setting": "Wednesday, 15:30, the team room at Halden. The Friday on-call rota has just gone up on the shared screen.",
+        "lines": [
+          {
+            "who": "Daniel",
+            "text": "“Clara, go home. Now. I'll take the release notes, you've done plenty.”",
+            "cue": "pulling her chair out, already reaching for her laptop"
+          }
+        ],
+        "ask": "Can you spot a trap being copied in this team room, and choose a move that stops it rather than feeds it?"
+      },
+      "rounds": [
+        {
+          "level": "Spot",
+          "label": "Spot, round 1",
+          "items": [
+            {
+              "type": "pick",
+              "who": "Daniel, to Clara",
+              "text": "“Go home. Now. I'll take the release notes, you've done plenty.”",
+              "cue": "Clara has both hands pressed to her temples. Daniel is already pulling her chair out.",
+              "options": [
+                "A cold nod, for doing wrong",
+                "A big warm nod, for being",
+                "Nothing, she was not noticed"
+              ],
+              "answer": 1,
+              "why": "Daniel dropped everything the second Clara winced, and he offered to take her work too. She got the nod for being unwell. She had done nothing to earn it.",
+              "traps": {
+                "0": "A cold nod would sound like “We're all tired, Clara.” Daniel did the opposite, and fast.",
+                "2": "Nothing would mean Clara sat there with her head in her hands unseen. Daniel was out of his chair before she finished speaking."
+              },
+              "example": "A school office, a teacher to a girl who goes pale in assembly: “Sit down, love, I'll ring your mum.”<br>The girl is fussed over, and the register is forgotten for the morning."
+            },
+            {
+              "type": "pick",
+              "who": "Callum, from the next desk",
+              "text": "“Daniel... my head's pounding too.”",
+              "cue": "eyes on the Friday on-call rota that has just popped up on the shared screen, voice pitched exactly like Clara's",
+              "options": [
+                "A real headache, nothing else",
+                "A plain protest about the Friday rota",
+                "A copy of what worked for Clara"
+              ],
+              "answer": 2,
+              "why": "The rota is part of it, but the timing and the words say more. Same complaint, same moment, same reward: Callum watched the headache work for Clara, and he is trying it on.",
+              "traps": {
+                "0": "A real headache would turn up by itself. This one arrived ten minutes after Clara's, the instant his name appeared against Friday night.",
+                "1": "A protest about the rota would be loud and plain, like “I can't do Friday.” Callum is asking for the nod, and the rota hardly comes into it."
+              },
+              "example": "A family wedding, a cousin who suddenly needs the loo when the washing-up starts. Last time an aunt left the room in a fuss and got her tea brought to her.<br>The timing gives the copy away."
+            },
+            {
+              "type": "pick",
+              "who": "Omar, stirring a mug at the kettle",
+              "text": "“Jess, our last grad, did exactly this. A dead laptop on every demo day.”",
+              "cue": "tired and dry, with a look that says he has watched this film before",
+              "options": [
+                "Jess found a move that works",
+                "Jess was properly unlucky every time",
+                "Omar is cross with the recruiters"
+              ],
+              "answer": 0,
+              "why": "Jess found that a dead laptop got her out of the demo, so she kept using it, and nobody had to decide it was a lie. Callum is the second person on this team to find the same exit.",
+              "traps": {
+                "1": "Real bad luck does not land on the same day every month. Omar is describing a pattern he has seen before.",
+                "2": "His tone is tired, not angry at the people who hired her. The line is about a pattern that works on him."
+              },
+              "example": "A football club WhatsApp group, a lad who always has “a work thing” on the night of the fitness session: “Sorry, boss, can't do it, big one on.”<br>The work thing is always on the same night."
+            }
+          ]
+        },
+        {
+          "level": "Play",
+          "label": "Play, the week in motion",
+          "items": [
+            {
+              "type": "scene",
+              "title": "Wednesday, 15:40, the team room at Halden",
+              "setting": "Ten minutes after Clara went home with Daniel's blessing. The Friday rota is still on the screen, and Callum is watching Daniel the way a goalkeeper watches a penalty taker.",
+              "meters": {
+                "you": 70,
+                "them": 50
+              },
+              "beats": [
+                {
+                  "who": "Callum",
+                  "text": "“Daniel... my head's pounding too.”",
+                  "cue": "one hand on his forehead, eyes on the rota",
+                  "lines": [
+                    {
+                      "text": "“Poor Callum. Daniel, take him off Friday night, he looks wrecked.”",
+                      "tag": "game",
+                      "you": -2,
+                      "them": 3,
+                      "outcome": "Daniel nods before you finish. Callum's name is rubbed off the rota, and he sits straighter than a person with a pounding head should.",
+                      "why": "You fed the bid. It got him what he wanted, so next time he will try it sooner and louder. A trap move ends the scene here."
+                    },
+                    {
+                      "text": "“Is it the head, or is it Friday night on-call?” (said low, with a half smile)",
+                      "tag": "best",
+                      "you": 4,
+                      "them": 8,
+                      "outcome": "Callum snorts. “Friday night on-call.” Omar coughs into his mug to hide a laugh. The bid never gets going.",
+                      "why": "You caught the bid with a joke that lets him off, and nobody had to be the villain. The trap is broken while it is still being born."
+                    },
+                    {
+                      "text": "“He just doesn't want to do the rota, Daniel.”",
+                      "tag": "ok",
+                      "you": -2,
+                      "them": -6,
+                      "outcome": "Callum glares at you. Daniel frowns, then offers him a glass of water anyway, to keep the peace.",
+                      "why": "The trap stops, but by shaming. It works for today and teaches him to hide the next bid better, so it is the wrong tool."
+                    }
+                  ]
+                },
+                {
+                  "who": "Callum",
+                  "text": "“Daniel, could I work from home tomorrow? Head's bad. And Friday could go to someone else, probably.”",
+                  "cue": "a sly look, seeing how far this will go",
+                  "lines": [
+                    {
+                      "text": "“Ring in if you need a day, mate. It's fine.”",
+                      "tag": "ok",
+                      "you": 0,
+                      "them": 1,
+                      "outcome": "Callum nods and says nothing. The rota is still empty next to Friday. He knows it works.",
+                      "why": "Giving in is gentle and does no harm today. The honest answer is still missing."
+                    },
+                    {
+                      "text": "“Daniel, send him home, he's clearly ill.”",
+                      "tag": "game",
+                      "you": -3,
+                      "them": 2,
+                      "outcome": "Daniel agrees. Callum shuts his laptop with a small, pleased click, and the next bid is already forming.",
+                      "why": "You took the bid at face value and rewarded it. Feeding the copy is the same move as feeding the original, and it ends the scene early."
+                    },
+                    {
+                      "text": "“Which is it, the head or Friday? Tell me straight and I'll back you on either.”",
+                      "tag": "best",
+                      "you": 3,
+                      "them": 5,
+                      "outcome": "He holds out for a second, then laughs. “Friday. I've never done on-call.” Omar says he will sit with him for the first hour.",
+                      "why": "You asked for the real answer, and that let him be honest without losing face. A kind question gives a person a way out of the bid."
+                    }
+                  ]
+                },
+                {
+                  "who": "Daniel",
+                  "text": "“What's going on with Callum's head? Clara went down like a stone an hour ago.”",
+                  "cue": "turning from the screen, pen tapping",
+                  "lines": [
+                    {
+                      "text": "“His head's fine, Daniel. He's copying Clara.”",
+                      "tag": "ok",
+                      "you": -4,
+                      "them": -6,
+                      "outcome": "Daniel's face closes. “He's three weeks in. Don't say that.” The room gets cold for a moment.",
+                      "why": "Naming the copy is true, but it lands on Daniel's care, so he defends Callum and the copying gets an audience."
+                    },
+                    {
+                      "text": "“It's been a long three weeks for him, Daniel. Shall we ask what he needs for Friday?”",
+                      "tag": "best",
+                      "you": 4,
+                      "them": 6,
+                      "outcome": "Daniel stops tapping. “Ask him?” He looks at Callum, who has no answer ready.",
+                      "why": "You moved from guessing to asking. That leaves Callum a real choice, and the trap loses its audience."
+                    }
+                  ]
+                }
+              ],
+              "payoff": "Daniel moves Callum's on-call to Omar, who sighs and says nothing. The trap has set one notch, and Omar notices."
+            },
+            {
+              "type": "scene",
+              "title": "Wednesday, 16:20, the Halden kitchenette",
+              "setting": "Omar is rinsing the same mug for the third time. Callum has gone to the loo, and his laptop is still open on the release checklist.",
+              "meters": {
+                "you": 70,
+                "them": 50
+              },
+              "beats": [
+                {
+                  "who": "Omar",
+                  "text": "“Jess did exactly this. A dead laptop on every demo day. I never knew whether to believe her.”",
+                  "cue": "rinsing the mug, not looking at you",
+                  "lines": [
+                    {
+                      "text": "“You should call his bluff, Omar.”",
+                      "tag": "ok",
+                      "you": -3,
+                      "them": -3,
+                      "outcome": "Omar nods without looking up. He has heard that from everybody, and it never helped.",
+                      "why": "Nobody asked for advice. It makes you the one who fixes his problem and leaves him nothing to do but agree."
+                    },
+                    {
+                      "text": "“It's hard to tell a real one from the move. Clara got looked after for hers. He's copying what works.”",
+                      "tag": "best",
+                      "you": 3,
+                      "them": 7,
+                      "outcome": "Omar stops rinsing. “...Right. He is, isn't he.”",
+                      "why": "You named the pattern without blaming Callum. Copying what works is how a trap spreads, and saying it aloud lets a colleague see it from outside."
+                    },
+                    {
+                      "text": "“That must wear you out.”",
+                      "tag": "ok",
+                      "you": 0,
+                      "them": 2,
+                      "outcome": "Omar sighs. “It does, a bit.” The moment stays heavy and nothing moves.",
+                      "why": "Warm, but it stays on the feeling and never helps him see the pattern. It is kind, and it opens nothing up."
+                    }
+                  ]
+                },
+                {
+                  "who": "Omar",
+                  "text": "“So what do I do? Put him on the rota anyway, or give him the day?”",
+                  "cue": "a real question this time, no dryness",
+                  "lines": [
+                    {
+                      "text": "“I'd just believe him, Omar. Easier all round.”",
+                      "tag": "game",
+                      "you": -6,
+                      "them": 3,
+                      "outcome": "Omar relaxes. The checklist stays half done, and a headache is now how the day ends.",
+                      "why": "You agreed to let the headache count. That is a trap move, and it ends the scene here with the result below."
+                    },
+                    {
+                      "text": "“Put him on every Friday, no exceptions.”",
+                      "tag": "ok",
+                      "you": -2,
+                      "them": -2,
+                      "outcome": "“Tried that with Jess,” he says flatly.",
+                      "why": "A rule enforced hard feels like a fight, and the bid keeps its audience. It does no harm, and it still falls short of the best move."
+                    },
+                    {
+                      "text": "“Tell him kindly the headache didn't change the rota, then ask what would help him get ready for Friday.”",
+                      "tag": "best",
+                      "you": 4,
+                      "them": 6,
+                      "outcome": "Omar laughs. “That's new. I might try it.”",
+                      "why": "You gave him a plain line that does not shame Callum and does not rescue him. He keeps his dignity, and the bid loses its reward."
+                    }
+                  ]
+                },
+                {
+                  "who": "Daniel",
+                  "text": "“Omar, leave the lad alone. Three weeks in, that's all he is.”",
+                  "cue": "from the door, laptop under his arm",
+                  "lines": [
+                    {
+                      "text": "“You're right, Daniel. Sorry, Omar, I shouldn't have said it.”",
+                      "tag": "ok",
+                      "you": -4,
+                      "them": 1,
+                      "outcome": "Daniel nods, satisfied. Omar looks at the floor.",
+                      "why": "You gave up the point to keep the peace. It is pleasant, and it leaves the trap running."
+                    },
+                    {
+                      "text": "“He is new, Daniel. That's why he's picking things up so fast.”",
+                      "tag": "best",
+                      "you": 3,
+                      "them": 4,
+                      "outcome": "Daniel stops in the doorway, a little startled. “...Hm. Picking things up. Yes.”",
+                      "why": "You agreed he is new and kept the lesson in view. The line protects Callum without pretending the pattern is not there."
+                    }
+                  ]
+                }
+              ],
+              "payoff": "Omar believes the headache every Friday from then on, and the bid goes up in price."
+            }
+          ]
+        },
+        {
+          "level": "Analyse",
+          "label": "Analyse, explain it",
+          "items": [
+            {
+              "type": "pick",
+              "who": "Callum, at his desk, after the team room",
+              "text": "“Clara got sent home. Jess got the demo moved. So being poorly works best on Thursdays.”",
+              "cue": "working it out half aloud, pleased with himself",
+              "options": [
+                "The Kid's raw feelings",
+                "The Kid's own pilot",
+                "The Kid's copy of a grown-up rule"
+              ],
+              "answer": 1,
+              "why": "Callum is running a small, clever pilot of his own. He has watched which move gets a nod from the people around him and worked out when it pays. That quick, intuitive thinking sits inside the Kid, and it is where a trap is first set up.",
+              "traps": {
+                "0": "Raw feelings would be the wail or the giggle itself, wanting with no plan behind it. Callum is lining up Clara and Jess as evidence, and that is thinking.",
+                "2": "A copied grown-up rule would sound like something Daniel says: “Never leave a release half done.” Callum is not repeating anyone's rule. He is comparing what worked for other people and drawing his own conclusion."
+              },
+              "example": "Under-12 cricket in the park, a boy who has worked out that the other side gives him another go whenever he sulks: “Every time I cry, they give me another go.”<br>Working out what gets the nod is a plan the child has made."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "setting": "School & College",
+      "blurb": "A student copies the migraine that won Rosa an extension, the moment the presentation order goes up.",
+      "opener": {
+        "setting": "Thursday, 19:30, Room 14. The presentation order has just gone up on the whiteboard, and the radiator is ticking.",
+        "lines": [
+          {
+            "who": "Ms Whitlock",
+            "text": "“Rosa, take the extension, go home, put your feet up. We'll sort the rest.”",
+            "cue": "writing a new date on a slip, not looking up"
+          }
+        ],
+        "ask": "Can you spot a trap being copied in this classroom, and choose a move that stops it rather than feeds it?"
+      },
+      "rounds": [
+        {
+          "level": "Spot",
+          "label": "Spot, round 1",
+          "items": [
+            {
+              "type": "pick",
+              "who": "Ms Whitlock, to Rosa",
+              "text": "“Oh, Rosa! Take the extension, go home, put your feet up. We'll sort the rest.”",
+              "cue": "Rosa, 41, has a hand over one eye. The tutor is already writing the new date on her slip.",
+              "options": [
+                "A big warm nod, for being",
+                "A cold nod, for doing wrong",
+                "Nothing, she was not noticed"
+              ],
+              "answer": 0,
+              "why": "Ms Whitlock stopped everything and gave Rosa an extension on the spot. Rosa got that for being unwell, and she had earned none of it.",
+              "traps": {
+                "1": "A cold nod would be “You should have started sooner.” Ms Whitlock did the opposite, and warmly.",
+                "2": "Nothing would mean Rosa sat through the class unseen. The tutor was writing the new date before Rosa had finished her sentence."
+              },
+              "example": "A driving instructor to a pupil who goes white at a junction: “Pull in, we'll stop for tea and call it a day.”<br>The pupil is looked after, and the test date is forgotten."
+            },
+            {
+              "type": "pick",
+              "who": "Ben, from the back row",
+              "text": "“Miss... I've got a migraine coming on as well.”",
+              "cue": "eyes on the presentation order on the whiteboard, his name next to slot one, voice pitched like Rosa's",
+              "options": [
+                "A real headache, nothing else",
+                "A copy of what got Rosa her extension",
+                "A plain protest about presenting first"
+              ],
+              "answer": 1,
+              "why": "The slot is part of it, but the timing and the words say more. Same complaint, same moment, same reward: Ben has watched the migraine win an extension and is trying it on.",
+              "traps": {
+                "0": "A real headache would arrive by itself. This one came ten minutes after Rosa's, just as the whiteboard filled in with his name at the top.",
+                "2": "A protest about slot one would be blunt, like “I can't go first.” Ben is asking for the nod, and the order is only the cover."
+              },
+              "example": "A choir practice, a boy who has a sore throat just as the solos are handed out. Last week a girl left in a fuss and got a lozenge and a lift home.<br>The timing gives the copy away."
+            },
+            {
+              "type": "pick",
+              "who": "Hannah, packing her bag",
+              "text": "“Imran had a dead laptop the night before every deadline last term. Every single one.”",
+              "cue": "dry, and not looking at you",
+              "options": [
+                "Imran's laptop really died each time",
+                "Hannah is annoyed with the tutor",
+                "Imran found a move that works"
+              ],
+              "answer": 2,
+              "why": "Imran found that a dead laptop bought him more time, so he kept using it, and nobody had to say it was a lie. Ben is the next person in this room to find the same exit.",
+              "traps": {
+                "0": "Real accidents do not land on the same night every term. Hannah is describing a pattern she has watched.",
+                "1": "Her tone is flat, not angry at the tutor. The line is about a pattern that works on whoever is in charge."
+              },
+              "example": "A flat share group chat, a housemate who always has “a call” at bin-out time: “Sorry, can't, back in five.”<br>The call is always at the same point in the evening."
+            }
+          ]
+        },
+        {
+          "level": "Play",
+          "label": "Play, the week in motion",
+          "items": [
+            {
+              "type": "scene",
+              "title": "Thursday, 19:40, Room 14, evening class",
+              "setting": "Ten minutes after Rosa's extension. The group-project slip is on every desk, and Ben has been staring at the order list as if it might change.",
+              "meters": {
+                "you": 70,
+                "them": 50
+              },
+              "beats": [
+                {
+                  "who": "Ben",
+                  "text": "“Miss... I've got a migraine coming on as well.”",
+                  "cue": "a hand over one eye, the other on the list",
+                  "lines": [
+                    {
+                      "text": "“Poor Ben. Ms Whitlock, he should go home, he looks awful.”",
+                      "tag": "game",
+                      "you": -2,
+                      "them": 3,
+                      "outcome": "Ms Whitlock agrees at once. Ben's name slides from slot one to the bottom, and he sits up a little too straight for a man with a migraine.",
+                      "why": "You fed the bid. It got him what he wanted, so next time he will try it sooner. A trap move ends the scene here."
+                    },
+                    {
+                      "text": "“He doesn't want to go first, Miss.”",
+                      "tag": "ok",
+                      "you": -2,
+                      "them": -6,
+                      "outcome": "Ben glares at you. Ms Whitlock raises an eyebrow and gives him the extension anyway, to keep the peace.",
+                      "why": "The trap stops, but by shaming. It works for tonight and teaches him to hide the next bid better, so it is the wrong tool."
+                    },
+                    {
+                      "text": "“Is it the migraine, or is it slot one?” (said under your breath, with a grin)",
+                      "tag": "best",
+                      "you": 4,
+                      "them": 8,
+                      "outcome": "Ben snorts. “Slot one.” Rosa laughs into her scarf. The bid never gets going.",
+                      "why": "You caught the bid with a joke that lets him off, and nobody had to be the villain. The trap is broken while it is still being born."
+                    }
+                  ]
+                },
+                {
+                  "who": "Ben",
+                  "text": "“Miss, could I hand my draft in late? My head's too bad to read the feedback sheet.”",
+                  "cue": "a sly look, seeing how far this will go",
+                  "lines": [
+                    {
+                      "text": "“Which is it, the head or the red pen on page two? Say which and I'll back you.”",
+                      "tag": "best",
+                      "you": 3,
+                      "them": 5,
+                      "outcome": "He pauses, then laughs. “The red pen. There's a lot of red.” Ms Whitlock offers to go through page two with him at the break.",
+                      "why": "You asked for the real answer, and that let him be honest without losing face. A kind question gives a person a way out of the bid."
+                    },
+                    {
+                      "text": "“Fine, Ben, take the weekend. No rush.”",
+                      "tag": "ok",
+                      "you": 0,
+                      "them": 1,
+                      "outcome": "Ben nods and says nothing. The feedback sheet stays face down on his desk. He knows it works.",
+                      "why": "Giving in is gentle and does no harm tonight. The honest answer is still missing."
+                    },
+                    {
+                      "text": "“Miss, let him have the extension, he's ill.”",
+                      "tag": "game",
+                      "you": -3,
+                      "them": 2,
+                      "outcome": "Ms Whitlock writes a second date on a second slip. Ben looks pleased with himself, and the next bid is already forming.",
+                      "why": "You took the bid at face value and rewarded it. Feeding the copy is the same move as feeding the original, and it ends the scene early."
+                    }
+                  ]
+                },
+                {
+                  "who": "Ms Whitlock",
+                  "text": "“What's wrong with Ben, is he all right? That's two headaches in a quarter of an hour.”",
+                  "cue": "turning from the whiteboard, marker in hand",
+                  "lines": [
+                    {
+                      "text": "“He's copying Rosa, Miss.”",
+                      "tag": "ok",
+                      "you": -4,
+                      "them": -6,
+                      "outcome": "Ms Whitlock's mouth tightens. “That's unkind. He's only nineteen.” The room goes cold for a moment.",
+                      "why": "Naming the copy is true, but it lands on her care, so she defends Ben and the copying gets an audience."
+                    },
+                    {
+                      "text": "“It's been a long term for him, Miss. Shall we ask what he needs before Friday?”",
+                      "tag": "best",
+                      "you": 4,
+                      "them": 6,
+                      "outcome": "Ms Whitlock pauses. “Ask him?” She looks at Ben, who has no answer ready.",
+                      "why": "You moved from guessing to asking. That leaves Ben a real choice, and the trap loses its audience."
+                    }
+                  ]
+                }
+              ],
+              "payoff": "Ms Whitlock gives Ben until the Monday after next, and writes it on the slip in green pen. The trap has set one notch. Hannah sees it and says nothing."
+            },
+            {
+              "type": "scene",
+              "title": "Thursday, 20:20, the college library, ground floor",
+              "setting": "The class has broken for twenty minutes. Hannah is rereading her own feedback sheet for the third time. Ben has gone to the vending machine.",
+              "meters": {
+                "you": 70,
+                "them": 50
+              },
+              "beats": [
+                {
+                  "who": "Hannah",
+                  "text": "“Imran did exactly this. A dead laptop on every deadline. I never knew whether to believe him.”",
+                  "cue": "not looking up from the sheet",
+                  "lines": [
+                    {
+                      "text": "“That must be exhausting for you.”",
+                      "tag": "ok",
+                      "you": 0,
+                      "them": 2,
+                      "outcome": "Hannah sighs. “It was.” The moment stays heavy and nothing moves.",
+                      "why": "Warm, but it stays on the feeling and never helps her see the pattern. It is kind, and it opens nothing up."
+                    },
+                    {
+                      "text": "“You should have called his bluff.”",
+                      "tag": "ok",
+                      "you": -3,
+                      "them": -3,
+                      "outcome": "Hannah shrugs. She has heard that from everyone, and it never helped.",
+                      "why": "Nobody asked for advice. It makes you the one who fixes her problem and leaves her nothing to do but agree."
+                    },
+                    {
+                      "text": "“Hard to tell a real one from the move, isn't it? Rosa got an extension for hers. He's copying what works.”",
+                      "tag": "best",
+                      "you": 3,
+                      "them": 7,
+                      "outcome": "Hannah puts the sheet down. “...Huh. He is, isn't he.”",
+                      "why": "You named the pattern without blaming Ben. Copying what works is how a trap spreads, and saying it aloud lets a classmate see it from outside."
+                    }
+                  ]
+                },
+                {
+                  "who": "Hannah",
+                  "text": "“So what do I say to him? Share my notes, or tell him to ask Ms Whitlock for the day?”",
+                  "cue": "a real question this time, no dryness",
+                  "lines": [
+                    {
+                      "text": "“Tell him kindly the migraine didn't move the deadline, then ask what would help him start page two.”",
+                      "tag": "best",
+                      "you": 4,
+                      "them": 6,
+                      "outcome": "Hannah laughs. “That's a new one. I might try it.”",
+                      "why": "You gave her a plain line that does not shame Ben and does not rescue him. He keeps his dignity, and the bid loses its reward."
+                    },
+                    {
+                      "text": "“Share your notes, always. It keeps things nice.”",
+                      "tag": "game",
+                      "you": -6,
+                      "them": 3,
+                      "outcome": "Hannah relaxes. The notes go out, the page stays unwritten, and a headache is now how the term ends.",
+                      "why": "You agreed to let the headache count. That is a trap move, and it ends the scene here with the result below."
+                    },
+                    {
+                      "text": "“Don't share anything, ever.”",
+                      "tag": "ok",
+                      "you": -2,
+                      "them": -2,
+                      "outcome": "“Tried that with Imran,” she says flatly.",
+                      "why": "A rule enforced hard feels like a fight, and the bid keeps its audience. It does no harm, and it still falls short of the best move."
+                    }
+                  ]
+                },
+                {
+                  "who": "Ms Whitlock",
+                  "text": "“Hannah, leave the boy be. He's only nineteen.”",
+                  "cue": "from the library door, car keys in her hand",
+                  "lines": [
+                    {
+                      "text": "“Yes, Miss, you're right, I shouldn't have said it.”",
+                      "tag": "ok",
+                      "you": -4,
+                      "them": 1,
+                      "outcome": "Ms Whitlock nods, satisfied. Hannah looks at the floor.",
+                      "why": "You gave up the point to keep the peace. It is pleasant, and it leaves the trap running."
+                    },
+                    {
+                      "text": "“He is nineteen, Miss. That's why he's learning it so fast.”",
+                      "tag": "best",
+                      "you": 3,
+                      "them": 4,
+                      "outcome": "Ms Whitlock turns round, a little startled. “...Hm. Learning. Yes.”",
+                      "why": "You agreed he is young and kept the lesson in view. The line protects Ben without pretending the pattern is not there."
+                    }
+                  ]
+                }
+              ],
+              "payoff": "Hannah shares her notes every time from then on, and the bid goes up in price."
+            }
+          ]
+        },
+        {
+          "level": "Analyse",
+          "label": "Analyse, explain it",
+          "items": [
+            {
+              "type": "pick",
+              "who": "Ben, at the vending machine, after class",
+              "text": "“Rosa got an extension. Imran got extra days. So a migraine works best on Thursdays.”",
+              "cue": "working it out half aloud, very pleased with himself",
+              "options": [
+                "The Kid's copy of a grown-up rule",
+                "The Kid's raw feelings",
+                "The Kid's own pilot"
+              ],
+              "answer": 2,
+              "why": "Ben is running a small, clever pilot of his own. He has watched which move gets a nod from the people in charge and worked out when it pays. That quick, intuitive thinking sits inside the Kid, and it is where a trap is first set up.",
+              "traps": {
+                "0": "A copied grown-up rule would sound like something Ms Whitlock says: “Always hand in on time.” Ben is not repeating anyone's rule. He is comparing what worked for other students and drawing his own conclusion.",
+                "1": "Raw feelings would be the groan or the sulk itself, wanting with no plan behind it. Ben is lining up Rosa and Imran as evidence, and that is thinking."
+              },
+              "example": "A village cricket match, a boy who has worked out that the other side lets him bat again whenever he cries: “Every time I cry, they give me another go.”<br>Working out what gets the nod is a plan the child has made."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "setting": "Home & Flatmates",
+      "blurb": "A brother on the sofa bed copies a visitor's sore shoulder on the night the bins go out.",
+      "opener": {
+        "setting": "Thursday, 20:00, Hawthorn Court, apartment 3B. The blue bin is by the door and the rota is on the fridge.",
+        "lines": [
+          {
+            "who": "Sam",
+            "text": "“Oh, sit, sit! I'll do the bins, you've pulled something.”",
+            "cue": "taking the box of books from Ella before she can answer"
+          }
+        ],
+        "ask": "Can you spot a trap being copied in this flat, and choose a move that stops it rather than feeds it?"
+      },
+      "rounds": [
+        {
+          "level": "Spot",
+          "label": "Spot, round 1",
+          "items": [
+            {
+              "type": "pick",
+              "who": "Sam, to Maya's friend Ella",
+              "text": "“Oh, sit, sit! I'll do the bins, you've pulled something.”",
+              "cue": "Ella, in the doorway with a box of books, is rubbing her shoulder. Sam is already taking the box.",
+              "options": [
+                "Nothing, she was not noticed",
+                "A cold nod, for doing wrong",
+                "A big warm nod, for being"
+              ],
+              "answer": 2,
+              "why": "Sam took the box, took the bins, and took charge. Ella got that for being hurt. She had done nothing to earn it.",
+              "traps": {
+                "0": "Nothing would mean Ella stood there with her shoulder hurting and no one looked up. Sam crossed the hall in two steps.",
+                "1": "A cold nod would sound like “Should have used two trips.” Sam did the opposite, and warmly."
+              },
+              "example": "A café, a waiter to a customer who winces at a hot cup: “Don't touch that, I'll get you ice, and the next one's on me.”<br>The customer is fussed over, and the bill is forgotten."
+            },
+            {
+              "type": "pick",
+              "who": "Josh, from the sofa bed",
+              "text": "“Sam... my back's gone funny too.”",
+              "cue": "eyes on the bin rota on the fridge door, his name written next to tonight",
+              "options": [
+                "A copy of Ella's move",
+                "A real bad back, nothing else",
+                "A plain protest about the bins"
+              ],
+              "answer": 0,
+              "why": "The rota is part of it, but the timing and the words say more. Same complaint, same moment, same reward: Josh, Sam's brother, has watched Ella's shoulder work and is trying it on.",
+              "traps": {
+                "1": "A real bad back would turn up by itself. This one arrived ten minutes after Ella's, just as he spotted his name beside the bins.",
+                "2": "A protest about the bins would be loud and plain, like “It's not my turn.” Josh is asking for the nod, and the rota is only the cover."
+              },
+              "example": "A youth hostel, a lad who gets cramp just as the washing-up is handed round. The night before someone else limped off and was given the best bunk.<br>The timing gives the copy away."
+            },
+            {
+              "type": "pick",
+              "who": "Maya, scraping a pan",
+              "text": "“My cousin Beth did the same. A migraine every time it was her night to cook.”",
+              "cue": "tired and dry, with a look that says she has been here before",
+              "options": [
+                "Beth was properly ill each time",
+                "Beth had a move that worked",
+                "Maya is cross with her family"
+              ],
+              "answer": 1,
+              "why": "Beth found that a migraine got her out of cooking, so she kept using it, and nobody had to decide it was a lie. Josh is the next person to find the same exit.",
+              "traps": {
+                "0": "A real illness does not return on cooking night every time. Maya is describing a pattern she has seen before.",
+                "2": "Her tone is tired, not angry at her family. The line is about a pattern that works on whoever is around."
+              },
+              "example": "A tennis club WhatsApp group, a member who always has “a meeting” right at court-sweeping time: “Sorry, got to take this, back in ten.”<br>The meeting is always at the same point in the evening."
+            }
+          ]
+        },
+        {
+          "level": "Play",
+          "label": "Play, the week in motion",
+          "items": [
+            {
+              "type": "scene",
+              "title": "Thursday, 20:10, the kitchen, Hawthorn Court",
+              "setting": "Ten minutes after Ella's shoulder. The blue bin is by the door, the rota is on the fridge, and Josh is watching Sam the way a card player watches a dealer.",
+              "meters": {
+                "you": 70,
+                "them": 50
+              },
+              "beats": [
+                {
+                  "who": "Josh",
+                  "text": "“Sam... my back's gone funny too.”",
+                  "cue": "one hand on his hip, eyes on the rota",
+                  "lines": [
+                    {
+                      "text": "“Is it the back, or is it the blue bin?” (said low, with a wink)",
+                      "tag": "best",
+                      "you": 4,
+                      "them": 8,
+                      "outcome": "Josh snorts. “The blue bin.” Maya laughs into her mug. The bid never gets going.",
+                      "why": "You caught the bid with a joke that lets him off, and nobody had to be the villain. The trap is broken while it is still being born."
+                    },
+                    {
+                      "text": "“He just doesn't want to take the bins out, Sam.”",
+                      "tag": "ok",
+                      "you": -2,
+                      "them": -6,
+                      "outcome": "Josh glares at you. Sam clicks his tongue and takes the bin out himself, to keep the peace.",
+                      "why": "The trap stops, but by shaming. It works for tonight and teaches him to hide the next bid better, so it is the wrong tool."
+                    },
+                    {
+                      "text": "“Poor Josh. I'll do the bins, sit down, mate.”",
+                      "tag": "game",
+                      "you": -2,
+                      "them": 3,
+                      "outcome": "Josh sinks into the sofa with a groan that is a little too well timed. The rota gets a pen line through his name.",
+                      "why": "You fed the bid. It got him what he wanted, so next time he will try it sooner. A trap move ends the scene here."
+                    }
+                  ]
+                },
+                {
+                  "who": "Josh",
+                  "text": "“Sam, can I skip the washing-up too? My back's bad. And the milk run tomorrow, maybe someone else could.”",
+                  "cue": "a sly look, seeing how far this will go",
+                  "lines": [
+                    {
+                      "text": "“Sam, let him off everything, he's clearly in pain.”",
+                      "tag": "game",
+                      "you": -3,
+                      "them": 2,
+                      "outcome": "Sam pours him a tea. Josh sips it and looks very pleased with himself, and the next bid is already forming.",
+                      "why": "You took the bid at face value and rewarded it. Feeding the copy is the same move as feeding the original, and it ends the scene early."
+                    },
+                    {
+                      "text": "“Fine, have tonight off, Josh.”",
+                      "tag": "ok",
+                      "you": 0,
+                      "them": 1,
+                      "outcome": "Josh sips and says nothing. The rota sits blank beside his name. He knows it works.",
+                      "why": "Giving in is gentle and does no harm tonight. The honest answer is still missing."
+                    },
+                    {
+                      "text": "“Which is it, the back or the washing-up? Tell me and I'll believe you either way.”",
+                      "tag": "best",
+                      "you": 3,
+                      "them": 5,
+                      "outcome": "He holds out for a second, then laughs. “Both, but mostly the washing-up.” Sam laughs too, and passes him a tea towel.",
+                      "why": "You asked for the real answer, and that let him be honest without losing face. A kind question gives a person a way out of the bid."
+                    }
+                  ]
+                },
+                {
+                  "who": "Sam",
+                  "text": "“What's going on with Josh's back? Ella had hers an hour ago.”",
+                  "cue": "turning from the sink, a wet plate in his hand",
+                  "lines": [
+                    {
+                      "text": "“Josh's back is fine, Sam. He's copying Ella.”",
+                      "tag": "ok",
+                      "you": -4,
+                      "them": -6,
+                      "outcome": "Sam spins round. “Don't say that, he's sixteen.” The kitchen goes cold for a moment.",
+                      "why": "Naming the copy is true, but it lands on Sam's care, so he defends Josh and the copying gets an audience."
+                    },
+                    {
+                      "text": "“It's been a long week for him, Sam. Shall we ask what he needs?”",
+                      "tag": "best",
+                      "you": 4,
+                      "them": 6,
+                      "outcome": "Sam pauses. “Ask him?” He looks at Josh, who has no answer ready.",
+                      "why": "You moved from guessing to asking. That leaves Josh a real choice, and the trap loses its audience."
+                    }
+                  ]
+                }
+              ],
+              "payoff": "Sam does the bins, the milk run and the washing-up, all on his own. The trap has set one notch, and Maya notices."
+            },
+            {
+              "type": "scene",
+              "title": "Thursday, 20:50, the balcony and the kitchen",
+              "setting": "Maya is scraping the same pan for the third time. Josh is back on the sofa bed with his headphones on. Sam is at the sink.",
+              "meters": {
+                "you": 70,
+                "them": 50
+              },
+              "beats": [
+                {
+                  "who": "Maya",
+                  "text": "“My cousin Beth did exactly this. A migraine on her cooking night. I never knew whether to believe her.”",
+                  "cue": "scraping, not looking at you",
+                  "lines": [
+                    {
+                      "text": "“That must be exhausting for you.”",
+                      "tag": "ok",
+                      "you": 0,
+                      "them": 2,
+                      "outcome": "Maya sighs. “It really is.” The moment stays heavy and nothing moves.",
+                      "why": "Warm, but it stays on the feeling and never helps her see the pattern. It is kind, and it opens nothing up."
+                    },
+                    {
+                      "text": "“It's hard to tell a real one from the move, isn't it? Ella got fussed over for hers. He's copying what works.”",
+                      "tag": "best",
+                      "you": 3,
+                      "them": 7,
+                      "outcome": "Maya stops scraping. “...Huh. He is, isn't he.”",
+                      "why": "You named the pattern without blaming Josh. Copying what works is how a trap spreads, and saying it aloud lets a flatmate see it from outside."
+                    },
+                    {
+                      "text": "“You should call his bluff.”",
+                      "tag": "ok",
+                      "you": -3,
+                      "them": -3,
+                      "outcome": "Maya nods without looking up. She has heard that from everyone, and it never helped.",
+                      "why": "Nobody asked for advice. It makes you the one who fixes her problem and leaves her nothing to do but agree."
+                    }
+                  ]
+                },
+                {
+                  "who": "Maya",
+                  "text": "“So what do I do? Put his name on the rota anyway, or let him off all week?”",
+                  "cue": "a real question this time, no dryness",
+                  "lines": [
+                    {
+                      "text": "“Put him on every night, no exceptions.”",
+                      "tag": "ok",
+                      "you": -2,
+                      "them": -2,
+                      "outcome": "“Tried that with Beth,” she says flatly.",
+                      "why": "A rule enforced hard feels like a fight, and the bid keeps its audience. It does no harm, and it still falls short of the best move."
+                    },
+                    {
+                      "text": "“Tell him kindly the back didn't move the rota, then ask what would help him get through the washing-up.”",
+                      "tag": "best",
+                      "you": 4,
+                      "them": 6,
+                      "outcome": "Maya laughs. “That's a new one. I might try it.”",
+                      "why": "You gave her a plain line that does not shame Josh and does not rescue him. He keeps his dignity, and the bid loses its reward."
+                    },
+                    {
+                      "text": "“I'd just believe him. Easier for everyone.”",
+                      "tag": "game",
+                      "you": -6,
+                      "them": 3,
+                      "outcome": "Maya relaxes. The pan stays on the hob, and a bad back is now how the evening ends.",
+                      "why": "You agreed to let the bad back count. That is a trap move, and it ends the scene here with the result below."
+                    }
+                  ]
+                },
+                {
+                  "who": "Sam",
+                  "text": "“Maya, leave him be. He's only sixteen and he's on holiday.”",
+                  "cue": "without turning round, tea towel over one shoulder",
+                  "lines": [
+                    {
+                      "text": "“He is sixteen, Sam. That's why he's learning it so fast.”",
+                      "tag": "best",
+                      "you": 3,
+                      "them": 4,
+                      "outcome": "Sam turns round, a little startled. “...Hm. Learning. Yes.”",
+                      "why": "You agreed he is young and kept the lesson in view. The line protects Josh without pretending the pattern is not there."
+                    },
+                    {
+                      "text": "“Yes, Sam, you're right, I shouldn't have said it.”",
+                      "tag": "ok",
+                      "you": -4,
+                      "them": 1,
+                      "outcome": "Sam nods, satisfied. Maya looks at the floor.",
+                      "why": "You gave up the point to keep the peace. It is pleasant, and it leaves the trap running."
+                    }
+                  ]
+                }
+              ],
+              "payoff": "Maya believes the bad back every night from now on, and the bid goes up in price."
+            }
+          ]
+        },
+        {
+          "level": "Analyse",
+          "label": "Analyse, explain it",
+          "items": [
+            {
+              "type": "pick",
+              "who": "Josh, on the sofa bed, after the kitchen",
+              "text": "“Ella got the bins done for her. Beth got off cooking. So my back works best on Thursdays.”",
+              "cue": "working it out half aloud, very pleased with himself",
+              "options": [
+                "The Kid's own pilot",
+                "The Kid's raw feelings",
+                "The Kid's copy of a grown-up rule"
+              ],
+              "answer": 0,
+              "why": "Josh is running a small, clever pilot of his own. He has watched which move gets a nod from the people around him and worked out when it pays. That quick, intuitive thinking sits inside the Kid, and it is where a trap is first set up.",
+              "traps": {
+                "1": "Raw feelings would be the groan or the giggle itself, wanting with no plan behind it. Josh is lining up Ella and Beth as evidence, and that is thinking.",
+                "2": "A copied grown-up rule would sound like something Sam says: “Always do your share.” Josh is not repeating anyone's rule. He is comparing what worked for other people and drawing his own conclusion."
+              },
+              "example": "A kids' football match in the car park, a boy who has worked out that the other side lets him restart whenever he sulks: “Every time I cry, they give me another go.”<br>Working out what gets the nod is a plan the child has made."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

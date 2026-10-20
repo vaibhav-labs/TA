@@ -1,0 +1,473 @@
+{
+  "baseBlurb": "Clara jokes about breaking the build while Omar mutters about another fire drill, and the team room fills with feelings.",
+  "stories": [
+    {
+      "setting": "Home & Flatmates",
+      "blurb": "Sam owes Maya for the gas, and every sorry he offers leaves the bill exactly where it was.",
+      "opener": {
+        "setting": "Monday, 7:15pm. Hawthorn Court, apartment 3B, the kitchen. The gas bill lies open on the table and Maya's notebook is open beside it.",
+        "lines": [
+          {
+            "who": "Maya",
+            "text": "“Forty-one of that is yours, Sam. I wrote it down in March.”",
+            "cue": "tapping the page with a pen, not raising her voice"
+          },
+          {
+            "who": "Sam",
+            "text": "“Sorry, sorry, I know. I'm the worst flatmate in the building.”",
+            "cue": "already reaching for the kettle, smiling too fast"
+          }
+        ],
+        "ask": "Which feelings in this kitchen finish something, and which ones only go round?"
+      },
+      "rounds": [
+        {
+          "level": "Spot",
+          "label": "Spot, round 1",
+          "intro": "Each feeling is shown in one line. Decide whether it finishes something, or whether it is a stand-in that fixes nothing.",
+          "items": [
+            {
+              "type": "pick",
+              "who": "Sam",
+              "text": "“I'm so sorry, I'm a terrible person, I'll sort it, I'll sort everything. I'm awful.”",
+              "cue": "hand flat on his chest, eyes on the floor tiles",
+              "options": [
+                "A real feeling: it finishes something",
+                "A stand-in feeling: it fixes nothing"
+              ],
+              "answer": 1,
+              "why": "The sorry is big and the ask is missing. No amount, no day, nothing Maya could hold him to. Under it sits a scared feeling about her being cross, and that one is never said. So the sorry goes round and fixes nothing.",
+              "traps": {
+                "0": "Taking the sorry as real would send Maya to comfort him. She would say it's fine, he would say sorry again, and the forty-one would stay in her notebook with no date beside it."
+              },
+              "example": "A bus stop, Wednesday.<br>Man to his sister, who is waiting for a lift he forgot: “I'm useless, I'm a rubbish brother, I'll make it up to you, I swear.”<br>She says “Stop it, it's fine,” and he is still talking when the bus comes."
+            },
+            {
+              "type": "pick",
+              "who": "Maya",
+              "text": "“I'm cross about the gas. I want twenty by Friday, in my account, and the rest by the end of the month.”",
+              "cue": "pen laid down, voice level, looking straight at him",
+              "options": [
+                "A real feeling: it finishes something",
+                "A stand-in feeling: it fixes nothing"
+              ],
+              "answer": 0,
+              "why": "The feeling fits one thing, the gas, and it asks for one change with two dates. Once Sam answers, the anger has done its work. A real feeling fits the event and then finishes.",
+              "traps": {
+                "1": "Calling it a stand-in would file her anger as noise. Sam would hear that nothing needs to change, and the bill would sit on the table until the next one arrived beside it."
+              },
+              "example": "A garage forecourt, Saturday.<br>Customer: “I'm annoyed the car came back with the same rattle. I want it looked at again by Tuesday, free.”<br>Mechanic: “Bring it in Tuesday at nine.”"
+            },
+            {
+              "type": "pick",
+              "who": "Sam",
+              "text": "“I hid the envelope on Friday because I was scared you'd go off at me. I've got twenty now. Can I hand it over tonight?”",
+              "cue": "standing in the doorway with a crumpled envelope held out",
+              "options": [
+                "A real feeling: it finishes something",
+                "A stand-in feeling: it fixes nothing"
+              ],
+              "answer": 0,
+              "why": "The fear is named, it fits what he did, and it comes with a plain ask for tonight. Once Maya answers, there is nothing left to carry. That is a real feeling, even though it is a small and uncomfortable one.",
+              "traps": {
+                "1": "Reading the fear as a stand-in would treat the envelope as one more apology. Maya would wave it off or snap, and Sam would learn that saying the true thing gets him nowhere."
+              },
+              "example": "A canteen queue, Monday.<br>Intern: “I was scared to tell you the file was corrupted, so I waited. It's fixed now. Can I show you?”<br>Lead: “Show me. Thanks for saying.”"
+            },
+            {
+              "type": "pick",
+              "who": "Maya",
+              "text": "“No, no, I'm fine. I'm not bothered about the bins. I'll do them. I always do them, it's fine.”",
+              "cue": "bag already knotted, back to the room, one sock-footed step toward the door",
+              "options": [
+                "A real feeling: it finishes something",
+                "A stand-in feeling: it fixes nothing"
+              ],
+              "answer": 1,
+              "why": "The words say fine and the knot in the bag says otherwise. She asks for nothing, and the line about always doing them hands Sam a charge with no way to answer it. Under it sits a tired, hurt feeling that she keeps out of sight. So it is a stand-in.",
+              "traps": {
+                "0": "Taking the fine at face value would let Sam say thanks and go back to his phone. The bins would be hers again on Monday, and the hurt would be written in the notebook instead of said."
+              },
+              "example": "A parents' evening, Tuesday.<br>Mother, to a teacher who forgot to send the form: “No, really, I'm fine. I'll fill it in myself. I always do.”<br>The teacher says thanks, and next term the form is late again."
+            }
+          ]
+        },
+        {
+          "level": "Play",
+          "label": "Play, the week in motion",
+          "intro": "Harder now. The two feelings in each line look alike, so ask whether anything finishes once the line is said.",
+          "items": [
+            {
+              "type": "pick",
+              "who": "Sam",
+              "text": "“I feel awful, I feel so awful about the milk and the bins and the gas. I'll do better. I'll do better, I promise. Sorry.”",
+              "cue": "wiping the same patch of counter, not looking up",
+              "options": [
+                "A real feeling: guilt about the milk and bins, and it finishes once he has said which day he will do them",
+                "A stand-in feeling: a sorry that goes round and asks Maya to cheer him up, so no day gets named"
+              ],
+              "answer": 1,
+              "why": "He has said it three ways in one breath and named no day for the bins. A real sorry would pick one thing and do it, and then it would be over. This one asks Maya to cheer him up, so it goes round.",
+              "traps": {
+                "0": "Guilt about the milk and bins does fit, so the line can sound true. If you took it that way, you would tell him it's fine. The sorry would stop for an hour and start again on Saturday, with the bins still full."
+              },
+              "example": "A flat share noticeboard, Friday.<br>Note: “So sorry about the noise, again, I'm so inconsiderate, I'll be quieter, sorry, sorry.”<br>The next night the noise is the same, and so is the note."
+            },
+            {
+              "type": "pick",
+              "who": "Maya",
+              "text": "“I am SHOUTING because I'm furious! The boiler's been off since Wednesday and you said you'd ring the landlord Monday! Ring him now, I'll watch you do it!”",
+              "cue": "phone held out at arm's length, voice cracking on the last word",
+              "options": [
+                "A real feeling: anger about the call he promised, and it finishes once Sam rings the landlord",
+                "A stand-in feeling: loud anger that covers a fear of being the only grown-up, and it carries on after the call is made"
+              ],
+              "answer": 0,
+              "why": "The volume is high but the line is tight: one broken boiler, one promised call, one request for now. When Sam rings, the anger has nothing left to do. Loud and finished is still a real feeling.",
+              "traps": {
+                "1": "The shouting makes it look like a stand-in, and it would be easy to say she has anger to burn. If you took it that way, you would tell Maya to calm down. Sam would hide behind the tone, the call would not get made and the boiler would stay cold."
+              },
+              "example": "A market stall, Sunday.<br>Customer, loudly: “I'm livid! You said the wheel would be fixed by noon! Fix it now, I'll wait right here!”<br>Stallholder: “Right, give me ten minutes.”"
+            }
+          ]
+        },
+        {
+          "level": "Analyse",
+          "label": "Analyse, explain it",
+          "items": [
+            {
+              "type": "pick",
+              "who": "Nadia",
+              "text": "“Sam says sorry about the milk and the gas, and the bins stay full. Which reading fits, and what would the real version of that sorry do?”",
+              "cue": "a voice note, a kettle clicking off behind her",
+              "options": [
+                "An authentic feeling: sorry this loud and this often must be real, so Maya should comfort him until it passes",
+                "A racket feeling, because Sam is a hopeless flatmate. The feeling itself has nothing to do with it.",
+                "A racket feeling: sorry shown in place of the real one. A real version would name the debt and a day."
+              ],
+              "answer": 2,
+              "why": "Plain words first: a stand-in feeling that fixes nothing. The books call it a racket feeling, and the test is whether it finishes the situation. Sam's sorry repeats and asks for nothing, so it never finishes. The real version names the debt and a day to pay it.",
+              "traps": {
+                "0": "A big sorry is not the same as a finished one. Calling it authentic because it is loud would send Maya to comfort him until it passes, and the bins and the forty-one would stay exactly where they are.",
+                "1": "Blaming Sam's character sends the talk to the person, not the feeling. Sam would hear that he is the problem, the sorry would grow, and nothing would be asked of anyone."
+              },
+              "example": "A school staffroom, Monday.<br>Teacher: “I'm so sorry about the late reports, again, I'm hopeless.”<br>Head: “Give me a date for them, and I'll hold the others till then.”"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "setting": "Friends & Community",
+      "blurb": "Ruby runs the five-a-side, half the team has drifted off, and Joseph keeps making jokes from the touchline.",
+      "opener": {
+        "setting": "Thursday, 6:50pm. The Corner Table, before the five-a-side. The pitch is booked for half past seven and the squad is two short.",
+        "lines": [
+          {
+            "who": "Ruby",
+            "text": "“Twenty-four for the hour, paid up front, and my phone is full of thumbs-ups from people who aren't here.”",
+            "cue": "smoothing the booking sheet flat against the table edge"
+          },
+          {
+            "who": "Joseph",
+            "text": "“Ha. I'll hold the bibs. I'm bench material anyway.”",
+            "cue": "grinning at the sugar bowl, boot bag between his feet"
+          }
+        ],
+        "ask": "Which feelings at this table finish something, and which ones only go round?"
+      },
+      "rounds": [
+        {
+          "level": "Spot",
+          "label": "Spot, round 1",
+          "intro": "Each feeling is shown in one line. Decide whether it finishes something, or whether it is a stand-in that fixes nothing.",
+          "items": [
+            {
+              "type": "pick",
+              "who": "Ruby",
+              "text": "“I'm cross. I paid twenty-four for the pitch and nobody has paid me back. I want it by Sunday, cash or transfer.”",
+              "cue": "booking sheet folded in her fist, voice even",
+              "options": [
+                "A real feeling: it finishes something",
+                "A stand-in feeling: it fixes nothing"
+              ],
+              "answer": 0,
+              "why": "The anger fits one thing, the pitch fee, and it asks for one change by a day. Once the money comes, it is over. That is how a real feeling works: it fits and it finishes.",
+              "traps": {
+                "1": "Calling it a stand-in would treat her as moaning about money. The lads would shrug, the twenty-four would stay unpaid, and Ruby would start to dread booking the pitch at all."
+              },
+              "example": "A book club, Thursday.<br>Member: “I'm annoyed that the deposit for the room is still with me. I want my share by the next meeting.”<br>Treasurer: “Sorry, I'll send it tonight.”"
+            },
+            {
+              "type": "pick",
+              "who": "Joseph",
+              "text": "“Ha. Bench material anyway. Ha. Don't mind me, I'll hold the bibs.”",
+              "cue": "laughing first, already picking up the bag of bibs",
+              "options": [
+                "A real feeling: it finishes something",
+                "A stand-in feeling: it fixes nothing"
+              ],
+              "answer": 1,
+              "why": "The laugh comes before anyone else can speak, and he asks for nothing. It covers a hurt feeling about being left out, and that one stays out of sight. The joke ends and nothing has finished, so it is a stand-in.",
+              "traps": {
+                "0": "Taking the laugh as real would let Ruby laugh back and hand him the bibs. Joseph would stand on the touchline for an hour, and the hurt about being benched would go home with him."
+              },
+              "example": "A pub quiz, Tuesday.<br>Man, after his team skips his answer: “Ha, what do I know. Ha. I'll keep score.”<br>He keeps score all night and nobody asks him anything."
+            },
+            {
+              "type": "pick",
+              "who": "Ruby",
+              "text": "“No, I'm thrilled. Thrilled. It's fine that half of them rang off. Completely fine.”",
+              "cue": "bright voice, phone face down on the table",
+              "options": [
+                "A real feeling: it finishes something",
+                "A stand-in feeling: it fixes nothing"
+              ],
+              "answer": 1,
+              "why": "The word thrilled is too big for the news. She is let down and cross, and she asks for no one to come on Thursday. So the brightness goes round and no one hears what she needs, which makes it a stand-in.",
+              "traps": {
+                "0": "Believing the brightness would earn her a thumbs-up in the chat. Five lads would stay away on Thursday, and Ruby would keep arranging the games alone and smiling."
+              },
+              "example": "A leaving do, Friday.<br>Colleague, as three people text to cancel: “Oh, I'm delighted. Delighted. The more cake for us.”<br>Nobody offers to come, and the cake goes home uneaten."
+            },
+            {
+              "type": "pick",
+              "who": "Joseph",
+              "text": "“I was hurt when you said bench material. I'd like to start the first half next Thursday. Can I?”",
+              "cue": "bag on his knee, looking straight at Ruby",
+              "options": [
+                "A real feeling: it finishes something",
+                "A stand-in feeling: it fixes nothing"
+              ],
+              "answer": 0,
+              "why": "The hurt is named, it fits the comment, and it asks for one thing next Thursday. Once Ruby answers, nothing is left to carry. A real feeling, said in a plain line, finishes.",
+              "traps": {
+                "1": "Reading it as a stand-in would treat his hurt as one more grumble. Ruby would tease him, Joseph would learn that saying the true thing gets a joke, and the bibs would be his again."
+              },
+              "example": "A football pitch, Saturday.<br>Boy to his coach: “I was hurt when you left me out last week. Can I start on Saturday?”<br>Coach: “Fair. You start.”"
+            }
+          ]
+        },
+        {
+          "level": "Play",
+          "label": "Play, the week in motion",
+          "intro": "Harder now. The two feelings in each line look alike, so ask whether anything finishes once the line is said.",
+          "items": [
+            {
+              "type": "pick",
+              "who": "Ruby",
+              "text": "“Just saying, it's a shame. A real shame. Not saying anything. A shame, that's all.” Then, eleven minutes later: “A shame.”",
+              "cue": "three dots appearing and vanishing in the group chat",
+              "options": [
+                "A real feeling: disappointment about the empty pitch, and it finishes once people say if they are coming",
+                "A stand-in feeling: a hint that asks for nothing, so nobody knows what Ruby wants"
+              ],
+              "answer": 1,
+              "why": "Two messages in eleven minutes and no ask in either. A real feeling would say the thing: I'm let down, come on Thursday. This one hints and waits for someone else to guess, so it goes round and nobody turns up.",
+              "traps": {
+                "0": "Disappointment about the empty pitch does fit, so the line can read as real. If you took it that way, you would send her a sad face. The hint would grow, Thursday would stay short, and Ruby would still not have said what she wants."
+              },
+              "example": "A WhatsApp group for a street party, Wednesday.<br>Neighbour: “Just saying, it's a shame no one helped last year. A shame. Not complaining.”<br>No one answers and the next message is the same."
+            },
+            {
+              "type": "pick",
+              "who": "Joseph",
+              "text": "“Sorry, I'm being daft, I'm crying over a Thursday kickabout. My dad used to watch me play. He can't get out now. I miss him on match nights.” Then he rubbed his face and said “Right. Pass the bibs.”",
+              "cue": "eyes wet, hand pressed over his mouth, a short laugh at the end",
+              "options": [
+                "A real feeling: sadness about his dad, and it eases once he has said it out loud to someone",
+                "A stand-in feeling: tears that cover shame, and they carry on after the thing is said, with nothing asked"
+              ],
+              "answer": 0,
+              "why": "The sadness fits the thing it is about, a dad who can no longer come. He names it in a few lines and then turns back to the game. Tears that finish are a real feeling, even when the first line is an apology.",
+              "traps": {
+                "1": "The apology and the laugh can look like a cover. If you took it that way, you would tell him he is fine. Joseph would stop talking about his dad, and the match nights would stay sore with no one to tell."
+              },
+              "example": "A hospital waiting room, Friday.<br>Woman: “Sorry, I'm being silly. He always did the crossword with me. I miss that.” She wipes her eyes. “Right. Is there tea?”<br>Her friend: “I'll get it.”"
+            }
+          ]
+        },
+        {
+          "level": "Analyse",
+          "label": "Analyse, explain it",
+          "items": [
+            {
+              "type": "pick",
+              "who": "Nadia",
+              "text": "“Ruby says she is thrilled that half the lads rang off. Which reading fits, and what would a real version of that feeling do?”",
+              "cue": "stirring her tea, eyes on Ruby's phone",
+              "options": [
+                "An authentic feeling: she is smiling and calm, so the feeling must be real and needs nothing more",
+                "A racket feeling, because Ruby is a fake friend. The feeling itself has nothing to do with it.",
+                "A racket feeling: brightness shown in place of the let-down. A real version would say so and ask for people."
+              ],
+              "answer": 2,
+              "why": "Plain words first: a stand-in that fixes nothing. The books call it a racket feeling, and the test is whether it finishes the situation. Ruby's brightness covers a let-down and asks for no one. The real version would say I'm let down, then ask who is coming.",
+              "traps": {
+                "0": "Cheerfulness is a feeling that people trust easily. Calling it authentic because she smiles would send everyone off to enjoy the cake, and Thursday would stay short.",
+                "1": "Blaming Ruby for being fake sends the talk to the person, not the feeling. She would feel found out and brighter than ever, and the let-down would stay under the table."
+              },
+              "example": "A hockey club, Sunday.<br>Captain: “I'm delighted so few came. Delighted. More pitch for us.”<br>Coach: “If you wanted six more, say so, and I'll ring round tonight.”"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "setting": "School & College",
+      "blurb": "Sam's evening class has a group project due Thursday noon, and nobody in the group will say what they actually need.",
+      "opener": {
+        "setting": "Tuesday, 7:05pm. The evening class, room 14. The tutor has handed back feedback sheets and the group project is due Thursday at noon.",
+        "lines": [
+          {
+            "who": "Ella",
+            "text": "“Ha. Mine's all red pen. Don't look.”",
+            "cue": "holding the sheet face down against her chest, laughing too early"
+          },
+          {
+            "who": "Gareth",
+            "text": "“Every group. Every single time. Same people, same Thursday.”",
+            "cue": "not looking at Sam, who is busy with his zip"
+          }
+        ],
+        "ask": "Which feelings in this classroom finish something, and which ones only go round?"
+      },
+      "rounds": [
+        {
+          "level": "Spot",
+          "label": "Spot, round 1",
+          "intro": "Each feeling is shown in one line. Decide whether it finishes something, or whether it is a stand-in that fixes nothing.",
+          "items": [
+            {
+              "type": "pick",
+              "who": "Ella",
+              "text": "“Ha, mine's all red pen. I'm useless at layouts, obviously. Ha. I'll redo the whole thing.”",
+              "cue": "giggling at the feedback sheet, already tearing a fresh page",
+              "options": [
+                "A real feeling: it finishes something",
+                "A stand-in feeling: it fixes nothing"
+              ],
+              "answer": 1,
+              "why": "The giggle comes first and the 'obviously' shuts the door on any reply. She asks for no help with the layout. Under it sits a scared feeling about not being good enough, and that never gets a hearing. So it goes round.",
+              "traps": {
+                "0": "Taking the giggle as real would send everyone to the redo. Ella would stay up rewriting the whole thing, and nobody would ask what the red pen actually said."
+              },
+              "example": "A cooking class, Wednesday.<br>Woman, after her loaf comes out flat: “Ha, I'm hopeless, obviously. Ha. I'll start again from scratch.”<br>She bins the loaf and does not ask the teacher what went wrong."
+            },
+            {
+              "type": "pick",
+              "who": "Ms Hargreaves",
+              "text": "“I'm disappointed that two outlines are missing. I need them in the folder by Thursday noon, or I can't mark the group.”",
+              "cue": "tapping the register against the desk, even voice",
+              "options": [
+                "A real feeling: it finishes something",
+                "A stand-in feeling: it fixes nothing"
+              ],
+              "answer": 0,
+              "why": "The disappointment fits one fact, two missing outlines, and it asks for one thing by a deadline. When they arrive, it is finished. A real feeling can sound dry and still do its work.",
+              "traps": {
+                "1": "Calling it a stand-in would hear a cool tone and miss the ask. Gareth and Sam would shrug it off as tutor talk, the outlines would stay missing, and the group would go unmarked."
+              },
+              "example": "A choir rehearsal, Tuesday.<br>Conductor: “I'm frustrated that nobody has learned bar twelve. I want it by Saturday, or we cut the piece.”<br>Sopranos: “We'll have it.”"
+            },
+            {
+              "type": "pick",
+              "who": "Gareth",
+              "text": "“This is a joke. Every group, the same. I carry everybody. I always do.”",
+              "cue": "slamming a textbook shut, eyes on the ceiling",
+              "options": [
+                "A real feeling: it finishes something",
+                "A stand-in feeling: it fixes nothing"
+              ],
+              "answer": 1,
+              "why": "The anger goes round the same loop: every group, always. It asks for no one to do anything, so nothing finishes. Under it sits a lonely, unfairly-treated feeling that nobody asks about.",
+              "traps": {
+                "0": "Taking the anger as real would give Gareth a hearing for the carrying. The talk would turn to who is lazy, and the loop would run on, with Gareth sure that nobody listens."
+              },
+              "example": "A neighbourhood meeting, Monday.<br>Man: “Every year, the same. I do all the stalls and nobody thanks me. Every year.”<br>Chair moves on to the next item."
+            },
+            {
+              "type": "pick",
+              "who": "Sam",
+              "text": "“I'm scared I can't finish my section by Thursday. I'd rather say so now. Could someone take the tables, and I'll do the summary?”",
+              "cue": "hand half raised, notebook shut on the desk",
+              "options": [
+                "A real feeling: it finishes something",
+                "A stand-in feeling: it fixes nothing"
+              ],
+              "answer": 0,
+              "why": "The fear is named, it fits his situation, and it comes with a plain swap. Once the group answers, it has done its work. A small scared feeling said early is a real one.",
+              "traps": {
+                "1": "Reading it as a stand-in would treat his fear as another excuse. The group would groan, Sam would go silent, and the tables would still be undone on Thursday."
+              },
+              "example": "A stockroom, Friday.<br>Assistant: “I'm worried I won't finish the count by five. Could you take the tins while I do the shelves?”<br>Supervisor: “Fine, give me the sheet.”"
+            }
+          ]
+        },
+        {
+          "level": "Play",
+          "label": "Play, the week in motion",
+          "intro": "Harder now. The two feelings in each line look alike, so ask whether anything finishes once the line is said.",
+          "items": [
+            {
+              "type": "pick",
+              "who": "Gareth",
+              "text": "“I am FURIOUS, Sam! You said Tuesday for the tables! It's Thursday! Send them by six, or I'll do them myself and put my name on them!”",
+              "cue": "stabbing the desk with a pen, voice rising on every word",
+              "options": [
+                "A real feeling: anger about the missed Tuesday, and it finishes once Sam sends the tables",
+                "A stand-in feeling: loud anger that covers a fear of being the only reliable one, and it goes on after the tables arrive"
+              ],
+              "answer": 0,
+              "why": "The shouting is loud, but the line is tight: one missed Tuesday, one deadline, one demand. When Sam sends the tables, the anger has done its work. Loud and finished is a real feeling.",
+              "traps": {
+                "1": "The volume makes it look like another round of Gareth's old tune. If you took it that way, you would tell him to calm down. Sam would hide behind the tone and the tables would still not arrive."
+              },
+              "example": "A ferry queue, Saturday.<br>Passenger, loudly: “I'm livid! You told us ten o'clock! Tell me by noon what the plan is!”<br>Crewman: “Wait here. I'll find out.”"
+            },
+            {
+              "type": "pick",
+              "who": "Ella",
+              "text": "“Please don't worry about me. I love rewriting at two in the morning. Love it. I'm fine, fine, fine.” That was the fourth message since midnight.",
+              "cue": "a thread of lit-up messages arriving on the library table, thumbs on screen",
+              "options": [
+                "A real feeling: pleasure in the work, and it finishes once the rewrite is done",
+                "A stand-in feeling: cheerfulness covering a tired, scared feeling, so no one is asked to share the job"
+              ],
+              "answer": 1,
+              "why": "Four messages, each one fine, and none of them asks anyone to share the work. A real tired feeling would say I can't do all of this, and then ask. This cheerful one keeps going and leaves the whole job with Ella.",
+              "traps": {
+                "0": "Love for the project may be partly true, so it can look like a real feeling. If you took it that way, you would reply with a clap emoji. Ella would be up again tomorrow, and Thursday would find her worn out."
+              },
+              "example": "A volunteer rota, Sunday.<br>Helper: “I love doing the late shift. Love it. I'm fine, don't worry.” She posts it for the third week.<br>Nobody swaps with her, and in March she quits."
+            }
+          ]
+        },
+        {
+          "level": "Analyse",
+          "label": "Analyse, explain it",
+          "items": [
+            {
+              "type": "pick",
+              "who": "Nadia",
+              "text": "“Gareth says 'every group, the same, I carry everybody.' Which reading fits, and what would a real version of that anger do?”",
+              "cue": "tapping a pen on the library table, looking at Gareth's empty chair",
+              "options": [
+                "An authentic feeling: anger this strong is real, as long as it is loud enough to be heard",
+                "A racket feeling: anger shown in place of a real one. A real version would name one fix and a day.",
+                "A racket feeling, because Gareth is a difficult classmate. The feeling itself has nothing to do with it."
+              ],
+              "answer": 1,
+              "why": "Plain words first: a stand-in that fixes nothing. The books call it a racket feeling, and the test is whether the anger finishes the situation. Gareth's anger repeats every group and asks for nothing. The real version would name one fix and ask for it by a day.",
+              "traps": {
+                "0": "Calling it authentic because it is strong takes the volume for the answer. Real anger can be loud and finish, and this can be loud and go round. The carrying would stay exactly as it is.",
+                "2": "Blaming Gareth's attitude sends the talk to the person, not the feeling. He would hear that he is the problem, and the anger would stay in charge with nothing asked of anyone."
+              },
+              "example": "A staffroom, Monday.<br>Teacher: “Every term, the same, I run the trip alone.”<br>Head: “Put your two names for helpers on the sheet by Friday, then.”"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

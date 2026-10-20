@@ -1,0 +1,800 @@
+{
+ "baseBlurb": "Sam comes back from two nights away and the flat has to say hello properly, without overdoing it.",
+ "stories": [
+  {
+   "setting": "Family",
+   "blurb": "Dad is home from a trade fair, Mum is stirring pots, and one flat word in the hall tells you a lot.",
+   "opener": {
+    "setting": "Thursday, 6:10pm. Mum and Dad's hallway. Dad is back from two nights at a trade fair in another city.",
+    "lines": [
+     {
+      "who": "Mum",
+      "text": "“Your dad needs a proper welcome, or he eats in silence and addresses his remarks to the potatoes.”",
+      "cue": "from the kitchen, not turning round"
+     },
+     {
+      "who": "Dad",
+      "text": "“...”",
+      "cue": "in the doorway, coat zipped, a carrier bag of fridge magnets in one hand"
+     }
+    ],
+    "ask": "How much of a welcome does Dad need after being away, and how do you build one that pays it?"
+   },
+   "rounds": [
+    {
+     "level": "Spot",
+     "label": "Spot, round 1",
+     "intro": "Three lines from the hello in the hall. Tap what each one tells you.",
+     "items": [
+      {
+       "type": "pick",
+       "who": "Dad",
+       "text": "“Fine.”",
+       "cue": "after your quick “Hi” as his suitcase rolls past you down the hall",
+       "options": [
+        "He's glad to be home",
+        "He's counting, and your hello was short",
+        "He wants to tell you about the fair"
+       ],
+       "answer": 1,
+       "why": "He is counting. A short hello leaves him owed, and a flat “fine” is how owed sounds in his house.",
+       "traps": {
+        "0": "Glad would come with a bigger word, or a look at the family. “Fine” aimed at the hall wall is flat, so calling it gladness misreads it.",
+        "2": "Wanting to tell you about the fair would come with a hook, like “You won't believe the hotel.” He is wheeling away, so no hook is on offer."
+       },
+       "example": "A bus driver, early shift.<br>You say “Morning” while looking at your phone.<br>“Yep,” he says. He wanted a little more than that."
+      },
+      {
+       "type": "pick",
+       "who": "Dad",
+       "text": "“All right, what have you broken?”",
+       "cue": "laughing, after four warm lines in a row at the door",
+       "options": [
+        "A pile of warm lines sounds like cover",
+        "He's tired from the trip and wants some quiet",
+        "He's teasing because the welcome was just right"
+       ],
+       "answer": 0,
+       "why": "Too many warm lines at once sound like cover for bad news. He is checking what the pile is hiding.",
+       "traps": {
+        "1": "Tired would show as short answers and a slump, not a joke. He is laughing, so the question is about the warmth.",
+        "2": "A welcome that was just right would get a smile and a story. A joke about breakages means the pile of lines made him suspicious."
+       },
+       "example": "A neighbour's retirement card.<br>“Brilliant, wonderful, we'll all miss you, such a star!”<br>“Who's been at the cake?” he says. Too much shine looks like cover."
+      },
+      {
+       "type": "pick",
+       "who": "You",
+       "text": "“Right, I'd better find Leo's PE bag.”",
+       "cue": "the hallway, straight after a quick hello",
+       "options": [
+        "A compliment",
+        "A question about the trip",
+        "A quick exit"
+       ],
+       "answer": 2,
+       "why": "A quick exit. It ends the greeting, and it counts as one small nod about your evening, not a welcome for him.",
+       "traps": {
+        "0": "A compliment would say something nice about him. This line is about a PE bag, so it can't be one.",
+        "1": "A question about the trip would ask him for something. The line asks for nothing and closes the talk instead."
+       },
+       "example": "A school corridor.<br>“Sorry, got to dash, the bell's gone!”<br>It is polite. It is still a single nod, and the talk is over."
+      }
+     ]
+    },
+    {
+     "level": "Play",
+     "label": "Play, the week in motion",
+     "intro": "Dad's greeting is a counter. Pick the lines that pay what he is owed, then meet Mrs Kale on the stairs.",
+     "items": [
+      {
+       "type": "counter",
+       "prompt": "Dad is back from the trade fair after two nights away and is owed about a dozen nods. Build a greeting that pays them.",
+       "target": 12,
+       "tolerance": 3,
+       "maxPicks": 12,
+       "palette": [
+        {
+         "text": "“Hi, Dad.”",
+         "value": 1,
+         "tag": "small"
+        },
+        {
+         "text": "“You're back!”",
+         "value": 3,
+         "tag": "warm"
+        },
+        {
+         "text": "“How was the fair?”",
+         "value": 5,
+         "tag": "warm"
+        },
+        {
+         "text": "“Wait, tell me everything about the hotel.”",
+         "value": 7,
+         "tag": "warm"
+        },
+        {
+         "text": "“You look well.”",
+         "value": 4,
+         "tag": "warm"
+        },
+        {
+         "text": "“Did anyone come to the stand?”",
+         "value": 4,
+         "tag": "warm"
+        },
+        {
+         "text": "“Good to have you home, Dad.”",
+         "value": 6,
+         "tag": "warm"
+        },
+        {
+         "text": "“I missed you. The house was far too quiet without you.”",
+         "value": 8,
+         "tag": "gush"
+        },
+        {
+         "text": "“Right, I'd better find Leo's PE bag.”",
+         "value": 1,
+         "tag": "exit"
+        }
+       ],
+       "underMsg": "Dad says “Fine.” and the suitcase wheels carry him upstairs. He is still owed more than that.",
+       "overMsg": "Dad laughs. “All right, what have you broken?” A pile of warm lines looks like cover for bad news.",
+       "hitMsg": "He sits on the bottom stair, unlaces one shoe, and starts on the hotel breakfast.",
+       "why": "What is owed grows with time apart. Two nights asks for a good deal more than a hello in passing and a good deal less than a month would. Too little leaves a person flat, and too much sounds like cover.",
+       "them": {
+        "under": -10,
+        "over": 2,
+        "hit": 12
+       }
+      },
+      {
+       "type": "scene",
+       "title": "Thursday, 6:25 and 6:40pm, the stairs",
+       "setting": "Mrs Kale on the landing with a parcel, first as you go down for the takeaway and then as you come back up with it.",
+       "meters": {
+        "you": 60,
+        "them": 50
+       },
+       "beats": [
+        {
+         "who": "Mrs Kale",
+         "text": "“...”",
+         "cue": "stairs, 6:25, a parcel under one arm",
+         "lines": [
+          {
+           "text": "“Evening, Mrs Kale!”",
+           "tag": "best",
+           "you": 3,
+           "them": 3,
+           "outcome": "She answers at once, pleased to be asked for nothing.",
+           "why": "A hello with her name in it is a clean exchange. It pays a nod each way."
+          },
+          {
+           "text": "Nod, and keep moving.",
+           "tag": "ok",
+           "you": -2,
+           "them": -1,
+           "outcome": "She tells the parcel it's a chilly one.",
+           "why": "A nod with no word is smaller. It leaves her to carry the exchange alone."
+          }
+         ]
+        },
+        {
+         "who": "Mrs Kale",
+         "text": "“Evening, dear. Is your father home? This came for him, and it rattles.”",
+         "cue": "still on the landing, the parcel held out in both hands",
+         "lines": [
+          {
+           "text": "“He is, thank you. I'll take it up to him.”",
+           "tag": "best",
+           "you": 2,
+           "them": 2,
+           "outcome": "She hands it over and listens to it rattle once more. “Fragile. Mind.”",
+           "why": "You answered what she asked, not only the hello. That keeps the exchange going."
+          },
+          {
+           "text": "“Yes, yes.”",
+           "tag": "ok",
+           "you": -1,
+           "them": -1,
+           "outcome": "“Yes, yes,” she says to your back, the parcel still in the air.",
+           "why": "The words fit, but you left before she finished. It ends the exchange a half-step early."
+          }
+         ]
+        },
+        {
+         "who": "Mrs Kale",
+         "text": "“...”",
+         "cue": "stairs, 6:40, second pass with the takeaway. She is straightening the doormat.",
+         "lines": [
+          {
+           "text": "A nod and a half-smile, then keep moving.",
+           "tag": "best",
+           "you": 0,
+           "them": 1,
+           "outcome": "She nods back and goes on with the mat.",
+           "why": "A small nod is enough for a quick second pass. You asked for nothing, so nothing more is owed."
+          },
+          {
+           "text": "“Mrs Kale! How's the hip? Did the plumber come? Is your sister still staying?”",
+           "tag": "ok",
+           "you": 0,
+           "them": -3,
+           "outcome": "“Same as fifteen minutes ago,” she says. “What do you want?”",
+           "why": "Three questions on a second pass read as a favour about to be asked. The interest was real, and the pile of it felt like a pitch."
+          },
+          {
+           "text": "Walk past without looking.",
+           "tag": "ok",
+           "you": 0,
+           "them": -6,
+           "outcome": "Mrs Kale, to the doormat: “Hm.”",
+           "why": "Going by without a look is cold, and she notices. It is a small cut that leaves her owed."
+          }
+         ]
+        }
+       ],
+       "example": "A caretaker in an office block.<br>“Morning, love, you look cold.” Every day, the same line, and a day without it gets noticed."
+      }
+     ]
+    },
+    {
+     "level": "Analyse",
+     "label": "Analyse, explain it",
+     "items": [
+      {
+       "type": "pick",
+       "who": "You",
+       "text": "“Hi, Dad.” felt too small, and “Tell me everything about the hotel” felt like too much. What explains that?",
+       "options": [
+        "Welcomes are only good manners, so any polite line will do and the number never matters",
+        "Time apart sets how much is owed, so too little and too much both land wrong",
+        "Dad is just hard to please, so whatever you say he will find a fault in it"
+       ],
+       "answer": 1,
+       "why": "A greeting is a precise exchange. Time apart sets how much is owed. Too little leaves a gap, and too much reads as cover.",
+       "traps": {
+        "0": "If it were only manners, the amount would not matter. Dad's “Fine” came after a short hello because a short hello carries a debt.",
+        "2": "“He's hard to please” is a shrug, and then you stop trying. The debt stays unpaid and the flat “fine” comes back tomorrow."
+       },
+       "example": "A niece visiting after two years.<br>“Hi!” at the door, and then nothing for an hour.<br>The niece notices the gap in the welcome, even if nobody says so."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "setting": "Friends & Community",
+   "blurb": "Ruby is back from a wedding with a bag of cake, and her friends have one chance at the hello.",
+   "opener": {
+    "setting": "Saturday, 10:15am. The Corner Table, the window seat. Ruby has been at her cousin's wedding for two nights and is about to come through the door.",
+    "lines": [
+     {
+      "who": "Joseph",
+      "text": "“Ruby counts these things. Last time nobody said a word for ten minutes and she's still bringing it up.”",
+      "cue": "stirring a third sugar into his tea"
+     },
+     {
+      "who": "Ruby",
+      "text": "“...”",
+      "cue": "at the door, hat in one hand, a paper bag of wedding cake in the other"
+     }
+    ],
+    "ask": "How much of a welcome does Ruby need after being away, and how do you build one that pays it?"
+   },
+   "rounds": [
+    {
+     "level": "Spot",
+     "label": "Spot, round 1",
+     "intro": "Three lines from the hello at the door. Tap what each one tells you.",
+     "items": [
+      {
+       "type": "pick",
+       "who": "Ruby",
+       "text": "“Lovely.”",
+       "cue": "flat, after your quick “Hey”, the cake bag held against her chest",
+       "options": [
+        "She's delighted to see you",
+        "She'd like to talk about the wedding",
+        "She's counting, and your hello fell short"
+       ],
+       "answer": 2,
+       "why": "She is counting. A short hello leaves her owed, and a flat “lovely” is how owed sounds in Ruby's mouth.",
+       "traps": {
+        "0": "Delighted would sound like “Oh, look at you!” A flat “lovely” with a tight smile is the other thing.",
+        "1": "If she wanted to talk about the wedding she would have opened the cake bag. It stays shut against her chest."
+       },
+       "example": "A hairdresser's, Saturday.<br>You say “Hi” and pick up a magazine.<br>“Lovely,” she says, and starts the next cut in silence."
+      },
+      {
+       "type": "pick",
+       "who": "Ruby",
+       "text": "“Right. What's the catch?”",
+       "cue": "laughing, after five warm lines in a row",
+       "options": [
+        "She's worried she is late for something",
+        "A pile of warm lines sounds like a pitch",
+        "She thinks you are teasing her about the wedding"
+       ],
+       "answer": 1,
+       "why": "Too many warm lines at once sound like a pitch. She is asking what you are selling.",
+       "traps": {
+        "0": "Worry about being late would show in her feet or her watch. She is laughing and looking at you, so the question is about the lines.",
+        "2": "Teasing would have a specific target, like the hat or the speeches. You gave her only a heap of warmth, and the heap is what she noticed."
+       },
+       "example": "A stall at a school fair.<br>“Hello! Gorgeous jumper! Have a biscuit! Isn't it lovely?”<br>Four lines deep, you start looking for the price."
+      },
+      {
+       "type": "pick",
+       "who": "You",
+       "text": "“Sorry, I've got to run, the five-a-side starts at eleven.”",
+       "cue": "the Corner Table, after one quick hello",
+       "options": [
+        "A quick exit",
+        "A compliment",
+        "A full welcome"
+       ],
+       "answer": 0,
+       "why": "A quick exit. It ends the greeting and counts as one small nod about your morning, not a welcome for Ruby.",
+       "traps": {
+        "1": "A compliment would say something nice about her. This line is about kick-off, so it can't be one.",
+        "2": "A full welcome needs several warm lines. One line about leaving closes the greeting instead."
+       },
+       "example": "A cinema queue.<br>“Hi! Sorry, have to grab the tickets, back in a sec!”<br>A friendly exit, and still a single small nod."
+      }
+     ]
+    },
+    {
+     "level": "Play",
+     "label": "Play, the week in motion",
+     "intro": "Ruby's greeting is a counter. Pick the lines that pay what she is owed, then meet Joseph at the counter.",
+     "items": [
+      {
+       "type": "counter",
+       "prompt": "Ruby is back from her cousin's wedding after two nights away and is owed about a dozen nods. Build a greeting that pays them.",
+       "target": 12,
+       "tolerance": 3,
+       "maxPicks": 12,
+       "palette": [
+        {
+         "text": "“Hey, Ruby.”",
+         "value": 1,
+         "tag": "small"
+        },
+        {
+         "text": "“You're back!”",
+         "value": 3,
+         "tag": "warm"
+        },
+        {
+         "text": "“How was the wedding?”",
+         "value": 5,
+         "tag": "warm"
+        },
+        {
+         "text": "“Wait, tell me everything about the dress.”",
+         "value": 7,
+         "tag": "warm"
+        },
+        {
+         "text": "“You look well.”",
+         "value": 4,
+         "tag": "warm"
+        },
+        {
+         "text": "“Did you dance?”",
+         "value": 4,
+         "tag": "warm"
+        },
+        {
+         "text": "“Good to see you, really.”",
+         "value": 6,
+         "tag": "warm"
+        },
+        {
+         "text": "“I missed you. Nadia's group was dead without you.”",
+         "value": 8,
+         "tag": "gush"
+        },
+        {
+         "text": "“Sorry, I've got to run, kick-off's at eleven.”",
+         "value": 1,
+         "tag": "exit"
+        }
+       ],
+       "underMsg": "Ruby says “Lovely.” and takes the table by the radiator on her own. She is still owed more than that.",
+       "overMsg": "Ruby laughs. “Right. What's the catch?” A heap of warm lines sounds like a pitch.",
+       "hitMsg": "She opens the cake bag and slides you a corner of icing.",
+       "why": "The amount owed rises with time apart, so a weekend away asks for far more than a wave and far less than a long absence would. Too little leaves a friend flat, and too much sounds like a pitch.",
+       "them": {
+        "under": -10,
+        "over": 2,
+        "hit": 12
+       }
+      },
+      {
+       "type": "scene",
+       "title": "Saturday, 10:20 and 10:35, the counter",
+       "setting": "Joseph at the till of the Corner Table with a tray of teas, first when you order and then when you come back for your phone.",
+       "meters": {
+        "you": 60,
+        "them": 50
+       },
+       "beats": [
+        {
+         "who": "Joseph",
+         "text": "“...”",
+         "cue": "counter, 10:20, a tray of teas balanced on one hand",
+         "lines": [
+          {
+           "text": "“Morning, Joseph!”",
+           "tag": "best",
+           "you": 3,
+           "them": 3,
+           "outcome": "He answers at once and sets the tray down to do it.",
+           "why": "A hello with his name in it is a clean exchange. It pays a nod each way."
+          },
+          {
+           "text": "Nod, and keep moving.",
+           "tag": "ok",
+           "you": -2,
+           "them": -1,
+           "outcome": "He tells the teapot it's going to rain.",
+           "why": "A nod with no word is smaller. It leaves him to carry the exchange alone."
+          }
+         ]
+        },
+        {
+         "who": "Joseph",
+         "text": "“Morning, mate. Sit anywhere except the wobbly table.”",
+         "cue": "still at the till, wiping a spoon",
+         "lines": [
+          {
+           "text": "“Will do. Not the wobbly one.”",
+           "tag": "best",
+           "you": 2,
+           "them": 2,
+           "outcome": "He points the spoon at the window seat. “Good lad.”",
+           "why": "You answered what he said, not only the hello. That keeps the exchange going."
+          },
+          {
+           "text": "“Yeah, yeah.”",
+           "tag": "ok",
+           "you": -1,
+           "them": -1,
+           "outcome": "You find yourself at the wobbly table. Joseph watches the saucer slide.",
+           "why": "The words fit, but you stopped listening halfway. It ends the exchange a half-step early."
+          }
+         ]
+        },
+        {
+         "who": "Joseph",
+         "text": "“...”",
+         "cue": "counter, 10:35, second pass for the phone you left by the till. He is wiping the same patch.",
+         "lines": [
+          {
+           "text": "A nod and a half-smile, collect the phone.",
+           "tag": "best",
+           "you": 0,
+           "them": 1,
+           "outcome": "He nods back and slides the phone along the counter.",
+           "why": "A small nod is enough for a quick second pass. You asked for nothing, so nothing more is owed."
+          },
+          {
+           "text": "“Joseph! How's the knee? Did the five-a-side move? Is your brother still abroad?”",
+           "tag": "ok",
+           "you": 0,
+           "them": -3,
+           "outcome": "“Same as fifteen minutes ago,” he says. “What are you after?”",
+           "why": "Three questions on a second pass read as a favour about to be asked. The interest was real, and the pile of it felt like a pitch."
+          },
+          {
+           "text": "Take the phone without looking up.",
+           "tag": "ok",
+           "you": 0,
+           "them": -6,
+           "outcome": "Joseph, to the cloth: “Hm.”",
+           "why": "Going past without a look is cold, and he notices. It is a small cut that leaves him owed."
+          }
+         ]
+        }
+       ],
+       "example": "A taxi rank.<br>“Evening, boss, cold one.” Every night, the same line, and the night you skip it gets noticed."
+      }
+     ]
+    },
+    {
+     "level": "Analyse",
+     "label": "Analyse, explain it",
+     "items": [
+      {
+       "type": "pick",
+       "who": "You",
+       "text": "“Hey.” felt too small, and “Tell me everything about the dress” felt like too much. What explains that?",
+       "options": [
+        "Time apart sets how much is owed, so too little and too much both miss",
+        "A friend who likes you will accept any greeting, so the amount never matters",
+        "Ruby is just fussy, so nothing short of a party would please her at the door"
+       ],
+       "answer": 0,
+       "why": "A greeting is a precise exchange. Time apart sets how much is owed. Too little leaves a gap, and too much reads as a pitch.",
+       "traps": {
+        "1": "If any greeting would do, Ruby's “Lovely” would not have been flat. A short hello carries a debt, and liking someone doesn't cancel it.",
+        "2": "“She's fussy” is a shrug, and then you stop trying. The debt stays unpaid and the flat “lovely” comes back next time."
+       },
+       "example": "A friend back from a month abroad.<br>“Hi!” at the door, and then straight to the football.<br>She notices the gap in the welcome, even if nobody says so."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "setting": "School & College",
+   "blurb": "Gwen returns to the evening class after two missed Tuesdays, and the tutor is watching the door.",
+   "opener": {
+    "setting": "Tuesday, 6:50pm. The corridor outside Room 14, the vending machine humming. Gwen missed the last two classes with a bad back and is walking up the corridor.",
+    "lines": [
+     {
+      "who": "Sam",
+      "text": "“Gwen counts hellos. Last term someone said ‘oh, you're back’ and she sat at the far end all night.”",
+      "cue": "leaning on the vending machine, chewing a crisp"
+     },
+     {
+      "who": "Gwen",
+      "text": "“...”",
+      "cue": "at the end of the corridor, folder against her chest, a plaster on her thumb"
+     }
+    ],
+    "ask": "How much of a welcome does Gwen need after being away, and how do you build one that pays it?"
+   },
+   "rounds": [
+    {
+     "level": "Spot",
+     "label": "Spot, round 1",
+     "intro": "Three lines from the hello in the corridor. Tap what each one tells you.",
+     "items": [
+      {
+       "type": "pick",
+       "who": "Gwen",
+       "text": "“Right.”",
+       "cue": "after your quick “Hi”, sitting down with her folder at the end of the row",
+       "options": [
+        "She's counting, and your hello was short",
+        "She's keen to get on with the group task",
+        "She's still cross about her last feedback sheet"
+       ],
+       "answer": 0,
+       "why": "She is counting. A short hello leaves her owed, and a flat “right” is how owed sounds from the end of a row.",
+       "traps": {
+        "1": "Keen would come with a pen already out and a question about the task. Her folder stays shut, so the “right” is closing the talk.",
+        "2": "Cross about the sheet would come with a sheet in her hand and a name attached. Nothing here points at feedback, only at your hello."
+       },
+       "example": "A supermarket checkout.<br>You say “Hi” and keep scrolling.<br>“Right,” says the cashier, and scans the next item without a word."
+      },
+      {
+       "type": "pick",
+       "who": "Gwen",
+       "text": "“Okay, which one of you wants my notes?”",
+       "cue": "laughing, after a run of warm lines at the classroom door",
+       "options": [
+        "She's bored of the welcome and wants the class to begin",
+        "She's tired from the pain and wants to be left alone",
+        "She thinks you're angling for her notes"
+       ],
+       "answer": 2,
+       "why": "Too many warm lines at once sound like a pitch. She is guessing what the pile is for.",
+       "traps": {
+        "0": "Boredom would mean the welcome dragged. It was warm, not dull, so the question is about the warmth.",
+        "1": "Tired and sore would sound like “Not now.” She is joking and looking at you, so she is checking the motive."
+       },
+       "example": "A lecture hall.<br>“Hello! Love your bag! Did you get lunch? Are you free later?”<br>“What do you need?” she says. Too much warmth looks like a pitch."
+      },
+      {
+       "type": "pick",
+       "who": "You",
+       "text": "“Sorry, I need to photocopy the reading list before Mr Ashby starts.”",
+       "cue": "the corridor, after a quick hello",
+       "options": [
+        "A compliment",
+        "A quick exit",
+        "A full welcome"
+       ],
+       "answer": 1,
+       "why": "A quick exit. It ends the greeting and counts as one small nod about your evening, not a welcome for Gwen.",
+       "traps": {
+        "0": "A compliment would say something nice about her. This line is about photocopying, so it can't be one.",
+        "2": "A full welcome needs several warm lines. One line about the reading list closes the greeting instead."
+       },
+       "example": "A staff kitchen.<br>“Morning! Sorry, I've got a meeting, catch you later!”<br>Friendly, and still a single small nod."
+      }
+     ]
+    },
+    {
+     "level": "Play",
+     "label": "Play, the week in motion",
+     "intro": "Gwen's greeting is a counter. Pick the lines that pay what she is owed, then meet Mr Ashby at the door.",
+     "items": [
+      {
+       "type": "counter",
+       "prompt": "Gwen is back after missing the last two Tuesdays and is owed about a dozen nods. Build a greeting that pays them.",
+       "target": 12,
+       "tolerance": 3,
+       "maxPicks": 12,
+       "palette": [
+        {
+         "text": "“Hi, Gwen.”",
+         "value": 1,
+         "tag": "small"
+        },
+        {
+         "text": "“You're back!”",
+         "value": 3,
+         "tag": "warm"
+        },
+        {
+         "text": "“How's your back?”",
+         "value": 5,
+         "tag": "warm"
+        },
+        {
+         "text": "“Wait, tell me everything the physio said.”",
+         "value": 7,
+         "tag": "warm"
+        },
+        {
+         "text": "“You look well.”",
+         "value": 4,
+         "tag": "warm"
+        },
+        {
+         "text": "“Did anyone send you the slides?”",
+         "value": 4,
+         "tag": "warm"
+        },
+        {
+         "text": "“Good to have you back, really.”",
+         "value": 6,
+         "tag": "warm"
+        },
+        {
+         "text": "“I missed you. Room 14 was far too quiet without you.”",
+         "value": 8,
+         "tag": "gush"
+        },
+        {
+         "text": "“Sorry, I need to photocopy the reading list.”",
+         "value": 1,
+         "tag": "exit"
+        }
+       ],
+       "underMsg": "Gwen says “Right.” and opens her folder to a page that doesn't need reading. She is still owed more than that.",
+       "overMsg": "Gwen laughs. “Okay, which one of you wants my notes?” A pile of warm lines sounds like a pitch.",
+       "hitMsg": "She puts the folder down and tells you what the physio did with a cushion.",
+       "why": "The amount owed rises with time apart, so two missed weeks asks for far more than a wave across the room and far less than a term away would. Too little leaves a classmate flat, and too much sounds like a pitch.",
+       "them": {
+        "under": -10,
+        "over": 2,
+        "hit": 12
+       }
+      },
+      {
+       "type": "scene",
+       "title": "Tuesday, 6:55 and 7:10pm, Room 14",
+       "setting": "Mr Ashby at the door of Room 14 with the sign-in clipboard, first as you arrive and then when you go back for the pen you dropped.",
+       "meters": {
+        "you": 60,
+        "them": 50
+       },
+       "beats": [
+        {
+         "who": "Mr Ashby",
+         "text": "“...”",
+         "cue": "the door of Room 14, 6:55, the sign-in clipboard held against his chest",
+         "lines": [
+          {
+           "text": "“Evening, Mr Ashby!”",
+           "tag": "best",
+           "you": 3,
+           "them": 3,
+           "outcome": "He looks up from the list and ticks you off with a flourish.",
+           "why": "A hello with his name in it is a clean exchange. It pays a nod each way."
+          },
+          {
+           "text": "Nod, and keep moving.",
+           "tag": "ok",
+           "you": -2,
+           "them": -1,
+           "outcome": "He ticks you off without looking and tells the list it's a cold one.",
+           "why": "A nod with no word is smaller. It leaves him to carry the exchange alone."
+          }
+         ]
+        },
+        {
+         "who": "Mr Ashby",
+         "text": "“Evening. Your draft's on the front desk. Read the margin comments before you argue with them.”",
+         "cue": "still at the door, pen behind his ear",
+         "lines": [
+          {
+           "text": "“I will. Thanks, Mr Ashby.”",
+           "tag": "best",
+           "you": 2,
+           "them": 2,
+           "outcome": "He taps the clipboard twice. “Good. They're mostly fair.”",
+           "why": "You answered what he said, not only the hello. That keeps the exchange going."
+          },
+          {
+           "text": "“Yes, yes.”",
+           "tag": "ok",
+           "you": -1,
+           "them": -1,
+           "outcome": "“Yes, yes,” he says to your back, and goes on holding the door.",
+           "why": "The words fit, but you were already inside. It ends the exchange a half-step early."
+          }
+         ]
+        },
+        {
+         "who": "Mr Ashby",
+         "text": "“...”",
+         "cue": "the corridor, 7:10, second pass for the pen you dropped. He is ticking the last names.",
+         "lines": [
+          {
+           "text": "A nod and a half-smile, then keep moving.",
+           "tag": "best",
+           "you": 0,
+           "them": 1,
+           "outcome": "He nods back and finishes the tick.",
+           "why": "A small nod is enough for a quick second pass. You asked for nothing, so nothing more is owed."
+          },
+          {
+           "text": "“Mr Ashby! How was your weekend? Did the exam board reply? Is the heating getting fixed?”",
+           "tag": "ok",
+           "you": 0,
+           "them": -3,
+           "outcome": "“I saw you at 6:55,” he says. “What do you want?”",
+           "why": "Three questions on a second pass read as a favour about to be asked. The interest was real, and the pile of it felt like a pitch."
+          },
+          {
+           "text": "Walk past without looking.",
+           "tag": "ok",
+           "you": 0,
+           "them": -6,
+           "outcome": "Mr Ashby, to the clipboard: “Hm.”",
+           "why": "Going by without a look is cold, and he notices. It is a small cut that leaves him owed."
+          }
+         ]
+        }
+       ],
+       "example": "A porter in a hospital lobby.<br>“Morning, doctor, mind the wet floor.” Same line every shift, and a shift without it gets noticed."
+      }
+     ]
+    },
+    {
+     "level": "Analyse",
+     "label": "Analyse, explain it",
+     "items": [
+      {
+       "type": "pick",
+       "who": "You",
+       "text": "“Hi, Gwen.” felt too small, and “Tell me everything the physio said” felt like too much. What explains that?",
+       "options": [
+        "Gwen is touchy about her absence, so nothing you say will count for much",
+        "Classmates only owe each other politeness, so any line is fine whatever the gap",
+        "Time apart sets how much is owed, so too little and too much both land wrong"
+       ],
+       "answer": 2,
+       "why": "A greeting is a precise exchange. Time apart sets how much is owed. Too little leaves a gap, and too much reads as a pitch.",
+       "traps": {
+        "0": "Touchy sounds like a shrug, and then you stop trying. The debt stays unpaid, so the flat “right” comes back next week.",
+        "1": "If politeness were all that was owed, any amount would do. Gwen's “Right.” came after a short hello because a short hello carries a debt."
+       },
+       "example": "A teammate back after a fortnight's leave.<br>“Hi!” at the desk, and then straight to the spreadsheet.<br>She notices the gap in the welcome, even if nobody says so."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

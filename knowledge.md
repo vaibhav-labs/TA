@@ -579,6 +579,12 @@ Base: https://claude.ai/artifact/ followed by the id. Artifacts are private to t
 
 The earlier "First Transaction" artifact (6r9B6FmMHnvWfVHJP53EQ9) is not linked from the hub.
 
+### Settings picker and story sidecars (October 2026)
+
+Every one of the 42 campaign games now has four settings, so the whole set holds 168 stories. The original story stays in `content/N-M.json`. Three more live in `content/stories/N-M.json` as `{"baseBlurb", "stories": [{setting, blurb, opener, rounds} x 3]}`. `engine/build.py` (`merge_stories`) validates each extra story with the normal game rules and attaches them as `moreStories`. The engine opens on a "Choose a setting" screen, then the intro. The masthead "Settings" button, "Choose another setting" on the intro, and "Play another setting" on the end card all return to the picker. Played settings are ticked (localStorage `ta-arena-done-<slot>`); debrief and reflection show on the first completion only.
+
+Rules for new stories are in `STORIES-BRIEF.md`. Check one game with `python3 engine/check_story.py 4.3` (note the dot). The per-slot setting plan is `qa/story-plan.json`. `qa/smoke.py` takes `SMOKE_OUT`, `SMOKE_STORY` (0 = original, 1-3 = extras) and `SMOKE_RESULTS` env vars. The old flat codes ("flat 1A", "from the second floor") are gone from the content; Gran lives downstairs and nothing carries a unit number. The 18 library games on `main` (`N.L#`) still exist in the PWA only; they use the same `setting` field and the hub's setting filter.
+
 ### Decisions and gotchas
 
 - Stroke titles unchanged; "flat" kept (British English).

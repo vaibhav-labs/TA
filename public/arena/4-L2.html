@@ -43,6 +43,15 @@
   .series small { color: var(--on-bg-dim); font-weight: 500; letter-spacing: 0.08em; }
   .tag { font-family: "IBM Plex Mono", monospace; font-size: 11px; color: var(--on-bg-dim); text-decoration: none; white-space: nowrap; }
   .tag:hover { color: var(--pink); }
+  @media (max-width: 480px) { .series small { display: none; } .masthead .right { gap: 10px; } }
+  button.tag { background: none; border: 0; cursor: pointer; padding: 0; }
+  .linkbtn { background: none; border: 0; padding: 10px 0 0; color: var(--on-bg-dim, #94a3b8); font: 600 12.5px "IBM Plex Mono", monospace; cursor: pointer; }
+  .linkbtn:hover { color: var(--wc, #fffc00); }
+  .story-card { display: block; text-align: left; width: 100%; }
+  .story-top { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-bottom: 4px; }
+  .story-top b { font-size: 16px; }
+  .story-blurb { display: block; font-size: 14px; line-height: 1.45; color: var(--text-dim, #a3b1c6); }
+  .played-tag { font: 600 10.5px "IBM Plex Mono", monospace; letter-spacing: 0.05em; text-transform: uppercase; color: #080a10; background: var(--wc, #fffc00); border-radius: 999px; padding: 2px 8px; }
   a:focus-visible, button:focus-visible, textarea:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 
   .card { background: var(--surface); color: var(--text); border-radius: 22px; box-shadow: 0 24px 60px var(--shadow); padding: 32px 28px 28px; position: relative; min-width: 0; overflow-wrap: anywhere; }
@@ -323,7 +332,7 @@
 <div class="stage">
   <div class="masthead">
     <div class="series" id="series">You</div>
-    <div class="right"><button type="button" class="sfx" id="sfx" aria-pressed="true" aria-label="Sound">SFX ON</button><a class="tag" id="hubLink" href="#" hidden>All games</a></div>
+    <div class="right"><button type="button" class="sfx" id="sfx" aria-pressed="true" aria-label="Sound">SFX ON</button><button type="button" class="tag" id="storiesBtn" hidden>Settings</button><a class="tag" id="hubLink" href="#" hidden>All games</a></div>
   </div>
   <main class="card" id="card" tabindex="-1">
     <p class="deck">Loading the game.</p>
@@ -332,7 +341,7 @@
 </div>
 
 <script>window.TA_EMB = {"1": "<svg class=\"emb\" viewBox=\"0 0 36 36\" aria-hidden=\"true\" focusable=\"false\"><linearGradient id=\"w1g\" x1=\"0%\" y1=\"0%\" x2=\"100%\" y2=\"100%\"><stop offset=\"0%\" stop-color=\"#FFA000\"/><stop offset=\"100%\" stop-color=\"#FF3D00\"/></linearGradient><g stroke=\"url(#w1g)\" stroke-width=\"3\" stroke-linecap=\"round\"><line x1=\"8\" y1=\"8\" x2=\"8\" y2=\"28\"/><line x1=\"14\" y1=\"8\" x2=\"14\" y2=\"28\"/><line x1=\"20\" y1=\"8\" x2=\"20\" y2=\"28\"/><line x1=\"26\" y1=\"8\" x2=\"26\" y2=\"28\"/></g><line x1=\"4\" y1=\"24\" x2=\"30\" y2=\"12\" stroke=\"#FFFC00\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><circle cx=\"31\" cy=\"11\" r=\"2.5\" fill=\"#FFFC00\"/></svg>", "2": "<svg class=\"emb\" viewBox=\"0 0 36 36\" aria-hidden=\"true\" focusable=\"false\"><line x1=\"18\" y1=\"6\" x2=\"18\" y2=\"30\" stroke=\"rgba(255,255,255,0.3)\" stroke-width=\"2\" stroke-dasharray=\"2 2\"/><circle cx=\"18\" cy=\"8\" r=\"4.5\" fill=\"#F43F5E\" stroke=\"#fff\" stroke-width=\"1.5\"/><circle cx=\"18\" cy=\"18\" r=\"6\" fill=\"#06B6D4\" stroke=\"#FFFC00\" stroke-width=\"2\"/><circle cx=\"18\" cy=\"28\" r=\"4.5\" fill=\"#F59E0B\" stroke=\"#fff\" stroke-width=\"1.5\"/></svg>", "3": "<svg class=\"emb\" viewBox=\"0 0 36 36\" aria-hidden=\"true\" focusable=\"false\"><linearGradient id=\"w3a\" x1=\"0%\" y1=\"0%\" x2=\"100%\" y2=\"100%\"><stop offset=\"0%\" stop-color=\"#C084FC\"/><stop offset=\"100%\" stop-color=\"#9333EA\"/></linearGradient><linearGradient id=\"w3b\" x1=\"100%\" y1=\"0%\" x2=\"0%\" y2=\"100%\"><stop offset=\"0%\" stop-color=\"#FFFC00\"/><stop offset=\"100%\" stop-color=\"#F59E0B\"/></linearGradient><line x1=\"6\" y1=\"6\" x2=\"30\" y2=\"30\" stroke=\"url(#w3a)\" stroke-width=\"3.2\" stroke-linecap=\"round\"/><line x1=\"30\" y1=\"6\" x2=\"6\" y2=\"30\" stroke=\"url(#w3b)\" stroke-width=\"3.2\" stroke-linecap=\"round\"/><polygon points=\"30,30 24,29 29,24\" fill=\"#C084FC\"/><polygon points=\"6,30 12,29 7,24\" fill=\"#FFFC00\"/><circle cx=\"18\" cy=\"18\" r=\"3\" fill=\"#fff\"/><circle cx=\"18\" cy=\"18\" r=\"6\" fill=\"none\" stroke=\"#FFFC00\" stroke-width=\"1.2\" opacity=\"0.8\"/></svg>", "4": "<svg class=\"emb\" viewBox=\"0 0 36 36\" aria-hidden=\"true\" focusable=\"false\"><linearGradient id=\"w4g\" x1=\"0%\" y1=\"0%\" x2=\"100%\" y2=\"100%\"><stop offset=\"0%\" stop-color=\"#FB7185\"/><stop offset=\"100%\" stop-color=\"#E11D48\"/></linearGradient><path d=\"M18 9 C13 7 7 7 4 8 L4 26 C8 25 13 25 18 28 C23 25 28 25 32 26 L32 8 C29 7 23 7 18 9 Z\" fill=\"url(#w4g)\" stroke=\"#fff\" stroke-width=\"1.5\"/><line x1=\"18\" y1=\"9\" x2=\"18\" y2=\"28\" stroke=\"#FFE4E6\" stroke-width=\"2\"/><polygon points=\"18,14 14,21 22,21\" fill=\"#FFFC00\" stroke=\"#000\" stroke-width=\"1\"/></svg>", "5": "<svg class=\"emb\" viewBox=\"0 0 36 36\" aria-hidden=\"true\" focusable=\"false\"><linearGradient id=\"w5g\" x1=\"0%\" y1=\"0%\" x2=\"0%\" y2=\"100%\"><stop offset=\"0%\" stop-color=\"#FFFFFF\"/><stop offset=\"40%\" stop-color=\"#67E8F9\"/><stop offset=\"100%\" stop-color=\"#0E7490\"/></linearGradient><line x1=\"3\" y1=\"13\" x2=\"33\" y2=\"13\" stroke=\"#22D3EE\" stroke-width=\"2\" stroke-dasharray=\"3 1\"/><polygon points=\"18,6 23,13 13,13\" fill=\"#fff\" stroke=\"#67E8F9\" stroke-width=\"1.2\"/><polygon points=\"13,13 23,13 27,29 9,29\" fill=\"url(#w5g)\" stroke=\"#0891B2\" stroke-width=\"1.5\"/><path d=\"M12 32 Q18 35 24 32\" stroke=\"#06B6D4\" stroke-width=\"1.5\" fill=\"none\" opacity=\"0.6\" stroke-linecap=\"round\"/></svg>", "6": "<svg class=\"emb\" viewBox=\"0 0 36 36\" aria-hidden=\"true\" focusable=\"false\"><linearGradient id=\"w6g\" x1=\"0%\" y1=\"0%\" x2=\"100%\" y2=\"100%\"><stop offset=\"0%\" stop-color=\"#34D399\"/><stop offset=\"100%\" stop-color=\"#059669\"/></linearGradient><circle cx=\"18\" cy=\"6\" r=\"3.5\" fill=\"#FFFC00\" stroke=\"#fff\" stroke-width=\"1\"/><path d=\"M18 9.5 V16 M18 16 L9 26 M18 16 L27 26\" stroke=\"#34D399\" stroke-width=\"2.5\" stroke-linecap=\"round\" fill=\"none\"/><circle cx=\"9\" cy=\"27\" r=\"4\" fill=\"url(#w6g)\" stroke=\"#fff\" stroke-width=\"1.2\"/><circle cx=\"27\" cy=\"27\" r=\"4\" fill=\"url(#w6g)\" stroke=\"#fff\" stroke-width=\"1.2\"/><line x1=\"12.5\" y1=\"24\" x2=\"23.5\" y2=\"24\" stroke=\"#FFFC00\" stroke-width=\"1.5\" stroke-dasharray=\"2 2\"/></svg>", "7": "<svg class=\"emb\" viewBox=\"0 0 36 36\" aria-hidden=\"true\" focusable=\"false\"><radialGradient id=\"w7g\" cx=\"50%\" cy=\"100%\" r=\"80%\"><stop offset=\"0%\" stop-color=\"#FFFC00\"/><stop offset=\"60%\" stop-color=\"#F59E0B\"/><stop offset=\"100%\" stop-color=\"#D97706\"/></radialGradient><path d=\"M7 23 A11 11 0 0 1 29 23 Z\" fill=\"url(#w7g)\" stroke=\"#FFFC00\" stroke-width=\"1.5\"/><line x1=\"3\" y1=\"23\" x2=\"33\" y2=\"23\" stroke=\"#FDE68A\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><g stroke=\"#FFFC00\" stroke-width=\"2.5\" stroke-linecap=\"round\"><line x1=\"18\" y1=\"5\" x2=\"18\" y2=\"9\"/><line x1=\"8\" y1=\"9\" x2=\"11\" y2=\"12\"/><line x1=\"28\" y1=\"9\" x2=\"25\" y2=\"12\"/><line x1=\"31\" y1=\"17\" x2=\"27\" y2=\"18\"/><line x1=\"5\" y1=\"17\" x2=\"9\" y2=\"18\"/></g></svg>"};</script>
-<script>window.TA_GAME = {"slot":"4.L2","setting":"Family","title":"The Go-Between","world":4,"worldName":"Conversation Traps","week":4,"weekName":"Conversation Traps","mechanic":"Choice-story","concept":"After this one you can spot when someone hands you a complaint to carry to a person they haven't actually spoken to, and pass it back before you're standing in the middle of it.","bookTerm":"Let's You and Him Fight","bookIdea":"Berne's name for a game where one person stirs up a disagreement between two others and steps back to watch, without having to risk the disagreement themselves.","bookSource":"Games People Play, ch. 6","opener":{"setting":"Sunday, 3pm. Apartment 1A, Gran's kitchen. The kettle has just gone off, and the radio is on low in the corner.","lines":[{"who":"Gran","text":"\u201cYour mother hasn't rung me all week. I don't mind, I'm sure she's busy.\u201d","cue":"stirring her tea slowly, eyes on the cup"},{"who":"You","text":"\u201cI'm sure she'll call soon, Gran.\u201d","cue":"reaching for the biscuit tin, not quite meeting her eyes"},{"who":"Gran","text":"\u201cYou could mention it to her. You two talk all the time.\u201d","cue":"pushing the tin towards you instead of taking one herself"}],"ask":"Gran's line sounds like a small complaint about being forgotten. Is it only that, or has she already handed you a job to do with it?"},"rounds":[{"level":"Spot","label":"Spot, round 1","intro":"A complaint about someone who isn't in the room can sound like nothing more than a passing comment. Some of them come with a job attached.","items":[{"type":"pick","who":"Gran","text":"\u201cYour mother hasn't rung me all week. I don't mind, I'm sure she's busy.\u201d","cue":"stirring her tea, eyes on the cup","options":["A small, passing complaint","An opening move aimed at someone who isn't here to answer it"],"answer":1,"why":"She's naming a grievance about Mum to you, not to Mum. That's already a complaint with nowhere to land except through whoever hears it next.","traps":{"0":"A passing complaint would stop there, with nothing more asked of you. This one keeps going, towards a job she wants doing."},"example":"A colleague says, \u201cNobody on this team ever checks my work,\u201d to you specifically, in a corridor, rather than raising it in the meeting where the people she means can hear it."},{"type":"pick","who":"You","text":"\u201cI'm sure she'll call soon, Gran.\u201d","cue":"reaching for the biscuit tin, not meeting her eyes","options":["Staying out of it","Already agreeing there's something to answer for"],"answer":1,"why":"Reassuring her that Mum will call accepts the idea that Mum is behind on something, which puts you in the middle before you've decided to be.","traps":{"0":"Staying out of it would sound more like, \u201cthat's between you two,\u201d which doesn't take a side on whether Mum owes a call."},"example":"Told \u201cnobody ever thanks me for the rota,\u201d a flatmate says, \u201cI'm sure they will,\u201d without noticing he's just agreed something's owed."},{"type":"pick","who":"Gran","text":"\u201cYou could mention it to her. You two talk all the time.\u201d","cue":"pushing the tin towards you instead of taking one herself","options":["A reasonable, low-stakes suggestion","The complaint arriving with your name on the delivery"],"answer":1,"why":"She's not asking you to listen any more, she's asking you to carry it. The job has moved from \u201chear this\u201d to \u201csay this to someone else for me.\u201d","traps":{"0":"A reasonable suggestion would leave the choice with you. This one assumes you'll do it, because you \u201ctalk all the time.\u201d"},"example":"An uncle says, \u201cYou could tell your cousin the car needs to come back by Friday, you'll see her before I do,\u201d handing over a message he could easily send himself."}]},{"level":"Play","label":"Play, the week in motion","intro":"Later the same afternoon. The complaint is on its way to the person it was actually about, whether anyone meant it to be or not.","items":[{"type":"pick","who":"Gran","text":"\u201cYou could just mention it to her, you two talk all the time.\u201d","cue":"pushing the tin towards you, not asking","options":["Agree to pass it on: \u201cI'll mention it to her.\u201d","Hand it back: \u201cTell her yourself, Gran, she's your daughter.\u201d","Defend Mum straight away: \u201cShe's not ignoring you, Gran.\u201d"],"answer":1,"why":"Handing the complaint back to the person who can actually answer it closes the loop before it reaches Mum through you. It's Gran's call to make, not yours to deliver.","traps":{"0":"Agreeing to pass it on sounds kind and costs nothing today, but it makes you the one who delivers Gran's complaint, and whatever Mum says back will come through you as well.","2":"Defending Mum argues a case she hasn't been told is open, against a complaint that wasn't made to her, which keeps you standing exactly in the middle of it."},"example":"Asked to tell a neighbour the bins were left out again, you say, \u201cThat's worth mentioning to them directly, you'll get a straighter answer than I can give you.\u201d"},{"type":"pick","who":"Mum","text":"\u201cYour Gran says I never call. Did she say that, or are you just repeating it?\u201d","cue":"phone pressed to her ear, something clattering in the background","options":["Apologise for saying anything: \u201cSorry, I shouldn't have said it.\u201d","Say exactly what happened: \u201cGran mentioned it to me. I didn't say I agreed.\u201d","Get annoyed back: \u201cI'm not getting in the middle of this.\u201d"],"answer":1,"why":"Being precise about what actually happened, you repeated a complaint, you didn't make one, takes you out of a fight that was never yours to start with.","traps":{"0":"Apologising accepts a charge that isn't fair. You didn't raise the complaint, you only carried it, and saying sorry for that muddles the two.","2":"Refusing to get in the middle is reasonable in principle, but said sharply in this moment it sounds like brushing off Mum's hurt rather than simply stepping back from a disagreement that isn't yours."},"example":"Asked by one friend why you told another she was annoyed, you say, \u201cShe told me that herself, I only passed it along,\u201d rather than apologising or shutting the question down."}]},{"level":"Analyse","label":"Analyse, explain it","intro":"One more look at the whole afternoon, start to finish.","items":[{"type":"pick","who":"You","text":"At the surface, it was tea with Gran and a phone call with Mum. What was actually moving between the three of you?","cue":"the complaint that travelled further than Gran meant to send it, or further than she let herself notice","options":["A string of separate, unrelated conversations about being busy.","Gran's complaint reaching Mum through you, without Gran ever raising it with her directly.","Mum and Gran both testing which of them you'll take the side of."],"answer":1,"why":"Gran raised the complaint with you, not with Mum. The only way it reached Mum at all was through what you repeated, which is the actual shape of what happened, whatever anyone meant by it.","traps":{"0":"If these were separate, unrelated conversations, the same complaint wouldn't have turned up word for word in both of them.","2":"Nothing in the afternoon shows either of them setting up a test. Gran found it easier to say it to you than to Mum, that's all."},"example":"A flatmate complains about another flatmate's mess only ever to you, never to them directly, and somehow you end up explaining it to both sides before the week is out."}]}],"debrief":{"nadia":"Some complaints arrive looking like a small comment and leave as a job you didn't agree to take on. The surest way out is the plainest one: hand the complaint back to whoever it's actually about, and let the two of them have the conversation that was always theirs to have.","bookTerm":"Let's You and Him Fight","bookNote":"The books call this Let's You and Him Fight, a game where one person starts a disagreement between two others and steps back from it, so the risk of the disagreement falls on everyone except the person who started it."},"reflection":{"prompt":"Think of a complaint about someone that was handed to you to pass on this week. Did you carry it, or hand it back to the person it belonged to?"},"next":null};</script>
+<script>window.TA_GAME = {"slot":"4.L2","setting":"Family","title":"The Go-Between","world":4,"worldName":"Conversation Traps","week":4,"weekName":"Conversation Traps","mechanic":"Choice-story","concept":"After this one you can spot when someone hands you a complaint to carry to a person they haven't actually spoken to, and pass it back before you're standing in the middle of it.","bookTerm":"Let's You and Him Fight","bookIdea":"Berne's name for a game where one person stirs up a disagreement between two others and steps back to watch, without having to risk the disagreement themselves.","bookSource":"Games People Play, ch. 6","opener":{"setting":"Sunday, 3pm. Gran's flat downstairs, the kitchen. The kettle has just gone off, and the radio is on low in the corner.","lines":[{"who":"Gran","text":"\u201cYour mother hasn't rung me all week. I don't mind, I'm sure she's busy.\u201d","cue":"stirring her tea slowly, eyes on the cup"},{"who":"You","text":"\u201cI'm sure she'll call soon, Gran.\u201d","cue":"reaching for the biscuit tin, not quite meeting her eyes"},{"who":"Gran","text":"\u201cYou could mention it to her. You two talk all the time.\u201d","cue":"pushing the tin towards you instead of taking one herself"}],"ask":"Gran's line sounds like a small complaint about being forgotten. Is it only that, or has she already handed you a job to do with it?"},"rounds":[{"level":"Spot","label":"Spot, round 1","intro":"A complaint about someone who isn't in the room can sound like nothing more than a passing comment. Some of them come with a job attached.","items":[{"type":"pick","who":"Gran","text":"\u201cYour mother hasn't rung me all week. I don't mind, I'm sure she's busy.\u201d","cue":"stirring her tea, eyes on the cup","options":["A small, passing complaint","An opening move aimed at someone who isn't here to answer it"],"answer":1,"why":"She's naming a grievance about Mum to you, not to Mum. That's already a complaint with nowhere to land except through whoever hears it next.","traps":{"0":"A passing complaint would stop there, with nothing more asked of you. This one keeps going, towards a job she wants doing."},"example":"A colleague says, \u201cNobody on this team ever checks my work,\u201d to you specifically, in a corridor, rather than raising it in the meeting where the people she means can hear it."},{"type":"pick","who":"You","text":"\u201cI'm sure she'll call soon, Gran.\u201d","cue":"reaching for the biscuit tin, not meeting her eyes","options":["Staying out of it","Already agreeing there's something to answer for"],"answer":1,"why":"Reassuring her that Mum will call accepts the idea that Mum is behind on something, which puts you in the middle before you've decided to be.","traps":{"0":"Staying out of it would sound more like, \u201cthat's between you two,\u201d which doesn't take a side on whether Mum owes a call."},"example":"Told \u201cnobody ever thanks me for the rota,\u201d a flatmate says, \u201cI'm sure they will,\u201d without noticing he's just agreed something's owed."},{"type":"pick","who":"Gran","text":"\u201cYou could mention it to her. You two talk all the time.\u201d","cue":"pushing the tin towards you instead of taking one herself","options":["A reasonable, low-stakes suggestion","The complaint arriving with your name on the delivery"],"answer":1,"why":"She's not asking you to listen any more, she's asking you to carry it. The job has moved from \u201chear this\u201d to \u201csay this to someone else for me.\u201d","traps":{"0":"A reasonable suggestion would leave the choice with you. This one assumes you'll do it, because you \u201ctalk all the time.\u201d"},"example":"An uncle says, \u201cYou could tell your cousin the car needs to come back by Friday, you'll see her before I do,\u201d handing over a message he could easily send himself."}]},{"level":"Play","label":"Play, the week in motion","intro":"Later the same afternoon. The complaint is on its way to the person it was actually about, whether anyone meant it to be or not.","items":[{"type":"pick","who":"Gran","text":"\u201cYou could just mention it to her, you two talk all the time.\u201d","cue":"pushing the tin towards you, not asking","options":["Agree to pass it on: \u201cI'll mention it to her.\u201d","Hand it back: \u201cTell her yourself, Gran, she's your daughter.\u201d","Defend Mum straight away: \u201cShe's not ignoring you, Gran.\u201d"],"answer":1,"why":"Handing the complaint back to the person who can actually answer it closes the loop before it reaches Mum through you. It's Gran's call to make, not yours to deliver.","traps":{"0":"Agreeing to pass it on sounds kind and costs nothing today, but it makes you the one who delivers Gran's complaint, and whatever Mum says back will come through you as well.","2":"Defending Mum argues a case she hasn't been told is open, against a complaint that wasn't made to her, which keeps you standing exactly in the middle of it."},"example":"Asked to tell a neighbour the bins were left out again, you say, \u201cThat's worth mentioning to them directly, you'll get a straighter answer than I can give you.\u201d"},{"type":"pick","who":"Mum","text":"\u201cYour Gran says I never call. Did she say that, or are you just repeating it?\u201d","cue":"phone pressed to her ear, something clattering in the background","options":["Apologise for saying anything: \u201cSorry, I shouldn't have said it.\u201d","Say exactly what happened: \u201cGran mentioned it to me. I didn't say I agreed.\u201d","Get annoyed back: \u201cI'm not getting in the middle of this.\u201d"],"answer":1,"why":"Being precise about what actually happened, you repeated a complaint, you didn't make one, takes you out of a fight that was never yours to start with.","traps":{"0":"Apologising accepts a charge that isn't fair. You didn't raise the complaint, you only carried it, and saying sorry for that muddles the two.","2":"Refusing to get in the middle is reasonable in principle, but said sharply in this moment it sounds like brushing off Mum's hurt rather than simply stepping back from a disagreement that isn't yours."},"example":"Asked by one friend why you told another she was annoyed, you say, \u201cShe told me that herself, I only passed it along,\u201d rather than apologising or shutting the question down."}]},{"level":"Analyse","label":"Analyse, explain it","intro":"One more look at the whole afternoon, start to finish.","items":[{"type":"pick","who":"You","text":"At the surface, it was tea with Gran and a phone call with Mum. What was actually moving between the three of you?","cue":"the complaint that travelled further than Gran meant to send it, or further than she let herself notice","options":["A string of separate, unrelated conversations about being busy.","Gran's complaint reaching Mum through you, without Gran ever raising it with her directly.","Mum and Gran both testing which of them you'll take the side of."],"answer":1,"why":"Gran raised the complaint with you, not with Mum. The only way it reached Mum at all was through what you repeated, which is the actual shape of what happened, whatever anyone meant by it.","traps":{"0":"If these were separate, unrelated conversations, the same complaint wouldn't have turned up word for word in both of them.","2":"Nothing in the afternoon shows either of them setting up a test. Gran found it easier to say it to you than to Mum, that's all."},"example":"A flatmate complains about another flatmate's mess only ever to you, never to them directly, and somehow you end up explaining it to both sides before the week is out."}]}],"debrief":{"nadia":"Some complaints arrive looking like a small comment and leave as a job you didn't agree to take on. The surest way out is the plainest one: hand the complaint back to whoever it's actually about, and let the two of them have the conversation that was always theirs to have.","bookTerm":"Let's You and Him Fight","bookNote":"The books call this Let's You and Him Fight, a game where one person starts a disagreement between two others and steps back from it, so the risk of the disagreement falls on everyone except the person who started it."},"reflection":{"prompt":"Think of a complaint about someone that was handed to you to pass on this week. Did you carry it, or hand it back to the person it belonged to?"},"next":null};</script>
 <script>window.TA_NAV = {"hub":"https://vaibhav-labs.github.io/TA/arena/","next":null};</script>
 <script>
 (function () {
@@ -419,13 +428,38 @@
   }
 
   // Flat list of items across the three rounds; one progress segment each.
+  // Each game can carry several settings (stories). The first is the file's own opener and
+  // rounds; the rest come from GAME.moreStories. The lesson, debrief and reflection are shared.
+  var STORIES = GAME ? [{
+    setting: (GAME.baseStory && GAME.baseStory.setting) || GAME.setting || "",
+    blurb: (GAME.baseStory && GAME.baseStory.blurb) || "",
+    opener: GAME.opener, rounds: GAME.rounds
+  }].concat(GAME.moreStories || []) : [];
+  var cur = 0;
   var ITEMS = [];
-  ((GAME && GAME.rounds) || []).forEach(function (round) {
-    (round.items || []).forEach(function (item, i) {
-      ITEMS.push({ round: round, item: item, first: i === 0 });
+  var TOTAL = 0;
+  function useStory(i) {
+    cur = i;
+    ITEMS = [];
+    ((STORIES[i] && STORIES[i].rounds) || []).forEach(function (round) {
+      (round.items || []).forEach(function (item, j) {
+        ITEMS.push({ round: round, item: item, first: j === 0 });
+      });
     });
-  });
-  var TOTAL = ITEMS.length;
+    TOTAL = ITEMS.length;
+  }
+  useStory(0);
+  var MULTI = STORIES.length > 1;
+  var DONE_KEY = "ta-arena-done-" + (GAME ? GAME.slot : "");
+  function readDone() {
+    try { return JSON.parse(window.localStorage.getItem(DONE_KEY) || "[]") || []; } catch (e) { return []; }
+  }
+  function markDone(i) {
+    var d = readDone();
+    if (d.indexOf(i) < 0) d.push(i);
+    try { window.localStorage.setItem(DONE_KEY, JSON.stringify(d)); } catch (e) { /* blocked: fine */ }
+    return d;
+  }
 
   function progressHTML(done, current) {
     var bars = "";
@@ -449,7 +483,7 @@
 
   // ---------- flow ----------
 
-  var state = { screen: "intro", k: 0 };
+  var state = { screen: MULTI ? "stories" : "intro", k: 0 };
 
   function settle() {
     if (card.getBoundingClientRect().top < 0) card.scrollIntoView({ block: "start" });
@@ -457,7 +491,8 @@
   }
 
   function render() {
-    if (state.screen === "intro") renderIntro();
+    if (state.screen === "stories") renderStories();
+    else if (state.screen === "intro") renderIntro();
     else if (state.screen === "item") renderItem(state.k);
     else if (state.screen === "debrief") renderDebrief();
     else if (state.screen === "reflect") renderReflect();
@@ -470,7 +505,11 @@
       state.screen = "item"; state.k = 0;
     } else if (state.screen === "item") {
       if (state.k + 1 < TOTAL) state.k += 1;
-      else state.screen = "debrief";
+      else {
+        var before = readDone().length;
+        markDone(cur);
+        state.screen = before > 0 ? "end" : "debrief";
+      }
     } else if (state.screen === "debrief") {
       state.screen = "reflect";
     } else if (state.screen === "reflect") {
@@ -489,19 +528,19 @@
   }
 
   function renderIntro() {
-    var op = GAME.opener || {};
+    var op = STORIES[cur].opener || {};
     var lines = (op.lines || []).map(function (ln) {
       return '<p class="line"><span class="who">' + rich(ln.who) + '</span>' + rich(ln.text) + '</p>' +
         (ln.cue ? '<p class="cue">' + rich(ln.cue) + '</p>' : "");
     }).join("");
-    var rounds = (GAME.rounds || []).map(function (r) {
+    var rounds = (STORIES[cur].rounds || []).map(function (r) {
       var n = (r.items || []).length;
       return '<li><span class="dot"></span><span><b>' + rich(r.level) + '</b>, ' + n +
         (n === 1 ? ' item' : ' items') + '</span></li>';
     }).join("");
     card.innerHTML =
       '<div class="tagline">You · World ' + esc(GAME.world) + ', ' + rich(GAME.worldName) +
-      ' · Game ' + esc(GAME.slot) + '</div>' +
+      ' · Game ' + esc(GAME.slot) + (MULTI && STORIES[cur].setting ? ' · ' + esc(STORIES[cur].setting) : '') + '</div>' +
       '<div class="card-head"><div><h1>' + rich(GAME.title) + '</h1>' +
       '<p class="deck">' + rich(GAME.concept) + '</p></div>' +
       '<div class="case-no"><span class="emb-wrap">' + ((window.TA_EMB || {})[String(GAME.world)] || "") + '</span>' + esc(GAME.slot) + '<br>' + rich(GAME.weekName) + '</div></div>' +
@@ -512,8 +551,46 @@
       '<ul class="rules-list">' + rounds +
       '<li><span class="dot"></span><span>Feedback follows every answer, with a real example</span></li>' +
       '</ul></div>' +
-      nextbar("Start the game →");
+      nextbar("Start the game →") +
+      (MULTI ? '<div class="nextbar"><button class="linkbtn" type="button" id="otherSetting">← Choose another setting</button></div>' : "");
     bindNext(advance);
+    bindOther();
+  }
+
+  function bindOther() {
+    var b = card.querySelector("#otherSetting");
+    if (b) b.addEventListener("click", goStories);
+  }
+
+  function goStories() {
+    state.screen = "stories"; state.k = 0;
+    render();
+  }
+
+  function renderStories() {
+    var done = readDone();
+    var cards = STORIES.map(function (st, i) {
+      var ticked = done.indexOf(i) >= 0;
+      return '<button class="choice story-card' + (ticked ? ' played' : '') + '" type="button" data-i="' + i + '">' +
+        '<span class="story-top"><b>' + esc(st.setting || ("Story " + (i + 1))) + '</b>' +
+        (ticked ? '<span class="played-tag">Played</span>' : '') + '</span>' +
+        '<span class="story-blurb">' + rich(st.blurb || "") + '</span></button>';
+    }).join("");
+    card.innerHTML =
+      '<div class="tagline">You · World ' + esc(GAME.world) + ', ' + rich(GAME.worldName) + ' · Game ' + esc(GAME.slot) + '</div>' +
+      '<div class="card-head"><div><h1>' + rich(GAME.title) + '</h1>' +
+      '<p class="deck">' + rich(GAME.concept) + '</p></div>' +
+      '<div class="case-no"><span class="emb-wrap">' + ((window.TA_EMB || {})[String(GAME.world)] || "") + '</span>' + esc(GAME.slot) + '<br>' + rich(GAME.weekName) + '</div></div>' +
+      '<div class="ask"><div class="kicker">Choose a setting</div><p>Same idea, different people and places. Pick the one closest to your life, or play them all. ' +
+      done.length + ' of ' + STORIES.length + ' played.</p></div>' +
+      '<div class="choices">' + cards + '</div>';
+    card.querySelectorAll("button.story-card").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        useStory(parseInt(btn.getAttribute("data-i"), 10));
+        state.screen = "intro"; state.k = 0;
+        render();
+      });
+    });
   }
 
   // ---------- pick ----------
@@ -893,7 +970,8 @@
   function renderEnd() {
     var hub = worldHub();
     var nxt = NAV.next || null;
-    var links = hub ? '<a class="next" href="' + esc(hub) + '">Back to the world</a>' : "";
+    var links = MULTI ? '<button class="next" type="button" id="otherSetting">Play another setting</button>' : "";
+    links += hub ? '<a class="next" href="' + esc(hub) + '">Back to the world</a>' : "";
     if (nxt) {
       var nxtUrl = safeUrl(nxt.url);
       links += nxtUrl
@@ -906,7 +984,9 @@
       '<h1 class="h2">Game ' + esc(GAME.slot) + ' is done.</h1>' +
       '<p class="feedback">' + rich(GAME.concept) + '</p>' +
       '<div class="source"><b>From:</b> ' + rich(GAME.bookSource) + '</div>' +
+      (MULTI ? '<p class="feedback">Settings played: ' + readDone().length + ' of ' + STORIES.length + '.</p>' : '') +
       '<div class="nextbar end-nav">' + links + '</div>';
+    bindOther();
   }
 
   // ---------- start ----------
@@ -920,6 +1000,8 @@
       return;
     }
     series.innerHTML = '<span class="emb-wrap">' + ((window.TA_EMB || {})[String(GAME.world)] || "") + '</span>You <small>· World ' + esc(GAME.world) + ' · Game ' + esc(GAME.slot) + '</small>';
+    var sb = document.getElementById("storiesBtn");
+    if (MULTI && sb) { sb.hidden = false; sb.addEventListener("click", goStories); }
     var hub = worldHub();
     if (hub) {
       hubLink.textContent = "World map";

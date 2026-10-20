@@ -1,0 +1,597 @@
+{
+  "baseBlurb": "A Sunday phone call with Mum, where an old story about a lunch box and a ledger keeps coming back.",
+  "stories": [
+    {
+      "setting": "School & College",
+      "blurb": "Marked ledgers come back at Sam's evening class, and two people answer you as someone else.",
+      "opener": {
+        "setting": "Tuesday, 19:40. The adult education centre, room four, week five of the bookkeeping course. The feedback sheets are coming back face down, and the radiator ticks.",
+        "lines": [
+          { "who": "Ms Hallett", "text": "“Group two. Your ledger balanced, and then it didn't. We'll talk about that on Friday.”", "cue": "reading glasses pushed up into her hair, a stack of sheets squared against her chest" },
+          { "who": "Sam", "text": "“It's mine, I think. Most of it's probably mine.”", "cue": "already folding his sheet into four, then into eight" }
+        ],
+        "ask": "Replay the week. Can you find the name tag each person pins on you, and the line that put it there?"
+      },
+      "rounds": [
+        {
+          "level": "Spot",
+          "label": "Spot, round 1",
+          "intro": "<b>How this one works:</b> you replay a few days of the course. Some lines are a person answering you as if you were someone from their past, and that is a name tag. Tap the name tag that fits the line.",
+          "items": [
+            {
+              "type": "pick",
+              "who": "Ms Hallett",
+              "text": "“Which section lost the marks? It's on the sheet. It is always on the sheet. Did you read the handout, or only look at the pictures?”",
+              "cue": "tapping the sheet with a green pen, not looking up",
+              "options": ["A straight answer to your question", "She treats you as a lazy pupil", "She treats you as an anxious parent"],
+              "answer": 1,
+              "why": "You asked where the marks went. She answered a pupil who skipped the reading, and nobody in the room has said anything about reading. The question was aimed at a grown-up, and the answer landed on a schoolchild.",
+              "traps": {
+                "0": "A straight answer would name the section: “Section three, the closing balance.” Hers is a question about your homework habits instead.",
+                "2": "An anxious parent would be asking what the marks mean for someone else. Nothing in her line is about worry, and the pen is tapping like a register."
+              },
+              "example": "A driving test centre, an examiner who says: “Did you even look at the mirror, or do you just enjoy the scenery?”<br>The learner asked what the fault was. The examiner is answering a daydreaming schoolboy."
+            },
+            {
+              "type": "pick",
+              "who": "Colin",
+              "text": "“Oh, here we go. You're marking me down just like Mr Pratt did in Year Nine. Always sure I got it wrong before I'd finished.”",
+              "cue": "arms folded over his laptop, coffee gone cold at his elbow",
+              "options": ["He asks about the figures", "He jokes with a mate", "He sees Mr Pratt again"],
+              "answer": 2,
+              "why": "You asked which pages were his. Colin heard a strict old teacher and answered him. The line is a Kid's, and the name tag it pins on you is a stranger's from twenty years ago.",
+              "traps": {
+                "0": "Asking about the figures would sound like “Pages four to six, the VAT bit.” Colin has said nothing about a single page.",
+                "1": "A joke between mates would have a grin in it and no Mr Pratt. This line has an old grudge, and he is not smiling."
+              },
+              "example": "A flat-pack shelf, a husband who says to his wife: “Fine, take over, you always know better, just like my brother.”<br>She only asked where the screws were. He answered his brother."
+            },
+            {
+              "type": "pick",
+              "who": "You, to Ms Hallett",
+              "text": "“Sorry, you're right, I'm hopeless at this. I'll redo the whole ledger tonight.”",
+              "cue": "you say it fast, to stop her looking at the sheet",
+              "options": ["A Kid line that gives in", "A Pilot line, true and checkable", "A Boss line that tells her off"],
+              "answer": 0,
+              "why": "You agreed to a verdict you had not read. The Kid folded, and the quick yes is how the pupil's name tag gets fixed on you from your own side as well.",
+              "traps": {
+                "1": "A Pilot line would check the claim: “I got section one and two right. Show me what happened in section three.” That is true and she can answer it.",
+                "2": "A Boss line would say “That's not a fair way to talk to a student.” It is sharp, and it pins a name tag on her."
+              },
+              "example": "A pharmacy counter, a customer who says to the assistant: “Yes, I'm a nuisance, I know, I'm sorry.” She had only asked for a prescription number.<br>The quick sorry ends the talk and leaves him as the nuisance."
+            }
+          ]
+        },
+        {
+          "level": "Play",
+          "label": "Play, the week in motion",
+          "intro": "<b>Now you replay it.</b> Each line is a volley. Some lines pin a name tag on the other person, and some pin one on you. Choose the line that fits the moment.",
+          "items": [
+            {
+              "type": "scene",
+              "title": "Thursday, 18:10, the college library, a table by the radiator",
+              "setting": "Group two has until Friday morning to hand in the corrected ledger. You asked Colin one plain thing: which pages are his. A vending-machine coffee sits cold at his elbow.",
+              "meters": { "you": 65, "them": 50 },
+              "beats": [
+                {
+                  "who": "Colin",
+                  "text": "“Don't start. I know what's coming. You'll tell me I did it wrong, same as every teacher I ever had.”",
+                  "cue": "he turns his laptop a little further from you",
+                  "lines": [
+                    { "text": "“I'm not marking anything, Colin. I need to know which pages are yours, so I can split the rest.”", "tag": "best", "you": 4, "them": 6, "outcome": "Colin looks up. “Four to six. The VAT bit.” He pulls the laptop back to the middle of the table.", "why": "You gave the plain request again and added a reason. With no teacher in the sentence, there is no one left for him to push against." },
+                    { "text": "“Relax, Colin. I'm not your teacher.”", "tag": "ok", "you": -1, "them": -3, "outcome": "Colin bristles. “Then stop sounding like one.” The pages stay on his side of the table.", "why": "It is true, and it argues about the name tag. He now has to defend himself against a second charge, and he still has not told you the pages." },
+                    { "text": "“Sorry. I'll do the whole thing myself.”", "tag": "ok", "you": -3, "them": 2, "outcome": "Colin shrugs. “If you like.” He is relieved, and the ledger is yours alone.", "why": "You folded before anyone asked you to. It ends the friction and also takes his part away from him." }
+                  ]
+                },
+                {
+                  "who": "Colin",
+                  "text": "“You lot always decide who's clever before you've seen a number. Go on, grade me.”",
+                  "cue": "he slides a printout across the table, face down",
+                  "lines": [
+                    { "text": "“Fine. Page four has three mistakes and page five has two. You need to be more careful.”", "tag": "game", "you": -6, "them": -4, "outcome": "Colin says, “There it is.” He takes the printout back, stands, and heads for the machine downstairs.", "why": "You accepted the invitation to be his marker. A Boss voice answering a Kid voice is the old pair running again, and this scene stops here." },
+                    { "text": "“I'm not grading. Page four, line twelve, the 140 and the 410 swapped places. Want to fix it together?”", "tag": "best", "you": 3, "them": 5, "outcome": "Colin turns the printout over. “Line twelve. Hm.” He pulls the chair in a little.", "why": "You stayed with a fact he could check and offered to share the work. The marker's name tag has nothing left to hang on." },
+                    { "text": "“Everyone gets things wrong, Colin. Even me. Don't take it personally.”", "tag": "ok", "you": 0, "them": -1, "outcome": "Colin nods slowly. “Right.” He sounds handled, and the printout stays face down.", "why": "Kind, and it pats him on the head. It speaks from a Boss who soothes, so the old pair is still there, only gentler." }
+                  ]
+                },
+                {
+                  "who": "Colin",
+                  "text": "“Nobody ever said that to me before. They just circled it in red.”",
+                  "cue": "it is the first time he has looked at you for more than a second",
+                  "lines": [
+                    { "text": "“Red circles don't help at ten at night. Let's fix line twelve and then check the total.”", "tag": "best", "you": 2, "them": 4, "outcome": "Colin laughs, once. “Ten at night is right.” The two of you bend over the page.", "why": "You agreed with what he said, kept it short, and went back to the work. Nobody has to explain the past to get on with the ledger." },
+                    { "text": "“Sounds like a rough school. Anyway, line twelve.”", "tag": "ok", "you": 0, "them": 0, "outcome": "Colin says, “It was fine.” The warmth drops, and you are both looking at the numbers.", "why": "A fair thing to say, and it steps over his remark. He offered a glimpse and got a change of subject." }
+                  ]
+                }
+              ],
+              "payoff": "Colin leaves the pages face down on the table and goes home. The corrected ledger has a gap the size of his name.",
+              "fallout": {
+                "them": "Colin packs up without a word. His pages stay face down, and the radiator ticks on.",
+                "you": "You hand in the whole ledger alone at eleven, with his section guessed at and your own checked twice."
+              }
+            },
+            {
+              "type": "scene",
+              "title": "Friday, 08:50, the corridor outside room four",
+              "setting": "The ledger is due at nine. Sam has gone grey, and the last page is still in the printer queue. Ms Hallett steps out with her keys and a roll of green tape.",
+              "meters": { "you": 60, "them": 50 },
+              "beats": [
+                {
+                  "who": "Ms Hallett",
+                  "text": "“You're late with this, and I did say Friday. Shall I write it on your hand?”",
+                  "cue": "keys swinging from one finger",
+                  "lines": [
+                    { "text": "“Yes, Ms Hallett. I'm sorry. It won't happen again, I'll never be late again.”", "tag": "game", "you": -7, "them": 3, "outcome": "Ms Hallett tears off a strip of tape. “See that it doesn't.” She walks into room four, and you are holding a promise you cannot keep.", "why": "You took the pupil's name tag and signed a promise for it. A Kid answering a Boss ends the scene here." },
+                    { "text": "“It's ready except one page. Ten o'clock, in your tray. Sam is printing it now.”", "tag": "best", "you": 3, "them": 5, "outcome": "Ms Hallett checks her watch. “Ten, then.” She opens the door and leaves it ajar for you.", "why": "You gave a time and a place she can check. It talks to the tutor and leaves the pupil out of it." },
+                    { "text": "“You never gave us a time on Friday. It isn't our fault.”", "tag": "ok", "you": -2, "them": -4, "outcome": "Ms Hallett's mouth tightens. “I said Friday. Friday is a day, not a time.” She does not move from the door.", "why": "You defended yourself against a charge she hadn't finished making. It sounds like the Kid, and she answers it from the Boss." }
+                  ]
+                },
+                {
+                  "who": "Ms Hallett",
+                  "text": "“Sam always has a reason. You evening students want the certificate without the hours.”",
+                  "cue": "she is looking at Sam, not at you",
+                  "lines": [
+                    { "text": "“Sam did eleven hours on this. It's all in the group log. Can I show you the page?”", "tag": "best", "you": 3, "them": 4, "outcome": "Ms Hallett frowns, then holds out a hand. “Show me.” Sam lets out a breath he had been saving.", "why": "You answered the claim with a number she can look up. The word hours was hers, so you used it back." },
+                    { "text": "“That's unfair, Ms Hallett. We work all day too.”", "tag": "ok", "you": -2, "them": -3, "outcome": "She says, “I did not say you didn't.” The tape roll goes back in her pocket.", "why": "True, and it comes out as a protest. A protest to a parent figure keeps the pair going: she scolds, you plead." },
+                    { "text": "“Sam, tell her about your hours.”", "tag": "ok", "you": -3, "them": -1, "outcome": "Sam goes pink. “Eleven, I think. Maybe ten. Sorry.” The tutor looks at the floor.", "why": "You handed the talking to the person with the weakest voice in the corridor. He folded before you did." }
+                  ]
+                },
+                {
+                  "who": "Ms Hallett",
+                  "text": "“Ten o'clock, then. And I want the group log with it.”",
+                  "cue": "the keys are back in her pocket",
+                  "lines": [
+                    { "text": "“The log will be with the ledger. Thanks for the ten o'clock.”", "tag": "best", "you": 2, "them": 4, "outcome": "Ms Hallett nods. “Good.” She stands aside to let you into the room.", "why": "A short answer between two adults. It accepts the deal and adds nothing." },
+                    { "text": "“Yes, Ms Hallett. Thank you, Ms Hallett, sorry again.”", "tag": "ok", "you": -3, "them": 1, "outcome": "She says, “All right, all right.” You feel nine years old.", "why": "Polite, and the extra thanks and sorry put the pupil back in the corridor." }
+                  ]
+                }
+              ],
+              "payoff": "Ms Hallett writes late on the sheet. The tape goes back in her pocket, and the promise stays on your record.",
+              "fallout": {
+                "you": "You say yes to everything in the corridor. At ten past nine you are still counting what you promised."
+              }
+            }
+          ]
+        },
+        {
+          "level": "Analyse",
+          "label": "Analyse, explain it",
+          "intro": "<b>Read the replay back.</b> Pick the explanation that fits what happened in the library and the corridor.",
+          "items": [
+            {
+              "type": "pick",
+              "who": "Nadia, after the replay",
+              "text": "“Look at the two people. Colin answered you as a teacher he's pushing against. Ms Hallett answered you as a pupil who is late. Where did each tag come from?”",
+              "cue": "she lays the feedback sheet flat and puts her pen on it",
+              "options": [
+                "Colin's Kid saw an old teacher in you, and Ms Hallett's Boss saw a late pupil in you",
+                "Both were simply tired after a long Tuesday and Thursday, so there were no tags at all",
+                "Both tags came from your own manner, so the fault is all yours and nobody else's"
+              ],
+              "answer": 0,
+              "why": "Colin's line put a strict teacher on your chair, and Ms Hallett's put a schoolchild there. Two name tags, one in each direction, and each person was answering a figure that was not in the room.",
+              "traps": {
+                "1": "Tiredness explains the short tempers, and it does not explain Mr Pratt or the register. The tags were in the words, not in the hour.",
+                "2": "Your folding in the corridor did add a tag, and the first ones were not yours. Their lines came before your answers."
+              },
+              "example": "A choir rehearsal, a conductor who says: “You were flat again, weren't you?” A singer answers: “Don't talk to me like my mother.”<br>Both lines are aimed at people who are not there."
+            },
+            {
+              "type": "pick",
+              "who": "Nadia, with a pen in the air",
+              "text": "“Same plain question, two replies. You ask Sam: ‘Have you got the printout for page nine? Ms Hallett wants it at ten.’ Reply A: ‘Stop checking up on me. You sound exactly like my sister.’ Reply B: ‘Why do you ask me things you should know? Do I have to hold your hand through this course?’”",
+              "cue": "she writes A and B on the back of the feedback sheet, one above the other",
+              "prompt": "Your question came from your Pilot, aimed at his Pilot. Which pairing describes the two replies?",
+              "options": [
+                "A comes from Sam's Boss, treating you as a child. B comes from his Kid, answering a bossy sister.",
+                "Both come from Sam's Pilot, so the printout has been answered twice.",
+                "A comes from Sam's Kid, answering a bossy sister. B comes from his Boss, treating you as a child."
+              ],
+              "answer": 2,
+              "why": "In A, Sam's Kid hears a bossy sister and hits back. In B, his Boss talks down to you as someone who needs holding by the hand. Both cut the plain question, and page nine stays missing until someone goes back to a Pilot line.",
+              "traps": {
+                "0": "The pairing is the wrong way round. ‘You sound like my sister’ is a Kid pushing back at a parent figure, and ‘hold your hand’ is a Boss talking down.",
+                "1": "A Pilot reply would say where the printout is, or that he has not made it yet. Neither reply does that."
+              },
+              "example": "A school office, a teacher who asks the caretaker: “Is the hall unlocked yet?”<br>“Don't you start on me. You sound just like the head.” The reply comes from the Kid and treats her as a boss, so nobody finds the key."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "setting": "Work",
+      "blurb": "Release day at Halden, and a plain question about which build ships keeps landing on the wrong person.",
+      "opener": {
+        "setting": "Thursday, 16:40. Halden, the team room. The release goes out at six, and the red-screened laptop is open on Daniel's desk.",
+        "lines": [
+          { "who": "Daniel", "text": "“Build 215. It's in the channel. Does everything need saying twice with you?”", "cue": "not looking up from the red screen" },
+          { "who": "Clara", "text": "“I'll fix it. Sorry, I'll fix all of it. I should have caught it hours ago.”", "cue": "a list of seventeen items on a sticky note stuck to her monitor" }
+        ],
+        "ask": "Replay the afternoon. Can you find the name tag each person pins on you, and the line that put it there?"
+      },
+      "rounds": [
+        {
+          "level": "Spot",
+          "label": "Spot, round 1",
+          "intro": "<b>How this one works:</b> you replay a release afternoon. Some lines are a person answering you as if you were someone from their past, and that is a name tag. Tap the name tag that fits the line.",
+          "items": [
+            {
+              "type": "pick",
+              "who": "Daniel",
+              "text": "“I put it in the channel an hour ago. Do I have to read it to you as well? Some of us did the reading.”",
+              "cue": "the lid of the red laptop half closed, one hand already on it",
+              "options": ["He answers colleague to colleague", "He treats you as his own manager", "He treats you as a slow trainee"],
+              "answer": 2,
+              "why": "You asked which build goes to the client, and a question about a number got a remark about reading. He is answering a trainee who falls behind.",
+              "traps": {
+                "0": "Colleague to colleague would be “215, it's in the channel if you want to check.” He has added a charge about your reading.",
+                "1": "Nobody talks to a manager like this. Nothing in the line asks for his sign-off or hints that you outrank him."
+              },
+              "example": "A warehouse, a supervisor asked which bay the pallet is for who says: “It's on the board. Can you read a board?”<br>The question was about a bay, and the answer is about the person."
+            },
+            {
+              "type": "pick",
+              "who": "Clara",
+              "text": "“You're checking my work again. I knew it. Daniel doubts me and now you do too.”",
+              "cue": "her hand covers the sticky note before you can read it",
+              "options": ["She sees a doubting manager", "She answers the test question plainly", "She makes a joke of the test run"],
+              "answer": 0,
+              "why": "You asked if the test run was finished. Clara heard a judge, and she is answering the judge. The line is a Kid's, and the tag is a doubting manager.",
+              "traps": {
+                "1": "A plain answer would be “Twelve of seventeen done.” Her line is about being doubted, not about the tests.",
+                "2": "A joke would lighten the room. Her hand over the sticky note says she isn't joking."
+              },
+              "example": "A tax office, a junior who is asked: “Is the file ready for review?” and who says: “You never trust my work.”<br>The senior asked about a file and got an answer to a doubt."
+            },
+            {
+              "type": "pick",
+              "who": "You, to Daniel",
+              "text": "“You're right, I should have read the channel. I'm slow, I know. I'll catch up.”",
+              "cue": "you say it with your eyes on the floor, to stop him looking at you",
+              "options": ["A Boss line that tells him off", "A Kid line that takes the tag", "A Pilot line, true and checkable"],
+              "answer": 1,
+              "why": "You took the trainee's name tag and wore it. A quick agreement is how a tag gets fixed on your side as well, and he did not even have to push.",
+              "traps": {
+                "0": "A Boss line would say “You could have told me directly, Daniel.” It might be fair, and it pins a name tag on him.",
+                "2": "A Pilot line would check: “I read the channel at two. 215 went up at three. Can you confirm it's still 215?” That one has a fact in it."
+              },
+              "example": "A café kitchen, a cook who is asked: “Where's the order for table six?” and who says: “I'm useless tonight, I know.”<br>He gave up the order and kept the label."
+            }
+          ]
+        },
+        {
+          "level": "Play",
+          "label": "Play, the week in motion",
+          "intro": "<b>Now you replay it.</b> Each line is a volley. Some lines pin a name tag on the other person, and some pin one on you. Choose the line that fits the moment.",
+          "items": [
+            {
+              "type": "scene",
+              "title": "Thursday, 17:05, the team room, Daniel's desk",
+              "setting": "You asked one plain thing: which build do you tell the client, 214 or 215? Daniel is hunched over the red screen, and a cold canteen sandwich sits half-eaten beside it.",
+              "meters": { "you": 65, "them": 50 },
+              "beats": [
+                {
+                  "who": "Daniel",
+                  "text": "“I put it in the channel an hour ago. Do I have to read it to you as well?”",
+                  "cue": "his pen goes through the lid of the sandwich box",
+                  "lines": [
+                    { "text": "“I missed it. Is it 215 for sure, and can I tell the client in ten minutes?”", "tag": "best", "you": 4, "them": 5, "outcome": "Daniel stops. “215. Yes. Ten minutes is fine.” He closes the sandwich box.", "why": "You owned the miss in four words and went back to the question. The trainee's name tag has nothing to stick to." },
+                    { "text": "“Sorry, Daniel. I'll read the channel from now on.”", "tag": "ok", "you": -3, "them": 2, "outcome": "Daniel grunts. “Good.” He has his answer, and you have the label.", "why": "The Kid took the tag and paid for it with a promise. He is pleased, and the build number is still missing." },
+                    { "text": "“You never said it was in the channel.”", "tag": "ok", "you": -2, "them": -4, "outcome": "Daniel looks up. “It's always in the channel.” The lid of the laptop comes down an inch.", "why": "You pushed back like a Kid, and he answered from the Boss. The argument is about the channel now, not the build." }
+                  ]
+                },
+                {
+                  "who": "Daniel",
+                  "text": "“Everyone's asking me questions today. Just do it right for once and spare me the details.”",
+                  "cue": "he taps the closed lid twice, hard",
+                  "lines": [
+                    { "text": "“Understood. I'll do it exactly right, and I'll check with you before every step.”", "tag": "game", "you": -6, "them": 4, "outcome": "Daniel says, “Good.” By half past five he has sent you three messages, and you reply to each one inside a minute.", "why": "You took the trainee's seat and promised perfection. The Boss and Kid pair is running again, and this scene stops here." },
+                    { "text": "“I'll do it. If the client asks about 214, I need five minutes of your attention.”", "tag": "best", "you": 3, "them": 5, "outcome": "Daniel exhales. “Five. If it comes to that.” He reaches for the sandwich at last.", "why": "You agreed to the job and named the one thing you need. He gets a plan, and you keep your own voice." },
+                    { "text": "“Daniel, you're stressed. Take a breath.”", "tag": "ok", "you": -1, "them": -3, "outcome": "Daniel says, “I am not stressed.” The pen goes through the sandwich box again.", "why": "A kind thought that tells him what he feels. It talks down from a Boss seat and gets pushed back from his." }
+                  ]
+                },
+                {
+                  "who": "Daniel",
+                  "text": "“Fine. Five minutes. Not more.”",
+                  "cue": "he rubs his eyes with the heel of one hand",
+                  "lines": [
+                    { "text": "“Five is enough. Tell me the one thing the client must not hear.”", "tag": "best", "you": 3, "them": 4, "outcome": "Daniel almost smiles. “That we nearly shipped 214.” He starts to talk, fast but clear.", "why": "A short question that makes him the expert, and a fact he can give. It keeps both of you at desk height." },
+                    { "text": "“Thanks, Daniel, you're the best. I'll be quick, sorry.”", "tag": "ok", "you": -2, "them": 1, "outcome": "Daniel waves you away. “Go.” You walk off feeling like a boy sent back to his seat.", "why": "Warm, and the extra sorry and the praise put you below him again." }
+                  ]
+                }
+              ],
+              "payoff": "Daniel's messages come every few minutes until the release. You answer each one and the red laptop stays open on his desk.",
+              "fallout": {
+                "them": "Daniel puts his headphones on. The build number stays in the channel where he left it.",
+                "you": "You say yes to everything and write the client's email four times. It goes out at ten to six."
+              }
+            },
+            {
+              "type": "scene",
+              "title": "Thursday, 17:40, the team room, Clara's desk",
+              "setting": "Clara has been testing since five that morning. You ask a plain question: is the invoice screen test finished? A seventeen-item list is stuck to her monitor, and a cold canteen coffee sits beside it.",
+              "meters": { "you": 60, "them": 50 },
+              "beats": [
+                {
+                  "who": "Clara",
+                  "text": "“You're checking up on me. Daniel doubts me and now you do too.”",
+                  "cue": "her hand flat over the sticky note",
+                  "lines": [
+                    { "text": "“I'm planning, Clara, not checking. How many of the seventeen are done?”", "tag": "best", "you": 3, "them": 4, "outcome": "Clara hesitates, then lifts her hand. “Twelve. Five left.” She turns the monitor a little towards you.", "why": "You said what you were doing and asked for a number. A number is easier to give than a defence." },
+                    { "text": "“I'm not Daniel, Clara. Don't put me with him.”", "tag": "ok", "you": -1, "them": -3, "outcome": "Clara says, “I didn't.” Her shoulders go up and her list goes back under her hand.", "why": "True, and it takes the argument to Daniel. She wanted to be asked about the tests." },
+                    { "text": "“Nobody doubts you. I only wanted to know.”", "tag": "ok", "you": 0, "them": -1, "outcome": "Clara says, “Right.” She does not look as if she believes you.", "why": "A kind line that repeats the words ‘nobody doubts’. It answers her fear and skips the five missing tests." }
+                  ]
+                },
+                {
+                  "who": "Clara",
+                  "text": "“It's nearly done. I'll stay until it's perfect. You go home.”",
+                  "cue": "she hasn't looked up from the keyboard",
+                  "lines": [
+                    { "text": "“Thanks, Clara, you're a star. I'll leave it with you.”", "tag": "game", "you": -6, "them": 3, "outcome": "Clara beams, briefly. “I won't let you down.” At seven she is still there, retesting item three.", "why": "You took the seat of the manager she was afraid of and gave her praise for staying. The Boss-and-Kid pair rolls on, and this scene stops here." },
+                    { "text": "“Nobody needs perfect by six. Which three items does the client look at?”", "tag": "best", "you": 3, "them": 5, "outcome": "Clara blinks. “The totals, the date, and the PDF.” She pulls the sticky note off and writes a ring around three lines.", "why": "You asked a question she could answer as a colleague, and it changed the job from perfect to enough." },
+                    { "text": "“Clara, you work too hard. Go home.”", "tag": "ok", "you": 0, "them": -2, "outcome": "Clara says, “I'm fine.” She types faster than before.", "why": "Caring, and it tells her what to do. She heard another person deciding what she can bear." }
+                  ]
+                },
+                {
+                  "who": "Clara",
+                  "text": "“Omar keeps looking over. He thinks I can't finish.”",
+                  "cue": "Omar is across the room holding two mugs, looking at nothing",
+                  "lines": [
+                    { "text": "“He's holding you a tea. Ask him which four items he'd take.”", "tag": "best", "you": 3, "them": 4, "outcome": "Clara laughs, short and surprised. “Four?” She waves Omar over, and the mug lands beside the list.", "why": "You described what you could both see, and gave her a way to ask for help in her own words." },
+                    { "text": "“He isn't thinking anything like that, Clara.”", "tag": "ok", "you": -1, "them": -2, "outcome": "Clara says, “You don't know that.” Omar sits down again, mugs and all.", "why": "You answered her guess about Omar with your own guess. Neither of you can check it, and the mug stays across the room." }
+                  ]
+                }
+              ],
+              "payoff": "Clara stays until seven retesting item three. The release goes out at six without her sign-off, and the sticky note stays on the monitor.",
+              "fallout": {
+                "them": "Clara turns her chair away. The list comes off the monitor and goes into her bag.",
+                "you": "You say yes to her plan and to Daniel's. At six you watch the release without touching a thing."
+              }
+            }
+          ]
+        },
+        {
+          "level": "Analyse",
+          "label": "Analyse, explain it",
+          "intro": "<b>Read the replay back.</b> Pick the explanation that fits what happened at Daniel's desk and at Clara's.",
+          "items": [
+            {
+              "type": "pick",
+              "who": "Nadia, after the replay",
+              "text": "“Daniel talked to you as a slow trainee. Clara talked to you as a manager who doubts her. Same question from you each time. What was going on?”",
+              "cue": "she lays two sticky notes side by side on the table",
+              "options": [
+                "Both came from the Kid, because both were stressed and short of time at the end of a long Thursday",
+                "Daniel's Boss pinned a trainee tag on you, and Clara's Kid put a doubting manager's tag on you",
+                "Both came from your own manner, so neither of them chose it and the fault is all yours"
+              ],
+              "answer": 1,
+              "why": "Daniel's line put a slow trainee in your chair, and Clara's put a doubting manager there. Two different voices, two tags, and a plain question that was meant for neither.",
+              "traps": {
+                "0": "Stress is real, and both were under it. Daniel's lines talk down and Clara's push back, which are different voices.",
+                "2": "Your first plain questions were fair. The tags were in their answers, not in how you asked."
+              },
+              "example": "A call centre floor, a team lead who says: “Did you even read the script?” An agent says: “You've never trusted me.”<br>One tag came from above, the other from below."
+            },
+            {
+              "type": "pick",
+              "who": "Nadia, with a pen in the air",
+              "text": "“Same plain question, two replies. You ask Sam: ‘Did you push the fix for the invoice screen? Daniel wants it by six.’ Reply A: ‘Stop standing over me. You're worse than my last manager.’ Reply B: ‘Did you even look at the board? Come on, you know better than to ask me that.’”",
+              "cue": "she writes A and B on a sticky note and presses it to the table",
+              "prompt": "Your question came from your Pilot, aimed at his Pilot. Which pairing describes the two replies?",
+              "options": [
+                "A comes from Sam's Boss, treating you as a child. B comes from his Kid, answering his last manager.",
+                "Both come from Sam's Pilot, so both are matched replies and the fix has been answered twice.",
+                "A is Sam's Kid, hearing his last manager. B is his Boss, treating you as a child who should know better."
+              ],
+              "answer": 2,
+              "why": "In A, Sam's Kid hears a hovering manager and bristles. In B, his Boss talks down to you as someone who ought to know. Both cut your plain question, and nobody has said whether the fix is pushed.",
+              "traps": {
+                "0": "The pairing is the wrong way round. ‘You're worse than my last manager’ is a Kid pushing back, and ‘you know better’ is a Boss correcting a child.",
+                "1": "A Pilot reply would say whether the fix is pushed. Neither reply does."
+              },
+              "example": "A bakery, a manager who asks: “Are the rolls out yet?”<br>“Stop breathing down my neck, you're like my last boss.” The reply comes from the Kid and treats her as a parent figure, so nobody checks the oven."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "setting": "Family",
+      "blurb": "Sunday lunch at Gran's, with a council letter hidden under the biscuit tin.",
+      "opener": {
+        "setting": "Sunday, 13:15. Gran's flat downstairs, the kitchen. The chicken rests under foil, and Leo is under the table with his tablet.",
+        "lines": [
+          { "who": "Gran", "text": "“Boiler man? Leave that to me, sweetheart. You'll only get yourself in a state.”", "cue": "one hand flat on the biscuit tin" },
+          { "who": "Grace", "text": "“Leave him, Gran. He's not my brother to boss me about either.”", "cue": "leaning in the doorway, a tea towel over one shoulder" }
+        ],
+        "ask": "Replay the afternoon. Can you find the name tag each person pins on you, and the line that put it there?"
+      },
+      "rounds": [
+        {
+          "level": "Spot",
+          "label": "Spot, round 1",
+          "intro": "<b>How this one works:</b> you replay a Sunday at Gran's. Some lines are a person answering you as if you were someone from their past, and that is a name tag. Tap the name tag that fits the line.",
+          "items": [
+            {
+              "type": "pick",
+              "who": "Gran",
+              "text": "“Boiler man? Leave that to me, sweetheart. You'll only get yourself in a state, same as when you were seven and cried at the dentist.”",
+              "cue": "she moves the biscuit tin an inch towards herself",
+              "options": ["She treats you as a small boy", "She answers about the boiler", "She treats you as the landlord"],
+              "answer": 0,
+              "why": "You asked what the council letter said about Tuesday. She answered a boy of seven and a dentist. Her voice is warm and the name tag is the oldest one in the building.",
+              "traps": {
+                "1": "An answer about the boiler would give a day and a time. There is nothing in her line about Tuesday.",
+                "2": "Nobody speaks to a landlord with a sweetheart on the end. The line is soft and the picture in it is small."
+              },
+              "example": "A grandfather at a bus stop, asked by his grown daughter what time the next bus is: “Don't you fret, pet. Granddad knows the buses.”<br>She asked a time. He answered a worried child."
+            },
+            {
+              "type": "pick",
+              "who": "Grace",
+              "text": "“Don't start. You sound exactly like my mother, counting what I've put on my plate.”",
+              "cue": "she puts the tea towel down on the counter, folded in four",
+              "options": ["She answers about the dinner plate", "She hears her mother in you", "She joins you in the joke"],
+              "answer": 1,
+              "why": "You asked if she could swap Tuesday's stair-cleaning slot. Grace heard a mother with a ledger and answered her. It is a Kid's line aimed at a parent, and you have been given a tag from another person's kitchen.",
+              "traps": {
+                "0": "Her answer would then be “Two potatoes, thanks.” She isn't talking about food, she is talking about being watched.",
+                "2": "A joke would have a smile in it. She has folded the tea towel into four, and she isn't smiling."
+              },
+              "example": "A dentist's waiting room, a husband who says: “Stop fussing. You sound just like my mother.” His wife asked if he'd brought his card.<br>She asked about the card. He answered his mother."
+            },
+            {
+              "type": "pick",
+              "who": "You, to Gran",
+              "text": "“You're right, Gran, I'm useless with letters. I'll leave it all to you.”",
+              "cue": "you say it quickly, with your eyes on the chicken",
+              "options": ["A Boss line that tells her off", "A Pilot line, true and checkable", "A Kid line that gives in"],
+              "answer": 2,
+              "why": "You agreed to a verdict you never heard. The Kid gave in, and the quick yes is how the small boy's name tag gets fixed on you from your own side.",
+              "traps": {
+                "0": "A Boss line would say “Gran, you can't keep hiding letters from me.” It might be true, and it pins a tag on her.",
+                "1": "A Pilot line would check: “I can read letters, Gran. Shall we look at it together for two minutes?” That one is true, and she can answer it."
+              },
+              "example": "A garage forecourt, a young man asked by his uncle if he'd checked the oil: “I'm hopeless with cars, you do it.” He had checked it that morning.<br>The quick yes put the boy back in the driver's seat of nothing."
+            }
+          ]
+        },
+        {
+          "level": "Play",
+          "label": "Play, the week in motion",
+          "intro": "<b>Now you replay it.</b> Each line is a volley. Some lines pin a name tag on the other person, and some pin one on you. Choose the line that fits the moment.",
+          "items": [
+            {
+              "type": "scene",
+              "title": "Sunday, 13:30, Gran's kitchen",
+              "setting": "Gran has put the council letter under the biscuit tin. You asked one plain thing: what does it say about Tuesday? Leo's tablet beeps from under the table.",
+              "meters": { "you": 65, "them": 50 },
+              "beats": [
+                {
+                  "who": "Gran",
+                  "text": "“Tuesday, Tuesday. You worry too much. Eat your chicken, sweetheart.”",
+                  "cue": "she spoons carrots onto your plate before you have said yes",
+                  "lines": [
+                    { "text": "“It's lovely chicken, Gran. Can I read the letter out loud to you? Two minutes.”", "tag": "best", "you": 4, "them": 5, "outcome": "Gran considers the biscuit tin. “Two minutes,” she says, and lifts it half an inch.", "why": "You thanked her, kept the request small, and gave it a time. The small boy's tag has nothing to grip." },
+                    { "text": "“Gran, I'm not seven any more.”", "tag": "ok", "you": -1, "them": -3, "outcome": "Gran says, “No. I know.” Her hand goes back flat on the tin.", "why": "It is true, and you named the tag out loud. She hears a telling-off and defends the tin." },
+                    { "text": "“Okay, Gran, you decide.”", "tag": "ok", "you": -3, "them": 2, "outcome": "Gran pats your arm. “That's my boy.” The letter stays under the tin.", "why": "A pleasant sentence that agrees to the tag and gets a pat for it." }
+                  ]
+                },
+                {
+                  "who": "Gran",
+                  "text": "“Nobody reads these letters for me. You're the only one who understands them. Don't leave me with it.”",
+                  "cue": "her thumb rubs the lid of the tin",
+                  "lines": [
+                    { "text": "“I'll do whatever you need, Gran. I'll deal with every letter from now on.”", "tag": "game", "you": -6, "them": 4, "outcome": "Gran beams. “I knew I could count on you.” By pudding she has found three more envelopes in the sideboard.", "why": "You took on the whole pile for the sake of one thank you. The warm Boss and the willing Kid pair rolls on, and this scene stops here." },
+                    { "text": "“I'll read this one with you now. Then you tell me which others you'd like a hand with.”", "tag": "best", "you": 3, "them": 5, "outcome": "Gran nods slowly. “This one, then. The others, I'll see.” She slides the tin to the edge of the table.", "why": "You offered help with a limit and left the choice with her. She is treated as a person who decides, not a person who is rescued." },
+                    { "text": "“Gran, that's not fair. You make me feel guilty.”", "tag": "ok", "you": -1, "them": -3, "outcome": "Gran says, “Guilty? Over a letter?” She turns to the chicken and carves with great attention.", "why": "The feeling is real, and the line hands her a verdict. She cannot answer a verdict, so she steps away from the table." }
+                  ]
+                },
+                {
+                  "who": "Gran",
+                  "text": "“Read it, then. Slowly. Leo, ears back in your tablet.”",
+                  "cue": "Leo's tablet gives a small chime of surrender",
+                  "lines": [
+                    { "text": "“Tuesday, between eight and one. Someone has to be in. Shall I be here?”", "tag": "best", "you": 2, "them": 4, "outcome": "Gran sits down for the first time. “I will be. You come for the first ten minutes.”", "why": "A short fact, then a question about who does what. Both of you speak as adults." },
+                    { "text": "“It's only a boiler, Gran. There's nothing to read slowly.”", "tag": "ok", "you": -1, "them": -2, "outcome": "Gran says, “Then you read it fast.” She pulls her glasses off.", "why": "A small brush-off, and a boy's name tag is back in the room." }
+                  ]
+                }
+              ],
+              "payoff": "Gran finds the other envelopes and a second pile appears by the toaster. The letters are yours now, and the biscuit tin is empty.",
+              "fallout": {
+                "them": "Gran carves the chicken in silence. The letter stays under the tin, and Leo goes very still under the table.",
+                "you": "You say yes to everything at the table. After lunch you carry a carrier bag of envelopes up the stairs."
+              }
+            },
+            {
+              "type": "scene",
+              "title": "Sunday, 14:10, the stairwell outside Gran's door",
+              "setting": "Grace is behind on the stairwell cleaning rota, and Mrs Kale's cat is asleep on the doormat. You ask one plain thing: could she swap Tuesday's slot, because of the boiler visit?",
+              "meters": { "you": 60, "them": 50 },
+              "beats": [
+                {
+                  "who": "Grace",
+                  "text": "“Here we go. Nobody checks the rota with Mrs Kale, but I get the lecture.”",
+                  "cue": "she steps over the cat, a bin bag in her hand",
+                  "lines": [
+                    { "text": "“Sorry, Grace. Forget it. I'll do the stairs myself.”", "tag": "game", "you": -6, "them": 2, "outcome": "Grace shrugs. “If you like.” She goes back inside and you are left with a mop and a cat.", "why": "You took the mother's tag and gave in before you were asked to. A Kid answering a Kid keeps the old pair going, and this scene stops here." },
+                    { "text": "“No lecture. Tuesday is the boiler visit, and I need someone to swap. Can you do Wednesday?”", "tag": "best", "you": 4, "them": 5, "outcome": "Grace stops with the bin bag. “Wednesday? Hm.” She puts it down on the step.", "why": "You said what you weren't doing and then what you needed. The mother's tag drops because the request is plain." },
+                    { "text": "“Mrs Kale is just as bad, you know.”", "tag": "ok", "you": -2, "them": -3, "outcome": "Grace says, “That's not the point.” The cat wakes and leaves.", "why": "Comparing her with a third person still leaves her inside the old picture. The cat gets the message first." }
+                  ]
+                },
+                {
+                  "who": "Grace",
+                  "text": "“My mother kept a chart. Gold stars for the days I did the stairs. I never got one.”",
+                  "cue": "she looks at the cleaned step, not at you",
+                  "lines": [
+                    { "text": "“That's a long time to wait for a star. What day would suit you, then?”", "tag": "best", "you": 3, "them": 5, "outcome": "Grace laughs, not quite steadily. “Wednesday. Thursday, even.” She picks the bin bag back up.", "why": "You noticed the hurt and asked an ordinary question straight after. She moves from the old chart to a day of the week." },
+                    { "text": "“I'm not your mother, Grace.”", "tag": "ok", "you": -1, "them": -3, "outcome": "Grace says, “I know that.” She picks up the mop and does not use it.", "why": "True, and it uses the name tag as an argument. She was telling you something, and you answered the story." }
+                  ]
+                },
+                {
+                  "who": "Grace",
+                  "text": "“Wednesday. Only if the stairs aren't wet again.”",
+                  "cue": "she shifts the mop to her other hand",
+                  "lines": [
+                    { "text": "“Wednesday, dry stairs. I'll put it on the rota now.”", "tag": "best", "you": 2, "them": 4, "outcome": "Grace nods. “Good.” You write it in pen on the sheet taped to the wall.", "why": "A short agreement with a detail she can check. It matches her tone and leaves out the history." },
+                    { "text": "“Thanks. I'll owe you one, sorry.”", "tag": "ok", "you": -2, "them": 1, "outcome": "Grace says, “You don't owe me.” She says it too quickly to be sure.", "why": "Polite, and the debt and the sorry put you back in the child's chair." }
+                  ]
+                }
+              ],
+              "payoff": "Grace goes inside and the rota stays as it was. The stairs are yours on Tuesday, boiler man or not.",
+              "fallout": {
+                "them": "Grace takes the bin bag and goes down the stairs without a word. The cat follows her.",
+                "you": "You say yes to everything on the stairs. The mop is yours for Tuesday and for Wednesday."
+              }
+            }
+          ]
+        },
+        {
+          "level": "Analyse",
+          "label": "Analyse, explain it",
+          "intro": "<b>Read the replay back.</b> Pick the explanation that fits what happened in the kitchen and on the stairs.",
+          "items": [
+            {
+              "type": "pick",
+              "who": "Nadia, after the replay",
+              "text": "“Gran answered you as a small boy, and Grace answered you as her mother. Same plain question from you. Where did the tags come from?”",
+              "cue": "she sets two tea cups down, one on each side of a saucer",
+              "options": [
+                "Gran's Boss saw a small boy in you, and Grace's Kid saw her mother in you",
+                "Both were simply hungry after a long week, so there were no tags at all",
+                "Both tags came from the way you asked, so the fault is all yours to fix"
+              ],
+              "answer": 0,
+              "why": "Gran's warm line put a seven-year-old in your chair, and Grace's put her mother there. Two tags in two directions, from two people who were answering someone who was not at the table.",
+              "traps": {
+                "1": "A long week explains short tempers and does not explain a dentist or a gold-star chart. The tags were in the words.",
+                "2": "Your folding added a tag of your own, and the first two were theirs. They came before your answers."
+              },
+              "example": "A school gate, a grandmother who tells her daughter: “Don't you worry, pet, I'll sort it.” The daughter answers: “Stop mothering me.”<br>Two tags crossed in one sentence each."
+            },
+            {
+              "type": "pick",
+              "who": "Nadia, with a pen in the air",
+              "text": "“Same plain question, two replies. You ask Mrs Kale: ‘Is the lift working again? Gran can't manage the stairs with the shopping.’ Reply A: ‘Oh, you young people and your questions! Sit down, dear, and I'll tell you how it was.’ Reply B: ‘Is this the committee talking? I've paid my fee, and I'll thank you not to check up on me.’”",
+              "cue": "she writes A and B on a paper napkin and smooths it flat",
+              "prompt": "Your question came from your Pilot, aimed at her Pilot. Which pairing describes the two replies?",
+              "options": [
+                "A is her Boss, treating you as a child. B is her Kid, answering a stern warden.",
+                "A is her Kid, answering a stern warden. B is her Boss, treating you as a child, as it did in her day.",
+                "Both come from Mrs Kale's Pilot, so the lift has been answered twice."
+              ],
+              "answer": 0,
+              "why": "In A, Mrs Kale's Boss pats you down as a child who needs a story. In B, her Kid hears a warden and defends her fee. Neither says whether the lift works, and Gran's shopping stays at the foot of the stairs.",
+              "traps": {
+                "1": "The pairing is the wrong way round. ‘Sit down, dear’ is a Boss talking down to a child, and ‘I've paid my fee’ is a Kid pushing back at a warden.",
+                "2": "A Pilot reply would say whether the lift is mended. Neither reply does."
+              },
+              "example": "A GP's reception, a patient asked: “Do you have your referral letter?”<br>“Don't you start on me. You sound like the last receptionist.” The reply comes from the Kid and treats her as a stern parent, so the letter stays in the bag."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

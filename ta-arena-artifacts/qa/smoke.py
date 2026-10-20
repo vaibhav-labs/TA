@@ -29,8 +29,10 @@ from pathlib import Path
 from playwright.sync_api import Error as PWError, sync_playwright
 
 HERE = Path(__file__).resolve().parent
-OUT_DIR = HERE.parent / "out"
-RESULTS = HERE / "results.json"
+import os
+OUT_DIR = Path(os.environ.get("SMOKE_OUT", str(HERE.parent / "out")))
+STORY = int(os.environ.get("SMOKE_STORY", "0"))
+RESULTS = Path(os.environ.get("SMOKE_RESULTS", str(HERE / "results.json")))
 CHROMIUM = "/opt/pw-browsers/chromium"
 VIEWPORT = {"width": 390, "height": 844}
 ALL_SLOTS = [f"{w}-{g}" for w in range(1, 8) for g in range(1, 7)]
@@ -185,6 +187,18 @@ class Run:
         self.game = self.page.evaluate("() => window.TA_GAME")
         if not self.game or not self.game.get("rounds"):
             raise Stop("window.TA_GAME is missing or has no rounds")
+        if self.game.get("moreStories"):
+            # setting picker: choose story STORY and play that story's content
+            cards = self.page.locator("button.story-card")
+            self.wait("button.story-card", "story picker")
+            self.check("picker")
+            cards.nth(STORY).click()
+            if STORY > 0:
+                st = self.game["moreStories"][STORY - 1]
+                g = dict(self.game)
+                for k in ("opener", "rounds", "blurb"):
+                    if k in st: g[k] = st[k]
+                self.game = g
         self.wait(CONTINUE, "intro Start button")
         self.check("intro")
         self.click(CONTINUE, "intro Start button")

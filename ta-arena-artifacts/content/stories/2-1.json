@@ -1,0 +1,449 @@
+{
+ "baseBlurb": "A glass bursts in the flat, and the words that follow show which voice is talking.",
+ "stories": [
+  {
+   "setting": "Friends & Community",
+   "blurb": "Ruby has until noon to collect Joseph's surprise cake, and the deposit is missing.",
+   "opener": {
+    "setting": "Saturday, 11:40, The Corner Table. Joseph turns forty tonight and does not know it. The cake place by the station shuts at twelve.",
+    "lines": [
+     {
+      "who": "Ruby",
+      "text": "“Twenty minutes. The deposit slip is in the envelope, the envelope is eleven fares short, and somebody told me they'd sort the candles.”",
+      "cue": "tapping the envelope against the sugar bowl, eyes on the door"
+     },
+     {
+      "who": "Ruby",
+      "text": "“I'm not cross. I'm only asking who has what.”",
+      "cue": "jaw tight, still not looking at you"
+     }
+    ],
+    "ask": "Which of your three voices is talking in each line you hear, and what in the words or the tone gives it away?"
+   },
+   "rounds": [
+    {
+     "level": "Spot",
+     "label": "Spot, round 1",
+     "items": [
+      {
+       "type": "pick",
+       "who": "You, at the counter, phone in hand",
+       "text": "“The deposit. I forgot the deposit. I'm so sorry, I always do this, you should have given the job to someone else.”",
+       "cue": "voice dropping with every word, eyes on your shoes",
+       "options": [
+        "The Boss",
+        "The Pilot",
+        "The Kid"
+       ],
+       "answer": 2,
+       "why": "The apology comes first and the fact comes last. “I always do this” turns one missed payment into a flaw in you, and the small voice asks Ruby to do the comforting. That is the Kid.",
+       "traps": {
+        "0": "The Boss would turn the counter into a trial: “Typical. Can't be trusted with one slip.” You would be the accused, and Ruby would have to argue with you or agree. Your line pleads instead of judging.",
+        "1": "The Pilot would say “I forgot the deposit. Can I pay by card now and bring the rest later?” That uses the clock. Nobody has to say it's fine."
+       },
+       "example": "A bus queue, a man to a driver who has pulled away without him: “Sorry, sorry, I always miss it, you'd be better off without me on this route.”<br>The driver now has to reassure him instead of opening the door."
+      },
+      {
+       "type": "pick",
+       "who": "Ruby",
+       "text": "“That's the trouble with this lot. Nobody ever finishes anything.”",
+       "cue": "arms folded, the envelope flat against her chest",
+       "options": [
+        "The Boss",
+        "The Pilot",
+        "The Kid"
+       ],
+       "answer": 0,
+       "why": "“This lot” and “nobody ever” are a verdict on a whole crowd, with no job and no time in it. It tells people what they are. That is the Boss, a voice copied from someone who talked that way.",
+       "traps": {
+        "1": "The Pilot would count the gap: “We're eleven fares short and the candles aren't bought.” That names what is missing and leaves people out of it.",
+        "2": "The Kid would say “I can't do all this on my own, I'm sorry I'm such a nag.” That is a small voice asking for rescue. Ruby's words point a finger."
+       },
+       "example": "A five-a-side changing room, the captain at half time: “You lot never turn up on time. Never have.”<br>The players spend the break defending themselves, and nobody mentions the second half."
+      },
+      {
+       "type": "pick",
+       "who": "Ruby, a breath later",
+       "text": "“Right. It's twenty to. You pay the deposit by card, I'll carry the box, and one of us texts Tom to keep Joseph at the five-a-side until six.”",
+       "cue": "already zipping her bag, eyes on the clock",
+       "options": [
+        "The Boss",
+        "The Pilot",
+        "The Kid"
+       ],
+       "answer": 1,
+       "why": "It deals with the clock, the jobs and who does which. Nothing in it says what anyone is like. That is the Pilot, the voice that handles the actual situation.",
+       "traps": {
+        "0": "The Boss would say “I knew somebody would mess it up. Now we all pay for it.” That hands out blame before anything is fixed, and the clock keeps running.",
+        "2": "The Kid would say “Can we just cancel? It's all gone wrong, Joseph will hate it.” That gives the job away and asks someone to rescue the morning."
+       },
+       "example": "A cafe kitchen, the manager: “The delivery is late. Ring the supplier, chalk the soup on the board, and we open at eleven anyway.”<br>Everyone knows what to do next."
+      }
+     ]
+    },
+    {
+     "level": "Play",
+     "label": "Play, the week in motion",
+     "items": [
+      {
+       "type": "pick",
+       "who": "Ruby, outside the baker's, a while later",
+       "text": "“Right. Rule one: nobody touches the box but me. People who leave a deposit to the last minute don't get to carry cakes.”",
+       "cue": "lifting the box out of your hands before you have taken hold of it",
+       "options": [
+        "The Boss",
+        "The Pilot",
+        "The Kid"
+       ],
+       "answer": 0,
+       "why": "The start sounds like a plan, but “people who leave a deposit” is a rule with a punishment attached. It decides what you are allowed to do because of what you did. That is the Boss.",
+       "traps": {
+        "1": "The Pilot would say “I'll carry the box, you take the door.” That splits the jobs by where each person stands. No rule, and no one is ruled out.",
+        "2": "The Kid would say “I'll carry it then, shall I? Don't mind me, I'm only the organiser.” That is a hurt, sulky voice waiting to be asked to stay. Ruby's line has a rule in it, not a sulk."
+       },
+       "example": "A school fair, a stallholder to a volunteer who arrived late: “Rule one: you don't touch the till. People who turn up at ten don't get the till.”<br>The volunteer is now spending the day being punished."
+      },
+      {
+       "type": "pick",
+       "who": "Joseph, who has turned up ten minutes early",
+       "text": "“Am I in the way? I can sit somewhere else. Sorry, I only wanted a coffee, I'll go.”",
+       "cue": "half out of the chair, cap in both hands",
+       "options": [
+        "The Boss",
+        "The Pilot",
+        "The Kid"
+       ],
+       "answer": 2,
+       "why": "Nobody asked him to move. He asks permission to take up a seat and apologises for wanting a coffee. That small, asking tone is the Kid.",
+       "traps": {
+        "0": "The Boss would claim the seat: “This is my table, I was here first.” That is a ruling. Joseph is giving ground before anyone has pushed.",
+        "1": "The Pilot would say “Is this table free? I'll take the one by the window.” That asks once and settles it. He would be sitting down by now."
+       },
+       "example": "A launderette, a woman to the stranger folding next to her: “Am I in your way? I can use the other machine, sorry, I'm so slow.”<br>The stranger was not even looking at her."
+      }
+     ]
+    },
+    {
+     "level": "Analyse",
+     "label": "Analyse, explain it",
+     "items": [
+      {
+       "type": "pick",
+       "who": "Ruby",
+       "text": "“Eleven fares short and the candles aren't bought. Tom, ring round for candles, and I'll take the envelope to the table by the window.” Ruby's mother said “you lot never finish anything” about every group she ran, and Ruby used to hear it. Today Ruby did not say it.",
+       "cue": "brisk, a pen already behind her ear",
+       "options": [
+        "The Boss",
+        "The Pilot",
+        "The Kid"
+       ],
+       "answer": 1,
+       "why": "This is the Pilot. It talks about the cash, the candles and the next ten minutes, and it could be said to anyone on any Saturday. The Boss line Ruby grew up with was available to her, and she left it where it was.",
+       "traps": {
+        "0": "The Boss would add a verdict on whoever came up short, something like “and don't forget it again”. This line has no such clause, and it is the clause that gives the Boss away.",
+        "2": "The Kid would plead: “Please can we just get it done, it will all go wrong otherwise.” Ruby is not asking anyone to rescue her. She is handing out jobs."
+       },
+       "example": "A shop floor, a supervisor: “Lock the till, put the float in the safe, I'll turn the sign.”<br>The words are about the shop at five o'clock and nothing else."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "setting": "Relationships",
+   "blurb": "Clara's text to Omar has sat unanswered since Tuesday, and Friday's date hangs on the reply.",
+   "opener": {
+    "setting": "Thursday, 12:50, the Halden canteen. Clara's phone lies face down beside a bowl of soup that has gone cold. Omar has not answered her Tuesday text.",
+    "lines": [
+     {
+      "who": "Clara",
+      "text": "“He's read it. Blue ticks, Tuesday, ten past nine. It's fine, I'm sure it's fine.”",
+      "cue": "turning the spoon over and over in the soup"
+     },
+     {
+      "who": "Clara",
+      "text": "“I'm not checking. I just happened to look.”",
+      "cue": "phone already back in her hand"
+     }
+    ],
+    "ask": "Which of your three voices is talking in each line you hear, and what in the words or the tone gives it away?"
+   },
+   "rounds": [
+    {
+     "level": "Spot",
+     "label": "Spot, round 1",
+     "items": [
+      {
+       "type": "pick",
+       "who": "Clara",
+       "text": "“Typical. People like that never answer, and I never learn.”",
+       "cue": "flat, pushing the bowl away",
+       "options": [
+        "The Boss",
+        "The Pilot",
+        "The Kid"
+       ],
+       "answer": 0,
+       "why": "“People like that” and “never” are a verdict on Omar and on her, handed down like a house rule. Nothing in it says what happened or what to do. That is the Boss.",
+       "traps": {
+        "1": "The Pilot would say “No reply since Tuesday. I'll ring him tonight and ask.” That states the facts and picks a step.",
+        "2": "The Kid would say “Did I say something wrong? Should I say sorry? I'll send another with a smiley.” That hunts for the fault in herself. Her actual line blames and closes the door."
+       },
+       "example": "A school gate, one mum about another who never answered a party invite: “Typical. Some people never reply, and I never learn to stop asking.”<br>The sentence settles what the other mum is like, and nobody rings her."
+      },
+      {
+       "type": "pick",
+       "who": "Clara",
+       "text": "“Should I send another one? A small one? Or is that too much? Tell me what to do, I can't tell.”",
+       "cue": "phone held out to you, thumb over the keys",
+       "options": [
+        "The Boss",
+        "The Pilot",
+        "The Kid"
+       ],
+       "answer": 2,
+       "why": "She hands the decision to you and asks to be told. A string of questions with no plan is the Kid, looking for someone bigger to decide.",
+       "traps": {
+        "0": "The Boss would settle it by rule: “Don't text again. If he can't answer, he's not worth it.” Clara is asking, not ruling.",
+        "1": "The Pilot would say “I'll give it until six, then I'll ring.” It would have a time in it and no questions."
+       },
+       "example": "A garden fence: “Should I knock? Or wait? Is that rude? You decide, I can't.”<br>The neighbour on the other side ends up choosing."
+      },
+      {
+       "type": "pick",
+       "who": "Omar, putting a tray down",
+       "text": "“I owe you a text. I saw yours on the platform on Tuesday and then the phone died, and the charger was at my brother's till last night. Friday still works for me. Seven?”",
+       "cue": "sleeves pushed up, one hand already on the back of a chair",
+       "options": [
+        "The Boss",
+        "The Pilot",
+        "The Kid"
+       ],
+       "answer": 1,
+       "why": "He says what happened, owns the gap, and offers a time. Nothing in it judges either of them. That is the Pilot.",
+       "traps": {
+        "0": "The Boss would say “I don't do well when people chase me. Seven, if you've calmed down.” That is a verdict on her, and it turns his late reply into her fault.",
+        "2": "The Kid would say “I'm so sorry, I'm terrible at this, you must think I'm awful.” Then Clara has to comfort him, and Friday is forgotten."
+       },
+       "example": "A man to his sister after missing her call: “My phone was in the car. Ring me at eight, I'll be in.”<br>Short, true and with a time attached."
+      }
+     ]
+    },
+    {
+     "level": "Play",
+     "label": "Play, the week in motion",
+     "items": [
+      {
+       "type": "pick",
+       "who": "Clara",
+       "text": "“Seven's fine. I'll book it and I'll check the film times. And the bill, I'll do the bill, you've had a week.”",
+       "cue": "ticking jobs off on her fingers, not looking at him",
+       "options": [
+        "The Boss",
+        "The Pilot",
+        "The Kid"
+       ],
+       "answer": 2,
+       "why": "Each job sounds like a plan, but the speed and “you've had a week” show someone paying for her seat before anyone has asked. That is the Kid, trying to earn a place by being useful.",
+       "traps": {
+        "0": "The Boss would say “Somebody has to be responsible, and it's clearly not going to be you.” That is a verdict on Omar. Clara's line is all giving.",
+        "1": "The Pilot would say “Seven's fine. I'll book and you pick the film. Half each on the bill?” That shares the jobs out. Clara's version keeps all of them."
+       },
+       "example": "A flatmate to a friend who has just moved in: “I'll do the shop and the rota. And the bins, I'll do the bins, you've had a week.”<br>The friend feels the gift, and also the debt."
+      },
+      {
+       "type": "pick",
+       "who": "Clara, after Omar says “I like it better when you ask me what I want”",
+       "text": "“Don't. Don't say nice things. I haven't done anything to deserve it.”",
+       "cue": "eyes on the table, voice low and flat",
+       "options": [
+        "The Boss",
+        "The Pilot",
+        "The Kid"
+       ],
+       "answer": 0,
+       "why": "A rule is being quoted: kindness has to be earned first. That is the Boss, an old recording about what she is worth. It shuts the compliment out and leaves Omar with nothing to say.",
+       "traps": {
+        "1": "The Pilot would say “Thanks. I'll take that. Can we pick the film together?” It takes the line and moves on.",
+        "2": "The Kid would say “Oh, I'm sorry, I didn't mean to, thank you, I don't know what to say.” That is flustered and apologising for being praised. Clara's voice is flat and firm."
+       },
+       "example": "A man at a retirement do, thanked for his speech: “Don't. I got the start wrong. Nobody gets praised for scraping through.”<br>The person who thanked him is left holding it."
+      }
+     ]
+    },
+    {
+     "level": "Analyse",
+     "label": "Analyse, explain it",
+     "items": [
+      {
+       "type": "pick",
+       "who": "Clara",
+       "text": "“Forty hours felt long. Next time send me one word, even 'later'. Then I won't build a whole story out of it.” On Tuesday night she would have said “people like that never answer”. Today she told Omar something he can do.",
+       "cue": "looking up from the soup at last",
+       "options": [
+        "The Boss",
+        "The Pilot",
+        "The Kid"
+       ],
+       "answer": 1,
+       "why": "This is the Pilot. She names her own reaction and asks for one small thing he can do. The Boss sentence was close by, and she chose a request instead.",
+       "traps": {
+        "0": "The Boss would say “You always leave me hanging.” That is a verdict with “always” in it, and Omar can only defend himself.",
+        "2": "The Kid would say “It's fine, it's totally fine, forget I said anything.” That swallows what she needs, and Omar never learns what a single word would have done."
+       },
+       "example": "A manager to a colleague: “When you're running late, text me 'late'. I don't need the reason, only the word.”<br>One clear request, and nothing about what the colleague is like."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "setting": "School & College",
+   "blurb": "Sam's group poster is due Thursday, and one name on the feedback sheet has no job.",
+   "opener": {
+    "setting": "Tuesday, 19:10, room four of the adult education centre. Sam's statistics class. The group poster is due Thursday at seven.",
+    "lines": [
+     {
+      "who": "Mr Hollis",
+      "text": "“Group four. A chart with no axes, a summary with no author, and a feedback sheet with three names and two jobs.”",
+      "cue": "holding the sheet up by one corner, as if it might drip"
+     },
+     {
+      "who": "Sam",
+      "text": "“The third name is me. I'm the one with no job.”",
+      "cue": "tilting his chair back, eyes on the clock"
+     }
+    ],
+    "ask": "Which of your three voices is talking in each line you hear, and what in the words or the tone gives it away?"
+   },
+   "rounds": [
+    {
+     "level": "Spot",
+     "label": "Spot, round 1",
+     "items": [
+      {
+       "type": "pick",
+       "who": "Mr Hollis",
+       "text": "“Fix it tonight. Decide who does the axes and who writes the summary, and I'll look at a draft at quarter to seven on Thursday.”",
+       "cue": "tapping the sheet, already moving to the next table",
+       "options": [
+        "The Boss",
+        "The Pilot",
+        "The Kid"
+       ],
+       "answer": 1,
+       "why": "It names two jobs, a night and a time. Nothing in it says what the group is like. That is the Pilot, working on the poster in front of him.",
+       "traps": {
+        "0": "The Boss would say “This is the sloppiness you get from people who treat evening classes as a hobby.” That is a verdict on a type of student, and the group would argue with it instead of working.",
+        "2": "The Kid would say “Sorry, we thought somebody else was doing the axes, please don't be cross.” That is the group talking, not Mr Hollis."
+       },
+       "example": "A cafe kitchen, the manager: “Check the fridge log by five, then give the rota to Dina before close.”<br>Two jobs and a time, and no opinions."
+      },
+      {
+       "type": "pick",
+       "who": "Brenda",
+       "text": "“Some people sign up for these courses and treat them like a day out. If you can't be bothered, say so, and we'll carry you again.”",
+       "cue": "not looking at Sam, squaring the edges of her printout",
+       "options": [
+        "The Boss",
+        "The Pilot",
+        "The Kid"
+       ],
+       "answer": 0,
+       "why": "“Some people” and “treat them like a day out” judge what kind of person Sam is, and “carry you again” is a punishment waiting to happen. That is the Boss, speaking in a rule instead of a request.",
+       "traps": {
+        "1": "The Pilot would say “Sam, can you have the axes by Wednesday? If not, say now and we'll split them.” That asks for a job and a day.",
+        "2": "The Kid would say “I've done all my bits again and nobody said thank you. Sorry, I know I shouldn't mind.” That is a small hurt voice hoping to be noticed. Brenda's words are not small."
+       },
+       "example": "A choir rehearsal, an alto to the new tenor: “Some people turn up for the biscuits and leave the singing to everyone else.”<br>The tenor goes quiet and does not come back."
+      },
+      {
+       "type": "pick",
+       "who": "Sam",
+       "text": "“It's a stupid poster anyway. Who even looks at axes? I'm not doing it.”",
+       "cue": "arms crossed, chair tipped back, eyes on the ceiling",
+       "options": [
+        "The Boss",
+        "The Pilot",
+        "The Kid"
+       ],
+       "answer": 2,
+       "why": "Nothing in it deals with the poster. It is a sulk that dares someone to tell him off. Pleading is one Kid voice, and sulking and refusing is the other.",
+       "traps": {
+        "0": "The Boss would say “Axes matter. Anyone who skips them shouldn't pass.” That is a rule about worth. Sam is refusing, not ruling.",
+        "1": "The Pilot would say “Can we ask Mr Hollis what he expects on the axes?” That goes at the task. Sam's line goes round it."
+       },
+       "example": "A teenager at the table, told to lay the places: “It's a stupid rule anyway. Who even cares where the forks go? I'm not doing it.”<br>The row is now about the forks, and dinner gets later."
+      }
+     ]
+    },
+    {
+     "level": "Play",
+     "label": "Play, the week in motion",
+     "items": [
+      {
+       "type": "pick",
+       "who": "Imran, later, in the library",
+       "text": "“Sure, I'll do the summary. And the chart, if you like. I've got Thursday free anyway. Don't worry about it.”",
+       "cue": "smiling, already pulling Sam's chart across the table",
+       "options": [
+        "The Boss",
+        "The Pilot",
+        "The Kid"
+       ],
+       "answer": 2,
+       "why": "It sounds like a plan, but it takes both jobs to avoid a row, and the smile and “don't worry about it” hide the cost. That is the Kid, keeping the peace by making himself the extra pair of hands.",
+       "traps": {
+        "0": "The Boss would say “Fine, I'll do it, since nobody else in this group can be relied on.” That is a verdict dressed up as a favour. Imran's line is generous, not sharp.",
+        "1": "The Pilot would say “I'll take the summary. Sam, you keep the chart and I'll check the numbers on Wednesday night.” That shares the work. Imran's offer keeps all of it."
+       },
+       "example": "A flatmate, after a messy party: “Go to bed, I'll do the bins and the kitchen and the floor. Don't worry about it.”<br>He is smiling, and tomorrow he will remember who went to bed."
+      },
+      {
+       "type": "pick",
+       "who": "Sam",
+       "text": "“No. I'm not taking the summary as well. I'll do the axes by Wednesday at noon. If I'm late, I'll tell Mr Hollis myself on Thursday.”",
+       "cue": "chair legs down, voice level, looking at Imran",
+       "options": [
+        "The Boss",
+        "The Pilot",
+        "The Kid"
+       ],
+       "answer": 1,
+       "why": "The “no” sounds hard, but the rest is a job, a time and what he will do if he misses it. Nothing in it is about Imran or Brenda. That is the Pilot.",
+       "traps": {
+        "0": "The Boss would say “No. And if you lot can't manage a poster, don't blame me when it fails.” That ends with a verdict on everyone, and the poster goes backwards.",
+        "2": "The Kid would say “Fine, no, whatever, I'll do it, I don't mind, forget I said anything.” That folds before the sentence is out. Sam's line has a day in it and keeps its ground."
+       },
+       "example": "A neighbour asked to mind a dog: “No, not Saturdays. Sundays I can do from ten.”<br>The refusal and the offer arrive in the same breath."
+      }
+     ]
+    },
+    {
+     "level": "Analyse",
+     "label": "Analyse, explain it",
+     "items": [
+      {
+       "type": "pick",
+       "who": "Brenda",
+       "text": "“Some people sign up for these courses and treat them like a day out.” Brenda said the same sentence last term about her brother and a man at the bus stop. It fits anyone.",
+       "cue": "same flat voice as before",
+       "options": [
+        "The Boss",
+        "The Pilot",
+        "The Kid"
+       ],
+       "answer": 0,
+       "why": "This is the Boss: a recording played back as if it were fresh. A line that fits her brother, a stranger and Sam is not about Sam, and it was installed long before this class.",
+       "traps": {
+        "1": "The Pilot would talk about Thursday: who has the axes and who writes the summary. Brenda's sentence mentions no job and no date.",
+        "2": "The Kid would sound hurt or sulky, wanting someone to say sorry. Brenda sounds sure, and that certainty is the sign of an old recording."
+       },
+       "example": "A shopkeeper to the third customer in a row: “People just come in to look these days.”<br>He said it to the last customer, and he will say it to the next."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

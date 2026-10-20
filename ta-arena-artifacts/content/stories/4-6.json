@@ -1,0 +1,1283 @@
+{
+ "baseBlurb": "Five people at a long table advise Clara about a moved release, and she turns every idea down.",
+ "stories": [
+  {
+   "setting": "Home & Flatmates",
+   "blurb": "Sam's cousin has been on the sofa for nineteen days, and Sam cannot tell him to go.",
+   "opener": {
+    "setting": "Thursday, 9:10pm. Hawthorn Court, the shared flat, the kitchen. Wes's trainers are by the door, and his charger snakes across the counter.",
+    "lines": [
+     {
+      "who": "Sam",
+      "text": "“Wes said Friday when he came. I even wrote it on the calendar.”",
+      "cue": "holding a mug he has already emptied"
+     },
+     {
+      "who": "Maya",
+      "text": "“That was nineteen days ago. I have a column for it.”",
+      "cue": "pen on the fridge sheet, not writing yet"
+     }
+    ],
+    "ask": "Stay in the kitchen without giving advice, and find the one line that hands the problem back to Sam."
+   },
+   "rounds": [
+    {
+     "level": "Spot",
+     "label": "Spot, round 1",
+     "intro": "Four moves run this scene: a suggestion, a yes, but, the helper's sigh and a hand-back. Tap the move in each line.",
+     "items": [
+      {
+       "type": "pick",
+       "who": "Maya",
+       "text": "“Why don't you put his bag in the hall tonight? He'll get the message.”",
+       "cue": "tapping the fridge sheet with the pen",
+       "options": [
+        "a yes, but",
+        "a suggestion",
+        "a hand-back"
+       ],
+       "answer": 1,
+       "why": "It opens with why don't you and a ready-made fix. Sam is asked to do nothing except carry it out. That is a suggestion, and it is the first step of the loop.",
+       "traps": {
+        "0": "This would be a yes, but if Maya were turning down a fix someone else had offered. Nobody has offered one yet.",
+        "2": "This would be a hand-back if it asked Sam what he will do. Maya has already decided for him: the bag, the hall, tonight."
+       },
+       "example": "A cinema queue, Saturday.<br>“Why don't you ask them to move seats? They're in yours.”<br>The woman holding the tickets keeps holding them and looks at the screen."
+      },
+      {
+       "type": "pick",
+       "who": "Sam",
+       "text": "“Yes, but his mum would ring my mum, and then it's a whole thing.”",
+       "cue": "turning the mug round by its handle",
+       "options": [
+        "a suggestion",
+        "the helper's sigh",
+        "a yes, but"
+       ],
+       "answer": 2,
+       "why": "He grants that the idea has a point, then gives the reason it will fail. That is the yes, but, and the reason leaves a gap for the next helper to fill.",
+       "traps": {
+        "0": "This would be a suggestion if Sam were proposing a plan of his own. He is only explaining why Maya's plan fails.",
+        "1": "This would be the helper's sigh if he complained that nobody listens. Sam is not complaining, he is politely closing the door on the idea."
+       },
+       "example": "A call to a landlord.<br>“Why don't you ask the neighbours to turn it down?”<br>“Yes, but they sit on the residents' committee.”"
+      },
+      {
+       "type": "pick",
+       "who": "Maya",
+       "text": "“I'm only trying to help! I made Wes a sheet and everything, and you won't even look at it.”",
+       "cue": "pen down, voice climbing",
+       "options": [
+        "a hand-back",
+        "a suggestion",
+        "the helper's sigh"
+       ],
+       "answer": 2,
+       "why": "Maya is hurt that her fix was refused. The book calls this side I'm Only Trying to Help You. Now Sam has to look after Maya's feelings, and the sofa is no longer the problem.",
+       "traps": {
+        "0": "This would be a hand-back if it asked Sam what he will do. Maya is asking him to admire her sheet and take it.",
+        "1": "This would be a suggestion if it proposed something new. It only complains that the last fix was turned down."
+       },
+       "example": "Two friends packing a van.<br>“I'm only trying to help! I labelled every box and you keep opening them.”<br>The labelling is now the argument."
+      },
+      {
+       "type": "pick",
+       "who": "Grace",
+       "text": "“That sounds like a hard one, Sam. What are you going to do about it?”",
+       "cue": "holding a parcel that is not hers, one foot still in the hall",
+       "options": [
+        "the helper's sigh",
+        "a hand-back",
+        "a suggestion"
+       ],
+       "answer": 1,
+       "why": "She calls the problem real, then gives it back to the person who owns it. There is no fix in it, no reason and no sigh. The only thing it asks for is what Sam does next.",
+       "traps": {
+        "0": "This would be a sigh if Grace were upset that nobody had listened to her. She has not been refused anything yet.",
+        "2": "This would be a suggestion if she said what Sam should do. She asks him instead, which is a different job."
+       },
+       "example": "A mechanic at the counter.<br>“That's a worrying noise. What do you want to do about it?”<br>The driver says, “Book it in, I suppose.”"
+      }
+     ]
+    },
+    {
+     "level": "Play",
+     "label": "Play, the week in motion",
+     "intro": "Yes-But Night. You are one of the helpers. Keep both meters above half at the end. Each suggestion you make feeds the loop, so watch every line.",
+     "items": [
+      {
+       "type": "scene",
+       "title": "Thursday, 9:20pm, the kitchen",
+       "setting": "The shared flat, the kitchen. Sam holds the mug in both hands, Maya has the sheet, and a pan is going cold on the hob. <i>The Heckler, in your head: “Find the line that gets Wes out by Sunday, and everyone will be grateful.”</i>",
+       "meters": {
+        "you": 60,
+        "them": 50
+       },
+       "beats": [
+        {
+         "who": "Sam",
+         "text": "“Yes, but his mum would ring my mum, and then it's a whole thing.”",
+         "cue": "turning the mug round by its handle",
+         "lines": [
+          {
+           "text": "“Nineteen days is a long time, Sam. What are you going to do about it?”",
+           "tag": "best",
+           "you": 4,
+           "them": 4,
+           "outcome": "Sam looks at the calendar on the wall, the one with Friday circled in pen. “Tell him this weekend,” he says. “I think. Yes.”",
+           "why": "You stop feeding the loop and give the problem back to the person who owns it. His answer is slower than a fix and better, because it is his."
+          },
+          {
+           "text": "“Then ring your mum first and warn her, so it isn't a surprise.”",
+           "tag": "ok",
+           "you": -2,
+           "them": 1,
+           "outcome": "“Yes, but she'll tell mine anyway,” Sam says, and Maya's pen lifts off the sheet.",
+           "why": "It sounds practical and it is still a fix. The loop takes it as one more idea, and Sam's next yes, but is already loaded."
+          },
+          {
+           "text": "“I'm only trying to help you, Sam. Why do you always make it so hard?”",
+           "tag": "game",
+           "you": -3,
+           "them": -6,
+           "outcome": "Sam says, “Sorry, sorry,” three times and starts wiping a counter that is already clean. He is looking after you now.",
+           "why": "The helper's sigh turns his problem into your hurt feelings. Sam has to manage you, and Wes has dropped off the table."
+          }
+         ]
+        },
+        {
+         "who": "Maya",
+         "text": "“Why don't you tell him the sofa is needed? Say Gran is coming to stay.”",
+         "cue": "uncapping the pen, then capping it again",
+         "lines": [
+          {
+           "text": "“It's a hard one, Sam. What are you going to say to him?”",
+           "tag": "best",
+           "you": 4,
+           "them": 4,
+           "outcome": "Maya's pen stops. “I don't know yet,” Sam says, and it is the first real pause in the kitchen.",
+           "why": "A second fix arrived and you did not pick it up. The owner has to choose, and he is slower now, which is what you want."
+          },
+          {
+           "text": "“A story about Gran might work, if Wes believes it.”",
+           "tag": "ok",
+           "you": -2,
+           "them": 1,
+           "outcome": "“He'd ask Gran, she lives downstairs,” Sam says. “Yes, but she likes him.” Maya sighs through her nose.",
+           "why": "You joined the pile of fixes. It looks like support, and now the yes, but has two ideas to turn down instead of one."
+          },
+          {
+           "text": "“Maya, you'd have had him out by day three, and you still charge us for the bins. I'm only trying to help.”",
+           "tag": "game",
+           "you": -3,
+           "them": -5,
+           "outcome": "Maya puts the pen down. “Right, so the sheet is my fault now,” she says, and Sam gets up to look for bin bags he does not need.",
+           "why": "The sigh, aimed at a third person. The problem now has two owners, and both of them are cross with you."
+          }
+         ]
+        },
+        {
+         "who": "Sam",
+         "text": "“Yes, but if I say it, he'll think I've been angry the whole time. I haven't. I just want my sofa back.”",
+         "cue": "voice dropping, eyes on the folded duvet through the doorway",
+         "lines": [
+          {
+           "text": "“That's your first sentence, Sam. What are you going to do with it?”",
+           "tag": "best",
+           "you": 4,
+           "them": 4,
+           "outcome": "Sam breathes out. “Tell him Sunday that I need the sofa from the weekend after. Out loud, not a note.”",
+           "why": "The third hand-back, built from his own words. Every yes, but has been answered by a question, and the question is what finally breaks the loop."
+          },
+          {
+           "text": "“Then text him a date with a smiley, so it doesn't sound angry.”",
+           "tag": "ok",
+           "you": -2,
+           "them": 0,
+           "outcome": "“Yes, but he'll think the smiley means I'm joking,” Sam says, and the pan ticks as it cools.",
+           "why": "A new fix with a new way to fail. The smiley gave Sam something fresh to turn down."
+          },
+          {
+           "text": "“You're avoiding it because you like being the nice one, Sam.”",
+           "tag": "game",
+           "you": -3,
+           "them": -6,
+           "outcome": "Sam's face drops. “Sorry,” he says, and means it in the worst way.",
+           "why": "A verdict on his habits, dressed up as an observation. It makes the room choose sides, and Wes disappears behind the choosing."
+          }
+         ]
+        },
+        {
+         "who": "Grace",
+         "text": "“Why don't you move out for a weekend yourself? Nobody argues with an empty flat.”",
+         "cue": "putting the parcel on the table, still in her coat",
+         "lines": [
+          {
+           "text": "“It's your flat and your cousin, Sam. What are you going to do?”",
+           "tag": "best",
+           "you": 4,
+           "them": 4,
+           "outcome": "Grace laughs, then stops. “Fair. It's his sofa,” she says, and the kitchen waits.",
+           "why": "The line gives the problem back while the joke is still in the air. The room has nothing left to answer with except Sam's own plan."
+          },
+          {
+           "text": "“Ha, Grace. Sam could stay at a friend's for a night and see if Wes notices.”",
+           "tag": "ok",
+           "you": -2,
+           "them": 0,
+           "outcome": "“Maybe,” Sam says, which is the politest yes, but in the building.",
+           "why": "A joke, then a suggestion. The joke made the fix easy to swallow, and the loop found a softer way to keep going."
+          },
+          {
+           "text": "“Grace, you've never shared a flat in your life. I'm only trying to help.”",
+           "tag": "game",
+           "you": -4,
+           "them": -6,
+           "outcome": "Grace's smile goes. “I lived with three people for six years,” she says, and Maya looks at the floor.",
+           "why": "The sigh, now aimed at the neighbour. You have made the room about you, and the problem has slid under the parcel."
+          }
+         ]
+        },
+        {
+         "who": "Sam",
+         "text": "“Yes, but if he goes, he goes home, and his mum says I threw him out. I can't be that person.”",
+         "cue": "quieter now, thumb on the rim of the mug",
+         "lines": [
+          {
+           "text": "“That's the hard part, Sam. What are you going to do about it?”",
+           "tag": "best",
+           "you": 4,
+           "them": 5,
+           "outcome": "He sets the mug down. “I'm going to tell him on Sunday, to his face. He can say what he likes to his mum.”",
+           "why": "The hand-back worked because it stayed short. His answer is the first one all evening that nobody pushed into his hands."
+          },
+          {
+           "text": "“Tell him it's only for now and you'll miss him. Then it won't sound like throwing him out.”",
+           "tag": "ok",
+           "you": -2,
+           "them": 1,
+           "outcome": "“Good idea,” Maya says, and Sam says, “Yes, but I won't miss him,” and everyone laughs while the loop starts up again.",
+           "why": "You offered wording, which is still a fix. Sam can argue with the wording, and the yes, but has a new target."
+          },
+          {
+           "text": "“You're making excuses, Sam. I'm trying to help you.”",
+           "tag": "game",
+           "you": -4,
+           "them": -6,
+           "outcome": "Sam puts the mug in the sink. “I'll sort it out on my own,” he says, and goes to his room.",
+           "why": "You named the excuse and then made the helping the issue. The one with the problem leaves the room, and the loop wins the night."
+          }
+         ]
+        }
+       ],
+       "payoff": "Sam takes his mug to his room and shuts the door. The calendar still has Friday circled, and Wes's key turns in the lock at ten.",
+       "fallout": {
+        "them": "Sam goes to his room and closes the door. Maya wipes the table twice, and nobody mentions the sofa again."
+       }
+      },
+      {
+       "type": "scene",
+       "title": "Thursday, 10:05pm, the cold pan",
+       "setting": "The same kitchen. The pan has gone cold, and Wes's key has not turned yet. Maya turns the sheet face down. <i>The Heckler, in your head: “Sum it up cleverly, and they will all remember who got it.”</i>",
+       "meters": {
+        "you": 50,
+        "them": 50
+       },
+       "beats": [
+        {
+         "who": "Maya",
+         "text": "“What just happened? Four of us, and Wes still has a bed.”",
+         "cue": "turning the sheet face down on the table",
+         "lines": [
+          {
+           "text": "“Everyone gave Sam a fix, and he turned each one down. I stopped giving them and handed the problem back to him.”",
+           "tag": "best",
+           "you": 4,
+           "them": 3,
+           "outcome": "Maya nods slowly. “Right. That worked, and I hated it.”",
+           "why": "A plain account of the loop: the advice, the yes, but, and the hand-back that stopped the feeding. Naming the move lets you make it again on purpose."
+          },
+          {
+           "text": "“Sam didn't want help. He wanted to complain.”",
+           "tag": "ok",
+           "you": -2,
+           "them": -2,
+           "outcome": "Maya says, “Did he? Count how many fixes were mine.”",
+           "why": "Partly true, and it puts the blame on Sam. The loop had three helpers, and you were one of them."
+          },
+          {
+           "text": "“Sam is the difficult one here, and I'm the only one who tried.”",
+           "tag": "game",
+           "you": -4,
+           "them": -6,
+           "outcome": "Maya says, “That's the trap, and you've just shown it to us,” and picks up the cold pan.",
+           "why": "The helper's sigh, said out loud. The question you were asked turns into another round of the same loop."
+          }
+         ]
+        },
+        {
+         "who": "Sam",
+         "text": "“I don't know. Maybe Sunday, when he's got his shoes off. I'll say I need the sofa from the weekend after.”",
+         "cue": "hand flat on the table, mug pushed aside",
+         "lines": [
+          {
+           "text": "“Then say it in your own words on Sunday, and tell us on Monday how it went.”",
+           "tag": "best",
+           "you": 3,
+           "them": 4,
+           "outcome": "He nods. “Sunday. Out loud. I'll tell you Monday.”",
+           "why": "The problem and the answer both stay with him, and the check-in is a date, not a rescue. The loop has nothing left to feed on."
+          },
+          {
+           "text": "“Good, and Maya can write you a script so you don't lose your nerve.”",
+           "tag": "ok",
+           "you": -2,
+           "them": 0,
+           "outcome": "“Happy to,” Maya says, and Sam says, “Yes, but make it short,” and they both laugh.",
+           "why": "You handed him a helper for the speech. The rescue is small, but it puts a fix back on the table."
+          },
+          {
+           "text": "“Don't blame me if Wes sulks for a month, Sam.”",
+           "tag": "game",
+           "you": -4,
+           "them": -6,
+           "outcome": "Sam studies the mug. “Sorry,” he says, to nobody.",
+           "why": "You put the consequence on him before he has acted. The loop ends in blame, and nobody owns the answer."
+          }
+         ]
+        },
+        {
+         "who": "Maya",
+         "text": "“I made the sheet anyway. Dates, bin days, a column for Wes. It's no use if Sam never reads it.”",
+         "cue": "squaring the sheet against the table edge",
+         "lines": [
+          {
+           "text": "“Keep it for the bins, Maya. The date for Wes is Sam's to set. Sam, what is it?”",
+           "tag": "best",
+           "you": 3,
+           "them": 3,
+           "outcome": "“Sunday, after tea,” Sam says, and Maya writes it in the Wes column, small.",
+           "why": "You send the question back to the owner one more time. Maya hears his answer instead of finishing her own sheet."
+          },
+          {
+           "text": "“Then stick the sheet on Wes's bag where he'll see it.”",
+           "tag": "ok",
+           "you": -2,
+           "them": -1,
+           "outcome": "“Brilliant,” Sam says, and reaches for the tape, and nobody asks him whether he will say anything.",
+           "why": "A sheet on a bag is another fix. It saves Sam the sentence, which is the thing he needs to say."
+          },
+          {
+           "text": "“You made this complicated, Maya. Like always.”",
+           "tag": "game",
+           "you": -3,
+           "them": -5,
+           "outcome": "Maya folds the sheet in four and goes to her room.",
+           "why": "You named her habit and used it as the verdict. She leaves, the flat loses an adviser, and the problem stays where it started."
+          }
+         ]
+        }
+       ],
+       "payoff": "The pan stays cold on the hob. Wes's key turns in the lock, and the problem goes back under the duvet with him."
+      }
+     ]
+    },
+    {
+     "level": "Analyse",
+     "label": "Analyse, explain it",
+     "intro": "Two questions about the loop. Pick the explanation that fits what happened.",
+     "items": [
+      {
+       "type": "pick",
+       "who": "Maya",
+       "text": "Why does Sam's yes, but keep everyone in the kitchen?",
+       "cue": "the cold pan, the sheet, nobody leaving",
+       "options": [
+        "Each fix gets a reason it will fail, so more fixes arrive and Sam never has to speak to Wes.",
+        "Sam secretly wants Wes to stay for good, and he is too embarrassed to say it out loud.",
+        "Maya's sheet is so thorough that nobody in the flat can think of anything to add to it."
+       ],
+       "answer": 0,
+       "why": "The yes, but does two jobs. It turns each fix down, and it invites the next one. The aim is to reject the suggestions, so the loop runs until the helpers run dry. Meanwhile the sentence Sam has to say stays unsaid.",
+       "traps": {
+        "1": "The story says the opposite: Sam wants his sofa back. The loop needs the fixes to keep coming and each one to fail, whatever he secretly feels.",
+        "2": "The sheet is one more fix in the pile. It does not stop anything, and Sam's yes, but is waiting for it like the others."
+       },
+       "example": "A family WhatsApp group.<br>“Why don't you ask Dad to drive?” “Yes, but he hates night roads.”<br>“Then book a taxi?” “Yes, but the fare is silly.”"
+      },
+      {
+       "type": "pick",
+       "who": "Maya",
+       "text": "Why does “It's a hard one. What are you going to do about it?” break the loop?",
+       "cue": "the same question, handed back each time",
+       "options": [
+        "It makes the helpers feel so guilty that they go quiet and the kitchen empties.",
+        "It says Wes is too big a problem for anyone, so everyone gives up and goes to bed.",
+        "It gives the problem back to Sam, so the next move is his and the fixes have nowhere to land."
+       ],
+       "answer": 2,
+       "why": "The line names the problem as real, then asks the owner to act. It turns down the helper's job. Once Sam has to answer, there are no fixes left to refuse, and what he actually thinks can come out.",
+       "traps": {
+        "0": "Guilty helpers can go on suggesting for the rest of the night, or sulk. Guilt does not stop the loop, and it makes the room colder.",
+        "1": "The line says the problem is hard, and it does not say it is hopeless. The loop stops because Sam is asked to act, not because anyone gives up."
+       },
+       "example": "A flat meeting about the rota.<br>“That's a tricky one. What are you going to do about the Tuesday bins?”<br>The one who keeps proposing new rotas has to pick one."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "setting": "Family",
+   "blurb": "Gran's hearing-test letter has sat on the fridge since August, and everyone has a fix.",
+   "opener": {
+    "setting": "Sunday, 1:15pm. Hawthorn Court, Gran's kitchen downstairs. Mum is on speaker, propped against the teapot, and the dal is going cold.",
+    "lines": [
+     {
+      "who": "Gran",
+      "text": "“The clinic wrote in August. It is on the fridge. It says telephone to book.”",
+      "cue": "tapping the letter with one finger, not picking it up"
+     },
+     {
+      "who": "Mum",
+      "text": "“It's October. Have you not rung them yet?”",
+      "cue": "from the phone against the teapot, the television on mute behind her"
+     }
+    ],
+    "ask": "Stay at the table without giving advice, and find the one line that hands the problem back to Gran."
+   },
+   "rounds": [
+    {
+     "level": "Spot",
+     "label": "Spot, round 1",
+     "intro": "Four moves run this scene: a suggestion, a yes, but, the helper's sigh and a hand-back. Tap the move in each line.",
+     "items": [
+      {
+       "type": "pick",
+       "who": "Mrs Kale",
+       "text": "“Why don't you let me ring them? I've got a free minute right now.”",
+       "cue": "already holding out her hand for the letter",
+       "options": [
+        "a hand-back",
+        "a yes, but",
+        "a suggestion"
+       ],
+       "answer": 2,
+       "why": "It opens with why don't you and offers a ready fix. Gran is asked to do nothing except hand over the letter. That is a suggestion, and it is the first step of the loop.",
+       "traps": {
+        "0": "This would be a hand-back if it asked Gran what she will do. Mrs Kale has already taken the phone call out of her hands.",
+        "1": "This would be a yes, but if Mrs Kale were turning down someone else's fix. Nobody has offered one yet."
+       },
+       "example": "A neighbour at the post office.<br>“Why don't you let me carry that, dear?”<br>The old man tightens his grip on the parcel and says nothing."
+      },
+      {
+       "type": "pick",
+       "who": "Gran",
+       "text": "“Yes, but the machine talks too fast, and then it asks for a number and I have to find my glasses.”",
+       "cue": "arms folded over her apron",
+       "options": [
+        "a yes, but",
+        "a suggestion",
+        "the helper's sigh"
+       ],
+       "answer": 0,
+       "why": "She grants that ringing is the answer, then gives the reason she cannot. That is the yes, but, and the reason invites the next helper to solve the machine.",
+       "traps": {
+        "1": "This would be a suggestion if Gran were proposing a plan. She is only explaining why Mrs Kale's plan will fail.",
+        "2": "This would be a sigh if she complained that nobody listens. She is politely shutting the door on the idea."
+       },
+       "example": "A bank queue.<br>“Why don't you use the app, Dad?” “Yes, but I can't see the numbers.”<br>“Make the text bigger.” “Yes, but then it won't fit.”"
+      },
+      {
+       "type": "pick",
+       "who": "Mum",
+       "text": "“I'm only trying to help! I've set the reminder on your phone three times, and you keep switching it off.”",
+       "cue": "from the speaker against the teapot, the television on mute behind her",
+       "options": [
+        "a suggestion",
+        "the helper's sigh",
+        "a hand-back"
+       ],
+       "answer": 1,
+       "why": "Mum is hurt that her fix was refused. The book calls this side I'm Only Trying to Help You. Now Gran has to look after Mum's feelings, and the letter on the fridge goes unanswered.",
+       "traps": {
+        "0": "This would be a suggestion if Mum proposed something new. She is complaining about the last fix being turned off.",
+        "2": "This would be a hand-back if she asked Gran what she will do. Mum is asking Gran to take her reminders."
+       },
+       "example": "Two sisters planning a party.<br>“I'm only trying to help! I booked the hall and you didn't even say thank you.”<br>The hall is now the argument."
+      },
+      {
+       "type": "pick",
+       "who": "Leo",
+       "text": "“Gran, what are you going to do about your ears?”",
+       "cue": "not looking up from the tablet",
+       "options": [
+        "a hand-back",
+        "a suggestion",
+        "the helper's sigh"
+       ],
+       "answer": 0,
+       "why": "It gives the problem to the one who owns it. There is no fix in it, no reason and no sigh, only a question about what happens next. It sounds rude coming from an eight-year-old, and it is the cleanest hand-back at the table.",
+       "traps": {
+        "1": "This would be a suggestion if Leo said what Gran should do. He asks her, and does not tell her.",
+        "2": "This would be the sigh if he complained that nobody listens. Leo is not cross, he is curious."
+       },
+       "example": "A child at a bus stop.<br>“Grandad, what are you going to do about your hat? It's blowing away.”<br>Grandad takes it off and puts it in his pocket."
+      }
+     ]
+    },
+    {
+     "level": "Play",
+     "label": "Play, the week in motion",
+     "intro": "Yes-But Night. You are one of the helpers. Keep both meters above half at the end. Each suggestion you make feeds the loop, so watch every line.",
+     "items": [
+      {
+       "type": "scene",
+       "title": "Sunday, 1:20pm, Gran's kitchen",
+       "setting": "Gran's kitchen, the radio low, Mum on speaker against the teapot, Mrs Kale on the other chair. Leo is under the table with the tablet. <i>The Heckler, in your head: “Fix it for her, and you will be the one who rang the clinic.”</i>",
+       "meters": {
+        "you": 60,
+        "them": 50
+       },
+       "beats": [
+        {
+         "who": "Gran",
+         "text": "“Yes, but the machine talks too fast, and then it asks for a number and I have to find my glasses.”",
+         "cue": "arms folded over her apron",
+         "lines": [
+          {
+           "text": "“It's a hard one, Gran. What are you going to do about it?”",
+           "tag": "best",
+           "you": 4,
+           "them": 4,
+           "outcome": "Gran looks at the letter for a long second. “Go in person,” she says. “Tuesday, when the bus is quiet.” It is her answer, and nobody else is holding it.",
+           "why": "You stop feeding the loop and give the problem back to the person who owns it. Her answer is slower than a fix and better, because it is hers."
+          },
+          {
+           "text": "“Then I'll ring from here and put it on speaker, so you only have to say yes.”",
+           "tag": "ok",
+           "you": -2,
+           "them": 1,
+           "outcome": "“Yes, but you'll mumble,” Gran says, and Mrs Kale leans in with a fourth idea.",
+           "why": "It is kind, and it takes the problem away from her. The loop accepts it as another fix, and Gran's next yes, but is ready."
+          },
+          {
+           "text": "“I'm only trying to help, Gran. Why won't you ever let anyone?”",
+           "tag": "game",
+           "you": -3,
+           "them": -6,
+           "outcome": "Gran slides the letter back under the magnet. “Nobody asked you to,” she says.",
+           "why": "The helper's sigh, aimed at an eighty-year-old. Gran now has to look after your feelings, and the clinic is forgotten."
+          }
+         ]
+        },
+        {
+         "who": "Mum",
+         "text": "“Why don't you write down what the machine says? Keep a pencil by the phone.”",
+         "cue": "a little tinny from the speaker, the television still on mute",
+         "lines": [
+          {
+           "text": "“That's a hard one, Gran. What are you going to do about it?”",
+           "tag": "best",
+           "you": 4,
+           "them": 4,
+           "outcome": "The speaker goes silent. “I don't know yet,” Gran says, and it is the first real pause in the kitchen.",
+           "why": "Another fix arrived from 600 km away and you did not pick it up. The owner has to choose, and she is slower now, which is what you want."
+          },
+          {
+           "text": "“A pencil by the phone might work, if Gran can find one.”",
+           "tag": "ok",
+           "you": -2,
+           "them": 1,
+           "outcome": "“I can find a pencil,” Gran says. “Yes, but I can't read what I wrote.”",
+           "why": "You joined Mum's fix with a polite tail. The yes, but now has a pencil to turn down."
+          },
+          {
+           "text": "“Mum, you ring every Sunday and tell her what to do from 600 km away. I'm only trying to help.”",
+           "tag": "game",
+           "you": -3,
+           "them": -5,
+           "outcome": "Mum's voice goes small. “Right. I'll go, then,” she says, and the line clicks.",
+           "why": "The sigh, aimed at a third person. The problem now has two owners, and both of them are cross with you."
+          }
+         ]
+        },
+        {
+         "who": "Gran",
+         "text": "“Yes, but if I go in person they'll put me in a little room and ask me things. I don't like the beeps.”",
+         "cue": "straightening the letter with the flat of her hand",
+         "lines": [
+          {
+           "text": "“The beeps are the hard part, Gran. What are you going to do about them?”",
+           "tag": "best",
+           "you": 4,
+           "them": 4,
+           "outcome": "Gran breathes out. “I'll ask Grace to sit with me. She doesn't fill up a waiting room with talk.”",
+           "why": "The third hand-back, built from her own words. Every yes, but has met the same kind of question, and the question is what breaks the loop."
+          },
+          {
+           "text": "“Then I'll come with you and hold your hand through the beeps.”",
+           "tag": "ok",
+           "you": -2,
+           "them": 0,
+           "outcome": "“You'll hold the wrong hand,” Gran says, and Mrs Kale offers to come as well, and now there is a rota.",
+           "why": "A new fix, and you have volunteered. It looks like love, and it gives the loop a fresh set of reasons."
+          },
+          {
+           "text": "“You always find a reason, Gran. Every single time.”",
+           "tag": "game",
+           "you": -3,
+           "them": -6,
+           "outcome": "Gran's mouth goes small. “Do I,” she says, and turns to the sink.",
+           "why": "A verdict on her habits, dressed up as a remark. It makes the table choose sides, and the clinic disappears behind the choosing."
+          }
+         ]
+        },
+        {
+         "who": "Mrs Kale",
+         "text": "“Why don't you get one of those hearing apps? My nephew has one. It tells you who is talking.”",
+         "cue": "waving her teacup, a biscuit still in the other hand",
+         "lines": [
+          {
+           "text": "“It's your hearing, Gran. What are you going to do about it?”",
+           "tag": "best",
+           "you": 4,
+           "them": 4,
+           "outcome": "Mrs Kale puts the cup down. “Fair. It's her ears,” she says, and the kitchen waits.",
+           "why": "The line gives the problem back while the app is still in the air. The table has nothing left to answer with except Gran's own plan."
+          },
+          {
+           "text": "“An app is a good idea, Mrs Kale. Gran, I could set it up for you tonight.”",
+           "tag": "ok",
+           "you": -2,
+           "them": 0,
+           "outcome": "“Yes, but the screen is so small,” Gran says, and Leo slides his tablet out from under the table.",
+           "why": "A kind offer and a fresh fix. The loop found a new gadget to turn down."
+          },
+          {
+           "text": "“Mrs Kale, your nephew sells phones. Everything with you is an app. I'm only trying to help.”",
+           "tag": "game",
+           "you": -4,
+           "them": -6,
+           "outcome": "Mrs Kale's face closes. “I was being kind,” she says, and goes to find her coat.",
+           "why": "The sigh, now aimed at the neighbour. You have made the table about you, and the clinic has slid under the biscuits."
+          }
+         ]
+        },
+        {
+         "who": "Gran",
+         "text": "“Yes, but if they say I need the little things in my ears, your mother will ring every night about it.”",
+         "cue": "quieter now, looking at the speaker",
+         "lines": [
+          {
+           "text": "“That's the real worry, Gran. What are you going to do about it?”",
+           "tag": "best",
+           "you": 4,
+           "them": 5,
+           "outcome": "Gran turns her cup once. “I'll ring them myself on Monday. And she is not to ring me about it.” The speaker waits, and then Mum says, “All right.”",
+           "why": "The hand-back worked because it stayed short. Her answer is the first one all afternoon that nobody pushed into her hands."
+          },
+          {
+           "text": "“Mum won't, Gran. Mum, you won't, will you?”",
+           "tag": "ok",
+           "you": -2,
+           "them": 1,
+           "outcome": "“I might,” says the speaker. “Yes, but you will,” says Gran, and the loop starts up again.",
+           "why": "You turned yourself into a negotiator. It is another fix, and now it has two owners."
+          },
+          {
+           "text": "“You're making excuses, Gran. We are all trying to help you.”",
+           "tag": "game",
+           "you": -4,
+           "them": -6,
+           "outcome": "Gran stands, takes her plate to the sink and does not turn round.",
+           "why": "You named the excuse and then made the helping the issue. The one with the problem leaves the table, and the loop wins the afternoon."
+          }
+         ]
+        }
+       ],
+       "payoff": "Gran puts the letter back under the magnet and says she will sort it out alone. The dal goes cold, and the speaker clicks off.",
+       "fallout": {
+        "them": "Gran turns the radio up, and nobody is allowed to say the word clinic again."
+       }
+      },
+      {
+       "type": "scene",
+       "title": "Sunday, 2:10pm, the cold dal",
+       "setting": "The same kitchen. The dal has skinned over and Mum has gone from the speaker. Mrs Kale is rinsing cups. <i>The Heckler, in your head: “Say something wise, and they will tell Mum you were the sensible one.”</i>",
+       "meters": {
+        "you": 50,
+        "them": 50
+       },
+       "beats": [
+        {
+         "who": "Mrs Kale",
+         "text": "“What just happened? I only said about the app.”",
+         "cue": "a cup in each hand, the tap still running",
+         "lines": [
+          {
+           "text": "“Everyone gave Gran a fix, and she turned each one down. I stopped giving them and handed the problem back to her.”",
+           "tag": "best",
+           "you": 4,
+           "them": 3,
+           "outcome": "Mrs Kale turns off the tap. “Hm. I did offer four, didn't I.”",
+           "why": "A plain account of the loop: the advice, the yes, but and the hand-back that stopped the feeding. Naming it lets you do it again on purpose."
+          },
+          {
+           "text": "“Gran doesn't want help. She wants to be fussed over.”",
+           "tag": "ok",
+           "you": -2,
+           "them": -2,
+           "outcome": "Mrs Kale says, “Is that so? Count how many of us fussed.”",
+           "why": "Partly true, and it puts the blame on Gran. There were three helpers, and you were one of them."
+          },
+          {
+           "text": "“Gran is the awkward one here, and I'm the only one who tried.”",
+           "tag": "game",
+           "you": -4,
+           "them": -6,
+           "outcome": "Mrs Kale says, “That's the trap, and you've just shown it to me,” and turns the tap back on.",
+           "why": "The helper's sigh, said out loud. The question you were asked turns into another round of the same loop."
+          }
+         ]
+        },
+        {
+         "who": "Gran",
+         "text": "“I will go on Tuesday, in person, and I will take Grace. We shall see about the beeps.”",
+         "cue": "hand flat on the table, the letter in front of her",
+         "lines": [
+          {
+           "text": "“Then do it your way, Gran, and tell me on Tuesday evening what they said.”",
+           "tag": "best",
+           "you": 3,
+           "them": 4,
+           "outcome": "She nods. “Tuesday. I'll tell you over tea.”",
+           "why": "The problem and the answer both stay with her, and the check-in is a day, not a rescue. The loop has nothing left to feed on."
+          },
+          {
+           "text": "“Good, and I'll write the clinic's address on the envelope in big letters.”",
+           "tag": "ok",
+           "you": -2,
+           "them": 0,
+           "outcome": "“I know where the clinic is,” Gran says, “yes, but thank you,” and she pushes the envelope away.",
+           "why": "You handed her a helper for the trip. It is small, and it puts a fix back on the table."
+          },
+          {
+           "text": "“Don't blame me if the bus is late, Gran.”",
+           "tag": "game",
+           "you": -4,
+           "them": -6,
+           "outcome": "Gran looks at the letter and says nothing, and the kitchen lets the silence sit.",
+           "why": "You put the consequence on her before she has acted. The loop ends in blame, and nobody owns the answer."
+          }
+         ]
+        },
+        {
+         "who": "Leo",
+         "text": "“Gran, are the beeps like in Clash? Can I come?”",
+         "cue": "head out from under the table, tablet in hand",
+         "lines": [
+          {
+           "text": "“Ask Gran, Leo. It's her appointment.”",
+           "tag": "best",
+           "you": 3,
+           "them": 3,
+           "outcome": "Leo looks up. “Gran, can I come and see the beeps?” “Maybe next time,” Gran says, and nearly smiles.",
+           "why": "A small hand-back, and an eight-year-old learns it too. The answer belongs to Gran, and she gives it."
+          },
+          {
+           "text": "“Not this time, Leo. Gran's going with Grace.”",
+           "tag": "ok",
+           "you": -2,
+           "them": -1,
+           "outcome": "“That's not fair,” Leo says, and Gran says, “Who decided?” and looks at you.",
+           "why": "You answered for Gran, which is another fix. It was kind and it took her say away."
+          },
+          {
+           "text": "“Leo, stop interrupting. Gran has enough on her plate.”",
+           "tag": "game",
+           "you": -3,
+           "them": -5,
+           "outcome": "The tablet goes back under the table and the sound of Clash goes with it. “He was only asking,” Gran says.",
+           "why": "The sigh, aimed at a child. The kitchen splits, and Gran now has to look after both of you."
+          }
+         ]
+        }
+       ],
+       "payoff": "Leo goes under the table with his tablet and Gran turns to the sink. The beeps are not mentioned again."
+      }
+     ]
+    },
+    {
+     "level": "Analyse",
+     "label": "Analyse, explain it",
+     "intro": "Two questions about the loop. Pick the explanation that fits what happened.",
+     "items": [
+      {
+       "type": "pick",
+       "who": "Mrs Kale",
+       "text": "Why did Gran's yes, but keep coming, whatever anyone offered?",
+       "cue": "the letter under the magnet, the cold dal",
+       "options": [
+        "Gran enjoys an argument, and the kitchen only comes alive when someone is cross with her.",
+        "Each fix was met with a reason it would fail, which invited the next fix and left the clinic unrung.",
+        "Gran cannot hear the suggestions, so she answers a different question every time."
+       ],
+       "answer": 1,
+       "why": "The yes, but does two jobs. It turns a fix down and it invites the next one. The aim is to reject the suggestions, so the loop runs until the helpers run out. The phone call to the clinic stays exactly where it was.",
+       "traps": {
+        "0": "Gran is not looking for a row. The loop needs fixes to keep coming and each one to fail, and a fight is not what feeds it.",
+        "2": "Her answers match what was said. The reasons she gives are all about the machine and the beeps, so she heard every fix."
+       },
+       "example": "A phone call home.<br>“Why don't you ask the doctor for something stronger?” “Yes, but he never has time.”<br>“Then ring the surgery.” “Yes, but they put me on hold.”"
+      },
+      {
+       "type": "pick",
+       "who": "Mrs Kale",
+       "text": "Why did “What are you going to do about it?” work when the app and the lift to the clinic did not?",
+       "cue": "the same question, handed back to Gran",
+       "options": [
+        "It was gentler than the app, so Gran felt cared for and gave in.",
+        "It gave the problem back to Gran, who was the only one at the table who could act on it.",
+        "It showed Gran she was being silly, and she did not want to look silly in front of Leo."
+       ],
+       "answer": 1,
+       "why": "The question names the problem as real, then asks the owner to move. It turns down the helper's job. Gran has to choose, and a choice she makes herself is one she keeps.",
+       "traps": {
+        "0": "Gran did not give in. She named a plan of her own, and a plan of her own is different from agreeing with someone else's.",
+        "2": "Shaming would have sent her to the sink, as the harsher lines did. The question worked because it respected her, not because it made her feel small."
+       },
+       "example": "A parents' evening.<br>“That's a hard spelling problem. What are you going to do about it at home?”<br>The parent who kept asking for a tutor says, “Read with him, I suppose.”"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "setting": "Relationships",
+   "blurb": "Clara has a note from Omar she cannot answer, and her friends all have a fix.",
+   "opener": {
+    "setting": "Wednesday, 1:05pm. A bench outside Halden, by the bike racks. Clara's cheese roll is still in its paper.",
+    "lines": [
+     {
+      "who": "Clara",
+      "text": "“He left a note on my monitor. 'Thursday, the cafe? Or not. Either is fine.' I've read it eleven times.”",
+      "cue": "holding the note flat on her knee with two fingers"
+     },
+     {
+      "who": "Sam",
+      "text": "“So say yes. It's one word.”",
+      "cue": "mouth full, already reaching for her crisps"
+     }
+    ],
+    "ask": "Stay on the bench without giving advice, and find the one line that hands the problem back to Clara."
+   },
+   "rounds": [
+    {
+     "level": "Spot",
+     "label": "Spot, round 1",
+     "intro": "Four moves run this scene: a suggestion, a yes, but, the helper's sigh and a hand-back. Tap the move in each line.",
+     "items": [
+      {
+       "type": "pick",
+       "who": "Sam",
+       "text": "“Why don't you write 'Yes' on the same note and stick it back on his screen?”",
+       "cue": "wiping mayonnaise off his thumb with a napkin",
+       "options": [
+        "a suggestion",
+        "a yes, but",
+        "a hand-back"
+       ],
+       "answer": 0,
+       "why": "It opens with why don't you and offers a ready fix. Clara is asked to do nothing except copy it. That is a suggestion, and it is the first step of the loop.",
+       "traps": {
+        "1": "This would be a yes, but if Sam were turning down a fix Clara had offered. She has not offered one.",
+        "2": "This would be a hand-back if it asked Clara what she will do. Sam has already written her reply for her."
+       },
+       "example": "A bus queue, Friday.<br>“Why don't you text him back with a thumbs-up?”<br>The woman with the phone puts it in her bag and looks up the road."
+      },
+      {
+       "type": "pick",
+       "who": "Clara",
+       "text": "“Yes, but he only asked because I fixed his build on Tuesday. He's being polite.”",
+       "cue": "pinning the note to her knee with two fingers",
+       "options": [
+        "a suggestion",
+        "the helper's sigh",
+        "a yes, but"
+       ],
+       "answer": 2,
+       "why": "She grants that the note is real, then gives the reason it cannot count. That is the yes, but, and it leaves room for the next helper to argue with the reason.",
+       "traps": {
+        "0": "This would be a suggestion if Clara were proposing a plan. She is only explaining why Sam's plan fails.",
+        "1": "This would be the sigh if she complained that nobody listens. She is closing the door politely, not slamming it."
+       },
+       "example": "A shop floor.<br>“Why don't you ask for a rise?” “Yes, but they only gave me the last one because I covered for Theo.”"
+      },
+      {
+       "type": "pick",
+       "who": "Sam",
+       "text": "“I'm only trying to help! I am giving you the actual words and you keep looking at them like they're a bill.”",
+       "cue": "crisp packet crushed in one fist",
+       "options": [
+        "a hand-back",
+        "a suggestion",
+        "the helper's sigh"
+       ],
+       "answer": 2,
+       "why": "Sam is hurt that his fix was refused. The book calls this side I'm Only Trying to Help You. Now Clara has to look after Sam's feelings, and Omar's note is no longer the subject.",
+       "traps": {
+        "0": "This would be a hand-back if it asked Clara what she will do. Sam is asking her to take his words.",
+        "1": "This would be a suggestion if it proposed something new. It only complains that the last one was refused."
+       },
+       "example": "A neighbour on a stair.<br>“I'm only trying to help! I carried it up for you and you won't even say thanks.”<br>The box stays on the landing."
+      },
+      {
+       "type": "pick",
+       "who": "Ella",
+       "text": "“That's a hard one, Clara. What are you going to do about it?”",
+       "cue": "folding her sandwich paper into a neat square",
+       "options": [
+        "a hand-back",
+        "the helper's sigh",
+        "a suggestion"
+       ],
+       "answer": 0,
+       "why": "She calls the problem real, then gives it back to the person who owns it. There is no fix in it, no reason and no sigh. The only thing it asks about is what Clara does next.",
+       "traps": {
+        "1": "This would be the sigh if Ella were upset that her last idea had been refused. She has offered no idea yet.",
+        "2": "This would be a suggestion if she said what Clara should do. She asks, which is a different job."
+       },
+       "example": "A teacher at the gate.<br>“That's a difficult timetable. What are you going to do about Tuesdays?”<br>The parent says, “Swap with my sister, I suppose.”"
+      }
+     ]
+    },
+    {
+     "level": "Play",
+     "label": "Play, the week in motion",
+     "intro": "Yes-But Night. You are one of the helpers. Keep both meters above half at the end. Each suggestion you make feeds the loop, so watch every line.",
+     "items": [
+      {
+       "type": "scene",
+       "title": "Wednesday, 1:10pm, the bench",
+       "setting": "Outside Halden, the bench by the bike racks, a wind that keeps lifting the note. <i>The Heckler, in your head: “Give her the perfect line, and she will thank you on Thursday.”</i>",
+       "meters": {
+        "you": 60,
+        "them": 50
+       },
+       "beats": [
+        {
+         "who": "Clara",
+         "text": "“Yes, but he only asked because I fixed his build on Tuesday. He's being polite.”",
+         "cue": "pinning the note down with her thumb",
+         "lines": [
+          {
+           "text": "“That's a hard one, Clara. What are you going to do about it?”",
+           "tag": "best",
+           "you": 4,
+           "them": 4,
+           "outcome": "Clara watches a cyclist chain up a bike. “Answer him,” she says slowly. “Before four, so it doesn't sit.” It is her answer, and nobody else is holding it.",
+           "why": "You stop feeding the loop and give the problem back to the person who owns it. Her answer is slower than a fix and better, because it is hers."
+          },
+          {
+           "text": "“Then thank him for the note and say you'll think about it.”",
+           "tag": "ok",
+           "you": -2,
+           "them": 1,
+           "outcome": "“Yes, but 'think about it' sounds like no,” Clara says, and Sam gets another idea.",
+           "why": "It sounds careful and it is still a fix. The loop takes it as one more idea, and Clara's next yes, but is already loaded."
+          },
+          {
+           "text": "“I'm only trying to help, Clara. Why can't you just believe somebody likes you?”",
+           "tag": "game",
+           "you": -3,
+           "them": -6,
+           "outcome": "Clara folds the note into eighths. “Because it isn't that simple,” she says, and now you are one more thing she has to manage.",
+           "why": "The helper's sigh, with a verdict inside it. Clara has to look after your hurt feelings, and the note drops off the bench."
+          }
+         ]
+        },
+        {
+         "who": "Sam",
+         "text": "“Why don't you buy his cheese roll on Thursday? Then you're even.”",
+         "cue": "bouncing the crisp packet on his knee",
+         "lines": [
+          {
+           "text": "“It's a hard one, Clara. What are you going to do about it?”",
+           "tag": "best",
+           "you": 4,
+           "them": 4,
+           "outcome": "Sam stops chewing. “I don't know yet,” Clara says, and it is the first real pause on the bench.",
+           "why": "Another fix arrived and you did not pick it up. The owner has to choose, and she is slower now, which is what you want."
+          },
+          {
+           "text": "“A roll is a nice gesture, if you pay before he can.”",
+           "tag": "ok",
+           "you": -2,
+           "them": 1,
+           "outcome": "“Yes, but then it looks like I'm paying him off,” Clara says, and Ella's eyebrows go up.",
+           "why": "You joined Sam's fix with a polite tail. The yes, but now has a roll to turn down."
+          },
+          {
+           "text": "“Sam, you've never paid for anything without a voucher. I'm only trying to help.”",
+           "tag": "game",
+           "you": -3,
+           "them": -5,
+           "outcome": "“That's low,” Sam says, mouth full, and Clara tucks the note away.",
+           "why": "The sigh, aimed at a third person. The problem now has two owners, and both are cross with you."
+          }
+         ]
+        },
+        {
+         "who": "Clara",
+         "text": "“Yes, but if I say yes, then I'm someone who said yes, and he'll expect me to be good at it.”",
+         "cue": "tearing a corner off the note, then smoothing it flat",
+         "lines": [
+          {
+           "text": "“It's yours to decide, Clara. What are you going to do about it?”",
+           "tag": "best",
+           "you": 4,
+           "them": 4,
+           "outcome": "Clara looks at the note. “Write 'Yes' on it and put it where he'll find it. Then I'll have to turn up.”",
+           "why": "The third hand-back, short and flat. Every yes, but has met the same kind of question, and the question is what breaks the loop."
+          },
+          {
+           "text": "“You don't have to be good at a cafe, Clara. Just say yes and be yourself.”",
+           "tag": "ok",
+           "you": -2,
+           "them": 0,
+           "outcome": "“Yes, but I don't know who that is on a Thursday,” Clara says, and Sam snorts.",
+           "why": "It is warm advice and it is still advice. It gave her a fresh phrase to turn down."
+          },
+          {
+           "text": "“You're the one who keeps finding reasons, Clara. Every time.”",
+           "tag": "game",
+           "you": -3,
+           "them": -6,
+           "outcome": "Clara's face closes. “Thanks,” she says, and reaches for the cheese roll she hasn't touched.",
+           "why": "A verdict on her habits, dressed up as a remark. The bench picks sides, and the note disappears behind the choosing."
+          }
+         ]
+        },
+        {
+         "who": "Ella",
+         "text": "“Maybe write it down first? Then you can just read it out if your mouth freezes.”",
+         "cue": "squaring the folded paper on her knee",
+         "lines": [
+          {
+           "text": "“That's a hard one, Clara. What do you want to do about it?”",
+           "tag": "best",
+           "you": 4,
+           "them": 4,
+           "outcome": "Ella shrugs. “Fair. It's her note,” she says, and the bench waits.",
+           "why": "Even the calm helper slipped a fix in. You hand it back with the same short question, and the owner gets her turn."
+          },
+          {
+           "text": "“Ella's right. I could read it over before you hand it to him.”",
+           "tag": "ok",
+           "you": -2,
+           "them": 0,
+           "outcome": "“Yes, but you'd change the commas,” Clara says, and Sam says, “She would,” and the loop starts again.",
+           "why": "You volunteered to be the editor. A kind offer and another fix, and the yes, but has a new target."
+          },
+          {
+           "text": "“Ella, you've never asked anyone out on purpose. I'm only trying to help.”",
+           "tag": "game",
+           "you": -4,
+           "them": -6,
+           "outcome": "Ella's smile goes thin. “I asked my husband out in a lift,” she says, and the bench goes cold.",
+           "why": "The sigh, now aimed at the quiet one. You have made the bench about you, and the note has slid under the paper."
+          }
+         ]
+        },
+        {
+         "who": "Clara",
+         "text": "“Yes, but if he says it was only a kindness, I'll have made a fool of myself in front of the whole team room.”",
+         "cue": "quieter now, watching the cyclist unlock a bike",
+         "lines": [
+          {
+           "text": "“That's the real risk, Clara. What are you going to do about it?”",
+           "tag": "best",
+           "you": 4,
+           "them": 5,
+           "outcome": "She turns the note over once. “I'll write yes, sign it, and leave it before four.”",
+           "why": "The hand-back worked because it stayed short. Her answer is the first one all lunchtime that nobody pushed into her hands."
+          },
+          {
+           "text": "“Nobody will see, Clara. We'll stand guard by the printer.”",
+           "tag": "ok",
+           "you": -2,
+           "them": 1,
+           "outcome": "Sam says, “I'll bring a lookout hat,” and Clara says, “Yes, but you'd draw attention,” and the bench laughs while the loop starts up.",
+           "why": "A joke with a plan inside. It feels like backup, and it gives the yes, but one more thing to answer."
+          },
+          {
+           "text": "“You're hiding behind excuses, Clara. I'm trying to help you.”",
+           "tag": "game",
+           "you": -4,
+           "them": -6,
+           "outcome": "Clara pockets the note. “I'll sort it out on my own,” she says, and walks back inside.",
+           "why": "You named the excuse and then made the helping the issue. The one with the problem leaves the bench, and the loop wins the lunch hour."
+          }
+         ]
+        }
+       ],
+       "payoff": "Clara stands, pockets the note and goes back through the revolving door. The cheese roll stays on the bench in its paper, and the wind lifts the corner.",
+       "fallout": {
+        "them": "Clara walks back into Halden without her roll. Her answer to Omar stays in her pocket, unwritten."
+       }
+      },
+      {
+       "type": "scene",
+       "title": "Wednesday, 1:40pm, the bench again",
+       "setting": "The same bench. Omar comes round the bike racks with two cheese rolls on a coffee tray, and the note is back in Clara's hand. <i>The Heckler, in your head: “Tell him she has thought of nothing else, and watch his face.”</i>",
+       "meters": {
+        "you": 50,
+        "them": 50
+       },
+       "beats": [
+        {
+         "who": "Omar",
+         "text": "“You three look like a jury. Am I the defendant?”",
+         "cue": "holding the tray up like a plea",
+         "lines": [
+          {
+           "text": "“Not you. Clara's working something out, and it's hers to say.”",
+           "tag": "best",
+           "you": 3,
+           "them": 4,
+           "outcome": "Omar nods and sits at the far end, passing Clara her roll first. “Right. No rush,” he says.",
+           "why": "You hand it back without naming her problem. The answer stays hers, and Omar gets a calm bench instead of a case."
+          },
+          {
+           "text": "“Just lunch gossip, Omar. Nothing to worry about.”",
+           "tag": "ok",
+           "you": -2,
+           "them": -1,
+           "outcome": "“Right,” Omar says, in the voice of someone who has seen the note.",
+           "why": "A small cover story. It takes the moment out of Clara's hands, and Omar notices the cover."
+          },
+          {
+           "text": "“Clara got your note, Omar, and she's been in a state about it all lunch.”",
+           "tag": "game",
+           "you": -4,
+           "them": -7,
+           "outcome": "Clara's face closes. “Thanks,” she says, and Omar looks at the cyclist, anywhere else.",
+           "why": "Telling on her, with kindness as the excuse. The thing she was building to say is now said, and not by her."
+          }
+         ]
+        },
+        {
+         "who": "Sam",
+         "text": "“Just tell him yes! She's been rehearsing since nine!”",
+         "cue": "grinning, one hand over his own mouth too late",
+         "lines": [
+          {
+           "text": "“That's hers to say, Sam.”",
+           "tag": "best",
+           "you": 3,
+           "them": 3,
+           "outcome": "Sam mimes zipping his mouth. The bench goes still, and Omar's coffee steams in the wind.",
+           "why": "A short hand-back to the helper who is still pushing. It protects the owner's turn."
+          },
+          {
+           "text": "“Sam, give her a minute. She's nearly there.”",
+           "tag": "ok",
+           "you": -2,
+           "them": 0,
+           "outcome": "“Nearly where?” Omar asks, and Clara's thumb goes white on the note.",
+           "why": "A kind hint that gives the secret away. It softens Sam and tells Omar there is something to ask."
+          },
+          {
+           "text": "“Sam's right, Clara. You've been rehearsing since nine. Just say it.”",
+           "tag": "game",
+           "you": -4,
+           "them": -6,
+           "outcome": "“I wasn't rehearsing,” Clara says, and she was. Omar looks away on purpose.",
+           "why": "The sigh with an audience. Pushing her to say it makes the saying a performance, and she does not want that."
+          }
+         ]
+        },
+        {
+         "who": "Clara",
+         "text": "“Thursday. If you're still... yes. Thursday is good.”",
+         "cue": "holding the note out, her hand not quite steady",
+         "lines": [
+          {
+           "text": "“Then that's settled, and it was yours to say. I'm going to find some tea.”",
+           "tag": "best",
+           "you": 3,
+           "them": 3,
+           "outcome": "Omar takes the note, reads the yes on it and says, “Thursday, then.” You are already walking.",
+           "why": "You step out of the way once she has said it. Nothing is left for the helpers to add."
+          },
+          {
+           "text": "“Say it once more for Omar, Clara, with the time this time.”",
+           "tag": "ok",
+           "you": -2,
+           "them": -1,
+           "outcome": "“Six,” Clara says. “Six is fine,” says Omar, and both of them look at you as if you were the chaperone.",
+           "why": "Coaching her again. It adds a detail she would have supplied herself."
+          },
+          {
+           "text": "“See, Omar? She was just frightened. I told you she liked you.”",
+           "tag": "game",
+           "you": -4,
+           "them": -7,
+           "outcome": "“I didn't ask you to tell me,” Omar says, gently, and Clara's thumb goes through the note.",
+           "why": "You reported her feelings for her. It takes the answer out of the owner's mouth at the last minute."
+          }
+         ]
+        }
+       ],
+       "payoff": "The note tears down the middle. Omar says he will see her around, and carries his roll back to the team room."
+      }
+     ]
+    },
+    {
+     "level": "Analyse",
+     "label": "Analyse, explain it",
+     "intro": "Two questions about the loop. Pick the explanation that fits what happened.",
+     "items": [
+      {
+       "type": "pick",
+       "who": "Ella",
+       "text": "Why does each yes, but send the bench round again?",
+       "cue": "the note on the knee, the cheese roll in its paper",
+       "options": [
+        "Clara has already decided to say no, and the yes, buts are her way of telling the others politely.",
+        "Sam talks so fast that nobody on the bench has time to think about what Clara wants.",
+        "Each idea is turned down for a reason, so the next idea arrives and Clara's answer stays unwritten."
+       ],
+       "answer": 2,
+       "why": "The yes, but does two jobs. It turns each fix down, and it invites the next one. The aim is to reject the suggestions, so the loop runs until the helpers run dry. The note in Clara's hand stays unanswered.",
+       "traps": {
+        "0": "Clara wants to say yes, which is why she keeps the note. The loop needs the fixes to keep coming, and each one to be refused.",
+        "1": "Speed has nothing to do with it. The same loop would run at half the pace, because every fix gets a reason it fails."
+       },
+       "example": "A group chat about a holiday.<br>“Why don't you go in May?” “Yes, but the flights are dear.”<br>“Then go in June.” “Yes, but Mum's birthday.”"
+      },
+      {
+       "type": "pick",
+       "who": "Ella",
+       "text": "Why was “What are you going to do about it?” better than telling Clara that Omar obviously likes her?",
+       "cue": "the same question, handed back each time",
+       "options": [
+        "It comforted Clara more, and a comforted person always does what she is told.",
+        "It kept the decision with Clara. Reassurance would only have given her a new fact to turn down.",
+        "It proved that Omar's note was only polite, so she could stop worrying about it."
+       ],
+       "answer": 1,
+       "why": "Telling her he likes her is one more fix, and her yes, but turns it down in a breath. The question names the problem as real and puts the next move in her hands, where only she can use it.",
+       "traps": {
+        "0": "Comfort is not the trick. Several comforting lines fed the loop, and nobody on the bench did what they were told.",
+        "2": "The question says nothing about Omar's note. It proves nothing, and it does not need to, because Clara decides what the note means."
+       },
+       "example": "A friend choosing a flat.<br>“It is a good one, you should take it.” “Yes, but the stairs.”<br>“Which one do you want? What are you going to do?”<br>“Take the one with the stairs.”"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

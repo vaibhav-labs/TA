@@ -1,0 +1,1241 @@
+{
+ "baseBlurb": "Gran brings an orange to the balcony, and Mum's Sunday call tests the usual reply.",
+ "stories": [
+  {
+   "setting": "Work",
+   "blurb": "A Thursday client demo, an export that dies on big files, and Daniel saying don't be late.",
+   "opener": {
+    "setting": "Monday, 9:05am. Halden, the team room. The whiteboard has Thursday circled twice in red.",
+    "lines": [
+     {
+      "who": "Daniel",
+      "text": "“Don't be late on this one. The client sees the export on Thursday at eleven, and I want it working on the big file, not the sample.”",
+      "cue": "capping the pen, already looking at the clock"
+     },
+     {
+      "who": "Clara",
+      "text": "“I've run the sample twice. I came in at five.”",
+      "cue": "eyes on her screen, a cold mug by her elbow"
+     }
+    ],
+    "ask": "In each of the next three moments, which move is yours, and which one is the script?"
+   },
+   "rounds": [
+    {
+     "level": "Spot",
+     "label": "Spot, round 1",
+     "intro": "Being your own person has three parts. Noticing is seeing and hearing for yourself, here and now, in your own way and without the labels you were handed. Choosing fresh is picking the feeling and the reply you want from all your voices, including the ones you were never taught to use. Being real is plain candour with no game in it.",
+     "items": [
+      {
+       "type": "pick",
+       "who": "You",
+       "text": "“'On it' is what I always say when you hurry me, Daniel. Today I'll try this one: the big file scares me a bit, and I'd like the checklist before I promise anything.”",
+       "cue": "standing at the whiteboard, laptop under one arm",
+       "options": [
+        "Noticing",
+        "Choosing fresh",
+        "Being real"
+       ],
+       "answer": 1,
+       "why": "You hear the usual 'on it' coming and pick a different reply, a scared and practical one. Choosing which feeling to show, instead of only the taught one, is choosing fresh.",
+       "traps": {
+        "0": "Noticing. You do catch the habit, but the work of the line is the swap to a new reply. Noticing alone would stop at 'I always say on it'.",
+        "2": "Being real. It is candid, but the heart of the line is the switch from the taught reply to a chosen one. The candour comes second."
+       },
+       "example": "Bus queue, Friday, 5:40pm.<br>Friend: “Coming Saturday? Say yes, you always say yes.”<br>You (who always say yes): “Half a yes. Excited, tired, and I'd like to leave by ten.”"
+      },
+      {
+       "type": "pick",
+       "who": "You",
+       "text": "“Clara's tea has been cold since nine. She hasn't looked up from that diff for an hour, and her left foot keeps tapping.”",
+       "cue": "low voice, to Omar, across the desks",
+       "options": [
+        "Noticing",
+        "Choosing fresh",
+        "Being real"
+       ],
+       "answer": 0,
+       "why": "You take in the cold mug, the stillness and the foot with your own senses, in your own words. No label like 'stressed' is stuck on her. That is noticing.",
+       "traps": {
+        "1": "Choosing fresh. It sounds like a new line, but nothing is swapped for a habit here. The line only describes what is in front of you.",
+        "2": "Being real. It is kind, but the line says nothing about how you feel. It stays with what you can see, which is noticing."
+       },
+       "example": "Allotment, Saturday, 8:00am.<br>Neighbour: “Anything wrong with the beans?”<br>You: “The leaves are curled at the edges, and there's a sticky patch on the lowest ones.”"
+      },
+      {
+       "type": "pick",
+       "who": "You",
+       "text": "“I'm stuck on the big file, and I'm a bit embarrassed. I'd rather ask you than pretend I've got it. Could you look at my diff after lunch?”",
+       "cue": "stopping at Clara's desk, voice low",
+       "options": [
+        "Noticing",
+        "Choosing fresh",
+        "Being real"
+       ],
+       "answer": 2,
+       "why": "You say the plain thing at its real size, with the feeling attached and no joke, hint or hook. Asking a colleague straight is being real.",
+       "traps": {
+        "0": "Noticing. You do see that you are stuck, and it is in the line. But noticing alone stays on the facts, and this line goes on to say how you feel and what you want.",
+        "1": "Choosing fresh. It is a new answer to the habit of struggling alone, but what makes it new is the plainness, so the better name is being real."
+       },
+       "example": "Book club, Thursday, 8:00pm.<br>Host: “Did anyone finish it?”<br>You: “No. I stalled at chapter four and I'm embarrassed. Could someone tell me what happens?”"
+      }
+     ]
+    },
+    {
+     "level": "Play",
+     "label": "Play, the week in motion",
+     "intro": "Three short scenes. In each one, pick the move that is yours, not the one you were taught.",
+     "items": [
+      {
+       "type": "scene",
+       "title": "Monday, 9:30am, the team room",
+       "setting": "Omar has left a printed test list on your desk, annotated in green pen. The paper is still warm from the printer.",
+       "meters": {
+        "you": 60,
+        "them": 50
+       },
+       "beats": [
+        {
+         "who": "Omar",
+         "text": "“I ran the timeout checks for you. Eleven cases. Green pen means passed.”",
+         "cue": "sliding the printout across with one finger",
+         "lines": [
+          {
+           "text": "“Thanks, Omar. You didn't have to do that.”",
+           "tag": "ok",
+           "you": 0,
+           "them": 2,
+           "outcome": "He shrugs. “Only took the morning,” he says, and goes back to his screen.",
+           "why": "This is the polite script. It is kind, and it skips the list, which is the thing he actually made."
+          },
+          {
+           "text": "“On case six you've written eight over a nine, and the ink is still shiny. What changed?”",
+           "tag": "best",
+           "you": 3,
+           "them": 4,
+           "outcome": "Omar leans in. “The client's proxy cuts off at eight seconds. I redid it, and I'm glad someone saw.”",
+           "why": "You notice what is actually on the page, the overwritten number and the wet ink. Noticing gives him something real back."
+          },
+          {
+           "text": "“You always do this. Now I owe you a favour, and you'll bring it up at the retro.”",
+           "tag": "game",
+           "you": -5,
+           "them": -6,
+           "outcome": "The scene stops there. Omar picks the printout up and says nothing about it.",
+           "why": "This turns a gift into a debt. The green pen becomes a ledger entry, and he has never kept one."
+          }
+         ]
+        },
+        {
+         "who": "Omar",
+         "text": "“Anything on your side? I've got ten minutes before my review.”",
+         "cue": "checking the clock over your shoulder",
+         "lines": [
+          {
+           "text": "“The export is ugly. Small files fly, and I'm a bit proud of those. The big one dies at sixty seconds.”",
+           "tag": "best",
+           "you": 3,
+           "them": 4,
+           "outcome": "Omar nods slowly. “Proud and stuck at once. That's a normal Monday,” he says, and sits on the edge of the desk.",
+           "why": "You say how you are, with a small true detail about the work. It is a fresh line, not the 'yeah, fine' you would have said at the start of the year."
+          },
+          {
+           "text": "“Nothing much. Just the export.”",
+           "tag": "ok",
+           "you": -1,
+           "them": -2,
+           "outcome": "He glances at the clock and stands up. “Shout if you need me.”",
+           "why": "This is the scripted small talk. It closes the door on the one thing he asked for."
+          }
+         ]
+        },
+        {
+         "who": "Omar",
+         "text": "“Does the list look usable, or did I waste green ink?”",
+         "cue": "laughing at himself, capping the pen",
+         "lines": [
+          {
+           "text": "“It's neat everywhere except the margin by case four, where you've drawn a very angry duck. I like the duck.”",
+           "tag": "best",
+           "you": 3,
+           "them": 4,
+           "outcome": "Omar grins. “That's the timeout. It looks like a duck when it gives up.” He pins the list to your monitor himself.",
+           "why": "You notice a precise, odd detail and say one true thing about him. It has warmth in it because it is specific."
+          },
+          {
+           "text": "“It's great, thanks.”",
+           "tag": "ok",
+           "you": 0,
+           "them": 1,
+           "outcome": "He nods, pleased enough. Then he heads off to his review.",
+           "why": "A polite yes that ends the moment. There is nothing wrong with it, and nothing new in it either."
+          }
+         ]
+        }
+       ],
+       "payoff": "Monday, 9:40am. Omar takes the printout back without a word and says he will do his own tests from now on. The green pen stays capped for the rest of the week.",
+       "example": "Shop counter, Friday, 4:30pm.<br>Colleague: “I did the stock sheet for you.”<br>You: “You've circled the tins twice, and one row is in red. What happened there?”"
+      },
+      {
+       "type": "scene",
+       "title": "Tuesday, 4:40pm, the team room",
+       "setting": "Daniel stops at your desk with a coffee, one eye on the release board. The big file is still failing on your second monitor.",
+       "meters": {
+        "you": 55,
+        "them": 45
+       },
+       "beats": [
+        {
+         "who": "Daniel",
+         "text": "“Where are we on export? Don't say 'nearly'.”",
+         "cue": "not sitting down",
+         "lines": [
+          {
+           "text": "“Nearly, Daniel. Just polishing.”",
+           "tag": "ok",
+           "you": -1,
+           "them": -2,
+           "outcome": "“Nearly means no,” Daniel says, and writes a red 4 on the board.",
+           "why": "This is the trained reply. It answers the question and closes the door, so the two of you carry on apart."
+          },
+          {
+           "text": "“'Nearly' is my usual word for it. Today's word is stuck, and a bit excited, because I think I've found where.”",
+           "tag": "best",
+           "you": 4,
+           "them": 4,
+           "outcome": "Daniel looks up from the board. “Where?” he asks, and for once he sits down.",
+           "why": "You answer from a fresh place, with a true feeling that is not the cheerful one. It breaks the old loop, and he gets a real report instead of a label."
+          },
+          {
+           "text": "“You always do this, Daniel. You hurry us, then blame us when the release slips.”",
+           "tag": "game",
+           "you": -5,
+           "them": -5,
+           "outcome": "The scene stops there. Daniel puts his coffee down on your desk, hard.",
+           "why": "This is a sting dressed up as a reply. It gives him the accusation he already expects, and nobody sits down."
+          }
+         ]
+        },
+        {
+         "who": "Daniel",
+         "text": "“Stuck where? Give me a number.”",
+         "cue": "pen back in his hand",
+         "lines": [
+          {
+           "text": "“I'll get it done by Thursday, don't worry.”",
+           "tag": "ok",
+           "you": -1,
+           "them": 0,
+           "outcome": "He taps the pen twice. “I'm not worried. I'm asking.”",
+           "why": "Reassurance is the safe answer, and it keeps the two of you at arm's length."
+          },
+          {
+           "text": "“The big file takes ninety seconds, and the client's proxy cuts off at sixty. I need till Wednesday night.”",
+           "tag": "best",
+           "you": 3,
+           "them": 4,
+           "outcome": "Daniel writes 90 and 60 on the board and underlines the gap. “Right. That I can plan around.”",
+           "why": "You name the real numbers and what you need. Choosing fresh is a line that didn't come from the reflex."
+          }
+         ]
+        },
+        {
+         "who": "Daniel",
+         "text": "“Eleven sharp on Thursday. I'm not going to say it again.”",
+         "cue": "already walking away",
+         "lines": [
+          {
+           "text": "“I'll be there at ten forty with a coffee for you. That's me choosing early, not me being told.”",
+           "tag": "best",
+           "you": 3,
+           "them": 4,
+           "outcome": "Daniel stops. “Black,” he says, without turning round, and nearly smiles at the board.",
+           "why": "You pick a playful, warm reply where the taught one would be a stiff promise. It is a fresh line, and it costs nothing."
+          },
+          {
+           "text": "“Yes, Daniel. I won't be late.”",
+           "tag": "ok",
+           "you": 0,
+           "them": 1,
+           "outcome": "He nods and keeps walking.",
+           "why": "A dutiful yes. It is safe, and nothing new is in it."
+          }
+         ]
+        }
+       ],
+       "payoff": "Tuesday, 4:50pm. Daniel says “Right” and takes his coffee away. The red 4 stays on the board, circled, until Thursday.",
+       "example": "Greengrocer's, Saturday, 9:00am.<br>Owner: “Any complaints about the plums? Don't say they're fine.”<br>You: “Two were bruised, and I'm going to come back anyway, because the rest were the best I've had.”"
+      },
+      {
+       "type": "scene",
+       "title": "Wednesday, 6:15pm, the quiet meeting room",
+       "setting": "Daniel has shut the door. Through the glass you can see the release board and the last of the team packing up.",
+       "meters": {
+        "you": 50,
+        "them": 50
+       },
+       "beats": [
+        {
+         "who": "Daniel",
+         "text": "“Tell me the truth before the client does. Is Thursday safe?”",
+         "cue": "arms folded, the door clicking shut",
+         "lines": [
+          {
+           "text": "“It'll be fine, Daniel. I've got it covered.”",
+           "tag": "ok",
+           "you": -1,
+           "them": -3,
+           "outcome": "Daniel says “Good,” and then asks Clara whether it's covered, which means he heard the gap in your voice.",
+           "why": "This is the script: the reassurance that closes the meeting on the worry. It sounds capable, and it leaves him with a promise he can't check."
+          },
+          {
+           "text": "“Mostly. The big file works since four, but I haven't run it through the client's proxy. I'm afraid it breaks live, and I didn't want to say.”",
+           "tag": "best",
+           "you": 4,
+           "them": 5,
+           "outcome": "There is a long pause. Then Daniel says he would rather know now, so he can clear nine o'clock for you.",
+           "why": "This is being real: plain candour with no game in it. You don't have to sound sure for the meeting, and he can hear where you actually are."
+          },
+          {
+           "text": "“You always do this, Daniel. You shout all week, then ask for the truth the night before.”",
+           "tag": "game",
+           "you": -5,
+           "them": -6,
+           "outcome": "The scene stops there. Daniel says “Fine,” opens the door and leaves it open.",
+           "why": "This turns his question into a charge against him. The real answer disappears under the old story about his temper."
+          }
+         ]
+        },
+        {
+         "who": "Daniel",
+         "text": "“Then what do you need from me?”",
+         "cue": "the glass fogging slightly behind him",
+         "lines": [
+          {
+           "text": "“Ask Omar to cover my standup, and let me run the proxy test first thing. Nobody else needs me before ten.”",
+           "tag": "best",
+           "you": 3,
+           "them": 4,
+           "outcome": "Daniel writes it on his hand. “Omar covers. Proxy at nine. Done.”",
+           "why": "You say what you want, plainly, without asking him to fix the whole project. That is a real request, not a rescue."
+          },
+          {
+           "text": "“Don't worry about it. I'll sort it out.”",
+           "tag": "ok",
+           "you": -2,
+           "them": -2,
+           "outcome": "He sighs and says Clara would have asked for something specific.",
+           "why": "This is the scripted close. It takes the need off the table and tells him the real thing isn't wanted."
+          }
+         ]
+        },
+        {
+         "who": "Daniel",
+         "text": "“Something from the week, then. Clara says you've been at it since seven.”",
+         "cue": "sitting down at last",
+         "lines": [
+          {
+           "text": "“Clara found my off-by-one in ten minutes. I'd stared at it for two hours. I was cross, and then I was just glad.”",
+           "tag": "best",
+           "you": 4,
+           "them": 6,
+           "outcome": "Daniel laughs, properly, for the first time all week. “She found mine in March. Don't tell her I said.”",
+           "why": "You offer a small, true detail from your week, which is a real gift to him. It doesn't need to be a confession to count as intimacy."
+          },
+          {
+           "text": "“Nothing to tell. Just work.”",
+           "tag": "ok",
+           "you": -1,
+           "them": -2,
+           "outcome": "He says “Okay,” in the voice that means it isn't, and checks his phone.",
+           "why": "This is the scripted close. It leaves him with the sense of a door shut, which is the thing he was braced for."
+          }
+         ]
+        }
+       ],
+       "payoff": "Wednesday, 6:25pm. Daniel opens the door, says “Fine,” and tells the room the export is covered. At eleven on Thursday it falls over in front of the client.",
+       "example": "Hospital corridor, Tuesday, 7:00pm.<br>Nurse: “Tell me the truth, are you in pain?”<br>Patient: “More than I said. It's a six, and I didn't want to be a bother.”<br>Nurse: “Good. Then we sort the six.”"
+      }
+     ]
+    },
+    {
+     "level": "Analyse",
+     "label": "Analyse, explain it",
+     "intro": "Name the part that was missing from that reply. Then sort three more moments.",
+     "items": [
+      {
+       "type": "pick",
+       "who": "Daniel",
+       "text": "“Where are we on export? Don't say 'nearly'.” You said “Nearly” anyway, though you had watched it die on the big file twice that morning, and the red 4 went up on the board.",
+       "cue": "pen already on the whiteboard",
+       "options": [
+        "Intimacy. A candid reply would have given Daniel the whole picture, not one cheerful word.",
+        "Spontaneity. 'Nearly' was the taught reply, and no other feeling got a turn.",
+        "Awareness. You weren't watching your own screen, so the answer came out of thin air."
+       ],
+       "answer": 1,
+       "why": "You had watched it fail, so awareness was working. The word 'nearly' arrived without a choice, straight from the habit of calming a hurrying boss. Choosing a feeling from all your voices, instead of only the taught one, is spontaneity.",
+       "traps": {
+        "0": "Intimacy. Candour does come into it, but a candid reply starts with picking a feeling to show, and 'nearly' was never picked. It just arrived.",
+        "2": "Awareness. You watched the failure twice, so you knew exactly where things stood. The gap came in the reply you gave after that."
+       },
+       "example": "Reception desk, Monday, 9:00am.<br>Clerk: “Any problems with the booking? Don't say fine.”<br>Guest: “Fine.”<br>Clerk: “Right, you're in room nine.” The leak above room nine goes unmentioned."
+      },
+      {
+       "type": "sort",
+       "prompt": "Three more moments, each with one capacity missing. Put each in the bin for the one that was missing.",
+       "bins": [
+        "Awareness",
+        "Spontaneity",
+        "Intimacy"
+       ],
+       "items": [
+        {
+         "text": "“I ate the whole canteen lunch reading the release notes on my phone. I couldn't tell you what it was.”",
+         "answer": 0,
+         "why": "Body at the table, mind in the notes. Awareness is being here and hearing and tasting for yourself, and lunch went by unseen."
+        },
+        {
+         "text": "“Clara thanked me for the review and I said ‘Anytime, no problem’, same as for every thanks, though I wanted to tell her I liked doing it.”",
+         "answer": 1,
+         "why": "One rehearsed line covered a whole range of feelings. Spontaneity is having that range to choose from, and here only the taught reply got a turn."
+        },
+        {
+         "text": "“I told Omar the demo was in hand, then left the failing export log open on my screen where he would see it.”",
+         "answer": 2,
+         "why": "The open log is a hook. Intimacy is candour with no game in it, and leaving a hint around is the opposite of saying it plainly."
+        }
+       ],
+       "example": "Train carriage, 6:10pm.<br>Colleague: “Good day?”<br>You, eyes on your phone: “Fine.”<br>You miss your stop."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "setting": "Friends & Community",
+   "blurb": "Ruby says no fuss, Joseph is baking anyway, and your knee has been lying to the five-a-side group.",
+   "opener": {
+    "setting": "Thursday, 6:50pm. The Corner Table, after closing. Chairs are going up on the tables and the radiator is ticking.",
+    "lines": [
+     {
+      "who": "Joseph",
+      "text": "“She said no fuss. So we're doing a small fuss. A cake, one candle, ten minutes.”",
+      "cue": "balancing a stack of chairs under one arm"
+     },
+     {
+      "who": "Nadia",
+      "text": "“The back table is yours from three on Saturday. Mind the radiator, it bites.”",
+      "cue": "wiping the counter, not turning round"
+     }
+    ],
+    "ask": "In each of the next three moments, which move is yours, and which one is the script?"
+   },
+   "rounds": [
+    {
+     "level": "Spot",
+     "label": "Spot, round 1",
+     "intro": "Being your own person has three parts. Noticing is seeing and hearing for yourself, here and now, in your own way and without the labels you were handed. Choosing fresh is picking the feeling and the reply you want from all your voices, including the ones you were never taught to use. Being real is plain candour with no game in it.",
+     "items": [
+      {
+       "type": "pick",
+       "who": "You",
+       "text": "“I want to be in. I'm embarrassed: my knee has been bad for a month, and I keep playing on it so nobody thinks I'm soft.”",
+       "cue": "on the bench, lacing a boot you can't quite bend to",
+       "options": [
+        "Noticing",
+        "Choosing fresh",
+        "Being real"
+       ],
+       "answer": 2,
+       "why": "You say the plain thing at its real size, with the feeling attached and no joke, hint or hook. Telling Joseph straight is being real.",
+       "traps": {
+        "0": "Noticing. You do notice the knee, and it is in the line. But noticing alone stays on the facts, and this line goes on to say how you feel.",
+        "1": "Choosing fresh. It is a new answer to 'sure, I'm in', but what makes it new is the candour, so the better name is being real."
+       },
+       "example": "Swimming baths, Saturday, 7:00am.<br>Coach: “Coming to the gala? Don't make me chase you.”<br>You: “I'd love to. I'm nervous, and I've been skipping practice so nobody sees me struggle.”"
+      },
+      {
+       "type": "pick",
+       "who": "You",
+       "text": "“'Nice' is what I say about every haircut. Yours is a bit wild, I'm slightly jealous, and I want to touch the fringe.”",
+       "cue": "grinning across the counter at Ruby",
+       "options": [
+        "Noticing",
+        "Choosing fresh",
+        "Being real"
+       ],
+       "answer": 1,
+       "why": "You see the usual 'nice' coming and pick a playful, envious feeling to show instead. Choosing which feeling to show, not only the taught one, is choosing fresh.",
+       "traps": {
+        "0": "Noticing. You do catch the habit, but the work of the line is picking a new feeling to show. Noticing alone would stop at 'I always say nice'.",
+        "2": "Being real. It is candid, but the heart of the line is the swap from the taught reply to a playful one. The candour comes second."
+       },
+       "example": "Hairdresser's, Friday, 5:15pm.<br>Stylist: “Like it? Don't say nice.”<br>You (who always say nice): “I look like a different person, and I'm going to wear a hat so nobody sees it until Sunday.”"
+      },
+      {
+       "type": "pick",
+       "who": "You",
+       "text": "“Both times Ruby said 'no fuss' she looked at the door, and the second time she asked what time it was.”",
+       "cue": "stacking the last chair, voice low",
+       "options": [
+        "Noticing",
+        "Choosing fresh",
+        "Being real"
+       ],
+       "answer": 0,
+       "why": "You take in where she looked and what she asked with your own senses, and you don't add a label like 'she secretly wants one'. That is noticing.",
+       "traps": {
+        "1": "Choosing fresh. It sounds like a new line, but nothing is swapped for a habit here. The line only reports what you saw.",
+        "2": "Being real. It is honest, but the line says nothing about how you feel. It stays with what you watched, which is noticing."
+       },
+       "example": "Bakery, Sunday, 8:30am.<br>Baker: “Why's the queue so short today?”<br>You: “The shutters are half down, and there's no smell of bread yet.”"
+      }
+     ]
+    },
+    {
+     "level": "Play",
+     "label": "Play, the week in motion",
+     "intro": "Three short scenes. In each one, pick the move that is yours, not the one you were taught.",
+     "items": [
+      {
+       "type": "scene",
+       "title": "Saturday, 2:50pm, the back table",
+       "setting": "Joseph has baked the cake himself. The top cracked in the oven, and he has hidden the crack under icing sugar.",
+       "meters": {
+        "you": 60,
+        "them": 50
+       },
+       "beats": [
+        {
+         "who": "Joseph",
+         "text": "“I baked it at six this morning. Don't look at the middle.”",
+         "cue": "lifting the tin lid an inch, like a man disarming something",
+         "lines": [
+          {
+           "text": "“It looks great, Joseph. You shouldn't have gone to the trouble.”",
+           "tag": "ok",
+           "you": 0,
+           "them": 2,
+           "outcome": "He shuffles. “It was no trouble,” he says, and puts the lid back on.",
+           "why": "This is the polite script. It is kind, and it skips the cake, which is the thing he actually made."
+          },
+          {
+           "text": "“It smells of burnt sugar and lemon. The crack runs left to right like a river on a map. Did you do the river on purpose?”",
+           "tag": "best",
+           "you": 3,
+           "them": 4,
+           "outcome": "Joseph's face opens. “I did now,” he says, and takes the lid off properly.",
+           "why": "You notice what is actually here, the smell and the crack. Noticing gives him something real back."
+          },
+          {
+           "text": "“You always do this, Joseph. Now I owe you a good review, and you'll bring it up at five-a-side.”",
+           "tag": "game",
+           "you": -5,
+           "them": -6,
+           "outcome": "The scene stops there. Joseph puts the lid down on the tin and says nothing about it.",
+           "why": "This turns a gift into a debt. The cake becomes a ledger entry, and he will carry the price into Thursday."
+          }
+         ]
+        },
+        {
+         "who": "Joseph",
+         "text": "“How are you finding this, then? Be straight with me.”",
+         "cue": "wiping his hands down an apron that says Nadia's",
+         "lines": [
+          {
+           "text": "“I'm a bit nervous. The balloon keeps sliding off the chair, and I like that we're doing this at all.”",
+           "tag": "best",
+           "you": 3,
+           "them": 4,
+           "outcome": "Joseph laughs and ties the balloon to the chair leg. “Nervous is allowed. I've dropped the knife twice.”",
+           "why": "You say how you are, with a small true detail from the room. It is a fresh line, not the 'fine' you would have said at the start of the year."
+          },
+          {
+           "text": "“Fine, Joseph. All good.”",
+           "tag": "ok",
+           "you": -1,
+           "them": -2,
+           "outcome": "He nods and goes back to fussing with the napkins.",
+           "why": "It is the scripted small talk. That closes the door on the one thing he asked for."
+          }
+         ]
+        },
+        {
+         "who": "Joseph",
+         "text": "“Is the icing too yellow? Tell me it's lemon, or I'll think I've dyed it custard.”",
+         "cue": "holding the tin up to the window",
+         "lines": [
+          {
+           "text": "“More like buttercups. The left edge is paler, as if it's shy. A bit like you, Joseph.”",
+           "tag": "best",
+           "you": 3,
+           "them": 4,
+           "outcome": "He swats you with a napkin. “Cheeky. Pass me the candle before I lose my nerve.”",
+           "why": "You notice the colour exactly, and you say one true thing about him. It has warmth in it because it is specific."
+          },
+          {
+           "text": "“It's lovely, Joseph.”",
+           "tag": "ok",
+           "you": 0,
+           "them": 1,
+           "outcome": "He nods, pleased enough. Then he asks about the candle again.",
+           "why": "A polite yes that ends the moment. There is nothing wrong with it, and nothing new in it either."
+          }
+         ]
+        }
+       ],
+       "payoff": "Saturday, 3:02pm. Joseph sets the knife down and lets the cake sit. When Ruby walks in, nobody has spoken for two minutes.",
+       "example": "Pottery shop, Wednesday, 5:00pm.<br>Friend: “I made you a mug. Be nice.”<br>You: “The handle is bigger than my hand, and the glaze is the blue of a swimming pool. Where did you get that blue?”"
+      },
+      {
+       "type": "scene",
+       "title": "Saturday, 3:10pm, the back table",
+       "setting": "Ruby stops in the doorway with her coat still on and her bag held in front of her like a shield.",
+       "meters": {
+        "you": 55,
+        "them": 45
+       },
+       "beats": [
+        {
+         "who": "Ruby",
+         "text": "“What's all this? I said no fuss. I look a state.”",
+         "cue": "one hand still on the door",
+         "lines": [
+          {
+           "text": "“You look lovely, Ruby. Happy birthday.”",
+           "tag": "ok",
+           "you": -1,
+           "them": -2,
+           "outcome": "“Thanks,” she says, to the floor, and stays by the door.",
+           "why": "This is the trained reply. It answers the worry and closes the door, so the two of you carry on apart."
+          },
+          {
+           "text": "“You said no fuss, and we fussed anyway. I'm not sorry. It's a very small fuss, and the coat can stay on.”",
+           "tag": "best",
+           "you": 4,
+           "them": 4,
+           "outcome": "Ruby laughs, a short surprised one. She takes a step in and, coat and all, sits down.",
+           "why": "You answer from a fresh place, with a playful, unapologetic feeling. It breaks the old loop, and she gets to be teased instead of managed."
+          },
+          {
+           "text": "“Don't look at me. It was Joseph's idea. I told him you'd hate it.”",
+           "tag": "game",
+           "you": -5,
+           "them": -5,
+           "outcome": "The scene stops there. Joseph's face falls, and Ruby is already half out of the door.",
+           "why": "This is a sting dressed up as a reply. It throws Joseph under the bus and confirms Ruby's fear, and nobody sits down."
+          }
+         ]
+        },
+        {
+         "who": "Ruby",
+         "text": "“Right. Who's cutting this? I'll do it, I always do it. Someone has to.”",
+         "cue": "already rolling up her sleeves",
+         "lines": [
+          {
+           "text": "“If you like, Ruby. Thanks.”",
+           "tag": "ok",
+           "you": -1,
+           "them": 0,
+           "outcome": "She takes the knife and cuts eight even slices. Her face closes up again.",
+           "why": "It lets her carry the job again. It is safe, and the old pattern stays in place."
+          },
+          {
+           "text": "“Not today. Sit down. You get one job: say whether the middle is cooked.”",
+           "tag": "best",
+           "you": 3,
+           "them": 4,
+           "outcome": "Ruby sits, a little stunned. “Raw,” she says, with a grin, before she has even tasted it.",
+           "why": "You pick a bossy, affectionate voice where the taught one would be polite. Choosing fresh is a line that didn't come from the reflex."
+          }
+         ]
+        },
+        {
+         "who": "Ruby",
+         "text": "“Everyone's gone quiet. Someone say something. Please.”",
+         "cue": "staring at the candle",
+         "lines": [
+          {
+           "text": "“I can't do speeches, so I'm going to sing, badly, and you can't stop me.”",
+           "tag": "best",
+           "you": 3,
+           "them": 5,
+           "outcome": "Joseph joins in, in a different key. Nadia bangs the counter in time. Ruby laughs behind her hand, and then without it.",
+           "why": "You pick the silly, free voice that you were never taught to use in public. It costs nothing and lifts the whole table."
+          },
+          {
+           "text": "“Speech, Joseph! Speech!”",
+           "tag": "ok",
+           "you": 0,
+           "them": -1,
+           "outcome": "Joseph goes pink and says he's no good at those. Ruby studies the candle.",
+           "why": "It hands the moment to someone else. It is safe and kindly meant, and it leaves the silence where it was."
+          }
+         ]
+        }
+       ],
+       "payoff": "Saturday, 3:12pm. Ruby says “I'll just go, then.” The bell on the door clangs shut behind her. The cake is cut at four by Nadia, for three people.",
+       "example": "Staff room, Friday, 1:00pm.<br>Colleague: “They bought me a cake. I said no fuss!”<br>You: “You also said no fuss in March, and you cried in the lift. Sit down, it's tiny.”"
+      },
+      {
+       "type": "scene",
+       "title": "Saturday, 5:20pm, the Corner Table",
+       "setting": "Everyone has gone. The kettle has gone cold and the radiator ticks. Joseph is tipping chairs onto the tables, and you are holding the last two.",
+       "meters": {
+        "you": 50,
+        "them": 50
+       },
+       "beats": [
+        {
+         "who": "Joseph",
+         "text": "“Thursday, five-a-side, same as ever? You in?”",
+         "cue": "tipping a chair onto its table",
+         "lines": [
+          {
+           "text": "“Sure, I'll be there.”",
+           "tag": "ok",
+           "you": -1,
+           "them": -3,
+           "outcome": "Joseph says “Great” and writes it on the back of his hand. On Thursday you sit on the bench with your knee wrapped under your trousers.",
+           "why": "This is the script: the yes that closes the question. It sounds easy-going, and it leaves him counting on a player who can't run."
+          },
+          {
+           "text": "“I want to be, and I can't run on this knee. It's been a month, and I kept quiet so nobody would think I was soft.”",
+           "tag": "best",
+           "you": 4,
+           "them": 5,
+           "outcome": "Joseph sets his chair down. “A month? I thought you were off the boil,” he says, and means it kindly.",
+           "why": "This is being real: plain candour with no game in it. You don't have to look fit for the game, and he can hear where you actually are."
+          },
+          {
+           "text": "“You always do this, Joseph. You ask when you know I'll say yes.”",
+           "tag": "game",
+           "you": -5,
+           "them": -6,
+           "outcome": "The scene stops there. Joseph says “Right” and takes the chairs out the back himself.",
+           "why": "This turns his question into a charge against him. The real thing, the knee, disappears under an old story about him."
+          }
+         ]
+        },
+        {
+         "who": "Joseph",
+         "text": "“Then what do you want from Thursdays? Tell me, and I'll sort it.”",
+         "cue": "chair still in his hands",
+         "lines": [
+          {
+           "text": "“I'd like to go in goal for a few weeks, and still come for the pint after.”",
+           "tag": "best",
+           "you": 3,
+           "them": 4,
+           "outcome": "Joseph grins. “Goal's yours. The pint's on me, if you stop me being Gary's keeper.”",
+           "why": "You say what you want, plainly, without asking him to fix your knee. That is a real request for company, not a rescue."
+          },
+          {
+           "text": "“Anything works, I'm easy.”",
+           "tag": "ok",
+           "you": -2,
+           "them": -2,
+           "outcome": "He shrugs and says Gary will be pleased to have someone who doesn't mind.",
+           "why": "This is the scripted close. It takes the need off the table and tells him the real thing isn't wanted."
+          }
+         ]
+        },
+        {
+         "who": "Joseph",
+         "text": "“Tell me one thing from today. I was too busy with the knife to see any of it.”",
+         "cue": "leaning on the radiator",
+         "lines": [
+          {
+           "text": "“Ruby's laugh on the third try with the candle. It came out as a snort, and she didn't hide it. I'm keeping that one.”",
+           "tag": "best",
+           "you": 4,
+           "them": 6,
+           "outcome": "Joseph laughs, properly. “A snort. I missed it. I'll get you to tell it again on Thursday.”",
+           "why": "You offer a small, true detail from the day, which is a real gift to him. It doesn't need to be a confession to count as intimacy."
+          },
+          {
+           "text": "“It was nice. Good cake.”",
+           "tag": "ok",
+           "you": -1,
+           "them": -2,
+           "outcome": "He says “Cheers” in the voice that means he'd hoped for more.",
+           "why": "This is the scripted close. It leaves him with the sense of a door shut, which is the thing he was braced for."
+          }
+         ]
+        }
+       ],
+       "payoff": "Saturday, 5:35pm. Joseph takes the chairs out the back himself. On Thursday the five-a-side bench is full, and there is no spare place on it for you.",
+       "example": "Allotment gate, Sunday, 10:00am.<br>Neighbour: “Joining the rota next week?”<br>You: “I want to, and my back is not up to digging. Can I do the compost instead?”"
+      }
+     ]
+    },
+    {
+     "level": "Analyse",
+     "label": "Analyse, explain it",
+     "intro": "Name the part that was missing from that reply. Then sort three more moments.",
+     "items": [
+      {
+       "type": "pick",
+       "who": "Ruby",
+       "text": "“Mum goes in on Tuesday. They say it's routine, but nobody has said how long.” You nodded and said “Mm” while working out whether the last slice would be left. When Ruby stopped, you said “Sorry, what?”",
+       "cue": "stirring her tea, not looking up",
+       "options": [
+        "Awareness. Your body stayed at the table while your mind went to the cake.",
+        "Intimacy. You kept something back from Ruby, so a hint stood where candour should have been.",
+        "Spontaneity. 'Mm' was the taught reply, and you didn't use your freedom to choose another feeling."
+       ],
+       "answer": 0,
+       "why": "Your body was at the table and your mind was on the last slice. Awareness is seeing and hearing for yourself in the here and now, and it had gone before Ruby finished her sentence.",
+       "traps": {
+        "1": "Intimacy. You didn't hold anything back or drop a hint, because you weren't there to do either. The gap came earlier, at the listening.",
+        "2": "Spontaneity. 'Mm' is a taught reply, but no choice was even in play. You weren't taking in what Ruby said, so there was nothing to answer."
+       },
+       "example": "Waiting room, Tuesday, 11:00am.<br>Friend: “They said six weeks.”<br>You, scrolling your phone: “Mm.”<br>Friend: “Never mind.”"
+      },
+      {
+       "type": "sort",
+       "prompt": "Three more moments, each with one capacity missing. Put each in the bin for the one that was missing.",
+       "bins": [
+        "Awareness",
+        "Spontaneity",
+        "Intimacy"
+       ],
+       "items": [
+        {
+         "text": "“I spent the whole birthday tea checking my phone for tram times, and Ruby's cake had gone before I tasted it.”",
+         "answer": 0,
+         "why": "Body at the table, mind on the timetable. Awareness is being here in the present, and the tea passed unseen."
+        },
+        {
+         "text": "“Joseph praised my goalkeeping and I said ‘Fluke’, same as always, though I was thrilled and wanted him to say more.”",
+         "answer": 1,
+         "why": "One rehearsed word covered a wide range of feelings. Spontaneity is having that range to choose from, and here only the taught reply was offered."
+        },
+        {
+         "text": "“I told Ruby I couldn't make Thursday because of ‘a thing’, then sighed loudly so she would ask what the thing was.”",
+         "answer": 2,
+         "why": "The sigh is a hook. Intimacy is candour with no game in it, and fishing for a question is the opposite of saying it plainly."
+        }
+       ],
+       "example": "Bus stop, Saturday, 5:30pm.<br>Neighbour: “Heading anywhere nice?”<br>You, mind on tomorrow: “Mm.”<br>The bus pulls away from both of you."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "setting": "Relationships",
+   "blurb": "Clara hides two cinema tickets behind a spreadsheet of reasons it's casual, and you are her friend.",
+   "opener": {
+    "setting": "Thursday, 5:40pm. The Corner Table, the window seat. A laptop and two cinema tickets sit between the cups.",
+    "lines": [
+     {
+      "who": "Clara",
+      "text": "“Two tickets, Saturday, the old film at the Regent. I've made a spreadsheet of why it's casual. Don't look at it.”",
+      "cue": "angling the laptop away with one hand"
+     },
+     {
+      "who": "Clara",
+      "text": "“He's coming at ten past. Say nothing about the tickets. Say nothing about anything.”",
+      "cue": "turning the tickets face down, then face up again"
+     }
+    ],
+    "ask": "In each of the next three moments, which move is yours, and which one is the script?"
+   },
+   "rounds": [
+    {
+     "level": "Spot",
+     "label": "Spot, round 1",
+     "intro": "Being your own person has three parts. Noticing is seeing and hearing for yourself, here and now, in your own way and without the labels you were handed. Choosing fresh is picking the feeling and the reply you want from all your voices, including the ones you were never taught to use. Being real is plain candour with no game in it.",
+     "items": [
+      {
+       "type": "pick",
+       "who": "You",
+       "text": "“Your thumbnail's picked raw, you've turned those tickets over three times, and the laptop has been on one cell for ten minutes.”",
+       "cue": "eyes on her hands, voice low",
+       "options": [
+        "Noticing",
+        "Choosing fresh",
+        "Being real"
+       ],
+       "answer": 0,
+       "why": "You take in the thumbnail, the tickets and the stuck cell with your own senses, in your own words. No label like 'nervous' is stuck on her. That is noticing.",
+       "traps": {
+        "1": "Choosing fresh. It sounds like a new line, but nothing is swapped for a habit here. The line only describes what you can see.",
+        "2": "Being real. It is kind, but the line says nothing about how you feel. It stays with what is in front of you, which is noticing."
+       },
+       "example": "Kitchen, Sunday, 11:00am.<br>Dad: “The kettle's broken.”<br>You: “The light doesn't come on, and the plug is warm.”"
+      },
+      {
+       "type": "pick",
+       "who": "You",
+       "text": "“When you list the reasons it's casual, I get nervous for you. I want you to ask him, and I don't want you hurt.”",
+       "cue": "keeping your voice level, hands round your cup",
+       "options": [
+        "Noticing",
+        "Choosing fresh",
+        "Being real"
+       ],
+       "answer": 2,
+       "why": "You say the plain thing at its real size, with the feeling attached and no joke, hint or hook. Telling Clara straight is being real.",
+       "traps": {
+        "0": "Noticing. You do see the list, and it is in the line. But noticing alone stays on the facts, and this line goes on to say how you feel.",
+        "1": "Choosing fresh. It is a new answer to 'go for it, you'll be fine', but what makes it new is the candour, so the better name is being real."
+       },
+       "example": "Sister's WhatsApp, Sunday night.<br>Sister: “Should I take the job?”<br>You: “I'll miss you terribly if you go, and I think you should. Both are true.”"
+      },
+      {
+       "type": "pick",
+       "who": "You",
+       "text": "“'Lovely' is what I always say. Today it's this: you look like someone about to jump off the high board, and I'm the one cheering at the edge.”",
+       "cue": "grinning, straightening her collar",
+       "options": [
+        "Noticing",
+        "Choosing fresh",
+        "Being real"
+       ],
+       "answer": 1,
+       "why": "You see the usual 'lovely' coming and pick a playful, cheering feeling to show instead. Choosing which feeling to show, not only the taught one, is choosing fresh.",
+       "traps": {
+        "0": "Noticing. You do catch the habit, but the work of the line is picking a new feeling to show. Noticing alone would stop at 'I always say lovely'.",
+        "2": "Being real. It is candid, but the heart of the line is the swap from the taught reply to a playful one. The candour comes second."
+       },
+       "example": "Market stall, Saturday, 10:00am.<br>Friend: “Do I look all right? Don't say fine.”<br>You (who always say fine): “You look like a person who's about to win the raffle.”"
+      }
+     ]
+    },
+    {
+     "level": "Play",
+     "label": "Play, the week in motion",
+     "intro": "Three short scenes. In each one, pick the move that is yours, not the one you were taught.",
+     "items": [
+      {
+       "type": "scene",
+       "title": "Thursday, 6:10pm, the Corner Table",
+       "setting": "Clara has slid a folded card across the table with your name on it. Inside is a list: four lifts, two nights on her sofa and one borrowed charger.",
+       "meters": {
+        "you": 60,
+        "them": 50
+       },
+       "beats": [
+        {
+         "who": "Clara",
+         "text": "“I wrote it all down so we're square. Don't argue.”",
+         "cue": "smoothing the card flat with both palms",
+         "lines": [
+          {
+           "text": "“Clara, you didn't need to do this. We're not counting.”",
+           "tag": "ok",
+           "you": 0,
+           "them": 2,
+           "outcome": "“I know,” she says, in the voice that means she'll keep counting anyway, and tucks the pen back into her bag.",
+           "why": "This is the polite script. It is kind, and it skips the card, which is the thing she actually made."
+          },
+          {
+           "text": "“The writing gets smaller towards the bottom, and there's a coffee ring on ‘sofa nights’. You spent a good while on this.”",
+           "tag": "best",
+           "you": 3,
+           "them": 4,
+           "outcome": "Clara goes pink. “Forty minutes,” she says. “The ring is last night's cocoa.”",
+           "why": "You notice what is actually on the page, the shrinking handwriting and the ring. Noticing gives her something real back."
+          },
+          {
+           "text": "“Typical. Now I owe you for the card as well, and you'll count that too.”",
+           "tag": "game",
+           "you": -5,
+           "them": -6,
+           "outcome": "The scene stops there. Clara folds the card in half and puts it away without a word.",
+           "why": "This turns a gift into a debt. The card becomes a ledger entry, and she will add the price to the list."
+          }
+         ]
+        },
+        {
+         "who": "Clara",
+         "text": "“Say something about it, anything. Or I'll bin it.”",
+         "cue": "reaching to take it back",
+         "lines": [
+          {
+           "text": "“I'm keeping it. You drew a tiny car next to ‘lifts’, and I'm going to look at that car whenever I'm cross.”",
+           "tag": "best",
+           "you": 3,
+           "them": 4,
+           "outcome": "Clara stops with her hand halfway. “It's a Fiat,” she says, and her ears go red.",
+           "why": "You say how you are, with a small true detail from the card. It is a fresh line, not the 'it's very thorough' you would have said at the start of the year."
+          },
+          {
+           "text": "“It's very thorough, Clara.”",
+           "tag": "ok",
+           "you": -1,
+           "them": -2,
+           "outcome": "She nods and tucks the card under her saucer.",
+           "why": "This is the scripted small talk. It closes the door on the one thing she asked for."
+          }
+         ]
+        },
+        {
+         "who": "Clara",
+         "text": "“Is that Omar? He said ten past. It's twelve past. Tell me what you see.”",
+         "cue": "not turning round, hands flat on the table",
+         "lines": [
+          {
+           "text": "“Grey coat, wet shoulders, a paper bag held in both hands as if something might spill. He's looking for you.”",
+           "tag": "best",
+           "you": 3,
+           "them": 4,
+           "outcome": "Clara breathes out and turns round. “He bought the bun,” she says, “the one I pretended I didn't want.”",
+           "why": "You notice the coat, the damp and the bag exactly, and you hand the picture over without an opinion. It has warmth in it because it is specific."
+          },
+          {
+           "text": "“Yes, that's him. Smile.”",
+           "tag": "ok",
+           "you": 0,
+           "them": -1,
+           "outcome": "She smiles too early, a wide stretched one, and Omar asks if she has cramp.",
+           "why": "A friendly instruction that ends the moment. There is nothing wrong with it, and nothing new in it either."
+          }
+         ]
+        }
+       ],
+       "payoff": "Thursday, 6:20pm. Clara puts the card away and orders a pot of tea for one. Omar arrives to a table where nobody is looking at anybody.",
+       "example": "Birthday dinner, Saturday, 8:00pm.<br>Friend: “I've listed what I owe you from last year.”<br>You: “You've drawn a hat over the pizza night. What's the hat?”"
+      },
+      {
+       "type": "scene",
+       "title": "Friday, 12:40pm, the Halden canteen",
+       "setting": "Omar has carried his tray to your table without being asked. His soup is going cold while he works up to something.",
+       "meters": {
+        "you": 55,
+        "them": 45
+       },
+       "beats": [
+        {
+         "who": "Omar",
+         "text": "“You're her friend. Did she say anything about Saturday? Don't say it's not your place.”",
+         "cue": "tapping the spoon on the rim of the bowl",
+         "lines": [
+          {
+           "text": "“It's not my place, Omar. You should ask her.”",
+           "tag": "ok",
+           "you": -1,
+           "them": -2,
+           "outcome": "He nods slowly. “Right,” he says, and eats his soup without tasting it.",
+           "why": "This is the trained reply. It answers the question and closes the door, so the two of you carry on apart."
+          },
+          {
+           "text": "“I'm not saying. I'll say this: ask her something with a day and a time in it, and watch what her face does.”",
+           "tag": "best",
+           "you": 4,
+           "them": 4,
+           "outcome": "Omar sits up. “A day and a time,” he says, as if you had given him a map.",
+           "why": "You answer from a fresh place, with a cheeky and warm feeling. It breaks the old loop, and you protect her confidence without hiding behind 'not my place'."
+          },
+          {
+           "text": "“She's mad about you, obviously. Don't tell her I said. Go and fix it before she does something silly.”",
+           "tag": "game",
+           "you": -5,
+           "them": -5,
+           "outcome": "The scene stops there. Omar thanks you, a bit stiffly, and goes back to his desk looking at Clara's chair.",
+           "why": "This is a sting dressed up as help. It gives away her secret, makes you the messenger, and sets Omar up to say something he has not been invited to say."
+          }
+         ]
+        },
+        {
+         "who": "Omar",
+         "text": "“How do I ask without making it a Thing? I'm no good at pretending it's nothing.”",
+         "cue": "pushing the soup away",
+         "lines": [
+          {
+           "text": "“Just be yourself, Omar. It'll be fine.”",
+           "tag": "ok",
+           "you": -1,
+           "them": 0,
+           "outcome": "He nods and picks the spoon up again without being any wiser.",
+           "why": "A kind line that sends him off with nothing new. It is safe, and the worry stays where it was."
+          },
+          {
+           "text": "“Try it on me. I'll be Clara and I'll be rubbish on purpose: I'll say ‘Oh, I'm so busy’ and look at the ceiling.”",
+           "tag": "best",
+           "you": 3,
+           "them": 4,
+           "outcome": "Omar laughs so hard a man at the next table turns round. “Right. Go. Ceiling.”",
+           "why": "You pick the silly, free voice that you were never taught to use at work. It makes practice safe, and it costs nothing."
+          }
+         ]
+        },
+        {
+         "who": "Omar",
+         "text": "“Saturday, the Regent, the old film. Come with me. How was that?”",
+         "cue": "going red at the ears",
+         "lines": [
+          {
+           "text": "“I'm grinning, and I'm ridiculously proud of you. Say ‘come with me’ once more, slower.”",
+           "tag": "best",
+           "you": 3,
+           "them": 4,
+           "outcome": "Omar says it again, slower, and his voice drops half a note. “Better,” you tell him. “That one I'd say yes to.”",
+           "why": "You show a warm feeling out loud, from the whole range you have, and you make a specific request. That is a fresh line, and it helps him more than a grade would."
+          },
+          {
+           "text": "“That was fine.”",
+           "tag": "ok",
+           "you": 0,
+           "them": -1,
+           "outcome": "He nods, deflated, and asks whether 'fine' is good or bad.",
+           "why": "A safe verdict that ends the moment. There is nothing wrong with it, and nothing new in it either."
+          }
+         ]
+        }
+       ],
+       "payoff": "Friday, 12:50pm. Omar spends the afternoon watching Clara's desk. By five, she has heard from three people that he knows.",
+       "example": "Garden fence, Sunday, 3:00pm.<br>Neighbour: “Does your sister like my brother? Don't say it's not your place.”<br>You: “She won't tell me either. Bring him round for tea and watch.”"
+      },
+      {
+       "type": "scene",
+       "title": "Friday, 9:30pm, on the phone",
+       "setting": "Clara rings from the night bus, the engine growling behind her. Omar said yes at six, and she has been alone with it for three hours.",
+       "meters": {
+        "you": 50,
+        "them": 50
+       },
+       "beats": [
+        {
+         "who": "Clara",
+         "text": "“He said yes. Tell me the truth: have I been awful this week? Everyone's been polite.”",
+         "cue": "low and quick, the bus lurching round a corner",
+         "lines": [
+          {
+           "text": "“Not at all! You've been lovely.”",
+           "tag": "ok",
+           "you": -1,
+           "them": -3,
+           "outcome": "Clara says “Good, good,” and then fills ten minutes with tomorrow's schedule, which means she heard the gap in your voice.",
+           "why": "This is the script: the reassurance that closes the call on the worry. It sounds loving, and it leaves her with an answer she can't check."
+          },
+          {
+           "text": "“A bit awful, yes. You've been so busy being useful that I couldn't tell what you wanted. I've missed you, and I'm glad you asked.”",
+           "tag": "best",
+           "you": 4,
+           "them": 5,
+           "outcome": "There is a long pause. Then Clara says she would rather hear it than be handled, and asks for the example.",
+           "why": "This is being real: plain candour with no game in it. You don't have to sound only kind, and she can hear where you actually are."
+          },
+          {
+           "text": "“You always do this, Clara. You fish for the nice thing so you can wave it off.”",
+           "tag": "game",
+           "you": -5,
+           "them": -6,
+           "outcome": "The scene stops there. Clara says “Right,” and the line goes dead before you can answer.",
+           "why": "This turns her question into a charge against her. The real answer disappears under the old story about how she deflects."
+          }
+         ]
+        },
+        {
+         "who": "Clara",
+         "text": "“Then what do you want from me this weekend? Tell me, and I'll do it.”",
+         "cue": "the bus announcement cutting across her",
+         "lines": [
+          {
+           "text": "“Tell me about the film itself, not the schedule. And let me be pleased for you without a favour owed.”",
+           "tag": "best",
+           "you": 3,
+           "them": 4,
+           "outcome": "Clara goes quiet, then laughs. “There'll be no schedule,” she says. “I'll tell you what the ending was.”",
+           "why": "You say what you want, plainly, without asking her to fix your week. That is a real request for company, not a rescue."
+          },
+          {
+           "text": "“Nothing, just enjoy it.”",
+           "tag": "ok",
+           "you": -2,
+           "them": -2,
+           "outcome": "She says she'll write down a few highlights for you, in a list.",
+           "why": "This is the scripted close. It takes the need off the table and tells her the real thing isn't wanted."
+          }
+         ]
+        },
+        {
+         "who": "Clara",
+         "text": "“Tell me something from your week. I always do the talking.”",
+         "cue": "the engine noise dropping as the bus stops",
+         "lines": [
+          {
+           "text": "“I ate lunch on the bench in the rain on Tuesday and didn't want to go back in. It was the best ten minutes I had.”",
+           "tag": "best",
+           "you": 4,
+           "them": 6,
+           "outcome": "Clara laughs, properly, for the first time in the call. “A bench in the rain,” she says. “Next time, I'll bring the flask.”",
+           "why": "You offer a small, true detail from your week, which is a real gift to her. It doesn't need to be a confession to count as intimacy."
+          },
+          {
+           "text": "“Nothing much. Work's work.”",
+           "tag": "ok",
+           "you": -1,
+           "them": -2,
+           "outcome": "She says “Okay,” in the voice that means it isn't, and the bus doors hiss shut.",
+           "why": "This is the scripted close. It leaves her with the sense of a door shut, which is exactly what she was afraid of."
+          }
+         ]
+        }
+       ],
+       "payoff": "Friday, 9:35pm. The line goes dead mid-stop. On Saturday morning a text arrives from Clara: “Spreadsheet says I'm busy. Sorry.” Omar's ticket stays in his coat pocket.",
+       "example": "Phone call, Sunday, 8:00pm.<br>Cousin: “Be honest, was I rude at the wedding?”<br>You: “A bit, yes. You talked over Auntie Joan twice. I still want you at mine.”"
+      }
+     ]
+    },
+    {
+     "level": "Analyse",
+     "label": "Analyse, explain it",
+     "intro": "Name the part that was missing from that reply. Then sort three more moments.",
+     "items": [
+      {
+       "type": "pick",
+       "who": "Clara",
+       "text": "“It's only a film, Omar. Come if you like. No big deal.” You know she turned down two other plans for Saturday, and the ticket stubs are poking out of her bag where he can see them.",
+       "cue": "tickets half out of her bag",
+       "options": [
+        "Spontaneity. 'No big deal' is the sentence she was taught, and no other feeling got a turn there.",
+        "Awareness. She was so wrapped up in her plan that she missed how Omar looked.",
+        "Intimacy. She hinted instead of asking, so a game stood where candour should be."
+       ],
+       "answer": 2,
+       "why": "She wanted him there, gave up two other plans for it, and then left the stubs where he would see them while saying it was no big deal. Intimacy is candour with no game in it, and a hint is the opposite of asking plainly.",
+       "traps": {
+        "0": "Spontaneity. 'No big deal' is a taught line, and that is part of it. But the missing piece is plain asking, and the stubs in the bag show the hook in action.",
+        "1": "Awareness. Nothing in the scene says she missed what was in front of her. She watched him closely, which is partly why she hid the wish."
+       },
+       "example": "Supermarket queue, Wednesday, 5:50pm.<br>Colleague: “Free on Saturday? No pressure.”<br>You: “Oh, probably nothing on.” You cancelled your own plans this morning, and you are carrying the invitation in your coat pocket."
+      },
+      {
+       "type": "sort",
+       "prompt": "Three more moments, each with one capacity missing. Put each in the bin for the one that was missing.",
+       "bins": [
+        "Awareness",
+        "Spontaneity",
+        "Intimacy"
+       ],
+       "items": [
+        {
+         "text": "“Omar was telling me his news on the phone and I was reading the football score the whole time. I asked him to say it again.”",
+         "answer": 0,
+         "why": "Ears on the call, eyes on the score. Awareness is hearing and seeing for yourself in the here and now, and his news went by unheard."
+        },
+        {
+         "text": "“When Omar said ‘You look nice’, I said ‘This old thing?’, same as always, though I wanted to say thank you and mean it.”",
+         "answer": 1,
+         "why": "One rehearsed line covered a range of feelings. Spontaneity is having that range to choose from, and here only the taught reply got a turn."
+        },
+        {
+         "text": "“I told Clara I didn't mind who paid, then sulked until she noticed and offered.”",
+         "answer": 2,
+         "why": "The sulk is a hook. Intimacy is candour with no game in it, and waiting to be offered is the opposite of asking plainly."
+        }
+       ],
+       "example": "Café till, Friday, 1:15pm.<br>Waiter: “Having a nice day?”<br>You, mind on your inbox: “Mm.”<br>He gives you the wrong change, and you don't count it."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

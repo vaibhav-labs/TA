@@ -1,0 +1,1238 @@
+{
+ "baseBlurb": "Maya runs the flat from a fridge sheet while Sam apologises and waits; the gas bill is overdue.",
+ "stories": [
+  {
+   "setting": "Family",
+   "blurb": "Mum runs the paperwork and Dad says ask your mother, with Gran's bus pass form due Tuesday.",
+   "opener": {
+    "setting": "Sunday, 1:15pm. Gran's flat downstairs at Hawthorn Court, the kitchen. A brown envelope sits by the teapot, and the lunch is going cold.",
+    "lines": [
+     {
+      "who": "Mum",
+      "text": "“The bus pass renewal is due Tuesday. I've filled in every box, so all your father has to do is sign it.”",
+      "cue": "pen uncapped, held out like a ticket"
+     },
+     {
+      "who": "Dad",
+      "text": "“Ask your mother. Whatever she says is right. I'd only get it wrong.”",
+      "cue": "buttering bread he does not want, eyes on the plate"
+     }
+    ],
+    "ask": "Which of them plays the Boss and the Pilot, which of them plays the Kid, and what move would give each of them all three voices?"
+   },
+   "rounds": [
+    {
+     "level": "Spot",
+     "label": "Spot, round 1",
+     "intro": "Each line here comes from one of the three voices: the Boss, the Pilot or the Kid. Tap the voice that is talking, and then the picture of the pair.",
+     "items": [
+      {
+       "type": "pick",
+       "who": "Mum",
+       "text": "<i>She slides the form across the table, a tick already in every box. “Sign there, and there. Don't read it, you'll only slow us down. Just do as it says.”</i>",
+       "cue": "Sunday, 1:20pm, Gran's table",
+       "options": [
+        "the Boss",
+        "the Pilot",
+        "the Kid"
+       ],
+       "answer": 0,
+       "why": "“Just do as it says” is an order with no reasons and no room for a reply. That is the Boss, the voice that learned how a household should be run. The Pilot would say what the form is for and when it is due.",
+       "traps": {
+        "1": "The Pilot deals in plain facts, and a due date is one. But the Pilot would not tell Dad not to read it, so these words ask for more than facts.",
+        "2": "The Kid would plead or sulk, something like “Do I have to?” Mum is asking for nothing here, so the Kid is not talking."
+       },
+       "example": "A choir rehearsal, Thursday.<br>Conductor: “Stand there. Sing what's on the sheet. Don't ask why.”<br>Singer: “Right.” She stops asking and stays in her place."
+      },
+      {
+       "type": "pick",
+       "who": "Dad",
+       "text": "<i>He turns the pen over as if it might bite. “Forms and me never got on. Your mother's the clever one. Tell me where to put my name and I'll put it, and I'll try not to smudge it.”</i>",
+       "cue": "Sunday, 1:24pm, Gran's table",
+       "options": [
+        "the Boss",
+        "the Pilot",
+        "the Kid"
+       ],
+       "answer": 2,
+       "why": "Dad hands the thinking to someone else and asks to be told what to do, with a small joke to soften it. That is the Kid, the part that wants direction and a smile for being no trouble. He never asks what the form says.",
+       "traps": {
+        "0": "The Boss would give orders, something like “Fill it in before Tuesday.” Dad is asking to be told, not telling anyone.",
+        "1": "The Pilot would read the form and say what it asks and by when. Dad has not looked at a single line, and that is the clue."
+       },
+       "example": "A bike shop, Saturday.<br>Customer: “You're the expert. Just tell me which tyre and I'll nod.”<br>Mechanic: “The thick one. Don't haggle.”"
+      },
+      {
+       "type": "pick",
+       "who": "Gran's kitchen",
+       "text": "<i>Mum keeps the forms and the orders. Dad keeps the dry jokes and waits to be told. The bus pass has been renewed this way every year, and every year the afternoon goes the same way.</i>",
+       "cue": "Sunday, 1:30pm, Gran's flat downstairs",
+       "options": [
+        "Two people taking turns at the wheel",
+        "One plays the Boss and the Pilot, the other plays the Kid",
+        "Two people who disagree about the bus pass"
+       ],
+       "answer": 1,
+       "why": "Mum gives the orders and does the sums, which are the Boss and the Pilot. Dad supplies the joke and the waiting, which is the Kid. Between them the household uses three voices where two adults could have six. They fit together so well that neither has to change.",
+       "traps": {
+        "0": "Taking turns would put Dad at the wheel sometimes. In this picture he never is, so it only looks like teamwork from outside.",
+        "2": "A disagreement would have two sides pushing. Here nobody pushes back, and the quiet agreement is the pattern."
+       },
+       "example": "A cricket club committee, Friday.<br>Secretary: “I've got the fixtures and the van. You just turn up and wave.”<br>Captain: “Perfect. I'll forget the van, as usual.”"
+      }
+     ]
+    },
+    {
+     "level": "Play",
+     "label": "Play, the week in motion",
+     "intro": "Two scenes with the same two people. One plays the Boss and the Pilot, and the other plays the Kid. Find the line that gives each of them a voice they have been leaving unused, and watch what the words do to the meters.",
+     "items": [
+      {
+       "type": "scene",
+       "title": "Sunday, 1:30pm, Gran's kitchen",
+       "setting": "Gran's flat downstairs. Gran is at the cooker with her back turned, pretending not to listen, and Leo is under the table with his tablet.",
+       "meters": {
+        "you": 50,
+        "them": 50
+       },
+       "beats": [
+        {
+         "who": "Dad",
+         "text": "“Your mother does all this. I'd only muddle the dates.”",
+         "cue": "pushing the form an inch away with one finger",
+         "lines": [
+          {
+           "text": "“What are the dates, Dad? Tell me the one you do know, and we'll start there.”",
+           "tag": "best",
+           "you": 4,
+           "them": 2,
+           "outcome": "He frowns at the ceiling. “Tuesday's the deadline. And it needs a photo.”",
+           "why": "You ask a plain factual question he can answer. That gives the Pilot in him a small job, and he does it."
+          },
+          {
+           "text": "“It's fine, Mum's got it.”",
+           "tag": "ok",
+           "you": -1,
+           "them": 1,
+           "outcome": "He nods, relieved, and tears off a piece of bread.",
+           "why": "It is kind, and it leaves the pair as it is. Mum does the forms, Dad does the relief."
+          },
+          {
+           "text": "“Dad, you always say that. Just once, do something.”",
+           "tag": "game",
+           "you": -5,
+           "them": -6,
+           "outcome": "The scene stops there. Dad says “Right,” and Gran turns the radio up.",
+           "why": "You scold him from a Parent's seat, and that puts him straight back in the Kid's. He goes quiet and ashamed, which does the form no good."
+          }
+         ]
+        },
+        {
+         "who": "Mum",
+         "text": "“I've done it all. Don't touch it, I've checked every box twice.”",
+         "cue": "her pen laid across the page like a ruler",
+         "lines": [
+          {
+           "text": "“Eat while it's hot, Mum. I'll read the boxes out, and Dad can tick the ones he knows.”",
+           "tag": "best",
+           "you": 4,
+           "them": 4,
+           "outcome": "She sits, a little surprised. “Well. If you read, I'll listen.”",
+           "why": "She gets a turn at being looked after, which is the Kid's seat, and Dad gets a small job that is his."
+          },
+          {
+           "text": "“Fine, you know best.”",
+           "tag": "ok",
+           "you": -1,
+           "them": 1,
+           "outcome": "She nods and picks the pen back up.",
+           "why": "Agreeing is pleasant, and it leaves her carrying the form alone."
+          },
+          {
+           "text": "“You never let anyone else do anything. That's why Dad doesn't try.”",
+           "tag": "game",
+           "you": -5,
+           "them": -6,
+           "outcome": "The scene stops there. Mum puts the lid back on her pen and says, “I see.”",
+           "why": "You blame one half of the pair for the whole pattern. She defends the form, and the form gets heavier."
+          }
+         ]
+        },
+        {
+         "who": "Dad",
+         "text": "“She's brilliant, your mother. I don't know what I'd do without her.”",
+         "cue": "raising the teapot toward her like a toast",
+         "lines": [
+          {
+           "text": "“Then tell her what you'll do by Tuesday, Dad. That helps more than the toast.”",
+           "tag": "best",
+           "you": 4,
+           "them": 2,
+           "outcome": "“The photo. I'll go to the chemist on Monday.” Mum says nothing, but her shoulders drop an inch.",
+           "why": "You turn praise into a plan, and a plan is the Pilot's job. Praise with no date is only a warm nod."
+          },
+          {
+           "text": "“She is. Pass the salt.”",
+           "tag": "ok",
+           "you": -1,
+           "them": 1,
+           "outcome": "He passes the salt, pleased, and the toast stands.",
+           "why": "Friendly, and it agrees the pattern is normal. The form stays with Mum."
+          },
+          {
+           "text": "“She'd be happier if you stopped saying that and did something.”",
+           "tag": "game",
+           "you": -4,
+           "them": -5,
+           "outcome": "The scene stops there. Dad sets the teapot down and looks at Mum, not at you.",
+           "why": "It sounds like a fair point and it is aimed at him. He hears the old message that he is the one who does too little."
+          }
+         ]
+        },
+        {
+         "who": "Mum",
+         "text": "“Don't fuss. I'm fine. I always manage.”",
+         "cue": "standing again to clear plates nobody has finished",
+         "lines": [
+          {
+           "text": "“You do manage, and it shows. Sit for ten minutes, Mum. Dad can clear.”",
+           "tag": "best",
+           "you": 4,
+           "them": 3,
+           "outcome": "She sits. Dad gets up, startled, and starts stacking plates.",
+           "why": "You name what she carries and offer her the Kid's turn at being looked after. Dad gets a job with an end."
+          },
+          {
+           "text": "“All right, I'll help you.”",
+           "tag": "ok",
+           "you": 0,
+           "them": 1,
+           "outcome": "You take the plates yourself. Dad stays in his chair.",
+           "why": "It helps today, and now there is a third person doing the Boss's work. Dad still has nothing to do."
+          },
+          {
+           "text": "“You're not fine, you're a martyr. Everyone can see it.”",
+           "tag": "game",
+           "you": -5,
+           "them": -6,
+           "outcome": "The scene stops there. Mum says, “Eat your lunch,” and the plates stay in her hands.",
+           "why": "This is a hook with a label on the outside. She has to prove she is fine, so she will hold more, not less."
+          }
+         ]
+        }
+       ],
+       "payoff": "Sunday, 2:10pm. The form goes back in the envelope unsigned, and Mum carries it up to finish alone.",
+       "fallout": {
+        "them": "Mum stops asking for help with anything that weekend, and the form is posted in her handwriting."
+       }
+      },
+      {
+       "type": "scene",
+       "title": "Tuesday, 8:10am, the phone call home",
+       "setting": "You are on the bus with the phone against your ear. Mum is on the line with the kettle clicking behind her, and Dad is somewhere further back with the television on mute.",
+       "meters": {
+        "you": 50,
+        "them": 50
+       },
+       "beats": [
+        {
+         "who": "Mum",
+         "text": "“Your father forgot the photo again. I'll sort it. I always do. Did you eat?”",
+         "cue": "the kettle clicking off behind her",
+         "lines": [
+          {
+           "text": "“Put Dad on for a minute, Mum. I'd like to hear what he plans for the photo.”",
+           "tag": "best",
+           "you": 4,
+           "them": 3,
+           "outcome": "A pause. Then footsteps. “Hello, love. The photo. Chemist, five o'clock.”",
+           "why": "You ask for Dad's own plan instead of agreeing that he has none. Mum gets a break from being the only one who knows."
+          },
+          {
+           "text": "“I ate, Mum. Thanks for sorting it.”",
+           "tag": "ok",
+           "you": -1,
+           "them": 1,
+           "outcome": "“Good. That's one less thing.” The phone goes quiet.",
+           "why": "Polite and warm, and it thanks her for carrying everything. The pattern is paid for again."
+          },
+          {
+           "text": "“You do everything and then complain, Mum. Let him fail once.”",
+           "tag": "game",
+           "you": -5,
+           "them": -5,
+           "outcome": "The scene stops there. Mum says, “I'm not complaining,” and the line goes flat.",
+           "why": "You take away her one way of showing care, and you hand her a complaint she did not make. She will defend the job."
+          }
+         ]
+        },
+        {
+         "who": "Dad",
+         "text": "“Hello, love. Sorry about all this. Your mother says I'm hopeless at the post office.”",
+         "cue": "his voice low, the television audible behind him",
+         "lines": [
+          {
+           "text": "“Tell me what time you'll get there, Dad, and ring Mum when it's done.”",
+           "tag": "best",
+           "you": 4,
+           "them": 4,
+           "outcome": "“Half past four. I'll tell her.” Something that sounds like a smile.",
+           "why": "You turn the apology into a time and a report. A time is the Pilot's work, and he has been leaving it to Mum."
+          },
+          {
+           "text": "“You're not hopeless, Dad. Don't be silly.”",
+           "tag": "ok",
+           "you": 0,
+           "them": 2,
+           "outcome": "He laughs, a bit relieved. “Well, thank you.”",
+           "why": "It is kind, and it gives him a nod for being sorry. There is still no plan."
+          },
+          {
+           "text": "“Stop saying sorry and just do it, Dad.”",
+           "tag": "game",
+           "you": -5,
+           "them": -5,
+           "outcome": "The scene stops there. Dad says “Right, yes,” and hands the phone back.",
+           "why": "This is the Boss's voice, and it gives him no job. The apology goes away and the freeze stays."
+          }
+         ]
+        },
+        {
+         "who": "Mum",
+         "text": "“He'll forget by lunch. Give it here.”",
+         "cue": "the phone changing hands with a scrape",
+         "lines": [
+          {
+           "text": "“Let it be his until five, Mum. If it's not done, he can tell you himself.”",
+           "tag": "best",
+           "you": 4,
+           "them": 3,
+           "outcome": "“Five o'clock. Fine. I'll leave the kettle for him.”",
+           "why": "You hand the job to Dad with an end time, and Mum gets to stop being the backup."
+          },
+          {
+           "text": "“All right, you do it, Mum.”",
+           "tag": "ok",
+           "you": -2,
+           "them": 1,
+           "outcome": "“I will. I always do.”",
+           "why": "It ends the call on a warm note and gives the job straight back to the Boss."
+          },
+          {
+           "text": "“That's why he never learns, Mum.”",
+           "tag": "game",
+           "you": -5,
+           "them": -6,
+           "outcome": "The scene stops there. Mum says, “It is not,” and puts the phone down.",
+           "why": "You blame her for the pattern in the very moment she is trying to be kind. She will defend how she runs things."
+          }
+         ]
+        },
+        {
+         "who": "Mum",
+         "text": "“I'm so tired of being the one who knows where everything is.”",
+         "cue": "lower now, turned away from the receiver",
+         "lines": [
+          {
+           "text": "“That sounds heavy. What is one thing you'd love never to look for again?”",
+           "tag": "best",
+           "you": 4,
+           "them": 4,
+           "outcome": "“The car keys. Every morning.” A short laugh. “Your father could hang them on a hook.”",
+           "why": "You take the tiredness as real and ask for one specific piece to hand over. That is a plan she can use."
+          },
+          {
+           "text": "“You're brilliant, Mum. We'd all be lost.”",
+           "tag": "ok",
+           "you": -2,
+           "them": 2,
+           "outcome": "“Well,” she says, and sounds both pleased and tired.",
+           "why": "Praise makes her important and keeps her in the job. The tiredness goes unanswered."
+          },
+          {
+           "text": "“So stop doing it, and see what happens.”",
+           "tag": "game",
+           "you": -5,
+           "them": -6,
+           "outcome": "The scene stops there. Mum says, “Easy to say from there,” and the call ends.",
+           "why": "Advice with no plan sounds like blame. It also says her care is a choice she could drop, and she cannot."
+          }
+         ]
+        }
+       ],
+       "payoff": "Tuesday, 8:40am. The call ends with the photo still unbooked, and Mum says she will do it on her way to the shops.",
+       "fallout": {
+        "you": "Mum rings off with “Never mind, I'll do it,” and the form is posted by lunchtime in her handwriting."
+       }
+      }
+     ]
+    },
+    {
+     "level": "Analyse",
+     "label": "Analyse, explain it",
+     "intro": "Two questions to explain back. You can use the book words now.",
+     "items": [
+      {
+       "type": "pick",
+       "who": "Nadia",
+       "text": "“Mum keeps the forms and the orders, and Dad keeps the dry jokes and waits to be told. What do the books call a relationship where one person plays the Parent and the Adult and the other plays the Child?”",
+       "cue": "turning her cup, one eyebrow up",
+       "options": [
+        "Ulterior transaction",
+        "Passivity",
+        "Symbiosis"
+       ],
+       "answer": 2,
+       "why": "Mum plays the Parent and the Adult, with the orders and the dates, and Dad plays the Child, with the joke and the waiting. Between them they use three of the six ego states. The books call that pattern a symbiosis.",
+       "traps": {
+        "0": "An ulterior transaction has a hidden message under the spoken one. Nothing is hidden here, and the question is about how two people fit together.",
+        "1": "Passivity describes one person's way of dodging a problem. Mum and Dad both act all the time, and the pattern lives in the fit between them."
+       },
+       "example": "A village hall committee, Wednesday.<br>Chair: “I'll do the agenda and the accounts. You just bring biscuits.”<br>Treasurer: “Lovely. I'll forget the biscuits.”"
+      },
+      {
+       "type": "pick",
+       "who": "Nadia",
+       "text": "“What move would give Mum and Dad all three voices between them?”",
+       "cue": "pen in hand, waiting",
+       "options": [
+        "Post the form yourself this once, so the dates stop being a worry for either of them.",
+        "Give Mum a turn at being looked after, and Dad one dated job to report back on.",
+        "Tell Dad he has to read every form himself from now on, and not to ask Mum for help."
+       ],
+       "answer": 1,
+       "why": "Both of them are using only part of what they have. Mum gets a turn in the Kid's chair, and Dad gets a piece of the Pilot's work with an end time. That loosens the symbiosis from both sides without pushing either of them out.",
+       "traps": {
+        "0": "Posting it yourself makes you the new Boss and Pilot, and the pair gets a third person to lean on. It feels helpful, and nobody has used a new voice.",
+        "2": "Telling Dad to do it all alone is the Boss's order, with no support and no fallback. He may freeze, and Mum will step in the moment he does."
+       },
+       "example": "A shared allotment, Saturday.<br>Neighbour A: “I'll plan the beds, and you dig, as always.”<br>Neighbour B: “How about I choose the beans this year, and you sit down with the tea first?”"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "setting": "Friends & Community",
+   "blurb": "Ruby runs Hannah's surprise party from a clipboard while Joseph jokes and waits to be told.",
+   "opener": {
+    "setting": "Friday, 6:30pm. The Corner Table, the back table after Nadia's group has left. Paper squares are still on the cloth, and Ruby has a clipboard.",
+    "lines": [
+     {
+      "who": "Ruby",
+      "text": "“Hannah's surprise is Sunday at two. Cake collected by noon, chairs, candles, the card. Joseph, you only have to get the cake. One job.”",
+      "cue": "ticking the clipboard with a pen on a string"
+     },
+     {
+      "who": "Joseph",
+      "text": "“Cake, yes. Brilliant. What was the bakery called again, and what colour is it? I'm rubbish at this, sorry.”",
+      "cue": "laughing, already looking at his phone"
+     }
+    ],
+    "ask": "Which of them plays the Boss and the Pilot, which of them plays the Kid, and what move would give each of them all three voices?"
+   },
+   "rounds": [
+    {
+     "level": "Spot",
+     "label": "Spot, round 1",
+     "intro": "Each line here comes from one of the three voices: the Boss, the Pilot or the Kid. Tap the voice that is talking, and then the picture of the pair.",
+     "items": [
+      {
+       "type": "pick",
+       "who": "Ruby",
+       "text": "<i>She reads from the clipboard without looking up. “The bakery shuts at one on Sunday. Pick-up is at the back counter, the order is under my name, and it's paid. Quarter to twelve is the safest time.”</i>",
+       "cue": "Friday, 6:34pm, the Corner Table",
+       "options": [
+        "the Boss",
+        "the Pilot",
+        "the Kid"
+       ],
+       "answer": 1,
+       "why": "These are facts, a time and a place, and Ruby leaves the next move to whoever hears them. That is the Pilot, the voice that deals with what is in front of you. The Boss would add an order, and the Kid would ask for help.",
+       "traps": {
+        "0": "The Boss would give an instruction with a warning in it, something like “Be there at quarter to twelve or else.” Ruby gives times and a place and no threat.",
+        "2": "The Kid would wheedle or plead, something like “Could you do this one thing for me?” Ruby is stating information, not asking for a favour."
+       },
+       "example": "A railway platform, Saturday.<br>Guard: “The last train is at 10:52 from platform two. The next one is at six.”<br>Passenger: “Thanks. I'll run.”"
+      },
+      {
+       "type": "pick",
+       "who": "Joseph",
+       "text": "<i>He puts both hands up and laughs. “Whatever you say, boss. I'll forget the lot by Sunday, you know me. Just text me on the day and I'll do it.”</i>",
+       "cue": "Friday, 6:37pm, the Corner Table",
+       "options": [
+        "the Boss",
+        "the Pilot",
+        "the Kid"
+       ],
+       "answer": 2,
+       "why": "Joseph hands the plan to someone else with a joke, and asks to be told. “I'll forget the lot” is charm that keeps him from having to decide anything. That is the Kid, which wants to be directed and liked for it.",
+       "traps": {
+        "0": "The Boss would order someone else about. Joseph is the one waiting to be ordered.",
+        "1": "The Pilot would say when and how he will get to the bakery. Joseph says only that he will forget, and the missing time is the clue."
+       },
+       "example": "A five-a-side game, Thursday.<br>Player: “Just tell me where to stand and I'll run there. I'm useless at tactics.”<br>Captain: “Back left. Don't wander.”"
+      },
+      {
+       "type": "pick",
+       "who": "The back table",
+       "text": "<i>Ruby keeps the clipboard and the reminders. Joseph keeps the jokes and the gentle promises, and waits for the next text. Hannah's party will happen, and it will happen because of one person.</i>",
+       "cue": "Friday, 6:45pm, the Corner Table",
+       "options": [
+        "One plays the Boss and the Pilot, the other plays the Kid",
+        "Two friends sharing the plan evenly",
+        "Two people who disagree about the cake"
+       ],
+       "answer": 0,
+       "why": "Ruby gives the orders and holds the facts, which are the Boss and the Pilot. Joseph supplies the charm and the waiting, which is the Kid. Between them the party uses three voices where two friends have six, and the whole plan sits with one of them.",
+       "traps": {
+        "1": "Sharing evenly would put Joseph's name on the clipboard too. He has none of the plan, so it only looks even.",
+        "2": "A disagreement about the cake would have both of them arguing. Neither is, and the lack of argument is the pattern."
+       },
+       "example": "A flatshare dinner, Sunday.<br>Cook: “I've got the menu and the shopping. You just come in and be funny.”<br>Guest: “Done. And I'll bring the wrong wine.”"
+      }
+     ]
+    },
+    {
+     "level": "Play",
+     "label": "Play, the week in motion",
+     "intro": "Two scenes with the same two people. One plays the Boss and the Pilot, and the other plays the Kid. Find the line that gives each of them a voice they have been leaving unused, and watch what the words do to the meters.",
+     "items": [
+      {
+       "type": "scene",
+       "title": "Friday, 6:40pm, the Corner Table",
+       "setting": "The back table is clear except for Ruby's clipboard and a plate of Nadia's leftover shortbread. Hannah's card lies half signed between the cups.",
+       "meters": {
+        "you": 50,
+        "them": 50
+       },
+       "beats": [
+        {
+         "who": "Joseph",
+         "text": "“Ruby's got it covered. She always does. I'll just turn up and be charming.”",
+         "cue": "tearing a corner off a beer mat",
+         "lines": [
+          {
+           "text": "“Charm is fine. Say what time you'll collect the cake, Joseph, and say it to Ruby.”",
+           "tag": "best",
+           "you": 4,
+           "them": 2,
+           "outcome": "“Quarter to twelve. Ruby, I'll be there at quarter to.” She makes a tick.",
+           "why": "You ask for a time, which is the Pilot's work, and you ask him to say it to the person who usually holds the plan."
+          },
+          {
+           "text": "“Ha, fair enough. That's what you're for.”",
+           "tag": "ok",
+           "you": -1,
+           "them": 1,
+           "outcome": "He grins, and the beer mat gets another tear.",
+           "why": "It is a friendly joke that agrees with his side of the pattern."
+          },
+          {
+           "text": "“You turn up charming and she does everything. Doesn't that bother you?”",
+           "tag": "game",
+           "you": -5,
+           "them": -6,
+           "outcome": "The scene stops there. Joseph says, “It's just how we are,” and picks up his coat.",
+           "why": "You invite him to defend himself. A defence is the Kid's reply, not a plan."
+          }
+         ]
+        },
+        {
+         "who": "Ruby",
+         "text": "“Don't rearrange anything. It's on the clipboard. It's all done.”",
+         "cue": "her pen laid across the page like a ruler",
+         "lines": [
+          {
+           "text": "“It looks done. Which one thing could Joseph take off it, so you can finish your coffee first?”",
+           "tag": "best",
+           "you": 4,
+           "them": 4,
+           "outcome": "She hesitates. “The chairs. Joseph, the chairs.” He salutes.",
+           "why": "You invite her to give a piece away. That lets her sit and be looked after for a minute, and Joseph takes a real job."
+          },
+          {
+           "text": "“Fine, I won't touch it.”",
+           "tag": "ok",
+           "you": -1,
+           "them": 1,
+           "outcome": "She nods and straightens the page.",
+           "why": "It respects the clipboard and leaves the whole of it with her."
+          },
+          {
+           "text": "“If it falls apart, it's because you didn't let anyone help.”",
+           "tag": "game",
+           "you": -4,
+           "them": -6,
+           "outcome": "The scene stops there. Ruby says, “Then I'll just do it,” and caps her pen.",
+           "why": "This puts the blame on her in advance. She will now do everything, and call it your doing."
+          }
+         ]
+        },
+        {
+         "who": "Joseph",
+         "text": "“Ruby, you're a genius. Hannah's so lucky. I'd be nothing without you.”",
+         "cue": "raising his mug",
+         "lines": [
+          {
+           "text": "“Then be something on Sunday, Joseph. Tell her which chairs, and when you'll bring them.”",
+           "tag": "best",
+           "you": 4,
+           "them": 3,
+           "outcome": "“Chairs from the back room at one. Horseshoe.” He writes it on the list himself.",
+           "why": "You turn the praise into a plan. Praise is a warm nod, and it needs a time before it counts for anything."
+          },
+          {
+           "text": "“To Ruby.”",
+           "tag": "ok",
+           "you": 0,
+           "them": 2,
+           "outcome": "Everyone clinks mugs. The clipboard stays where it is.",
+           "why": "It joins the toast and lets the pattern stand."
+          },
+          {
+           "text": "“You say that every time, and then she does it all again.”",
+           "tag": "game",
+           "you": -4,
+           "them": -5,
+           "outcome": "The scene stops there. Joseph laughs too loudly and looks at his mug.",
+           "why": "You expose the pattern as a joke at his cost. He covers with more charm, and the plan still sits with Ruby."
+          }
+         ]
+        },
+        {
+         "who": "Ruby",
+         "text": "“I'm absolutely fine. I just need everyone to do exactly what's written.”",
+         "cue": "her voice too level, the pen clicking",
+         "lines": [
+          {
+           "text": "“You look tired as well as fine. Sit for the shortbread, Ruby, and we'll go down the list together.”",
+           "tag": "best",
+           "you": 4,
+           "them": 4,
+           "outcome": "She sits. “Ten minutes.” She lets Joseph read the next line.",
+           "why": "You name the tiredness as well as the competence, and you offer her the Kid's turn at being looked after."
+          },
+          {
+           "text": "“Understood. Exactly as written.”",
+           "tag": "ok",
+           "you": -1,
+           "them": 0,
+           "outcome": "She nods. The pen goes on clicking.",
+           "why": "It keeps the peace and gives her nothing to put down."
+          },
+          {
+           "text": "“Exactly as written. Heaven forbid anyone breathes.”",
+           "tag": "game",
+           "you": -5,
+           "them": -6,
+           "outcome": "The scene stops there. Ruby puts the clipboard in her bag and says nothing else.",
+           "why": "Sarcasm calls her control the problem. She hears it as a verdict and holds on harder."
+          }
+         ]
+        }
+       ],
+       "payoff": "Friday, 7:05pm. The clipboard goes home in Ruby's bag, and Hannah's party is still one person's job.",
+       "fallout": {
+        "them": "Joseph texts “just tell me what to do” on Saturday instead of planning anything."
+       }
+      },
+      {
+       "type": "scene",
+       "title": "Sunday, 11:40am, outside the bakery",
+       "setting": "A back door with a hand-written sign: closes at one. Joseph has arrived, late, with his phone held at arm's length. Ruby has texted him twice.",
+       "meters": {
+        "you": 50,
+        "them": 50
+       },
+       "beats": [
+        {
+         "who": "Joseph",
+         "text": "“Ruby's texted twice and I haven't read either. Can you read them? I'll panic if I do.”",
+         "cue": "holding the phone away from himself",
+         "lines": [
+          {
+           "text": "“Read them yourself, Joseph. I'm right here, and all you need is the counter and the name.”",
+           "tag": "best",
+           "you": 4,
+           "them": 3,
+           "outcome": "He reads, lips moving. “Back counter. Under Ruby. Paid.”",
+           "why": "You give him the Pilot's task with someone beside him. He does the reading."
+          },
+          {
+           "text": "“I'll read them. Wait here.”",
+           "tag": "ok",
+           "you": -1,
+           "them": 2,
+           "outcome": "You read them out, and he thanks you three times.",
+           "why": "It rescues him, and now you are the one doing the Pilot's work for him."
+          },
+          {
+           "text": "“Two texts and you haven't looked? That's every time, Joseph.”",
+           "tag": "game",
+           "you": -5,
+           "them": -5,
+           "outcome": "The scene stops there. Joseph says “Sorry, sorry,” and goes in without reading.",
+           "why": "You scold, and he apologises. The apology stands in for the reading."
+          }
+         ]
+        },
+        {
+         "who": "Joseph",
+         "text": "“Look at it! I'll carry it. No, you carry it. Actually, I'll carry it. Probably.”",
+         "cue": "arms round the cake box like a baby",
+         "lines": [
+          {
+           "text": "“You carry it. Say which corner you'd want to swap at, and we'll agree it now.”",
+           "tag": "best",
+           "you": 4,
+           "them": 4,
+           "outcome": "“The postbox.” He shifts the box higher. “If I wobble, I'll say.”",
+           "why": "You give him the job and an exit he picks himself. That is a small Pilot move on his side."
+          },
+          {
+           "text": "“I'll take it, Joseph. Safer.”",
+           "tag": "ok",
+           "you": -1,
+           "them": 0,
+           "outcome": "He hands the box over, relieved.",
+           "why": "It protects the cake and confirms he cannot be trusted with it."
+          },
+          {
+           "text": "“You'll drop it. You always drop things. Hand it over.”",
+           "tag": "game",
+           "you": -5,
+           "them": -5,
+           "outcome": "The scene stops there. Joseph hands the box across and trails behind you.",
+           "why": "This is the Boss's voice with a taunt in it. It puts him in the Kid's seat for the rest of the morning."
+          }
+         ]
+        },
+        {
+         "who": "Ruby",
+         "text": "“You're late. I've had the candles on the table since half ten and nobody asked me if I wanted tea.”",
+         "cue": "standing among the chairs, jacket still on",
+         "lines": [
+          {
+           "text": "“He got the cake, and he did the counter himself. Sit down, Ruby, and I'll bring you tea.”",
+           "tag": "best",
+           "you": 4,
+           "them": 3,
+           "outcome": "She sits on a chair that is not part of the horseshoe. “Milk, one sugar.”",
+           "why": "You tell her what he did, which is information, and you offer her a Kid's turn at being looked after."
+          },
+          {
+           "text": "“Sorry, Ruby. My fault, the traffic.”",
+           "tag": "ok",
+           "you": -3,
+           "them": 1,
+           "outcome": "“It's fine,” she says, in the voice of someone who is not.",
+           "why": "You take the blame so she does not have to be cross. She stays in charge and stays tired."
+          },
+          {
+           "text": "“Everyone's doing their best. You could try saying thank you.”",
+           "tag": "game",
+           "you": -4,
+           "them": -5,
+           "outcome": "The scene stops there. Ruby takes off her jacket and stacks chairs hard.",
+           "why": "It sounds fair and lands as a rebuke. She answers by doing more, not by sitting down."
+          }
+         ]
+        },
+        {
+         "who": "Ruby",
+         "text": "“Joseph, the chairs. In a horseshoe. No, a line. Just do what I said.”",
+         "cue": "pointing with the pen",
+         "lines": [
+          {
+           "text": "“Joseph, horseshoe or line? You pick, and tell Ruby why.”",
+           "tag": "best",
+           "you": 4,
+           "them": 4,
+           "outcome": "“Horseshoe. Hannah can see everyone from the door.” Ruby opens her mouth, shuts it. “Horseshoe.”",
+           "why": "You give him a decision and a reason to say aloud. Ruby gets to practise leaving one thing to someone else."
+          },
+          {
+           "text": "“Horseshoe, then. Joseph, do as she says.”",
+           "tag": "ok",
+           "you": -2,
+           "them": 1,
+           "outcome": "He moves the chairs, exactly as she said.",
+           "why": "You back the Boss's order, and Joseph stays in the Kid's seat."
+          },
+          {
+           "text": "“It's a birthday, not a military exercise.”",
+           "tag": "game",
+           "you": -4,
+           "them": -5,
+           "outcome": "The scene stops there. Ruby says, “Fine,” and lines the chairs herself.",
+           "why": "A joke at her expense about her control. She wins the argument by doing it all."
+          }
+         ]
+        }
+       ],
+       "payoff": "Sunday, 12:35pm. The chairs go up in Ruby's order and the cake sits in the middle. Hannah will walk into a room that took one person to run.",
+       "fallout": {
+        "you": "Ruby sends everyone out for ice, and does the rest herself with her jacket still on."
+       }
+      }
+     ]
+    },
+    {
+     "level": "Analyse",
+     "label": "Analyse, explain it",
+     "intro": "Two questions to explain back. You can use the book words now.",
+     "items": [
+      {
+       "type": "pick",
+       "who": "Nadia",
+       "text": "“Ruby holds the clipboard and the orders, and Joseph holds the jokes and waits for the next text. What do the books call a pair where one plays the Parent and the Adult, and the other plays the Child?”",
+       "cue": "wiping the table, not looking up",
+       "options": [
+        "Symbiosis",
+        "Ulterior transaction",
+        "Crossed transaction"
+       ],
+       "answer": 0,
+       "why": "Ruby plays the Parent and the Adult, with the list and the facts, and Joseph plays the Child, with the charm and the waiting. Between them they use three of the six ego states. The books call that a symbiosis.",
+       "traps": {
+        "1": "An ulterior transaction hides a second message under the first. There is no hidden message here, and the question is about the shape of the pair.",
+        "2": "A crossed transaction is one reply that lands on the wrong ego state. This is a standing arrangement between two people, not a single exchange."
+       },
+       "example": "A choir trip, Tuesday.<br>Organiser: “I'll book the coach and decide the seating. You keep the singers cheerful.”<br>Volunteer: “Done. Please don't ask me about the coach.”"
+      },
+      {
+       "type": "pick",
+       "who": "Nadia",
+       "text": "“Which move gives both Ruby and Joseph all three voices?”",
+       "cue": "pen tapping the clipboard",
+       "options": [
+        "Take the clipboard yourself for the weekend, so neither of them has to carry the party.",
+        "Tell Ruby to stop planning altogether, and tell Joseph that he has to stop joking about it.",
+        "Ask Ruby to hand over one real job, and ask Joseph to plan it and report back."
+       ],
+       "answer": 2,
+       "why": "Ruby has been using only the Boss and the Pilot, and Joseph only the Kid. A real job with a report loop gives Joseph some Pilot, and handing it over gives Ruby some Kid. That loosens the symbiosis from both ends.",
+       "traps": {
+        "0": "Taking the clipboard makes you the new Boss and Pilot, and the pair gets a third person to lean on. It feels kind and changes no one's voice.",
+        "1": "Telling Ruby to stop planning and Joseph to stop joking cuts both of them off from what they are good at. Each would need a different voice to take its place, and neither has one ready."
+       },
+       "example": "A student society, Monday.<br>President: “I'll do the budget, the room and the speakers.”<br>Treasurer: “Let me do the room booking and report back on Friday. You sit one out.”"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "setting": "School & College",
+   "blurb": "Theo takes over the group project while Nora apologises and waits; the presentation is due Thursday.",
+   "opener": {
+    "setting": "Tuesday, 7:10pm. The college, room 4, ten minutes before Ms Hollis arrives. Sam's evening class has a group talk due Thursday, and Theo has brought a printed plan.",
+    "lines": [
+     {
+      "who": "Theo",
+      "text": "“I've split the slides and written the script. Nora, you do slide six, and say it exactly as it's written. Don't change a word.”",
+      "cue": "squaring the pages against the desk"
+     },
+     {
+      "who": "Nora",
+      "text": "“Sure, I'll do whatever you say. I'm rubbish at this, so I'd only make it worse. Sorry.”",
+      "cue": "smiling at her pencil case"
+     }
+    ],
+    "ask": "Which of them plays the Boss and the Pilot, which of them plays the Kid, and what move would give each of them all three voices?"
+   },
+   "rounds": [
+    {
+     "level": "Spot",
+     "label": "Spot, round 1",
+     "intro": "Each line here comes from one of the three voices: the Boss, the Pilot or the Kid. Tap the voice that is talking, and then the picture of the pair.",
+     "items": [
+      {
+       "type": "pick",
+       "who": "Theo",
+       "text": "<i>He hands out stapled pages and taps the first one. “Read your part tonight and say it exactly as written. No changes. We're doing it my way because my way works.”</i>",
+       "cue": "Tuesday, 7:14pm, room 4",
+       "options": [
+        "the Boss",
+        "the Pilot",
+        "the Kid"
+       ],
+       "answer": 0,
+       "why": "“No changes” and “my way works” are orders with no reasons attached, and there is no gap left for an answer. That is the Boss, the voice that decides how things are done. The Pilot would say what the slides need and when.",
+       "traps": {
+        "1": "The Pilot would give facts and leave the choice open, something like “The talk is ten minutes and the slides are due Thursday.” Theo says what to do instead.",
+        "2": "The Kid would plead or grumble, something like “Can we please do it my way?” Theo is telling, not asking."
+       },
+       "example": "A kitchen at a restaurant, Friday.<br>Chef: “You chop it my way. No changes. It works.”<br>Trainee: “Yes, chef.” He stops asking."
+      },
+      {
+       "type": "pick",
+       "who": "Nora",
+       "text": "<i>She holds the page with two fingers as if it were hot. “I'll do slide six if you tell me what to say. I'm rubbish at presenting. Please don't be cross with me.”</i>",
+       "cue": "Tuesday, 7:17pm, room 4",
+       "options": [
+        "the Pilot",
+        "the Kid",
+        "the Boss"
+       ],
+       "answer": 1,
+       "why": "Nora hands the thinking to Theo, calls herself rubbish and asks him not to be cross. That is the Kid, the part that wants direction and wants not to be told off. She has not asked what slide six needs.",
+       "traps": {
+        "0": "The Pilot would ask what slide six has to cover and by when. Nora asks only to be told what to say.",
+        "2": "The Boss would give instructions of her own. Nora is asking for instructions, so she is on the receiving end."
+       },
+       "example": "A driving lesson, Wednesday.<br>Learner: “Just tell me when to turn and I'll do it. Please don't shout.”<br>Instructor: “Left here.”"
+      },
+      {
+       "type": "pick",
+       "who": "Room 4",
+       "text": "<i>Theo writes the slides and the script, and decides who stands where. Nora reads what she is given and apologises as she reads. From the back of the room it looks like teamwork.</i>",
+       "cue": "Tuesday, 7:25pm, room 4",
+       "options": [
+        "Two classmates who take turns leading",
+        "Two people who dislike group work",
+        "One plays the Boss and the Pilot, the other plays the Kid"
+       ],
+       "answer": 2,
+       "why": "Theo gives the orders and holds the plan, which are the Boss and the Pilot. Nora supplies the apology and the waiting, which is the Kid. The group has three voices between two people who could use six, and it works well enough that nobody asks for more.",
+       "traps": {
+        "0": "Taking turns would put Nora in the lead sometimes. She has never led, and he has never followed.",
+        "1": "Disliking group work is a feeling about the task. The picture is about how the two of them fit together."
+       },
+       "example": "A garden club stall, Sunday.<br>Organiser: “I've priced everything and written the rota.”<br>Helper: “Brilliant. I'll stand where I'm put and smile.”"
+      }
+     ]
+    },
+    {
+     "level": "Play",
+     "label": "Play, the week in motion",
+     "intro": "Two scenes with the same two people. One plays the Boss and the Pilot, and the other plays the Kid. Find the line that gives each of them a voice they have been leaving unused, and watch what the words do to the meters.",
+     "items": [
+      {
+       "type": "scene",
+       "title": "Tuesday, 7:15pm, room 4",
+       "setting": "College, room 4. The whiteboard still carries last week's grammar notes. Sam sits with his coat on, one foot already in the aisle.",
+       "meters": {
+        "you": 50,
+        "them": 50
+       },
+       "beats": [
+        {
+         "who": "Nora",
+         "text": "“I'll do slide six however Theo wants. Please don't ask what I think, I'll only get it wrong.”",
+         "cue": "turning her pen cap round and round",
+         "lines": [
+          {
+           "text": "“You can say what you think, Nora. Give me one sentence you'd want on slide six. Rough is fine.”",
+           "tag": "best",
+           "you": 4,
+           "them": 2,
+           "outcome": "She hesitates. “That the shop closes on Sundays and nobody told us why.” Theo says, “Interesting.”",
+           "why": "You ask for one small, answerable thing. That calls on her Pilot, and it works."
+          },
+          {
+           "text": "“Don't worry, Theo's script is good.”",
+           "tag": "ok",
+           "you": -1,
+           "them": 1,
+           "outcome": "She smiles at the pen cap. “It is.”",
+           "why": "Reassuring, and it confirms she has nothing to add."
+          },
+          {
+           "text": "“Nora, you say that every week. Have some backbone.”",
+           "tag": "game",
+           "you": -5,
+           "them": -6,
+           "outcome": "The scene stops there. Nora says “Sorry,” and looks at the page.",
+           "why": "It is the Boss's voice aimed at the Kid. She apologises and shrinks."
+          }
+         ]
+        },
+        {
+         "who": "Theo",
+         "text": "“There's no time to discuss. The script's done. Just read it.”",
+         "cue": "tapping the staple with a fingernail",
+         "lines": [
+          {
+           "text": "“It's done, and that saves time. Can Nora change one line and tell you why by Wednesday?”",
+           "tag": "best",
+           "you": 4,
+           "them": 3,
+           "outcome": "The tapping stops. “One line. And she tells me why.”",
+           "why": "You respect the work and ask him to hand a small piece over, with a deadline he can live with."
+          },
+          {
+           "text": "“OK, whatever saves time.”",
+           "tag": "ok",
+           "you": -2,
+           "them": 1,
+           "outcome": "He nods and hands out another copy.",
+           "why": "It agrees with his rush. The pair stays as it is."
+          },
+          {
+           "text": "“You always do this. It's a group project, not your essay.”",
+           "tag": "game",
+           "you": -5,
+           "them": -6,
+           "outcome": "The scene stops there. Theo says, “Fine, do it yourselves,” and goes out for air.",
+           "why": "A flat accusation. He defends the script by leaving, and the script stays his."
+          }
+         ]
+        },
+        {
+         "who": "Nora",
+         "text": "“Theo, you're so good at this. I'd fail without you. Sorry I'm a bit useless.”",
+         "cue": "not looking up",
+         "lines": [
+          {
+           "text": "“You're not useless. Pick one slide and tell Theo when you can bring a draft.”",
+           "tag": "best",
+           "you": 4,
+           "them": 3,
+           "outcome": "“Slide six. Thursday morning.” She writes it on her hand.",
+           "why": "You take the apology as a cue for a plan. A plan with a day on it is the Pilot's job."
+          },
+          {
+           "text": "“You're fine, Nora.”",
+           "tag": "ok",
+           "you": 0,
+           "them": 2,
+           "outcome": "She smiles. Nothing is written down.",
+           "why": "Kind, and a nod for being sorry. There is still no plan."
+          },
+          {
+           "text": "“You're right, you would fail without him.”",
+           "tag": "game",
+           "you": -5,
+           "them": -6,
+           "outcome": "The scene stops there. Nora laughs a short laugh and does not speak again.",
+           "why": "A joke that agrees with the worst thing she says about herself."
+          }
+         ]
+        },
+        {
+         "who": "Theo",
+         "text": "“Nora, I've done slide six already. I couldn't wait.”",
+         "cue": "sliding it across, freshly stapled",
+         "lines": [
+          {
+           "text": "“That helps, Theo. Nora, rewrite the first sentence in your own words and bring it Thursday morning.”",
+           "tag": "best",
+           "you": 4,
+           "them": 4,
+           "outcome": "Nora nods. “Thursday.” Theo says, “Fine,” and lets go of the staple.",
+           "why": "You accept what he did and give Nora a real piece of it. Both of them use a voice they have been leaving unused."
+          },
+          {
+           "text": "“Great, Nora, you're all set.”",
+           "tag": "ok",
+           "you": -1,
+           "them": 1,
+           "outcome": "Nora takes the page and puts it in her bag.",
+           "why": "It closes the matter. Nora has still only read what she was given."
+          },
+          {
+           "text": "“You couldn't wait, could you? Why have a group at all?”",
+           "tag": "game",
+           "you": -5,
+           "them": -5,
+           "outcome": "The scene stops there. Theo says, “Because it's marked as one,” and turns his chair away.",
+           "why": "It gives Theo a point to win. He defends the script and leaves Nora out of it again."
+          }
+         ]
+        }
+       ],
+       "payoff": "Tuesday, 7:40pm. The pages stay stapled, and Sam is the first out of the door when Ms Hollis announces the break.",
+       "fallout": {
+        "them": "Nora says nothing for the rest of the class, and Theo rewrites slide six that night."
+       }
+      },
+      {
+       "type": "scene",
+       "title": "Thursday, 4:30pm, the library",
+       "setting": "Third floor, the quiet table by the radiator. The talk is due at six, and Ms Hollis's feedback sheet lies face down between Theo and Nora.",
+       "meters": {
+        "you": 50,
+        "them": 50
+       },
+       "beats": [
+        {
+         "who": "Theo",
+         "text": "“The feedback sheet says teamwork is five marks. I'll write the teamwork part myself, shall I?”",
+         "cue": "pulling the sheet toward him with one finger",
+         "lines": [
+          {
+           "text": "“Let Nora tell you what she did on slide six, Theo. Then you can write it together.”",
+           "tag": "best",
+           "you": 4,
+           "them": 3,
+           "outcome": "Theo turns the sheet over. “Go on, Nora.”",
+           "why": "You turn a solo job into a shared one with a small first step. Teamwork marks cannot be written by one person."
+          },
+          {
+           "text": "“Sure, you're fastest.”",
+           "tag": "ok",
+           "you": -1,
+           "them": 1,
+           "outcome": "He starts writing before you finish speaking.",
+           "why": "It matches the pattern. The sheet is his."
+          },
+          {
+           "text": "“That's the whole problem, Theo. You write everything.”",
+           "tag": "game",
+           "you": -5,
+           "them": -5,
+           "outcome": "The scene stops there. Theo says, “Someone has to,” and Nora looks at her hands.",
+           "why": "A true remark, delivered like a charge. Theo answers with the old reason for his control."
+          }
+         ]
+        },
+        {
+         "who": "Nora",
+         "text": "“I changed one line on slide six. Is that okay? Sorry, it's probably wrong.”",
+         "cue": "the laptop angled away from Theo",
+         "lines": [
+          {
+           "text": "“Read it to us, Nora. Then say why you changed it.”",
+           "tag": "best",
+           "you": 4,
+           "them": 4,
+           "outcome": "“The shop closes on Sundays because the owner sings in a choir.” Theo snorts. “That's better.”",
+           "why": "You ask for the line and the reason, which is the Pilot's work. She does both."
+          },
+          {
+           "text": "“It looks good, Nora.”",
+           "tag": "ok",
+           "you": 0,
+           "them": 2,
+           "outcome": "She exhales. The line is not read aloud.",
+           "why": "Reassurance feels kind. There is still no reason on the table."
+          },
+          {
+           "text": "“See, Theo? She can do it, and you never let her.”",
+           "tag": "game",
+           "you": -5,
+           "them": -5,
+           "outcome": "The scene stops there. Theo says, “That's not fair,” and the table goes tight.",
+           "why": "It uses Nora as evidence against Theo. They both end up defending, and the line is forgotten."
+          }
+         ]
+        },
+        {
+         "who": "Theo",
+         "text": "“Fine. But if it goes wrong, it's on you two. I did my slides weeks ago.”",
+         "cue": "arms folded, eyes on the clock",
+         "lines": [
+          {
+           "text": "“It's on all of us, Theo. Run it once through now, and each of us says what we'd fix.”",
+           "tag": "best",
+           "you": 4,
+           "them": 3,
+           "outcome": "Theo uncrosses his arms. “Slide three, then. Go.”",
+           "why": "You share the risk. That gives the Boss a way down and puts the check in everyone's hands."
+          },
+          {
+           "text": "“Fair enough.”",
+           "tag": "ok",
+           "you": -1,
+           "them": 0,
+           "outcome": "He nods and checks his phone.",
+           "why": "It avoids the row. Nothing about the run-through changes."
+          },
+          {
+           "text": "“Typical. You take the credit and none of the blame.”",
+           "tag": "game",
+           "you": -5,
+           "them": -6,
+           "outcome": "The scene stops there. Theo packs his bag and stands up.",
+           "why": "A cutting generalisation. He defends himself by leaving."
+          }
+         ]
+        },
+        {
+         "who": "Nora",
+         "text": "“Can someone else say the ending? I'll cry. I'm no good at endings. Theo always does them.”",
+         "cue": "hands under the table",
+         "lines": [
+          {
+           "text": "“Say it to us once, Nora. If it shakes, Theo starts the first line, and you take the last.”",
+           "tag": "best",
+           "you": 4,
+           "them": 4,
+           "outcome": "She says it. It does shake. Theo starts the line. She finishes it.",
+           "why": "You give both of them a piece of the ending. The Kid gets support, and the Boss gets a smaller part."
+          },
+          {
+           "text": "“I'll do the ending, Nora.”",
+           "tag": "ok",
+           "you": -1,
+           "them": 1,
+           "outcome": "She nods, relieved. You are now the one carrying it.",
+           "why": "You rescue her and become the new Boss and Pilot of the ending."
+          },
+          {
+           "text": "“Theo will do it, then. It's quicker.”",
+           "tag": "game",
+           "you": -4,
+           "them": -4,
+           "outcome": "The scene stops there. Nora says “Yes, of course,” and closes her laptop.",
+           "why": "You pass the ending back to the Boss. Quick, and it keeps her out of it for good."
+          }
+         ]
+        }
+       ],
+       "payoff": "Thursday, 5:20pm. Theo does the ending, Nora reads the slides in a monotone, and Ms Hollis writes “who is the team?” on the sheet.",
+       "fallout": {
+        "you": "Theo takes the laptop and says he will present it all himself. Sam checks the clock and says he has to go."
+       }
+      }
+     ]
+    },
+    {
+     "level": "Analyse",
+     "label": "Analyse, explain it",
+     "intro": "Two questions to explain back. You can use the book words now.",
+     "items": [
+      {
+       "type": "pick",
+       "who": "Nadia",
+       "text": "“Theo writes and decides, and Nora reads and apologises. What do the books call a pair where one person plays the Parent and the Adult and the other plays the Child?”",
+       "cue": "leaning on the table, patient",
+       "options": [
+        "Crossed transaction",
+        "Symbiosis",
+        "Racket"
+       ],
+       "answer": 1,
+       "why": "Theo plays the Parent and the Adult, with the orders and the plan, and Nora plays the Child, with the apology and the waiting. Between them they use three of the six ego states. The books call that pattern a symbiosis.",
+       "traps": {
+        "0": "A crossed transaction is a single reply that lands on the wrong ego state. This is a standing arrangement across a whole project.",
+        "2": "A racket is a stand-in feeling shown in place of the real one. Nora's apologies might look like that, but the question is about how two people fit together."
+       },
+       "example": "A drama group, Friday.<br>Director: “I've blocked every scene and written your lines.”<br>Actor: “Brilliant. I'll say them. Sorry if it's wooden.”"
+      },
+      {
+       "type": "pick",
+       "who": "Nadia",
+       "text": "“Which move gives Theo and Nora all three voices between them?”",
+       "cue": "pen in hand, waiting",
+       "options": [
+        "Ask Theo to hand Nora one decision with a deadline, and ask her to bring her own plan.",
+        "Split the slides down the middle so that each of them works alone and the marks stay fair.",
+        "Tell Nora to stop apologising right away and take the script over from Theo in the library."
+       ],
+       "answer": 0,
+       "why": "Theo has been using the Boss and the Pilot, and Nora only the Kid. A real decision with a day on it gives Nora some Pilot, and letting go of one gives Theo some Kid. That loosens the symbiosis from both ends while they still share a project.",
+       "traps": {
+        "1": "Splitting the work means neither has to change. Theo still writes in the Boss's voice, and Nora still waits to be told which half is hers.",
+        "2": "Telling Nora to take over is an order, and it asks her to jump straight to the Boss. It sounds brave and gives her no support."
+       },
+       "example": "A university lab, Monday.<br>Senior: “I'll run the samples. You label the tubes.”<br>Junior: “Could I design Friday's test and tell you how it goes?”"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

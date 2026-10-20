@@ -1,0 +1,603 @@
+Work
+A Thursday client demo, an export that dies on big files, and Daniel saying don't be late.
+Monday, 9:05am. Halden, the team room. The whiteboard has Thursday circled twice in red.
+Daniel
+“Don't be late on this one. The client sees the export on Thursday at eleven, and I want it working on the big file, not the sample.”
+capping the pen, already looking at the clock
+Clara
+“I've run the sample twice. I came in at five.”
+eyes on her screen, a cold mug by her elbow
+In each of the next three moments, which move is yours, and which one is the script?
+Spot
+Spot, round 1
+Being your own person has three parts. Noticing is seeing and hearing for yourself, here and now, in your own way and without the labels you were handed. Choosing fresh is picking the feeling and the reply you want from all your voices, including the ones you were never taught to use. Being real is plain candour with no game in it.
+pick
+You
+“'On it' is what I always say when you hurry me, Daniel. Today I'll try this one: the big file scares me a bit, and I'd like the checklist before I promise anything.”
+standing at the whiteboard, laptop under one arm
+Noticing
+Choosing fresh
+Being real
+You hear the usual 'on it' coming and pick a different reply, a scared and practical one. Choosing which feeling to show, instead of only the taught one, is choosing fresh.
+Noticing. You do catch the habit, but the work of the line is the swap to a new reply. Noticing alone would stop at 'I always say on it'.
+Being real. It is candid, but the heart of the line is the switch from the taught reply to a chosen one. The candour comes second.
+Bus queue, Friday, 5:40pm. Friend: “Coming Saturday? Say yes, you always say yes.” You (who always say yes): “Half a yes. Excited, tired, and I'd like to leave by ten.”
+pick
+You
+“Clara's tea has been cold since nine. She hasn't looked up from that diff for an hour, and her left foot keeps tapping.”
+low voice, to Omar, across the desks
+Noticing
+Choosing fresh
+Being real
+You take in the cold mug, the stillness and the foot with your own senses, in your own words. No label like 'stressed' is stuck on her. That is noticing.
+Choosing fresh. It sounds like a new line, but nothing is swapped for a habit here. The line only describes what is in front of you.
+Being real. It is kind, but the line says nothing about how you feel. It stays with what you can see, which is noticing.
+Allotment, Saturday, 8:00am. Neighbour: “Anything wrong with the beans?” You: “The leaves are curled at the edges, and there's a sticky patch on the lowest ones.”
+pick
+You
+“I'm stuck on the big file, and I'm a bit embarrassed. I'd rather ask you than pretend I've got it. Could you look at my diff after lunch?”
+stopping at Clara's desk, voice low
+Noticing
+Choosing fresh
+Being real
+You say the plain thing at its real size, with the feeling attached and no joke, hint or hook. Asking a colleague straight is being real.
+Noticing. You do see that you are stuck, and it is in the line. But noticing alone stays on the facts, and this line goes on to say how you feel and what you want.
+Choosing fresh. It is a new answer to the habit of struggling alone, but what makes it new is the plainness, so the better name is being real.
+Book club, Thursday, 8:00pm. Host: “Did anyone finish it?” You: “No. I stalled at chapter four and I'm embarrassed. Could someone tell me what happens?”
+Play
+Play, the week in motion
+Three short scenes. In each one, pick the move that is yours, not the one you were taught.
+scene
+Monday, 9:30am, the team room
+Omar has left a printed test list on your desk, annotated in green pen. The paper is still warm from the printer.
+Omar
+“I ran the timeout checks for you. Eleven cases. Green pen means passed.”
+sliding the printout across with one finger
+“Thanks, Omar. You didn't have to do that.”
+ok
+He shrugs. “Only took the morning,” he says, and goes back to his screen.
+This is the polite script. It is kind, and it skips the list, which is the thing he actually made.
+“On case six you've written eight over a nine, and the ink is still shiny. What changed?”
+best
+Omar leans in. “The client's proxy cuts off at eight seconds. I redid it, and I'm glad someone saw.”
+You notice what is actually on the page, the overwritten number and the wet ink. Noticing gives him something real back.
+“You always do this. Now I owe you a favour, and you'll bring it up at the retro.”
+game
+The scene stops there. Omar picks the printout up and says nothing about it.
+This turns a gift into a debt. The green pen becomes a ledger entry, and he has never kept one.
+Omar
+“Anything on your side? I've got ten minutes before my review.”
+checking the clock over your shoulder
+“The export is ugly. Small files fly, and I'm a bit proud of those. The big one dies at sixty seconds.”
+best
+Omar nods slowly. “Proud and stuck at once. That's a normal Monday,” he says, and sits on the edge of the desk.
+You say how you are, with a small true detail about the work. It is a fresh line, not the 'yeah, fine' you would have said at the start of the year.
+“Nothing much. Just the export.”
+ok
+He glances at the clock and stands up. “Shout if you need me.”
+This is the scripted small talk. It closes the door on the one thing he asked for.
+Omar
+“Does the list look usable, or did I waste green ink?”
+laughing at himself, capping the pen
+“It's neat everywhere except the margin by case four, where you've drawn a very angry duck. I like the duck.”
+best
+Omar grins. “That's the timeout. It looks like a duck when it gives up.” He pins the list to your monitor himself.
+You notice a precise, odd detail and say one true thing about him. It has warmth in it because it is specific.
+“It's great, thanks.”
+ok
+He nods, pleased enough. Then he heads off to his review.
+A polite yes that ends the moment. There is nothing wrong with it, and nothing new in it either.
+Monday, 9:40am. Omar takes the printout back without a word and says he will do his own tests from now on. The green pen stays capped for the rest of the week.
+Shop counter, Friday, 4:30pm. Colleague: “I did the stock sheet for you.” You: “You've circled the tins twice, and one row is in red. What happened there?”
+scene
+Tuesday, 4:40pm, the team room
+Daniel stops at your desk with a coffee, one eye on the release board. The big file is still failing on your second monitor.
+Daniel
+“Where are we on export? Don't say 'nearly'.”
+not sitting down
+“Nearly, Daniel. Just polishing.”
+ok
+“Nearly means no,” Daniel says, and writes a red 4 on the board.
+This is the trained reply. It answers the question and closes the door, so the two of you carry on apart.
+“'Nearly' is my usual word for it. Today's word is stuck, and a bit excited, because I think I've found where.”
+best
+Daniel looks up from the board. “Where?” he asks, and for once he sits down.
+You answer from a fresh place, with a true feeling that is not the cheerful one. It breaks the old loop, and he gets a real report instead of a label.
+“You always do this, Daniel. You hurry us, then blame us when the release slips.”
+game
+The scene stops there. Daniel puts his coffee down on your desk, hard.
+This is a sting dressed up as a reply. It gives him the accusation he already expects, and nobody sits down.
+Daniel
+“Stuck where? Give me a number.”
+pen back in his hand
+“I'll get it done by Thursday, don't worry.”
+ok
+He taps the pen twice. “I'm not worried. I'm asking.”
+Reassurance is the safe answer, and it keeps the two of you at arm's length.
+“The big file takes ninety seconds, and the client's proxy cuts off at sixty. I need till Wednesday night.”
+best
+Daniel writes 90 and 60 on the board and underlines the gap. “Right. That I can plan around.”
+You name the real numbers and what you need. Choosing fresh is a line that didn't come from the reflex.
+Daniel
+“Eleven sharp on Thursday. I'm not going to say it again.”
+already walking away
+“I'll be there at ten forty with a coffee for you. That's me choosing early, not me being told.”
+best
+Daniel stops. “Black,” he says, without turning round, and nearly smiles at the board.
+You pick a playful, warm reply where the taught one would be a stiff promise. It is a fresh line, and it costs nothing.
+“Yes, Daniel. I won't be late.”
+ok
+He nods and keeps walking.
+A dutiful yes. It is safe, and nothing new is in it.
+Tuesday, 4:50pm. Daniel says “Right” and takes his coffee away. The red 4 stays on the board, circled, until Thursday.
+Greengrocer's, Saturday, 9:00am. Owner: “Any complaints about the plums? Don't say they're fine.” You: “Two were bruised, and I'm going to come back anyway, because the rest were the best I've had.”
+scene
+Wednesday, 6:15pm, the quiet meeting room
+Daniel has shut the door. Through the glass you can see the release board and the last of the team packing up.
+Daniel
+“Tell me the truth before the client does. Is Thursday safe?”
+arms folded, the door clicking shut
+“It'll be fine, Daniel. I've got it covered.”
+ok
+Daniel says “Good,” and then asks Clara whether it's covered, which means he heard the gap in your voice.
+This is the script: the reassurance that closes the meeting on the worry. It sounds capable, and it leaves him with a promise he can't check.
+“Mostly. The big file works since four, but I haven't run it through the client's proxy. I'm afraid it breaks live, and I didn't want to say.”
+best
+There is a long pause. Then Daniel says he would rather know now, so he can clear nine o'clock for you.
+This is being real: plain candour with no game in it. You don't have to sound sure for the meeting, and he can hear where you actually are.
+“You always do this, Daniel. You shout all week, then ask for the truth the night before.”
+game
+The scene stops there. Daniel says “Fine,” opens the door and leaves it open.
+This turns his question into a charge against him. The real answer disappears under the old story about his temper.
+Daniel
+“Then what do you need from me?”
+the glass fogging slightly behind him
+“Ask Omar to cover my standup, and let me run the proxy test first thing. Nobody else needs me before ten.”
+best
+Daniel writes it on his hand. “Omar covers. Proxy at nine. Done.”
+You say what you want, plainly, without asking him to fix the whole project. That is a real request, not a rescue.
+“Don't worry about it. I'll sort it out.”
+ok
+He sighs and says Clara would have asked for something specific.
+This is the scripted close. It takes the need off the table and tells him the real thing isn't wanted.
+Daniel
+“Something from the week, then. Clara says you've been at it since seven.”
+sitting down at last
+“Clara found my off-by-one in ten minutes. I'd stared at it for two hours. I was cross, and then I was just glad.”
+best
+Daniel laughs, properly, for the first time all week. “She found mine in March. Don't tell her I said.”
+You offer a small, true detail from your week, which is a real gift to him. It doesn't need to be a confession to count as intimacy.
+“Nothing to tell. Just work.”
+ok
+He says “Okay,” in the voice that means it isn't, and checks his phone.
+This is the scripted close. It leaves him with the sense of a door shut, which is the thing he was braced for.
+Wednesday, 6:25pm. Daniel opens the door, says “Fine,” and tells the room the export is covered. At eleven on Thursday it falls over in front of the client.
+Hospital corridor, Tuesday, 7:00pm. Nurse: “Tell me the truth, are you in pain?” Patient: “More than I said. It's a six, and I didn't want to be a bother.” Nurse: “Good. Then we sort the six.”
+Analyse
+Analyse, explain it
+Name the part that was missing from that reply. Then sort three more moments.
+pick
+Daniel
+“Where are we on export? Don't say 'nearly'.” You said “Nearly” anyway, though you had watched it die on the big file twice that morning, and the red 4 went up on the board.
+pen already on the whiteboard
+Intimacy. A candid reply would have given Daniel the whole picture, not one cheerful word.
+Spontaneity. 'Nearly' was the taught reply, and no other feeling got a turn.
+Awareness. You weren't watching your own screen, so the answer came out of thin air.
+You had watched it fail, so awareness was working. The word 'nearly' arrived without a choice, straight from the habit of calming a hurrying boss. Choosing a feeling from all your voices, instead of only the taught one, is spontaneity.
+Intimacy. Candour does come into it, but a candid reply starts with picking a feeling to show, and 'nearly' was never picked. It just arrived.
+Awareness. You watched the failure twice, so you knew exactly where things stood. The gap came in the reply you gave after that.
+Reception desk, Monday, 9:00am. Clerk: “Any problems with the booking? Don't say fine.” Guest: “Fine.” Clerk: “Right, you're in room nine.” The leak above room nine goes unmentioned.
+sort
+Three more moments, each with one capacity missing. Put each in the bin for the one that was missing.
+Awareness
+Spontaneity
+Intimacy
+“I ate the whole canteen lunch reading the release notes on my phone. I couldn't tell you what it was.”
+Body at the table, mind in the notes. Awareness is being here and hearing and tasting for yourself, and lunch went by unseen.
+“Clara thanked me for the review and I said ‘Anytime, no problem’, same as for every thanks, though I wanted to tell her I liked doing it.”
+One rehearsed line covered a whole range of feelings. Spontaneity is having that range to choose from, and here only the taught reply got a turn.
+“I told Omar the demo was in hand, then left the failing export log open on my screen where he would see it.”
+The open log is a hook. Intimacy is candour with no game in it, and leaving a hint around is the opposite of saying it plainly.
+Train carriage, 6:10pm. Colleague: “Good day?” You, eyes on your phone: “Fine.” You miss your stop.
+Friends & Community
+Ruby says no fuss, Joseph is baking anyway, and your knee has been lying to the five-a-side group.
+Thursday, 6:50pm. The Corner Table, after closing. Chairs are going up on the tables and the radiator is ticking.
+Joseph
+“She said no fuss. So we're doing a small fuss. A cake, one candle, ten minutes.”
+balancing a stack of chairs under one arm
+Nadia
+“The back table is yours from three on Saturday. Mind the radiator, it bites.”
+wiping the counter, not turning round
+In each of the next three moments, which move is yours, and which one is the script?
+Spot
+Spot, round 1
+Being your own person has three parts. Noticing is seeing and hearing for yourself, here and now, in your own way and without the labels you were handed. Choosing fresh is picking the feeling and the reply you want from all your voices, including the ones you were never taught to use. Being real is plain candour with no game in it.
+pick
+You
+“I want to be in. I'm embarrassed: my knee has been bad for a month, and I keep playing on it so nobody thinks I'm soft.”
+on the bench, lacing a boot you can't quite bend to
+Noticing
+Choosing fresh
+Being real
+You say the plain thing at its real size, with the feeling attached and no joke, hint or hook. Telling Joseph straight is being real.
+Noticing. You do notice the knee, and it is in the line. But noticing alone stays on the facts, and this line goes on to say how you feel.
+Choosing fresh. It is a new answer to 'sure, I'm in', but what makes it new is the candour, so the better name is being real.
+Swimming baths, Saturday, 7:00am. Coach: “Coming to the gala? Don't make me chase you.” You: “I'd love to. I'm nervous, and I've been skipping practice so nobody sees me struggle.”
+pick
+You
+“'Nice' is what I say about every haircut. Yours is a bit wild, I'm slightly jealous, and I want to touch the fringe.”
+grinning across the counter at Ruby
+Noticing
+Choosing fresh
+Being real
+You see the usual 'nice' coming and pick a playful, envious feeling to show instead. Choosing which feeling to show, not only the taught one, is choosing fresh.
+Noticing. You do catch the habit, but the work of the line is picking a new feeling to show. Noticing alone would stop at 'I always say nice'.
+Being real. It is candid, but the heart of the line is the swap from the taught reply to a playful one. The candour comes second.
+Hairdresser's, Friday, 5:15pm. Stylist: “Like it? Don't say nice.” You (who always say nice): “I look like a different person, and I'm going to wear a hat so nobody sees it until Sunday.”
+pick
+You
+“Both times Ruby said 'no fuss' she looked at the door, and the second time she asked what time it was.”
+stacking the last chair, voice low
+Noticing
+Choosing fresh
+Being real
+You take in where she looked and what she asked with your own senses, and you don't add a label like 'she secretly wants one'. That is noticing.
+Choosing fresh. It sounds like a new line, but nothing is swapped for a habit here. The line only reports what you saw.
+Being real. It is honest, but the line says nothing about how you feel. It stays with what you watched, which is noticing.
+Bakery, Sunday, 8:30am. Baker: “Why's the queue so short today?” You: “The shutters are half down, and there's no smell of bread yet.”
+Play
+Play, the week in motion
+Three short scenes. In each one, pick the move that is yours, not the one you were taught.
+scene
+Saturday, 2:50pm, the back table
+Joseph has baked the cake himself. The top cracked in the oven, and he has hidden the crack under icing sugar.
+Joseph
+“I baked it at six this morning. Don't look at the middle.”
+lifting the tin lid an inch, like a man disarming something
+“It looks great, Joseph. You shouldn't have gone to the trouble.”
+ok
+He shuffles. “It was no trouble,” he says, and puts the lid back on.
+This is the polite script. It is kind, and it skips the cake, which is the thing he actually made.
+“It smells of burnt sugar and lemon. The crack runs left to right like a river on a map. Did you do the river on purpose?”
+best
+Joseph's face opens. “I did now,” he says, and takes the lid off properly.
+You notice what is actually here, the smell and the crack. Noticing gives him something real back.
+“You always do this, Joseph. Now I owe you a good review, and you'll bring it up at five-a-side.”
+game
+The scene stops there. Joseph puts the lid down on the tin and says nothing about it.
+This turns a gift into a debt. The cake becomes a ledger entry, and he will carry the price into Thursday.
+Joseph
+“How are you finding this, then? Be straight with me.”
+wiping his hands down an apron that says Nadia's
+“I'm a bit nervous. The balloon keeps sliding off the chair, and I like that we're doing this at all.”
+best
+Joseph laughs and ties the balloon to the chair leg. “Nervous is allowed. I've dropped the knife twice.”
+You say how you are, with a small true detail from the room. It is a fresh line, not the 'fine' you would have said at the start of the year.
+“Fine, Joseph. All good.”
+ok
+He nods and goes back to fussing with the napkins.
+It is the scripted small talk. That closes the door on the one thing he asked for.
+Joseph
+“Is the icing too yellow? Tell me it's lemon, or I'll think I've dyed it custard.”
+holding the tin up to the window
+“More like buttercups. The left edge is paler, as if it's shy. A bit like you, Joseph.”
+best
+He swats you with a napkin. “Cheeky. Pass me the candle before I lose my nerve.”
+You notice the colour exactly, and you say one true thing about him. It has warmth in it because it is specific.
+“It's lovely, Joseph.”
+ok
+He nods, pleased enough. Then he asks about the candle again.
+A polite yes that ends the moment. There is nothing wrong with it, and nothing new in it either.
+Saturday, 3:02pm. Joseph sets the knife down and lets the cake sit. When Ruby walks in, nobody has spoken for two minutes.
+Pottery shop, Wednesday, 5:00pm. Friend: “I made you a mug. Be nice.” You: “The handle is bigger than my hand, and the glaze is the blue of a swimming pool. Where did you get that blue?”
+scene
+Saturday, 3:10pm, the back table
+Ruby stops in the doorway with her coat still on and her bag held in front of her like a shield.
+Ruby
+“What's all this? I said no fuss. I look a state.”
+one hand still on the door
+“You look lovely, Ruby. Happy birthday.”
+ok
+“Thanks,” she says, to the floor, and stays by the door.
+This is the trained reply. It answers the worry and closes the door, so the two of you carry on apart.
+“You said no fuss, and we fussed anyway. I'm not sorry. It's a very small fuss, and the coat can stay on.”
+best
+Ruby laughs, a short surprised one. She takes a step in and, coat and all, sits down.
+You answer from a fresh place, with a playful, unapologetic feeling. It breaks the old loop, and she gets to be teased instead of managed.
+“Don't look at me. It was Joseph's idea. I told him you'd hate it.”
+game
+The scene stops there. Joseph's face falls, and Ruby is already half out of the door.
+This is a sting dressed up as a reply. It throws Joseph under the bus and confirms Ruby's fear, and nobody sits down.
+Ruby
+“Right. Who's cutting this? I'll do it, I always do it. Someone has to.”
+already rolling up her sleeves
+“If you like, Ruby. Thanks.”
+ok
+She takes the knife and cuts eight even slices. Her face closes up again.
+It lets her carry the job again. It is safe, and the old pattern stays in place.
+“Not today. Sit down. You get one job: say whether the middle is cooked.”
+best
+Ruby sits, a little stunned. “Raw,” she says, with a grin, before she has even tasted it.
+You pick a bossy, affectionate voice where the taught one would be polite. Choosing fresh is a line that didn't come from the reflex.
+Ruby
+“Everyone's gone quiet. Someone say something. Please.”
+staring at the candle
+“I can't do speeches, so I'm going to sing, badly, and you can't stop me.”
+best
+Joseph joins in, in a different key. Nadia bangs the counter in time. Ruby laughs behind her hand, and then without it.
+You pick the silly, free voice that you were never taught to use in public. It costs nothing and lifts the whole table.
+“Speech, Joseph! Speech!”
+ok
+Joseph goes pink and says he's no good at those. Ruby studies the candle.
+It hands the moment to someone else. It is safe and kindly meant, and it leaves the silence where it was.
+Saturday, 3:12pm. Ruby says “I'll just go, then.” The bell on the door clangs shut behind her. The cake is cut at four by Nadia, for three people.
+Staff room, Friday, 1:00pm. Colleague: “They bought me a cake. I said no fuss!” You: “You also said no fuss in March, and you cried in the lift. Sit down, it's tiny.”
+scene
+Saturday, 5:20pm, the Corner Table
+Everyone has gone. The kettle has gone cold and the radiator ticks. Joseph is tipping chairs onto the tables, and you are holding the last two.
+Joseph
+“Thursday, five-a-side, same as ever? You in?”
+tipping a chair onto its table
+“Sure, I'll be there.”
+ok
+Joseph says “Great” and writes it on the back of his hand. On Thursday you sit on the bench with your knee wrapped under your trousers.
+This is the script: the yes that closes the question. It sounds easy-going, and it leaves him counting on a player who can't run.
+“I want to be, and I can't run on this knee. It's been a month, and I kept quiet so nobody would think I was soft.”
+best
+Joseph sets his chair down. “A month? I thought you were off the boil,” he says, and means it kindly.
+This is being real: plain candour with no game in it. You don't have to look fit for the game, and he can hear where you actually are.
+“You always do this, Joseph. You ask when you know I'll say yes.”
+game
+The scene stops there. Joseph says “Right” and takes the chairs out the back himself.
+This turns his question into a charge against him. The real thing, the knee, disappears under an old story about him.
+Joseph
+“Then what do you want from Thursdays? Tell me, and I'll sort it.”
+chair still in his hands
+“I'd like to go in goal for a few weeks, and still come for the pint after.”
+best
+Joseph grins. “Goal's yours. The pint's on me, if you stop me being Gary's keeper.”
+You say what you want, plainly, without asking him to fix your knee. That is a real request for company, not a rescue.
+“Anything works, I'm easy.”
+ok
+He shrugs and says Gary will be pleased to have someone who doesn't mind.
+This is the scripted close. It takes the need off the table and tells him the real thing isn't wanted.
+Joseph
+“Tell me one thing from today. I was too busy with the knife to see any of it.”
+leaning on the radiator
+“Ruby's laugh on the third try with the candle. It came out as a snort, and she didn't hide it. I'm keeping that one.”
+best
+Joseph laughs, properly. “A snort. I missed it. I'll get you to tell it again on Thursday.”
+You offer a small, true detail from the day, which is a real gift to him. It doesn't need to be a confession to count as intimacy.
+“It was nice. Good cake.”
+ok
+He says “Cheers” in the voice that means he'd hoped for more.
+This is the scripted close. It leaves him with the sense of a door shut, which is the thing he was braced for.
+Saturday, 5:35pm. Joseph takes the chairs out the back himself. On Thursday the five-a-side bench is full, and there is no spare place on it for you.
+Allotment gate, Sunday, 10:00am. Neighbour: “Joining the rota next week?” You: “I want to, and my back is not up to digging. Can I do the compost instead?”
+Analyse
+Analyse, explain it
+Name the part that was missing from that reply. Then sort three more moments.
+pick
+Ruby
+“Mum goes in on Tuesday. They say it's routine, but nobody has said how long.” You nodded and said “Mm” while working out whether the last slice would be left. When Ruby stopped, you said “Sorry, what?”
+stirring her tea, not looking up
+Awareness. Your body stayed at the table while your mind went to the cake.
+Intimacy. You kept something back from Ruby, so a hint stood where candour should have been.
+Spontaneity. 'Mm' was the taught reply, and you didn't use your freedom to choose another feeling.
+Your body was at the table and your mind was on the last slice. Awareness is seeing and hearing for yourself in the here and now, and it had gone before Ruby finished her sentence.
+Intimacy. You didn't hold anything back or drop a hint, because you weren't there to do either. The gap came earlier, at the listening.
+Spontaneity. 'Mm' is a taught reply, but no choice was even in play. You weren't taking in what Ruby said, so there was nothing to answer.
+Waiting room, Tuesday, 11:00am. Friend: “They said six weeks.” You, scrolling your phone: “Mm.” Friend: “Never mind.”
+sort
+Three more moments, each with one capacity missing. Put each in the bin for the one that was missing.
+Awareness
+Spontaneity
+Intimacy
+“I spent the whole birthday tea checking my phone for tram times, and Ruby's cake had gone before I tasted it.”
+Body at the table, mind on the timetable. Awareness is being here in the present, and the tea passed unseen.
+“Joseph praised my goalkeeping and I said ‘Fluke’, same as always, though I was thrilled and wanted him to say more.”
+One rehearsed word covered a wide range of feelings. Spontaneity is having that range to choose from, and here only the taught reply was offered.
+“I told Ruby I couldn't make Thursday because of ‘a thing’, then sighed loudly so she would ask what the thing was.”
+The sigh is a hook. Intimacy is candour with no game in it, and fishing for a question is the opposite of saying it plainly.
+Bus stop, Saturday, 5:30pm. Neighbour: “Heading anywhere nice?” You, mind on tomorrow: “Mm.” The bus pulls away from both of you.
+Relationships
+Clara hides two cinema tickets behind a spreadsheet of reasons it's casual, and you are her friend.
+Thursday, 5:40pm. The Corner Table, the window seat. A laptop and two cinema tickets sit between the cups.
+Clara
+“Two tickets, Saturday, the old film at the Regent. I've made a spreadsheet of why it's casual. Don't look at it.”
+angling the laptop away with one hand
+Clara
+“He's coming at ten past. Say nothing about the tickets. Say nothing about anything.”
+turning the tickets face down, then face up again
+In each of the next three moments, which move is yours, and which one is the script?
+Spot
+Spot, round 1
+Being your own person has three parts. Noticing is seeing and hearing for yourself, here and now, in your own way and without the labels you were handed. Choosing fresh is picking the feeling and the reply you want from all your voices, including the ones you were never taught to use. Being real is plain candour with no game in it.
+pick
+You
+“Your thumbnail's picked raw, you've turned those tickets over three times, and the laptop has been on one cell for ten minutes.”
+eyes on her hands, voice low
+Noticing
+Choosing fresh
+Being real
+You take in the thumbnail, the tickets and the stuck cell with your own senses, in your own words. No label like 'nervous' is stuck on her. That is noticing.
+Choosing fresh. It sounds like a new line, but nothing is swapped for a habit here. The line only describes what you can see.
+Being real. It is kind, but the line says nothing about how you feel. It stays with what is in front of you, which is noticing.
+Kitchen, Sunday, 11:00am. Dad: “The kettle's broken.” You: “The light doesn't come on, and the plug is warm.”
+pick
+You
+“When you list the reasons it's casual, I get nervous for you. I want you to ask him, and I don't want you hurt.”
+keeping your voice level, hands round your cup
+Noticing
+Choosing fresh
+Being real
+You say the plain thing at its real size, with the feeling attached and no joke, hint or hook. Telling Clara straight is being real.
+Noticing. You do see the list, and it is in the line. But noticing alone stays on the facts, and this line goes on to say how you feel.
+Choosing fresh. It is a new answer to 'go for it, you'll be fine', but what makes it new is the candour, so the better name is being real.
+Sister's WhatsApp, Sunday night. Sister: “Should I take the job?” You: “I'll miss you terribly if you go, and I think you should. Both are true.”
+pick
+You
+“'Lovely' is what I always say. Today it's this: you look like someone about to jump off the high board, and I'm the one cheering at the edge.”
+grinning, straightening her collar
+Noticing
+Choosing fresh
+Being real
+You see the usual 'lovely' coming and pick a playful, cheering feeling to show instead. Choosing which feeling to show, not only the taught one, is choosing fresh.
+Noticing. You do catch the habit, but the work of the line is picking a new feeling to show. Noticing alone would stop at 'I always say lovely'.
+Being real. It is candid, but the heart of the line is the swap from the taught reply to a playful one. The candour comes second.
+Market stall, Saturday, 10:00am. Friend: “Do I look all right? Don't say fine.” You (who always say fine): “You look like a person who's about to win the raffle.”
+Play
+Play, the week in motion
+Three short scenes. In each one, pick the move that is yours, not the one you were taught.
+scene
+Thursday, 6:10pm, the Corner Table
+Clara has slid a folded card across the table with your name on it. Inside is a list: four lifts, two nights on her sofa and one borrowed charger.
+Clara
+“I wrote it all down so we're square. Don't argue.”
+smoothing the card flat with both palms
+“Clara, you didn't need to do this. We're not counting.”
+ok
+“I know,” she says, in the voice that means she'll keep counting anyway, and tucks the pen back into her bag.
+This is the polite script. It is kind, and it skips the card, which is the thing she actually made.
+“The writing gets smaller towards the bottom, and there's a coffee ring on ‘sofa nights’. You spent a good while on this.”
+best
+Clara goes pink. “Forty minutes,” she says. “The ring is last night's cocoa.”
+You notice what is actually on the page, the shrinking handwriting and the ring. Noticing gives her something real back.
+“Typical. Now I owe you for the card as well, and you'll count that too.”
+game
+The scene stops there. Clara folds the card in half and puts it away without a word.
+This turns a gift into a debt. The card becomes a ledger entry, and she will add the price to the list.
+Clara
+“Say something about it, anything. Or I'll bin it.”
+reaching to take it back
+“I'm keeping it. You drew a tiny car next to ‘lifts’, and I'm going to look at that car whenever I'm cross.”
+best
+Clara stops with her hand halfway. “It's a Fiat,” she says, and her ears go red.
+You say how you are, with a small true detail from the card. It is a fresh line, not the 'it's very thorough' you would have said at the start of the year.
+“It's very thorough, Clara.”
+ok
+She nods and tucks the card under her saucer.
+This is the scripted small talk. It closes the door on the one thing she asked for.
+Clara
+“Is that Omar? He said ten past. It's twelve past. Tell me what you see.”
+not turning round, hands flat on the table
+“Grey coat, wet shoulders, a paper bag held in both hands as if something might spill. He's looking for you.”
+best
+Clara breathes out and turns round. “He bought the bun,” she says, “the one I pretended I didn't want.”
+You notice the coat, the damp and the bag exactly, and you hand the picture over without an opinion. It has warmth in it because it is specific.
+“Yes, that's him. Smile.”
+ok
+She smiles too early, a wide stretched one, and Omar asks if she has cramp.
+A friendly instruction that ends the moment. There is nothing wrong with it, and nothing new in it either.
+Thursday, 6:20pm. Clara puts the card away and orders a pot of tea for one. Omar arrives to a table where nobody is looking at anybody.
+Birthday dinner, Saturday, 8:00pm. Friend: “I've listed what I owe you from last year.” You: “You've drawn a hat over the pizza night. What's the hat?”
+scene
+Friday, 12:40pm, the Halden canteen
+Omar has carried his tray to your table without being asked. His soup is going cold while he works up to something.
+Omar
+“You're her friend. Did she say anything about Saturday? Don't say it's not your place.”
+tapping the spoon on the rim of the bowl
+“It's not my place, Omar. You should ask her.”
+ok
+He nods slowly. “Right,” he says, and eats his soup without tasting it.
+This is the trained reply. It answers the question and closes the door, so the two of you carry on apart.
+“I'm not saying. I'll say this: ask her something with a day and a time in it, and watch what her face does.”
+best
+Omar sits up. “A day and a time,” he says, as if you had given him a map.
+You answer from a fresh place, with a cheeky and warm feeling. It breaks the old loop, and you protect her confidence without hiding behind 'not my place'.
+“She's mad about you, obviously. Don't tell her I said. Go and fix it before she does something silly.”
+game
+The scene stops there. Omar thanks you, a bit stiffly, and goes back to his desk looking at Clara's chair.
+This is a sting dressed up as help. It gives away her secret, makes you the messenger, and sets Omar up to say something he has not been invited to say.
+Omar
+“How do I ask without making it a Thing? I'm no good at pretending it's nothing.”
+pushing the soup away
+“Just be yourself, Omar. It'll be fine.”
+ok
+He nods and picks the spoon up again without being any wiser.
+A kind line that sends him off with nothing new. It is safe, and the worry stays where it was.
+“Try it on me. I'll be Clara and I'll be rubbish on purpose: I'll say ‘Oh, I'm so busy’ and look at the ceiling.”
+best
+Omar laughs so hard a man at the next table turns round. “Right. Go. Ceiling.”
+You pick the silly, free voice that you were never taught to use at work. It makes practice safe, and it costs nothing.
+Omar
+“Saturday, the Regent, the old film. Come with me. How was that?”
+going red at the ears
+“I'm grinning, and I'm ridiculously proud of you. Say ‘come with me’ once more, slower.”
+best
+Omar says it again, slower, and his voice drops half a note. “Better,” you tell him. “That one I'd say yes to.”
+You show a warm feeling out loud, from the whole range you have, and you make a specific request. That is a fresh line, and it helps him more than a grade would.
+“That was fine.”
+ok
+He nods, deflated, and asks whether 'fine' is good or bad.
+A safe verdict that ends the moment. There is nothing wrong with it, and nothing new in it either.
+Friday, 12:50pm. Omar spends the afternoon watching Clara's desk. By five, she has heard from three people that he knows.
+Garden fence, Sunday, 3:00pm. Neighbour: “Does your sister like my brother? Don't say it's not your place.” You: “She won't tell me either. Bring him round for tea and watch.”
+scene
+Friday, 9:30pm, on the phone
+Clara rings from the night bus, the engine growling behind her. Omar said yes at six, and she has been alone with it for three hours.
+Clara
+“He said yes. Tell me the truth: have I been awful this week? Everyone's been polite.”
+low and quick, the bus lurching round a corner
+“Not at all! You've been lovely.”
+ok
+Clara says “Good, good,” and then fills ten minutes with tomorrow's schedule, which means she heard the gap in your voice.
+This is the script: the reassurance that closes the call on the worry. It sounds loving, and it leaves her with an answer she can't check.
+“A bit awful, yes. You've been so busy being useful that I couldn't tell what you wanted. I've missed you, and I'm glad you asked.”
+best
+There is a long pause. Then Clara says she would rather hear it than be handled, and asks for the example.
+This is being real: plain candour with no game in it. You don't have to sound only kind, and she can hear where you actually are.
+“You always do this, Clara. You fish for the nice thing so you can wave it off.”
+game
+The scene stops there. Clara says “Right,” and the line goes dead before you can answer.
+This turns her question into a charge against her. The real answer disappears under the old story about how she deflects.
+Clara
+“Then what do you want from me this weekend? Tell me, and I'll do it.”
+the bus announcement cutting across her
+“Tell me about the film itself, not the schedule. And let me be pleased for you without a favour owed.”
+best
+Clara goes quiet, then laughs. “There'll be no schedule,” she says. “I'll tell you what the ending was.”
+You say what you want, plainly, without asking her to fix your week. That is a real request for company, not a rescue.
+“Nothing, just enjoy it.”
+ok
+She says she'll write down a few highlights for you, in a list.
+This is the scripted close. It takes the need off the table and tells her the real thing isn't wanted.
+Clara
+“Tell me something from your week. I always do the talking.”
+the engine noise dropping as the bus stops
+“I ate lunch on the bench in the rain on Tuesday and didn't want to go back in. It was the best ten minutes I had.”
+best
+Clara laughs, properly, for the first time in the call. “A bench in the rain,” she says. “Next time, I'll bring the flask.”
+You offer a small, true detail from your week, which is a real gift to her. It doesn't need to be a confession to count as intimacy.
+“Nothing much. Work's work.”
+ok
+She says “Okay,” in the voice that means it isn't, and the bus doors hiss shut.
+This is the scripted close. It leaves her with the sense of a door shut, which is exactly what she was afraid of.
+Friday, 9:35pm. The line goes dead mid-stop. On Saturday morning a text arrives from Clara: “Spreadsheet says I'm busy. Sorry.” Omar's ticket stays in his coat pocket.
+Phone call, Sunday, 8:00pm. Cousin: “Be honest, was I rude at the wedding?” You: “A bit, yes. You talked over Auntie Joan twice. I still want you at mine.”
+Analyse
+Analyse, explain it
+Name the part that was missing from that reply. Then sort three more moments.
+pick
+Clara
+“It's only a film, Omar. Come if you like. No big deal.” You know she turned down two other plans for Saturday, and the ticket stubs are poking out of her bag where he can see them.
+tickets half out of her bag
+Spontaneity. 'No big deal' is the sentence she was taught, and no other feeling got a turn there.
+Awareness. She was so wrapped up in her plan that she missed how Omar looked.
+Intimacy. She hinted instead of asking, so a game stood where candour should be.
+She wanted him there, gave up two other plans for it, and then left the stubs where he would see them while saying it was no big deal. Intimacy is candour with no game in it, and a hint is the opposite of asking plainly.
+Spontaneity. 'No big deal' is a taught line, and that is part of it. But the missing piece is plain asking, and the stubs in the bag show the hook in action.
+Awareness. Nothing in the scene says she missed what was in front of her. She watched him closely, which is partly why she hid the wish.
+Supermarket queue, Wednesday, 5:50pm. Colleague: “Free on Saturday? No pressure.” You: “Oh, probably nothing on.” You cancelled your own plans this morning, and you are carrying the invitation in your coat pocket.
+sort
+Three more moments, each with one capacity missing. Put each in the bin for the one that was missing.
+Awareness
+Spontaneity
+Intimacy
+“Omar was telling me his news on the phone and I was reading the football score the whole time. I asked him to say it again.”
+Ears on the call, eyes on the score. Awareness is hearing and seeing for yourself in the here and now, and his news went by unheard.
+“When Omar said ‘You look nice’, I said ‘This old thing?’, same as always, though I wanted to say thank you and mean it.”
+One rehearsed line covered a range of feelings. Spontaneity is having that range to choose from, and here only the taught reply got a turn.
+“I told Clara I didn't mind who paid, then sulked until she noticed and offered.”
+The sulk is a hook. Intimacy is candour with no game in it, and waiting to be offered is the opposite of asking plainly.
+Café till, Friday, 1:15pm. Waiter: “Having a nice day?” You, mind on your inbox: “Mm.” He gives you the wrong change, and you don't count it.

@@ -1,0 +1,1514 @@
+{
+  "baseBlurb": "Maya, Sam and you share a flat, a milk carton with a promise on it, and unpaid rent.",
+  "stories": [
+    {
+      "setting": "Relationships",
+      "blurb": "Omar and Clara are circling a second dinner, and you are the friend both of them talk to.",
+      "opener": {
+        "setting": "Thursday, 6:10pm. The Corner Table, the window seat. Omar's tea has gone cold beside the sugar bowl, and Clara has just laid a printed schedule next to it.",
+        "lines": [
+          {
+            "who": "Clara",
+            "text": "“Sit, you can referee. It's only a draft. Three plans for Saturday, colour-coded, in case he hates the first two.”",
+            "cue": "squaring the page to the edge of the table"
+          },
+          {
+            "who": "Omar",
+            "text": "“It's a second dinner, Clara. I thought we'd see where the evening goes.”",
+            "cue": "turning the cold cup a quarter turn"
+          }
+        ],
+        "ask": "Name the home trap that is running between them, and find the one reply that steps out of it without picking a side."
+      },
+      "rounds": [
+        {
+          "level": "Spot",
+          "label": "Spot, round 1",
+          "intro": "Each home trap has a plain name. Tap the one that is running in the line.",
+          "items": [
+            {
+              "type": "pick",
+              "who": "Clara",
+              "text": "“Eleven times I checked my phone on Tuesday, darling. No rush, though. Take all the time you like.”",
+              "cue": "smiling at the sugar bowl, not at Omar",
+              "options": [
+                "the corner",
+                "sweetheart",
+                "the rush"
+              ],
+              "answer": 1,
+              "why": "The jab sits in the middle of the line and the pet name wraps round it. Clara points at the unanswered text through a loving word, so Omar cannot object without seeming petty. The sting hides inside the endearment.",
+              "traps": {
+                "0": "This would be the corner if every reply he could give were wrong. Clara has not set two doors. She has one jab with a ribbon on it, and he can answer it directly.",
+                "2": "This would be the rush if she were too busy to stop. Clara has plenty of time. She spent it counting."
+              },
+              "example": "A neighbour at the lift, Monday. “Lovely of you to remember the bins this week, dear. Some of us noticed the last three.”"
+            },
+            {
+              "type": "pick",
+              "who": "Clara",
+              "text": "“I ironed the green shirt, I learned the bus times, I booked the table twice in case the first fell through. And you still looked at your phone.”",
+              "cue": "laying the schedule flat with both palms",
+              "options": [
+                "if it weren't for you",
+                "the court",
+                "look how hard I've tried"
+              ],
+              "answer": 2,
+              "why": "She lists the effort and leaves out what she wants. The effort works as a shield, because it is hard to argue with trying. Meanwhile the thing she never says out loud, that she wanted his full attention, stays unasked.",
+              "traps": {
+                "0": "This would be if it weren't for you if she were blaming a rule or a person for what she had not done. Clara blames nobody. She is asking to be admired for trying.",
+                "1": "This would be the court if she were building a case for a third person to judge. She is speaking to Omar and presenting her own exhibits."
+              },
+              "example": "A colleague at a leaving do, Friday. “I wrote the speech, I bought the card, I even found a cake with her name on. And nobody said thank you.”"
+            },
+            {
+              "type": "pick",
+              "who": "Clara",
+              "text": "“Don't get up, I'll do it. The bill, the coats, the walk to the bus stop, the text to say we got home. It's me or nobody.”",
+              "cue": "already holding Omar's scarf out to him",
+              "options": [
+                "the rush",
+                "sweetheart",
+                "the court"
+              ],
+              "answer": 0,
+              "why": "She is too busy to stop, and the busyness is the bait. She takes on every small job as it arrives and offers more, so the list only grows. In the book a day like this ends in a collapse where nothing is enjoyed, and she blames herself for it.",
+              "traps": {
+                "1": "This would be sweetheart if the line ended on a pet name with a jab tucked inside. There is no endearment here, only a pile of jobs that nobody asked her to carry.",
+                "2": "This would be the court if she were building a case against someone absent. Nobody is accused. She is tired and busy and calling it love."
+              },
+              "example": "A neighbour at a street party, Saturday. “Sit down, all of you, I'll do the urn, the cups, the bunting, the washing up. Nobody else is free.”"
+            },
+            {
+              "type": "pick",
+              "who": "Clara",
+              "text": "“If it weren't for Daniel's release dates, I'd have asked him to the lake weeks ago. Every week is a freeze.”",
+              "cue": "turning her phone face down on the schedule",
+              "options": [
+                "the rush",
+                "if it weren't for you",
+                "the corner"
+              ],
+              "answer": 1,
+              "why": "She blames someone else's rule for what she is not doing, and the complaint is the point. The release dates also keep her from the risk of hearing a no, so she complains about them and never tests them. While Daniel is the cause, nothing has to change at her end.",
+              "traps": {
+                "0": "This would be the rush if she were taking on more work. She is doing the opposite and holding back, with a tidy reason.",
+                "2": "This would be the corner if every reply you gave left you stuck. Clara offers no second door. She is parking the whole problem on someone who is not at the table."
+              },
+              "example": "A neighbour at the post box, Tuesday. “If it weren't for my sister's shifts I'd have joined the choir years ago.”<br>The shifts take the blame, and the choir is never tried."
+            }
+          ]
+        },
+        {
+          "level": "Play",
+          "label": "Play, the week in motion",
+          "intro": "Three scenes with the same people. Keep both meters above half at the end of each one, and watch for the moment someone hands you a chair you didn't ask for.",
+          "items": [
+            {
+              "type": "scene",
+              "title": "Thursday, 6:25pm, the window seat",
+              "setting": "The Corner Table. Omar is at the counter ordering, back to you, one ear turned. Clara has pushed the schedule to your side of the table. <i>The Heckler, in your head: “You're the neutral one, so you decide.”</i>",
+              "meters": {
+                "you": 60,
+                "them": 50
+              },
+              "beats": [
+                {
+                  "who": "Clara",
+                  "text": "“Let me tell you what Omar did. A text sat for a whole day. You're the sensible one, so you tell him.”",
+                  "cue": "voice low, eyes on the counter",
+                  "lines": [
+                    {
+                      "text": "“Tell him yourself, Clara. He's thirty feet away, not on the moon.”",
+                      "tag": "best",
+                      "you": 4,
+                      "them": 3,
+                      "outcome": "She half stands, sits again, then lifts a hand at the counter. Omar raises the milk jug in answer.",
+                      "why": "A court runs on talk about someone, not to them. Speaking to the person directly stops it before the first witness."
+                    },
+                    {
+                      "text": "“Go on, then. What did he do this time?”",
+                      "tag": "ok",
+                      "you": -2,
+                      "them": 2,
+                      "outcome": "She tells you all of it: Tuesday's text, Wednesday's reply, the single word at the end. Omar stirs nothing at the counter.",
+                      "why": "You took the chair without being asked. The court now has its judge, and the case grows while Omar waits with his back turned."
+                    },
+                    {
+                      "text": "“A whole day? That's rude. Someone should tell him off.”",
+                      "tag": "game",
+                      "you": 2,
+                      "them": -4,
+                      "outcome": "Clara nods hard. Omar comes back with the tray, reads both faces, and says, “Who died?” Nobody laughs.",
+                      "why": "A trap move: you passed a sentence before hearing him. The court has two against one, and the table goes stiff."
+                    }
+                  ]
+                },
+                {
+                  "who": "Omar",
+                  "text": "“My phone was in a locker at the pool. I answered when I got out. I'd have said so, but nobody asked.”",
+                  "cue": "setting the tray down, voice level",
+                  "lines": [
+                    {
+                      "text": "“Then tell her the locker part, Omar. She's the one who waited.”",
+                      "tag": "best",
+                      "you": 4,
+                      "them": 3,
+                      "outcome": "He turns his chair a few degrees towards Clara. “Locker at the pool, and I should have typed one line first. Sorry.”",
+                      "why": "You send the answer to the person who is owed it. An explanation said to the right face is the only defence a court cannot argue with."
+                    },
+                    {
+                      "text": "“Fair enough. Locker. Case closed, Clara.”",
+                      "tag": "ok",
+                      "you": -1,
+                      "them": 1,
+                      "outcome": "Clara says, “I didn't ask you to close it.”",
+                      "why": "A verdict ends the argument for a minute and keeps you in the chair. Clara learns the court still works, so she will use it again."
+                    },
+                    {
+                      "text": "“You could carry your phone in a pocket like everyone else, Omar.”",
+                      "tag": "game",
+                      "you": 2,
+                      "them": -5,
+                      "outcome": "Omar's jaw sets. “Right. Noted.” He drinks the cold tea and says nothing else.",
+                      "why": "You took the prosecution's side and gave advice as a sentence. The explanation is gone, and Omar has his proof that the table is against him."
+                    }
+                  ]
+                },
+                {
+                  "who": "Clara",
+                  "text": "“See? There's always a reason with him. So you'll sort out Saturday with him as well, won't you?”",
+                  "cue": "already sliding the schedule across to you",
+                  "lines": [
+                    {
+                      "text": "“Say Saturday to him, Clara. Look at him and ask for the thing itself.”",
+                      "tag": "best",
+                      "you": 3,
+                      "them": 4,
+                      "outcome": "She breathes in. “Omar. Saturday. Do you want to?” “Yes,” he says. “Since Tuesday.”",
+                      "why": "The case moves back into the room. What was about him becomes what is between the two of them, and only that version can be settled."
+                    },
+                    {
+                      "text": "“Sure, I'll talk to him about Saturday.”",
+                      "tag": "ok",
+                      "you": -2,
+                      "them": 1,
+                      "outcome": "Clara says, “Thanks,” and you have taken on a second case without a single witness.",
+                      "why": "You agreed to carry a request for someone else. It sounds helpful, but the court is still open and you are now its messenger."
+                    },
+                    {
+                      "text": "“Clara, has it crossed your mind to just ask him? Out loud?”",
+                      "tag": "game",
+                      "you": 1,
+                      "them": -3,
+                      "outcome": "She takes the schedule back. “Whose side are you on?” The window seat goes flat.",
+                      "why": "A trap move: a question with a verdict hidden in it. The case flips and you become the defendant."
+                    }
+                  ]
+                },
+                {
+                  "who": "Omar",
+                  "text": "“So what's the verdict? Everyone at Halden says you always have one.”",
+                  "cue": "a half smile, both hands round the cup",
+                  "lines": [
+                    {
+                      "text": "“No verdict. Settle Saturday between you two, and I'll eat the cake.”",
+                      "tag": "best",
+                      "you": 4,
+                      "them": 4,
+                      "outcome": "“Six,” says Omar. “The lantern walk,” says Clara. She writes a small 6 in pen on the corner of the page.",
+                      "why": "You hand the decision to the two people with the relationship. The court closes because nobody is waiting for a judge."
+                    },
+                    {
+                      "text": "“Saturday at six, and I'll book the table myself.”",
+                      "tag": "ok",
+                      "you": -1,
+                      "them": 1,
+                      "outcome": "Omar says, “The judge books the table,” and Clara laughs for the first time tonight.",
+                      "why": "A fair ruling and the mood lifts, but you still hold the verdict. Next week somebody will ask you again."
+                    },
+                    {
+                      "text": "“Guilty, both of you. Clara asks plainly and Omar answers within the hour, or I take the schedule.”",
+                      "tag": "game",
+                      "you": 2,
+                      "them": -6,
+                      "outcome": "“That's not fair,” Clara says. Omar says, “Noted,” again, and they both stop talking to you.",
+                      "why": "You sentenced them from the chair, and the sentence closed the case with no agreement. Now both are talking about you."
+                    }
+                  ]
+                }
+              ],
+              "payoff": "The court closes with you in the judge's seat. Both of them are sure you picked a side, and the schedule stays in the folder, unread.",
+              "fallout": {
+                "them": "Clara slips the schedule into her bag and says she has an early start. The cake sits half eaten between you."
+              },
+              "example": "A school governors' meeting, Tuesday. Two members argue over the minibus key and the chair is asked to rule. She says, “Ask each other directly,” and the key is passed along."
+            },
+            {
+              "type": "scene",
+              "title": "Friday, 5:50pm, the lift lobby",
+              "setting": "Halden. Clara has two lantern-walk tickets fanned in one hand and her coat on. <i>The Heckler, in your head: “Say no first, so you can't be the one who lets her down.”</i>",
+              "meters": {
+                "you": 50,
+                "them": 50
+              },
+              "beats": [
+                {
+                  "who": "Clara",
+                  "text": "“Two tickets for the lantern walk. One's for Omar, if he says yes, and the other was for you. Never mind. You never come to anything.”",
+                  "cue": "watching the floor numbers instead of you",
+                  "lines": [
+                    {
+                      "text": "“I'll come. Tell me where to meet, and I'll bring the flask.”",
+                      "tag": "best",
+                      "you": 4,
+                      "them": 4,
+                      "outcome": "She stops fanning the tickets. “The bridge. Seven. Bring the big flask, the small one leaks.”",
+                      "why": "You drop the refusal and say a yes with a job attached. The corner has no wall left once you walk through it warmly."
+                    },
+                    {
+                      "text": "“Maybe. I've had a long week.”",
+                      "tag": "ok",
+                      "you": -1,
+                      "them": -1,
+                      "outcome": "She nods too quickly. “Of course.” The tickets go back in her bag.",
+                      "why": "A maybe leaves the door half shut. Nothing breaks, and she gets to be the one who was left out."
+                    },
+                    {
+                      "text": "“Fine, I'll come, but only because you've made me feel like the bad friend.”",
+                      "tag": "game",
+                      "you": -4,
+                      "them": -5,
+                      "outcome": "Clara folds the tickets in half. “Then don't,” she says, and the lift opens on an empty car.",
+                      "why": "A trap move: you said yes and made it her fault. Both answers lose in a corner, and this one keeps you both on the same wall."
+                    }
+                  ]
+                },
+                {
+                  "who": "Clara",
+                  "text": "“Oh, now you're coming? Only because I sulked. Forget it, go home.”",
+                  "cue": "tucking the tickets deep into her bag",
+                  "lines": [
+                    {
+                      "text": "“I want to come. When do the lanterns go up? Tell me the bit you're looking forward to.”",
+                      "tag": "best",
+                      "you": 4,
+                      "them": 4,
+                      "outcome": "She stops. “The bridge. They float them off the bridge. Omar says it's silly.” “Omar said yes?” “He said yes.”",
+                      "why": "You answer the plan and leave the label alone. She gets to be excited about something, which is what the corner was hiding."
+                    },
+                    {
+                      "text": "“You're right, I never come. I'll try next time.”",
+                      "tag": "ok",
+                      "you": -2,
+                      "them": -1,
+                      "outcome": "“Next time,” she says flatly, and presses the lift button again.",
+                      "why": "You accepted the label, so the corner is now yours to live in. A promise for next time is a way of staying there."
+                    },
+                    {
+                      "text": "“Yes, I never come, because every time I do it turns into a schedule.”",
+                      "tag": "game",
+                      "you": -3,
+                      "them": -6,
+                      "outcome": "Clara walks into the lift. The doors close before you finish the sentence.",
+                      "why": "A trap move: you agreed with the label and gave her the reason. Both of you have said the corner out loud, and that is where it stays."
+                    }
+                  ]
+                },
+                {
+                  "who": "Clara",
+                  "text": "“The tickets are in my bag if you want one. I'm not going to chase you.”",
+                  "cue": "one hand holding the lift door",
+                  "lines": [
+                    {
+                      "text": "“Thanks. I'll take the spare, and you can tell me when to look up.”",
+                      "tag": "best",
+                      "you": 3,
+                      "them": 4,
+                      "outcome": "She puts a ticket in your hand. “Seven at the bridge. Don't be early, I won't be ready.”",
+                      "why": "You join warmly with a small plan of your own. The corner offered a sulky yes or a no, and you gave neither."
+                    },
+                    {
+                      "text": "“Sorry, I'm not in the mood.”",
+                      "tag": "ok",
+                      "you": -1,
+                      "them": -2,
+                      "outcome": "“Fair enough,” she says, and lets the door close.",
+                      "why": "A calm no beats a sulk, but it still closes the plan. You are now on opposite sides of the door."
+                    },
+                    {
+                      "text": "“Chasing isn't your thing, Clara. I'm not staying to watch you try.”",
+                      "tag": "game",
+                      "you": -4,
+                      "them": -6,
+                      "outcome": "She laughs once, not kindly, and the lift takes her down.",
+                      "why": "A trap move: you turned her request into a verdict on her. The corner closes and the walk goes ahead without you."
+                    }
+                  ]
+                }
+              ],
+              "payoff": "The corner closes on both of you. Clara rides down alone with both tickets, and the lantern walk becomes a plan nobody mentions.",
+              "example": "A colleague leaves a book club chat: “You never come to these, so I won't bother asking.” You write, “I'll come, and I'll save you the sofa seat.”"
+            },
+            {
+              "type": "scene",
+              "title": "Sunday, 8:30pm, the speakerphone",
+              "setting": "Clara has you on speaker in Omar's hallway, coat still on. The kettle is running in the next room. <i>The Heckler, in your head: “If she is upset, fixing it is your job.”</i>",
+              "meters": {
+                "you": 60,
+                "them": 50
+              },
+              "beats": [
+                {
+                  "who": "Clara",
+                  "text": "“If it weren't for Daniel's release dates, I'd have asked him to the lake weeks ago. Every week is a freeze.”",
+                  "cue": "pitched to carry into the next room",
+                  "lines": [
+                    {
+                      "text": "“That sounds boxed in. If it were only up to you, what would you do?”",
+                      "tag": "best",
+                      "you": 4,
+                      "them": 3,
+                      "outcome": "A long pause. “Ask him to the lake, I suppose. In May. But I'd have to ask him first.” It is the first plan of the call.",
+                      "why": "The blame needs somewhere to go. You hand the choice to the one who holds it, so the “if it weren't for” has to become a decision."
+                    },
+                    {
+                      "text": "“I know. Daniel's always been like that.”",
+                      "tag": "ok",
+                      "you": -2,
+                      "them": -1,
+                      "outcome": "“Always,” she says, and the complaint grows a second paragraph about the sprint calendar.",
+                      "why": "You agreed that Daniel is the cause. The blame stays on him, and your agreement gives Clara a second witness."
+                    },
+                    {
+                      "text": "“It's Daniel's fault, then. I'll have a word with him on Monday.”",
+                      "tag": "game",
+                      "you": -4,
+                      "them": -5,
+                      "outcome": "“Would you? Good,” says Clara, and the line goes quiet while the kettle clicks off.",
+                      "why": "A trap move: you took the Saviour's chair and promised to fix Daniel for her. The blame has a messenger and the lake never comes up."
+                    }
+                  ]
+                },
+                {
+                  "who": "Omar",
+                  "text": "“I heard that. I'm free the whole of May.”",
+                  "cue": "from the kitchen, one hand on the tap",
+                  "lines": [
+                    {
+                      "text": "“Then tell her yourself, Omar. Don't say it through me.”",
+                      "tag": "best",
+                      "you": 4,
+                      "them": 3,
+                      "outcome": "The tap stops. His voice is closer. “Clara. The lake. May.”",
+                      "why": "You send the message back to the person who can say it to her face. Omar's steady “I'm free” becomes an invitation only when he addresses it to her."
+                    },
+                    {
+                      "text": "“You two sort it out. I'm only the phone.”",
+                      "tag": "ok",
+                      "you": -1,
+                      "them": -1,
+                      "outcome": "“Right,” says Omar, and the tap runs again.",
+                      "why": "Neutral and harmless, but it leaves Omar's “free” as a remark and Clara's blame where it was."
+                    },
+                    {
+                      "text": "“Omar, you never say so. You just tell her you're free.”",
+                      "tag": "game",
+                      "you": -3,
+                      "them": -6,
+                      "outcome": "Clara says, “See? Even you agree with me,” and Omar's footsteps go the other way.",
+                      "why": "You joined the case against him, so the phone turns into a court with you as the witness. The call ends early."
+                    }
+                  ]
+                },
+                {
+                  "who": "Clara",
+                  "text": "“He says he's free, which isn't asking. And if it weren't for you telling me to be patient, I'd have said it weeks ago. So what would you do?”",
+                  "cue": "quieter now, pleased to have a witness",
+                  "lines": [
+                    {
+                      "text": "“I'm not the reason, Clara. Ask him for the lake, straight out, and I'll text you Monday to hear how it went.”",
+                      "tag": "best",
+                      "you": 4,
+                      "them": 4,
+                      "outcome": "She is silent, then says, “The lake. Straight out. Hmm.” It is the second plan of the call.",
+                      "why": "You refuse the blame you were handed, then give Clara a specific ask she can make herself. Asking straight is the way out of the “if it weren't for” line."
+                    },
+                    {
+                      "text": "“Maybe leave him a note on the kettle.”",
+                      "tag": "ok",
+                      "you": -1,
+                      "them": 0,
+                      "outcome": "“A note,” says Clara. “He'd frame it.” The blame moves a step along the hall.",
+                      "why": "A kind idea, but you are running the plan and Clara is turning it down. You have become the one who has to fix it."
+                    },
+                    {
+                      "text": "“I suppose it's me, then. Sorry I told you to wait.”",
+                      "tag": "game",
+                      "you": -5,
+                      "them": -6,
+                      "outcome": "“No, no, you're a good friend,” says Clara, and asks whether you have eaten.",
+                      "why": "A trap move: you took the blame and asked to be forgiven for it. The question about the lake is never asked, and the blame moves into your pocket."
+                    }
+                  ]
+                }
+              ],
+              "payoff": "Clara ends the call sure that everyone has been waiting for someone else, and the lake stays unmentioned.",
+              "example": "A friend on a walk, Sunday. “If it weren't for my sister's wedding dates, we'd have booked the trip already.” You say, “And if the dates weren't in the way, what would you book?”"
+            }
+          ]
+        },
+        {
+          "level": "Analyse",
+          "label": "Analyse, explain it",
+          "intro": "Two questions. Pick the reply that matches what happened, and why it worked.",
+          "items": [
+            {
+              "type": "pick",
+              "who": "Clara",
+              "text": "“Let me tell you what he did.” Which reply stops the case from running?",
+              "cue": "the case is open and you are the one in the judge's chair",
+              "options": [
+                "Give Clara a ruling on the text, so she can stop worrying about it.",
+                "Ask Omar to explain the Tuesday text to you, the neutral one.",
+                "Tell Clara to say it to Omar, who is right there."
+              ],
+              "answer": 2,
+              "why": "When someone talks about a person who is in the room, the talk is aimed at you as the judge, and the person it is about is left out. Turning the talk towards that person removes the judge. The court has nowhere to sit.",
+              "traps": {
+                "0": "A verdict ends the talk for a minute, but the case stays open. Clara will bring the next one to the same chair, because you have shown her where the judge sits.",
+                "1": "This still puts you in the middle. Omar now speaks to the judge, and the case becomes a hearing with better manners. The room is the same and only the seating has moved."
+              },
+              "example": "A friend on a bus, Sunday. “Let me tell you what my brother said about the flat.” You say, “Tell him, he's in the next seat. Say it to his face.”"
+            },
+            {
+              "type": "pick",
+              "who": "Clara",
+              "text": "“You never come to anything, so forget it. I'll go alone with the tickets.” Which reply steps out of the corner?",
+              "cue": "one ticket already half out of her bag",
+              "options": [
+                "I'll come. Which scarf should I bring?",
+                "I'll come, and I'll mention that you made it a fight.",
+                "I'm not coming, because you always make it a test."
+              ],
+              "answer": 0,
+              "why": "The corner has two doors and both lead to the same wall. Coming means you came only because you were pushed, and staying away means you never come. The way out is to drop the refusal and join in warmly on the plan.",
+              "traps": {
+                "1": "This goes through the first door. You come, but you bring the sulk with you, so the label “never comes” is still on the table and she can say she was right.",
+                "2": "This goes through the second door. The refusal confirms the label, and the corner closes behind you. She can now say with a straight face that you never come."
+              },
+              "example": "A group chat about a cricket match, Saturday. “You never turn up, so I've booked the nets without you.” You reply, “Count me in, and I'll bring the drinks.”"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "setting": "School & College",
+      "blurb": "Sam's evening class: a group poster with one blank panel, a tutor's remark, a Thursday presentation.",
+      "opener": {
+        "setting": "Tuesday, 7:40pm. The community hall, Sam's evening class. Break time, workbooks open on the long table, and the poster for Thursday's group presentation still has one blank panel.",
+        "lines": [
+          {
+            "who": "Tilly",
+            "text": "“Sit, don't say no. I've printed the references, done the title and cut the card. Panel four is yours or Sam's, whoever turns up.”",
+            "cue": "already feeding card into the guillotine"
+          },
+          {
+            "who": "Sam",
+            "text": "“Sorry, sorry, panel four is on my list. Look, I've colour-coded the list.”",
+            "cue": "holding up a notebook striped with six highlighters"
+          }
+        ],
+        "ask": "Name the home trap that is running at this table, and find the one reply that steps out of it without starting a fight."
+      },
+      "rounds": [
+        {
+          "level": "Spot",
+          "label": "Spot, round 1",
+          "intro": "Each home trap has a plain name. Tap the one that is running in the line.",
+          "items": [
+            {
+              "type": "pick",
+              "who": "Tilly",
+              "text": "“Don't sit, I'll do it. The references, the cutting, the printing, panel four as well. Nobody else has the time, so it's me.”",
+              "cue": "the guillotine blade coming down on a strip of card",
+              "options": [
+                "the rush",
+                "sweetheart",
+                "the court"
+              ],
+              "answer": 0,
+              "why": "She is too busy to stop, and the busyness is the bait. She takes on each job as it arrives and offers the next one, so the pile only grows. In the book the evening ends in a collapse where nothing gets finished, and she blames herself for it.",
+              "traps": {
+                "1": "This would be sweetheart if the line ended on a pet name with a jab tucked inside. There is no endearment here, only a stack of jobs nobody asked her to carry.",
+                "2": "This would be the court if she were building a case against Sam. She names no one. She is simply doing everything and counting it."
+              },
+              "example": "A parents' group, Thursday. One mother answers every message within a minute, collects the raffle tins, and says “I'll do the lot, nobody else is free” before the meeting starts."
+            },
+            {
+              "type": "pick",
+              "who": "Mrs Dunmore",
+              "text": "“Lovely effort for someone who joined in week five, dear. Most of you had a head start, of course.”",
+              "cue": "tapping the feedback sheet with a capped pen",
+              "options": [
+                "the corner",
+                "sweetheart",
+                "look how hard I've tried"
+              ],
+              "answer": 1,
+              "why": "The jab about starting late sits in the middle, and the pet name wraps round it. The tutor points at a weakness through a kind word, so you cannot object without seeming ungrateful. The sting hides inside the endearment.",
+              "traps": {
+                "0": "This would be the corner if every answer you gave were wrong. She has not set two doors. She has one remark with a ribbon on it, and you can answer it directly.",
+                "2": "This would be look how hard I've tried if the speaker were showing their own effort. She is pointing at yours, and she is using the calendar as her proof."
+              },
+              "example": "A bank clerk, Friday. “Very good for a first-time account holder, sir. Most people read the leaflet.”"
+            },
+            {
+              "type": "pick",
+              "who": "Sam",
+              "text": "“I've tried so hard. Six colours of highlighter, two evenings in the library, I even bought the extra folder. And you still look at me like that.”",
+              "cue": "fanning pages without looking up",
+              "options": [
+                "the court",
+                "the rush",
+                "look how hard I've tried"
+              ],
+              "answer": 2,
+              "why": "He lays out the effort and says nothing about panel four. The effort is a shield: whatever happens next, he can say he tried, and trying is hard to argue with. Meanwhile the blank panel is still blank.",
+              "traps": {
+                "0": "This would be the court if he were making a case against someone absent. Sam accuses nobody. He is asking you to admire the trying.",
+                "1": "This would be the rush if he were too busy to stop. Sam has plenty of time to show you his highlighters, which is the point."
+              },
+              "example": "A cousin at a wedding, Saturday. “I've tried so hard with the diet, I've even stopped the sweets, and you still say I'm not serious.” The plate of sweets is on the table behind him."
+            },
+            {
+              "type": "pick",
+              "who": "Sam",
+              "text": "“If it weren't for the night bus stopping at nine, I'd be in the library every evening. They put the stop on the wrong side of the road.”",
+              "cue": "hooking his rucksack onto one shoulder",
+              "options": [
+                "sweetheart",
+                "the corner",
+                "if it weren't for you"
+              ],
+              "answer": 2,
+              "why": "He blames someone else's timetable for what he is not doing, and the complaint is the point. The bus also keeps him away from the risk of sitting down to a blank panel, so he complains about it and never tests it. While the bus is the cause, nothing has to change at his end.",
+              "traps": {
+                "0": "This would be sweetheart if the sentence ended on a pet name with a sting in it. Sam's sting sits in the blame alone.",
+                "1": "This would be the corner if every answer you gave left you stuck. Sam offers no second door. He is parking the whole problem on a bus."
+              },
+              "example": "A neighbour at the lift, Tuesday. “If it weren't for my husband's shifts, I'd have joined the choir years ago.”<br>The shifts get the blame, and the choir is never tried."
+            }
+          ]
+        },
+        {
+          "level": "Play",
+          "label": "Play, the week in motion",
+          "intro": "Three scenes with the same people. Keep both meters above half at the end of each one, and watch for the moment someone hands you a chair you didn't ask for.",
+          "items": [
+            {
+              "type": "scene",
+              "title": "Wednesday, 6:30pm, the library study room",
+              "setting": "The glass study room. Sam is two chairs away copying a diagram, and Tilly has pulled her chair next to yours. <i>The Heckler, in your head: “You're the fair one. Rule on it.”</i>",
+              "meters": {
+                "you": 60,
+                "them": 50
+              },
+              "beats": [
+                {
+                  "who": "Tilly",
+                  "text": "“Let me tell you what Sam did to panel four. Nothing, again. You're the fair one, so you tell him.”",
+                  "cue": "whispering, glancing at his bent head",
+                  "lines": [
+                    {
+                      "text": "“Tell him, Tilly. He's two chairs away and he has ears.”",
+                      "tag": "best",
+                      "you": 4,
+                      "them": 3,
+                      "outcome": "She turns her chair. “Sam. Panel four.” He sits up, surprised to be asked straight, and the room gets a little quieter.",
+                      "why": "A court runs on talk about someone, not to them. Speaking to the person directly stops it before the first witness."
+                    },
+                    {
+                      "text": "“Go on, what did he do this week?”",
+                      "tag": "ok",
+                      "you": -2,
+                      "them": 2,
+                      "outcome": "She gives you the whole week: the fonts, the missing arrow, the three messages he left on read. Sam keeps copying.",
+                      "why": "You took the chair without being asked. The court has its judge, and the case grows while Sam listens from two chairs away."
+                    },
+                    {
+                      "text": "“Nothing at all? That's lazy of him.”",
+                      "tag": "game",
+                      "you": 2,
+                      "them": -4,
+                      "outcome": "Sam pulls his headphones up. Tilly says, “Thank you,” as though you had both agreed.",
+                      "why": "A trap move: you passed judgment on someone who could hear. The court has two against one, and the table splits."
+                    }
+                  ]
+                },
+                {
+                  "who": "Sam",
+                  "text": "“Sorry, sorry. The fonts took me an hour, and the library printer ate my credit. I'd have done panel four tonight, I swear.”",
+                  "cue": "not looking up, one hand over the diagram",
+                  "lines": [
+                    {
+                      "text": "“Then give Tilly a time, Sam. Say it to her, not to me.”",
+                      "tag": "best",
+                      "you": 4,
+                      "them": 3,
+                      "outcome": "He turns to Tilly. “Tonight by nine. I'll send you a photo.”",
+                      "why": "You send the answer to the person who is owed it. A time said to the right face is the only defence a court cannot argue with."
+                    },
+                    {
+                      "text": "“Fine, I'll rule that tonight counts, and that's the end of it.”",
+                      "tag": "ok",
+                      "you": -1,
+                      "them": 1,
+                      "outcome": "Sam nods. Tilly says, “I asked you to tell him, not to rule on it.”",
+                      "why": "A verdict ends the argument for a minute and keeps you in the chair. Tilly learns the court still works, so she will come back."
+                    },
+                    {
+                      "text": "“Tilly's right, you're always behind. It's your fault.”",
+                      "tag": "game",
+                      "you": 2,
+                      "them": -5,
+                      "outcome": "Sam says, “Okay, okay,” and the sorry turns into a sulk behind his folder.",
+                      "why": "You took the prosecution's side and read out the sentence. The apology is gone, and Sam has proof the table is against him."
+                    }
+                  ]
+                },
+                {
+                  "who": "Tilly",
+                  "text": "“See? He always has a printer. So you'll sort out the speaking order with him as well, won't you?”",
+                  "cue": "already writing names on a sticky note",
+                  "lines": [
+                    {
+                      "text": "“Say the speaking order to him, Tilly. Look at him and say all of it.”",
+                      "tag": "best",
+                      "you": 3,
+                      "them": 4,
+                      "outcome": "She holds the note up to Sam. “I'm first, you're third. Is that all right?” “Fine,” he says. “I'd rather be third.”",
+                      "why": "The case moves back into the room. What was about him becomes what is between the two of them, and only that version can be settled."
+                    },
+                    {
+                      "text": "“Sure, I'll sort out the order with him.”",
+                      "tag": "ok",
+                      "you": -2,
+                      "them": 1,
+                      "outcome": "Tilly says, “Thanks,” and you have taken on a second case without a witness.",
+                      "why": "You agreed to carry a request for someone else. It sounds helpful, but the court is still open and you are its messenger."
+                    },
+                    {
+                      "text": "“Tilly, have you ever asked him to go first? Out loud?”",
+                      "tag": "game",
+                      "you": 1,
+                      "them": -3,
+                      "outcome": "She puts the sticky note down. “Whose side are you on?” The room goes flat.",
+                      "why": "A trap move: a question with a verdict hidden in it. The case flips and you become the defendant."
+                    }
+                  ]
+                },
+                {
+                  "who": "Sam",
+                  "text": "“So what's the verdict? You always have one.”",
+                  "cue": "grinning, tapping a highlighter on the desk",
+                  "lines": [
+                    {
+                      "text": "“No verdict. You two settle who speaks first, now, with me here.”",
+                      "tag": "best",
+                      "you": 4,
+                      "them": 4,
+                      "outcome": "“Tilly first,” says Sam. She nods once and sticks the note to the poster's edge.",
+                      "why": "You hand the decision to the two people who have to stand there. The court closes because nobody is waiting for a judge."
+                    },
+                    {
+                      "text": "“Tilly first, and I'll tell Sam myself.”",
+                      "tag": "ok",
+                      "you": -1,
+                      "them": 1,
+                      "outcome": "Sam says, “Ha, the judge tells me,” and Tilly laughs for the first time tonight.",
+                      "why": "A fair ruling and the mood lifts, but you still hold the verdict. Next week somebody will ask you again."
+                    },
+                    {
+                      "text": "“Guilty. Sam, you're doing panels four and five by Thursday.”",
+                      "tag": "game",
+                      "you": 2,
+                      "them": -6,
+                      "outcome": "“That's not fair,” says Sam. Tilly says, “See, he never listens,” and both stop talking to you.",
+                      "why": "You sentenced him from the chair, and the sentence closed the case with no agreement. Now both are talking about you."
+                    }
+                  ]
+                }
+              ],
+              "payoff": "The court closes with you in the judge's seat. Both of them are sure you picked a side, and panel four stays blank.",
+              "fallout": {
+                "them": "Tilly gathers the card offcuts and leaves without a word. The blank panel sits on the table until the caretaker turns the lights off."
+              },
+              "example": "A parents' WhatsApp group, Saturday. Two mothers argue about the raffle money and the class rep keeps being asked to decide. She writes, “Ask each other directly,” and the tin is counted."
+            },
+            {
+              "type": "scene",
+              "title": "Thursday, 4:20pm, the library steps",
+              "setting": "Sam has his rucksack on and a bus pass between two fingers. The presentation is at seven. <i>The Heckler, in your head: “Say no first, so you can't be the one who lets him down.”</i>",
+              "meters": {
+                "you": 50,
+                "them": 50
+              },
+              "beats": [
+                {
+                  "who": "Sam",
+                  "text": "“Come and rehearse the talk with me at five. Oh, forget it. You never come to anything I set up.”",
+                  "cue": "looking at the bus stop instead of you",
+                  "lines": [
+                    {
+                      "text": "“I'll come. Give me five minutes, and you can bring the stopwatch.”",
+                      "tag": "best",
+                      "you": 4,
+                      "them": 4,
+                      "outcome": "He stops turning the pass over and grins. “Five minutes. Don't bring the sad face.”",
+                      "why": "You drop the refusal and say a yes with a time and a job attached. A warm yes takes the wall away."
+                    },
+                    {
+                      "text": "“I'm not sure. I've got work stuff.”",
+                      "tag": "ok",
+                      "you": -1,
+                      "them": -1,
+                      "outcome": "He nods too fast. “Sure.” The bus pass goes back in his pocket.",
+                      "why": "A maybe leaves the door half shut. Nothing breaks, and he gets to be the one who was left out."
+                    },
+                    {
+                      "text": "“Fine, I'll come, but only because you've made me feel like the bad classmate.”",
+                      "tag": "game",
+                      "you": -4,
+                      "them": -5,
+                      "outcome": "He sighs and starts down the steps two paces ahead. The rehearsal happens in silence.",
+                      "why": "A trap move: you said yes and made it his fault. Both answers lose in a corner, and this one keeps you both on the same wall."
+                    }
+                  ]
+                },
+                {
+                  "who": "Sam",
+                  "text": "“Oh, now you're coming? Only because I said you wouldn't. Right, I'll just practise on the bus.”",
+                  "cue": "already half down the steps",
+                  "lines": [
+                    {
+                      "text": "“I want to come. Which slide scares you most? We'll start there.”",
+                      "tag": "best",
+                      "you": 4,
+                      "them": 4,
+                      "outcome": "He stops. “Slide four. The graph with the three lines. I always say lines when I mean bars.”",
+                      "why": "You answer the plan and leave the label alone. He gets to name something real, which is what the corner was hiding."
+                    },
+                    {
+                      "text": "“You're right, I never come. I'll try next time.”",
+                      "tag": "ok",
+                      "you": -2,
+                      "them": -1,
+                      "outcome": "“Next time,” he says flatly, and the bus pass comes out again.",
+                      "why": "You accepted the label, so the corner is now yours to live in. A promise for next time is a way of staying there."
+                    },
+                    {
+                      "text": "“Yes, I never come, because every time I do you hide behind the colour-coding.”",
+                      "tag": "game",
+                      "you": -3,
+                      "them": -6,
+                      "outcome": "He goes down the steps. The bus arrives and he is on it before you reach the kerb.",
+                      "why": "A trap move: you agreed with the label and gave him the reason. Both of you have said the corner out loud, and that is where it stays."
+                    }
+                  ]
+                },
+                {
+                  "who": "Sam",
+                  "text": "“The stopwatch is in my bag, if you want it. I'm not going to beg.”",
+                  "cue": "bag held out an inch from his shoulder",
+                  "lines": [
+                    {
+                      "text": "“Thanks. I'll hold it, and you tell me when slide four goes wrong.”",
+                      "tag": "best",
+                      "you": 3,
+                      "them": 4,
+                      "outcome": "He sits on the step beside you. “Slide four. Three lines. Watch me say lines.”",
+                      "why": "You join in warmly with a small plan of your own. The corner offered a sulky yes or a no, and you gave neither."
+                    },
+                    {
+                      "text": "“Sorry, I'm not in the mood.”",
+                      "tag": "ok",
+                      "you": -1,
+                      "them": -2,
+                      "outcome": "“Fair enough,” he says, and walks to the stop with the stopwatch still in his bag.",
+                      "why": "A calm no beats a sulk, but it still closes the plan. You are now on opposite sides of the road."
+                    },
+                    {
+                      "text": "“Begging is your thing, Sam. I'm not sitting through it.”",
+                      "tag": "game",
+                      "you": -4,
+                      "them": -6,
+                      "outcome": "He laughs once, not kindly, and gets on the bus.",
+                      "why": "A trap move: you turned his request into a verdict on him. The corner closes and he rehearses alone."
+                    }
+                  ]
+                }
+              ],
+              "payoff": "The corner closes on both of you. Sam rehearses alone on the top deck, and slide four goes untouched.",
+              "example": "A friend asks you to help at a charity stall: “You never turn up, so I've stopped asking.” You write, “Put me down for the cash tin. I'll be there at nine.”"
+            },
+            {
+              "type": "scene",
+              "title": "Thursday, 7:05pm, the hall corridor",
+              "setting": "Five minutes before the presentation. Tilly stands by the vending machine with her note cards, and Mrs Dunmore's door is ajar behind her. <i>The Heckler, in your head: “If she is upset, fixing it is your job.”</i>",
+              "meters": {
+                "you": 60,
+                "them": 50
+              },
+              "beats": [
+                {
+                  "who": "Tilly",
+                  "text": "“If it weren't for Mrs Dunmore's rubric, I'd be calm. A whole mark for eye contact? Nobody reads a poster with their eyes.”",
+                  "cue": "loud enough to carry through the open door",
+                  "lines": [
+                    {
+                      "text": "“That sounds like a lot to carry. If it were only up to you, how would you open?”",
+                      "tag": "best",
+                      "you": 4,
+                      "them": 3,
+                      "outcome": "A pause. “Say the title and look at the clock, I suppose. But I'd have to look up first.” It is the first plan of the night.",
+                      "why": "The blame needs somewhere to go. You hand the choice to the one who holds it, so the “if it weren't for” has to become a decision."
+                    },
+                    {
+                      "text": "“I know. Mrs Dunmore's always been like that.”",
+                      "tag": "ok",
+                      "you": -2,
+                      "them": -1,
+                      "outcome": "“Always,” says Tilly, and the complaint grows a paragraph about the marking sheet.",
+                      "why": "You agreed that the tutor is the cause. The blame stays on her, and your agreement gives Tilly a second witness."
+                    },
+                    {
+                      "text": "“It's her fault, then. I'll ask her to drop that mark.”",
+                      "tag": "game",
+                      "you": -4,
+                      "them": -5,
+                      "outcome": "“Would you? Good,” says Tilly, and walks off to find the toilets.",
+                      "why": "A trap move: you took the Saviour's chair and promised to fix the tutor for her. The blame has a messenger and the opening is never rehearsed."
+                    }
+                  ]
+                },
+                {
+                  "who": "Mrs Dunmore",
+                  "text": "“I heard that. The rubric went on the board in week two.”",
+                  "cue": "the door opening, clipboard against her chest",
+                  "lines": [
+                    {
+                      "text": "“Then say that to Tilly, Mrs Dunmore. Don't send it through me.”",
+                      "tag": "best",
+                      "you": 4,
+                      "them": 3,
+                      "outcome": "A pause. “Tilly, the eye contact mark is for looking up once a minute,” she says. “That is all it is.”",
+                      "why": "You send the message back to the person who can say it to Tilly's face. The tutor's “week two” becomes information only when she addresses it to her."
+                    },
+                    {
+                      "text": "“You two sort it out. I'm only standing here.”",
+                      "tag": "ok",
+                      "you": -1,
+                      "them": -1,
+                      "outcome": "“We're fine,” says Mrs Dunmore, and the door stays ajar.",
+                      "why": "Neutral and harmless, but it leaves the tutor's “fine” in place and Tilly's blame where it was."
+                    },
+                    {
+                      "text": "“Mrs Dunmore, you never explain the marks. You just say it was on the board.”",
+                      "tag": "game",
+                      "you": -3,
+                      "them": -6,
+                      "outcome": "Tilly says, “See? Even they agree with me,” and Mrs Dunmore closes the door.",
+                      "why": "You joined the case against the tutor, so the corridor turns into a court with you as the witness. The conversation ends early."
+                    }
+                  ]
+                },
+                {
+                  "who": "Tilly",
+                  "text": "“She doesn't even talk to me. And if it weren't for you telling me to say it to Sam on Wednesday, I'd have swapped and be sitting down by now. So what would you do?”",
+                  "cue": "quieter now, pleased to have a witness",
+                  "lines": [
+                    {
+                      "text": "“I'm not the reason, Tilly. Ask Mrs Dunmore to let you go third, straight out, and I'll wait by the door to hear how it went.”",
+                      "tag": "best",
+                      "you": 4,
+                      "them": 4,
+                      "outcome": "She is silent, then says, “Third. Straight out. Hmm.” It is the second plan of the night.",
+                      "why": "You refuse the blame you were handed, then give Tilly a specific ask she can make herself. Asking straight is the way out of the “if it weren't for” line."
+                    },
+                    {
+                      "text": "“Maybe go third and ask Sam to swap.”",
+                      "tag": "ok",
+                      "you": -1,
+                      "them": 0,
+                      "outcome": "“Sam would say yes and forget,” says Tilly. The blame moves a little further down the corridor.",
+                      "why": "A kind idea, but you are running the plan and Tilly is turning it down. You have become the one who has to fix it."
+                    },
+                    {
+                      "text": "“I suppose it's me, then. Sorry I told you to speak up.”",
+                      "tag": "game",
+                      "you": -5,
+                      "them": -6,
+                      "outcome": "“No, no, you're a good friend,” says Tilly, and asks if you brought a pen.",
+                      "why": "A trap move: you took the blame and asked to be forgiven for it. The question to the tutor is never asked, and the blame moves into your pocket."
+                    }
+                  ]
+                }
+              ],
+              "payoff": "Tilly goes in sure that everyone is against her, and the order of speakers stays as it was on the sticky note.",
+              "example": "A cousin on a video call, Sunday. “If it weren't for my husband's shifts, we'd have gone to the coast by now.” You say, “And if the shifts weren't his to solve, what would you do?”"
+            }
+          ]
+        },
+        {
+          "level": "Analyse",
+          "label": "Analyse, explain it",
+          "intro": "Two questions. Pick the reply that matches what happened, and why it worked.",
+          "items": [
+            {
+              "type": "pick",
+              "who": "Tilly",
+              "text": "“Let me tell you what he did to panel four.” Which reply stops the case from running?",
+              "cue": "the case is open and you are the one in the judge's chair",
+              "options": [
+                "Give Tilly a ruling on panel four, so she can stop fretting about it.",
+                "Tell Tilly to say it to Sam, who is two chairs away.",
+                "Ask Sam to account for panel four to you, the fair one."
+              ],
+              "answer": 1,
+              "why": "When someone talks about a person who is in the room, the talk is aimed at you as the judge, and the person it is about is left out. Turning the talk towards that person removes the judge. The court has nowhere to sit.",
+              "traps": {
+                "0": "A verdict ends the talk for a minute, but the case stays open. Tilly will bring the next one to the same chair, because you have shown her where the judge sits.",
+                "2": "This still puts you in the middle. Sam now speaks to the judge, and the case becomes a hearing with better manners. The room is the same and only the seating has moved."
+              },
+              "example": "A friend on a train, Sunday. “Let me tell you what my brother did about the flat.” You say, “Tell him, he's on the phone. Put him on speaker.”"
+            },
+            {
+              "type": "pick",
+              "who": "Sam",
+              "text": "“You never come to anything I set up, so forget it. I'll practise on the bus.” Which reply steps out of the corner?",
+              "cue": "bus pass already out, stopwatch still in his bag",
+              "options": [
+                "I'll come, and let's start with slide four.",
+                "I'll come, and I'll remind you that you made it a fight.",
+                "I'm not coming, because you always turn a rehearsal into a drama."
+              ],
+              "answer": 0,
+              "why": "The corner has two doors and both lead to the same wall. Coming means you came only because you were pushed, and staying away means you never come. The way out is to drop the refusal and join in warmly on the plan.",
+              "traps": {
+                "1": "This goes through the first door. You come, but you bring the sulk with you, so the label “never comes” is still on the table and he can say he was right.",
+                "2": "This goes through the second door. The refusal confirms the label, and the corner closes behind you. He can now say with a straight face that you never come."
+              },
+              "example": "A group chat about a football match, Saturday. “You never turn up, so I've booked the pitch without you.” You reply, “Count me in, and I'll bring the bibs.”"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "setting": "Work",
+      "blurb": "Halden release day: three red tickets, a freeze at six, and a team looking for someone to blame.",
+      "opener": {
+        "setting": "Thursday, 4:50pm. Halden, the team room. The release board shows three red tickets, and the freeze is at six.",
+        "lines": [
+          {
+            "who": "Daniel",
+            "text": "“Right. Three red tickets, a freeze at six, and the client contact is away until Monday. Who has 214?”",
+            "cue": "standing at the board with the marker uncapped"
+          },
+          {
+            "who": "Sam",
+            "text": "“Me, sorry, I'm on it. I'll sort it before six. Look, I've got a checklist.”",
+            "cue": "holding up his phone, thumb scrolling a long list"
+          }
+        ],
+        "ask": "Name the home trap that is running in this room, and find the one reply that steps out of it without starting a fight."
+      },
+      "rounds": [
+        {
+          "level": "Spot",
+          "label": "Spot, round 1",
+          "intro": "Each home trap has a plain name. Tap the one that is running in the line.",
+          "items": [
+            {
+              "type": "pick",
+              "who": "Daniel",
+              "text": "“Nice try on the demo, champ. Most people your age would have asked first.”",
+              "cue": "patting the desk, already walking on",
+              "options": [
+                "the rush",
+                "the court",
+                "sweetheart"
+              ],
+              "answer": 2,
+              "why": "The jab about asking first sits in the middle, and the pet name wraps round it. Daniel points at a weakness through a friendly word, so you cannot object without seeming touchy. The sting hides inside the endearment.",
+              "traps": {
+                "0": "This would be the rush if he were too busy to stop. Daniel finds time to deliver the remark, which is the point.",
+                "1": "This would be the court if he were building a case against someone in the room, to a third person. He is speaking to the person himself, with a smile."
+              },
+              "example": "A shop manager to a new starter, Monday. “Good first week, sunshine. Most people learn the till before the cash-up.”"
+            },
+            {
+              "type": "pick",
+              "who": "Clara",
+              "text": "“I rewrote the test plan three times, I stayed until nine on Tuesday, I even checked the spelling in every ticket. And you still say it isn't ready.”",
+              "cue": "pushing the laptop an inch towards Daniel",
+              "options": [
+                "look how hard I've tried",
+                "the rush",
+                "the corner"
+              ],
+              "answer": 0,
+              "why": "She lists the effort and leaves out the result. The effort works as a shield: whatever the verdict, she can say she tried, and trying is hard to argue with. Meanwhile the one question that matters, whether the plan does the job, goes unanswered.",
+              "traps": {
+                "1": "This would be the rush if she were too busy to stop. Clara has stopped. She is standing at his desk presenting her evenings.",
+                "2": "This would be the corner if every reply he could give were wrong. Clara has not set two doors. She is asking to be admired for trying."
+              },
+              "example": "A student at a parents' evening, Thursday. “I wrote it three times and used the good pen. And you still gave me a six.”"
+            },
+            {
+              "type": "pick",
+              "who": "Daniel",
+              "text": "“If it weren't for Omar's two-reviewer rule, we'd have shipped on Monday. He makes everything wait.”",
+              "cue": "eyes on the board, not on Omar's desk",
+              "options": [
+                "the rush",
+                "if it weren't for you",
+                "sweetheart"
+              ],
+              "answer": 1,
+              "why": "He blames someone else's rule for what he is not doing, and the complaint is the point. The rule also keeps him from the risk of shipping something that breaks, so he complains about it and never tests it. While Omar is the cause, nothing has to change at his end.",
+              "traps": {
+                "0": "This would be the rush if he were taking on more work. He is doing the opposite and holding back, with a tidy reason.",
+                "2": "This would be sweetheart if the sentence ended on a pet name with a sting in it. Daniel's sting sits in the blame alone."
+              },
+              "example": "A neighbour at the post box, Tuesday. “If it weren't for my sister's shifts, I'd have joined the choir years ago.”<br>The shifts get the blame, and the choir is never tried."
+            },
+            {
+              "type": "pick",
+              "who": "Sam",
+              "text": "“Don't worry, I'll take the build, the release notes, the standup rota, the cake for Omar's birthday. Everyone's busy, so it's me.”",
+              "cue": "already pulling two more tickets onto his own board",
+              "options": [
+                "the rush",
+                "the corner",
+                "look how hard I've tried"
+              ],
+              "answer": 0,
+              "why": "He is too busy to stop, and the busyness is the bait. He takes on every job as it lands and offers more, so the list only grows. In the book the day ends in a collapse where nothing is finished, and he blames himself for it.",
+              "traps": {
+                "1": "This would be the corner if every reply you gave were wrong. Sam has set no trap for you. He is simply piling jobs onto himself.",
+                "2": "This would be look how hard I've tried if he were presenting his effort for admiration. Sam is hiding in the work, and nobody is being invited to look."
+              },
+              "example": "A volunteer at a village fete, Saturday. “Sit down, all of you, I'll do the urn, the tombola, the bunting. Nobody else is free.”"
+            }
+          ]
+        },
+        {
+          "level": "Play",
+          "label": "Play, the week in motion",
+          "intro": "Three scenes with the same people. Keep both meters above half at the end of each one, and watch for the moment someone hands you a chair you didn't ask for.",
+          "items": [
+            {
+              "type": "scene",
+              "title": "Thursday, 5:05pm, the team room",
+              "setting": "Halden. Sam is at his desk with his headphones half off. Daniel has pulled a chair next to yours, the marker still in his hand. <i>The Heckler, in your head: “You're the neutral one. Rule on it.”</i>",
+              "meters": {
+                "you": 60,
+                "them": 50
+              },
+              "beats": [
+                {
+                  "who": "Daniel",
+                  "text": "“Let me tell you what Sam did with ticket 214. You're the neutral one, so you tell him.”",
+                  "cue": "low voice, not looking at Sam's desk two metres away",
+                  "lines": [
+                    {
+                      "text": "“Tell him, Daniel. He's two desks away with his headphones half off.”",
+                      "tag": "best",
+                      "you": 4,
+                      "them": 3,
+                      "outcome": "Daniel stands. “Sam. 214.” Sam pulls the headphones off and sits up, surprised to be asked straight.",
+                      "why": "A court runs on talk about someone, not to them. Speaking to the person directly stops it before the first witness."
+                    },
+                    {
+                      "text": "“Go on, what did he do this time?”",
+                      "tag": "ok",
+                      "you": -2,
+                      "them": 2,
+                      "outcome": "Daniel gives you the whole week: the half-closed tickets, the Tuesday comment, the muted standup. Sam keeps typing.",
+                      "why": "You took the chair without being asked. The court has its judge, and the case grows while Sam listens from two desks away."
+                    },
+                    {
+                      "text": "“Ticket 214 again? He's holding up the whole release.”",
+                      "tag": "game",
+                      "you": 2,
+                      "them": -4,
+                      "outcome": "Sam's typing stops. Daniel says, “Exactly,” as though you had both signed something.",
+                      "why": "A trap move: you passed judgment on someone who could hear. The court has two against one, and the room goes stiff."
+                    }
+                  ]
+                },
+                {
+                  "who": "Sam",
+                  "text": "“Sorry, sorry. 214 was waiting on a reply from the client, and the reply came at four. I'd have closed it by five, I swear.”",
+                  "cue": "not looking up, a hand over his eyes",
+                  "lines": [
+                    {
+                      "text": "“Then give Daniel a time, Sam. Say it to him, not to me.”",
+                      "tag": "best",
+                      "you": 4,
+                      "them": 3,
+                      "outcome": "He turns his chair. “Five-thirty. And I'll tell you when it's green.”",
+                      "why": "You send the answer to the person who is owed it. A time said to the right face is the only defence a court cannot argue with."
+                    },
+                    {
+                      "text": "“Fine, I'll rule that five-thirty counts, and that's the end of it.”",
+                      "tag": "ok",
+                      "you": -1,
+                      "them": 1,
+                      "outcome": "Sam nods. Daniel says, “I asked you to tell him, not to rule on it.”",
+                      "why": "A verdict ends the argument for a minute and keeps you in the chair. Daniel learns the court still works, so he will come back."
+                    },
+                    {
+                      "text": "“Daniel's right, you're always late. It's your fault.”",
+                      "tag": "game",
+                      "you": 2,
+                      "them": -5,
+                      "outcome": "Sam says, “Okay, okay,” and the sorry turns into a sulk behind the monitor.",
+                      "why": "You took the prosecution's side and read out the sentence. The apology is gone, and Sam has proof the room is against him."
+                    }
+                  ]
+                },
+                {
+                  "who": "Daniel",
+                  "text": "“See? There's always a reply. So you'll talk to him about standup as well, won't you?”",
+                  "cue": "capping the marker, then uncapping it",
+                  "lines": [
+                    {
+                      "text": "“Say the standup thing to him, Daniel. Look at him and say all of it.”",
+                      "tag": "best",
+                      "you": 3,
+                      "them": 4,
+                      "outcome": "Daniel crosses the gap. “Standup. You mute yourself and then answer after the next person starts. Stop it.” Sam says, “Okay, fair.”",
+                      "why": "The case moves back into the room. What was about him becomes what is between the two of them, and only that version can be settled."
+                    },
+                    {
+                      "text": "“Sure, I'll talk to him about standup.”",
+                      "tag": "ok",
+                      "you": -2,
+                      "them": 1,
+                      "outcome": "Daniel says, “Good,” and you have taken on a second case without a witness.",
+                      "why": "You agreed to carry a request for someone else. It sounds helpful, but the court is still open and you are its messenger."
+                    },
+                    {
+                      "text": "“Daniel, have you ever asked him straight? In words?”",
+                      "tag": "game",
+                      "you": 1,
+                      "them": -3,
+                      "outcome": "Daniel caps the marker with a click. “Whose side are you on?” The room goes flat.",
+                      "why": "A trap move: a question with a verdict hidden in it. The case flips and you become the defendant."
+                    }
+                  ]
+                },
+                {
+                  "who": "Sam",
+                  "text": "“So what's the verdict? You always have one.”",
+                  "cue": "grinning now, the checklist still open",
+                  "lines": [
+                    {
+                      "text": "“No verdict. You two settle the time for 214 now, in front of me.”",
+                      "tag": "best",
+                      "you": 4,
+                      "them": 4,
+                      "outcome": "“Five-thirty,” Daniel says. Sam nods and the red ticket on the board gets a pencil dot.",
+                      "why": "You hand the decision to the two people with the deadline between them. The court closes because nobody is waiting for a judge."
+                    },
+                    {
+                      "text": "“Five-thirty for 214, and I'll chase the client myself.”",
+                      "tag": "ok",
+                      "you": -1,
+                      "them": 1,
+                      "outcome": "Sam says, “Ha, the judge chases the client,” and Daniel almost smiles.",
+                      "why": "A fair ruling and the mood lifts, but you still hold the verdict. Next week somebody will ask you again."
+                    },
+                    {
+                      "text": "“Guilty. Sam, you own every red ticket until Friday.”",
+                      "tag": "game",
+                      "you": 2,
+                      "them": -6,
+                      "outcome": "“That's not fair,” says Sam. Daniel says, “See, he never listens,” and both stop talking to you.",
+                      "why": "You sentenced him from the chair, and the sentence closed the case with no agreement. Now both are talking about you."
+                    }
+                  ]
+                }
+              ],
+              "payoff": "The court closes with you in the judge's seat. Both of them are sure you picked a side, and ticket 214 stays red until the freeze.",
+              "fallout": {
+                "them": "Daniel caps the marker and goes back to the board without a word. The team room is quiet for the rest of the hour."
+              },
+              "example": "A tenants' meeting, Tuesday. Two neighbours argue about the lift key and the secretary is asked to rule. She says, “Ask each other directly,” and the key changes hands."
+            },
+            {
+              "type": "scene",
+              "title": "Friday, 6:20pm, the lift lobby",
+              "setting": "Halden. The release went live at 6:04. Sam is at the lift with his coat on, pressing the button twice. <i>The Heckler, in your head: “Say no first, so you can't be the one who lets him down.”</i>",
+              "meters": {
+                "you": 50,
+                "them": 50
+              },
+              "beats": [
+                {
+                  "who": "Sam",
+                  "text": "“We're all going for chips on the high street. You fixed the build, you have to come. Oh, forget it. You never come to anything with the team.”",
+                  "cue": "pressing the button a third time",
+                  "lines": [
+                    {
+                      "text": "“I'll come. Give me five minutes to shut the laptop, and the chips are on me.”",
+                      "tag": "best",
+                      "you": 4,
+                      "them": 4,
+                      "outcome": "He stops pressing the button and grins. “Five minutes. Don't bring the work face.”",
+                      "why": "You drop the refusal and say a yes with a time and a job attached. A warm yes takes the wall away."
+                    },
+                    {
+                      "text": "“I'm not sure. It's been a long week.”",
+                      "tag": "ok",
+                      "you": -1,
+                      "them": -1,
+                      "outcome": "He nods too fast. “Sure.” The lift arrives and he waves it on.",
+                      "why": "A maybe leaves the door half shut. Nothing breaks, and he gets to be the one who was left out."
+                    },
+                    {
+                      "text": "“Fine, I'll come, but only because you've made me feel like the bad teammate.”",
+                      "tag": "game",
+                      "you": -4,
+                      "them": -5,
+                      "outcome": "He sighs and holds the door. Nobody says a word between the lift and the street.",
+                      "why": "A trap move: you said yes and made it his fault. Both answers lose in a corner, and this one keeps you both on the same wall."
+                    }
+                  ]
+                },
+                {
+                  "who": "Sam",
+                  "text": "“Oh, now you're coming? Only because I said you wouldn't. Right, I'll tell them you might.”",
+                  "cue": "half in the lift, thumb on his phone",
+                  "lines": [
+                    {
+                      "text": "“I want to come. Tell me who's there, and I'll tell you my chip order.”",
+                      "tag": "best",
+                      "you": 4,
+                      "them": 4,
+                      "outcome": "He steps back out. “Omar, Clara, two from QA. Omar's ordering the curry sauce, which is a crime.”",
+                      "why": "You answer the plan and leave the label alone. He gets to be funny about something, which is what the corner was hiding."
+                    },
+                    {
+                      "text": "“You're right, I never come. I'll try next time.”",
+                      "tag": "ok",
+                      "you": -2,
+                      "them": -1,
+                      "outcome": "“Next time,” he says flatly, and the doors begin to close.",
+                      "why": "You accepted the label, so the corner is now yours to live in. A promise for next time is a way of staying there."
+                    },
+                    {
+                      "text": "“Yes, I never come, because every time I do the night turns into a work meeting.”",
+                      "tag": "game",
+                      "you": -3,
+                      "them": -6,
+                      "outcome": "The lift doors close with Sam inside. Your message to the group sits unread.",
+                      "why": "A trap move: you agreed with the label and gave him the reason. Both of you have said the corner out loud, and that is where it stays."
+                    }
+                  ]
+                },
+                {
+                  "who": "Sam",
+                  "text": "“The table's booked, if you want it. I'm not going to chase you.”",
+                  "cue": "one foot in the lift, one on the carpet",
+                  "lines": [
+                    {
+                      "text": "“Thanks. I'll take the seat next to Omar, and you can tell me when the chips arrive.”",
+                      "tag": "best",
+                      "you": 3,
+                      "them": 4,
+                      "outcome": "He grins. “Seat by Omar. He'll take a chip off you before you sit.”",
+                      "why": "You join in warmly with a small plan of your own. The corner offered a sulky yes or a no, and you gave neither."
+                    },
+                    {
+                      "text": "“Sorry, I'm not in the mood.”",
+                      "tag": "ok",
+                      "you": -1,
+                      "them": -2,
+                      "outcome": "“Fair enough,” he says, and the lift doors take him.",
+                      "why": "A calm no beats a sulk, but it still closes the plan. You are now on opposite sides of the doors."
+                    },
+                    {
+                      "text": "“Chasing is your thing, Sam. I'm not staying to watch.”",
+                      "tag": "game",
+                      "you": -4,
+                      "them": -6,
+                      "outcome": "He laughs once, not kindly, and presses the button for the ground floor.",
+                      "why": "A trap move: you turned his request into a verdict on him. The corner closes and the night goes ahead without you."
+                    }
+                  ]
+                }
+              ],
+              "payoff": "The corner closes on both of you. Sam goes down alone, and the chips are eaten without your order.",
+              "example": "A colleague leaves a book club chat: “You never come to these, so I won't bother asking.” You write, “I'll come, and I'll save you the sofa seat.”"
+            },
+            {
+              "type": "scene",
+              "title": "Monday, 9:20am, the canteen",
+              "setting": "Halden. Daniel is stirring a coffee he will not drink. Omar is at the next table with a tray. <i>The Heckler, in your head: “If he is upset, fixing it is your job.”</i>",
+              "meters": {
+                "you": 60,
+                "them": 50
+              },
+              "beats": [
+                {
+                  "who": "Daniel",
+                  "text": "“If it weren't for Omar's two-reviewer rule, we'd have shipped a day early and I'd have had my weekend. He makes everything wait.”",
+                  "cue": "pitched to carry two tables",
+                  "lines": [
+                    {
+                      "text": "“That sounds like a lost weekend. If it were only up to you, what would you change?”",
+                      "tag": "best",
+                      "you": 4,
+                      "them": 3,
+                      "outcome": "A pause. “One reviewer for the small tickets, I suppose. But I'd have to put that to him.” It is the first plan of the morning.",
+                      "why": "The blame needs somewhere to go. You hand the choice to the one who holds it, so the “if it weren't for” has to become a decision."
+                    },
+                    {
+                      "text": "“I know. Omar's always been strict about reviews.”",
+                      "tag": "ok",
+                      "you": -2,
+                      "them": -1,
+                      "outcome": "“Always,” says Daniel, and the complaint grows a second paragraph about the queue.",
+                      "why": "You agreed that Omar is the cause. The blame stays on him, and your agreement gives Daniel a second witness."
+                    },
+                    {
+                      "text": "“It's his rule, then. I'll tell him to drop it.”",
+                      "tag": "game",
+                      "you": -4,
+                      "them": -5,
+                      "outcome": "“Would you? Good,” says Daniel, and goes to get another coffee.",
+                      "why": "A trap move: you took the Saviour's chair and promised to fix Omar for him. The blame has a messenger and the rule never gets discussed."
+                    }
+                  ]
+                },
+                {
+                  "who": "Omar",
+                  "text": "“I heard that. The second reviewer caught the date bug in March.”",
+                  "cue": "not looking up from his tray",
+                  "lines": [
+                    {
+                      "text": "“Then say that to Daniel yourself, Omar. Don't send it through me.”",
+                      "tag": "best",
+                      "you": 4,
+                      "them": 3,
+                      "outcome": "A pause. Omar turns his chair. “Daniel. March. The date bug. Two reviewers, one catch.”",
+                      "why": "You send the message back to the person who can say it to Daniel's face. Omar's steady “March” becomes an argument only when he addresses it to him."
+                    },
+                    {
+                      "text": "“You two sort it out. I'm only the one with the toast.”",
+                      "tag": "ok",
+                      "you": -1,
+                      "them": -1,
+                      "outcome": "“Fine,” says Omar, and he goes back to his tray.",
+                      "why": "Neutral and harmless, but it leaves Omar's quote of March as a remark and Daniel's blame where it was."
+                    },
+                    {
+                      "text": "“Omar, you never bend. You just quote March.”",
+                      "tag": "game",
+                      "you": -3,
+                      "them": -6,
+                      "outcome": "Daniel says, “See? Even they agree with me,” and Omar's chair scrapes back.",
+                      "why": "You joined the case against him, so the canteen turns into a court with you as the witness. The conversation ends early."
+                    }
+                  ]
+                },
+                {
+                  "who": "Daniel",
+                  "text": "“He doesn't even argue it with me. And if it weren't for you backing him last week, I'd have it changed already. So what would you do?”",
+                  "cue": "quieter now, pleased to have a witness",
+                  "lines": [
+                    {
+                      "text": "“I'm not the reason, Daniel. Ask him for one reviewer on small tickets, straight out, and I'll ask on Wednesday how it went.”",
+                      "tag": "best",
+                      "you": 4,
+                      "them": 4,
+                      "outcome": "He is silent, then says, “One reviewer. Straight out. Hmm.” It is the second plan of the morning.",
+                      "why": "You refuse the blame you were handed, then give Daniel a specific ask he can make himself. Asking straight is the way out of the “if it weren't for” line."
+                    },
+                    {
+                      "text": "“Maybe put it on the retro board and let the team vote.”",
+                      "tag": "ok",
+                      "you": -1,
+                      "them": 0,
+                      "outcome": "“The team will vote for lunch,” says Daniel. The blame moves along the table.",
+                      "why": "A kind idea, but you are running the plan and Daniel is turning it down. You have become the one who has to fix it."
+                    },
+                    {
+                      "text": "“I suppose it's me, then. Sorry I backed him.”",
+                      "tag": "game",
+                      "you": -5,
+                      "them": -6,
+                      "outcome": "“No, no, you're all right,” says Daniel, and asks whether you have had breakfast.",
+                      "why": "A trap move: you took the blame and asked to be forgiven for it. The question about the rule is never asked, and the blame moves into your pocket."
+                    }
+                  ]
+                }
+              ],
+              "payoff": "Daniel leaves sure that the team is against him, and the two-reviewer rule stays on the wall.",
+              "example": "A cousin on a video call, Sunday. “If it weren't for my manager's rota, we'd have gone to the coast by now.” You say, “And if the rota weren't in the way, what would you do?”"
+            }
+          ]
+        },
+        {
+          "level": "Analyse",
+          "label": "Analyse, explain it",
+          "intro": "Two questions. Pick the reply that matches what happened, and why it worked.",
+          "items": [
+            {
+              "type": "pick",
+              "who": "Daniel",
+              "text": "“Let me tell you what Sam did with 214.” Which reply stops the case from running?",
+              "cue": "the case is open and you are the one in the judge's chair",
+              "options": [
+                "Give Daniel a ruling on 214, so he can get back to the board.",
+                "Tell Daniel to say it to Sam, who is two desks away.",
+                "Ask Sam to explain ticket 214 to you, the neutral one."
+              ],
+              "answer": 1,
+              "why": "When someone talks about a person who is in the room, the talk is aimed at you as the judge, and the person it is about is left out. Turning the talk towards that person removes the judge. The court has nowhere to sit.",
+              "traps": {
+                "0": "A verdict ends the talk for a minute, but the case stays open. Daniel will bring the next one to the same chair, because you have shown him where the judge sits.",
+                "2": "This still puts you in the middle. Sam now speaks to the judge, and the case becomes a hearing with better manners. The room is the same and only the seating has moved."
+              },
+              "example": "A friend in a queue, Saturday. “Let me tell you what my brother said about the flat.” You say, “Tell him, he's on the phone. Put him on speaker.”"
+            },
+            {
+              "type": "pick",
+              "who": "Sam",
+              "text": "“You never come to anything with the team, so forget it. I'll tell them you're busy.” Which reply steps out of the corner?",
+              "cue": "coat on, finger over the lift button",
+              "options": [
+                "I'll come, and I'll say I'm annoyed that you made it a fight.",
+                "I'm not coming, because you always make a team night into a test.",
+                "I'll come, and I'll order the chips."
+              ],
+              "answer": 2,
+              "why": "The corner has two doors and both lead to the same wall. Coming means you came only because you were pushed, and staying away means you never come. The way out is to drop the refusal and join in warmly on the plan.",
+              "traps": {
+                "0": "This goes through the first door. You come, but you bring the sulk with you, so the label “never comes” is still on the table and he can say he was right.",
+                "1": "This goes through the second door. The refusal confirms the label, and the corner closes behind you. He can now say with a straight face that you never come."
+              },
+              "example": "A group chat about a cricket match, Saturday. “You never turn up, so I've booked the nets without you.” You reply, “Count me in, and I'll bring the drinks.”"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

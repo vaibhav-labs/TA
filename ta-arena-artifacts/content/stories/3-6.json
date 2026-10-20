@@ -1,0 +1,1016 @@
+{
+ "baseBlurb": "At a Sunday group, Nadia plays a salesman who praises a phone while hinting you cannot afford it.",
+ "stories": [
+  {
+   "setting": "Relationships",
+   "blurb": "A second date at a pottery class, a seller with a clipboard, and Clara waiting to see what you say.",
+   "opener": {
+    "setting": "Friday, 19:10, the Clay Room, a unit behind the station. Wheels in rows, one lamp on, and grey slip drying on Clara's sleeve.",
+    "lines": [
+     {
+      "who": "Clara",
+      "text": "“Omar says Thursdays here changed his life. He also said that about a toaster.”",
+      "cue": "wiping her hands on her jeans, checking your face to see if the joke landed"
+     },
+     {
+      "who": "Dennis",
+      "text": "“Lovely to see a pair in on a Friday. Most people only come when it's raining.”",
+      "cue": "sliding a clipboard across, pen already uncapped"
+     }
+    ],
+    "ask": "Can you answer from the Pilot at both levels, three times in a row, when Dennis praises the course and the sting is aimed at the two of you?"
+   },
+   "rounds": [
+    {
+     "level": "Spot",
+     "label": "Spot, round 1",
+     "intro": "<b>How this one works:</b> most sales lines here have two targets. The top message goes to your Pilot, and the sting goes to another voice. Tap the voice the sting goes to, or say there is none.",
+     "items": [
+      {
+       "type": "pick",
+       "who": "Dennis, at the clipboard",
+       "text": "“The twelve-week course is the better one. A lot of couples don't have the staying power, mind.”",
+       "cue": "tapping the clipboard, pleasant, not looking at either of you",
+       "options": [
+        "The Boss, the part that makes the rules",
+        "The Pilot, the part that checks the facts",
+        "The Kid, the part that wants and worries"
+       ],
+       "answer": 2,
+       "why": "The top line compares two courses, and it goes to your Pilot. The sting is the staying power remark, which goes past the Pilot to the Kid, who hears a dare to prove this pair is not like those couples.",
+       "traps": {
+        "0": "The Boss would turn it into a rule, such as always finish what you start. Dennis gives no rule, only a hint about other couples.",
+        "1": "The Pilot is where the comparison lands. The staying power remark is aimed elsewhere, so the Pilot is only half the target."
+       },
+       "example": "A badminton club, a coach who says: “The league is the better option. Some players don't have the legs for it, mind.”<br>The league is the top line, and the legs are the dig for whoever is listening."
+      },
+      {
+       "type": "pick",
+       "who": "Dennis, with the timetable",
+       "text": "“The twelve weeks run Thursdays, 19:00 to 21:00. The deposit is forty, and the refund rule is on this sheet.”",
+       "cue": "sliding a printed sheet across the slip-spattered table",
+       "options": [
+        "Nowhere. It is all facts for the Pilot",
+        "The Kid, the part that wants and worries",
+        "The Boss, the part that makes the rules"
+       ],
+       "answer": 0,
+       "why": "Every part of it is checkable: a day, two times, a deposit and a rule in writing. It all goes to one voice, your Pilot, and nothing is aimed past it. With no second target there is no sting.",
+       "traps": {
+        "1": "The Kid would be the target if the line dared you or flattered you. This one hands over a timetable, so there is nothing for the Kid to hear.",
+        "2": "The Boss would be the target if the line gave a rule about what you ought to do. The only rule here is the refund rule, and that is a fact on a sheet."
+       },
+       "example": "A swimming pool desk, a clerk who says: “Lessons are Saturdays, 09:00 to 10:00. The fee is twenty-two, and the cancellation terms are on the card.”<br>Facts for the Pilot, and nothing aimed anywhere else."
+      },
+      {
+       "type": "pick",
+       "who": "Dennis, leaning on the shelf of bowls",
+       "text": "“Pairs who are serious book the twelve weeks. The casual ones just do the taster. Which are you?”",
+       "cue": "a smile that has done this a hundred Fridays",
+       "options": [
+        "The Boss, the part that makes the rules",
+        "The Kid, the part that wants and worries",
+        "The Pilot, the part that checks the facts"
+       ],
+       "answer": 1,
+       "why": "The first sentence looks like a remark about pairs in general, which the Pilot could check. The sting is the question at the end, which goes past the Pilot to the Kid, who wants to show it is the serious sort and not the casual one.",
+       "traps": {
+        "0": "The Boss would take a rule or a verdict on how couples ought to behave. Dennis gives a label to live up to, which is a different push.",
+        "2": "The Pilot is where the first sentence lands, if anywhere. The question is the sting, and it asks the Kid to prove something."
+       },
+       "example": "A garden centre, a salesman who says: “Keen gardeners take the big greenhouse. The hobby ones stay with the small. Which are you?”<br>The greenhouses are the top line, and the pride is what he is reaching for."
+      }
+     ]
+    },
+    {
+     "level": "Play",
+     "label": "Play, the week in motion",
+     "intro": "<b>Now you answer, and the seller is pushing hard.</b> Each reply has to answer the top line and the sting. Choose the reply that does both from the Pilot.",
+     "items": [
+      {
+       "type": "pick",
+       "who": "Dennis",
+       "text": "“The couples' bench is for people who already know where this is going. You two look like you do.”",
+       "cue": "patting the double stool between the wheels, easy",
+       "options": [
+        "Yes, we do. Put us down for the pair of places and I'll sort the deposit tonight.",
+        "We know where we'd like to sit tonight. Where this is going is ours to say, so what is the refund rule?",
+        "We'd better not say. Clara, what do you think? You decide, I'll go with it."
+       ],
+       "answer": 1,
+       "why": "Your reply owns the evening and keeps the bigger question for the two of you, which answers the top line from the Pilot. Then it asks for the refund rule, which answers the sting. A guess about your future cannot sell you a bench once you have asked for the terms.",
+       "traps": {
+        "0": "That takes the bait. The sting is a flattering guess at where this is heading, and this reply proves him right by paying the deposit, so the Kid decides.",
+        "2": "Handing the answer to Clara looks polite and leaves the guess standing. The top line stays unanswered, and Clara is left to carry a choice she did not ask for."
+       },
+       "example": "A tennis club, a coach who says: “The doubles ladder is for pairs who already know they're in it for the long run. You two look like it.”<br>A plain reply is: “We know we like Tuesdays. What does the ladder cost?” It answers the guess with a question."
+      },
+      {
+       "type": "scene",
+       "title": "Friday, 19:25, the Clay Room",
+       "setting": "Dennis has pulled up a stool and put the form between the two wheels. Clara has gone quiet and wet-handed beside you, and she will not look at the clipboard unless you do.",
+       "meters": {
+        "you": 60,
+        "them": 50
+       },
+       "beats": [
+        {
+         "who": "Dennis",
+         "text": "“This one is the better course, you'll feel it by week three. But the practice pieces are hard going if you've never thrown a pot, and I'd hate you to be put off.”",
+         "cue": "turning the clipboard so the price is facing you",
+         "lines": [
+          {
+           "text": "“The pieces sound useful, and whether I'm put off is mine to say. Show me what week three asks for and what the deposit is.”",
+           "tag": "best",
+           "you": 6,
+           "them": 4,
+           "outcome": "Dennis finds the week-by-week page and flattens it with his palm. “Fair. Here you go.” The hard-going remark has nothing left to push on.",
+           "why": "You took the course as a fact you could check and the doubt as a comment you could answer, so each target got its own reply from the Pilot."
+          },
+          {
+           "text": "“Fine. What's the deposit, then?”",
+           "tag": "ok",
+           "you": 0,
+           "them": 0,
+           "outcome": "A number comes back: forty. Dennis nods, a little cooler than before.",
+           "why": "You moved on without naming the dig, so the put-off remark stays in the room unanswered. Nothing harmful happened, but the Kid still heard it."
+          },
+          {
+           "text": "“You're right, I'd be rubbish. So I'll put the deposit down and prove I'm not.”",
+           "tag": "game",
+           "you": -8,
+           "them": 6,
+           "outcome": "The form is already under your hand and the pen is in it. Clara's eyebrows go up, and Dennis does not stop smiling.",
+           "why": "You answered the sting from the Kid and bought the course to win an argument with a stranger. That is a trap, and it ends the scene here."
+          }
+         ]
+        },
+        {
+         "who": "Dennis",
+         "text": "“Most couples who come in on a Friday book on the night. It's the sensible thing, and forty is hardly anything between two.”",
+         "cue": "sliding the form across, pen on top",
+         "lines": [
+          {
+           "text": "“Sensible for whom? Write the whole twelve weeks down, deposit and balance, and we'll say what our month can take.”",
+           "tag": "best",
+           "you": 6,
+           "them": 3,
+           "outcome": "He writes the total in neat digits and turns it round. “That's honest, I'll say that.” He does not smile this time.",
+           "why": "You asked whose sense it was and checked the top line against the total. Both targets got an answer from the Pilot."
+          },
+          {
+           "text": "“Let us think about it for a minute.”",
+           "tag": "ok",
+           "you": -1,
+           "them": -2,
+           "outcome": "The form stays between the wheels, and the pressure sits there and waits.",
+           "why": "Thinking is a Pilot move, but you did not say what you would be thinking about, so the sting stays on the table with the form."
+          },
+          {
+           "text": "“You're right, it's hard to say no on a night like this. Whatever you think is best.”",
+           "tag": "game",
+           "you": -5,
+           "them": 4,
+           "outcome": "He is warm at once and has the receipt book out. You feel looked after, and the deposit is already half-written.",
+           "why": "It sounds kind, but you handed the decision to the seller, so the sting keeps running. The kind tone is the trap, and it ends the scene here."
+          }
+         ]
+        },
+        {
+         "who": "Dennis",
+         "text": "“I can hold today's price till nine. After that the Thursday group fills, and the couple before you took the last two places on the early shift.”",
+         "cue": "glancing at the clock over the kiln",
+         "lines": [
+          {
+           "text": "“Then we'll decide by nine on our own figures. Keep the form here, and if we haven't come back, give the places away.”",
+           "tag": "best",
+           "you": 5,
+           "them": 1,
+           "outcome": "A sigh first, then “Fine, but I'm only holding the form.” The deadline is his, and the choice is still yours.",
+           "why": "You set your own deadline and kept the decision with the Pilot. A deadline from the other side only binds you once you accept it."
+          },
+          {
+           "text": "“Okay, we'll think about it.”",
+           "tag": "ok",
+           "you": -2,
+           "them": 0,
+           "outcome": "A leaflet with the offer printed on it is pushed across, the ink already smudged at one corner.",
+           "why": "It is harmless, but it leaves the nine o'clock deadline unanswered, so the pressure keeps its shape."
+          },
+          {
+           "text": "“Quick, then. Put the pair of places down before they go.”",
+           "tag": "game",
+           "you": -8,
+           "them": 5,
+           "outcome": "The pen is in your hand and the receipt book is open. You are committed before Clara has finished drying her fingers.",
+           "why": "You let the deadline make the choice, which is the Kid rushing for the exit. It ends the scene here."
+          }
+         ]
+        },
+        {
+         "who": "Dennis",
+         "text": "“Look at that bowl she's made. A natural. You two would be the bench everyone wants to sit near.”",
+         "cue": "an easy smile, nodding at Clara's lopsided bowl on the drying shelf",
+         "lines": [
+          {
+           "text": "“It's a good bowl, Clara, and it's a good bowl whatever we book tonight. Dennis, what does the deposit cover?”",
+           "tag": "best",
+           "you": 7,
+           "them": 2,
+           "outcome": "Clara goes pink and says nothing, and her hand stops reaching for her bag. Dennis laughs and does the sum on the back of the form. “Right. That's a real term.”",
+           "why": "You gave Clara the compliment without making her pay for it, and you kept the question on the table. The seller's praise stopped being a club you had to join."
+          },
+          {
+           "text": "“It is lovely. Clara, shall we get it done?”",
+           "tag": "ok",
+           "you": -3,
+           "them": 3,
+           "outcome": "Clara reaches for her bag. “I'll do the deposit, it's easier.” Dennis nods, pleased with the point.",
+           "why": "You accepted the praise as a reason to book. It is harmless, but it lets Clara pay to feel she has earned it."
+          }
+         ]
+        },
+        {
+         "who": "Dennis",
+         "text": "“I'm only trying to help you two. People get stuck on the small things, and then Friday's gone.”",
+         "cue": "a hand on the form, eyes soft, voice dropped",
+         "lines": [
+          {
+           "text": "“I know you're trying to help, and I still want the total before we decide. Can you write it down?”",
+           "tag": "best",
+           "you": 6,
+           "them": 4,
+           "outcome": "He writes it in neat figures and turns the sheet round. “There. Happy?” The soft voice has nothing left to pull at.",
+           "why": "You thanked the help and kept your own request. A kind tone does not change the numbers, so you asked for the numbers."
+          },
+          {
+           "text": "“Thanks, we'll think on it.”",
+           "tag": "ok",
+           "you": -2,
+           "them": 1,
+           "outcome": "The form is tucked under the leaflets with a nod. The pressure is folded up and waiting.",
+           "why": "Polite and harmless, but the total is still missing, so the help is still doing the choosing at the back of your head."
+          },
+          {
+           "text": "“Then help us. Just put the pair of places down.”",
+           "tag": "game",
+           "you": -9,
+           "them": 5,
+           "outcome": "The receipt book snaps shut on the page, and the scene is over before the slip has dried on Clara's sleeve.",
+           "why": "You handed over the decision in the same breath as asking for help. That is a trap move, and it ends the scene here."
+          }
+         ]
+        },
+        {
+         "who": "Dennis",
+         "text": "“So. Is it the twelve weeks, or are you telling me tonight was just a bit of fun?”",
+         "cue": "pen over the form, a little tired now",
+         "lines": [
+          {
+           "text": "“Neither, yet. We'll do the Saturday taster, and Clara and I will say what this is to each other before we ring you Monday.”",
+           "tag": "best",
+           "you": 8,
+           "them": 3,
+           "outcome": "A sigh, then a grin. “Fair enough. Ring me Monday.” Clara looks at you, and does not look away. Two taster tickets go into a bag.",
+           "why": "You turned down both of the choices he offered and kept your own, which is answering from the Pilot. You named the day and the order, so the sting had nothing to hold."
+          },
+          {
+           "text": "“Just the taster, please.”",
+           "tag": "ok",
+           "you": 4,
+           "them": -1,
+           "outcome": "Two tickets are written out without a word. You leave with Clara and a small sting left on the table.",
+           "why": "Taking the taster is sound, but you did not say why, so the sting got the last word."
+          }
+         ]
+        }
+       ],
+       "payoff": "The receipt book snaps shut. You walk out with a twelve-week bench you have not discussed, and Clara carries the form home in her bag.",
+       "fallout": {
+        "them": "Dennis stands and straightens the stools. “Let's leave it there. Come back when you want to talk about the course.”",
+        "you": "You go quiet and let him fill in the form. The evening ends with the paperwork half done and Clara watching her own hands."
+       }
+      }
+     ]
+    },
+    {
+     "level": "Analyse",
+     "label": "Analyse, explain it",
+     "intro": "<b>Read the sale back.</b> Two questions about the seller's line and your reply.",
+     "items": [
+      {
+       "type": "pick",
+       "who": "Clara, on the walk to the station",
+       "text": "“Dennis said the twelve weeks were the better course, but that a lot of couples don't have the staying power. Which kind of line is that?”",
+       "cue": "hands in her sleeves, slip still grey at the cuffs",
+       "options": [
+        "A cut, where the reply comes from another voice",
+        "A matched volley, where both messages go to the same voice",
+        "Double-talk aimed at two different voices in you"
+       ],
+       "answer": 2,
+       "why": "The top line is about the course and goes to your Pilot. The sting, a lot of couples don't have the staying power, goes past the Pilot to the Kid. Two targets in one sentence means the Kid is the one that gets hit, and the Kid is the one that decides what you book.",
+       "traps": {
+        "0": "A cut would need the reply to come from a different voice than the one spoken to. The line itself has two targets, so a cut is what you might do afterwards, not what Dennis did.",
+        "1": "A matched volley would send both messages to one voice. This line splits between the Pilot and the Kid, so a matched volley does not fit."
+       },
+       "example": "A book club, a member who says: “The long novel is the better pick, but a lot of us never get to the end.”<br>The novel is the top line, and the dig is for whoever wants to prove they can finish."
+      },
+      {
+       "type": "pick",
+       "who": "Clara, at the platform edge",
+       "text": "“Count the voices in Dennis's line. If both people had a second chat running underneath, that would be four. How many are in play here?”",
+       "cue": "holding up three fingers, then four",
+       "options": [
+        "Three: his Pilot and your Pilot on top, and your Kid underneath",
+        "Four: both Pilots on top and both Kids underneath",
+        "Two: his Pilot and your Pilot, since the dig is never said out loud"
+       ],
+       "answer": 0,
+       "why": "Dennis speaks only as the Pilot, so he supplies one voice. On top his Pilot talks to your Pilot, and underneath the same line is aimed at your Kid. That is three voices, and the sale is made by the third one, whose answer is taken at face value as a sensible booking.",
+       "traps": {
+        "1": "Four voices would mean both sides have a hidden chat. Dennis is only working your Kid, so there is no Kid chat on his side, and the count is three.",
+        "2": "Not being said out loud does not remove the sting. It still reaches your Kid, which is why the third voice answers and the form gets signed."
+       },
+       "example": "A coat stall, a trader who says: “This one is the warmer coat, but I wouldn't suggest it to everyone.”<br>His Pilot and yours handle the coat. The flattery goes to your Kid. Three voices, with the sale decided by the third."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "setting": "Home & Flatmates",
+   "blurb": "A broadband seller on the kitchen chair, Sam apologising at the sink, and Maya's pen not moving.",
+   "opener": {
+    "setting": "Thursday, 18:40, Hawthorn Court, apartment 3B, the kitchen. The router in the hall blinks amber and a tablet sits on the table beside Maya's notebook.",
+    "lines": [
+     {
+      "who": "Sam",
+      "text": "“Sorry, sorry, he was on the doorstep. I couldn't leave him standing there. This is Keith.”",
+      "cue": "holding the door with his foot, tea towel over one shoulder"
+     },
+     {
+      "who": "Keith",
+      "text": "“Lovely flat. The better line is the one for a place like this, but you can't have it at that rate.”",
+      "cue": "settling into Maya's shopping chair, tablet already lit"
+     }
+    ],
+    "ask": "Can you answer from the Pilot at both levels, three times in a row, when Keith praises the line and the sting is aimed at you?"
+   },
+   "rounds": [
+    {
+     "level": "Spot",
+     "label": "Spot, round 1",
+     "intro": "<b>How this one works:</b> most sales lines here have two targets. The top message goes to your Pilot, and the sting goes to another voice. Tap the voice the sting goes to, or say there is none.",
+     "items": [
+      {
+       "type": "pick",
+       "who": "Keith, in the kitchen doorway",
+       "text": "“Plus is the better line, and you're more of a Plus flat than a Basic one. Basic suits the other kind.”",
+       "cue": "holding up a tablet, friendly, one boot on the mat",
+       "options": [
+        "The Boss, the part that makes the rules",
+        "The Kid, the part that wants and worries",
+        "The Pilot, the part that checks the facts"
+       ],
+       "answer": 1,
+       "why": "The top line is a comparison, and it goes to your Pilot. The sting is that Basic suits the other kind, which goes past the Pilot to the Kid, who does not want to be the other kind of flat.",
+       "traps": {
+        "0": "The Boss would turn it into a rule, such as flats should always buy the fastest line. Keith gives no rule, only a label to avoid.",
+        "2": "The Pilot is where the comparison lands, the speeds and the line. The sting is the other kind remark, and that is aimed at the Kid."
+       },
+       "example": "A school fair, a stallholder who says: “The big raffle is the better one, and you're more of a big raffle family.”<br>The raffle is the top line, and the family label is aimed at whoever has to buy."
+      },
+      {
+       "type": "pick",
+       "who": "Keith, putting a sheet on the table",
+       "text": "“Basic is twenty-four months at 22 a month. Plus is 31 a month, same length. Both prices are on the sheet.”",
+       "cue": "laying the page flat beside Maya's notebook",
+       "options": [
+        "The Kid, the part that wants and worries",
+        "The Boss, the part that makes the rules",
+        "Nowhere. It is all facts for the Pilot"
+       ],
+       "answer": 2,
+       "why": "Two prices, one length, and a sheet to check them on. It all goes to one voice, your Pilot. With nothing aimed past it there is no second target, so there is no sting.",
+       "traps": {
+        "0": "The Kid would be the target if the line dared you or flattered you. This one gives two numbers to compare, so the Kid has nothing to hear.",
+        "1": "The Boss would be the target if the line gave a rule or a verdict. It gives prices and a length, so there is no rule in it."
+       },
+       "example": "A bus ticket office, a clerk who says: “A monthly pass is 48, a weekly is 14. Here are both.”<br>Facts for the Pilot, and nothing aimed anywhere else."
+      },
+      {
+       "type": "pick",
+       "who": "Keith, glancing at the corridor",
+       "text": "“Most flats on this corridor have already moved to Plus. I'd hate for 3B to be the odd one out.”",
+       "cue": "a pleasant shrug, as if it pained him",
+       "options": [
+        "The Kid, the part that wants and worries",
+        "The Pilot, the part that checks the facts",
+        "The Boss, the part that makes the rules"
+       ],
+       "answer": 0,
+       "why": "The first sentence is a remark about the corridor, which looks like a fact for the Pilot. The sting is the odd one out line, which goes past the Pilot to the Kid, who dreads being the flat that did not keep up.",
+       "traps": {
+        "1": "The Pilot is where the first sentence lands, if it can be checked at all. The sting is the odd one out line, and that is aimed at the Kid.",
+        "2": "The Boss would take a rule or a verdict about what a flat ought to do. Keith offers a fear of being left out, which is a different push."
+       },
+       "example": "A parents' WhatsApp group, a mother who writes: “Everyone else is doing the camping weekend. I'd hate for your lot to miss it.”<br>The camping is the top line, and the worry about missing it is what she is reaching for."
+      }
+     ]
+    },
+    {
+     "level": "Play",
+     "label": "Play, the week in motion",
+     "intro": "<b>Now you answer, and the seller is pushing hard.</b> Each reply has to answer the top line and the sting. Choose the reply that does both from the Pilot.",
+     "items": [
+      {
+       "type": "pick",
+       "who": "Keith",
+       "text": "“Plus is for people who like things done properly. You've got a ledger on the table, so I can see you do.”",
+       "cue": "tapping the edge of Maya's notebook with one finger",
+       "options": [
+        "Ha, yes, I'm the ledger person. Go on, tell me what Plus gives me.",
+        "That's kind, but we'd rather not, thanks. We're fine on the old one.",
+        "Properly means the sheet first. Leave me both prices and the contract end date, and we'll answer Monday."
+       ],
+       "answer": 2,
+       "why": "Your reply takes the ledger as a fact, which answers the top line from the Pilot. Then it asks for the two documents that let you check him, which answers the sting. Flattery about being proper does not sell a line once you have asked for the end date.",
+       "traps": {
+        "0": "That takes the bait. The sting is a compliment about being the sort who does things properly, and this reply proves it by asking for the features he wants to sell, so the Kid is listening.",
+        "1": "A flat no looks safe and leaves the praise standing. The top line is unanswered, and Keith simply returns next week with the same line."
+       },
+       "example": "A gym desk, a trainer who says: “The strength course is for people who like things done properly, and you've got the shoes for it.”<br>A plain reply is: “Properly means the timetable first. Can I see it?” It answers the praise with a request."
+      },
+      {
+       "type": "scene",
+       "title": "Thursday, 18:50, Hawthorn Court, apartment 3B, the kitchen",
+       "setting": "The router in the hall is blinking amber, and Keith has taken the chair Maya keeps for her shopping. Sam is hovering at the sink with a tea towel, and Maya's pen has not moved for a minute.",
+       "meters": {
+        "you": 60,
+        "them": 50
+       },
+       "beats": [
+        {
+         "who": "Keith",
+         "text": "“Plus is better, you'll see it at once on the films. But nine a month more is a lot between three people, and that ledger of yours says the pot is tight.”",
+         "cue": "turning the tablet so the price is facing you, not the speed",
+         "lines": [
+          {
+           "text": "“The speed is useful, I can see that. The pot is ours to judge, so tell me what Basic costs over the full twenty-four months.”",
+           "tag": "best",
+           "you": 6,
+           "them": 4,
+           "outcome": "Keith taps the tablet and reads the figure aloud. “Fair. Here's Basic.” The comment about the pot has nothing left to grip.",
+           "why": "You took the speed as a fact you could check and the pot as a comment you could answer, so each target got its own reply from the Pilot."
+          },
+          {
+           "text": "“Fine. Show me Basic, then.”",
+           "tag": "ok",
+           "you": 0,
+           "them": 0,
+           "outcome": "A second page is slid across, not warmly. Sam breathes out beside the sink.",
+           "why": "You moved on without naming the dig, so the pot comment stays in the kitchen unanswered. Nothing harmful happened, but the Kid still heard it."
+          },
+          {
+           "text": "“You're right, we can't afford it, so I'll sign for Plus to show we can.”",
+           "tag": "game",
+           "you": -8,
+           "them": 6,
+           "outcome": "The tablet is already turned to the signature box. Maya's pen finally moves, and it only writes a date.",
+           "why": "You answered the sting from the Kid and signed to win an argument with a stranger. That is a trap, and it ends the scene here."
+          }
+         ]
+        },
+        {
+         "who": "Keith",
+         "text": "“Most houses in Hawthorn Court end up on Plus. It's the sensible thing, and nine a month split three ways is hardly anything.”",
+         "cue": "sliding the tablet across, one finger on the signature box",
+         "lines": [
+          {
+           "text": "“Sensible for whom? Write me the monthly total and the whole contract, and we'll tell you what our month can take.”",
+           "tag": "best",
+           "you": 6,
+           "them": 3,
+           "outcome": "He writes both figures in the margin of the sheet. “Okay. That's honest.” He does not smile this time, and Maya looks up.",
+           "why": "You asked whose sense it was and checked the top line against the total. Both targets got an answer from the Pilot."
+          },
+          {
+           "text": "“Let us think about the Plus one.”",
+           "tag": "ok",
+           "you": -1,
+           "them": -2,
+           "outcome": "The tablet stays on the table, and the pressure sits beside the kettle and waits.",
+           "why": "Thinking is a Pilot move, but you did not say what you would be thinking about, so the sting stays on the table with the tablet."
+          },
+          {
+           "text": "“You're right, it's hard to say no on a Thursday. Sam, whatever suits everyone.”",
+           "tag": "game",
+           "you": -5,
+           "them": 4,
+           "outcome": "Sam says “sort of, probably, yes?” and Keith has the form open before anyone else breathes. The first bill is already on its way.",
+           "why": "It sounds easygoing, but you handed the decision to the seller and to Sam's apology habit, so the sting keeps running. The calm tone is the trap, and it ends the scene here."
+          }
+         ]
+        },
+        {
+         "who": "Keith",
+         "text": "“I can lock today's price until half seven. After that the engineer's slot goes, and next week's price is higher.”",
+         "cue": "glancing at the fridge clock, then at his own watch",
+         "lines": [
+          {
+           "text": "“Then we'll decide by half seven on our own figures. Leave the sheet here, and if we haven't rung, give the slot away.”",
+           "tag": "best",
+           "you": 5,
+           "them": 1,
+           "outcome": "A sigh, then “Fine, but I'm only holding the slot.” The deadline is his, and the choice is still yours.",
+           "why": "You set your own deadline and kept the decision with the Pilot. A deadline from the other side only binds you once you accept it."
+          },
+          {
+           "text": "“Okay, we'll think about it.”",
+           "tag": "ok",
+           "you": -2,
+           "them": 0,
+           "outcome": "A card with a number to ring is slid across, the ink already smudged where his thumb rested.",
+           "why": "It is harmless, but it leaves the half seven deadline unanswered, so the pressure keeps its shape."
+          },
+          {
+           "text": "“Quick, then. Book the engineer before the slot goes.”",
+           "tag": "game",
+           "you": -8,
+           "them": 5,
+           "outcome": "The tablet chimes. You are committed before the kettle has boiled, and Sam looks relieved to have it over.",
+           "why": "You let the engineer's clock make the choice, which is the Kid rushing for the exit. It ends the scene here."
+          }
+         ]
+        },
+        {
+         "who": "Keith",
+         "text": "“Grace on the second floor has had it a month and swears by it. You'd not want to be the flat still crawling along on the old line.”",
+         "cue": "an easy smile, a friend dropping by",
+         "lines": [
+          {
+           "text": "“Grace may swear by it, but I'm asking about us. What does it cost the three of us over a year?”",
+           "tag": "best",
+           "you": 7,
+           "them": 2,
+           "outcome": "Keith laughs and does the sum on the back of the sheet. Maya leans in to check it. “Right. That's a real year.”",
+           "why": "You treated the neighbour as other people's business and asked about your own year. The line stopped being a club the flat wanted to join."
+          },
+          {
+           "text": "“Maybe we would be the slow flat.”",
+           "tag": "ok",
+           "you": -3,
+           "them": 3,
+           "outcome": "Pleased with the point, Keith nods. “Exactly. So Plus.” Sam gives a little laugh that goes nowhere.",
+           "why": "You accepted being sorted into the slow flat. It is harmless, but it gives him the point he came for."
+          }
+         ]
+        },
+        {
+         "who": "Keith",
+         "text": "“I'm only here to help, love. People worry about the small print and then the weekend's gone.”",
+         "cue": "a hand flat on the sheet, voice dropping into the soft register",
+         "lines": [
+          {
+           "text": "“I know you're trying to help, and I still want the total before we decide. Can you write it down?”",
+           "tag": "best",
+           "you": 6,
+           "them": 4,
+           "outcome": "He writes it in neat figures and turns the sheet round. “There. Happy?” The soft voice has nothing left to pull at.",
+           "why": "You thanked the help and kept your own request. A kind tone does not change the numbers, so you asked for the numbers."
+          },
+          {
+           "text": "“Thanks. We'll think on it.”",
+           "tag": "ok",
+           "you": -2,
+           "them": 1,
+           "outcome": "The sheet is tucked under the fruit bowl with a nod. The pressure is folded up and waiting.",
+           "why": "Polite and harmless, but the total is still missing, so the help is still doing the choosing at the back of the flat's head."
+          },
+          {
+           "text": "“Then help us. Just put Plus through.”",
+           "tag": "game",
+           "you": -9,
+           "them": 5,
+           "outcome": "The tablet beeps. The scene is over before the milk has been put back in the fridge.",
+           "why": "You handed over the decision in the same breath as asking for help. That is a trap move, and it ends the scene here."
+          }
+         ]
+        },
+        {
+         "who": "Keith",
+         "text": "“So. Is it Plus, or is 3B telling me it's happy on the slow line for ever?”",
+         "cue": "stylus over the screen, a little tired now",
+         "lines": [
+          {
+           "text": "“Neither, yet. We'll compare Basic against the sheet tonight, and one of us will ring you Monday with a yes or a no.”",
+           "tag": "best",
+           "you": 8,
+           "them": 3,
+           "outcome": "A sigh, then a smile. “Fair enough. Ring me Monday.” Maya writes the day in her notebook and underlines it once.",
+           "why": "You turned down both of the choices he offered and kept your own, which is answering from the Pilot. You named the line, the sheet and the day, so the sting had nothing to hold."
+          },
+          {
+           "text": "“Basic, please.”",
+           "tag": "ok",
+           "you": 4,
+           "them": -1,
+           "outcome": "Basic is booked without another word. You see him out with a small sting left on the sheet.",
+           "why": "Choosing Basic is sound, but you did not say why, so the sting got the last word."
+          }
+         ]
+        }
+       ],
+       "payoff": "The tablet beeps. 3B is on a line it did not discuss, and the first bill is already on its way.",
+       "fallout": {
+        "them": "Keith closes the tablet. “Let's stop there. Ring me when you want to talk about speeds.”",
+        "you": "You go quiet and let Sam sign. The conversation ends with the router still blinking amber and the ledger still shut."
+       }
+      }
+     ]
+    },
+    {
+     "level": "Analyse",
+     "label": "Analyse, explain it",
+     "intro": "<b>Read the sale back.</b> Two questions about the seller's line and your reply.",
+     "items": [
+      {
+       "type": "pick",
+       "who": "Maya, after he has gone",
+       "text": "“Keith said Plus was the better line, but that Basic suits the other kind of flat. Which kind of line is that?”",
+       "cue": "closing the notebook over her finger",
+       "options": [
+        "A matched volley, where both messages go to the same voice",
+        "Double-talk aimed at two different voices in you",
+        "A cut, where the reply comes from another voice"
+       ],
+       "answer": 1,
+       "why": "The top line is about the line and goes to your Pilot. The sting, Basic suits the other kind of flat, goes past the Pilot to the Kid. Two targets in one sentence means the Kid is the one that gets hit, and the Kid is the one that signs.",
+       "traps": {
+        "0": "A matched volley would send both messages to one voice. This line splits between the Pilot and the Kid, so a matched volley does not fit.",
+        "2": "A cut would need the reply to come from a different voice than the one spoken to. The line itself has two targets, so a cut is what you might do afterwards, not what Keith did."
+       },
+       "example": "A residents' meeting, a member who says: “The bike store is the better plan, but it's for people who really live here.”<br>The bike store is the top line, and the dig is for whoever wants to count as a resident."
+      },
+      {
+       "type": "pick",
+       "who": "Maya, at the sink",
+       "text": "“Count the voices in Keith's line. If both people had a second chat running underneath, that would be four. How many are in play?”",
+       "cue": "holding up three fingers, then four",
+       "options": [
+        "Four: both Pilots on top and both Kids underneath",
+        "Two: his Pilot and your Pilot, since the dig is never said out loud",
+        "Three: his Pilot and your Pilot on top, and your Kid underneath"
+       ],
+       "answer": 2,
+       "why": "Keith speaks only as the Pilot, so he supplies one voice. On top his Pilot talks to your Pilot, and underneath the same line is aimed at your Kid. That is three voices, and the sale is made by the third one, whose answer is taken at face value as a sensible upgrade.",
+       "traps": {
+        "0": "Four voices would mean both sides have a hidden chat. Keith is only working your Kid, so there is no Kid chat on his side, and the count is three.",
+        "1": "Not being said out loud does not remove the sting. It still reaches your Kid, which is why the third voice answers and the tablet gets signed."
+       },
+       "example": "A market stall, a trader who says: “This rug is better, but I wouldn't suggest it to everyone.”<br>His Pilot and yours handle the rug. The flattery goes to your Kid. Three voices, with the sale decided by the third."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "setting": "School & College",
+   "blurb": "After Sam's evening class a revision seller works the foyer, and Sam's fifty-four is showing.",
+   "opener": {
+    "setting": "Tuesday, 20:55, the college foyer, a folding table by the vending machine. Sam's feedback sheet is folded to the size of a stamp.",
+    "lines": [
+     {
+      "who": "Sam",
+      "text": "“Fifty-four. Ms Pryce wrote good start next to it, which is what you write when it isn't.”",
+      "cue": "pressing the sheet flat against his knee"
+     },
+     {
+      "who": "Rhys",
+      "text": "“Evening. This one is better, but I wouldn't offer it to everyone. You look like the ones who stay to the end.”",
+      "cue": "fanning leaflets like a hand of cards"
+     }
+    ],
+    "ask": "Can you answer from the Pilot at both levels, three times in a row, when Rhys praises the pack and the sting is aimed at you?"
+   },
+   "rounds": [
+    {
+     "level": "Spot",
+     "label": "Spot, round 1",
+     "intro": "<b>How this one works:</b> most sales lines here have two targets. The top message goes to your Pilot, and the sting goes to another voice. Tap the voice the sting goes to, or say there is none.",
+     "items": [
+      {
+       "type": "pick",
+       "who": "Rhys, at the foyer table",
+       "text": "“The Pass Pack is the better option. Plenty of people on this course won't make the final session, but it's better.”",
+       "cue": "fanning leaflets like a hand of cards, friendly",
+       "options": [
+        "The Kid, the part that wants and worries",
+        "The Pilot, the part that checks the facts",
+        "The Boss, the part that makes the rules"
+       ],
+       "answer": 0,
+       "why": "The top line is a comparison, and it goes to your Pilot. The sting is that plenty of people will not make the final session, which goes past the Pilot to the Kid, who hears a dare not to be one of them.",
+       "traps": {
+        "1": "The Pilot is where the comparison lands, the pack and the price. The sting is aimed at the Kid, so the Pilot is only half the target.",
+        "2": "The Boss would turn it into a rule, such as always finish what you pay for. Rhys gives no rule, only a hint about who drops out."
+       },
+       "example": "A running club, a coach who says: “The marathon group is the better one. Plenty of runners won't make the last month, mind.”<br>The group is the top line, and the dropping out is the dig for whoever is listening."
+      },
+      {
+       "type": "pick",
+       "who": "Rhys, tapping the laminated card",
+       "text": "“The Pass Pack is six sessions, Thursdays at 18:00, and the fee is sixty. The basic notes are free from the library.”",
+       "cue": "turning the card round so Sam can read it",
+       "options": [
+        "The Boss, the part that makes the rules",
+        "Nowhere. It is all facts for the Pilot",
+        "The Kid, the part that wants and worries"
+       ],
+       "answer": 1,
+       "why": "A count, a day, a time, a fee and a free option, all checkable. It goes to one voice, your Pilot. With nothing aimed past it there is no second target, so there is no sting.",
+       "traps": {
+        "0": "The Boss would be the target if the line gave a rule about what a student ought to do. This one only lists what is on offer.",
+        "2": "The Kid would be the target if the line dared you or flattered you. This one hands over a card, so there is nothing for the Kid to hear."
+       },
+       "example": "A driving school, an instructor who says: “The block of ten lessons is 180, the single lessons are 20 each, here is the list.”<br>Facts for the Pilot, and nothing aimed anywhere else."
+      },
+      {
+       "type": "pick",
+       "who": "Rhys, to Sam",
+       "text": "“Anyone can sit the paper cold. The ones who get a distinction don't, and I can tell which sort you are.”",
+       "cue": "leaning on the vending machine, already smiling",
+       "options": [
+        "The Boss, the part that makes the rules",
+        "The Pilot, the part that checks the facts",
+        "The Kid, the part that wants and worries"
+       ],
+       "answer": 2,
+       "why": "The first sentence is a remark about how people sit papers, which looks like a fact for the Pilot. The sting is that he can tell which sort you are, and it goes past the Pilot to the Kid, who wants to be the sort that gets a distinction.",
+       "traps": {
+        "0": "The Boss would take a rule or a verdict about what you ought to do. The line gives no rule, only a flattering label to live up to.",
+        "1": "The Pilot is where the first sentence lands. The sting is the which sort you are line, which asks the Kid to prove something."
+       },
+       "example": "A carpentry shop, an assistant who says: “Anyone can buy cheap chisels. The people who make good furniture don't, and I can tell which sort you are.”<br>The chisels are the top line, and the pride is what he is reaching for."
+      }
+     ]
+    },
+    {
+     "level": "Play",
+     "label": "Play, the week in motion",
+     "intro": "<b>Now you answer, and the seller is pushing hard.</b> Each reply has to answer the top line and the sting. Choose the reply that does both from the Pilot.",
+     "items": [
+      {
+       "type": "pick",
+       "who": "Rhys",
+       "text": "“The distinction route is for students who already know they'll finish. You look like you do.”",
+       "cue": "tapping the glossy front of a folder, pleasant",
+       "options": [
+        "I'd like to finish, and I'd like to know what the pack covers before I say how. Is there a contents list?",
+        "Of course I'll finish. Put me down for the pack, and I'll show Ms Pryce what I can do.",
+        "Maybe I won't finish. Gwen, you know about these things, so what do you think I should do?"
+       ],
+       "answer": 0,
+       "why": "Your reply owns the wish to finish, which answers the top line from the Pilot. Then it asks for the contents list, which answers the sting. A compliment about finishing cannot sell you a pack once you have asked what is in it.",
+       "traps": {
+        "1": "That takes the bait. The sting is a flattering guess that you will finish, and this reply proves it by buying the pack to impress a tutor, so the Kid decides.",
+        "2": "Handing the choice to Gwen looks modest and makes someone else the one who knows. The top line stays unanswered and the sting keeps running."
+       },
+       "example": "A language class, a seller who says: “The immersion week is for students who already know they'll stick at it. You look like you will.”<br>A plain reply is: “I'd like to stick at it, so what's on the timetable?” It answers the compliment with a question."
+      },
+      {
+       "type": "scene",
+       "title": "Tuesday, 21:05, the college foyer",
+       "setting": "The vending machine hums behind the table, and Sam's feedback sheet has been folded down to the size of a stamp. Gwen has stopped pretending to look for her bus pass, and the Friday deadline for the group project is two days away.",
+       "meters": {
+        "you": 60,
+        "them": 50
+       },
+       "beats": [
+        {
+         "who": "Rhys",
+         "text": "“It's the better pack, you'll see the layout at once. But the practice papers are hard going if you're sitting on a fifty-four, and I'd hate you to be put off.”",
+         "cue": "turning the folder so the price shows, not the pages",
+         "lines": [
+          {
+           "text": "“The papers sound useful, and the fifty-four is my business. Show me one sample paper and tell me the fee.”",
+           "tag": "best",
+           "you": 6,
+           "them": 4,
+           "outcome": "Rhys slides a thin sample across the table. “Fair. Here's one.” The remark about the fifty-four has nothing left to push on.",
+           "why": "You took the pack as a fact you could check and the number as a comment you could answer, so each target got its own reply from the Pilot."
+          },
+          {
+           "text": "“Fine. What's the fee, then?”",
+           "tag": "ok",
+           "you": 0,
+           "them": 0,
+           "outcome": "Sixty comes back, flatly. Gwen shifts her bag on her shoulder.",
+           "why": "You moved on without naming the dig, so the fifty-four stays in the foyer unanswered. Nothing harmful happened, but the Kid still heard it."
+          },
+          {
+           "text": "“You're right, I'd be hopeless. So I'll buy the pack and prove I'm not.”",
+           "tag": "game",
+           "you": -8,
+           "them": 6,
+           "outcome": "The form is already under your hand, and the sixty is already written in the box. Gwen says nothing at all.",
+           "why": "You answered the sting from the Kid and bought the pack to win an argument with a stranger. That is a trap, and it ends the scene here."
+          }
+         ]
+        },
+        {
+         "who": "Rhys",
+         "text": "“Most people on this course take the Pass Pack in the end. It's the sensible thing, and sixty is small next to what you've paid for the term.”",
+         "cue": "sliding a form across, the pen already on it",
+         "lines": [
+          {
+           "text": "“Sensible for whom? Write me the fee and the date the term ends, and I'll tell you what my month can take.”",
+           "tag": "best",
+           "you": 6,
+           "them": 3,
+           "outcome": "He writes both in the margin and turns the form round. “That's honest, I'll say that.” He does not smile this time.",
+           "why": "You asked whose sense it was and checked the top line against the dates. Both targets got an answer from the Pilot."
+          },
+          {
+           "text": "“Let me think about the Pass Pack.”",
+           "tag": "ok",
+           "you": -1,
+           "them": -2,
+           "outcome": "The form stays on the table beside the leaflets, and the pressure waits.",
+           "why": "Thinking is a Pilot move, but you did not say what you would be thinking about, so the sting stays on the table with the form."
+          },
+          {
+           "text": "“You're right, it's hard to say no after a long evening. Sam, let's just get the pack.”",
+           "tag": "game",
+           "you": -5,
+           "them": 4,
+           "outcome": "He is warm at once and has the receipt book open. You feel looked after, and the sixty is already half-written.",
+           "why": "It sounds kind to Sam, but you handed the decision to the seller, so the sting keeps running. The kind tone is the trap, and it ends the scene here."
+          }
+         ]
+        },
+        {
+         "who": "Rhys",
+         "text": "“The Thursday group closes at nine tonight. Two places left, and the lad before you took one.”",
+         "cue": "glancing at the foyer clock, then back at the form",
+         "lines": [
+          {
+           "text": "“Then I'll decide by Thursday morning on my own figures. If the places go, they go, and I'll use the library.”",
+           "tag": "best",
+           "you": 5,
+           "them": 1,
+           "outcome": "A sigh first, then “Fine, but I'm only holding the form.” The deadline is his, and the choice is still yours.",
+           "why": "You set your own deadline and kept the decision with the Pilot. A deadline from the other side only binds you once you accept it."
+          },
+          {
+           "text": "“Okay, I'll think about it.”",
+           "tag": "ok",
+           "you": -2,
+           "them": 0,
+           "outcome": "A leaflet with the offer printed on it is pushed across, the ink smudged at one corner.",
+           "why": "It is harmless, but it leaves the closing time unanswered, so the pressure keeps its shape."
+          },
+          {
+           "text": "“Quick, then. Put me down for one of the places before they go.”",
+           "tag": "game",
+           "you": -8,
+           "them": 5,
+           "outcome": "The pen is in your hand and the receipt book is open. You are committed before the vending machine has dropped its can.",
+           "why": "You let the closing time make the choice, which is the Kid rushing for the exit. It ends the scene here."
+          }
+         ]
+        },
+        {
+         "who": "Rhys",
+         "text": "“The study group in the library all have the pack. You'd fit right in, and Ms Pryce notices who turns up with the same notes.”",
+         "cue": "an easy smile, a friend leaning in",
+         "lines": [
+          {
+           "text": "“Everyone in the library may have it, but I'm asking about me. What does it cost over the whole term?”",
+           "tag": "best",
+           "you": 7,
+           "them": 2,
+           "outcome": "Rhys laughs and does the sum on the back of the form. The total makes him put the pen down. “Right. That's a real term.”",
+           "why": "You treated the group as other people's business and asked about your own term. The pack stopped being a club you wanted to join."
+          },
+          {
+           "text": "“Okay, maybe I'd fit in.”",
+           "tag": "ok",
+           "you": -3,
+           "them": 3,
+           "outcome": "Pleased with the point, Rhys nods. “Exactly. So the pack.” Sam gives a small laugh that goes nowhere.",
+           "why": "You accepted being fitted into the crowd. It is harmless, but it gives him the point he came for."
+          }
+         ]
+        },
+        {
+         "who": "Rhys",
+         "text": "“I'm only trying to help you here. People get stuck on the small things, and then the deadline's gone.”",
+         "cue": "a hand on the folder, eyes soft",
+         "lines": [
+          {
+           "text": "“I know you're trying to help, and I still want the total before I decide. Can you write it down?”",
+           "tag": "best",
+           "you": 6,
+           "them": 4,
+           "outcome": "He writes it in neat figures and turns the form round. “There. Happy?” The soft voice has nothing left to pull at.",
+           "why": "You thanked the help and kept your own request. A kind tone does not change the numbers, so you asked for the numbers."
+          },
+          {
+           "text": "“Thanks. I'll think on it.”",
+           "tag": "ok",
+           "you": -2,
+           "them": 1,
+           "outcome": "The form is tucked under the leaflets with a nod. The pressure is folded up and waiting.",
+           "why": "Polite and harmless, but the total is still missing, so the help is still doing the choosing at the back of your head."
+          },
+          {
+           "text": "“Then help me. Just put the pack through.”",
+           "tag": "game",
+           "you": -9,
+           "them": 5,
+           "outcome": "The receipt book snaps shut. The scene is over before the can has stopped rattling in the machine.",
+           "why": "You handed over the decision in the same breath as asking for help. That is a trap move, and it ends the scene here."
+          }
+         ]
+        },
+        {
+         "who": "Rhys",
+         "text": "“So. Do you want the pack and a proper chance, or the free notes and a shrug?”",
+         "cue": "pen over the form, a little tired now",
+         "lines": [
+          {
+           "text": "“Neither, yet. I'll try the free notes this week with Sam on the group project, and ring you Monday if I need more.”",
+           "tag": "best",
+           "you": 8,
+           "them": 3,
+           "outcome": "A sigh, then a smile. “Fair enough. Ring me Monday.” Sam stops pressing the sheet against his knee and looks up.",
+           "why": "You turned down both of the choices he offered and kept your own, which is answering from the Pilot. You named the notes, the week and the day, so the sting had nothing to hold."
+          },
+          {
+           "text": "“The free notes, thanks.”",
+           "tag": "ok",
+           "you": 4,
+           "them": -1,
+           "outcome": "The leaflets go back in the folder without a word. You leave with a small sting left on the table.",
+           "why": "Taking the free notes is sound, but you did not say why, so the sting got the last word."
+          }
+         ]
+        }
+       ],
+       "payoff": "The receipt book snaps shut. You walk to the bus stop with a pack you did not weigh up, and Sam looks at the floor.",
+       "fallout": {
+        "them": "Rhys gathers the leaflets. “Let's stop there. Come and find me when you want to talk about the papers.”",
+        "you": "You go quiet and let him write the form. The evening ends with the table half cleared and Gwen already walking to the bus stop."
+       }
+      }
+     ]
+    },
+    {
+     "level": "Analyse",
+     "label": "Analyse, explain it",
+     "intro": "<b>Read the sale back.</b> Two questions about the seller's line and your reply.",
+     "items": [
+      {
+       "type": "pick",
+       "who": "Gwen, at the bus stop",
+       "text": "“Rhys said the Pass Pack was the better option, but plenty of people won't make the final session. Which kind of line is that?”",
+       "cue": "pulling her bus pass out of her coat at last",
+       "options": [
+        "Double-talk aimed at two different voices in you",
+        "A matched volley, where both messages go to the same voice",
+        "A cut, where the reply comes from another voice"
+       ],
+       "answer": 0,
+       "why": "The top line is about the pack and goes to your Pilot. The sting, plenty of people won't make the final session, goes past the Pilot to the Kid. Two targets in one sentence means the Kid is the one that gets hit, and the Kid is the one that pays.",
+       "traps": {
+        "1": "A matched volley would send both messages to one voice. This line splits between the Pilot and the Kid, so a matched volley does not fit.",
+        "2": "A cut would need the reply to come from a different voice than the one spoken to. The line itself has two targets, so a cut is what you might do afterwards, not what Rhys did."
+       },
+       "example": "A choir, a conductor who says: “The summer concert is the better programme, but plenty of us won't make the last rehearsal.”<br>The concert is the top line, and the dig is for whoever wants to prove they will turn up."
+      },
+      {
+       "type": "pick",
+       "who": "Gwen, with the timetable in her hand",
+       "text": "“Count the voices in Rhys's line. If both people had a second chat running underneath, that would be four. How many are in play?”",
+       "cue": "holding up three fingers, then four",
+       "options": [
+        "Four: both Pilots on top and both Kids underneath",
+        "Three: his Pilot and your Pilot on top, and your Kid underneath",
+        "Two: his Pilot and your Pilot, since the dig is never said out loud"
+       ],
+       "answer": 1,
+       "why": "Rhys speaks only as the Pilot, so he supplies one voice. On top his Pilot talks to your Pilot, and underneath the same line is aimed at your Kid. That is three voices, and the sale is made by the third one, whose answer is taken at face value as a sensible purchase.",
+       "traps": {
+        "0": "Four voices would mean both sides have a hidden chat. Rhys is only working your Kid, so there is no Kid chat on his side, and the count is three.",
+        "2": "Not being said out loud does not remove the sting. It still reaches your Kid, which is why the third voice answers and the fee gets paid."
+       },
+       "example": "A stall at a fete, a trader who says: “This quilt is better, but I wouldn't suggest it to everyone.”<br>His Pilot and yours handle the quilt. The flattery goes to your Kid. Three voices, with the sale decided by the third."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

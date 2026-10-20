@@ -1,0 +1,572 @@
+{
+ "baseBlurb": "Nadia's Sunday group weighs a bigger room, and a guest keeps calling his opinion plain reason.",
+ "stories": [
+  {
+   "setting": "Relationships",
+   "blurb": "Clara watches her phone, her friend Ella has a theory, and Omar has said nothing since Tuesday.",
+   "opener": {
+    "setting": "Friday, 18:20, The Corner Table, the seat by the window. Clara's tea has gone cold and her phone is face up beside it.",
+    "lines": [
+     {
+      "who": "Clara",
+      "text": "“Three days. Read at 09:12 on Tuesday, nothing since. I've checked.”",
+      "cue": "turning the phone face down, then face up again"
+     },
+     {
+      "who": "Ella",
+      "text": "“Do you want my honest view, or the one you'd like?”",
+      "cue": "stirring a tea she hasn't tasted"
+     }
+    ],
+    "ask": "Can you tell what Clara and Ella actually know from what they have decided, and cut back to the facts before the evening is wrecked?"
+   },
+   "rounds": [
+    {
+     "level": "Spot",
+     "label": "Spot, round 1",
+     "intro": "<b>How this one works:</b> each line is either a clean Pilot line or a leak, and leaks come from the Boss or the Kid. A leak sounds like a fact, but it cannot be checked. Tap the label that fits.",
+     "items": [
+      {
+       "type": "pick",
+       "who": "Clara",
+       "text": "“It's been three days. He read my text on Tuesday at 09:12 and hasn't replied.”",
+       "cue": "phone face up on the table, thumb over the screen",
+       "options": [
+        "A Boss leak",
+        "A Kid leak",
+        "A clean Pilot"
+       ],
+       "answer": 2,
+       "why": "Two facts with a time on them. Anyone could look at the phone and confirm both. She has not yet said what they mean, so nothing is borrowed and nothing is feared in advance.",
+       "traps": {
+        "0": "A Boss leak would turn the gap into a rule, such as “Anyone who goes quiet for three days has decided.” Clara has only counted the days.",
+        "1": "A Kid leak would be a fear dressed as a fact, such as “He's seen enough of me already.” She has reported what the phone shows and stopped there."
+       },
+       "example": "A bus stop, a woman says: “My sister read my message at ten past nine yesterday and hasn't answered.”<br>You could check both facts. What it means is still open."
+      },
+      {
+       "type": "pick",
+       "who": "Ella",
+       "text": "“Anyone who goes quiet for three days has already decided. Everybody knows that.”",
+       "cue": "stirring a tea she hasn't tasted, looking straight at Clara",
+       "options": [
+        "A clean Pilot",
+        "A Boss leak",
+        "A Kid leak"
+       ],
+       "answer": 1,
+       "why": "“Everybody knows” is the giveaway. It is a borrowed rule about men and phones that nobody has tested, said in the voice of a fact. That makes it a Boss leak, however fond Ella is of Clara.",
+       "traps": {
+        "0": "A clean Pilot would be checkable, such as “He was on release night, I heard.” Ella has nothing to check, only a saying.",
+        "2": "A Kid leak would carry a fear, such as “I'd never come back from three days of silence.” Ella is sure of herself and is speaking about everyone, not about herself."
+       },
+       "example": "A hairdresser's, a regular says: “If a shop doesn't call back in two days, it never will. Everyone knows that.”<br>Nobody has rung the shop to find out."
+      },
+      {
+       "type": "pick",
+       "who": "Clara",
+       "text": "“He's gone quiet because he's seen what I'm really like. Of course he has.”",
+       "cue": "a small laugh that goes nowhere, eyes on the napkin",
+       "options": [
+        "A Kid leak",
+        "A Boss leak",
+        "A clean Pilot"
+       ],
+       "answer": 0,
+       "why": "An old fear is deciding what happened. She has no information about why he is quiet, and the line is sure of itself anyway. That is the Kid leaking into the Pilot's seat.",
+       "traps": {
+        "1": "A Boss leak would hold a rule, such as “People should answer within a day.” Clara's line has no rule in it, only a verdict on herself.",
+        "2": "A clean Pilot would be something she can show: a message, a time, a reply. “What I'm really like” cannot be shown to anyone."
+       },
+       "example": "A first day at a new gym, a man tells his friend: “They all went quiet when I walked in, they can tell I don't belong.”<br>Nobody said anything. The fear filled the silence."
+      },
+      {
+       "type": "pick",
+       "who": "Clara",
+       "text": "“I'll text him, but only when it's perfectly worded. Anything less and I shouldn't send it.”",
+       "cue": "opening the draft again, the ninth time tonight",
+       "options": [
+        "A Kid leak",
+        "A clean Pilot",
+        "A Boss leak"
+       ],
+       "answer": 2,
+       "why": "It sounds like care with words. It works as a rule that nobody can meet, and the rule is what has kept the draft unsent since Tuesday. That is a Boss leak.",
+       "traps": {
+        "0": "A Kid leak would sound afraid, such as “If I text first, he'll laugh.” This line has no fear in it, only a standard.",
+        "1": "A clean Pilot would be “I want to say one clear thing.” This line says what is allowed, and that is a rule, not a plan."
+       },
+       "example": "A wedding speech, an uncle says: “I'll say a few words only when I've got the perfect opening.” It is the night before and he has written nothing.<br>The perfect opening is a rule that stops him from starting."
+      }
+     ]
+    },
+    {
+     "level": "Play",
+     "label": "Play, the week in motion",
+     "intro": "<b>Now you speak.</b> The room is drifting away from the facts. Pick the line that makes a clean cut back to them.",
+     "items": [
+      {
+       "type": "pick",
+       "who": "Ella",
+       "text": "“Men who go quiet for three days don't come back. Delete the draft and save yourself.”",
+       "cue": "reaching across for Clara's phone",
+       "options": [
+        "Ella, stop. You don't know him, and you're scaring her.",
+        "What we know is that he read it Tuesday, and Tuesday was a release night for him. Clara, a short question costs nothing.",
+        "Say nothing and let Clara decide while Ella is still holding the phone."
+       ],
+       "answer": 1,
+       "why": "You answer her rule with the two facts in the room and hand Clara a small, doable step. Ella's saying loses its grip, and Clara has something to do that is not deleting.",
+       "traps": {
+        "0": "Ella, stop answers a rule with a rule, Boss against Boss. Ella defends her saying, Clara watches two friends fight over her phone, and the draft stays unsent.",
+        "2": "Saying nothing lets the saying win by default. Clara hears the room agree with it, and the delete button gets very easy to press."
+       },
+       "example": "A parents' evening, a mother says: “Teachers who don't reply in a week never will.” A friend answers: “She marked the whole class on Friday. Ask her Monday.”<br>The saying loses to a date, and nobody is told off."
+      },
+      {
+       "type": "pick",
+       "who": "Clara, standing",
+       "text": "“Fine. If I'm the only one who cares about a reply, I'll stop caring. Goodbye, both of you.”",
+       "cue": "coat half on, the draft still open on the screen",
+       "options": [
+        "Please don't go, Clara, we'd both be sad. Whatever you need, we'll do it.",
+        "Let her go. She needs air and she'll text when she's ready.",
+        "Before you go, read us the first line of the draft. We'll tell you if it says one clear thing."
+       ],
+       "answer": 2,
+       "why": "You take the hurt seriously and give her a real task that uses what she already wrote. She stays in the Pilot, where she is useful, and the exit stops being the only move.",
+       "traps": {
+        "0": "This sounds warm, but it asks Clara to stay for your sake and promises to rescue her. She leaves the room with the same belief that nobody replies unless begged.",
+        "1": "Let her go sounds respectful and gives her the exit she reached for. The draft stays unsent and she walks off with the verdict she came in with."
+       },
+       "example": "A flat-share meeting, a woman stands: “If nobody else minds the broken boiler, I'll stop minding too.” Someone says: “Read us the landlord's text and we'll answer it together.”<br>She sits down with a job in her hand."
+      }
+     ]
+    },
+    {
+     "level": "Analyse",
+     "label": "Analyse, explain it",
+     "intro": "<b>Five statements, five labels.</b> A double leak is a Boss leak and a Kid leak holding each other up in one line. A stuck voice is one voice doing all the talking, with the others shut out. Put each statement in the bin where it belongs.",
+     "items": [
+      {
+       "type": "sort",
+       "prompt": "Put each statement in its bin.",
+       "bins": [
+        "A clean Pilot",
+        "A Boss leak",
+        "A Kid leak",
+        "A double leak",
+        "A stuck voice"
+       ],
+       "items": [
+        {
+         "text": "Ella: “Quiet means no. It always does. Ask anyone.”",
+         "answer": 1,
+         "why": "“Always” and “ask anyone” close the question before anyone checks. It is a borrowed rule about what silence means, so this is a Boss leak."
+        },
+        {
+         "text": "Omar: “I saw it Tuesday, then the release went wrong. I meant to answer after midnight and fell asleep at my desk.”",
+         "answer": 0,
+         "why": "This can be checked: a day, an event, a missed reply. Real memory and real reasons are clean Pilot data, even when the line sounds like an excuse. The test is whether it can be tested."
+        },
+        {
+         "text": "Clara: “Men who go quiet are cowards, and I'm too much anyway, so I'll never text first.”",
+         "answer": 3,
+         "why": "Two leaks in one line. “Men who go quiet are cowards” is a borrowed slogan taken as fact, the Boss. “I'm too much anyway” is an old fear taken as fact, the Kid. They hold each other up, so the line sounds like a conclusion."
+        },
+        {
+         "text": "Omar: “Don't ask how I feel about her. Give me a date and a time and I'll be there. That's all I do.”",
+         "answer": 4,
+         "why": "Only one voice is ever switched on, the one that handles arrangements, and the others are shut out. That is a stuck voice. A clean Pilot can use feelings as data too."
+        },
+        {
+         "text": "Clara: “I don't deserve a reply, and he'll see that if I ask.”",
+         "answer": 2,
+         "why": "A fear is deciding in advance what he will think. Nobody has tested it, and it cannot be tested while she holds back. That is the Kid leak."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "setting": "Work",
+   "blurb": "Halden's team argues over whether Thursday's release should go, and one manager calls his view plain objectivity.",
+   "opener": {
+    "setting": "Tuesday, 10:05, the team room at Halden. A whiteboard marker has just died on the word “Thursday”.",
+    "lines": [
+     {
+      "who": "Daniel",
+      "text": "“Forty minutes. Let's keep feelings out of it and decide what ships.”",
+      "cue": "standing at the whiteboard, capping a dead marker"
+     },
+     {
+      "who": "Omar",
+      "text": "“I've got three red rows in the checkout log. Do you want them now or later?”",
+      "cue": "laptop open, voice level"
+     }
+    ],
+    "ask": "Can you tell Daniel's real thinking from his leaks, and bring the room back to the logs without a fight over Thursday?"
+   },
+   "rounds": [
+    {
+     "level": "Spot",
+     "label": "Spot, round 1",
+     "intro": "<b>How this one works:</b> each line is either a clean Pilot line or a leak, and leaks come from the Boss or the Kid. A leak sounds like a fact, but it cannot be checked. Tap the label that fits.",
+     "items": [
+      {
+       "type": "pick",
+       "who": "Omar",
+       "text": "“The checkout test failed twice on Monday and once this morning. The logs are in the shared folder.”",
+       "cue": "laptop turned round so the team can see the red rows",
+       "options": [
+        "A clean Pilot",
+        "A Boss leak",
+        "A Kid leak"
+       ],
+       "answer": 0,
+       "why": "Three failures, two days, a place to look. Anyone in the room can open the folder and count. Omar has said what happened and stopped, which makes it clean Pilot.",
+       "traps": {
+        "1": "A Boss leak would be a rule about what failing tests mean, such as “Failures are what weak teams get.” Omar has counted red rows and nothing more.",
+        "2": "A Kid leak would be a fear, such as “It's going to blow up and it'll be my name.” Omar sounds steady, and everything he said can be opened."
+       },
+       "example": "A greengrocer, an assistant says: “The tomato crate was soft on Monday, and again today. The pictures are on the till tablet.”<br>It is a count and a place to look, and it can be checked."
+      },
+      {
+       "type": "pick",
+       "who": "Daniel",
+       "text": "“Delaying is for teams that panic. Strong teams ship.”",
+       "cue": "pen down, already sure, scanning the room for dissent",
+       "options": [
+        "A Kid leak",
+        "A Boss leak",
+        "A clean Pilot"
+       ],
+       "answer": 1,
+       "why": "It sounds like a view on risk and works as a rule about what strong teams are. Nobody can test “strong teams ship” from the test logs. A borrowed belief dressed as a fact: a Boss leak.",
+       "traps": {
+        "0": "A Kid leak would carry a fear, such as “If we slip again they'll all think we're hopeless.” Daniel is certain, and certainty is how a Boss leak sounds.",
+        "2": "A clean Pilot would be about this release: its failures, its date, its cost. This line is about what kind of team you are."
+       },
+       "example": "A village hall committee, a chairman says: “Strong committees book the date and fix the roof after.” Nobody has asked what the roof looks like.<br>The rule has ended the conversation."
+      },
+      {
+       "type": "pick",
+       "who": "Clara",
+       "text": "“If this goes out with one flaw, everyone will see I was the one who signed it off.”",
+       "cue": "two fingers pressed on the lid of her laptop",
+       "options": [
+        "A Boss leak",
+        "A Kid leak",
+        "A clean Pilot"
+       ],
+       "answer": 1,
+       "why": "The fear of being seen as the one at fault is steering the line. She has not said what the flaw is, how likely it is or who will see it. That is the Kid leaking into the Pilot's chair.",
+       "traps": {
+        "0": "A Boss leak would carry a rule, such as “Nothing goes out unless it is flawless.” Clara's line is about what people will think of her.",
+        "2": "A clean Pilot would name the flaw and the odds. “Everyone will see” names neither."
+       },
+       "example": "A school trip, a teacher says: “If one child gets lost, the whole parent body will blame me.” She has not counted the staff or looked at the route.<br>The fear has taken the planning over."
+      },
+      {
+       "type": "pick",
+       "who": "Daniel",
+       "text": "“Let's be objective. We ship Thursday, and anyone who says otherwise is being emotional.”",
+       "cue": "leaning back, one hand open as if the matter were settled",
+       "options": [
+        "A Kid leak",
+        "A clean Pilot",
+        "A Boss leak"
+       ],
+       "answer": 2,
+       "why": "“Objective” is the cover. The rule underneath is that disagreement is feeling and agreement is fact. Nobody can check that, and it removes Omar's logs from the table. A Boss leak, even though it opens with the word for Pilot.",
+       "traps": {
+        "0": "A Kid leak would sound afraid. Daniel is not worried, and he is using the word to win.",
+        "1": "A clean Pilot would be about Thursday and the test results. This line is about who is allowed to disagree."
+       },
+       "example": "A neighbourhood meeting about parking, a councillor says: “Let's be objective. Anyone who wants the bays kept is being sentimental.”<br>The word objective is doing the shutting out."
+      }
+     ]
+    },
+    {
+     "level": "Play",
+     "label": "Play, the week in motion",
+     "intro": "<b>Now you speak.</b> The room is drifting away from the facts. Pick the line that makes a clean cut back to them.",
+     "items": [
+      {
+       "type": "pick",
+       "who": "Daniel",
+       "text": "“Risk registers are for nervous people. Ship it.”",
+       "cue": "tapping the table once, the meeting already moving",
+       "options": [
+        "Let's price it. Omar, how many checkouts a day, and what does one failed order cost support?",
+        "That's reckless, Daniel. Somebody has to say it.",
+        "Say nothing and let the room fall in behind him."
+       ],
+       "answer": 0,
+       "why": "You take his point about cost seriously and turn it into a question with numbers behind it. Daniel stays in the Pilot, where he is good, and Omar has a reason to open the logs.",
+       "traps": {
+        "1": "That's reckless answers a rule with a rule. The room picks sides, Daniel digs in, and Omar's logs stay shut.",
+        "2": "Saying nothing hands him the room. Clara feels the silence agree, and Thursday gets decided by whoever spoke last."
+       },
+       "example": "A warehouse, a supervisor says: “Spreadsheets are for the nervous. Load the van.” A driver says: “How many parcels, and what does a late one cost us?”<br>The supervisor opens the sheet."
+      },
+      {
+       "type": "pick",
+       "who": "Daniel, standing",
+       "text": "“If nobody here can commit to Thursday, I'll take it to the director myself.”",
+       "cue": "hand already on his folder, chair pushed back",
+       "options": [
+        "Please don't, Daniel, we'd all be in trouble. Tell us what would make you comfortable.",
+        "Go on then. Let's see what she says.",
+        "Take it to her with Omar's failure counts and the cost number attached. That is what she'll ask for first."
+       ],
+       "answer": 2,
+       "why": "You give him a real job that uses the data in the room. He goes to the director as a Pilot with figures in hand, and nobody has had to lose face.",
+       "traps": {
+        "0": "This sounds kind. It is you begging him not to go, and he leaves with the win and a room that is scared of him.",
+        "1": "Go on then is a dare. He takes it, and the director hears his rule and none of the data."
+       },
+       "example": "A hospital ward round, a registrar says: “If the team can't decide on the discharge, I'll escalate it myself.” The sister says: “Take the bed numbers and the nurse count with you.”<br>He takes the facts, and the escalation has something to stand on."
+      }
+     ]
+    },
+    {
+     "level": "Analyse",
+     "label": "Analyse, explain it",
+     "intro": "<b>Five statements, five labels.</b> A double leak is a Boss leak and a Kid leak holding each other up in one line. A stuck voice is one voice doing all the talking, with the others shut out. Put each statement in the bin where it belongs.",
+     "items": [
+      {
+       "type": "sort",
+       "prompt": "Put each statement in its bin.",
+       "bins": [
+        "A clean Pilot",
+        "A Boss leak",
+        "A Kid leak",
+        "A double leak",
+        "A stuck voice"
+       ],
+       "items": [
+        {
+         "text": "Omar: “We shipped a week early in March and support took forty calls. It's in the ticket list.”",
+         "answer": 0,
+         "why": "A date, a count, a place to look. A real memory with numbers is clean Pilot data, even when it sounds like a warning. The test is whether anyone can check it."
+        },
+        {
+         "text": "Daniel: “Obviously only weak teams delay, so let's not waste the meeting on test results.”",
+         "answer": 1,
+         "why": "“Obviously” shuts the question before anyone looks. A borrowed belief about strong and weak teams wears the clothes of a fact. That is a Boss leak."
+        },
+        {
+         "text": "Gareth, from support: “Releases always go wrong when engineering rushes, and nobody would listen to a support person anyway, so I'll keep my list to myself.”",
+         "answer": 3,
+         "why": "Two leaks holding each other up. “Always go wrong” is a slogan taken as fact, the Boss. “Nobody would listen” is an old fear taken as fact, the Kid. Together they sound like a reason to say nothing."
+        },
+        {
+         "text": "Sam: “Don't ask me how the team is doing. Give me the ticket number and I'll close it. That's all I do.”",
+         "answer": 4,
+         "why": "Only the voice that closes tickets is switched on, and the rest is shut out. That is a stuck voice. A clean Pilot can take in how the team is doing as data too."
+        },
+        {
+         "text": "Clara: “If I say the plan has a hole, they'll decide I'm not up to this job.”",
+         "answer": 2,
+         "why": "A fear decides in advance what the team will think. Nobody has tested it, and the plan stays hidden while she waits. That is the Kid leak."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "setting": "School & College",
+   "blurb": "Sam's evening-class study group opens a feedback sheet, and one loud classmate has already decided what it means.",
+   "opener": {
+    "setting": "Wednesday, 19:40, the library, study room two. A feedback sheet sits face up on the table, a coffee ring over the mark.",
+    "lines": [
+     {
+      "who": "Lorna",
+      "text": "“Mrs Pritchard wrote ‘unsupported claims’ next to our second paragraph. Report's due Monday. Who knows what that means?”",
+      "cue": "pen cap in her teeth"
+     },
+     {
+      "who": "Theo",
+      "text": "“It means she doesn't like us. I could have told you that in week one.”",
+      "cue": "not looking up from his phone"
+     }
+    ],
+    "ask": "Can you tell what the sheet says from what the group has decided about it, and bring them back to the facts without a row?"
+   },
+   "rounds": [
+    {
+     "level": "Spot",
+     "label": "Spot, round 1",
+     "intro": "<b>How this one works:</b> each line is either a clean Pilot line or a leak, and leaks come from the Boss or the Kid. A leak sounds like a fact, but it cannot be checked. Tap the label that fits.",
+     "items": [
+      {
+       "type": "pick",
+       "who": "Lorna",
+       "text": "“The sheet gave us 4 out of 10 for the method section, and wrote ‘unsupported claims’ next to the second paragraph.”",
+       "cue": "holding the photocopy flat with both hands",
+       "options": [
+        "A Boss leak",
+        "A clean Pilot",
+        "A Kid leak"
+       ],
+       "answer": 1,
+       "why": "A mark and a phrase, written on paper that anyone at the table can read. She has not said what the mark means about the group. That makes it clean Pilot: it can be checked, and it leaves room to ask.",
+       "traps": {
+        "0": "A Boss leak would turn the sheet into a rule, such as “Markers always punish the method section.” Lorna has read out what is written.",
+        "2": "A Kid leak would be a fear, such as “We've failed and they'll all know.” Lorna has said a number and a phrase, and her voice is level."
+       },
+       "example": "A driving test, a candidate says: “The examiner wrote ‘late observation’ next to the roundabout, and I got 4 faults.”<br>It is on the sheet, and it can be checked."
+      },
+      {
+       "type": "pick",
+       "who": "Theo",
+       "text": "“Evening classes are for people who've given up on a real degree. Nobody marks us properly anyway.”",
+       "cue": "scrolling on his phone, not looking up",
+       "options": [
+        "A clean Pilot",
+        "A Kid leak",
+        "A Boss leak"
+       ],
+       "answer": 2,
+       "why": "A borrowed belief about evening students, said as a fact. Nobody has tested whether Mrs Pritchard marks them less carefully, and the sheet in front of him shows detailed comments. That is a Boss leak.",
+       "traps": {
+        "0": "A clean Pilot would point at the marking: a sheet, a date, a rule. Theo points at a reputation.",
+        "1": "A Kid leak would sound frightened, such as “They'll think I'm stupid.” Theo sounds bored and sure."
+       },
+       "example": "A cricket club, a veteran says: “Juniors' scores don't get checked properly anyway.” The scorebook is open on the table with every ball written in.<br>The slogan is easier than reading the book."
+      },
+      {
+       "type": "pick",
+       "who": "Sam",
+       "text": "“I'm going to fail this, and they'll all know I never belonged here.”",
+       "cue": "bag already on his knee, coat still buttoned",
+       "options": [
+        "A Boss leak",
+        "A Kid leak",
+        "A clean Pilot"
+       ],
+       "answer": 1,
+       "why": "The old fear of not belonging has decided the ending before anyone has marked the final. It cannot be tested, because he hasn't finished the course. It speaks like a fact and is a Kid leak.",
+       "traps": {
+        "0": "A Boss leak would carry a rule, such as “People who miss a week shouldn't be on the course.” Sam's line is about what will happen to him and what he is.",
+        "2": "A clean Pilot would use something to count: marks, weeks attended, a date. “They'll all know” cannot be counted."
+       },
+       "example": "A choir audition, a woman says: “I'll sing it wrong and everyone will see I don't belong.” She has not opened her mouth yet.<br>The fear is describing a future that has not happened."
+      },
+      {
+       "type": "pick",
+       "who": "Lorna",
+       "text": "“We split it fairly or not at all. Anyone who can't do their share by Friday is out.”",
+       "cue": "ticking names on the back of the feedback sheet",
+       "options": [
+        "A Kid leak",
+        "A clean Pilot",
+        "A Boss leak"
+       ],
+       "answer": 2,
+       "why": "It sounds fair and works as a rule that decides in advance who counts. No one has said what a share is or checked what anyone can manage by Friday. A Boss leak with a friendly face.",
+       "traps": {
+        "0": "A Kid leak would be a fear, such as “They'll all let me down.” Lorna is firm, and the line is a ruling.",
+        "1": "A clean Pilot would say who does which section and when. This line has no names or dates, only a threat."
+       },
+       "example": "A neighbours' rota, a woman says: “We share the bins fairly or not at all. Anyone who forgets is off the rota.” Nobody has agreed whose week it is.<br>The rule sounds fair and has nothing in it to check."
+      }
+     ]
+    },
+    {
+     "level": "Play",
+     "label": "Play, the week in motion",
+     "intro": "<b>Now you speak.</b> The room is drifting away from the facts. Pick the line that makes a clean cut back to them.",
+     "items": [
+      {
+       "type": "pick",
+       "who": "Theo",
+       "text": "“Pritchard marks down anyone who disagrees with the textbook. Don't bother arguing with the sheet.”",
+       "cue": "leaning back, one foot on the empty chair",
+       "options": [
+        "Theo, you say that about every tutor. Just read the comments.",
+        "Can you point to a time she marked someone down for disagreeing? If not, let's ask her what “unsupported” wants to see in paragraph two.",
+        "Say nothing. Theo has been here longer and probably knows."
+       ],
+       "answer": 1,
+       "why": "You ask for something checkable and send the real question back to the tutor, who wrote the sheet. Theo stays in the Pilot because the cut is about evidence and not about him.",
+       "traps": {
+        "0": "Theo, you say that about every tutor is a jab. It answers a rule with a rule, and Theo defends his opinion of Mrs Pritchard for the rest of the evening.",
+        "2": "Staying silent lets the rumour stand. Lorna folds the sheet away, and no one asks Mrs Pritchard anything."
+       },
+       "example": "A book club, a member says: “The organiser always picks her friends' books.” A friend asks: “Which ones did she pick last year?”<br>The member counts and comes up with two."
+      },
+      {
+       "type": "pick",
+       "who": "Sam, packing up",
+       "text": "“I'll withdraw. Better I go than drag your mark down.”",
+       "cue": "zip half closed, eyes on the door",
+       "options": [
+        "Please stay, we'd be lost without you. We'll do your part, don't worry.",
+        "If the mark is the worry, paragraph two needs two sources. Can you find them by Friday? You can decide after that.",
+        "Fine, if you've decided. Good luck with whatever you do next."
+       ],
+       "answer": 1,
+       "why": "You take the worry seriously and give it a size: one paragraph, two sources, one day. Sam can test the fear against a task, and the choice to stay or go becomes his again.",
+       "traps": {
+        "0": "This sounds generous. It takes his share off him and tells him he can't carry it, so the fear that he doesn't belong grows.",
+        "2": "Fine, if you've decided accepts the exit as a fact. Sam leaves with his verdict, and the group has lost a person for a paragraph of references."
+       },
+       "example": "A night class in carpentry, a student says: “I'll quit, I'm slowing the bench down.” The tutor says: “Cut the joint again tonight and we'll see.”<br>The fear gets a task and a date."
+      }
+     ]
+    },
+    {
+     "level": "Analyse",
+     "label": "Analyse, explain it",
+     "intro": "<b>Five statements, five labels.</b> A double leak is a Boss leak and a Kid leak holding each other up in one line. A stuck voice is one voice doing all the talking, with the others shut out. Put each statement in the bin where it belongs.",
+     "items": [
+      {
+       "type": "sort",
+       "prompt": "Put each statement in its bin.",
+       "bins": [
+        "A clean Pilot",
+        "A Boss leak",
+        "A Kid leak",
+        "A double leak",
+        "A stuck voice"
+       ],
+       "items": [
+        {
+         "text": "Lorna: “Last term our group lost 3 marks for late references. It says so on the sheet.”",
+         "answer": 0,
+         "why": "A term, a number, a document. A real memory with a source is clean Pilot data, even when it sounds like a complaint. The test is whether it can be checked."
+        },
+        {
+         "text": "Theo: “Obviously marking is a lottery, so there's no point reading the comments.”",
+         "answer": 1,
+         "why": "“Obviously” closes the question before anyone looks. A borrowed belief about marking is treated as a fact. That is a Boss leak."
+        },
+        {
+         "text": "Sam: “I missed week four, so I'll never catch up and they'll see I'm out of my depth.”",
+         "answer": 2,
+         "why": "A fear decides how it ends, with no check of what week four covered. “They'll see” cannot be tested. That is the Kid leak."
+        },
+        {
+         "text": "Theo: “Evening students never finish, and I'd only slow you all down, so just do it without me.”",
+         "answer": 3,
+         "why": "Two leaks in one line. “Evening students never finish” is a slogan taken as fact, the Boss. “I'd only slow you down” is an old fear taken as fact, the Kid. They back each other up and sound like a sensible offer."
+        },
+        {
+         "text": "Lorna: “Don't ask whether the group is getting on. Give me the deadlines and I'll make the plan. That's what I'm for.”",
+         "answer": 4,
+         "why": "Only the planning voice is switched on, and the rest is shut out. That is a stuck voice. A clean Pilot can take how the group is getting on as data too."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

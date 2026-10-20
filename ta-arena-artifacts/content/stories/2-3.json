@@ -1,0 +1,910 @@
+{
+  "baseBlurb": "At the flat, you answer Mum's phone call and chart the landlady's voice, Gran's, line by line.",
+  "stories": [
+    {
+      "setting": "Work",
+      "blurb": "Daniel needs a name for Friday's release before anyone leaves, and Clara has already offered.",
+      "opener": {
+        "setting": "Thursday, 17:40. Halden, the team room. Friday's release is at ten tomorrow.",
+        "lines": [
+          {
+            "who": "Daniel",
+            "text": "“Whoever merges tomorrow owns the rollback. I'd like a name before anyone leaves.”",
+            "cue": "tapping a marker against a cold mug"
+          },
+          {
+            "who": "Clara",
+            "text": "“I'll do it. I've already written the checklist. It's four pages.”",
+            "cue": "pulling her chair toward your desk before you have looked up"
+          },
+          {
+            "who": "The app",
+            "text": "“This is you, so far. Not forever. This month.”",
+            "cue": "five bars on the phone under the edge of your desk, each filled to a different height"
+          }
+        ],
+        "ask": "Which of the five bars is tallest in you this month, and which of your own choices filled it?"
+      },
+      "rounds": [
+        {
+          "level": "Spot",
+          "label": "Spot, round 1",
+          "intro": "<b>How this one works:</b> each card is one line from this week. Drop it into the bar it came from. The five bars are the Strict Boss, the Caring Boss, the Pilot, the Wild Kid and the Good Kid.",
+          "items": [
+            {
+              "type": "sort",
+              "prompt": "Drop each line into the bar it came from.",
+              "bins": [
+                "The Strict Boss",
+                "The Caring Boss",
+                "The Pilot",
+                "The Wild Kid",
+                "The Good Kid"
+              ],
+              "items": [
+                {
+                  "text": "“You've been on that ticket since nine. Eat something, I'll watch the deploy.”",
+                  "answer": 1,
+                  "why": "Worry about whether you ate, and an instruction tucked inside it. That is the Caring Boss, warm and still deciding for you."
+                },
+                {
+                  "text": "“Staging finished at 16:52. Two warnings, both old.”",
+                  "answer": 2,
+                  "why": "A time and a count, with no verdict on anyone. That is the Pilot, which reports what is there."
+                },
+                {
+                  "text": "“Nobody merges on a Friday without a second reviewer. That's the rule and I'm not discussing it.”",
+                  "answer": 0,
+                  "why": "A rule handed down with the questions shut out in advance. That is the Strict Boss."
+                },
+                {
+                  "text": "“Forget the checklist, ship it and see what breaks, it'll be hilarious!”",
+                  "answer": 3,
+                  "why": "Wanting the fun now and leaving the bill for later. That is the Wild Kid."
+                },
+                {
+                  "text": "“Sorry, I took the good desk. I'll move, it's nothing, I like the draught.”",
+                  "answer": 4,
+                  "why": "The better seat is given up before anyone asked, and the sacrifice is called nothing. That is the Good Kid keeping the peace at its own cost."
+                }
+              ]
+            },
+            {
+              "type": "sort",
+              "prompt": "Drop each line into the bar it came from.",
+              "bins": [
+                "The Strict Boss",
+                "The Caring Boss",
+                "The Pilot",
+                "The Wild Kid",
+                "The Good Kid"
+              ],
+              "items": [
+                {
+                  "text": "“Handover notes go in the template, as written. Not your version of it.”",
+                  "answer": 0,
+                  "why": "A standard stated as the only way, with no reason given. That is the Strict Boss."
+                },
+                {
+                  "text": "“Sorry, it's probably me who broke it. Ignore the red.”",
+                  "answer": 4,
+                  "why": "She gives away her own view before anyone has looked at it. That is the Good Kid, small and quick."
+                },
+                {
+                  "text": "“Take my charger, love, and wear a jumper tomorrow, the server room is freezing.”",
+                  "answer": 1,
+                  "why": "The charger is care and the jumper is an order. That is the Caring Boss, soft in tone and still telling you what to wear."
+                },
+                {
+                  "text": "“The ticket has three open comments and one failing test. It's the date one.”",
+                  "answer": 2,
+                  "why": "Counts and a location, nothing judged. That is the Pilot."
+                },
+                {
+                  "text": "“Skip stand-up and get chips! Daniel never checks, I'll cover it later.”",
+                  "answer": 3,
+                  "why": "A plan made on the spot with the cost left for later. That is the Wild Kid, the want that skips the checks."
+                }
+              ]
+            },
+            {
+              "type": "sort",
+              "prompt": "Drop each line into the bar it came from.",
+              "bins": [
+                "The Strict Boss",
+                "The Caring Boss",
+                "The Pilot",
+                "The Wild Kid",
+                "The Good Kid"
+              ],
+              "items": [
+                {
+                  "text": "“Late with the notes again. A professional hands things in on time, full stop.”",
+                  "answer": 0,
+                  "why": "A verdict on the whole person and the excuse blocked before it is spoken. That is the Strict Boss."
+                },
+                {
+                  "text": "“Come here, you've got ink on your cuff before the client call. Let me.”",
+                  "answer": 1,
+                  "why": "The cuff is care, and the hand is already reaching. That is the Caring Boss, which fixes you whether you asked or not."
+                },
+                {
+                  "text": "“Call starts at 14:00, the link is in the invite and there are four items on the agenda.”",
+                  "answer": 2,
+                  "why": "A time, a place to find the link, a count. That is the Pilot."
+                },
+                {
+                  "text": "“Free cake in the canteen? I'm having three slices and I'll be sorry on Monday!”",
+                  "answer": 3,
+                  "why": "Wanting it now and waving the cost away. That is the Wild Kid."
+                },
+                {
+                  "text": "“Oh, you take the big monitor, I'll squint at the small one, it's no trouble.”",
+                  "answer": 4,
+                  "why": "A comfort handed over before anyone asked, with the cost called no trouble. That is the Good Kid."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "level": "Play",
+          "label": "Play, the week in motion",
+          "intro": "<b>Now the team room.</b> Daniel wants a name for Friday's merge. Clara has already put her hand up. Pick the voice behind each reply from you.",
+          "items": [
+            {
+              "type": "pick",
+              "who": "You, to Daniel, Thursday 17:50",
+              "text": "“Yes, fine, I'll do it. Whatever's easiest for everyone.”",
+              "cue": "laptop already half out of the bag",
+              "options": [
+                "The Good Kid",
+                "The Strict Boss",
+                "The Pilot",
+                "The Wild Kid"
+              ],
+              "answer": 0,
+              "why": "It agrees at once, puts the whole evening on the table and names no condition. That is the Good Kid, which learned that saying yes keeps the room calm.",
+              "traps": {
+                "1": "The Strict Boss would rule: “Fine. Nobody else does it right, so it's mine, and nobody touches my branch.” That shuts Daniel and Clara out in one go.",
+                "2": "The Pilot would set terms: “I can merge at ten if the rollback steps are written and Omar reviews.” It gives facts and leaves the question open.",
+                "3": "The Wild Kid would jump: “Release? Push it tonight and let's go to the pub, we'll fix it tomorrow!” It grabs the fun and skips the cost."
+              },
+              "example": "A flat group chat, someone asks who can collect the parcel: “Yeah me, whatever, no worries!”<br>She is working late all week, and nobody finds out she never wanted the job."
+            },
+            {
+              "type": "pick",
+              "who": "You, to Daniel, Thursday 17:55",
+              "text": "“I can take the merge. I need the rollback steps written down and Omar as second reviewer. Can we settle both tonight?”",
+              "cue": "steady, looking at Daniel and not at Clara",
+              "options": [
+                "The Wild Kid",
+                "The Pilot",
+                "The Caring Boss"
+              ],
+              "answer": 1,
+              "why": "It says what you will do and what you need, and puts no verdict on anyone. The question stays open for Daniel to answer. That is the Pilot, the voice that deals with what is actually here.",
+              "traps": {
+                "0": "The Wild Kid would wave it through: “Go on, give it to me, how hard can it be, we'll wing the rollback!” The merge gets taken and the risk gets ignored.",
+                "2": "The Caring Boss would take over out of kindness: “You look worn out, Daniel. Go home, I'll look after all of it.” That is warm, and it asks for no conditions at all."
+              },
+              "example": "A removals job, a friend asks for help: “I can bring the van at nine, I need the lift booked and two people at the other end.”<br>Everyone knows what is being asked."
+            },
+            {
+              "type": "pick",
+              "who": "You, to Clara, Thursday 18:05",
+              "text": "“Clara, please stop editing my rollback notes after I've sent them. Put your comments in the review.”",
+              "cue": "level, laptop closed on the four pages she has just handed back",
+              "options": [
+                "The Good Kid",
+                "The Caring Boss",
+                "The Wild Kid",
+                "The Strict Boss"
+              ],
+              "answer": 3,
+              "why": "A limit set in a firm voice, with a place for her to go instead. There is no sigh and no apology in it. That is the Strict Boss on its healthy side: it names the line and does not punish her for crossing it.",
+              "traps": {
+                "0": "The Good Kid would fold: “Oh, thanks, Clara, yours are better than mine anyway, sorry.” The limit disappears, and the edits keep coming.",
+                "1": "The Caring Boss would wrap it in kindness: “You're so thorough, love, but rest your eyes, I'll look after the notes.” It is gentle, and it never says stop.",
+                "2": "The Wild Kid would blurt it out: “Touch it again and I'm deleting the lot!” It says the feeling the second it has it, and Clara hears an attack."
+              },
+              "example": "A shared kitchen, one housemate to another: “Please don't reorganise my shelf. Ask me first.”<br>A firm line with no insult in it, and nothing to apologise for."
+            }
+          ]
+        },
+        {
+          "level": "Analyse",
+          "label": "Analyse, explain it",
+          "intro": "<b>Build Clara's voice-print.</b> Ten lines, one bar each. Count each bar: the tallest is the voice used most in these lines, which is a rough guide and not a measurement.",
+          "items": [
+            {
+              "type": "sort",
+              "prompt": "Drop each line into the bar it came from.",
+              "bins": [
+                "The Strict Boss",
+                "The Caring Boss",
+                "The Pilot",
+                "The Wild Kid",
+                "The Good Kid"
+              ],
+              "items": [
+                {
+                  "text": "“That page has three typos. I'm not sending it until it has none.”",
+                  "answer": 0,
+                  "why": "A standard that leaves no room for a draft. That is the Strict Boss, and here it is aimed at herself."
+                },
+                {
+                  "text": "“It should be right the first time. Why isn't it right the first time?”",
+                  "answer": 0,
+                  "why": "A demand that closes every door but perfect. The Strict Boss again."
+                },
+                {
+                  "text": "“Draft is in the folder. Reviews close Friday at noon. Three are still open.”",
+                  "answer": 2,
+                  "why": "A place, a time and a count. That is the Pilot."
+                },
+                {
+                  "text": "“Omar, you've got mayo on your sleeve. Here's a napkin. Sit down, I'll fetch your coffee.”",
+                  "answer": 1,
+                  "why": "The napkin is care, and the fetching comes with an order to sit. That is the Caring Boss."
+                },
+                {
+                  "text": "“Don't mind me, I'll do the weekend cover. I had nothing on anyway.”",
+                  "answer": 4,
+                  "why": "She volunteers her weekend and shrinks her own plans to nothing. That is the Good Kid."
+                },
+                {
+                  "text": "“Sorry, sorry, I should have caught that earlier. That's on me.”",
+                  "answer": 4,
+                  "why": "An apology before anyone has complained. The Good Kid again, sorry in advance."
+                },
+                {
+                  "text": "“The deploy log shows two warnings, and the rollback took four minutes.”",
+                  "answer": 2,
+                  "why": "Facts from a log, no judgment attached. That is the Pilot."
+                },
+                {
+                  "text": "“Standards are standards. If we ship it sloppy once, we ship it sloppy always.”",
+                  "answer": 0,
+                  "why": "A rule that sweeps one slip into a whole future. That is the Strict Boss."
+                },
+                {
+                  "text": "“Let's get the big cake from the baker's and eat it on the stairs! Just once!”",
+                  "answer": 3,
+                  "why": "A sudden wish with the plan thrown out. That is the Wild Kid, the one voice she rarely lets speak."
+                },
+                {
+                  "text": "“A real engineer would have found that in review. I should have found it.”",
+                  "answer": 0,
+                  "why": "A verdict on herself against an impossible standard. That is the Strict Boss, turned inward."
+                }
+              ]
+            },
+            {
+              "type": "pick",
+              "who": "Daniel, after you show him your bars",
+              "text": "“Good Kid on top. So that's your personality, then. Settled.”",
+              "cue": "already typing it into the team wiki",
+              "options": [
+                "A fixed fact about your character, now that it is typed into the wiki",
+                "Proof that your Pilot is missing",
+                "A picture of this month, and it can change"
+              ],
+              "answer": 2,
+              "why": "Your voice-print is a rough picture of how much of the month each voice took. A tall Good Kid bar tells you which voice did most of the talking this month, and you can redraw it as you practise another.",
+              "traps": {
+                "0": "Calling it fixed treats one month as a life sentence. The bars shift when you use a different voice, so a wiki entry cannot make it permanent.",
+                "1": "A tall bar does not mean the Pilot is missing. It is one bar of five, and Daniel has not checked how tall it is."
+              },
+              "example": "A running club, a friend after a slow lap: “You always fade at the end, you're just slow.”<br>One slow lap is one line of the week, not the whole chart."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "setting": "Family",
+      "blurb": "Sunday lunch: someone must take Gran to Tuesday's clinic, and Dad only says he'll see.",
+      "opener": {
+        "setting": "Sunday, 14:10. Mum and Dad's flat, the table laid for six. Gran's chair is empty. She is still coming up from her flat downstairs.",
+        "lines": [
+          {
+            "who": "Mum",
+            "text": "“Somebody has to take Gran to the clinic on Tuesday, and I'm not asking twice.”",
+            "cue": "carrying the gravy jug like evidence"
+          },
+          {
+            "who": "Dad",
+            "text": "“I'll see.”",
+            "cue": "eyes on the football scores, thumb already moving"
+          },
+          {
+            "who": "Leo",
+            "text": "“Can I have the crispy bit?”",
+            "cue": "standing on his chair"
+          },
+          {
+            "who": "The app",
+            "text": "“This is you, so far. Not forever. This month.”",
+            "cue": "five bars on the phone beside your plate, each filled to a different height"
+          }
+        ],
+        "ask": "Which of the five bars is tallest in you this month, and which of your own choices filled it?"
+      },
+      "rounds": [
+        {
+          "level": "Spot",
+          "label": "Spot, round 1",
+          "intro": "<b>How this one works:</b> each card is one line from this week. Drop it into the bar it came from. The five bars are the Strict Boss, the Caring Boss, the Pilot, the Wild Kid and the Good Kid.",
+          "items": [
+            {
+              "type": "sort",
+              "prompt": "Drop each line into the bar it came from.",
+              "bins": [
+                "The Strict Boss",
+                "The Caring Boss",
+                "The Pilot",
+                "The Wild Kid",
+                "The Good Kid"
+              ],
+              "items": [
+                {
+                  "text": "“Leo, coat on, scarf on, hat on. It's four degrees and you'll catch your death.”",
+                  "answer": 1,
+                  "why": "Worry for his health, delivered as three orders. That is the Caring Boss, warm and in charge."
+                },
+                {
+                  "text": "“Gran's clinic is Tuesday at 09:40. The bus takes twenty-five minutes and the lift is round the back.”",
+                  "answer": 2,
+                  "why": "A time, a length and a place. That is the Pilot, which hands over what is true."
+                },
+                {
+                  "text": "“At this table we finish what's on the plate. I'm not arguing about sprouts.”",
+                  "answer": 0,
+                  "why": "A rule with the argument closed in advance. That is the Strict Boss."
+                },
+                {
+                  "text": "“Biscuits first! Dinner can wait, Mum won't notice!”",
+                  "answer": 3,
+                  "why": "Wanting it now and betting nobody checks. That is the Wild Kid."
+                },
+                {
+                  "text": "“Oh, you have the big slice, I'll take the burnt end. I like it really.”",
+                  "answer": 4,
+                  "why": "She gives up the better piece and adds that she likes the worse one. That is the Good Kid, keeping the peace at her own cost."
+                }
+              ]
+            },
+            {
+              "type": "sort",
+              "prompt": "Drop each line into the bar it came from.",
+              "bins": [
+                "The Strict Boss",
+                "The Caring Boss",
+                "The Pilot",
+                "The Wild Kid",
+                "The Good Kid"
+              ],
+              "items": [
+                {
+                  "text": "“When your father was your age he walked to school in all weathers. You can manage a drizzle.”",
+                  "answer": 0,
+                  "why": "A comparison used as a verdict, with no room to answer. That is the Strict Boss."
+                },
+                {
+                  "text": "“Sorry to ask, only if it's no bother, could someone pass the salt? Never mind, I'll reach.”",
+                  "answer": 4,
+                  "why": "A request that apologises, then cancels itself. That is the Good Kid."
+                },
+                {
+                  "text": "“Take a plate down to Mrs Kale, love, and ask if she needs the heating seen to.”",
+                  "answer": 1,
+                  "why": "The care is real, and the errand arrives with its instructions. That is the Caring Boss."
+                },
+                {
+                  "text": "“The spelling test is Monday. Twelve words, and we've done seven.”",
+                  "answer": 2,
+                  "why": "A day and two counts, nobody blamed. That is the Pilot."
+                },
+                {
+                  "text": "“Let's all go to the seaside right now! Dad, get the car, we'll sort lunch on the way!”",
+                  "answer": 3,
+                  "why": "A wish for now, with the lunch and the cost left behind. That is the Wild Kid."
+                }
+              ]
+            },
+            {
+              "type": "sort",
+              "prompt": "Drop each line into the bar it came from.",
+              "bins": [
+                "The Strict Boss",
+                "The Caring Boss",
+                "The Pilot",
+                "The Wild Kid",
+                "The Good Kid"
+              ],
+              "items": [
+                {
+                  "text": "“The gas bill's in the drawer by the kettle, and the total is the same as last quarter.”",
+                  "answer": 2,
+                  "why": "A place to find it and a figure to check. That is the Pilot."
+                },
+                {
+                  "text": "“I've told you before, shoes in the rack. Do it again and there's no pudding, no discussion.”",
+                  "answer": 0,
+                  "why": "A threat with the door shut behind it. That is the Strict Boss."
+                },
+                {
+                  "text": "“Sit, sit, you've been on your feet all morning. Let me tuck a cushion behind you.”",
+                  "answer": 1,
+                  "why": "A gentle gesture that also settles where you will sit. That is the Caring Boss."
+                },
+                {
+                  "text": "“I'm sorry, I'm in the way again. I'll eat in the kitchen so you've got room.”",
+                  "answer": 4,
+                  "why": "An apology for taking up space, and an offer to vanish. That is the Good Kid."
+                },
+                {
+                  "text": "“Dad! Race me down the stairs! Last one's a rotten egg and nobody's looking!”",
+                  "answer": 3,
+                  "why": "Pure want and a gamble that nobody checks. That is the Wild Kid."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "level": "Play",
+          "label": "Play, the week in motion",
+          "intro": "<b>Now the table.</b> Mum has just said it out loud, and Dad has said “I'll see”. Pick the voice behind each reply from you.",
+          "items": [
+            {
+              "type": "pick",
+              "who": "You, to Mum, at the table",
+              "text": "“Yes, yes, I'll take her. Don't worry about it, it's no trouble at all.”",
+              "cue": "eyes on the gravy jug, answering before she has finished asking",
+              "options": [
+                "The Strict Boss",
+                "The Wild Kid",
+                "The Good Kid",
+                "The Pilot"
+              ],
+              "answer": 2,
+              "why": "It agrees before the ask is finished and waves the cost away. Nothing about your own Tuesday gets said. That is the Good Kid, which learned that yes keeps the table calm.",
+              "traps": {
+                "0": "The Strict Boss would rule: “Obviously I'll take her. Somebody has to do things properly in this family.” It agrees, and it also hands out a verdict on everyone else.",
+                "1": "The Wild Kid would leap: “Clinic? Let's take Gran to the seaside instead, she'd love it!” The want is real, and the appointment is gone.",
+                "3": "The Pilot would name the cost: “The clinic is 09:40 on Tuesday. I'd have to swap my shift first. I'll check tonight.” It states facts and leaves the question open."
+              },
+              "example": "A rota chat at work: “Sure, I'll cover Saturday, it's nothing!”<br>She has a wedding on Saturday, and nobody ever hears about it."
+            },
+            {
+              "type": "pick",
+              "who": "You, to Dad, at the table",
+              "text": "“The clinic is at 09:40. I can do the bus there. Dad, can you bring her back at noon?”",
+              "cue": "looking at Dad, and not at Mum",
+              "options": [
+                "The Strict Boss",
+                "The Caring Boss",
+                "The Wild Kid",
+                "The Pilot"
+              ],
+              "answer": 3,
+              "why": "A time, a share of the job for you and a share for him, put as a clear request he can answer. That is the Pilot, which asks for what is needed and leaves him room to say yes or no.",
+              "traps": {
+                "0": "The Strict Boss would pin him down: “Dad, you said you'd see. Seeing isn't doing. Decide now.” It is firm, and it turns the question into a telling-off.",
+                "1": "The Caring Boss would take it over: “You look tired, Dad. Don't worry, I'll do both ways, you stay put.” That is kind, and it removes his share without asking.",
+                "2": "The Wild Kid would skip the plan: “Let's get a taxi and have chips after, Gran can pick, who cares about the time!” The fun is real and the appointment is not covered."
+              },
+              "example": "A football club, a parent to the group: “Practice is at six. I can drive there, can someone bring the oranges?”<br>It is clear who does what, and anyone can answer."
+            },
+            {
+              "type": "pick",
+              "who": "You, to Mum, at the table",
+              "text": "“Mum, I'm taking Gran. Please don't ring me twice on Tuesday morning to check.”",
+              "cue": "level, passing the potatoes",
+              "options": [
+                "The Caring Boss",
+                "The Strict Boss",
+                "The Pilot",
+                "The Good Kid"
+              ],
+              "answer": 1,
+              "why": "A limit stated calmly, with no sigh and no apology. It says what you will do and what you ask her to leave alone. That is the Strict Boss on its healthy side.",
+              "traps": {
+                "0": "The Caring Boss would soften it away: “Ring me whenever you like, love, I know you worry.” It is warm, and the limit has gone.",
+                "2": "The Pilot would report: “I'll text you when we're through the door and when we leave.” It gives her facts and sets no limit, so the phone may still ring twice.",
+                "3": "The Good Kid would give in: “Sorry, Mum, ring as often as you like, I'll pick up.” The boundary is dropped before she has even heard it."
+              },
+              "example": "A shop, a seller to a regular who keeps asking for money off: “I'll send the photo when it's done. Please don't call me at the shop again today.”<br>A firm line, a plan, and no insult."
+            }
+          ]
+        },
+        {
+          "level": "Analyse",
+          "label": "Analyse, explain it",
+          "intro": "<b>Build Mum's voice-print.</b> Ten lines, one bar each. Count each bar: the tallest is the voice used most in these lines, which is a rough guide and not a measurement.",
+          "items": [
+            {
+              "type": "sort",
+              "prompt": "Drop each line into the bar it came from.",
+              "bins": [
+                "The Strict Boss",
+                "The Caring Boss",
+                "The Pilot",
+                "The Wild Kid",
+                "The Good Kid"
+              ],
+              "items": [
+                {
+                  "text": "“Have you eaten? Take a box home. No, take two, you're too thin.”",
+                  "answer": 1,
+                  "why": "Worry about food, and the second box is an order. The Caring Boss."
+                },
+                {
+                  "text": "“Wear your scarf, you'll catch something, and then who has to nurse you?”",
+                  "answer": 1,
+                  "why": "Care that ends in a small guilt trip. The Caring Boss again."
+                },
+                {
+                  "text": "“The bin men come Thursday and the recycling goes out the night before.”",
+                  "answer": 2,
+                  "why": "A day and a task, nothing judged. That is the Pilot."
+                },
+                {
+                  "text": "“Gran's tablets are the blue ones at breakfast and the white ones at bedtime. It's on the fridge.”",
+                  "answer": 2,
+                  "why": "A fact and the place to find it. The Pilot."
+                },
+                {
+                  "text": "“In this house we say thank you. Say it now, Leo, don't make me ask again.”",
+                  "answer": 0,
+                  "why": "A house rule enforced without discussion. That is the Strict Boss."
+                },
+                {
+                  "text": "“If you can't be bothered to ring on Sundays, don't ring at all.”",
+                  "answer": 0,
+                  "why": "An ultimatum that closes the matter. The Strict Boss."
+                },
+                {
+                  "text": "“Don't mind me, I'll have the cold bit, I'm not hungry.”",
+                  "answer": 4,
+                  "why": "She picks the worst piece and shrinks her own appetite. That is the Good Kid."
+                },
+                {
+                  "text": "“Pudding before the main, why not! It's Sunday and I feel about nine years old!”",
+                  "answer": 3,
+                  "why": "A sudden delight with the order of the meal thrown out. That is the Wild Kid."
+                },
+                {
+                  "text": "“Come here, let me do your hair, it's all over the place. There. Now you look looked after.”",
+                  "answer": 1,
+                  "why": "The fix is affection, and it is also done to you. That is the Caring Boss."
+                },
+                {
+                  "text": "“Sit down, sit down, I'll fetch it. You won't know where the good spoons are.”",
+                  "answer": 1,
+                  "why": "Help with a small claim that you cannot manage. The Caring Boss."
+                }
+              ]
+            },
+            {
+              "type": "pick",
+              "who": "Dad, looking at the bars on your phone",
+              "text": "“Good Kid is the tallest in you. So you're soft. Always have been.”",
+              "cue": "chewing, not unkind",
+              "options": [
+                "This month's tallest bar, which can shift and is worth reading",
+                "A fixed fact about you, because he has known you since you were small",
+                "Proof that the Strict Boss in you is missing"
+              ],
+              "answer": 0,
+              "why": "A voice-print is a rough picture of this month, not a ruling from someone who has known you for years. A tall Good Kid bar tells you which voice talked most lately, and it moves when you practise another one.",
+              "traps": {
+                "1": "Dad's long memory feels like proof. But the bars are redrawn each month, and this month's picture says nothing about what you will be next month.",
+                "2": "A tall bar does not mean another bar is missing. The Strict Boss is still one of five, and nobody has checked how tall it is."
+              },
+              "example": "A fishing club, an old friend after you miss a catch: “You never could aim, you've always been hopeless.”<br>One missed catch this Sunday is one line of the week."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "setting": "Relationships",
+      "blurb": "Clara's text to Omar sits read and unanswered since Friday, and you are the friend beside her.",
+      "opener": {
+        "setting": "Sunday, 21:30. Clara's sofa. Her phone is face down on the cushion, and then face up.",
+        "lines": [
+          {
+            "who": "Clara",
+            "text": "“He read it Friday at eight. It's Sunday. It's fine. It's completely fine. I wasn't going to say anything.”",
+            "cue": "turning the phone over to check, and back"
+          },
+          {
+            "who": "The app",
+            "text": "“This is you, so far. Not forever. This month.”",
+            "cue": "five bars on your own phone, each filled to a different height"
+          }
+        ],
+        "ask": "Which of the five bars is tallest in you this month, and which of your own choices filled it?"
+      },
+      "rounds": [
+        {
+          "level": "Spot",
+          "label": "Spot, round 1",
+          "intro": "<b>How this one works:</b> each card is one line from this week. Drop it into the bar it came from. The five bars are the Strict Boss, the Caring Boss, the Pilot, the Wild Kid and the Good Kid.",
+          "items": [
+            {
+              "type": "sort",
+              "prompt": "Drop each line into the bar it came from.",
+              "bins": [
+                "The Strict Boss",
+                "The Caring Boss",
+                "The Pilot",
+                "The Wild Kid",
+                "The Good Kid"
+              ],
+              "items": [
+                {
+                  "text": "“Have you eaten? There's soup in my bag. Take it, you're pale.”",
+                  "answer": 1,
+                  "why": "Worry about whether she ate, and the soup is already handed over. That is the Caring Boss."
+                },
+                {
+                  "text": "“The film starts at 19:40, the cinema is two stops away, and I've booked two seats.”",
+                  "answer": 2,
+                  "why": "A time, a distance and a booking. That is the Pilot."
+                },
+                {
+                  "text": "“If someone says they'll text, they text. That's manners, and I won't pretend it isn't.”",
+                  "answer": 0,
+                  "why": "A rule about how everybody must behave, with no room for a reason. That is the Strict Boss."
+                },
+                {
+                  "text": "“Skip the film and get chips on the bridge! I'll pay you back, probably!”",
+                  "answer": 3,
+                  "why": "A plan made on the spot, with the bill left for later. That is the Wild Kid."
+                },
+                {
+                  "text": "“Oh, you pick the place, I'm easy, I'll eat whatever you eat.”",
+                  "answer": 4,
+                  "why": "He gives away his choice before anyone asked. That is the Good Kid, keeping things smooth."
+                }
+              ]
+            },
+            {
+              "type": "sort",
+              "prompt": "Drop each line into the bar it came from.",
+              "bins": [
+                "The Strict Boss",
+                "The Caring Boss",
+                "The Pilot",
+                "The Wild Kid",
+                "The Good Kid"
+              ],
+              "items": [
+                {
+                  "text": "“Wear the navy, it suits you, and take an umbrella, love, it's going to tip down.”",
+                  "answer": 1,
+                  "why": "The compliment is warm and the umbrella is an order. The Caring Boss."
+                },
+                {
+                  "text": "“I left at 22:15. I sent the message at 22:40. He hasn't replied.”",
+                  "answer": 2,
+                  "why": "Three times and a fact, no verdict. That is the Pilot."
+                },
+                {
+                  "text": "“Sorry, I'm probably reading too much into it. Forget I said anything.”",
+                  "answer": 4,
+                  "why": "She withdraws her own worry before anyone has answered it. That is the Good Kid."
+                },
+                {
+                  "text": "“Two days of no reply is rude and I'm saying it. Tell him so.”",
+                  "answer": 0,
+                  "why": "A verdict with an order attached. That is the Strict Boss."
+                },
+                {
+                  "text": "“Let's turn up at his flat with a cake at midnight! What's the worst that could happen?”",
+                  "answer": 3,
+                  "why": "A thrilling plan with the checks skipped. That is the Wild Kid."
+                }
+              ]
+            },
+            {
+              "type": "sort",
+              "prompt": "Drop each line into the bar it came from.",
+              "bins": [
+                "The Strict Boss",
+                "The Caring Boss",
+                "The Pilot",
+                "The Wild Kid",
+                "The Good Kid"
+              ],
+              "items": [
+                {
+                  "text": "“A grown man answers a message. That's the rule, and he knows it.”",
+                  "answer": 0,
+                  "why": "A standard stated as the only way, with no reason sought. That is the Strict Boss."
+                },
+                {
+                  "text": "“Poor thing, she looked cold. I'll drop a scarf round to hers and tell her to put it on.”",
+                  "answer": 1,
+                  "why": "Concern with the instruction already built in. The Caring Boss."
+                },
+                {
+                  "text": "“The bridge closes at eleven. If we leave at ten to, we make the last tram.”",
+                  "answer": 2,
+                  "why": "A deadline and a plan to meet it. That is the Pilot."
+                },
+                {
+                  "text": "“No, no, you have the last dumpling, I've had plenty, I'm stuffed.”",
+                  "answer": 4,
+                  "why": "He turns down the thing he wanted so the other person gets it. The Good Kid."
+                },
+                {
+                  "text": "“Dance with me on the platform! The tram can wait, the tram doesn't mind!”",
+                  "answer": 3,
+                  "why": "Delight with the timetable thrown away. That is the Wild Kid."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "level": "Play",
+          "label": "Play, the week in motion",
+          "intro": "<b>Now the sofa.</b> Clara has gone quiet, and the unanswered text is still on the screen. You are the friend who says things. Pick the voice behind each reply from you.",
+          "items": [
+            {
+              "type": "pick",
+              "who": "You, to Clara, Sunday 21:35",
+              "text": "“He's probably just busy. It's fine. Forget I said anything.”",
+              "cue": "bright, already reaching to turn the telly up",
+              "options": [
+                "The Caring Boss",
+                "The Good Kid",
+                "The Pilot",
+                "The Wild Kid"
+              ],
+              "answer": 1,
+              "why": "It soothes her and closes the subject in one go. Nothing true about Thursday gets said, and the peace is kept. That is the Good Kid, which learned that smoothing things over keeps people near.",
+              "traps": {
+                "0": "The Caring Boss would take her in hand: “Come here, you poor thing, have some tea, and put that phone in a drawer.” It is warm, and it tells her what to do with her own phone.",
+                "2": "The Pilot would say what is known: “He read it Friday at eight. It's Sunday. That's the situation.” It gives her the facts and leaves the subject open.",
+                "3": "The Wild Kid would dare her: “Ring him right now! What's the worst, he doesn't pick up?” It is exciting and skips what she will feel afterwards."
+              },
+              "example": "A group chat about a missed invite: “He's probably just busy! Forget it!”<br>Nobody says the thing that was bothering her, and it comes back on Tuesday."
+            },
+            {
+              "type": "pick",
+              "who": "You, to Clara, Sunday 21:42",
+              "text": "“He read it Friday at eight and it's Sunday night. You could send one short line tonight or wait until Monday. Which do you want?”",
+              "cue": "steady, phone between you on the cushion",
+              "options": [
+                "The Strict Boss",
+                "The Wild Kid",
+                "The Pilot"
+              ],
+              "answer": 2,
+              "why": "It sets out the time, the two ways she can go, and asks which she wants. There is no verdict on Omar and no push. That is the Pilot, the voice that works with what is actually in front of you.",
+              "traps": {
+                "0": "The Strict Boss would hand down a ruling: “Two days of silence is rude. Tell him that and don't soften it.” That is a verdict on Omar, and it gives Clara no choice.",
+                "1": "The Wild Kid would dive in: “Ring him right now! Midnight call, who cares!” It is exciting, and it takes the choice away from the person it belongs to."
+              },
+              "example": "A train platform, a friend to another waiting on a late reply: “The call was Tuesday and it's Friday. You can send one line today or wait for Monday. Which?”<br>Two real options, and the choice stays with her."
+            },
+            {
+              "type": "pick",
+              "who": "You, to Clara, Sunday 21:50",
+              "text": "“Clara, I'll listen all evening. I won't help you write a third apology text. Not tonight.”",
+              "cue": "level, hand flat on the cushion between you",
+              "options": [
+                "The Strict Boss",
+                "The Caring Boss",
+                "The Good Kid",
+                "The Wild Kid"
+              ],
+              "answer": 0,
+              "why": "A limit stated in a calm voice: what you will do and what you will not. There is no sigh and no punishment in it. That is the Strict Boss on its healthy side.",
+              "traps": {
+                "1": "The Caring Boss would take over: “Give me the phone, you poor thing, I'll write it for you.” That is generous, and it keeps the text-writing loop running.",
+                "2": "The Good Kid would fold: “Sorry, sorry, of course I'll help, give it here.” The limit is dropped the second she looks upset.",
+                "3": "The Wild Kid would turn it into a stunt: “Send a GIF and a voice note at midnight, who cares!” That is the want, with no thought about what Omar reads on Monday."
+              },
+              "example": "A bakery counter, a customer to a friend: “I'll hold your coat all day. I won't help you pick a fifth outfit.”<br>A kind no, with the help she can still count on."
+            }
+          ]
+        },
+        {
+          "level": "Analyse",
+          "label": "Analyse, explain it",
+          "intro": "<b>Build Omar's voice-print.</b> Ten lines, one bar each. Count each bar: the tallest is the voice used most in these lines, which is a rough guide and not a measurement.",
+          "items": [
+            {
+              "type": "sort",
+              "prompt": "Drop each line into the bar it came from.",
+              "bins": [
+                "The Strict Boss",
+                "The Caring Boss",
+                "The Pilot",
+                "The Wild Kid",
+                "The Good Kid"
+              ],
+              "items": [
+                {
+                  "text": "“Rain's coming at four. I've got a spare umbrella in the office.”",
+                  "answer": 2,
+                  "why": "A forecast and a fact. That is the Pilot."
+                },
+                {
+                  "text": "“I'll walk you to the stop. Put your scarf on, it's bitter out.”",
+                  "answer": 1,
+                  "why": "The walk is care and the scarf is an order. That is the Caring Boss."
+                },
+                {
+                  "text": "“The booking's for 19:30. They hold tables for fifteen minutes.”",
+                  "answer": 2,
+                  "why": "A time and a limit, no judgment attached. The Pilot."
+                },
+                {
+                  "text": "“Sorry, I should have texted back sooner. That's on me, completely.”",
+                  "answer": 4,
+                  "why": "An apology that takes all the blame, and offers it before anyone asks. That is the Good Kid."
+                },
+                {
+                  "text": "“Chips on the bridge, then the last tram, and we'll see who falls asleep first!”",
+                  "answer": 3,
+                  "why": "A spur-of-the-moment plan with the tram left to chance. That is the Wild Kid."
+                },
+                {
+                  "text": "“Meetings that run over without an agenda are wasted time. I won't sit through another.”",
+                  "answer": 0,
+                  "why": "A rule with the door shut behind it. That is the Strict Boss."
+                },
+                {
+                  "text": "“Eat something, you skipped lunch, I saw. Half of this, go on.”",
+                  "answer": 1,
+                  "why": "Noticing she skipped lunch is care, and the half is an order. The Caring Boss."
+                },
+                {
+                  "text": "“No, you go first, I'll wait, I'm in no hurry.”",
+                  "answer": 4,
+                  "why": "He steps back so she can go ahead. The Good Kid, polite and small."
+                },
+                {
+                  "text": "“I saw your message on Friday at eight. I didn't know what to say, so I said nothing.”",
+                  "answer": 2,
+                  "why": "A time and a description of what he did. That is the Pilot, even about something awkward."
+                },
+                {
+                  "text": "“Your train is 17:42, platform 4, and the stairs are on your left.”",
+                  "answer": 2,
+                  "why": "A time, a number and a direction. The Pilot again."
+                }
+              ]
+            },
+            {
+              "type": "pick",
+              "who": "Clara, after you show her your bars",
+              "text": "“Your Pilot is the tallest. So you're the reasonable one. You never feel anything, do you?”",
+              "cue": "half joking, watching your face",
+              "options": [
+                "A fixed fact about you, the reasonable one, now that it is charted",
+                "A picture of this month, and the other four bars are still there",
+                "Proof that the Wild Kid is missing from you"
+              ],
+              "answer": 1,
+              "why": "A voice-print shows roughly how much of this month each voice took. A tall Pilot bar says that voice talked the most. It does not say the other four have gone quiet for good, and you can redraw the bars as you use them.",
+              "traps": {
+                "0": "Calling it fixed turns a month into an identity. The Pilot may be the tallest now, and it can still be redrawn when you practise a different voice.",
+                "2": "A tall bar does not make another bar vanish. The Wild Kid is one bar of five, and Clara has not looked at how tall it is."
+              },
+              "example": "A pub quiz team, after a bad round: “You always freeze under pressure, that's who you are.”<br>One bad round is one line of the week, not the whole chart."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
