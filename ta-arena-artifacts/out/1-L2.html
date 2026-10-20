@@ -43,6 +43,15 @@
   .series small { color: var(--on-bg-dim); font-weight: 500; letter-spacing: 0.08em; }
   .tag { font-family: "IBM Plex Mono", monospace; font-size: 11px; color: var(--on-bg-dim); text-decoration: none; white-space: nowrap; }
   .tag:hover { color: var(--pink); }
+  @media (max-width: 480px) { .series small { display: none; } .masthead .right { gap: 10px; } }
+  button.tag { background: none; border: 0; cursor: pointer; padding: 0; }
+  .linkbtn { background: none; border: 0; padding: 10px 0 0; color: var(--on-bg-dim, #94a3b8); font: 600 12.5px "IBM Plex Mono", monospace; cursor: pointer; }
+  .linkbtn:hover { color: var(--wc, #fffc00); }
+  .story-card { display: block; text-align: left; width: 100%; }
+  .story-top { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-bottom: 4px; }
+  .story-top b { font-size: 16px; }
+  .story-blurb { display: block; font-size: 14px; line-height: 1.45; color: var(--text-dim, #a3b1c6); }
+  .played-tag { font: 600 10.5px "IBM Plex Mono", monospace; letter-spacing: 0.05em; text-transform: uppercase; color: #080a10; background: var(--wc, #fffc00); border-radius: 999px; padding: 2px 8px; }
   a:focus-visible, button:focus-visible, textarea:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 
   .card { background: var(--surface); color: var(--text); border-radius: 22px; box-shadow: 0 24px 60px var(--shadow); padding: 32px 28px 28px; position: relative; min-width: 0; overflow-wrap: anywhere; }
@@ -316,7 +325,7 @@
 <div class="stage">
   <div class="masthead">
     <div class="series" id="series">You</div>
-    <div class="right"><button type="button" class="sfx" id="sfx" aria-pressed="true" aria-label="Sound">SFX ON</button><a class="tag" id="hubLink" href="#" hidden>All games</a></div>
+    <div class="right"><button type="button" class="sfx" id="sfx" aria-pressed="true" aria-label="Sound">SFX ON</button><button type="button" class="tag" id="storiesBtn" hidden>Settings</button><a class="tag" id="hubLink" href="#" hidden>All games</a></div>
   </div>
   <main class="card" id="card" tabindex="-1">
     <p class="deck">Loading the game.</p>
@@ -412,13 +421,38 @@
   }
 
   // Flat list of items across the three rounds; one progress segment each.
+  // Each game can carry several settings (stories). The first is the file's own opener and
+  // rounds; the rest come from GAME.moreStories. The lesson, debrief and reflection are shared.
+  var STORIES = GAME ? [{
+    setting: (GAME.baseStory && GAME.baseStory.setting) || GAME.setting || "",
+    blurb: (GAME.baseStory && GAME.baseStory.blurb) || "",
+    opener: GAME.opener, rounds: GAME.rounds
+  }].concat(GAME.moreStories || []) : [];
+  var cur = 0;
   var ITEMS = [];
-  ((GAME && GAME.rounds) || []).forEach(function (round) {
-    (round.items || []).forEach(function (item, i) {
-      ITEMS.push({ round: round, item: item, first: i === 0 });
+  var TOTAL = 0;
+  function useStory(i) {
+    cur = i;
+    ITEMS = [];
+    ((STORIES[i] && STORIES[i].rounds) || []).forEach(function (round) {
+      (round.items || []).forEach(function (item, j) {
+        ITEMS.push({ round: round, item: item, first: j === 0 });
+      });
     });
-  });
-  var TOTAL = ITEMS.length;
+    TOTAL = ITEMS.length;
+  }
+  useStory(0);
+  var MULTI = STORIES.length > 1;
+  var DONE_KEY = "ta-arena-done-" + (GAME ? GAME.slot : "");
+  function readDone() {
+    try { return JSON.parse(window.localStorage.getItem(DONE_KEY) || "[]") || []; } catch (e) { return []; }
+  }
+  function markDone(i) {
+    var d = readDone();
+    if (d.indexOf(i) < 0) d.push(i);
+    try { window.localStorage.setItem(DONE_KEY, JSON.stringify(d)); } catch (e) { /* blocked: fine */ }
+    return d;
+  }
 
   function progressHTML(done, current) {
     var bars = "";
@@ -442,7 +476,7 @@
 
   // ---------- flow ----------
 
-  var state = { screen: "intro", k: 0 };
+  var state = { screen: MULTI ? "stories" : "intro", k: 0 };
 
   function settle() {
     if (card.getBoundingClientRect().top < 0) card.scrollIntoView({ block: "start" });
@@ -450,7 +484,8 @@
   }
 
   function render() {
-    if (state.screen === "intro") renderIntro();
+    if (state.screen === "stories") renderStories();
+    else if (state.screen === "intro") renderIntro();
     else if (state.screen === "item") renderItem(state.k);
     else if (state.screen === "debrief") renderDebrief();
     else if (state.screen === "reflect") renderReflect();
@@ -463,7 +498,11 @@
       state.screen = "item"; state.k = 0;
     } else if (state.screen === "item") {
       if (state.k + 1 < TOTAL) state.k += 1;
-      else state.screen = "debrief";
+      else {
+        var before = readDone().length;
+        markDone(cur);
+        state.screen = before > 0 ? "end" : "debrief";
+      }
     } else if (state.screen === "debrief") {
       state.screen = "reflect";
     } else if (state.screen === "reflect") {
@@ -482,19 +521,19 @@
   }
 
   function renderIntro() {
-    var op = GAME.opener || {};
+    var op = STORIES[cur].opener || {};
     var lines = (op.lines || []).map(function (ln) {
       return '<p class="line"><span class="who">' + rich(ln.who) + '</span>' + rich(ln.text) + '</p>' +
         (ln.cue ? '<p class="cue">' + rich(ln.cue) + '</p>' : "");
     }).join("");
-    var rounds = (GAME.rounds || []).map(function (r) {
+    var rounds = (STORIES[cur].rounds || []).map(function (r) {
       var n = (r.items || []).length;
       return '<li><span class="dot"></span><span><b>' + rich(r.level) + '</b>, ' + n +
         (n === 1 ? ' item' : ' items') + '</span></li>';
     }).join("");
     card.innerHTML =
       '<div class="tagline">You · World ' + esc(GAME.world) + ', ' + rich(GAME.worldName) +
-      ' · Game ' + esc(GAME.slot) + '</div>' +
+      ' · Game ' + esc(GAME.slot) + (MULTI && STORIES[cur].setting ? ' · ' + esc(STORIES[cur].setting) : '') + '</div>' +
       '<div class="card-head"><div><h1>' + rich(GAME.title) + '</h1>' +
       '<p class="deck">' + rich(GAME.concept) + '</p></div>' +
       '<div class="case-no"><span class="emb-wrap">' + ((window.TA_EMB || {})[String(GAME.world)] || "") + '</span>' + esc(GAME.slot) + '<br>' + rich(GAME.weekName) + '</div></div>' +
@@ -505,8 +544,46 @@
       '<ul class="rules-list">' + rounds +
       '<li><span class="dot"></span><span>Feedback follows every answer, with a real example</span></li>' +
       '</ul></div>' +
-      nextbar("Start the game →");
+      nextbar("Start the game →") +
+      (MULTI ? '<div class="nextbar"><button class="linkbtn" type="button" id="otherSetting">← Choose another setting</button></div>' : "");
     bindNext(advance);
+    bindOther();
+  }
+
+  function bindOther() {
+    var b = card.querySelector("#otherSetting");
+    if (b) b.addEventListener("click", goStories);
+  }
+
+  function goStories() {
+    state.screen = "stories"; state.k = 0;
+    render();
+  }
+
+  function renderStories() {
+    var done = readDone();
+    var cards = STORIES.map(function (st, i) {
+      var ticked = done.indexOf(i) >= 0;
+      return '<button class="choice story-card' + (ticked ? ' played' : '') + '" type="button" data-i="' + i + '">' +
+        '<span class="story-top"><b>' + esc(st.setting || ("Story " + (i + 1))) + '</b>' +
+        (ticked ? '<span class="played-tag">Played</span>' : '') + '</span>' +
+        '<span class="story-blurb">' + rich(st.blurb || "") + '</span></button>';
+    }).join("");
+    card.innerHTML =
+      '<div class="tagline">You · World ' + esc(GAME.world) + ', ' + rich(GAME.worldName) + ' · Game ' + esc(GAME.slot) + '</div>' +
+      '<div class="card-head"><div><h1>' + rich(GAME.title) + '</h1>' +
+      '<p class="deck">' + rich(GAME.concept) + '</p></div>' +
+      '<div class="case-no"><span class="emb-wrap">' + ((window.TA_EMB || {})[String(GAME.world)] || "") + '</span>' + esc(GAME.slot) + '<br>' + rich(GAME.weekName) + '</div></div>' +
+      '<div class="ask"><div class="kicker">Choose a setting</div><p>Same idea, different people and places. Pick the one closest to your life, or play them all. ' +
+      done.length + ' of ' + STORIES.length + ' played.</p></div>' +
+      '<div class="choices">' + cards + '</div>';
+    card.querySelectorAll("button.story-card").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        useStory(parseInt(btn.getAttribute("data-i"), 10));
+        state.screen = "intro"; state.k = 0;
+        render();
+      });
+    });
   }
 
   // ---------- pick ----------
@@ -886,7 +963,8 @@
   function renderEnd() {
     var hub = worldHub();
     var nxt = NAV.next || null;
-    var links = hub ? '<a class="next" href="' + esc(hub) + '">Back to the world</a>' : "";
+    var links = MULTI ? '<button class="next" type="button" id="otherSetting">Play another setting</button>' : "";
+    links += hub ? '<a class="next" href="' + esc(hub) + '">Back to the world</a>' : "";
     if (nxt) {
       var nxtUrl = safeUrl(nxt.url);
       links += nxtUrl
@@ -899,7 +977,9 @@
       '<h1 class="h2">Game ' + esc(GAME.slot) + ' is done.</h1>' +
       '<p class="feedback">' + rich(GAME.concept) + '</p>' +
       '<div class="source"><b>From:</b> ' + rich(GAME.bookSource) + '</div>' +
+      (MULTI ? '<p class="feedback">Settings played: ' + readDone().length + ' of ' + STORIES.length + '.</p>' : '') +
       '<div class="nextbar end-nav">' + links + '</div>';
+    bindOther();
   }
 
   // ---------- start ----------
@@ -913,6 +993,8 @@
       return;
     }
     series.innerHTML = '<span class="emb-wrap">' + ((window.TA_EMB || {})[String(GAME.world)] || "") + '</span>You <small>· World ' + esc(GAME.world) + ' · Game ' + esc(GAME.slot) + '</small>';
+    var sb = document.getElementById("storiesBtn");
+    if (MULTI && sb) { sb.hidden = false; sb.addEventListener("click", goStories); }
     var hub = worldHub();
     if (hub) {
       hubLink.textContent = "World map";
