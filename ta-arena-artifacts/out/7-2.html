@@ -443,6 +443,18 @@
   }
   useStory(0);
   var MULTI = STORIES.length > 1;
+  // If the hub's setting filter sent us here with ?setting=X and this game has that
+  // setting, go straight into it instead of asking again on a "choose a setting" screen.
+  var PRESET_STORY = -1;
+  try {
+    var wantSetting = new URLSearchParams(window.location.search).get("setting");
+    if (wantSetting) {
+      for (var si = 0; si < STORIES.length; si++) {
+        if (STORIES[si].setting === wantSetting) { PRESET_STORY = si; break; }
+      }
+    }
+  } catch (e) { /* URLSearchParams unsupported: fall through to the picker */ }
+  if (PRESET_STORY >= 0) useStory(PRESET_STORY);
   var DONE_KEY = "ta-arena-done-" + (GAME ? GAME.slot : "");
   function readDone() {
     try { return JSON.parse(window.localStorage.getItem(DONE_KEY) || "[]") || []; } catch (e) { return []; }
@@ -476,7 +488,7 @@
 
   // ---------- flow ----------
 
-  var state = { screen: MULTI ? "stories" : "intro", k: 0 };
+  var state = { screen: (MULTI && PRESET_STORY < 0) ? "stories" : "intro", k: 0 };
 
   function settle() {
     if (card.getBoundingClientRect().top < 0) card.scrollIntoView({ block: "start" });

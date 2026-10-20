@@ -341,7 +341,9 @@
   window.addEventListener("hashchange", route);
   route();
 
-  // Setting filter: click a pill to show only that world's chips in that setting.
+  // Setting filter: click a pill to show only that world's chips in that setting. A chip's
+  // link also picks up ?setting=X so the game opens straight into that setting instead of
+  // asking again on its own "choose a setting" screen.
   document.addEventListener("click", function (e) {
     var btn = e.target.closest(".setfil");
     if (!btn) return;
@@ -355,6 +357,11 @@
     Array.prototype.forEach.call(list.querySelectorAll("li.chip"), function (li) {
       var s = li.getAttribute("data-setting") || "";
       li.hidden = !!want && s.split("|").indexOf(want) < 0;
+      var a = li.querySelector("a[href]");
+      if (!a) return;
+      if (!a.hasAttribute("data-href")) a.setAttribute("data-href", a.getAttribute("href"));
+      var base = a.getAttribute("data-href");
+      a.setAttribute("href", want ? base + (base.indexOf("?") >= 0 ? "&" : "?") + "setting=" + encodeURIComponent(want) : base);
     });
   });
 })();
