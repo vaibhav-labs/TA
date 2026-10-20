@@ -89,7 +89,7 @@
         },
         {
           "type": "pick",
-          "who": "You, at the door of 1A, holding an empty bowl",
+          "who": "You, at Gran's door downstairs, holding an empty bowl",
           "text": "“Is it okay if I have the last of the flattened rice? Only if it's okay. Sorry.”",
           "cue": "asks, then asks again, a small voice at the end",
           "options": ["The Boss", "The Pilot", "The Kid"],

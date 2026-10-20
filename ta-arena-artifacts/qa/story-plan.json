@@ -1,0 +1,422 @@
+{
+ "1.1": {
+  "title": "A Day With No Hellos",
+  "base": "Home & Flatmates",
+  "extra": [
+   "Relationships",
+   "School & College",
+   "Work"
+  ],
+  "mechanic": "Choice-story"
+ },
+ "1.2": {
+  "title": "Sort the Nods",
+  "base": "Home & Flatmates",
+  "extra": [
+   "Friends & Community",
+   "Family",
+   "Relationships"
+  ],
+  "mechanic": "Sort-it"
+ },
+ "1.3": {
+  "title": "How Many Hellos?",
+  "base": "Home & Flatmates",
+  "extra": [
+   "Family",
+   "Friends & Community",
+   "School & College"
+  ],
+  "mechanic": "Counter"
+ },
+ "1.4": {
+  "title": "Small Talk or Real Talk",
+  "base": "Work",
+  "extra": [
+   "Home & Flatmates",
+   "Family",
+   "Friends & Community"
+  ],
+  "mechanic": "Floor-plan"
+ },
+ "1.5": {
+  "title": "Match the Table",
+  "base": "Family",
+  "extra": [
+   "Home & Flatmates",
+   "Work",
+   "Relationships"
+  ],
+  "mechanic": "Choice-story"
+ },
+ "1.6": {
+  "title": "Break the Nod Rules",
+  "base": "Friends & Community",
+  "extra": [
+   "School & College",
+   "Home & Flatmates",
+   "Work"
+  ],
+  "mechanic": "Rule-breaker"
+ },
+ "2.1": {
+  "title": "Which Voice Is That?",
+  "base": "Home & Flatmates",
+  "extra": [
+   "Friends & Community",
+   "Relationships",
+   "School & College"
+  ],
+  "mechanic": "Diagnose"
+ },
+ "2.2": {
+  "title": "Five Faces of a Voice",
+  "base": "Work",
+  "extra": [
+   "Family",
+   "Home & Flatmates",
+   "Friends & Community"
+  ],
+  "mechanic": "Diagnose"
+ },
+ "2.3": {
+  "title": "Your Voice Bars",
+  "base": "Home & Flatmates",
+  "extra": [
+   "Work",
+   "Family",
+   "Relationships"
+  ],
+  "mechanic": "Build"
+ },
+ "2.4": {
+  "title": "Four Ways to Check",
+  "base": "Work",
+  "extra": [
+   "Home & Flatmates",
+   "School & College",
+   "Family"
+  ],
+  "mechanic": "Diagnose"
+ },
+ "2.5": {
+  "title": "How a Child Learns a Trap",
+  "base": "Family",
+  "extra": [
+   "Work",
+   "School & College",
+   "Home & Flatmates"
+  ],
+  "mechanic": "Choice-story"
+ },
+ "2.6": {
+  "title": "When Facts Get Muddied",
+  "base": "Friends & Community",
+  "extra": [
+   "Relationships",
+   "Work",
+   "School & College"
+  ],
+  "mechanic": "Spot-the-leak"
+ },
+ "3.1": {
+  "title": "Draw the Arrow",
+  "base": "Home & Flatmates",
+  "extra": [
+   "Friends & Community",
+   "Family",
+   "Relationships"
+  ],
+  "mechanic": "Vector"
+ },
+ "3.2": {
+  "title": "Keep It Going",
+  "base": "Work",
+  "extra": [
+   "Friends & Community",
+   "Home & Flatmates",
+   "Family"
+  ],
+  "mechanic": "Choice-story"
+ },
+ "3.3": {
+  "title": "Step Out of the Whine",
+  "base": "Home & Flatmates",
+  "extra": [
+   "Work",
+   "Friends & Community",
+   "Relationships"
+  ],
+  "mechanic": "Choice-story"
+ },
+ "3.4": {
+  "title": "Replay the Call",
+  "base": "Home & Flatmates",
+  "extra": [
+   "School & College",
+   "Work",
+   "Family"
+  ],
+  "mechanic": "Replay"
+ },
+ "3.5": {
+  "title": "Two Chats at Once",
+  "base": "Relationships",
+  "extra": [
+   "Home & Flatmates",
+   "School & College",
+   "Work"
+  ],
+  "mechanic": "Two-track"
+ },
+ "3.6": {
+  "title": "The Friendly Sales Line",
+  "base": "Friends & Community",
+  "extra": [
+   "Relationships",
+   "Home & Flatmates",
+   "School & College"
+  ],
+  "mechanic": "Two-track"
+ },
+ "4.1": {
+  "title": "Trap or Just Talk?",
+  "base": "Home & Flatmates",
+  "extra": [
+   "Friends & Community",
+   "Work",
+   "Family"
+  ],
+  "mechanic": "Diagnose"
+ },
+ "4.2": {
+  "title": "Six Steps of a Trap",
+  "base": "Home & Flatmates",
+  "extra": [
+   "Friends & Community",
+   "Relationships",
+   "Work"
+  ],
+  "mechanic": "Sequence"
+ },
+ "4.3": {
+  "title": "Traps That Last Years",
+  "base": "Home & Flatmates",
+  "extra": [
+   "School & College",
+   "Family",
+   "Friends & Community"
+  ],
+  "mechanic": "Choice-story"
+ },
+ "4.4": {
+  "title": "Traps at Home",
+  "base": "Home & Flatmates",
+  "extra": [
+   "Relationships",
+   "School & College",
+   "Work"
+  ],
+  "mechanic": "Choice-story"
+ },
+ "4.5": {
+  "title": "Traps in the Room",
+  "base": "Home & Flatmates",
+  "extra": [
+   "Friends & Community",
+   "Relationships",
+   "Family"
+  ],
+  "mechanic": "Choice-story"
+ },
+ "4.6": {
+  "title": "The Yes-But Loop",
+  "base": "Friends & Community",
+  "extra": [
+   "Home & Flatmates",
+   "Family",
+   "Relationships"
+  ],
+  "mechanic": "Many-handed"
+ },
+ "5.1": {
+  "title": "Real Feeling or Stand-In?",
+  "base": "Work",
+  "extra": [
+   "Home & Flatmates",
+   "Friends & Community",
+   "School & College"
+  ],
+  "mechanic": "Diagnose"
+ },
+ "5.2": {
+  "title": "Collecting Grudges",
+  "base": "Home & Flatmates",
+  "extra": [
+   "Work",
+   "School & College",
+   "Family"
+  ],
+  "mechanic": "Collect"
+ },
+ "5.3": {
+  "title": "Shrinking the Problem",
+  "base": "Family",
+  "extra": [
+   "Home & Flatmates",
+   "Relationships",
+   "Work"
+  ],
+  "mechanic": "Ladder"
+ },
+ "5.4": {
+  "title": "Four Ways to Do Nothing",
+  "base": "Work",
+  "extra": [
+   "Home & Flatmates",
+   "Friends & Community",
+   "Relationships"
+  ],
+  "mechanic": "Diagnose"
+ },
+ "5.5": {
+  "title": "Two Halves of a Pair",
+  "base": "Home & Flatmates",
+  "extra": [
+   "Family",
+   "Friends & Community",
+   "School & College"
+  ],
+  "mechanic": "Choice-story"
+ },
+ "5.6": {
+  "title": "Kind but Stuck",
+  "base": "Friends & Community",
+  "extra": [
+   "Home & Flatmates",
+   "Work",
+   "Family"
+  ],
+  "mechanic": "Ladder"
+ },
+ "6.1": {
+  "title": "Four Corners of OK",
+  "base": "Friends & Community",
+  "extra": [
+   "Home & Flatmates",
+   "School & College",
+   "Work"
+  ],
+  "mechanic": "Quadrant"
+ },
+ "6.2": {
+  "title": "Hear the Hidden Must",
+  "base": "Home & Flatmates",
+  "extra": [
+   "Relationships",
+   "Friends & Community",
+   "School & College"
+  ],
+  "mechanic": "Diagnose"
+ },
+ "6.3": {
+  "title": "A Child's Hidden No",
+  "base": "Family",
+  "extra": [
+   "Home & Flatmates",
+   "Friends & Community",
+   "Relationships"
+  ],
+  "mechanic": "Diagnose"
+ },
+ "6.4": {
+  "title": "Three Everyday Plans",
+  "base": "Friends & Community",
+  "extra": [
+   "Family",
+   "Home & Flatmates",
+   "Work"
+  ],
+  "mechanic": "Choice-story"
+ },
+ "6.5": {
+  "title": "Shape of a Life Story",
+  "base": "Family",
+  "extra": [
+   "Work",
+   "Friends & Community",
+   "Relationships"
+  ],
+  "mechanic": "Match"
+ },
+ "6.6": {
+  "title": "The Plan Board",
+  "base": "Friends & Community",
+  "extra": [
+   "Home & Flatmates",
+   "Family",
+   "School & College"
+  ],
+  "mechanic": "Build"
+ },
+ "7.1": {
+  "title": "Help or Rescue",
+  "base": "Home & Flatmates",
+  "extra": [
+   "Relationships",
+   "School & College",
+   "Work"
+  ],
+  "mechanic": "Diagnose"
+ },
+ "7.2": {
+  "title": "A Deal That Holds",
+  "base": "Home & Flatmates",
+  "extra": [
+   "Friends & Community",
+   "Family",
+   "Relationships"
+  ],
+  "mechanic": "Build"
+ },
+ "7.3": {
+  "title": "Green Light, Safety Net",
+  "base": "Work",
+  "extra": [
+   "Home & Flatmates",
+   "Family",
+   "Friends & Community"
+  ],
+  "mechanic": "Choice-story"
+ },
+ "7.4": {
+  "title": "Stay Steady Under Pressure",
+  "base": "Home & Flatmates",
+  "extra": [
+   "Work",
+   "School & College",
+   "Family"
+  ],
+  "mechanic": "Replay"
+ },
+ "7.5": {
+  "title": "Choose Your Own Move",
+  "base": "Home & Flatmates",
+  "extra": [
+   "Work",
+   "Friends & Community",
+   "Relationships"
+  ],
+  "mechanic": "Choice-story"
+ },
+ "7.6": {
+  "title": "Keep It Real for Six Turns",
+  "base": "Friends & Community",
+  "extra": [
+   "Home & Flatmates",
+   "School & College",
+   "Work"
+  ],
+  "mechanic": "Open"
+ }
+}

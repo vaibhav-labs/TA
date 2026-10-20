@@ -12,7 +12,7 @@
   "bookIdea": "Berne's name for a game where one person stirs up a disagreement between two others and steps back to watch, without having to risk the disagreement themselves.",
   "bookSource": "Games People Play, ch. 6",
   "opener": {
-    "setting": "Sunday, 3pm. Apartment 1A, Gran's kitchen. The kettle has just gone off, and the radio is on low in the corner.",
+    "setting": "Sunday, 3pm. Gran's flat downstairs, the kitchen. The kettle has just gone off, and the radio is on low in the corner.",
     "lines": [
       { "who": "Gran", "text": "“Your mother hasn't rung me all week. I don't mind, I'm sure she's busy.”", "cue": "stirring her tea slowly, eyes on the cup" },
       { "who": "You", "text": "“I'm sure she'll call soon, Gran.”", "cue": "reaching for the biscuit tin, not quite meeting her eyes" },

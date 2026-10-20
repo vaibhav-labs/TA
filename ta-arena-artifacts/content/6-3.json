@@ -13,7 +13,7 @@
   "bookIdea": "Injunctions are Don'ts that come from the parent's own Child, often through what the parent does rather than what they say, and each one needs its own permission to counter it.",
   "bookSource": "Scripts People Live, ch. 4, 6, 7 and 21; TA Today, ch. 14",
   "opener": {
-    "setting": "Saturday, 10:30am. Hawthorn Court, apartment 1A, Gran's kitchen. Leo is on the stool by the window with a pencil.",
+    "setting": "Saturday, 10:30am. Hawthorn Court, Gran's flat downstairs, the kitchen. Leo is on the stool by the window with a pencil.",
     "lines": [
       { "who": "Gran", "text": "“Sit there and draw. Don't touch the cooker, it's hot. It's always hot.”", "cue": "not turning round" },
       { "who": "Leo", "text": "“It has twelve wheels. Nobody counts them.”", "cue": "holding the paper up to the window light" }
@@ -30,7 +30,7 @@
           "type": "pick",
           "who": "Leo, 8",
           "text": "<i>He holds up a drawing of a bus with twelve wheels. Gran is at the pressure cooker and does not turn round. He folds the drawing in four and slides it under the newspaper.</i>",
-          "cue": "Saturday, 11:40am, apartment 1A, the kitchen",
+          "cue": "Saturday, 11:40am, Gran's flat downstairs, the kitchen",
           "options": ["Don't be important", "Don't feel", "Don't be close"],
           "answer": 0,
           "why": "Nobody looks at the drawing, so he takes it back. There is no shouting and no crying. What he decides is that what he makes doesn't count, and that is don't be important. The permission that counters it is 'you may be important, and what you make can be looked at'.",

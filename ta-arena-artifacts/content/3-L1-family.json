@@ -13,7 +13,7 @@
   "bookIdea": "A transaction is one line and the reply it gets. The reply is complementary when it comes from the voice that was addressed and goes back to the one that spoke, and crossed when it does not, which is often exactly what breaks a loop.",
   "bookSource": "Games People Play, ch. 2; TA Today, ch. 7",
   "opener": {
-    "setting": "Sunday, 12:40pm. Gran's kitchen, apartment 1A, Hawthorn Court. The letter from the housing office is still in its envelope on the table.",
+    "setting": "Sunday, 12:40pm. Gran's kitchen, her flat downstairs at Hawthorn Court. The letter from the housing office is still in its envelope on the table.",
     "lines": [
       { "who": "Gran", "text": "“Nobody reads these for me any more. You're the only one who understands them.”", "cue": "sliding the envelope across, not quite looking up from the pan" },
       { "who": "Mrs Kale", "text": "“She's been carrying that letter round all week.”", "cue": "stirring her tea, not unkind about it" }

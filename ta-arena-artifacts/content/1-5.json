@@ -13,7 +13,7 @@
   "bookIdea": "A pastime is a simple chat on one shared topic that fills an interval of time and trades some nods. Berne shows one pastime running at three levels, and a newcomer who plays a different one from the group gets a cool reception.",
   "bookSource": "Games People Play, ch. 4",
   "opener": {
-    "setting": "Saturday, 11:00. Gran's kitchen, 1A. You came for the promised flattened rice. Two neighbours are already there.",
+    "setting": "Saturday, 11:00. Gran's kitchen, downstairs. You came for the promised flattened rice. Two neighbours are already there.",
     "lines": [
       { "who": "Gran", "text": "“Sit, sit, love. The flattened rice is almost ready.”", "cue": "stirring the pan, the radio on low" },
       { "who": "Leo", "text": "“...”", "cue": "under the table with a tablet, not looking up" }
@@ -78,7 +78,7 @@
         {
           "type": "scene",
           "title": "Saturday, 11:00, Gran's kitchen",
-          "setting": "Mrs Kale (70) and Grace (38, from 2B) are at the table. Leo (8) is under it with a tablet. Gran is at the stove.",
+          "setting": "Mrs Kale (70) and Grace (38, from the second floor) are at the table. Leo (8) is under it with a tablet. Gran is at the stove.",
           "meters": { "you": 60, "them": 50 },
           "beats": [
             {

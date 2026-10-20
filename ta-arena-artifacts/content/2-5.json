@@ -13,7 +13,7 @@
   "bookIdea": "The Little Professor is the Adult inside the Child: the intuitive, quick-witted part that works out what gets a response from people. Berne found that young children set games up themselves by copying what works.",
   "bookSource": "Games People Play, ch. 5; Scripts People Live, ch. 2; TA Today, ch. 4",
   "opener": {
-    "setting": "Saturday, 16:00, Gran's kitchen in 1A. Dinner is on the stove and bitter gourd is frying in the pan.",
+    "setting": "Saturday, 16:00, Gran's kitchen downstairs. Dinner is on the stove and bitter gourd is frying in the pan.",
     "lines": [
       { "who": "Gran", "text": "“Leo, come and sit. Eat your bitter gourd, it's good for you.”", "cue": "stirring the pan with her back to the room" }
     ],

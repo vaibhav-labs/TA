@@ -1,0 +1,384 @@
+Family
+Test blurb for Family
+Wednesday, 8:00am. The 3B door. Sam walks in, tanned, a bag over one shoulder. He left on Monday night.
+Maya
+“Sam needs a proper hello when he gets back, or he sulks for two days.”
+last night, over the dishes
+Sam
+“...”
+in the doorway, bag still on one shoulder
+How much of a welcome does Sam need after being away, and how do you build one that pays it?
+Spot
+Spot, round 1
+Three lines from the hello at the door. Tap what each one tells you.
+pick
+Sam
+“Cool.”
+after a short hello, walking off to his room
+He's keeping count, and you came up short
+He's pleased with the greeting
+He wants to talk about the coast
+He is keeping count. A short hello leaves him owed, and “cool” is what owed sounds like.
+Pleased would sound like “Oh, lovely!” Cool is flat, so calling it pleasure gets the message wrong.
+A wish to talk about the coast would come with a warm chat. He is walking off to his room, so the talk isn't on offer.
+A friend's office, Monday. You say “Hi” at the desk. “Cool,” she says, and turns back to her screen. She wanted more than a hi.
+pick
+Sam
+“Okay, what do you want?”
+laughing, after a run of warm lines at the door
+He thinks you want a favour
+Too many warm lines in a row read like a pitch
+He's bored of the welcome
+Too many warm lines at once sound like a sales pitch. He is checking what you are selling.
+A favour would come with one clear ask. There was no ask, only a pile of warm lines, and the pile is what he noticed.
+Boredom would mean the welcome went on too long. The lines were warm, not dull, so the question is about the warmth.
+A neighbour's birthday. “Happy birthday! You look amazing! Have you had cake? You must come to ours!” Five warm lines in a row make you wonder what they want.
+pick
+You
+“Right, I've got to run.”
+the kitchen, after a quick hello
+A full hello
+A compliment
+A quick exit
+A quick exit. It ends the greeting, and it counts as one small nod, not a full welcome.
+A full hello needs several warm lines. One line about running off counts as one nod, and it closes the greeting.
+A compliment would say something nice about him. This line is about your schedule, so it isn't a compliment.
+A train platform. “Sorry, got to catch this, see you!” It is a polite exit. It is still one nod, and the talk is over.
+Play
+Play, the week in motion
+Sam's greeting is a counter. Pick the lines that pay what he is owed, then walk the stairs with Gran.
+counter
+Sam is back from the coast after two nights away and is owed about a dozen nods. Build a greeting that pays them.
+“Hey.”
+small
+“You're back!”
+warm
+“How was the coast?”
+warm
+“Wait, tell me everything.”
+warm
+“You look well.”
+warm
+“Did the whole gang go?”
+warm
+“Good to have you back, really.”
+warm
+“I missed you. The flat was far too quiet without you.”
+gush
+“Right, I've got to run.”
+exit
+Sam says “Cool.” and goes to his room. He is still owed more than that.
+Sam laughs. “Okay, what do you want?” Too many warm lines in a row sound like a pitch.
+He sits on the kitchen counter and tells you about a boat.
+The amount owed rises with time apart, so two nights asks for far more than a passing hello and far less than a month away would. Too little leaves someone sulking, and too much sounds like a pitch.
+sam_sulk
+sam_greeted
+scene
+Wednesday, 8:40 and 8:55, the stairwell
+Gran on the landing with the milk, first on the way down and then on the way back up for your charger.
+Gran
+“...”
+stairwell, 8:40, on the landing with the milk
+“Morning, Gran!”
+best
+She answers at once, the way she always does.
+A hello with her name in it is a clean exchange, and it pays a nod each way.
+Nod, and keep moving.
+ok
+She has to fill the silence herself, and she does it to the milk.
+A nod with no word is smaller. It leaves her to carry the exchange on her own.
+Gran
+“Morning, love, eat something!”
+still on the landing, the milk on her hip
+“I will, Gran. Thanks.”
+best
+She shifts the milk and smiles at the stairs. “Good, good.”
+You answered what she said, not only the hello. That is what keeps the exchange going.
+“Yes, yes.” (already on the stairs)
+ok
+“Yes, yes, yes,” she says to your back.
+The words are right, but you are gone before she finishes. It ends the exchange a half-step early.
+Gran
+“...”
+stairwell, 8:55, second pass. You forgot your laptop charger. Gran is still on the landing.
+A nod and a half-smile, then keep moving.
+best
+Gran nods back and carries on up the stairs.
+A small nod is enough for a quick pass. You asked for nothing, so nothing more was owed.
+“Gran! How are you? How are the knees today? Did your son call?”
+ok
+Gran narrows her eyes. “I'm the same as fifteen minutes ago. What do you want?”
+Three questions in a row on a second pass read as a favour being asked. The interest was real, but the pile of it felt like a pitch.
+Walk past without looking.
+ok
+Gran, to the milk: “Hm.”
+Going by without a look is cold, and she notices. It is a small cut, and it leaves her owed.
+A landlady in another building. “You're getting thin, come in.” Every morning, the same warm line, and a missed one gets noticed.
+Analyse
+Analyse, explain it
+pick
+You
+“Hey.” felt too small, and “Wait, tell me everything” felt like too much. What explains that?
+The amount owed depends on time apart, so both too little and too much feel wrong
+Greetings are only manners, so any amount is fine if it's polite
+Sam is hard to please, so nothing you say will count
+A greeting is a precise exchange. Time apart sets how much is owed. Too little leaves a gap, and too much reads as a pitch.
+If greetings were only manners, the amount would not matter. Sam sulked at “Hey.” because a short hello carries a debt, and manners don't come with one.
+“He's just hard to please” sounds like a shrug, and then you stop trying. The debt stays unpaid, so his “Cool” will come again.
+A cousin visiting after two years. “Hi!” at the door, and then nothing for an hour. The cousin notices the gap in the welcome, even if nobody says so.
+Friends & Community
+Test blurb for Friends & Community
+Wednesday, 8:00am. The 3B door. Sam walks in, tanned, a bag over one shoulder. He left on Monday night.
+Maya
+“Sam needs a proper hello when he gets back, or he sulks for two days.”
+last night, over the dishes
+Sam
+“...”
+in the doorway, bag still on one shoulder
+How much of a welcome does Sam need after being away, and how do you build one that pays it?
+Spot
+Spot, round 1
+Three lines from the hello at the door. Tap what each one tells you.
+pick
+Sam
+“Cool.”
+after a short hello, walking off to his room
+He's keeping count, and you came up short
+He's pleased with the greeting
+He wants to talk about the coast
+He is keeping count. A short hello leaves him owed, and “cool” is what owed sounds like.
+Pleased would sound like “Oh, lovely!” Cool is flat, so calling it pleasure gets the message wrong.
+A wish to talk about the coast would come with a warm chat. He is walking off to his room, so the talk isn't on offer.
+A friend's office, Monday. You say “Hi” at the desk. “Cool,” she says, and turns back to her screen. She wanted more than a hi.
+pick
+Sam
+“Okay, what do you want?”
+laughing, after a run of warm lines at the door
+He thinks you want a favour
+Too many warm lines in a row read like a pitch
+He's bored of the welcome
+Too many warm lines at once sound like a sales pitch. He is checking what you are selling.
+A favour would come with one clear ask. There was no ask, only a pile of warm lines, and the pile is what he noticed.
+Boredom would mean the welcome went on too long. The lines were warm, not dull, so the question is about the warmth.
+A neighbour's birthday. “Happy birthday! You look amazing! Have you had cake? You must come to ours!” Five warm lines in a row make you wonder what they want.
+pick
+You
+“Right, I've got to run.”
+the kitchen, after a quick hello
+A full hello
+A compliment
+A quick exit
+A quick exit. It ends the greeting, and it counts as one small nod, not a full welcome.
+A full hello needs several warm lines. One line about running off counts as one nod, and it closes the greeting.
+A compliment would say something nice about him. This line is about your schedule, so it isn't a compliment.
+A train platform. “Sorry, got to catch this, see you!” It is a polite exit. It is still one nod, and the talk is over.
+Play
+Play, the week in motion
+Sam's greeting is a counter. Pick the lines that pay what he is owed, then walk the stairs with Gran.
+counter
+Sam is back from the coast after two nights away and is owed about a dozen nods. Build a greeting that pays them.
+“Hey.”
+small
+“You're back!”
+warm
+“How was the coast?”
+warm
+“Wait, tell me everything.”
+warm
+“You look well.”
+warm
+“Did the whole gang go?”
+warm
+“Good to have you back, really.”
+warm
+“I missed you. The flat was far too quiet without you.”
+gush
+“Right, I've got to run.”
+exit
+Sam says “Cool.” and goes to his room. He is still owed more than that.
+Sam laughs. “Okay, what do you want?” Too many warm lines in a row sound like a pitch.
+He sits on the kitchen counter and tells you about a boat.
+The amount owed rises with time apart, so two nights asks for far more than a passing hello and far less than a month away would. Too little leaves someone sulking, and too much sounds like a pitch.
+sam_sulk
+sam_greeted
+scene
+Wednesday, 8:40 and 8:55, the stairwell
+Gran on the landing with the milk, first on the way down and then on the way back up for your charger.
+Gran
+“...”
+stairwell, 8:40, on the landing with the milk
+“Morning, Gran!”
+best
+She answers at once, the way she always does.
+A hello with her name in it is a clean exchange, and it pays a nod each way.
+Nod, and keep moving.
+ok
+She has to fill the silence herself, and she does it to the milk.
+A nod with no word is smaller. It leaves her to carry the exchange on her own.
+Gran
+“Morning, love, eat something!”
+still on the landing, the milk on her hip
+“I will, Gran. Thanks.”
+best
+She shifts the milk and smiles at the stairs. “Good, good.”
+You answered what she said, not only the hello. That is what keeps the exchange going.
+“Yes, yes.” (already on the stairs)
+ok
+“Yes, yes, yes,” she says to your back.
+The words are right, but you are gone before she finishes. It ends the exchange a half-step early.
+Gran
+“...”
+stairwell, 8:55, second pass. You forgot your laptop charger. Gran is still on the landing.
+A nod and a half-smile, then keep moving.
+best
+Gran nods back and carries on up the stairs.
+A small nod is enough for a quick pass. You asked for nothing, so nothing more was owed.
+“Gran! How are you? How are the knees today? Did your son call?”
+ok
+Gran narrows her eyes. “I'm the same as fifteen minutes ago. What do you want?”
+Three questions in a row on a second pass read as a favour being asked. The interest was real, but the pile of it felt like a pitch.
+Walk past without looking.
+ok
+Gran, to the milk: “Hm.”
+Going by without a look is cold, and she notices. It is a small cut, and it leaves her owed.
+A landlady in another building. “You're getting thin, come in.” Every morning, the same warm line, and a missed one gets noticed.
+Analyse
+Analyse, explain it
+pick
+You
+“Hey.” felt too small, and “Wait, tell me everything” felt like too much. What explains that?
+The amount owed depends on time apart, so both too little and too much feel wrong
+Greetings are only manners, so any amount is fine if it's polite
+Sam is hard to please, so nothing you say will count
+A greeting is a precise exchange. Time apart sets how much is owed. Too little leaves a gap, and too much reads as a pitch.
+If greetings were only manners, the amount would not matter. Sam sulked at “Hey.” because a short hello carries a debt, and manners don't come with one.
+“He's just hard to please” sounds like a shrug, and then you stop trying. The debt stays unpaid, so his “Cool” will come again.
+A cousin visiting after two years. “Hi!” at the door, and then nothing for an hour. The cousin notices the gap in the welcome, even if nobody says so.
+School & College
+Test blurb for School & College
+Wednesday, 8:00am. The 3B door. Sam walks in, tanned, a bag over one shoulder. He left on Monday night.
+Maya
+“Sam needs a proper hello when he gets back, or he sulks for two days.”
+last night, over the dishes
+Sam
+“...”
+in the doorway, bag still on one shoulder
+How much of a welcome does Sam need after being away, and how do you build one that pays it?
+Spot
+Spot, round 1
+Three lines from the hello at the door. Tap what each one tells you.
+pick
+Sam
+“Cool.”
+after a short hello, walking off to his room
+He's keeping count, and you came up short
+He's pleased with the greeting
+He wants to talk about the coast
+He is keeping count. A short hello leaves him owed, and “cool” is what owed sounds like.
+Pleased would sound like “Oh, lovely!” Cool is flat, so calling it pleasure gets the message wrong.
+A wish to talk about the coast would come with a warm chat. He is walking off to his room, so the talk isn't on offer.
+A friend's office, Monday. You say “Hi” at the desk. “Cool,” she says, and turns back to her screen. She wanted more than a hi.
+pick
+Sam
+“Okay, what do you want?”
+laughing, after a run of warm lines at the door
+He thinks you want a favour
+Too many warm lines in a row read like a pitch
+He's bored of the welcome
+Too many warm lines at once sound like a sales pitch. He is checking what you are selling.
+A favour would come with one clear ask. There was no ask, only a pile of warm lines, and the pile is what he noticed.
+Boredom would mean the welcome went on too long. The lines were warm, not dull, so the question is about the warmth.
+A neighbour's birthday. “Happy birthday! You look amazing! Have you had cake? You must come to ours!” Five warm lines in a row make you wonder what they want.
+pick
+You
+“Right, I've got to run.”
+the kitchen, after a quick hello
+A full hello
+A compliment
+A quick exit
+A quick exit. It ends the greeting, and it counts as one small nod, not a full welcome.
+A full hello needs several warm lines. One line about running off counts as one nod, and it closes the greeting.
+A compliment would say something nice about him. This line is about your schedule, so it isn't a compliment.
+A train platform. “Sorry, got to catch this, see you!” It is a polite exit. It is still one nod, and the talk is over.
+Play
+Play, the week in motion
+Sam's greeting is a counter. Pick the lines that pay what he is owed, then walk the stairs with Gran.
+counter
+Sam is back from the coast after two nights away and is owed about a dozen nods. Build a greeting that pays them.
+“Hey.”
+small
+“You're back!”
+warm
+“How was the coast?”
+warm
+“Wait, tell me everything.”
+warm
+“You look well.”
+warm
+“Did the whole gang go?”
+warm
+“Good to have you back, really.”
+warm
+“I missed you. The flat was far too quiet without you.”
+gush
+“Right, I've got to run.”
+exit
+Sam says “Cool.” and goes to his room. He is still owed more than that.
+Sam laughs. “Okay, what do you want?” Too many warm lines in a row sound like a pitch.
+He sits on the kitchen counter and tells you about a boat.
+The amount owed rises with time apart, so two nights asks for far more than a passing hello and far less than a month away would. Too little leaves someone sulking, and too much sounds like a pitch.
+sam_sulk
+sam_greeted
+scene
+Wednesday, 8:40 and 8:55, the stairwell
+Gran on the landing with the milk, first on the way down and then on the way back up for your charger.
+Gran
+“...”
+stairwell, 8:40, on the landing with the milk
+“Morning, Gran!”
+best
+She answers at once, the way she always does.
+A hello with her name in it is a clean exchange, and it pays a nod each way.
+Nod, and keep moving.
+ok
+She has to fill the silence herself, and she does it to the milk.
+A nod with no word is smaller. It leaves her to carry the exchange on her own.
+Gran
+“Morning, love, eat something!”
+still on the landing, the milk on her hip
+“I will, Gran. Thanks.”
+best
+She shifts the milk and smiles at the stairs. “Good, good.”
+You answered what she said, not only the hello. That is what keeps the exchange going.
+“Yes, yes.” (already on the stairs)
+ok
+“Yes, yes, yes,” she says to your back.
+The words are right, but you are gone before she finishes. It ends the exchange a half-step early.
+Gran
+“...”
+stairwell, 8:55, second pass. You forgot your laptop charger. Gran is still on the landing.
+A nod and a half-smile, then keep moving.
+best
+Gran nods back and carries on up the stairs.
+A small nod is enough for a quick pass. You asked for nothing, so nothing more was owed.
+“Gran! How are you? How are the knees today? Did your son call?”
+ok
+Gran narrows her eyes. “I'm the same as fifteen minutes ago. What do you want?”
+Three questions in a row on a second pass read as a favour being asked. The interest was real, but the pile of it felt like a pitch.
+Walk past without looking.
+ok
+Gran, to the milk: “Hm.”
+Going by without a look is cold, and she notices. It is a small cut, and it leaves her owed.
+A landlady in another building. “You're getting thin, come in.” Every morning, the same warm line, and a missed one gets noticed.
+Analyse
+Analyse, explain it
+pick
+You
+“Hey.” felt too small, and “Wait, tell me everything” felt like too much. What explains that?
+The amount owed depends on time apart, so both too little and too much feel wrong
+Greetings are only manners, so any amount is fine if it's polite
+Sam is hard to please, so nothing you say will count
+A greeting is a precise exchange. Time apart sets how much is owed. Too little leaves a gap, and too much reads as a pitch.
+If greetings were only manners, the amount would not matter. Sam sulked at “Hey.” because a short hello carries a debt, and manners don't come with one.
+“He's just hard to please” sounds like a shrug, and then you stop trying. The debt stays unpaid, so his “Cool” will come again.
+A cousin visiting after two years. “Hi!” at the door, and then nothing for an hour. The cousin notices the gap in the welcome, even if nobody says so.

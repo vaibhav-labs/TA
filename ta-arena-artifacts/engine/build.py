@@ -459,6 +459,60 @@ def validate_game(g, p):
         need_str(p, refl, "prompt", "reflection")
 
 
+STORY_COUNT = 3
+
+
+def merge_stories(content_dir, game, p):
+    """Optional extra settings for a campaign game, read from content/stories/<slot>.json.
+
+    Each extra story swaps only the opener and rounds (the lesson, debrief and reflection are
+    shared). The base file keeps its own opener and rounds as the first setting."""
+    slot = game.get("slot")
+    if not isinstance(slot, str) or LIBRARY_SUB_RE.match(slot.split(".")[-1] or ""):
+        return
+    path = os.path.join(content_dir, "stories", slot.replace(".", "-") + ".json")
+    if not os.path.exists(path):
+        return
+    try:
+        with open(path, encoding="utf-8") as fh:
+            data = json.load(fh)
+    except (OSError, ValueError) as exc:
+        p.err("stories", f"cannot read {os.path.basename(path)}: {exc}")
+        return
+    extra = data.get("stories") if isinstance(data, dict) else None
+    if not isinstance(extra, list) or not extra:
+        p.err("stories", "must hold a non-empty list of stories")
+        return
+    if len(extra) != STORY_COUNT:
+        p.warn("stories", f"has {len(extra)} extra stories, the plan asks for {STORY_COUNT}")
+    seen = {game.get("setting")}
+    out = []
+    for i, st in enumerate(extra):
+        sp = f"stories[{i}]"
+        if not isinstance(st, dict):
+            p.err(sp, "story must be an object")
+            continue
+        need_str(p, st, "setting", sp)
+        need_str(p, st, "blurb", sp)
+        if st.get("setting") not in SETTINGS:
+            p.err(join(sp, "setting"), f"must be one of {sorted(SETTINGS)}")
+        if st.get("setting") in seen:
+            p.err(join(sp, "setting"), "repeats a setting already used by this game")
+        seen.add(st.get("setting"))
+        tmp = dict(game)
+        tmp["opener"], tmp["rounds"] = st.get("opener"), st.get("rounds")
+        q = Problems()
+        validate_game(tmp, q)
+        for kind, qpath, msg in q:
+            if qpath.startswith(("opener", "rounds")):
+                (p.err if kind == "error" else p.warn)(f"{sp}.{qpath}", msg)
+        out.append({k: st.get(k) for k in ("setting", "blurb", "opener", "rounds")})
+    game["baseStory"] = {"setting": game.get("setting"), "blurb": data.get("baseBlurb") or ""}
+    if not game["baseStory"]["blurb"]:
+        p.err("baseBlurb", "missing")
+    game["moreStories"] = out
+
+
 def load_games(content_dir):
     """Return a list of (file name, game or None, Problems) for every JSON file in content_dir."""
     results = []
@@ -473,6 +527,8 @@ def load_games(content_dir):
             results.append((fname, None, p))
             continue
         validate_game(game, p)
+        if isinstance(game, dict):
+            merge_stories(content_dir, game, p)
         results.append((fname, game, p))
     seen = {}
     for fname, game, p in results:
