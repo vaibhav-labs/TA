@@ -1,0 +1,188 @@
+{
+  "slot": "6.L2",
+  "setting": "Relationships",
+  "title": "Nothing to Fix",
+  "world": 6,
+  "worldName": "The Story You Wrote",
+  "week": 6,
+  "weekName": "The Story You Wrote",
+  "mechanic": "Diagnose",
+  "concept": "After this one you can hear Clara's Must landing in a moment meant to be easy, and see what Omar's plain, direct kindness does and doesn't reach.",
+  "bookTerm": "Drivers",
+  "bookIdea": "Drivers are five Musts, be perfect, please others, try hard, be strong and hurry up, each a condition for feeling OK, carried into places far softer than where they were first learned.",
+  "bookSource": "TA Today, ch. 16",
+  "opener": {
+    "setting": "Thursday, 6:40pm. The Corner Table, by the window. The client call went well, and Omar ordered two teas before Clara had even sat down.",
+    "lines": [
+      { "who": "Omar", "text": "“That went well. Let it sit for a minute before you find the next thing wrong with it.”", "cue": "sliding her tea across, leaning back in his chair" },
+      { "who": "Clara", "text": "“I already found it. The third slide still had last month's numbers.”", "cue": "phone back out of her bag before the tea's properly arrived" }
+    ],
+    "ask": "Name the Must behind Clara's hands tonight, and watch what Omar's plain words do to it."
+  },
+  "rounds": [
+    {
+      "level": "Spot",
+      "label": "Spot, round 1",
+      "intro": "Clara and Omar, the same evening, a few small moments. Name the Must running under each one. The five Musts are be perfect, please others, try hard, be strong and hurry up.",
+      "items": [
+        {
+          "type": "pick",
+          "who": "Omar",
+          "text": "“That went well. Let it sit for a minute before you find the next thing wrong with it.”",
+          "cue": "sliding her tea across, leaning back in his chair",
+          "options": ["Be strong", "Please others", "Just steady, no strong Must running"],
+          "answer": 2,
+          "why": "There's nothing underneath this line to decode. He says what he thinks, plainly, and waits to see what she does with it. That's the point of Omar in this cast: not every line is covering a Must. Some people's words and hands simply agree.",
+          "traps": {
+            "0": "Be strong would sound like “I don't need you to check it either, so don't check mine.” He isn't protecting himself from anything here. He's reassuring her, and asking for nothing back.",
+            "1": "Please others would mean he's saying what he thinks she wants to hear, to keep the evening smooth. His line holds even when she pushes straight past it, which a please-others line usually doesn't."
+          },
+          "example": "A friend says, “You did fine, stop replaying it,” and means exactly that, with nothing else riding on the sentence."
+        },
+        {
+          "type": "pick",
+          "who": "Clara",
+          "text": "“I already found it. The third slide still had last month's numbers.”",
+          "cue": "phone back out of her bag before the tea's properly arrived",
+          "options": ["Be perfect", "Please others", "Try hard"],
+          "answer": 0,
+          "why": "The evening is barely a minute old, and she's already back at the fault line. The Must is be perfect: a flawless deck is the price of feeling alright about tonight, not only about work.",
+          "traps": {
+            "1": "It would sound like “don't worry about the numbers, I don't want to make a fuss about it.” This isn't about sparing anyone. It's about the slide being wrong.",
+            "2": "It would sound like “I'll keep trying until I work out what's off.” She already knows exactly what's off. There's no searching here, only correcting."
+          },
+          "example": "A wedding photographer scrolls back through a hundred good shots to find the one with a slightly crooked tie, and can't stop looking at it."
+        },
+        {
+          "type": "pick",
+          "who": "Clara",
+          "text": "“This dress? It's old, really. I should have ironed it properly.”",
+          "cue": "tugging the hem straight, although nothing about it is creased",
+          "options": ["Please others", "Be perfect", "Be strong"],
+          "answer": 1,
+          "why": "Omar's compliment about how she looks gets turned, inside two sentences, into a fault she's already fixing. The Must is be perfect: even a stroke about simply being there has to be earned, or corrected into something she can improve.",
+          "traps": {
+            "0": "It would sound like “oh, don't worry about me, you look lovely too.” She isn't managing his comfort here. She's managing the dress.",
+            "2": "It would sound like “I'm fine, I don't need you to say anything.” She isn't refusing the compliment outright. She's quietly disqualifying it instead."
+          },
+          "example": "Someone thanked for a kind gesture answers, 'it was nothing, I only did it because the timing worked out,' as if the kindness needs an excuse."
+        },
+        {
+          "type": "pick",
+          "who": "Clara",
+          "text": "“No, let me get this one. Actually, split it, to the exact amount, I'll work it out.”",
+          "cue": "already tapping into the calculator on her phone before the bill's reached the table",
+          "options": ["Be strong", "Be perfect", "Hurry up"],
+          "answer": 1,
+          "why": "An evening out becomes a sum that has to come out exactly right. The Must is be perfect: even something as small as a bill can't be left rounded or generous, it has to be correct.",
+          "traps": {
+            "0": "It would sound like “I've got this, don't worry about your half.” She isn't trying to carry the whole bill alone. She wants the split to be precise, not hers.",
+            "2": "It would sound like “quick, just split it in half and let's go.” There's no rushing here. The calculator comes out because the number has to be exact, however long that takes."
+          },
+          "example": "Two colleagues split a taxi fare, and one works out her exact share to the nearest coin, rather than rounding to the nearest note."
+        }
+      ]
+    },
+    {
+      "level": "Play",
+      "label": "Play, the week in motion",
+      "intro": "Harder now. Omar offers something plain and kind. Watch what Clara's hands do with it before her mouth's finished answering.",
+      "items": [
+        {
+          "type": "pick",
+          "who": "Clara",
+          "text": "“This was nice. Thank you for tonight.”",
+          "cue": "turning her phone face-down on the table, thumb still tapping its edge",
+          "options": ["Please others", "Be perfect", "Try hard", "Be strong"],
+          "answer": 1,
+          "why": "The thank you is real, and the thumb hasn't let go of the phone. Something's still unfinished for her even while she's saying the evening was good. The Must is be perfect: a nice evening doesn't fully register as nice until the rest of the list agrees.",
+          "traps": {
+            "0": "It would sound like this and stop there, phone left alone, nothing left tapping. Here the thanks and the fidget are happening at once, which points somewhere else.",
+            "2": "It would sound like “I'm trying to just enjoy this, give me a second.” Nothing here is a struggle to relax. It's a habit that doesn't switch off even when she means the thanks.",
+            "3": "It would sound like “I don't need you to say anything about tonight.” She isn't refusing anything. She's accepting the thanks and still can't fully sit in it."
+          },
+          "example": "Someone says 'that was a lovely holiday' while already checking flight prices for the next one, before they've even unpacked."
+        },
+        {
+          "type": "pick",
+          "who": "Clara",
+          "text": "“...Thanks. I'll just double-check the font sizes before I send it, though.”",
+          "cue": "half a beat after Omar says, 'you did that well tonight, nothing to fix,' her thumb already back on her phone",
+          "options": ["Please others", "Be perfect", "Try hard", "Hurry up"],
+          "answer": 1,
+          "why": "The stroke lands, and she takes it, and within a sentence she's back on something to correct. The Must is be perfect: a plain compliment with nothing to fix in it is exactly the kind she finds hardest to simply keep.",
+          "traps": {
+            "0": "It would sound like “oh, don't say that, you did just as much.” She isn't deflecting the credit onto him. She's keeping the compliment, and still finding something to adjust.",
+            "2": "It would sound like “I'll keep trying until it feels finished.” The font sizes aren't a struggle she's working through. They're one more small thing she can fix, which is different.",
+            "3": "It would sound like “quick, let me just fix it and send it.” There's no rush in her line. The checking is the point, not the speed."
+          },
+          "example": "A singer gets told the performance was perfect, and immediately starts listing the two notes she thinks she missed."
+        },
+        {
+          "type": "pick",
+          "who": "Omar",
+          "text": "“Sent. Though I did write that message about four times before I was happy with it.”",
+          "cue": "phone already back in his pocket, no second look at it",
+          "options": ["Be perfect", "Try hard", "Please others", "Hurry up"],
+          "answer": 0,
+          "why": "Even the steadiest person in this cast carries a Must somewhere. Four drafts for one personal message is a small, light version of be perfect, used on words instead of code, and he doesn't dwell on it once it's sent.",
+          "traps": {
+            "1": "It would sound like “I kept having a go, I'm not sure I ever got it right.” He's not unsure here. He got it right, by his own measure, and moved on.",
+            "2": "It would sound like “I wanted to say it the way she'd want to hear it.” The rewriting is about his own sentence, not about guessing at her comfort.",
+            "3": "It would sound like “I just fired it off, didn't think about it much.” Four drafts is the opposite of firing it off."
+          },
+          "example": "Someone redrafts a short thank-you card three times for the right four words, then hands it over without mentioning any of that."
+        }
+      ]
+    },
+    {
+      "level": "Analyse",
+      "label": "Analyse, explain it",
+      "items": [
+        {
+          "type": "pick",
+          "who": "You",
+          "text": "Clara finds the flaw before her tea arrives, turns a compliment about her dress into a fault, and works the bill out to the exact amount. Which single Must explains all three?",
+          "cue": "watching the evening end, both teas gone cold",
+          "options": [
+            "Be perfect: nothing counts as finished, including the evening itself, until it's correct.",
+            "Please others: she's managing Omar's comfort at every step.",
+            "Try hard: she keeps attempting something she can't quite land."
+          ],
+          "answer": 0,
+          "why": "The books call this a driver, and across the evening it's the same one: be perfect. It doesn't stay in her work. It follows her into the dress, the bill and the thank you, because the condition isn't 'this slide has to be right', it's 'things have to be right', full stop.",
+          "traps": {
+            "1": "Please others would mean the corrections are aimed at keeping Omar comfortable. None of them are. He's the one telling her to stop; she keeps going anyway.",
+            "2": "Try hard would mean the effort never lands. Hers does land, every time, which is closer to a standard being met than a struggle that doesn't end."
+          },
+          "example": "A host re-sets a dinner table twice after the guests have already said it looks lovely."
+        },
+        {
+          "type": "pick",
+          "who": "You",
+          "text": "Omar tells her, 'if something's bothering you, just say it, I won't mind.' He means it plainly. Why might that still land oddly for Clara?",
+          "cue": "Omar waiting, nothing in his face asking her to hurry",
+          "options": [
+            "He's quietly testing whether she's ready for something more serious.",
+            "His plain ask assumes she can ask just as plainly back, and her Must won't let her ask for anything she hasn't earned first.",
+            "He's keeping things practical so the real conversation doesn't have to happen."
+          ],
+          "answer": 1,
+          "why": "Nothing in Omar runs a test; that isn't how his Adult works. The gap here is between a man whose words and wants line up easily, and a driver that won't let Clara ask for something plainly until she's sure she deserves it. His plain question is kind, and it still assumes a kind of ease she doesn't have yet.",
+          "traps": {
+            "0": "Omar doesn't run tests. He says what he means and waits for an answer, which is exactly what makes this moment land the way it does.",
+            "2": "He isn't avoiding anything. The practical tone is simply how he talks; the difficulty sits on her side of the table, not in a dodge on his."
+          },
+          "example": "A direct friend says, 'just tell me what you need,' to someone who was raised to never ask for anything outright, and the kindness lands as a kind of pressure neither of them intended."
+        }
+      ]
+    }
+  ],
+  "debrief": {
+    "nadia": "Clara gives the unconditional stroke easily and can barely keep one for herself, not even a small one about a dress or a thank you. Omar means every plain word he says, and plain words aren't always the easiest thing to receive. Neither of them is doing anything wrong tonight. They're just running different weather.",
+    "bookTerm": "Drivers",
+    "bookNote": "The books call this a driver: be perfect, a Must that follows a person past their work and into the ordinary, kinder parts of an evening."
+  },
+  "reflection": { "prompt": "Think of someone who offered you a plain compliment this week, nothing to fix in it. What did your hands do in the next few seconds?" },
+  "next": null
+}

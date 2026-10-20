@@ -1,0 +1,147 @@
+{
+  "slot": "4.L4",
+  "setting": "School & College",
+  "title": "Three Good Ideas",
+  "world": 4,
+  "worldName": "Conversation Traps",
+  "week": 4,
+  "weekName": "Conversation Traps",
+  "mechanic": "Choice-story",
+  "concept": "After this one you can spot when someone asking for a way through a problem is actually collecting reasons every way through won't work, and stop adding another idea to the pile.",
+  "bookTerm": "Why Don't You-Yes But",
+  "bookIdea": "Berne's name for a game where someone asks a group for solutions and answers every one with a reason it won't work, which keeps the original problem in place while making it look as though help was sincerely asked for.",
+  "bookSource": "Games People Play, ch. 1",
+  "opener": {
+    "setting": "Tuesday, 7:40pm. The community hall, Sam's evening class. Break between sessions, workbooks open on the long table.",
+    "lines": [
+      { "who": "Sam", "text": "“I just don't know how I'm going to catch the last three weeks up. Could really use an idea.”", "cue": "flicking through blank pages, not really looking up" },
+      { "who": "Ruth", "text": "“Why don't you just do one unit a night till you're level?”", "cue": "already turning back to her own notes" },
+      { "who": "Sam", "text": "“Yeah, but evenings are when I'm most tired, so that's not really going to work.”", "cue": "barely pausing before he answers" }
+    ],
+    "ask": "Sam asked for an idea and got one straight away. Is he actually looking for a way through, or something else?"
+  },
+  "rounds": [
+    {
+      "level": "Spot",
+      "label": "Spot, round 1",
+      "intro": "An idea can get turned down for a good reason, or for no reason that would survive a second idea. Watch what happens when a different suggestion comes along.",
+      "items": [
+        {
+          "type": "pick",
+          "who": "Sam",
+          "text": "“I just don't know how I'm going to catch the last three weeks up. Could really use an idea.”",
+          "cue": "flicking through blank pages, not really looking up",
+          "options": ["A genuine ask for a way through", "An opening that's really inviting ideas he's already decided won't work"],
+          "answer": 1,
+          "why": "He's naming the size of the problem to the whole table, with nothing he's already tried mentioned alongside it. That shape, the gap stated, no attempt offered, is what leaves the door open for everyone else's idea to be waiting on hand to turn down.",
+          "traps": {
+            "0": "A genuine ask for a way through usually comes with at least one thing already tried, or a specific limit named up front. Here there's only the gap."
+          },
+          "example": "One person says, “I've tried mornings and evenings, neither works, any other ideas?” Another says, “I don't know how I'll ever catch up,” to the whole room, with nothing tried yet."
+        },
+        {
+          "type": "pick",
+          "who": "Ruth",
+          "text": "“Why don't you just do one unit a night till you're level?”",
+          "cue": "already turning back to her own notes",
+          "options": ["A specific, workable suggestion, offered and then dropped", "Bait that's about to collect a reason it won't work"],
+          "answer": 0,
+          "why": "It's a plain, concrete idea, said once, and Ruth's already moved on to her own notes. Nothing about the suggestion itself is the trap; what happens to it next is where to watch.",
+          "traps": {
+            "1": "Calling the suggestion itself bait would mean Ruth expected it to fail. There's no sign of that here, she's simply offered something useful and gone back to her work."
+          },
+          "example": "Asked how to get fitter, a friend says “start with two runs a week” and changes the subject, leaving the idea on the table rather than defending it."
+        },
+        {
+          "type": "pick",
+          "who": "Sam",
+          "text": "“Yeah, but evenings are when I'm most tired, so that's not really going to work.”",
+          "cue": "barely pausing before he answers",
+          "options": ["A fair objection to a flawed idea", "The first turned-down idea in a pattern that's going to turn down whatever comes next too"],
+          "answer": 1,
+          "why": "He's answered before really weighing it, and the objection, tired in the evenings, would rule out almost any suggestion anyone could make, since evenings are most of when the class actually meets.",
+          "traps": {
+            "0": "A fair objection usually leaves room for a small change, a different night, a shorter unit. This one closes the whole idea at once, with nothing offered in its place."
+          },
+          "example": "Someone says “that could work if I moved it to Saturdays” (adjusting an idea) rather than “mornings don't work either” before mornings have even been suggested."
+        },
+        {
+          "type": "pick",
+          "who": "Mr Donnelly",
+          "text": "“You could record the sessions you miss and listen back on the walk home.”",
+          "cue": "already halfway through packing his bag",
+          "options": ["A plain, practical idea, offered freely and without expecting much back", "Another idea arriving right on schedule to be turned down"],
+          "answer": 0,
+          "why": "Donnelly's offered something specific and useful and is already packing up, same as Ruth did. The suggestions keep being reasonable; it's what Sam does with them that's worth watching.",
+          "traps": {
+            "1": "If the idea itself were designed to be refused, Donnelly wouldn't have picked something this workable. The pattern lives in what comes next, not in the suggestion."
+          },
+          "example": "A tutor offers a student a spare set of notes and carries on marking, not waiting to see whether the notes get used."
+        }
+      ]
+    },
+    {
+      "level": "Play",
+      "label": "Play, the week in motion",
+      "intro": "The suggestions keep coming. So does Sam's reason each one won't do.",
+      "items": [
+        {
+          "type": "pick",
+          "who": "Sam",
+          "text": "“Yeah, but I don't really retain things by listening, I need to see it written down.”",
+          "cue": "already shaking his head before Donnelly's finished the sentence",
+          "options": ["Offer yet another idea: “What about a weekend catch-up session instead?”", "Ask him directly: “Do you actually want to catch up, or do you want someone to agree it's hard?”", "Say nothing and let the silence sit"],
+          "answer": 1,
+          "why": "Naming the actual choice in front of him, catching up or being agreed with, hands the decision back to Sam instead of adding a fourth idea to the pile for him to turn down.",
+          "traps": {
+            "0": "Offering another idea keeps the pattern running. There will likely be a reason that one doesn't work either, and now you're the third person who's tried and failed in one evening.",
+            "2": "Letting the silence sit can work one to one, but around a table someone else usually fills it with idea number four before it's had any effect."
+          },
+          "example": "After three suggestions get turned down in a row, a friend says, “Do you want help with this, or do you want to tell me it can't be done,” instead of offering a fourth plan."
+        },
+        {
+          "type": "pick",
+          "who": "Sam",
+          "text": "“I suppose I'll just have to catch up eventually. Story of my life, falling behind.”",
+          "cue": "closing the workbook, a small laugh that isn't really a laugh",
+          "options": ["Reassure him: “You'll get there, don't worry about it.”", "Agree with the shrug: “Yeah, that does seem to happen to you.”", "Name what just happened, lightly: “You've turned down every idea so far, including mine, so I don't think more ideas are what's missing.”"],
+          "answer": 2,
+          "why": "Pointing at the actual pattern, gently and without blame, is the only answer here that doesn't just feed the same story straight back to him, dressed up as comfort or agreement.",
+          "traps": {
+            "0": "Reassuring him sounds kind, but it hands him exactly the sympathy the story was shaped to collect, with the pattern itself never named.",
+            "1": "Agreeing it “seems to happen to him” treats falling behind as something that happens to Sam, rather than something kept going by turning down every way out of it offered tonight."
+          },
+          "example": "After hearing three friends' advice get turned down in one evening, someone finally says, lightly, “Maybe it's not the advice that's the problem.”"
+        }
+      ]
+    },
+    {
+      "level": "Analyse",
+      "label": "Analyse, explain it",
+      "intro": "One more look back across the whole break.",
+      "items": [
+        {
+          "type": "pick",
+          "who": "You",
+          "text": "At the surface, it was one evening of advice that didn't quite fit. What was actually happening across the whole break?",
+          "cue": "three different people, three different ideas, one shape of answer",
+          "options": ["A string of poor suggestions that happened not to suit Sam.", "Sam collecting ideas only to turn each one down, so the problem stays exactly where it was, and nobody can say he didn't ask.", "The class quietly deciding Sam isn't worth the effort of helping."],
+          "answer": 1,
+          "why": "Three different people offered three different kinds of idea, a schedule, a recording, a swap to a weekend, and each one met the same shape of answer. That pattern says more about what was actually being asked for than any single suggestion does.",
+          "traps": {
+            "0": "If the suggestions were all actually poor, they wouldn't have been so different from each other. It isn't the ideas that stay consistent here, it's the turning down of them.",
+            "2": "Nothing in the evening shows anyone withdrawing care. People kept offering ideas right up until the last one."
+          },
+          "example": "A flatmate asks three people for the quickest way to the station and finds a reason each route is wrong, then says the buses round here are just useless."
+        }
+      ]
+    }
+  ],
+  "debrief": {
+    "nadia": "Sometimes asking for a way through a problem is really a way of collecting proof that there isn't one. Three people tried tonight, each with something sensible, and each got the same kind of answer back. Naming that pattern, once, gently, does more than a fourth idea ever would.",
+    "bookTerm": "Why Don't You-Yes But",
+    "bookNote": "The books call this Why Don't You-Yes But, a game where someone asks a group for solutions and defeats each one with a reason it won't work, which keeps the problem exactly where it was while making the asking look sincere."
+  },
+  "reflection": { "prompt": "Think of a problem you asked others for help with this week. Did you take any of what they offered, or did each idea get a reason of its own?" },
+  "next": null
+}

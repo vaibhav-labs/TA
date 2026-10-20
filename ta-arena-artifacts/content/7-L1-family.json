@@ -1,0 +1,168 @@
+{
+  "slot": "7.L1",
+  "setting": "Family",
+  "title": "Three Unopened Envelopes",
+  "world": 7,
+  "worldName": "Free to Choose",
+  "week": 7,
+  "weekName": "Free to Choose",
+  "mechanic": "Diagnose",
+  "concept": "After this one you can tell a family favour from a job you've quietly taken over, even when nobody would ever call it unkind.",
+  "plainWord": "saving",
+  "bookTerm": "Rescue",
+  "bookIdea": "Steiner says you are rescuing when you do something for someone that you don't really want to do, or when you put in more than half of the effort, and he adds that helping without being asked counts too, so any one of these on its own is enough.",
+  "bookSource": "Scripts People Live, ch. 11, 16 and 19",
+  "opener": {
+    "setting": "Saturday, 11:10am, apartment 1A, Gran's kitchen. The kettle is going, and three unopened envelopes sit by the fruit bowl.",
+    "lines": [
+      { "who": "Gran", "text": "“The council wrote again about the lift. Read me the first line, love, that's all I need.”", "cue": "sliding one envelope across, not opening it herself" },
+      { "who": "Mum", "text": "“Is that the council letter? Tell her I'll ring them myself and sort the whole thing.”", "cue": "voice tinny through the phone on speaker, already scrolling for the number" }
+    ],
+    "ask": "Which of these are a hand with one job, and which quietly take over the whole thing instead?"
+  },
+  "rounds": [
+    {
+      "level": "Spot",
+      "label": "Spot, round 1",
+      "intro": "Helping leaves the other person their share, and saving takes it. Three checks tell them apart: someone asked, you want to do it, and you are doing no more than half. If any one check fails, it is saving.",
+      "items": [
+        {
+          "type": "pick",
+          "who": "Gran",
+          "text": "“The council wrote again about the lift. Read me the first line, love, that's all I need.”",
+          "cue": "sliding one envelope across, not opening it herself",
+          "options": ["Helping", "Saving"],
+          "answer": 0,
+          "why": "She asked for one line, and she's kept the envelope for herself. Reading that line back to her is a small, specific job she actually named.",
+          "traps": {
+            "1": "Saving. It would be if you opened all three envelopes and dealt with the council yourself. Here she only asked for the first line, and that's what she gets."
+          },
+          "example": "Parents' evening, the school hall, 6:30pm.<br>Teacher: “Could you just tell me the date on this form? I'll fill in the rest at home.”<br>You: “It says the 14th.”<br>She takes it straight back."
+        },
+        {
+          "type": "pick",
+          "who": "Mum",
+          "text": "“Is that the council letter? Tell her I'll ring them myself and sort the whole thing.”",
+          "cue": "voice tinny through the phone on speaker, already scrolling for the number before Gran's said a word",
+          "options": ["Helping", "Saving"],
+          "answer": 1,
+          "why": "Nobody asked Mum to take the letter over, and she's already planning to handle every part of it herself, from six hundred miles away. Gran hasn't even said what she wants done.",
+          "traps": {
+            "0": "Helping. It sounds protective, and it probably comes from love. But Gran never got asked whether she wanted the whole thing taken off her, only told that it would be."
+          },
+          "example": "Parents' evening, the school hall, 6:30pm.<br>Teacher: “I'll email the whole report straight to you both, no need to discuss it with your son first.”<br>Parent: “Oh. I was hoping he'd tell us himself.”"
+        },
+        {
+          "type": "pick",
+          "who": "Dad",
+          "text": "“Gran's bins never go out till Wednesday night now. I've started doing hers along with ours, she doesn't need to ask.”",
+          "cue": "already wheeling two bins instead of one, Gran doesn't know he decided this",
+          "options": ["Helping", "Saving"],
+          "answer": 1,
+          "why": "Nobody asked Dad to take on Gran's bins every week. He's decided it quietly, on her behalf, which is the one check that fails here regardless of how kind the reason is.",
+          "traps": {
+            "0": "Helping. He's not minding the job, and the bins get done. But Gran never said she couldn't manage them herself, and the decision was made for her, not with her."
+          },
+          "example": "Allotment plot, Sunday morning.<br>Plot holder: “I watered the whole row again, yours included. You weren't around, so I just did it.”<br>Neighbour: “I was going to come down after lunch.”"
+        },
+        {
+          "type": "pick",
+          "who": "Gran",
+          "text": "“Could you just check this box says Tuesday on it? I'll sort the rest of the week myself when I'm home.”",
+          "cue": "holding out the pill organiser, already reaching for her bag",
+          "options": ["Helping", "Saving"],
+          "answer": 0,
+          "why": "She's asked for one check and she's keeping the rest of the week's sorting for herself. That stays her job, with one small thing you've done for her along the way.",
+          "traps": {
+            "1": "Saving. It would be if you sorted the whole box for the week. She's asked you to check one, and that's all you've done."
+          },
+          "example": "Hospital pharmacy queue, Monday.<br>Patient: “Could you just check this box says Tuesday on it?”<br>You: “Yes, that's Tuesday's.”<br>She puts the rest back in her bag herself."
+        }
+      ]
+    },
+    {
+      "level": "Play",
+      "label": "Play, the week in motion",
+      "intro": "Now the options look alike. Run the checks one at a time: did anyone ask, do you want to do it, and who is carrying more than half?",
+      "items": [
+        {
+          "type": "pick",
+          "who": "Gran",
+          "text": "“Could you just go through my pension letter and check the number's right? I'll ring them myself if it's wrong.”",
+          "cue": "sliding it across; last winter you told her forms like this make your head spin",
+          "options": ["Helping", "Saving: more than half", "Saving: you do what you don't want to", "Saving: nobody asked"],
+          "answer": 2,
+          "why": "She asked for one check, and said she'd make the call herself if there's a problem, so the asking and more-than-half checks both pass. The one that fails is wanting to do it, since this is exactly the kind of form you've told her you dread.",
+          "traps": {
+            "0": "Helping. She asked, and it's a small job on paper. But you dread this exact task, and saying yes anyway is doing something you don't want to for her sake.",
+            "1": "Saving: more than half. Only the one number is yours to check, and she's keeping the rest, so this check actually passes here.",
+            "3": "Saving: nobody asked. She did ask, directly, so this isn't where the trouble is."
+          },
+          "example": "Book club group chat, Thursday night.<br>Host: “Could you ring the venue and check the time? Just that.”<br>You: “Sure, I'll call them.”<br>You've dreaded phoning strangers since the bank mix-up last year, and you don't say so."
+        },
+        {
+          "type": "pick",
+          "who": "Mum",
+          "text": "“Could you just tell me if this water bill looks high? That's all I need.”",
+          "cue": "but by the time you've looked, you've rung the company, switched the tariff and set up a new direct debit in her name",
+          "options": ["Helping", "Saving: more than half", "Saving: you do what you don't want to", "Saving: nobody asked"],
+          "answer": 1,
+          "why": "She asked for one yes-or-no check. Ringing the company, changing the tariff and setting up a direct debit in her name is the whole job and more, so the more-than-half check fails even though she did ask.",
+          "traps": {
+            "0": "Helping. She did ask, but a one-word check turned into the whole account, which is well past half the job.",
+            "2": "Saving: you do what you don't want to. Nothing says you minded doing it, only that you did far more of it than she asked for.",
+            "3": "Saving: nobody asked. She did ask, for one specific thing. The trouble is how much further you went without her."
+          },
+          "example": "Neighbourhood group chat, Wednesday.<br>Neighbour: “Could you just tell me if the new parking signs apply to our road?”<br>You: “I'll check, and I'll email the council and get them changed if they're wrong.”<br>Neighbour: “Oh... I only wanted to know if I'd get a ticket.”"
+        },
+        {
+          "type": "pick",
+          "who": "Gran",
+          "text": "“Could you just sit with me in the waiting room Thursday? I'll do the talking with the doctor myself.”",
+          "cue": "patting the seat beside her, already planning what she'll ask",
+          "options": ["Helping", "Saving: more than half", "Saving: you do what you don't want to", "Saving: nobody asked"],
+          "answer": 0,
+          "why": "She asked, she's kept the actual talking for herself, and you don't mind an afternoon in a waiting room with her. All three checks pass, so this is plain helping, nothing more complicated underneath it.",
+          "traps": {
+            "1": "Saving: more than half. Sitting beside her is a small share of a job that's mostly hers to do.",
+            "2": "Saving: you do what you don't want to. Nothing here suggests the afternoon is a chore for you.",
+            "3": "Saving: nobody asked. She asked outright, by name, for Thursday."
+          },
+          "example": "Clinic waiting room, Thursday, 9:00am.<br>Patient: “Just sit with me till they call my name. I'll answer the questions myself.”<br>You: “Happy to.”<br>She answers every question herself, and you both have tea after."
+        }
+      ]
+    },
+    {
+      "level": "Analyse",
+      "label": "Analyse, explain it",
+      "intro": "Time for the book's word. Steiner calls saving a rescue.",
+      "items": [
+        {
+          "type": "pick",
+          "who": "Dad",
+          "text": "“I cleared out Gran's shed over the weekend. She didn't have to lift a finger, and most of it needed throwing out anyway.”",
+          "cue": "boxes already gone to the tip before she'd noticed they were missing. Which explanation fits?",
+          "options": [
+            "Helping. Her knees are bad and the job is done, which is exactly what a good son does.",
+            "A rescue. Nobody asked Dad to clear the shed, and he did the whole job himself, so Gran never got to say what she wanted kept. Helping would have meant asking first, then doing only the part she couldn't manage.",
+            "Not a rescue. Dad doesn't mind this kind of job, and Steiner only counts it as a rescue when the helper resents what they're doing."
+          ],
+          "answer": 1,
+          "why": "Two of Steiner's checks fail here. Nobody asked Dad to do it, and he's carrying the whole job rather than a share of it, and either one on its own is enough to call it a rescue. The shed is clear, but Gran never got the chance to say which boxes mattered to her.",
+          "traps": {
+            "0": "Helping. Her knees might make the top shelves hard, but Dad went ahead with the whole shed, uninvited. That's the deciding Gran lost, not just the lifting.",
+            "2": "Not a rescue. Steiner's rule isn't about whether the helper minded the job. Doing something nobody asked for still counts, whatever you felt while you were doing it."
+          },
+          "example": "Community garden, Sunday morning.<br>Member: “I weeded the whole shared bed while you were away. Thought I'd surprise you.”<br>You: “Oh. I was going to replant that corner myself.”"
+        }
+      ]
+    }
+  ],
+  "debrief": {
+    "nadia": "Gran's shed didn't need clearing by Saturday afternoon, and Dad wasn't wrong to want to help her. He just never gave her the chance to say no, or to keep what she wanted to keep. The kindest-looking jobs are sometimes the ones nobody actually asked for. Ask first, even with the people you love most.",
+    "bookTerm": "Rescue",
+    "bookNote": "The books call this a rescue. Steiner's two signs of one are doing something you don't want to do and doing more than half the work, and he adds that helping without being asked counts too, whatever the reason behind it."
+  },
+  "reflection": { "prompt": "What did you do for someone in your family this week without being asked? What might they have wanted to do, or decide, for themselves?" },
+  "next": null
+}

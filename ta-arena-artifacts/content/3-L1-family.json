@@ -1,0 +1,181 @@
+{
+  "slot": "3.L1",
+  "setting": "Family",
+  "title": "The Letter Drawer",
+  "world": 3,
+  "worldName": "Back and Forth",
+  "week": 3,
+  "weekName": "Back and Forth",
+  "mechanic": "Vector",
+  "concept": "After this one you can read the voice behind a family plea or verdict, and answer from a different one on purpose when the usual answer just keeps the loop going.",
+  "plainWord": "a volley",
+  "bookTerm": "Transaction",
+  "bookIdea": "A transaction is one line and the reply it gets. The reply is complementary when it comes from the voice that was addressed and goes back to the one that spoke, and crossed when it does not, which is often exactly what breaks a loop.",
+  "bookSource": "Games People Play, ch. 2; TA Today, ch. 7",
+  "opener": {
+    "setting": "Sunday, 12:40pm. Gran's kitchen, apartment 1A, Hawthorn Court. The letter from the housing office is still in its envelope on the table.",
+    "lines": [
+      { "who": "Gran", "text": "“Nobody reads these for me any more. You're the only one who understands them.”", "cue": "sliding the envelope across, not quite looking up from the pan" },
+      { "who": "Mrs Kale", "text": "“She's been carrying that letter round all week.”", "cue": "stirring her tea, not unkind about it" }
+    ],
+    "ask": "Gran's line calls on one of your voices. Work out which voice answers each line below, and whether that answer keeps the letter talk open or shuts it down."
+  },
+  "rounds": [
+    {
+      "level": "Spot",
+      "label": "Spot, round 1",
+      "intro": "<b>How this one works:</b> each line below is a reply. Work out which voice it comes from. A reply from the voice that was called on keeps the volley matched, and the talk runs on. A reply from a different voice is a cut, and the talk stops, or moves somewhere new.",
+      "items": [
+        {
+          "type": "pick",
+          "who": "Gran, after you said you'd read the letter once lunch was cleared",
+          "text": "“Fine. Nobody has time for an old woman's letters. I'll just put it back in the drawer.”",
+          "cue": "already sliding the envelope towards the biscuit tin",
+          "prompt": "Which voice does Gran's reply come from?",
+          "options": ["The Boss", "The Pilot", "The Kid"],
+          "answer": 2,
+          "why": "This is a sulk, not a plan and not a verdict. She folds the hurt into a complaint about being forgotten, and that is the Kid answering, pulled out by the plan you offered instead of the comfort she wanted.",
+          "traps": {
+            "0": "The Boss would say something like “You always find a moment for everything else, just not for me.” That is a verdict, not a sulk, and it lands a different way.",
+            "1": "The Pilot would say “Fine, after lunch then, I'll leave it on the table.” That is plain and practical, and it would keep the volley matched."
+          },
+          "example": "A kitchen at nine in the morning, a father to his daughter after she says she'll fix the shelf at the weekend: “Fine. Nobody gets round to anything for an old man.”<br>The sulk answers a plan with a complaint, not an agreement."
+        },
+        {
+          "type": "pick",
+          "who": "Mrs Kale, at the table, when you ask if the letter looks important",
+          "text": "“Open it and read it to her. It won't bite.”",
+          "cue": "not looking up from her tea",
+          "prompt": "Which voice does her reply come from?",
+          "options": ["The Boss", "The Pilot", "The Kid"],
+          "answer": 0,
+          "why": "A clipped instruction with no room in it is the Boss, the voice that tells a room what to do. You asked a plain question from your Pilot, and the Boss answered instead, so the volley is cut and your actual question goes unanswered.",
+          "traps": {
+            "1": "The Pilot would say “Open it together, that's usually easiest.” That is a plan, not an order, and it would answer the question you actually asked.",
+            "2": "The Kid would say “Ooh, I don't know, best not to pry.” That is nervous and small, not a brisk order."
+          },
+          "example": "A train platform, a guard to a passenger who asks if it's safe to board: “Get on, it's not going anywhere.”<br>The order answers a question with a rule instead of a fact."
+        },
+        {
+          "type": "pick",
+          "who": "Leo, under the table, when you show him the stamp on the envelope",
+          "text": "“That's the one from the coast. I've got three of those already.”",
+          "cue": "actually looking up this time",
+          "prompt": "Which voice does his reply come from?",
+          "options": ["The Boss", "The Pilot", "The Kid"],
+          "answer": 1,
+          "why": "He gives you a plain fact about the stamp, calm and specific. You showed him the envelope from your Pilot, and his Pilot answered, so the volley is matched and the small talk about stamps can keep going.",
+          "traps": {
+            "0": "The Boss would say “You're holding it wrong, let me see.” That is a verdict on how you're holding the envelope, not a fact about the stamp.",
+            "2": "The Kid would say “Ooh, can I have it? Please?” That is a want, not a fact, and it would ask for something rather than answer you."
+          },
+          "example": "A school playground, one child shows another a sticker: “That's the shiny kind, I've got two.”<br>A plain fact meets a plain show-and-tell, and the swap keeps going."
+        }
+      ]
+    },
+    {
+      "level": "Play",
+      "label": "Play, the kitchen table",
+      "intro": "<b>Now you answer.</b> Gran's line, and later her verdict, are both aimed at one of your voices. Pick the reply that crosses it, without starting a row.",
+      "items": [
+        {
+          "type": "pick",
+          "who": "Gran, to you, arms folded, not reaching for the envelope herself",
+          "text": "“Fine. Nobody has time for an old woman's letters.”",
+          "cue": "the envelope now a foot from her elbow, further from yours",
+          "prompt": "You want the sulk to stop and the letter actually read. Which of your voices answers?",
+          "options": ["The Boss", "The Pilot", "The Kid"],
+          "answer": 1,
+          "why": "Her line came from her Kid and was aimed at your Boss, the one that usually scolds or soothes. Answering from your Pilot crosses that, and it still gets the letter open: “Let's open it now, Gran, I've got five minutes before the kettle's done.”",
+          "traps": {
+            "0": "The Boss would answer “Don't be like that, Gran, give it here.” That matches the loop she called on, so it runs on, and next week's letter gets the same sulk.",
+            "2": "The Kid would answer “Oh no, Gran, don't say that, of course I have time.” That is a cut too, since the sulk was aimed at your Boss, but it only soothes the hurt, and the letter stays in the drawer."
+          },
+          "example": "A kitchen at six, a mother to her son after he says he'll fix the tap later: “Fine. Nobody gets round to anything for me.”<br>“Let's look at it now, two minutes, before dinner.” The reply answers from a different voice, and the tap gets looked at instead of the sulk running on."
+        },
+        {
+          "type": "pick",
+          "who": "You, to Mrs Kale, after “Open it and read it to her, it won't bite”",
+          "text": "“Could we open it together, actually? I'd like Gran to hear it from the start.”",
+          "cue": "already picking up the envelope, giving Mrs Kale an easy way to agree",
+          "prompt": "Which voice of Mrs Kale's should answer, to keep this new volley matched?",
+          "options": ["The Boss", "The Pilot", "The Kid"],
+          "answer": 1,
+          "why": "You spoke to her Pilot with a plan, so a matched reply comes back from her Pilot too, something plain like “Fine, go on then, she's been waiting.” That keeps the volley running, and the letter gets read together instead of handed over and read alone.",
+          "traps": {
+            "0": "Her Boss would answer “Well, somebody has to get a move on.” That is a verdict, and it would be a cut, her Boss answering your Pilot.",
+            "2": "Her Kid would answer “Ooh, go on then, sounds exciting.” That is warm but small, and it would also be a cut, since you did not address her Kid."
+          },
+          "example": "A tenants' meeting, one neighbour to another about the lift repair: “Could we look at the quote together before the meeting starts?” “Fine, bring it over, I've got ten minutes.”<br>A plan gets a plan back, and the thread stays open."
+        },
+        {
+          "type": "pick",
+          "who": "Gran, after the letter turns out to be about a late payment on the building fund",
+          "text": "“You should have come and dealt with this weeks ago. You always leave it to the last minute.”",
+          "cue": "tapping the letter on the table, not quite a shout but close",
+          "prompt": "You want to sort the payment, not start a row. Which of your voices answers?",
+          "options": ["The Boss", "The Pilot", "The Kid"],
+          "answer": 1,
+          "why": "Her line is a verdict from her Boss, aimed at the part of you that gets told off. Answering from your Pilot crosses that and keeps the fix moving: “Let's see the amount and the date, and I'll ring them this afternoon.”",
+          "traps": {
+            "0": "The Boss would answer “You could have opened your own post, Gran.” That matches her Boss with another Boss, and the row runs on.",
+            "2": "The Kid would answer “Sorry, sorry, I should have come sooner.” That is a cut too, but it only apologises. The payment still has no date against it."
+          },
+          "example": "An office corridor, a manager to a junior about a missed deadline: “You should have flagged this weeks ago.” “Let's see what's outstanding, and I'll have it sorted by five.”<br>The reply answers from a different voice, and the work gets named instead of the row running on."
+        }
+      ]
+    },
+    {
+      "level": "Analyse",
+      "label": "Analyse, explain it",
+      "items": [
+        {
+          "type": "pick",
+          "who": "You, working out why the sulk stopped where it did",
+          "text": "Gran's line came from her Kid and landed on your Boss. You answered from your Pilot instead, and the letter got read.",
+          "prompt": "Why did the sulk stop there, instead of running on?",
+          "options": [
+            "Your reply came from a different voice than the one she called on, so the loop was cut.",
+            "Gran's Kid gave up because she was tired of complaining.",
+            "The letter itself solved the problem, not the reply."
+          ],
+          "answer": 0,
+          "why": "A sulk that gets matched, scolded or soothed, tends to run on, sometimes for weeks. Your Pilot answered from a voice she had not called on, so the loop had nowhere to land, and the letter got read instead of the sulk continuing.",
+          "traps": {
+            "1": "Nothing in the scene shows her Kid running out of steam. The loop stopped because the reply came from a voice she had not addressed, not because she gave up.",
+            "2": "The letter did not do anything by itself. It sat in the drawer until the reply changed, and that is what moved things along."
+          },
+          "example": "A family WhatsApp group, a sister to her brother about a school form: “Done, I sent it.” He replies with a sulky “Whatever, I'll do it later.”<br>The second message comes from a different voice than the one she spoke to, so the thread goes quiet instead of running on."
+        },
+        {
+          "type": "pick",
+          "who": "Dad, on the phone, speaker on, when Gran asks if he wants to hear the letter too",
+          "text": "“Whatever she thinks is best. I'm watching the match.”",
+          "cue": "the television loud behind him, six hundred kilometres down the line",
+          "prompt": "Which voice is Dad answering from, and does it keep the three-way conversation open or close it?",
+          "options": [
+            "The Pilot, and it keeps the conversation open",
+            "The Kid, and it keeps the conversation open",
+            "The Boss, delivered gently, and it closes the conversation"
+          ],
+          "answer": 2,
+          "why": "“Whatever she thinks is best” hands the whole decision over without a plan or a question, and it ends the three-way part of the talk before it starts. That is a verdict, however softly it is said, and a verdict closes the door rather than opening it.",
+          "traps": {
+            "0": "A Pilot reply would ask something or offer something, like “Put it on speaker properly, I want to hear the amount.” This line asks nothing and offers nothing.",
+            "1": "A Kid reply would sound uncertain or eager to please, like “Oh, I don't mind, whatever's easier.” This line is flat and final, not uncertain."
+          },
+          "example": "A family call, three people on the line, a grandfather asked whether he wants to join the holiday plan: “Whatever you young ones decide.”<br>The decision is handed over whole, and the call moves on without him."
+        }
+      ]
+    }
+  ],
+  "debrief": {
+    "nadia": "Gran's sulk and Dad's handed-over decision both call on a voice, and answering from that same voice can keep a small complaint running for weeks, or close a conversation before it starts. Changing seat, calmly, is often what gets a letter actually read, or a plan actually made. Notice, next time someone in your own family hands you a line, which voice you answer from.",
+    "bookTerm": "Transaction",
+    "bookNote": "The books call this a transaction: one line and its reply. It is complementary when the reply comes from the voice that was addressed and goes back to the one that spoke, and crossed when it does not. A crossed transaction can be exactly what is needed to break a loop."
+  },
+  "reflection": {
+    "prompt": "Think of a line someone in your family said this week that called on one particular voice in you. Which voice answered, and what would a different one have opened up instead?"
+  },
+  "next": null
+}

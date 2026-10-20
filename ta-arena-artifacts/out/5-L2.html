@@ -1,0 +1,984 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Tracker · You</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    color-scheme: light;
+    --bg: #171233; --bg-2: #241c47;
+    --surface: #f2eefb; --surface-2: #c9b8e6; --surface-3: #bda8e2;
+    --accent: #6c5fe0; --accent-deep: #4a3fa0;
+    --pink: #d9699f; --blue: #5b8fd9;
+    --ok: #1f7568; --wrong: #a8407a; --alt: #5c4fb0;
+    --text: #231c3f; --text-dim: #675f82;
+    --on-bg: #ece7fb; --on-bg-dim: #b4abd9;
+    --shadow: rgba(23, 18, 51, 0.28);
+    --parent: #7b5fe0; --adult: #4f8fd9; --childv: #d9699f;
+  }
+  [hidden] { display: none !important; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    background-image:
+      radial-gradient(ellipse 820px 560px at 12% -8%, var(--bg-2), transparent),
+      radial-gradient(ellipse 680px 520px at 108% 12%, #2c1f4a, transparent),
+      radial-gradient(ellipse 600px 420px at 60% 110%, #2a1840, transparent);
+    color: var(--on-bg);
+    font-family: Inter, system-ui, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 28px 16px 56px;
+  }
+  .stage { width: 100%; max-width: 580px; min-width: 0; }
+
+  .masthead { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 16px; padding: 0 4px; }
+  .series { font-family: "IBM Plex Mono", monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--pink); font-weight: 600; }
+  .series small { color: var(--on-bg-dim); font-weight: 500; letter-spacing: 0.08em; }
+  .tag { font-family: "IBM Plex Mono", monospace; font-size: 11px; color: var(--on-bg-dim); text-decoration: none; white-space: nowrap; }
+  .tag:hover { color: var(--pink); }
+  a:focus-visible, button:focus-visible, textarea:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  .card { background: var(--surface); color: var(--text); border-radius: 22px; box-shadow: 0 24px 60px var(--shadow); padding: 32px 28px 28px; position: relative; min-width: 0; overflow-wrap: anywhere; }
+  .card:focus { outline: none; }
+  .card-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; margin-bottom: 18px; }
+  .card-head > div:first-child { min-width: 0; }
+  h1 { font-family: Inter, system-ui, sans-serif; font-weight: 500; font-size: 27px; line-height: 1.2; margin: 0 0 6px; text-wrap: balance; letter-spacing: -0.01em; }
+  h1.h2 { font-size: 21px; margin: 0 0 12px; }
+  .deck { font-size: 14.5px; color: var(--text-dim); margin: 0; max-width: 40ch; line-height: 1.5; }
+  .case-no { font-family: "IBM Plex Mono", monospace; font-size: 11px; color: var(--text-dim); text-align: right; white-space: nowrap; padding-top: 4px; }
+  .tagline { display: inline-block; font-family: "IBM Plex Mono", monospace; font-size: 11px; color: var(--text-dim); background: var(--surface-2); border-radius: 999px; padding: 4px 12px; margin: 0 0 16px; letter-spacing: 0.03em; }
+  .kicker { font-family: "IBM Plex Mono", monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-dim); margin: 0 0 10px; }
+
+  .progress { display: flex; gap: 5px; margin-bottom: 24px; }
+  .progress i { height: 5px; flex: 1; background: var(--surface-2); border-radius: 999px; overflow: hidden; position: relative; }
+  .progress i.done { background: linear-gradient(90deg, var(--accent), var(--pink)); }
+  .progress i.current::after { content: ""; position: absolute; inset: 0; width: 50%; background: var(--accent); opacity: .55; }
+
+  .round-label { font-family: "IBM Plex Mono", monospace; font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-dim); margin-bottom: 10px; }
+  .round-intro { font-size: 15px; line-height: 1.55; color: var(--text-dim); margin: 0 0 16px; }
+
+  .exchange { background: var(--surface-2); border-radius: 16px; padding: 14px 16px; margin: 0 0 18px; }
+  .exchange .line { font-size: 15.5px; line-height: 1.5; margin: 0 0 8px; }
+  .exchange .line:last-child { margin-bottom: 0; }
+  .exchange .who { font-family: "IBM Plex Mono", monospace; font-size: 11px; color: var(--text-dim); display: block; margin-bottom: 2px; letter-spacing: 0.03em; }
+  .exchange .cue { font-size: 13.5px; color: var(--text-dim); font-style: italic; margin: 6px 0 12px; }
+  .exchange .cue:last-child { margin-bottom: 0; }
+
+  .lede { font-family: Inter, system-ui, sans-serif; font-size: 17.5px; font-weight: 500; font-style: italic; color: var(--accent-deep); line-height: 1.5; margin: 0 0 14px; }
+  .prompt { font-size: 16.5px; line-height: 1.55; margin: 0 0 18px; font-weight: 500; }
+  .setting { font-size: 15px; line-height: 1.55; color: var(--text-dim); font-style: italic; margin: 0 0 16px; }
+  .scene-title { font-family: Inter, system-ui, sans-serif; font-size: 19px; font-weight: 500; line-height: 1.3; margin: 0 0 6px; }
+
+  .choices { display: flex; flex-direction: column; gap: 10px; }
+  button.choice {
+    font-family: Inter, system-ui, sans-serif; font-size: 15px; font-weight: 500; text-align: left;
+    padding: 14px 17px; min-height: 44px; border-radius: 14px; border: none; background: var(--surface-2); color: var(--text);
+    cursor: pointer; transition: background 120ms, transform 80ms, box-shadow 120ms; line-height: 1.4;
+  }
+  button.choice:hover { background: var(--surface-3); box-shadow: 0 6px 16px rgba(108,95,224,0.16); }
+  button.choice:active { transform: scale(0.99); }
+  button.choice.correct { background: color-mix(in srgb, var(--ok) 20%, var(--surface)); box-shadow: 0 0 0 2px color-mix(in srgb, var(--ok) 45%, transparent) inset; }
+  button.choice.wrong { background: color-mix(in srgb, var(--wrong) 18%, var(--surface)); box-shadow: 0 0 0 2px color-mix(in srgb, var(--wrong) 40%, transparent) inset; }
+  button.choice.amber { background: color-mix(in srgb, var(--alt) 18%, var(--surface)); box-shadow: 0 0 0 2px color-mix(in srgb, var(--alt) 40%, transparent) inset; }
+  button.choice[disabled] { cursor: default; opacity: 0.6; }
+  button.choice[disabled]:hover { background: var(--surface-2); box-shadow: none; }
+  button.choice.correct[disabled], button.choice.wrong[disabled], button.choice.amber[disabled] { opacity: 1; }
+  button.choice.pal { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+
+  .pill { display: inline-block; max-width: 100%; font-family: "IBM Plex Mono", monospace; font-size: 11.5px; font-weight: 600; padding: 3px 10px; border-radius: 999px; color: #fff; letter-spacing: 0.02em; background: var(--accent); overflow-wrap: anywhere; }
+  .pill.p { background: var(--parent); }
+  .pill.a { background: var(--adult); }
+  .pill.c { background: var(--childv); }
+
+  .stamp { display: inline-flex; align-items: center; gap: 6px; font-family: "IBM Plex Mono", monospace; font-size: 12px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; padding: 5px 12px; border-radius: 999px; margin-bottom: 12px; color: #fff; }
+  .stamp.ok { background: var(--ok); }
+  .stamp.cross { background: var(--wrong); }
+  .stamp.amber { background: var(--alt); }
+
+  .why-box { border-radius: 16px; padding: 16px 18px 17px 20px; margin: 0 0 16px; border-left: 5px solid transparent; box-shadow: 0 8px 22px rgba(23,18,51,0.12); }
+  .why-box .stamp { margin-bottom: 10px; }
+  .why-box .feedback { margin: 0 0 12px; }
+  .why-box .feedback:last-child { margin-bottom: 0; }
+  .why-box.ok { background: color-mix(in srgb, var(--ok) 45%, white); border-left-color: var(--ok); }
+  .why-box.cross { background: color-mix(in srgb, var(--wrong) 42%, white); border-left-color: var(--wrong); }
+  .why-box.amber { background: color-mix(in srgb, var(--alt) 40%, white); border-left-color: var(--alt); }
+  .why-box.neutral { background: color-mix(in srgb, var(--accent) 22%, white); border-left-color: var(--accent); }
+
+  .feedback { font-size: 16px; line-height: 1.6; color: var(--text); margin: 0 0 14px; padding-top: 2px; }
+  .feedback b { color: inherit; }
+
+  .example { background: color-mix(in srgb, var(--accent) 38%, white); border-left: 5px solid var(--accent); border-radius: 16px; padding: 14px 16px 15px 18px; margin: 0 0 18px; font-size: 15px; line-height: 1.55; color: var(--text); box-shadow: 0 8px 22px rgba(23,18,51,0.10); }
+  .ex-label { font-family: "IBM Plex Mono", monospace; font-size: 10.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent-deep); margin-bottom: 6px; }
+
+  .nextbar { display: flex; justify-content: flex-end; align-items: center; gap: 10px; flex-wrap: wrap; margin-top: 4px; }
+  button.next, a.next {
+    font-family: "IBM Plex Mono", monospace; font-size: 13px; font-weight: 600; letter-spacing: 0.03em;
+    background: linear-gradient(135deg, var(--accent), var(--pink)); color: #fff; border: none; text-decoration: none;
+    padding: 12px 20px; min-height: 44px; border-radius: 999px; cursor: pointer; box-shadow: 0 10px 24px rgba(108,95,224,0.35);
+    display: inline-flex; align-items: center; justify-content: center; text-align: center;
+  }
+  button.next:hover, a.next:hover { filter: brightness(1.08); transform: translateY(-1px); }
+  button.next[disabled] { opacity: .45; cursor: default; box-shadow: none; transform: none; filter: none; }
+  .next-soon { font-size: 14px; color: var(--text-dim); margin: 0; }
+
+  .meters { display: flex; flex-direction: column; gap: 10px; margin: 0 0 18px; }
+  .meter { display: grid; grid-template-columns: 52px 1fr 40px; align-items: center; gap: 10px; font-family: "IBM Plex Mono", monospace; font-size: 12px; }
+  .meter .name { color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.08em; font-size: 11px; }
+  .meter .track { height: 10px; border-radius: 999px; background: var(--surface-2); overflow: hidden; }
+  .meter .fill { display: block; height: 100%; width: 0; border-radius: 999px; background: linear-gradient(90deg, var(--accent), var(--pink)); transition: width 300ms ease; }
+  .meter.them .fill { background: linear-gradient(90deg, var(--blue), var(--accent)); }
+  .meter.empty .fill { background: var(--wrong); }
+  .meter .num { text-align: right; color: var(--text); font-weight: 600; }
+
+  .total { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 12px; font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--text-dim); margin: 0 0 8px; }
+  .total b { font-family: Inter, system-ui, sans-serif; font-size: 28px; font-weight: 500; color: var(--text); }
+  .band { position: relative; height: 10px; border-radius: 999px; background: var(--surface-2); overflow: hidden; margin: 0 0 8px; }
+  .band .fill { position: absolute; left: 0; top: 0; bottom: 0; width: 0; background: linear-gradient(90deg, var(--accent), var(--pink)); transition: width 300ms ease; }
+  .band .fill.over { background: var(--wrong); }
+  .val { flex: none; font-family: "IBM Plex Mono", monospace; font-size: 12.5px; font-weight: 600; color: #fff; background: var(--accent-deep); border-radius: 999px; padding: 3px 10px; white-space: nowrap; }
+  .counter-actions { display: flex; justify-content: flex-end; gap: 10px; flex-wrap: wrap; margin-top: 16px; }
+  button.ghost { font-family: "IBM Plex Mono", monospace; font-size: 13px; font-weight: 600; letter-spacing: 0.03em; background: transparent; color: var(--text); border: 2px solid var(--surface-3); padding: 10px 18px; min-height: 44px; border-radius: 999px; cursor: pointer; }
+  button.ghost[disabled] { opacity: .45; cursor: default; }
+  .counter-fb:empty, .order-fb:empty { display: none; }
+
+  .sort-item { margin: 0 0 16px; }
+  .sort-item + .sort-item { padding-top: 16px; border-top: 1px solid var(--surface-2); }
+  .sort-item .exchange { margin-bottom: 12px; }
+  .seq { list-style: none; margin: 0 0 16px; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+  .seq:empty { display: none; }
+  .seq li { display: grid; grid-template-columns: 28px 1fr; gap: 10px; background: var(--surface-2); border-radius: 14px; padding: 12px 14px; }
+  .seq .n { font-family: "IBM Plex Mono", monospace; font-weight: 600; color: var(--accent-deep); }
+  .seq .ct { display: block; font-size: 15px; line-height: 1.5; }
+  .seq .why { display: block; font-size: 14px; line-height: 1.5; color: var(--text-dim); margin-top: 6px; }
+  .pool { margin: 0 0 14px; }
+
+  .intro-list { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 9px; }
+  .rules-box { background: var(--surface-2); border-radius: 16px; padding: 16px 18px; margin: 18px 0; }
+  .rules-box .round-label { margin-bottom: 10px; }
+  .rules-list { margin: 0; padding-left: 0; list-style: none; display: flex; flex-direction: column; gap: 9px; }
+  .rules-list li { font-size: 14px; line-height: 1.45; display: flex; gap: 10px; color: var(--text); }
+  .rules-list .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); flex: none; margin-top: 7px; }
+  .ask { background: var(--bg-2); color: var(--on-bg); border-radius: 16px; padding: 14px 16px 15px; margin: 0 0 18px; }
+  .ask .kicker { color: var(--on-bg-dim); margin-bottom: 6px; }
+  .ask p { font-family: Inter, system-ui, sans-serif; font-size: 17px; line-height: 1.45; margin: 0; }
+
+  .end-badge { font-family: "IBM Plex Mono", monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ok); margin-bottom: 8px; }
+  .source { margin-top: 20px; padding: 14px 16px; border-radius: 14px; background: var(--surface-2); font-size: 12.5px; color: var(--text-dim); line-height: 1.5; }
+  .source b { color: var(--text); }
+  .end-nav { margin-top: 18px; }
+
+  .reflect-tag { font-family: "IBM Plex Mono", monospace; font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #fff; background: linear-gradient(135deg, var(--accent), var(--pink)); display: inline-block; padding: 5px 12px; border-radius: 999px; margin-bottom: 14px; }
+  textarea.reflect-box { display: block; width: 100%; min-height: 120px; resize: vertical; font-family: Inter, system-ui, sans-serif; font-size: 15.5px; line-height: 1.55; color: var(--text); background: var(--surface-2); border: none; border-radius: 16px; padding: 14px 16px; margin-bottom: 18px; box-shadow: 0 0 0 2px transparent inset; }
+  textarea.reflect-box::placeholder { color: var(--text-dim); }
+  textarea.reflect-box:focus { outline: none; box-shadow: 0 0 0 2px var(--accent) inset; }
+
+  @media (max-width: 480px) {
+    body { padding: 20px 12px 40px; }
+    .card { padding: 26px 18px 22px; }
+    h1 { font-size: 24px; }
+    h1.h2 { font-size: 20px; }
+    .meter { grid-template-columns: 44px 1fr 36px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
+  }
+
+  /* ===== Visual refresh: dark console look from docs/VISUAL_GUIDE.md (presentation only) ===== */
+  :root {
+    color-scheme: dark;
+    --wc: #fffc00;
+    --bg: #080a10; --bg-2: #0f131f;
+    --surface: #151a2a; --surface-2: #1e243b; --surface-3: #2a3250;
+    --accent: var(--wc); --accent-deep: color-mix(in srgb, var(--wc) 70%, #fff);
+    --pink: color-mix(in srgb, var(--wc) 55%, #ffb800); --blue: #06b6d4;
+    --ok: #10b981; --wrong: #f43f5e; --alt: #fbbf24;
+    --text: #f1f5f9; --text-dim: #a3b1c6;
+    --on-bg: #f1f5f9; --on-bg-dim: #94a3b8;
+    --shadow: rgba(0, 0, 0, 0.5);
+    --parent: #be123c; --adult: #0e7490; --childv: #b45309;
+  }
+  [data-world="1"] { --wc: #ff9500; } [data-world="2"] { --wc: #00e5ff; }
+  [data-world="3"] { --wc: #a855f7; } [data-world="4"] { --wc: #f43f5e; }
+  [data-world="5"] { --wc: #06b6d4; } [data-world="6"] { --wc: #10b981; }
+  [data-world="7"] { --wc: #f59e0b; }
+  body {
+    background-color: var(--bg);
+    background-image:
+      radial-gradient(ellipse 820px 560px at 12% -8%, color-mix(in srgb, var(--wc) 14%, transparent), transparent),
+      radial-gradient(ellipse 680px 520px at 108% 12%, rgba(168, 85, 247, 0.07), transparent),
+      radial-gradient(ellipse 600px 420px at 60% 110%, rgba(6, 182, 212, 0.07), transparent);
+    background-attachment: fixed;
+  }
+  .card { background: rgba(21, 26, 42, 0.88); border: 1px solid rgba(255, 255, 255, 0.12); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 24px 60px var(--shadow), inset 0 2px 0 color-mix(in srgb, var(--wc) 70%, transparent); }
+  h1, h1.h2, .scene-title { font-weight: 800; letter-spacing: -0.02em; }
+  .lede { font-style: italic; color: var(--accent-deep); }
+  .series { color: var(--wc); }
+  .tagline { background: var(--surface-2); color: var(--text-dim); }
+  .progress i.done { background: linear-gradient(90deg, var(--wc), #10b981); }
+  .progress i.current::after { background: var(--wc); }
+
+  /* Speech bubbles with tails */
+  .exchange { background: transparent; padding: 0; display: flex; flex-direction: column; gap: 12px; }
+  .exchange .line { position: relative; margin: 0; padding: 10px 14px; background: #f1f5f9; color: #0f172a; border: 1px solid #e2e8f0; border-radius: 14px; box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3); max-width: 92%; }
+  .exchange .line::before { content: ""; position: absolute; left: -6px; bottom: 10px; width: 10px; height: 12px; background: #f1f5f9; clip-path: polygon(100% 0, 0 100%, 100% 100%); }
+  .exchange .who { color: #475569; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; font-size: 10.5px; }
+  .exchange .cue { color: var(--text-dim); margin: 2px 0 0; }
+
+  /* Options */
+  button.choice { background: var(--surface-2); color: var(--text); border: 1px solid rgba(255, 255, 255, 0.12); border-left: 4px solid var(--wc); }
+  button.choice:hover { background: var(--surface-3); transform: translateY(-2px); box-shadow: 0 10px 22px rgba(0, 0, 0, 0.4); }
+  button.choice.correct { background: color-mix(in srgb, var(--ok) 20%, var(--surface)); border-color: var(--ok); box-shadow: none; }
+  button.choice.wrong { background: color-mix(in srgb, var(--wrong) 22%, var(--surface)); border-color: var(--wrong); box-shadow: 0 0 18px color-mix(in srgb, var(--wrong) 45%, transparent); animation: ta-shake 400ms cubic-bezier(.36,.07,.19,.97) both; }
+  button.choice.amber { background: color-mix(in srgb, var(--alt) 18%, var(--surface)); border-color: var(--alt); box-shadow: none; }
+  button.choice[disabled]:hover { background: var(--surface-2); transform: none; box-shadow: none; }
+  button.choice.correct[disabled]:hover { background: color-mix(in srgb, var(--ok) 20%, var(--surface)); }
+  button.choice.wrong[disabled]:hover { background: color-mix(in srgb, var(--wrong) 22%, var(--surface)); }
+  button.choice.amber[disabled]:hover { background: color-mix(in srgb, var(--alt) 18%, var(--surface)); }
+  .card.shake { animation: ta-shake 400ms cubic-bezier(.36,.07,.19,.97) both; }
+  @keyframes ta-shake { 10%, 90% { transform: translate3d(-1px, 0, 0); } 20%, 80% { transform: translate3d(2px, 0, 0); } 30%, 50%, 70% { transform: translate3d(-3px, 0, 0); } 40%, 60% { transform: translate3d(3px, 0, 0); } }
+
+  /* Feedback and examples */
+  .stamp, .pill { color: #fff; }
+  .stamp.ok { background: #047857; } .stamp.cross { background: #be123c; } .stamp.amber { background: #b45309; }
+  .why-box { box-shadow: 0 8px 22px rgba(0, 0, 0, 0.3); border: 1px solid rgba(255, 255, 255, 0.08); border-left-width: 5px; }
+  .why-box.ok { background: color-mix(in srgb, var(--ok) 16%, var(--surface)); }
+  .why-box.cross { background: color-mix(in srgb, var(--wrong) 16%, var(--surface)); }
+  .why-box.amber { background: color-mix(in srgb, var(--alt) 14%, var(--surface)); }
+  .why-box.neutral { background: color-mix(in srgb, var(--wc) 12%, var(--surface)); }
+  .example { background: color-mix(in srgb, var(--wc) 11%, var(--surface)); color: var(--text); }
+  .ex-label, .end-badge { color: var(--accent-deep); }
+  .end-badge { color: var(--ok); }
+  .ask { background: rgba(255, 255, 255, 0.05); border-left: 4px solid var(--wc); color: var(--text); }
+
+  /* Buttons, meters, chips */
+  button.next, a.next { background: linear-gradient(135deg, var(--wc), var(--pink)); color: #080a10; box-shadow: 0 10px 24px color-mix(in srgb, var(--wc) 35%, transparent); }
+  button.ghost { color: var(--text); border-color: rgba(255, 255, 255, 0.25); }
+  .val { background: var(--surface-3); color: var(--text); }
+  .meter .fill, .band .fill { background: linear-gradient(90deg, var(--wc), var(--pink)); }
+  .meter.them .fill { background: linear-gradient(90deg, #06b6d4, #10b981); }
+  .reflect-tag { color: #080a10; }
+  textarea.reflect-box { background: var(--surface-2); color: var(--text); border-color: rgba(255, 255, 255, 0.15); }
+
+  /* Sound toggle */
+  button.sfx { font-family: "IBM Plex Mono", monospace; font-size: 11px; font-weight: 600; letter-spacing: 0.06em; color: var(--on-bg-dim); background: transparent; border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 999px; padding: 4px 10px; min-height: 28px; cursor: pointer; }
+  button.sfx:hover { color: var(--wc); border-color: var(--wc); }
+  .masthead .right { display: flex; align-items: center; gap: 12px; }
+  :root {
+    --i-check: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Ccircle cx=%2212%22 cy=%2212%22 r=%229%22/%3E%3Cpath d=%22m8 12 3 3 5-6%22/%3E%3C/svg%3E");
+    --i-cross: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Ccircle cx=%2212%22 cy=%2212%22 r=%229%22/%3E%3Cpath d=%22m9 9 6 6M15 9l-6 6%22/%3E%3C/svg%3E");
+    --i-bolt: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M13 2 4 14h7l-1 8 9-12h-7z%22/%3E%3C/svg%3E");
+    --i-eye: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z%22/%3E%3Ccircle cx=%2212%22 cy=%2212%22 r=%223%22/%3E%3C/svg%3E");
+    --i-play: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M7 4v16l13-8z%22/%3E%3C/svg%3E");
+    --i-search: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Ccircle cx=%2211%22 cy=%2211%22 r=%227%22/%3E%3Cpath d=%22m20 20-4-4%22/%3E%3C/svg%3E");
+    --i-trophy: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M8 4h8v5a4 4 0 0 1-8 0zM8 6H4v1a3 3 0 0 0 4 3M16 6h4v1a3 3 0 0 1-4 3M12 13v4M8 21h8M10 17h4%22/%3E%3C/svg%3E");
+    --i-pencil: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M4 20l1-4L16 5l3 3L8 19z%22/%3E%3C/svg%3E");
+    --i-book: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M4 5a2 2 0 0 1 2-2h13v14H6a2 2 0 0 0-2 2zM4 19a2 2 0 0 0 2 2h13v-4%22/%3E%3C/svg%3E");
+    --i-help: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Ccircle cx=%2212%22 cy=%2212%22 r=%229%22/%3E%3Cpath d=%22M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.7.4-1 .9-1 1.7M12 17h.01%22/%3E%3C/svg%3E");
+    --i-crown: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M3 8l4 4 5-7 5 7 4-4-2 11H5z%22/%3E%3C/svg%3E");
+    --i-lock: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Crect x=%225%22 y=%2211%22 width=%2214%22 height=%229%22 rx=%222%22/%3E%3Cpath d=%22M8 11V8a4 4 0 0 1 8 0v3%22/%3E%3C/svg%3E");
+    --i-home: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M3 11l9-8 9 8M5 10v10h14V10%22/%3E%3C/svg%3E");
+    --i-speaker: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M4 9v6h4l5 4V5L8 9zM16 9a4 4 0 0 1 0 6%22/%3E%3C/svg%3E");
+    --i-spark: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M12 3l2 6 6 2-6 2-2 6-2-6-6-2 6-2z%22/%3E%3C/svg%3E");
+    --i-flag: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M5 21V4M5 4h11l-2 4 2 4H5%22/%3E%3C/svg%3E");
+  }
+
+  /* Line icons (CSS masks) */
+  .stamp::before, .ex-label::before, .end-badge::before, .reflect-tag::before, .source b::before, .ask .kicker::before,
+  .round-label::before, .boss-tag::before, .state::before, a.tag::before, button.sfx::before {
+    content: ""; display: inline-block; width: 1.2em; height: 1.2em; margin-right: 0.4em; vertical-align: -0.24em;
+    background: currentColor; -webkit-mask: var(--ic) center / contain no-repeat; mask: var(--ic) center / contain no-repeat; }
+  .stamp::before { margin-right: 0; width: 1.3em; height: 1.3em; vertical-align: middle; }
+  .stamp.ok { --ic: var(--i-check); } .stamp.cross { --ic: var(--i-cross); } .stamp.amber { --ic: var(--i-help); }
+  .ex-label { --ic: var(--i-spark); } .end-badge { --ic: var(--i-trophy); } .reflect-tag { --ic: var(--i-pencil); }
+  .source b { --ic: var(--i-book); } .ask .kicker { --ic: var(--i-help); } .boss-tag { --ic: var(--i-crown); }
+  .state { --ic: var(--i-lock); } a.tag { --ic: var(--i-home); } button.sfx { --ic: var(--i-speaker); }
+  .round-label { --ic: var(--i-help); }
+  .round-label[data-lv="spot"] { --ic: var(--i-eye); } .round-label[data-lv="play"] { --ic: var(--i-play); }
+  .round-label[data-lv="analyse"] { --ic: var(--i-search); } .round-label[data-lv="debrief"] { --ic: var(--i-spark); }
+  .boss-tag::before, .state::before { width: 1.1em; height: 1.1em; margin-right: 0.3em; }
+  .emb { display: block; width: 100%; height: 100%; overflow: visible; }
+  .emb-wrap { display: block; flex: none; width: 46px; height: 46px; filter: drop-shadow(0 0 10px color-mix(in srgb, var(--wc) 45%, transparent)); }
+  .series .emb-wrap { display: inline-block; width: 24px; height: 24px; vertical-align: -7px; margin-right: 8px; filter: none; }
+  .case-no .emb-wrap { margin: 0 0 8px auto; }
+  .end-emblem { width: 64px; height: 64px; margin: 0 0 12px; filter: drop-shadow(0 0 14px color-mix(in srgb, var(--wc) 55%, transparent)); }
+</style>
+</head>
+<body>
+
+<div class="stage">
+  <div class="masthead">
+    <div class="series" id="series">You</div>
+    <div class="right"><button type="button" class="sfx" id="sfx" aria-pressed="true" aria-label="Sound">SFX ON</button><a class="tag" id="hubLink" href="#" hidden>All games</a></div>
+  </div>
+  <main class="card" id="card" tabindex="-1">
+    <p class="deck">Loading the game.</p>
+    <noscript><p class="deck">This game needs JavaScript to run.</p></noscript>
+  </main>
+</div>
+
+<script>window.TA_EMB = {"1": "<svg class=\"emb\" viewBox=\"0 0 36 36\" aria-hidden=\"true\" focusable=\"false\"><linearGradient id=\"w1g\" x1=\"0%\" y1=\"0%\" x2=\"100%\" y2=\"100%\"><stop offset=\"0%\" stop-color=\"#FFA000\"/><stop offset=\"100%\" stop-color=\"#FF3D00\"/></linearGradient><g stroke=\"url(#w1g)\" stroke-width=\"3\" stroke-linecap=\"round\"><line x1=\"8\" y1=\"8\" x2=\"8\" y2=\"28\"/><line x1=\"14\" y1=\"8\" x2=\"14\" y2=\"28\"/><line x1=\"20\" y1=\"8\" x2=\"20\" y2=\"28\"/><line x1=\"26\" y1=\"8\" x2=\"26\" y2=\"28\"/></g><line x1=\"4\" y1=\"24\" x2=\"30\" y2=\"12\" stroke=\"#FFFC00\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><circle cx=\"31\" cy=\"11\" r=\"2.5\" fill=\"#FFFC00\"/></svg>", "2": "<svg class=\"emb\" viewBox=\"0 0 36 36\" aria-hidden=\"true\" focusable=\"false\"><line x1=\"18\" y1=\"6\" x2=\"18\" y2=\"30\" stroke=\"rgba(255,255,255,0.3)\" stroke-width=\"2\" stroke-dasharray=\"2 2\"/><circle cx=\"18\" cy=\"8\" r=\"4.5\" fill=\"#F43F5E\" stroke=\"#fff\" stroke-width=\"1.5\"/><circle cx=\"18\" cy=\"18\" r=\"6\" fill=\"#06B6D4\" stroke=\"#FFFC00\" stroke-width=\"2\"/><circle cx=\"18\" cy=\"28\" r=\"4.5\" fill=\"#F59E0B\" stroke=\"#fff\" stroke-width=\"1.5\"/></svg>", "3": "<svg class=\"emb\" viewBox=\"0 0 36 36\" aria-hidden=\"true\" focusable=\"false\"><linearGradient id=\"w3a\" x1=\"0%\" y1=\"0%\" x2=\"100%\" y2=\"100%\"><stop offset=\"0%\" stop-color=\"#C084FC\"/><stop offset=\"100%\" stop-color=\"#9333EA\"/></linearGradient><linearGradient id=\"w3b\" x1=\"100%\" y1=\"0%\" x2=\"0%\" y2=\"100%\"><stop offset=\"0%\" stop-color=\"#FFFC00\"/><stop offset=\"100%\" stop-color=\"#F59E0B\"/></linearGradient><line x1=\"6\" y1=\"6\" x2=\"30\" y2=\"30\" stroke=\"url(#w3a)\" stroke-width=\"3.2\" stroke-linecap=\"round\"/><line x1=\"30\" y1=\"6\" x2=\"6\" y2=\"30\" stroke=\"url(#w3b)\" stroke-width=\"3.2\" stroke-linecap=\"round\"/><polygon points=\"30,30 24,29 29,24\" fill=\"#C084FC\"/><polygon points=\"6,30 12,29 7,24\" fill=\"#FFFC00\"/><circle cx=\"18\" cy=\"18\" r=\"3\" fill=\"#fff\"/><circle cx=\"18\" cy=\"18\" r=\"6\" fill=\"none\" stroke=\"#FFFC00\" stroke-width=\"1.2\" opacity=\"0.8\"/></svg>", "4": "<svg class=\"emb\" viewBox=\"0 0 36 36\" aria-hidden=\"true\" focusable=\"false\"><linearGradient id=\"w4g\" x1=\"0%\" y1=\"0%\" x2=\"100%\" y2=\"100%\"><stop offset=\"0%\" stop-color=\"#FB7185\"/><stop offset=\"100%\" stop-color=\"#E11D48\"/></linearGradient><path d=\"M18 9 C13 7 7 7 4 8 L4 26 C8 25 13 25 18 28 C23 25 28 25 32 26 L32 8 C29 7 23 7 18 9 Z\" fill=\"url(#w4g)\" stroke=\"#fff\" stroke-width=\"1.5\"/><line x1=\"18\" y1=\"9\" x2=\"18\" y2=\"28\" stroke=\"#FFE4E6\" stroke-width=\"2\"/><polygon points=\"18,14 14,21 22,21\" fill=\"#FFFC00\" stroke=\"#000\" stroke-width=\"1\"/></svg>", "5": "<svg class=\"emb\" viewBox=\"0 0 36 36\" aria-hidden=\"true\" focusable=\"false\"><linearGradient id=\"w5g\" x1=\"0%\" y1=\"0%\" x2=\"0%\" y2=\"100%\"><stop offset=\"0%\" stop-color=\"#FFFFFF\"/><stop offset=\"40%\" stop-color=\"#67E8F9\"/><stop offset=\"100%\" stop-color=\"#0E7490\"/></linearGradient><line x1=\"3\" y1=\"13\" x2=\"33\" y2=\"13\" stroke=\"#22D3EE\" stroke-width=\"2\" stroke-dasharray=\"3 1\"/><polygon points=\"18,6 23,13 13,13\" fill=\"#fff\" stroke=\"#67E8F9\" stroke-width=\"1.2\"/><polygon points=\"13,13 23,13 27,29 9,29\" fill=\"url(#w5g)\" stroke=\"#0891B2\" stroke-width=\"1.5\"/><path d=\"M12 32 Q18 35 24 32\" stroke=\"#06B6D4\" stroke-width=\"1.5\" fill=\"none\" opacity=\"0.6\" stroke-linecap=\"round\"/></svg>", "6": "<svg class=\"emb\" viewBox=\"0 0 36 36\" aria-hidden=\"true\" focusable=\"false\"><linearGradient id=\"w6g\" x1=\"0%\" y1=\"0%\" x2=\"100%\" y2=\"100%\"><stop offset=\"0%\" stop-color=\"#34D399\"/><stop offset=\"100%\" stop-color=\"#059669\"/></linearGradient><circle cx=\"18\" cy=\"6\" r=\"3.5\" fill=\"#FFFC00\" stroke=\"#fff\" stroke-width=\"1\"/><path d=\"M18 9.5 V16 M18 16 L9 26 M18 16 L27 26\" stroke=\"#34D399\" stroke-width=\"2.5\" stroke-linecap=\"round\" fill=\"none\"/><circle cx=\"9\" cy=\"27\" r=\"4\" fill=\"url(#w6g)\" stroke=\"#fff\" stroke-width=\"1.2\"/><circle cx=\"27\" cy=\"27\" r=\"4\" fill=\"url(#w6g)\" stroke=\"#fff\" stroke-width=\"1.2\"/><line x1=\"12.5\" y1=\"24\" x2=\"23.5\" y2=\"24\" stroke=\"#FFFC00\" stroke-width=\"1.5\" stroke-dasharray=\"2 2\"/></svg>", "7": "<svg class=\"emb\" viewBox=\"0 0 36 36\" aria-hidden=\"true\" focusable=\"false\"><radialGradient id=\"w7g\" cx=\"50%\" cy=\"100%\" r=\"80%\"><stop offset=\"0%\" stop-color=\"#FFFC00\"/><stop offset=\"60%\" stop-color=\"#F59E0B\"/><stop offset=\"100%\" stop-color=\"#D97706\"/></radialGradient><path d=\"M7 23 A11 11 0 0 1 29 23 Z\" fill=\"url(#w7g)\" stroke=\"#FFFC00\" stroke-width=\"1.5\"/><line x1=\"3\" y1=\"23\" x2=\"33\" y2=\"23\" stroke=\"#FDE68A\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><g stroke=\"#FFFC00\" stroke-width=\"2.5\" stroke-linecap=\"round\"><line x1=\"18\" y1=\"5\" x2=\"18\" y2=\"9\"/><line x1=\"8\" y1=\"9\" x2=\"11\" y2=\"12\"/><line x1=\"28\" y1=\"9\" x2=\"25\" y2=\"12\"/><line x1=\"31\" y1=\"17\" x2=\"27\" y2=\"18\"/><line x1=\"5\" y1=\"17\" x2=\"9\" y2=\"18\"/></g></svg>"};</script>
+<script>window.TA_GAME = {"slot":"5.L2","setting":"School & College","title":"The Tracker","world":5,"worldName":"Under the Surface","week":5,"weekName":"Under the Surface","mechanic":"Ladder","concept":"After this one you can name which part of a problem a line is making smaller, and say what a real step would look like, even when the problem is your own homework.","bookTerm":"Discounting","bookIdea":"Discounting is ignoring part of a situation without realising it, and it can shrink a problem at one of four levels: that it exists, that it matters, that it can change, or that you personally can do anything about it.","bookSource":"TA Today, ch. 1, 17 and 18; Scripts People Live, ch. 9","opener":{"setting":"Tuesday, 7:05pm. The adult education centre, room 4. Six chairs in a horseshoe, the projector humming. Sam has come straight from work for the money skills course, three weeks in.","lines":[{"who":"Mr Doyle","text":"\u201cSam, did you bring last week's tracker?\u201d","cue":"pen already out, not unkind about it"},{"who":"Sam","text":"\u201cHa, the tracker. Yeah, it's around somewhere. I'll have it next week, honestly.\u201d","cue":"patting pockets that don't have it, already smiling past the question"}],"ask":"Sam is missing the same thing for the second week running. Which part of the problem is each person in the room making smaller, and how?"},"rounds":[{"level":"Spot","label":"Spot, round 1","intro":"Each line makes one part of a problem smaller. Pick the part the line is shrinking.","items":[{"type":"pick","who":"Sam","text":"\u201cNothing to write down, really. I didn't spend anything odd last week, so there was nothing there to track.\u201d","cue":"already reaching for his bag, like the question's answered","options":["The spending problem isn't there at all","The spending problem can't be changed","I can't do anything about the spending"],"answer":0,"why":"He says there was nothing to note, which denies the week had anything worth looking at in the first place. That's the first level of shrinking: a problem made so small it stops existing.","traps":{"1":"'Can't be changed' would treat spending as fixed in place, something nobody could ever get a grip on. The talk would move to whether a tracker can ever work, and nothing about last week's actual spending would get asked.","2":"'I can't do anything about it' would put the whole weight on Sam's own power. He'd be let off the sheet entirely, since the question becomes what he's capable of, not what he spent."},"example":"A gym changing room, Monday.<br>Member: \u201cNothing to log really, I didn't train hard enough to need the sheet.\u201d<br>His friend: \u201cYou did the full session though.\u201d"},{"type":"pick","who":"Connie","text":"\u201cI'm two pounds over most weeks. It's only a couple of pounds, it's not like it matters.\u201d","cue":"laughing, folding the handout into a square","options":["The problem doesn't matter much","The problem isn't there at all","The problem can't be changed"],"answer":0,"why":"She admits the two pounds, so she isn't denying it exists. She makes it small a different way, by saying it doesn't matter. That's the second level: something real, filed as not worth bothering with.","traps":{"1":"'Isn't there at all' would mean Connie is denying the overspend, but she's just told the room the exact figure. The talk would be about whether she's mistaken, not about the two pounds.","2":"'Can't be changed' would turn a couple of pounds into a law of nature. Mr Doyle would end up arguing the impossible instead of asking what she bought."},"example":"A book club chat, Thursday.<br>Member: \u201cI'm a chapter behind again, it's only one chapter, nobody's counting.\u201d<br>Host: \u201cI am. We vote on the ending Friday.\u201d"},{"type":"pick","who":"Yusuf","text":"\u201cMy wages come in different each month. There's no version of this sheet that fits a wage that never stays the same.\u201d","cue":"shrugging, closing the laptop lid","options":["The problem can't be changed","The problem doesn't matter much","I can't do anything about it"],"answer":0,"why":"He grants that his pay is uneven, a real problem, so he isn't denying it or waving it off. He shrinks it by treating the sheet, and the problem it's for, as something that simply can't work for someone in his position. That's the third level.","traps":{"1":"'Doesn't matter much' would make an uneven wage sound minor, but Yusuf is explaining it in detail, which isn't how someone talks about something they think is small.","2":"'I can't do anything about it' would put the gap in Yusuf himself rather than in the sheet. He's actually arguing the method is wrong for anyone in his position, not that he personally lacks the ability."},"example":"A taxi rank, Friday night.<br>Driver: \u201cFares are never the same two nights running. No point trying to budget round something that moves like that.\u201d"},{"type":"pick","who":"Sam","text":"\u201cI get what the tracker's for. I'm just not someone who can stick to this sort of thing. Never have been.\u201d","cue":"pushing the blank sheet back across the table","options":["I can't do anything about it","The problem isn't there at all","The problem can't be changed"],"answer":0,"why":"He doesn't deny the money trouble, and he doesn't say the tracker's pointless. He shrinks his own part: he's the kind of person who can't do this, never has been. That's the fourth level, the one that keeps him from starting at all.","traps":{"1":"'Isn't there at all' would mean Sam thinks there's no money problem to look at, but he's just agreed the tracker has a point. The talk would be about whether tracking matters, not about Sam filling anything in.","2":"'Can't be changed' would blame the sheet itself. Sam would be arguing the method is broken rather than naming what's stopping him from using it."},"example":"A choir rehearsal, Wednesday.<br>Singer: \u201cI know the part, I'm just not someone who can hold a harmony. Never could.\u201d<br>Conductor: \u201cYou held it on Tuesday.\u201d"}]},{"level":"Play","label":"Play, the week after","intro":"Harder now. All four parts of the problem are on the table, and each line can seem to fit more than one. Pick the part it's working hardest to shrink.","items":[{"type":"pick","who":"Sam","text":"\u201cI've always been hopeless with money. Runs in the family, Mum's exactly the same. A sheet's not going to change that about me.\u201d","cue":"sliding the tracker under his notebook, not opening it","options":["The problem isn't there at all","The problem doesn't matter much","The problem can't be changed","I personally can't do anything about it"],"answer":3,"why":"He doesn't deny the money trouble, and he isn't calling it trivial. He puts the unchangeable part on himself: hopeless, runs in the family, something fixed in who he is rather than in the sheet. That's the personal-ability level, the one that keeps him from opening the notebook at all.","traps":{"0":"This would mean Sam thinks there's no money problem. But 'hopeless with money' is him naming one directly.","1":"This would treat the money trouble as minor. 'Hopeless' isn't a word anyone uses for something small.","2":"This would blame the sheet or the method. The line isn't about whether a sheet could work for anyone, it's about what Sam is."},"example":"A driving test waiting room, Saturday.<br>Learner: \u201cI've never been able to parallel park. Runs in the family. No instructor's going to fix that.\u201d"},{"type":"pick","who":"Connie","text":"\u201cMy week's never the same twice. Shifts change, the kids' club changes. There's no version of a tracker that fits a week like mine.\u201d","cue":"turning the blank sheet face down","options":["The problem isn't there at all","The problem doesn't matter much","The problem can't be changed","I personally can't do anything about it"],"answer":2,"why":"She isn't denying her spending varies, and she clearly minds, she's explaining it in detail. She puts the unchangeable part on the method itself: no tracker could ever fit a week like hers. That's the changeability level, aimed at the tool rather than at her.","traps":{"0":"This would mean nothing in her week ever changes, which is the opposite of what she's describing.","1":"This would make the mismatch sound minor, but she's spent the whole turn explaining why it matters.","3":"This would put the gap in Connie's own ability, but she's arguing the format is wrong for her situation, not that she personally lacks something."},"example":"A seasonal farm shop, Tuesday.<br>Worker: \u201cHours change every week depending on the crop. No rota template's ever going to hold that.\u201d"}]},{"level":"Analyse","label":"Analyse, explain it","items":[{"type":"pick","who":"Mr Doyle","text":"Sam, pushing the blank sheet to the end of the table: \u201cIt's not like missing one more week is going to matter, is it? Nobody's checking that closely.\u201d Which level of discounting is that, and what would a real step look like?","cue":"sliding the register aside, giving the question room","options":["Existence. He says there's no gap in the tracker at all. A real step would be to check the sheet against his bank app before he answers.","Significance. He says missing one more week doesn't matter much. A real step would be to fill in tonight's numbers from memory before he leaves the room, even half right.","Change possibilities. He says the tracker itself can never work for him. A real step would be to ask for a shorter version with three lines instead of ten.","Personal abilities. He says he has no power to keep up with it. A real step would be to set one phone reminder for Sunday night and see if that's enough."],"answer":1,"why":"Plain words first: he's making a missed week look small. The books call this discounting, and this is the significance level, the one that says a gap doesn't matter much. A real step treats tonight's gap as worth closing now, roughly, rather than waiting for a tidier week that never comes.","traps":{"0":"Existence would say there's no gap to fill, but Sam isn't denying the sheet is blank, he's saying the blank doesn't count.","2":"Change possibilities would turn the tracker into something broken by design. The talk would move to the format instead of tonight's numbers, and nothing would get written down either way.","3":"Personal abilities would make this about what Sam can manage generally, rather than about the size of tonight's gap. He'd be let off filling anything in, since the sheet would already be lost before he tried."},"example":"A library return desk, Thursday.<br>Reader: \u201cIt's only two days late, nobody's going to mind that.\u201d<br>Librarian: \u201cIt's fine, but the fine's already on the account. Pay it today and it won't grow.\u201d"}]}],"debrief":{"nadia":"Every line in that room made some part of the tracker smaller, and each one picked a different spot to do it in. Once you can say which part is shrinking, the next question is almost always the same one: what's one small, real thing that could happen before next Tuesday?","bookTerm":"Discounting","bookNote":"The books call this discounting: ignoring part of a problem without realising it, at one of four levels, which are that it exists, that it matters, that it can change, or that you can do anything about it."},"reflection":{"prompt":"Which part of something did you make smaller this week: whether it existed, whether it mattered, whether it could change, or whether you personally could do anything about it?"},"next":null};</script>
+<script>window.TA_NAV = {"hub":"https://claude.ai/artifact/FzdEytVBojsBteGVMXXV4K","next":null};</script>
+<script>
+(function () {
+  "use strict";
+
+  var GAME = window.TA_GAME;
+  var NAV = window.TA_NAV || { hub: null, next: null };
+  var card = document.getElementById("card");
+  var STORE_KEY = "ta-arena-reflect-" + (GAME ? GAME.slot : "");
+
+  // Content fields may carry <b>, <i> and <br> only. Other tags are dropped, and open
+  // tags are closed at the end of the field, so markup cannot leak into the card.
+  function rich(s) {
+    if (s === undefined || s === null) return "";
+    var open = [];
+    var out = String(s).replace(/<[^<>]*>|</g, function (tok) {
+      if (tok === "<") return "&lt;";
+      var m = /^<\s*(\/?)\s*([a-zA-Z]+)\s*(\/?)\s*>$/.exec(tok);
+      if (!m) return "";
+      var name = m[2].toLowerCase();
+      var closing = m[1] === "/";
+      if (name === "br") return closing ? "" : "<br>";
+      if (name !== "b" && name !== "i") return "";
+      if (closing) {
+        if (open[open.length - 1] === name) { open.pop(); return "</" + name + ">"; }
+        return "";
+      }
+      if (m[3]) return "";
+      open.push(name);
+      return "<" + name + ">";
+    });
+    while (open.length) out += "</" + open.pop() + ">";
+    return out;
+  }
+
+  function esc(s) {
+    return String(s === undefined || s === null ? "" : s)
+      .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;").replace(/'/g, "&#39;");
+  }
+
+  function clamp(v) { return Math.max(0, Math.min(100, v)); }
+
+  function safeUrl(u) {
+    return typeof u === "string" && /^https?:\/\//i.test(u) ? u : null;
+  }
+
+  var VOICE = { parent: "p", adult: "a", child: "c" };
+  function pill(label) {
+    var key = String(label).trim().toLowerCase();
+    var cls = Object.prototype.hasOwnProperty.call(VOICE, key) ? VOICE[key] : "x";
+    return '<span class="pill ' + cls + '">' + rich(label) + '</span>';
+  }
+
+  function exchange(who, text, cue) {
+    return '<div class="exchange"><p class="line"><span class="who">' + rich(who) + '</span>' +
+      rich(text) + '</p>' + (cue ? '<p class="cue">' + rich(cue) + '</p>' : '') + '</div>';
+  }
+
+  function exampleBox(text) {
+    return text ? '<div class="example"><div class="ex-label">Real example</div>' + rich(text) + '</div>' : "";
+  }
+
+  function nextbar(label) {
+    return '<div class="nextbar"><button class="next" type="button">' + label + '</button></div>';
+  }
+
+  function bindNext(fn) {
+    var b = card.querySelector(".nextbar button.next");
+    if (b) b.addEventListener("click", function () { fn(); });
+  }
+
+  function shuffled(n) {
+    var idx = [], i, j, t, attempt;
+    for (i = 0; i < n; i++) idx.push(i);
+    for (attempt = 0; attempt < 20; attempt++) {
+      for (i = n - 1; i > 0; i--) {
+        j = Math.floor(Math.random() * (i + 1));
+        t = idx[i]; idx[i] = idx[j]; idx[j] = t;
+      }
+      if (idx.some(function (v, p) { return v !== p; })) break;
+    }
+    return idx;
+  }
+
+  // Flat list of items across the three rounds; one progress segment each.
+  var ITEMS = [];
+  ((GAME && GAME.rounds) || []).forEach(function (round) {
+    (round.items || []).forEach(function (item, i) {
+      ITEMS.push({ round: round, item: item, first: i === 0 });
+    });
+  });
+  var TOTAL = ITEMS.length;
+
+  function progressHTML(done, current) {
+    var bars = "";
+    for (var i = 0; i < TOTAL; i++) {
+      bars += '<i class="' + (i < done ? "done" : (i === current ? "current" : "")) + '"></i>';
+    }
+    return '<div class="progress" role="progressbar" aria-label="Progress" aria-valuemin="0" aria-valuemax="' +
+      TOTAL + '" aria-valuenow="' + done + '">' + bars + '</div>';
+  }
+
+  function paintProgress(done, current) {
+    var old = card.querySelector(".progress");
+    if (old) old.outerHTML = progressHTML(done, current);
+  }
+
+  function frame(k, body, showIntro) {
+    var rec = ITEMS[k];
+    var intro = showIntro && rec.round.intro ? '<p class="round-intro">' + rich(rec.round.intro) + '</p>' : "";
+    return progressHTML(k, k) + '<div class="round-label" data-lv="' + esc(String(rec.round.label).split(/[ ,]/)[0].toLowerCase()) + '">' + rich(rec.round.label) + '</div>' + intro + body;
+  }
+
+  // ---------- flow ----------
+
+  var state = { screen: "intro", k: 0 };
+
+  function settle() {
+    if (card.getBoundingClientRect().top < 0) card.scrollIntoView({ block: "start" });
+    card.focus({ preventScroll: true });
+  }
+
+  function render() {
+    if (state.screen === "intro") renderIntro();
+    else if (state.screen === "item") renderItem(state.k);
+    else if (state.screen === "debrief") renderDebrief();
+    else if (state.screen === "reflect") renderReflect();
+    else renderEnd();
+    settle();
+  }
+
+  function advance() {
+    if (state.screen === "intro") {
+      state.screen = "item"; state.k = 0;
+    } else if (state.screen === "item") {
+      if (state.k + 1 < TOTAL) state.k += 1;
+      else state.screen = "debrief";
+    } else if (state.screen === "debrief") {
+      state.screen = "reflect";
+    } else if (state.screen === "reflect") {
+      state.screen = "end";
+    }
+    render();
+  }
+
+  function renderItem(k) {
+    var it = ITEMS[k].item;
+    if (it.type === "pick") renderPick(k, it);
+    else if (it.type === "scene") renderScene(k, it);
+    else if (it.type === "sort") { if (it.order === true) renderOrder(k, it); else renderBins(k, it); }
+    else if (it.type === "counter") renderCounter(k, it);
+    else advance();
+  }
+
+  function renderIntro() {
+    var op = GAME.opener || {};
+    var lines = (op.lines || []).map(function (ln) {
+      return '<p class="line"><span class="who">' + rich(ln.who) + '</span>' + rich(ln.text) + '</p>' +
+        (ln.cue ? '<p class="cue">' + rich(ln.cue) + '</p>' : "");
+    }).join("");
+    var rounds = (GAME.rounds || []).map(function (r) {
+      var n = (r.items || []).length;
+      return '<li><span class="dot"></span><span><b>' + rich(r.level) + '</b>, ' + n +
+        (n === 1 ? ' item' : ' items') + '</span></li>';
+    }).join("");
+    card.innerHTML =
+      '<div class="tagline">You · World ' + esc(GAME.world) + ', ' + rich(GAME.worldName) +
+      ' · Game ' + esc(GAME.slot) + '</div>' +
+      '<div class="card-head"><div><h1>' + rich(GAME.title) + '</h1>' +
+      '<p class="deck">' + rich(GAME.concept) + '</p></div>' +
+      '<div class="case-no"><span class="emb-wrap">' + ((window.TA_EMB || {})[String(GAME.world)] || "") + '</span>' + esc(GAME.slot) + '<br>' + rich(GAME.weekName) + '</div></div>' +
+      '<p class="lede"><i>' + rich(op.setting) + '</i></p>' +
+      '<div class="exchange">' + lines + '</div>' +
+      '<div class="ask"><div class="kicker">The question</div><p>' + rich(op.ask) + '</p></div>' +
+      '<div class="rules-box"><div class="round-label">How this one works</div>' +
+      '<ul class="rules-list">' + rounds +
+      '<li><span class="dot"></span><span>Feedback follows every answer, with a real example</span></li>' +
+      '</ul></div>' +
+      nextbar("Start the game →");
+    bindNext(advance);
+  }
+
+  // ---------- pick ----------
+
+  function renderPick(k, it) {
+    var labels = it.options;
+    card.innerHTML = frame(k,
+      exchange(it.who, it.text, it.cue) +
+      '<p class="prompt">' + rich(it.prompt || "Which one is it?") + '</p>' +
+      '<div class="choices">' + labels.map(function (lab, i) {
+        return '<button class="choice" type="button" data-i="' + i + '">' + pill(lab) + '</button>';
+      }).join("") + '</div>', ITEMS[k].first);
+    var buttons = card.querySelectorAll("button.choice");
+    var answered = false;
+    buttons.forEach(function (btn) {
+      btn.addEventListener("click", function () { choose(parseInt(btn.getAttribute("data-i"), 10)); });
+    });
+    function choose(i) {
+      if (answered) return;
+      answered = true;
+      var right = i === it.answer;
+      buttons.forEach(function (b) { b.disabled = true; });
+      buttons[it.answer].classList.add("correct");
+      if (!right) buttons[i].classList.add("wrong");
+      var body = right
+        ? '<div class="why-box ok"><div class="stamp ok">Right call</div>' +
+          '<p class="feedback"><b>Why:</b> ' + rich(it.why) + '</p></div>'
+        : '<div class="why-box cross"><div class="stamp cross">Not quite</div>' +
+          '<p class="feedback"><b>You picked ' + rich(labels[i]) + '.</b> ' +
+          rich((it.traps || {})[String(i)]) + '</p>' +
+          '<p class="feedback"><b>The right call is ' + rich(labels[it.answer]) + '.</b> ' +
+          rich(it.why) + '</p></div>';
+      var fb = document.createElement("div");
+      fb.innerHTML = body + exampleBox(it.example) + nextbar("Continue →");
+      card.appendChild(fb);
+      paintProgress(k + 1, -1);
+      bindNext(advance);
+    }
+  }
+
+  // ---------- scene ----------
+
+  var TAG_LABEL = { best: "Best move", ok: "Fair move", game: "Trap move" };
+  var TAG_CLASS = { best: "ok", ok: "amber", game: "cross" };
+  var TAG_PICK = { best: "correct", ok: "amber", game: "wrong" };
+  var DEFAULT_FALLOUT = {
+    you: "You have nothing left to give in this exchange, so the scene stops here.",
+    them: "The other person has shut the conversation down, so the scene stops here."
+  };
+
+  function meterRow(key, label, v) {
+    return '<div class="meter ' + key + (v <= 0 ? " empty" : "") + '">' +
+      '<span class="name">' + label + '</span>' +
+      '<span class="track"><span class="fill" data-m="' + key + '" style="width:' + v + '%"></span></span>' +
+      '<span class="num" data-n="' + key + '">' + v + '</span></div>';
+  }
+
+  function meterHTML(m) {
+    return '<div class="meters">' + meterRow("you", "You", m.you) + meterRow("them", "Them", m.them) + '</div>';
+  }
+
+  function setMeters(m) {
+    ["you", "them"].forEach(function (key) {
+      var fill = card.querySelector('.fill[data-m="' + key + '"]');
+      var num = card.querySelector('.num[data-n="' + key + '"]');
+      var row = card.querySelector(".meter." + key);
+      if (fill) fill.style.width = m[key] + "%";
+      if (num) num.textContent = String(m[key]);
+      if (row) row.classList.toggle("empty", m[key] <= 0);
+    });
+  }
+
+  function renderScene(k, sc) {
+    var rec = ITEMS[k];
+    var meters = { you: clamp(Number(sc.meters.you)), them: clamp(Number(sc.meters.them)) };
+    var beats = sc.beats || [];
+    var bi = 0;
+
+    function drawBeat() {
+      var b = beats[bi];
+      card.innerHTML = frame(k,
+        '<h2 class="scene-title">' + rich(sc.title) + '</h2>' +
+        '<p class="setting">' + rich(sc.setting) + '</p>' +
+        meterHTML(meters) +
+        '<p class="kicker">Beat ' + (bi + 1) + ' of ' + beats.length + '</p>' +
+        exchange(b.who, b.text, b.cue) +
+        '<div class="choices">' + b.lines.map(function (ln, i) {
+          return '<button class="choice" type="button" data-i="' + i + '">' + rich(ln.text) + '</button>';
+        }).join("") + '</div>', rec.first && bi === 0);
+      var buttons = card.querySelectorAll("button.choice");
+      buttons.forEach(function (btn) {
+        btn.addEventListener("click", function () { pick(parseInt(btn.getAttribute("data-i"), 10), buttons); });
+      });
+    }
+
+    function pick(i, buttons) {
+      if (buttons[0].disabled) return;
+      var ln = beats[bi].lines[i];
+      buttons.forEach(function (x) { x.disabled = true; });
+      buttons[i].classList.add(TAG_PICK[ln.tag] || "amber");
+      meters.you = clamp(meters.you + ln.you);
+      meters.them = clamp(meters.them + ln.them);
+      setMeters(meters);
+      var dead = [];
+      if (meters.you <= 0) dead.push("you");
+      if (meters.them <= 0) dead.push("them");
+      var ends = ln.tag === "game" || dead.length > 0;
+      var cls = TAG_CLASS[ln.tag] || "amber";
+      var html = '<div class="why-box ' + cls + '"><div class="stamp ' + cls + '">' +
+        (TAG_LABEL[ln.tag] || "Move") + '</div>' +
+        '<p class="feedback">' + rich(ln.outcome) + '</p>' +
+        '<p class="feedback"><b>Why:</b> ' + rich(ln.why) + '</p></div>';
+      if (ln.tag === "game") {
+        html += '<div class="example"><div class="ex-label">How it ends</div>' + rich(sc.payoff) + '</div>';
+      }
+      if (dead.length) {
+        var fo = sc.fallout || {};
+        var lines = [];
+        if (dead.indexOf("them") >= 0) lines.push(fo.them || DEFAULT_FALLOUT.them);
+        if (dead.indexOf("you") >= 0) lines.push(fo.you || DEFAULT_FALLOUT.you);
+        html += '<div class="example"><div class="ex-label">How it ends</div>' +
+          lines.map(function (t) { return rich(t); }).join("<br><br>") + '</div>';
+      }
+      var last = ends || bi === beats.length - 1;
+      var fb = document.createElement("div");
+      fb.innerHTML = html + nextbar("Continue →");
+      card.appendChild(fb);
+      bindNext(function () {
+        if (last) { sceneOver(); return; }
+        bi += 1;
+        drawBeat();
+        settle();
+      });
+    }
+
+    function sceneOver() {
+      card.innerHTML = frame(k,
+        '<h2 class="scene-title">' + rich(sc.title) + '</h2>' +
+        '<p class="kicker">Scene over</p>' +
+        meterHTML(meters) +
+        exampleBox(sc.example) +
+        nextbar("Continue →"), false);
+      paintProgress(k + 1, -1);
+      bindNext(advance);
+    }
+
+    drawBeat();
+  }
+
+  // ---------- sort: bins (each card goes in a bin, one after another) ----------
+
+  function renderBins(k, sc) {
+    var items = sc.items || [];
+    var bins = sc.bins || [];
+    var list;
+
+    function finish() {
+      var end = document.createElement("div");
+      end.innerHTML = exampleBox(sc.example) + nextbar("Continue →");
+      card.appendChild(end);
+      paintProgress(k + 1, -1);
+      bindNext(advance);
+    }
+
+    function addCard(i) {
+      var c = items[i];
+      var wrap = document.createElement("div");
+      wrap.className = "sort-item";
+      wrap.innerHTML = '<div class="exchange"><p class="line">' + rich(c.text) + '</p></div>' +
+        '<div class="choices">' + bins.map(function (label, bi) {
+          return '<button class="choice" type="button" data-i="' + bi + '">' + rich(label) + '</button>';
+        }).join("") + '</div>';
+      list.appendChild(wrap);
+      var buttons = wrap.querySelectorAll("button.choice");
+      buttons.forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          if (buttons[0].disabled) return;
+          choose(parseInt(btn.getAttribute("data-i"), 10));
+        });
+      });
+
+      function choose(pick) {
+        buttons.forEach(function (x) { x.disabled = true; });
+        var right = pick === c.answer;
+        buttons[c.answer].classList.add("correct");
+        if (!right) buttons[pick].classList.add("wrong");
+        var fb = document.createElement("div");
+        fb.innerHTML = right
+          ? '<div class="why-box ok"><div class="stamp ok">Right call</div>' +
+            '<p class="feedback"><b>Why:</b> ' + rich(c.why) + '</p></div>'
+          : '<div class="why-box cross"><div class="stamp cross">Not quite</div>' +
+            '<p class="feedback"><b>You picked ' + rich(bins[pick]) + '.</b> It belongs in ' +
+            rich(bins[c.answer]) + '.</p>' +
+            '<p class="feedback"><b>Why:</b> ' + rich(c.why) + '</p></div>';
+        wrap.appendChild(fb);
+        if (i + 1 < items.length) {
+          addCard(i + 1);
+          list.lastElementChild.scrollIntoView({ block: "nearest" });
+        } else {
+          finish();
+        }
+      }
+    }
+
+    card.innerHTML = frame(k, '<p class="prompt">' + rich(sc.prompt) + '</p><div class="sort-list"></div>',
+      ITEMS[k].first);
+    list = card.querySelector(".sort-list");
+    if (items.length) addCard(0);
+  }
+
+  // ---------- sort: order (tap the cards in sequence) ----------
+
+  function renderOrder(k, sc) {
+    var items = sc.items || [];
+    var placed = 0;
+    card.innerHTML = frame(k,
+      '<p class="prompt">' + rich(sc.prompt) + '</p>' +
+      '<ol class="seq" aria-label="Placed so far"></ol>' +
+      '<div class="pool choices">' + shuffled(items.length).map(function (idx) {
+        return '<button class="choice" type="button" data-i="' + idx + '">' + rich(items[idx].text) + '</button>';
+      }).join("") + '</div>' +
+      '<div class="order-fb"></div>', ITEMS[k].first);
+    var seq = card.querySelector(".seq");
+    var fbBox = card.querySelector(".order-fb");
+
+    card.querySelectorAll(".pool button.choice").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        tap(parseInt(btn.getAttribute("data-i"), 10), btn);
+      });
+    });
+
+    function tap(idx, btn) {
+      if (idx === placed) {
+        var li = document.createElement("li");
+        li.innerHTML = '<span class="n">' + (placed + 1) + '</span><span><span class="ct">' +
+          rich(items[idx].text) + '</span><span class="why">' + rich(items[idx].why) + '</span></span>';
+        seq.appendChild(li);
+        placed += 1;
+        btn.remove();
+        fbBox.innerHTML = "";
+        if (placed === items.length) {
+          fbBox.innerHTML = exampleBox(sc.example) + nextbar("Continue →");
+          paintProgress(k + 1, -1);
+          bindNext(advance);
+        }
+      } else {
+        fbBox.innerHTML = '<div class="why-box amber"><div class="stamp amber">Not yet</div>' +
+          '<p class="feedback">' + rich(items[placed].why) + '</p></div>';
+      }
+    }
+  }
+
+  // ---------- counter ----------
+
+  function renderCounter(k, c) {
+    var palette = c.palette || [];
+    var used = palette.map(function () { return false; });
+    var total = 0, picks = 0, sent = false;
+
+    card.innerHTML = frame(k,
+      '<p class="prompt">' + rich(c.prompt) + '</p>' +
+      '<div class="total"><span>Total</span><b data-total>0</b>' +
+      '<span>Target ' + esc(c.target) + ', within ' + esc(c.tolerance) + '</span></div>' +
+      '<div class="band" aria-hidden="true"><span class="fill" data-fill></span></div>' +
+      '<p class="kicker">Picks used: <span data-picks>0</span> of ' + esc(c.maxPicks) + '</p>' +
+      '<div class="choices">' + palette.map(function (p, i) {
+        return '<button class="choice pal" type="button" data-i="' + i + '"><span>' + rich(p.text) +
+          '</span><span class="val">+' + esc(p.value) + '</span></button>';
+      }).join("") + '</div>' +
+      '<div class="counter-actions"><button class="ghost" type="button" data-reset>Reset</button>' +
+      '<button class="next" type="button" data-send>Send</button></div>' +
+      '<div class="counter-fb"></div>', ITEMS[k].first);
+
+    var totalEl = card.querySelector("[data-total]");
+    var fillEl = card.querySelector("[data-fill]");
+    var picksEl = card.querySelector("[data-picks]");
+    var sendBtn = card.querySelector("[data-send]");
+    var resetBtn = card.querySelector("[data-reset]");
+    var palBtns = card.querySelectorAll("button.pal");
+
+    function paint() {
+      totalEl.textContent = String(total);
+      picksEl.textContent = String(picks);
+      fillEl.style.width = Math.min(100, Math.round(total / c.target * 100)) + "%";
+      fillEl.classList.toggle("over", total > c.target + c.tolerance);
+      palBtns.forEach(function (b, i) {
+        b.disabled = sent || used[i] || picks >= c.maxPicks;
+      });
+      sendBtn.disabled = sent || picks < 1;
+      resetBtn.disabled = sent || picks < 1;
+    }
+
+    palBtns.forEach(function (b) {
+      b.addEventListener("click", function () {
+        var i = parseInt(b.getAttribute("data-i"), 10);
+        if (sent || used[i] || picks >= c.maxPicks) return;
+        used[i] = true;
+        picks += 1;
+        total += palette[i].value;
+        paint();
+      });
+    });
+
+    resetBtn.addEventListener("click", function () {
+      if (sent) return;
+      used = palette.map(function () { return false; });
+      total = 0;
+      picks = 0;
+      paint();
+    });
+
+    sendBtn.addEventListener("click", function () {
+      if (sent || picks < 1) return;
+      sent = true;
+      paint();
+      var hit = Math.abs(total - c.target) <= c.tolerance;
+      var under = !hit && total < c.target;
+      var msg = hit ? c.hitMsg : (under ? c.underMsg : c.overMsg);
+      var cls = hit ? "ok" : (under ? "amber" : "cross");
+      var fb = document.createElement("div");
+      fb.innerHTML = '<div class="why-box ' + cls + '"><div class="stamp ' + cls + '">' +
+        (hit ? "Right call" : "Not quite") + '</div>' +
+        '<p class="feedback">' + rich(msg) + '</p>' +
+        '<p class="feedback"><b>Why:</b> ' + rich(c.why) + '</p></div>' +
+        nextbar("Continue →");
+      card.querySelector(".counter-fb").appendChild(fb);
+      paintProgress(k + 1, -1);
+      bindNext(advance);
+    });
+
+    paint();
+  }
+
+  // ---------- debrief, reflection, end ----------
+
+  function renderDebrief() {
+    var d = GAME.debrief || {};
+    card.innerHTML = progressHTML(TOTAL, -1) +
+      '<div class="round-label" data-lv="debrief">Debrief</div>' +
+      '<h1 class="h2">What Nadia would say</h1>' +
+      '<p class="feedback">' + rich(d.nadia) + '</p>' +
+      '<div class="why-box neutral"><p class="feedback"><b>' +
+      rich(d.bookTerm || GAME.bookTerm) + '</b></p>' +
+      '<p class="feedback">' + rich(d.bookNote || GAME.bookIdea) + '</p></div>' +
+      nextbar("Continue →");
+    bindNext(advance);
+  }
+
+  // Storage can be blocked or missing, so every access is guarded.
+  function readStore() {
+    try { return window.localStorage.getItem(STORE_KEY) || ""; } catch (e) { return ""; }
+  }
+
+  function writeStore(value) {
+    try { window.localStorage.setItem(STORE_KEY, value); } catch (e) { /* blocked: the page still works */ }
+  }
+
+  function renderReflect() {
+    var r = GAME.reflection || {};
+    card.innerHTML = progressHTML(TOTAL, -1) +
+      '<div class="reflect-tag">Your turn</div>' +
+      '<p class="prompt">' + rich(r.prompt) + '</p>' +
+      '<textarea class="reflect-box" aria-label="Your reflection" ' +
+      'placeholder="A few lines is plenty. This stays on your device, and nobody else sees it."></textarea>' +
+      nextbar("Continue →");
+    var box = card.querySelector("textarea");
+    box.value = readStore();
+    box.addEventListener("input", function () { writeStore(box.value); });
+    bindNext(advance);
+  }
+
+  function worldHub() {
+    var h = safeUrl(NAV.hub);
+    return h && GAME && GAME.world ? h.replace(/#.*$/, "") + "#world-" + GAME.world : h;
+  }
+
+  function renderEnd() {
+    var hub = worldHub();
+    var nxt = NAV.next || null;
+    var links = hub ? '<a class="next" href="' + esc(hub) + '">Back to the world</a>' : "";
+    if (nxt) {
+      var nxtUrl = safeUrl(nxt.url);
+      links += nxtUrl
+        ? '<a class="next" href="' + esc(nxtUrl) + '">Next game: ' +
+          rich(nxt.title || ("Game " + nxt.slot)) + ' →</a>'
+        : '<p class="next-soon">Next game opens soon</p>';
+    }
+    card.innerHTML = progressHTML(TOTAL, -1) +
+      '<div class="end-emblem">' + ((window.TA_EMB || {})[String(GAME.world)] || "") + '</div><div class="end-badge">Case closed</div>' +
+      '<h1 class="h2">Game ' + esc(GAME.slot) + ' is done.</h1>' +
+      '<p class="feedback">' + rich(GAME.concept) + '</p>' +
+      '<div class="source"><b>From:</b> ' + rich(GAME.bookSource) + '</div>' +
+      '<div class="nextbar end-nav">' + links + '</div>';
+  }
+
+  // ---------- start ----------
+
+  function init() {
+    var series = document.getElementById("series");
+    var hubLink = document.getElementById("hubLink");
+    if (!GAME || !GAME.rounds) {
+      series.textContent = "You";
+      card.innerHTML = '<h1 class="h2">This game could not load.</h1>';
+      return;
+    }
+    series.innerHTML = '<span class="emb-wrap">' + ((window.TA_EMB || {})[String(GAME.world)] || "") + '</span>You <small>· World ' + esc(GAME.world) + ' · Game ' + esc(GAME.slot) + '</small>';
+    var hub = worldHub();
+    if (hub) {
+      hubLink.textContent = "World map";
+      hubLink.setAttribute("href", hub);
+      hubLink.hidden = false;
+    }
+    render();
+  }
+
+  init();
+})();
+</script>
+
+<script>
+/* Visual refresh: world colour, synthesized sound (no audio files) and trap shake. Presentation only. */
+(function () {
+  "use strict";
+  var G = window.TA_GAME;
+  if (G && G.world) document.documentElement.setAttribute("data-world", String(G.world));
+  var card = document.getElementById("card"), btn = document.getElementById("sfx");
+  var on = true, ctx = null;
+  try { on = window.localStorage.getItem("ta-sfx") !== "off"; } catch (e) {}
+  function label() { btn.textContent = on ? "SFX ON" : "SFX OFF"; btn.setAttribute("aria-pressed", on ? "true" : "false"); }
+  label();
+  btn.addEventListener("click", function () {
+    on = !on; label();
+    try { window.localStorage.setItem("ta-sfx", on ? "on" : "off"); } catch (e) {}
+  });
+  function audio() {
+    if (!ctx) { var AC = window.AudioContext || window.webkitAudioContext; if (AC) { try { ctx = new AC(); } catch (e) {} } }
+    if (ctx && ctx.state === "suspended") ctx.resume();
+    return ctx;
+  }
+  function tone(type, f0, f1, t0, dur, vol) {
+    var c = audio(); if (!c || !on) return;
+    var o = c.createOscillator(), g = c.createGain(), t = c.currentTime + t0;
+    o.type = type; o.frequency.setValueAtTime(f0, t);
+    if (f1 !== f0) o.frequency.exponentialRampToValueAtTime(f1, t + dur);
+    g.gain.setValueAtTime(vol, t); g.gain.exponentialRampToValueAtTime(0.0001, t + dur);
+    o.connect(g); g.connect(c.destination); o.start(t); o.stop(t + dur + 0.02);
+  }
+  function tap() { tone("sine", 440, 220, 0, 0.05, 0.12); }
+  function success() { [523.25, 659.25, 783.99, 1046.5].forEach(function (f, i) { tone("triangle", f, f, i * 0.08, 0.18, 0.12); }); }
+  function thud() { tone("sawtooth", 140, 55, 0, 0.28, 0.12); }
+  function victory() { [523.25, 659.25, 783.99, 1046.5, 1318.5].forEach(function (f, i) { tone("triangle", f, f, i * 0.1, 0.3, 0.12); }); }
+  document.addEventListener("click", function (e) {
+    if (e.target.closest && e.target.closest("button.choice, button.next, button.ghost")) tap();
+  }, true);
+  function shake() {
+    var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduce) return;
+    card.classList.remove("shake"); void card.offsetWidth; card.classList.add("shake");
+    setTimeout(function () { card.classList.remove("shake"); }, 450);
+  }
+  new MutationObserver(function (muts) {
+    muts.forEach(function (m) {
+      m.addedNodes.forEach(function (n) {
+        if (n.nodeType !== 1) return;
+        var q = function (sel) { return n.matches(sel) || n.querySelector(sel); };
+        if (q(".end-badge")) victory();
+        else if (q(".why-box.ok")) success();
+        else if (q(".why-box.cross")) { thud(); shake(); }
+      });
+    });
+  }).observe(card, { childList: true, subtree: true });
+})();
+</script>
+</body>
+</html>

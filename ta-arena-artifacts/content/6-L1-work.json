@@ -1,0 +1,188 @@
+{
+  "slot": "6.L1",
+  "setting": "Work",
+  "title": "The Release Tell",
+  "world": 6,
+  "worldName": "The Story You Wrote",
+  "week": 6,
+  "weekName": "The Story You Wrote",
+  "mechanic": "Diagnose",
+  "concept": "After this one you can hear which Must is running in a Halden scene, by reading what someone says against what their hands do next.",
+  "bookTerm": "Drivers",
+  "bookIdea": "Drivers are five Musts, be perfect, please others, try hard, be strong and hurry up, each a condition for feeling OK that shows in a person's words, tone and body.",
+  "bookSource": "TA Today, ch. 16",
+  "opener": {
+    "setting": "Monday, 8:58am. Halden, the team room. The release is due at nine and the laptop screen has gone red twice already.",
+    "lines": [
+      { "who": "Daniel", "text": "“Two minutes. We ship now and fix anything small after.”", "cue": "already closing the laptop lid before anyone answers" },
+      { "who": "Clara", "text": "“I've checked the client slide four times. Give me one more look.”", "cue": "scrolling back to the top of the deck, not glancing up" }
+    ],
+    "ask": "Name the Must behind each short clip. Sometimes the words and the hands disagree, so check both."
+  },
+  "rounds": [
+    {
+      "level": "Spot",
+      "label": "Spot, round 1",
+      "intro": "Each clip lasts a few seconds: what someone says, and what their hands do next. Name the Must it runs on. The five Musts are be perfect, please others, try hard, be strong and hurry up.",
+      "items": [
+        {
+          "type": "pick",
+          "who": "Daniel",
+          "text": "“Two minutes. We ship now and fix anything small after.”",
+          "cue": "already closing the laptop lid before anyone answers",
+          "options": ["Hurry up", "Be perfect", "Please others"],
+          "answer": 0,
+          "why": "The clock is the only thing in the sentence, and the lid shuts before the room has agreed on anything. The Must is hurry up: the morning is a race, and he moves to the next step before the last one is checked.",
+          "traps": {
+            "1": "It would sound like “wait, check the client slide again, make sure it's exact.” Nothing here is about getting it exact. The lid closes on a question nobody's finished answering.",
+            "2": "It would sound like “whatever the team thinks, I'll go with that.” The room doesn't get a vote here. He decides, and the laptop shuts."
+          },
+          "example": "A kitchen, 7:58am. A father grabs two lunchboxes without checking what's inside and says, “In the car, now, we'll sort it on the way.”"
+        },
+        {
+          "type": "pick",
+          "who": "Clara",
+          "text": "“I've checked the client slide four times. Give me one more look.”",
+          "cue": "scrolling back to the top of the deck, not glancing up",
+          "options": ["Be perfect", "Try hard", "Please others"],
+          "answer": 0,
+          "why": "Four checks and she still wants one more: the standard is the point, not the tiredness of trying. The Must is be perfect, and the deck only feels safe once it's exact.",
+          "traps": {
+            "1": "It would sound like “I'm trying, I'll have it in a minute.” She isn't exhausting herself hunting for an answer. She knows what she's checking for, and keeps finding small things to correct.",
+            "2": "It would sound like “whatever you all think is fine with me.” Nobody else's comfort is in this line. The slide has to meet her own standard, not the room's."
+          },
+          "example": "A tailor's shop, Saturday morning. The tailor unpicks a hem that looks straight to everyone else and says, “No. It has to sit flat, or it isn't finished.”"
+        },
+        {
+          "type": "pick",
+          "who": "Sam",
+          "text": "“I don't mind, honestly, don't swap with anyone, I'll just take both tickets.”",
+          "cue": "already standing to collect the second one before Daniel's finished asking",
+          "options": ["Please others", "Try hard", "Hurry up"],
+          "answer": 0,
+          "why": "The whole line is about nobody else having to be inconvenienced. Standing up before the ask is finished is the tell: being no bother is the Must, and the second ticket is the price of it.",
+          "traps": {
+            "1": "It would sound like “give me a minute, I'll work out how to split these fairly.” There's no working-out here, only an instant yes.",
+            "2": "It would sound like “quick, let's just decide, we're wasting time.” Nothing about the clock is in this line. It's about who carries the load."
+          },
+          "example": "A school car park, 3:15pm. A parent says, “No, no, I'll take your two as well, it's one trip either way,” before the other mother's finished apologising."
+        },
+        {
+          "type": "pick",
+          "who": "Daniel",
+          "text": "“I'm fine. Go home. I'll sort the rollback myself.”",
+          "cue": "staying at his desk after the room has emptied, laptop still open, the office quiet around him",
+          "options": ["Be strong", "Please others", "Hurry up"],
+          "answer": 0,
+          "why": "Everyone else has gone, and he's chosen to be the one left holding the broken release alone. The Must is be strong: asking for help would cost more than the extra hour does.",
+          "traps": {
+            "1": "It would sound like “you lot go, whatever's easiest for you.” The line sounds similar, but the content is different: this is about not needing anyone, not about sparing them.",
+            "2": "It would sound like “quick, let's get this fixed and go.” There's no rush in the clip. He's settling in for a long, solitary fix, not racing it."
+          },
+          "example": "A flat tyre on a motorway slip road, 11pm. A man waves off a passing driver who's stopped to help: “I've got it. You get on.” He's still there at midnight."
+        }
+      ]
+    },
+    {
+      "level": "Play",
+      "label": "Play, the week in motion",
+      "intro": "These are harder. The words sound generous or easy, and the hands say something else. Ask which one the person is actually holding on to.",
+      "items": [
+        {
+          "type": "pick",
+          "who": "Daniel",
+          "text": "“Whatever you lot reckon. No pressure from me either way.”",
+          "cue": "already rewriting the whole release plan on the whiteboard before anyone's answered",
+          "options": ["Please others", "Be strong", "Hurry up", "Try hard"],
+          "answer": 1,
+          "why": "The words hand the decision to the room. The marker doesn't wait for the room's answer: the plan gets rewritten solo, in his hand, before anyone's spoken. The Must is be strong: he says it's up to everyone, then makes sure it isn't.",
+          "traps": {
+            "0": "It would sound like “let me think what would suit the team,” followed by actually asking the team. Nothing here gets asked. The whiteboard fills in without a single answer from the room.",
+            "2": "It would sound like “quick, we need a plan now, forget asking around.” The clip has no urgency in it. He has time to fill a whole whiteboard; what he doesn't have is someone else's hand on the marker.",
+            "3": "It would sound like “let me have a go, tell me if I've got the order wrong.” He isn't trying anything out loud here. He's already decided, and the marker is just catching up."
+          },
+          "example": "A family kitchen, Sunday lunch. A grandmother says, “Cook it however you like, love,” then takes the spoon back twice before the gravy's done."
+        },
+        {
+          "type": "pick",
+          "who": "Omar",
+          "text": "“It's nothing, really, I just rebuilt the sheet overnight. It's fine now.”",
+          "cue": "already opening three more tabs to fix things nobody's asked about, before anyone's said thank you",
+          "options": ["Please others", "Be perfect", "Hurry up", "Try hard"],
+          "answer": 1,
+          "why": "Calling it nothing sounds modest. The three extra tabs say otherwise: he can't leave it at good enough, so he keeps going past the actual ask. The Must is be perfect, carried lightly enough to pass as just being thorough.",
+          "traps": {
+            "0": "It would sound like “whatever helps the team most, that's what I did.” The extra fixes aren't aimed at anyone's comfort. Nobody asked for them; he's answering to his own sense of finished.",
+            "2": "It would sound like “quick fix, that'll do for now, I'll tidy it properly later.” He isn't rushing anything. He's adding more care than the moment called for.",
+            "3": "It would sound like “I had a go, let me know if it's not quite right.” There's no asking for a check here. The work is already done, three times over, before the thanks arrives."
+          },
+          "example": "A neighbour fixes next door's fence in an afternoon, then quietly replaces two more posts that weren't broken, and says, “Oh, that was nothing, don't mention it.”"
+        },
+        {
+          "type": "pick",
+          "who": "Sam",
+          "text": "“Whatever suits the team, I'll just sort my bit later.”",
+          "cue": "three sticky notes on the monitor, each one saying 'fix later', the oldest one dated last Tuesday",
+          "options": ["Please others", "Try hard", "Hurry up", "Be strong"],
+          "answer": 1,
+          "why": "The words are generous, and the stickies tell the real story: the commitment gets made again and again, and the actual finishing never quite arrives. The Must is try hard: the trying is the point, not the result.",
+          "traps": {
+            "0": "It would sound like this and stop there, with the bit actually sorted by the end of the day. Here, 'later' has already lasted a week, which is a different pattern from simply being accommodating.",
+            "2": "It would sound like “quick, let me just bang this out now.” Nothing gets banged out. The notes just accumulate.",
+            "3": "It would sound like “I'll manage my bit alone, don't worry about me.” He isn't refusing help here. He's promising a result that keeps not showing up."
+          },
+          "example": "A gym membership renewed every January, with the same line each year: 'this is the year I actually go properly.' The card stays in the drawer by March."
+        }
+      ]
+    },
+    {
+      "level": "Analyse",
+      "label": "Analyse, explain it",
+      "items": [
+        {
+          "type": "pick",
+          "who": "You",
+          "text": "Omar says 'it's nothing' and opens three more tabs nobody asked for, before the thanks has landed. Which explanation fits best?",
+          "cue": "watching from the next desk, tea going cold",
+          "options": [
+            "He runs please others: the extra fixes are for the team's comfort.",
+            "He runs be perfect: the extra fixes answer to his own standard, not the ask.",
+            "He runs hurry up: the fixes are rushed through before anyone notices."
+          ],
+          "answer": 1,
+          "why": "The books call this a driver, and this one is be perfect. The fixes go past what anyone asked for, which points at his own line for finished, not at pleasing the room. Please others would stop once the team was comfortable. Hurry up would show in speed, not in extra care.",
+          "traps": {
+            "0": "The team would read this as kindness and nothing more, and the pattern, three tabs every time something's handed to him, would stay unnoticed.",
+            "2": "The talk would turn to how fast he works, and the real thing running underneath, a standard that's never quite satisfied, would go unnamed."
+          },
+          "example": "A volunteer at a food bank restocks the shelves twice after the shift's officially over, 'just to get the labels facing the right way.'"
+        },
+        {
+          "type": "pick",
+          "who": "You",
+          "text": "Daniel shouts when the release fails, then sends everyone home and stays to fix the rollback alone. Which pair of Musts does that pattern show?",
+          "cue": "the office empty, one desk lamp still on",
+          "options": [
+            "Hurry up, then be strong",
+            "Please others, then try hard",
+            "Be perfect, then hurry up"
+          ],
+          "answer": 0,
+          "why": "The books call these drivers, and Daniel runs two. Hurry up explains the race to ship before the checks are done. Be strong explains why he won't let anyone else sit with the broken release once it's failed. One shows in his speed, the other in who's left in the room.",
+          "traps": {
+            "1": "Nothing in the pattern is about being liked, and nothing in it is a promise that never gets kept. He ships fast and he fixes it himself; neither Must fits.",
+            "2": "Be perfect would mean checking before it goes out. He doesn't check first; he ships and deals with the damage after, alone."
+          },
+          "example": "A father drives through a storm without slowing down, then changes the flat tyre himself in the rain, waving off the two cars that stop."
+        }
+      ]
+    }
+  ],
+  "debrief": {
+    "nadia": "Five Musts, and each one can pass as a virtue on the Halden floor. Speed reads as drive. Standards read as professionalism. Listen for what the hands do once the sentence has finished, because that's usually where the real Must gives itself away.",
+    "bookTerm": "Drivers",
+    "bookNote": "The books call these drivers: five Musts, be perfect, please others, try hard, be strong and hurry up, each a condition for feeling OK that shows in a person's words, tone and body."
+  },
+  "reflection": { "prompt": "Which Must did work pull out of you this week, and what did your hands do in the minute after you said the reassuring thing?" },
+  "next": null
+}

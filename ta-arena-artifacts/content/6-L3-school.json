@@ -1,0 +1,188 @@
+{
+  "slot": "6.L3",
+  "setting": "School & College",
+  "title": "Half the Reading",
+  "world": 6,
+  "worldName": "The Story You Wrote",
+  "week": 6,
+  "weekName": "The Story You Wrote",
+  "mechanic": "Diagnose",
+  "concept": "After this one you can hear a classmate's Must in how they take on work, promise a deadline or wave off help, in a room with no boss and no flatmate history to read from.",
+  "bookTerm": "Drivers",
+  "bookIdea": "Drivers are five Musts, be perfect, please others, try hard, be strong and hurry up, each a condition for feeling OK, that show up just as clearly among strangers as among people who already know you.",
+  "bookSource": "TA Today, ch. 16",
+  "opener": {
+    "setting": "Tuesday, 7:02pm. The community hall, room 4, Sam's evening course. Six chairs in a loose circle, two minutes before the tutor starts.",
+    "lines": [
+      { "who": "Mr Doyle", "text": "“Sam, did you get to the last two chapters?”", "cue": "pen hovering over the register, checking the count of names twice before writing anything down" },
+      { "who": "Sam", "text": "“Mostly. I skimmed most of it, I'll have it properly done by Thursday, promise.”", "cue": "already offering to redo the whole group's handout before anyone's asked" }
+    ],
+    "ask": "Name the Must behind each person's hands tonight. Watch what they do, not just what they say."
+  },
+  "rounds": [
+    {
+      "level": "Spot",
+      "label": "Spot, round 1",
+      "intro": "A room of near-strangers, six weeks into a course. Each person's Must shows up fast once you know where to look. The five Musts are be perfect, please others, try hard, be strong and hurry up.",
+      "items": [
+        {
+          "type": "pick",
+          "who": "Mr Doyle",
+          "text": "“Sam, did you get to the last two chapters?”",
+          "cue": "pen hovering over the register, checking the count of names twice before writing anything down",
+          "options": ["Be perfect", "Hurry up", "Please others"],
+          "answer": 0,
+          "why": "The question is ordinary. The pen isn't: he checks the same count twice before he'll trust it enough to write it down. The Must is be perfect, small and steady, the kind that just looks like a careful tutor.",
+          "traps": {
+            "1": "It would sound like 'quick, let's get started, never mind the register.' Nothing about this is rushed. He takes the extra second precisely because getting the count wrong would bother him.",
+            "2": "It would sound like 'don't worry if you're behind, no pressure.' The question is plain and not softened at all. He isn't managing anyone's comfort, he's checking a number."
+          },
+          "example": "A librarian scans the returns twice before locking the trolley, even though nobody but her will ever check the count."
+        },
+        {
+          "type": "pick",
+          "who": "Sam",
+          "text": "“Mostly. I skimmed most of it, I'll have it properly done by Thursday, promise. Oh, and I'll redo the group's handout too, so nobody else has to.”",
+          "cue": "already standing to collect everyone's copies before anyone's agreed to the offer",
+          "options": ["Please others", "Try hard", "Be strong"],
+          "answer": 0,
+          "why": "Nobody asked him to take on the handout. He offers it so the rest of the group doesn't have to carry anything extra. The Must is please others: being no trouble, and taking on extra trouble himself, is how the evening stays easy for everyone but him.",
+          "traps": {
+            "1": "It would sound like 'I keep meaning to get to it, I'm trying.' There's effort in his promise, but the handout offer isn't about his own struggle. It's aimed outward, at sparing the group.",
+            "2": "It would sound like 'I don't need anyone's copies, I'll just redo my own and move on.' He isn't refusing anyone's help here. He's volunteering to carry theirs."
+          },
+          "example": "A new member of a choir offers to print the sheet music for the whole row, before anyone's finished asking who already has a copy."
+        },
+        {
+          "type": "pick",
+          "who": "Ruth",
+          "text": "“I can't take on anyone else's section. I'll do mine, and that's what I'll hand in.”",
+          "cue": "closing her folder once she's said it, not looking round the circle for agreement",
+          "options": ["Be strong", "Please others", "Be perfect"],
+          "answer": 0,
+          "why": "She states the limit once and doesn't check whether the room's happy with it. The Must is be strong: she'd rather hold the line alone than ask the group to carry any of it with her, or let anyone carry it for her.",
+          "traps": {
+            "1": "It would sound like 'whatever's easiest for everyone, I'll fit around that.' She isn't fitting around the room here. She's drawing a line and keeping it.",
+            "2": "It would sound like 'my section has to be exactly right or I'm not handing it in.' Nothing here is about the standard of the work. It's about where the boundary sits."
+          },
+          "example": "A volunteer coach says, 'I'll run this one session alone, I don't need a second pair of hands,' and turns down three offers to help across the term."
+        },
+        {
+          "type": "pick",
+          "who": "Felix",
+          "text": "“Right, that's the exercise, next page, come on, who's got an answer.”",
+          "cue": "already turning the page before half the room has written a full sentence",
+          "options": ["Hurry up", "Be perfect", "Please others"],
+          "answer": 0,
+          "why": "The page turns before the room's finished the last one. The Must is hurry up: getting through the material matters more, to him, than actually catching up with it himself.",
+          "traps": {
+            "1": "It would sound like 'wait, let's check everyone's got this exactly right before we move on.' Nobody's checking anything here. The pace is the whole point.",
+            "2": "It would sound like 'don't worry if you're not ready, we'll wait.' There's no waiting in this line at all."
+          },
+          "example": "A Sunday five-a-side captain shouts 'next goal, next goal' before the team's even reset from the last one."
+        }
+      ]
+    },
+    {
+      "level": "Play",
+      "label": "Play, the week in motion",
+      "intro": "Harder now. Sam's words sound generous, and the follow-through tells a different story. Watch what's missing, not just what's said.",
+      "items": [
+        {
+          "type": "pick",
+          "who": "Sam",
+          "text": "“I've basically finished the reading, just tidying up the last bit now.”",
+          "cue": "the workbook open at chapter one, three weeks of blank pages after it",
+          "options": ["Try hard", "Please others", "Be perfect", "Hurry up"],
+          "answer": 0,
+          "why": "Three weeks of blank pages is not 'the last bit'. The Must is try hard: the claim of nearly-there effort is the comfortable place to stand, and standing there is easier than finishing.",
+          "traps": {
+            "1": "It would sound like 'don't worry about me, I'll catch up in my own time.' The line here isn't aimed at anyone else's comfort. It's a claim about his own progress that the workbook doesn't back up.",
+            "2": "It would sound like 'it has to be exactly right before I call it done.' There's no standard being chased here, only a claim of being nearly finished that keeps not arriving.",
+            "3": "It would sound like 'quick, let me rush through the rest tonight.' Nothing about the blank pages suggests speed. They suggest the reading simply hasn't happened yet."
+          },
+          "example": "Someone says their tax return is 'basically sorted' every week from April to December, and opens the folder exactly twice."
+        },
+        {
+          "type": "pick",
+          "who": "Sam",
+          "text": "“I'll take the harder presentation slot, don't worry, someone's got to.”",
+          "cue": "agreeing before anyone's finished asking, notebook already shut, no notes taken for his half",
+          "options": ["Please others", "Try hard", "Be strong", "Hurry up"],
+          "answer": 0,
+          "why": "Nobody's finished the sentence before he's said yes. The Must is please others: sparing the group an awkward silence matters more, in the moment, than whether he's actually prepared to do it.",
+          "traps": {
+            "1": "It would sound like 'I'm going to give it a proper go this time.' He isn't talking about his own effort here. He's talking about the room not having to sit with an unfilled slot.",
+            "2": "It would sound like 'I don't need help with this, I'll manage alone.' Nobody offered to help in the first place. He's volunteering, not refusing anything.",
+            "3": "It would sound like 'quick, let's just decide now and move on.' The notebook shutting isn't about speed. It's about not wanting to look like he's thinking too hard before saying yes."
+          },
+          "example": "At a family gathering, someone says 'I'll give the toast, it's fine,' thirty seconds after the groom's dad asks if anyone would mind doing it, with nothing prepared."
+        },
+        {
+          "type": "pick",
+          "who": "Sam",
+          "text": "“I'll sort covering Thursday, don't worry about it.”",
+          "cue": "already saying it before checking his phone, which has a work shift and the gym both booked for Thursday evening",
+          "options": ["Try hard", "Please others", "Hurry up", "Be strong"],
+          "answer": 0,
+          "why": "The offer comes out before the calendar's even been looked at. The Must is try hard: the commitment is real and sincerely meant in the moment, and the follow-through depends on a Thursday that was never actually free.",
+          "traps": {
+            "1": "It would sound like this, and then actually clear the Thursday to do it. Here the offer is made without checking whether it's possible, which is the harder-to-spot layer underneath the kindness.",
+            "2": "It would sound like 'quick, I'll just say yes and work it out later.' The speed isn't the issue. The issue is a promise made without the information needed to keep it.",
+            "3": "It would sound like 'I don't need anyone's help covering this, I'll manage it myself, don't ask.' Nobody needs managing alone here. He's taking something on for someone else, not defending a boundary."
+          },
+          "example": "A friend agrees to look after someone's cat 'no bother at all' before remembering he's away that whole week himself."
+        }
+      ]
+    },
+    {
+      "level": "Analyse",
+      "label": "Analyse, explain it",
+      "items": [
+        {
+          "type": "pick",
+          "who": "You",
+          "text": "Sam claims the reading is nearly done with three blank weeks behind it, then offers to cover Thursday before checking his own calendar. Which pair of Musts explains the pattern?",
+          "cue": "the register closed, six chairs folded against the wall",
+          "options": [
+            "Please others, with try hard underneath",
+            "Be perfect, with hurry up underneath",
+            "Be strong, with please others underneath"
+          ],
+          "answer": 0,
+          "why": "The books call these drivers, and Sam carries two. Please others shows on the surface: the quick yes, the offer to cover, the handout nobody asked for. Try hard runs underneath it: the sincere claim of being nearly there, made and remade, without the reading or the Thursday ever actually clearing.",
+          "traps": {
+            "1": "Nothing about Sam is checking for exactness, and nothing is racing a clock. His pattern is about saying yes and meaning it, not about speed or standards.",
+            "2": "Be strong would mean refusing help or going it alone. Sam does the opposite every time: he takes more on, for other people, rather than less."
+          },
+          "example": "A neighbour says yes to watering three gardens 'easily' while his own tomatoes die from never quite getting to them."
+        },
+        {
+          "type": "pick",
+          "who": "You",
+          "text": "Ruth says once, plainly, that she'll do her own section and nothing more, then closes her folder. Which explanation fits that moment best?",
+          "cue": "the room quiet for a second after she says it",
+          "options": [
+            "She runs be strong: the line gets stated once, and she doesn't ask the room to carry any of it with her.",
+            "She runs please others: she's making sure nobody feels pressured by her limit.",
+            "She runs try hard: she's not sure the section will be good enough."
+          ],
+          "answer": 0,
+          "why": "The books call this a driver too, and hers is be strong. The tell is in what she doesn't do: no checking whether the room's happy, no softening it, no asking for help with her own part either. The line is stated once and held.",
+          "traps": {
+            "1": "Please others would sound like a line built around the group's comfort: 'as long as that's alright with everyone.' Hers isn't built that way. It's a flat statement, not a question.",
+            "2": "Try hard would show in hedging about the standard of the work. Nothing here is about whether the section is good enough, only about where her own limit sits."
+          },
+          "example": "A single parent at a school fundraiser says, 'I can do the cake stall, not the raffle as well,' and doesn't repeat herself when someone hints she could probably manage both."
+        }
+      ]
+    }
+  ],
+  "debrief": {
+    "nadia": "Six weeks into a course, and strangers already show their Musts as clearly as anyone at home does. Sam's yes arrives before the question's finished. Ruth's no arrives once and stays. Neither one is really about the class, and both of them were learned somewhere else, long before Tuesday evenings and a borrowed hall.",
+    "bookTerm": "Drivers",
+    "bookNote": "The books call these drivers: five Musts, be perfect, please others, try hard, be strong and hurry up, each a condition for feeling OK, carried into any room a person walks into."
+  },
+  "reflection": { "prompt": "Think of a group you've only known a few weeks, a class, a team, a new flat-share. Which Must did you bring in with you, before anyone there had any history with you at all?" },
+  "next": null
+}

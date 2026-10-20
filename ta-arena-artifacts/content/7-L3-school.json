@@ -1,0 +1,163 @@
+{
+  "slot": "7.L3",
+  "setting": "School & College",
+  "title": "The Sign-Up Sheet",
+  "world": 7,
+  "worldName": "Free to Choose",
+  "week": 7,
+  "weekName": "Free to Choose",
+  "mechanic": "Choice-story",
+  "concept": "After this one you can turn a promise that sounds like everything into one small, named thing someone can actually check.",
+  "plainWord": "the deal",
+  "bookTerm": "Contract",
+  "bookIdea": "Steiner takes four requirements for a valid agreement from contract law and applies them to everyday deals: a clear yes to one specific thing, something given back in return, people who are able to properly agree, and an aim that stays within the rules.",
+  "bookSource": "Scripts People Live, ch. 20; TA Today, ch. 26",
+  "opener": {
+    "setting": "Tuesday, 7:15pm, the city college, room 114. Mrs Fenwick has just split the group into pairs for the final project, and the sign-up sheet is going round the table.",
+    "lines": [
+      { "who": "Mrs Fenwick", "text": "“Right, who's doing what by next week? I want it said out loud, not just nodded at.”", "cue": "marker pen hovering by the whiteboard" },
+      { "who": "Sam", "text": "“I'll do the research and the slides, and I'll check if Owen needs anything else covered too.”", "cue": "already reaching for everyone's handouts, phone buzzing in his pocket" }
+    ],
+    "ask": "Which parts of Sam's offer will actually hold once the sheet goes round, and which part is a kind-sounding promise with nothing underneath it?"
+  },
+  "rounds": [
+    {
+      "level": "Spot",
+      "label": "Spot, round 1",
+      "intro": "A deal that holds has four things in it. Both sides say yes to the same clear thing. Each side gives something. Both are able to properly agree. Nothing in it has to be hidden. Tap the one each line is making sure of.",
+      "items": [
+        {
+          "type": "pick",
+          "who": "Mrs Fenwick",
+          "text": "“Say it back to me, Sam. Research and slides, by Tuesday. Yes or no?”",
+          "cue": "pen down on the sign-up sheet, waiting",
+          "options": ["A clear yes", "Something each way", "Above board"],
+          "answer": 0,
+          "why": "She's named the exact thing and asked for a plain yes to it. Afterwards, everyone in the group can say what Sam actually agreed to.",
+          "traps": {
+            "1": "Something each way. It sounds like a trade, but only Sam's part is named here. Nothing is said about what comes back to him.",
+            "2": "Above board. Nothing in this line is hidden from anyone. The line is about naming the exact task and getting a yes."
+          },
+          "example": "Allotment committee, Saturday.<br>Chair: “Plot holders water the shared bed on Tuesdays. Agreed?”<br>Member: “Agreed. Tuesdays.”"
+        },
+        {
+          "type": "pick",
+          "who": "Owen",
+          "text": "“If you're doing the slides, what am I doing instead? I'm not watching you take the whole thing again.”",
+          "cue": "arms folded, last term's project still fresh",
+          "options": ["Fit to agree", "Something each way", "A clear yes"],
+          "answer": 1,
+          "why": "He's asking what comes back to him if Sam takes the slides. A deal needs something going each way, or one person carries it all while the other just watches.",
+          "traps": {
+            "0": "Fit to agree. It sounds like he's checking Sam's state of mind, but nothing here is about whether Sam can properly agree tonight.",
+            "2": "A clear yes. The group does need one eventually, but this line is about what Owen gets in return, not about naming one exact task."
+          },
+          "example": "Language exchange, Wednesday, 6:00pm.<br>Tutor: “I'll help with your English for an hour.”<br>Student: “Then I'll bring food next week and we'll talk about recipes.”<br>Tutor: “Done.”"
+        },
+        {
+          "type": "pick",
+          "who": "Mrs Fenwick",
+          "text": "“You've come straight from work and you haven't eaten. Pick your part of the project tomorrow, when you can actually think about it.”",
+          "cue": "sliding the sign-up sheet back across the table",
+          "options": ["Fit to agree", "Something each way", "Above board"],
+          "answer": 0,
+          "why": "She's checking whether Sam can really weigh up what he's agreeing to tonight. Exhausted and distracted isn't a state where a yes means very much, so she waits for a clearer head.",
+          "traps": {
+            "1": "Something each way. The deal will need a swap eventually, but this line says nothing about what either side gives. It's only about whether tonight is the right moment to ask.",
+            "2": "Above board. Nothing here is against the rules. The concern is Sam's state, not the fairness of the deal."
+          },
+          "example": "Car showroom, Saturday, 4:00pm.<br>Salesman: “Sign today and I'll knock off the delivery fee.”<br>Buyer: “I've been up since four with my daughter. I'll come back Monday and read it properly.”"
+        },
+        {
+          "type": "pick",
+          "who": "Owen",
+          "text": "“I'm not writing both our names on this if only one of us did the work. The tutor would know anyway.”",
+          "cue": "pushing the sign-up form back across the table",
+          "options": ["A clear yes", "Something each way", "Above board"],
+          "answer": 2,
+          "why": "He's refusing to put anything in the deal that isn't honest about who actually did what. Nothing here needs hiding from the tutor.",
+          "traps": {
+            "0": "A clear yes. The deal does need one, but this line isn't about naming a specific task. It's about keeping the record honest.",
+            "1": "Something each way. This isn't about a swap between the two of them. It's about not claiming credit for work that wasn't done."
+          },
+          "example": "Market stall, Sunday.<br>Seller: “I can do you a better price if we skip the receipt.”<br>Customer: “I'll pay full price and take the receipt, thanks.”"
+        }
+      ]
+    },
+    {
+      "level": "Play",
+      "label": "Play, the week in motion",
+      "intro": "Two moments from the group project. Watch what a vague promise costs, and what Sam does the second time he's about to make one.",
+      "items": [
+        {
+          "type": "pick",
+          "who": "Sam",
+          "text": "“Don't worry, I'll sort the whole presentation. I do my best work under pressure.”",
+          "cue": "to Owen, two days before their turn, after missing the group's last two deadlines",
+          "options": [
+            "“Great, thanks Sam.”",
+            "“Let's actually split it tonight: you do the intro, I'll do the data, and we check in Thursday.”",
+            "“You always say that and it's 1am and I'm doing it alone. Forget it, I'll just do it myself.”"
+          ],
+          "answer": 1,
+          "why": "Splitting it into one named piece each, with an actual Thursday check, turns a vague promise into a deal with something to point at. It stops Owen either trusting the same promise again or quietly taking over the whole thing himself.",
+          "traps": {
+            "0": "“Great, thanks Sam.” It's the easy answer tonight, and it's exactly what happened last time, right up until the deadline.",
+            "2": "“Forget it, I'll just do it myself.” It protects Owen from being let down again, but now he's carrying the whole presentation, and Sam never finds out what finishing one real piece of it actually costs him."
+          },
+          "example": "Five-a-side team, the group chat.<br>Captain: “I'll organise the kit, book the pitch and sort everyone's payments, don't worry about it.”<br>Player: “Let's split it. I'll take payments, you book the pitch.”"
+        },
+        {
+          "type": "pick",
+          "who": "Sam",
+          "text": "“I was going to say I'd cover the slides AND present AND handle the questions, but... that's basically what I did last time, and I didn't sleep.”",
+          "cue": "stopping himself mid-sentence, pen hovering over the sign-up sheet",
+          "options": [
+            "“Forget it, I said I would, I'll manage.”",
+            "“I'll do the slides. Someone else takes the presenting.”",
+            "“Sorry, ignore me, whatever's easiest for everyone.”"
+          ],
+          "answer": 1,
+          "why": "For once Sam names one actual piece out loud, before anyone has to drag it out of him, instead of the whole kind-sounding promise. It's a small deal, but it's a specific one, and it's the first time this term he's caught himself mid-sentence and chosen the smaller true thing.",
+          "traps": {
+            "0": "“Forget it, I'll manage.” This is the old pattern winning, the promise swallowing the warning he just noticed in himself.",
+            "2": "“Whatever's easiest for everyone.” It sounds humble, but it hands the choice away again, right after he almost made one for himself."
+          },
+          "example": "Running club committee, Tuesday.<br>Volunteer: “I'll do the newsletter, the socials and the Sunday run, actually, just the newsletter. I keep saying all three and then none of them happen.”<br>Chair: “Newsletter it is. Thursdays.”"
+        }
+      ]
+    },
+    {
+      "level": "Analyse",
+      "label": "Analyse, explain it",
+      "intro": "Time for the book's words. Steiner's names for a deal's four parts are mutual consent, consideration, competency and lawful object.",
+      "items": [
+        {
+          "type": "pick",
+          "who": "Sam",
+          "text": "“I'll do the slides. Someone else takes the presenting.” Mrs Fenwick wrote it on the board as agreed.",
+          "cue": "the following Tuesday. Which part of Steiner's contract does this line mostly satisfy?",
+          "options": [
+            "Mutual consent. Sam named one exact piece, and the group can check afterwards whether that piece got done.",
+            "Consideration. Sam is giving something back for a favour someone else did him.",
+            "Lawful object. Nothing about splitting a slide deck could ever break any rule."
+          ],
+          "answer": 0,
+          "why": "It's a specific, checkable aim stated as something the group can actually watch happen, which is what Steiner means by mutual consent: agreeing to one clear thing rather than a general feeling of covering it all.",
+          "traps": {
+            "1": "Consideration is about something coming back in a swap. This line is about naming one piece clearly, not about trading favours.",
+            "2": "Lawful object is true here, but it was never really at risk. What this line changes is that both sides can now check it."
+          },
+          "example": "Book group, Thursday.<br>Member: “I'll have more time for reading soon.”<br>Host: “Which chapters, by when?”<br>Member: “The first four, by Thursday.”<br>Now there's something to ask about next week."
+        }
+      ]
+    }
+  ],
+  "debrief": {
+    "nadia": "Sam has said he'll sort it more times than anyone in that room can count, and most of those sentences went nowhere once the deadline actually arrived. This Tuesday, one piece of it held, because he said the small true thing instead of the big kind one. That's not the whole pattern gone. It's one Tuesday where it didn't run.",
+    "bookTerm": "Contract",
+    "bookNote": "The books call this a contract. Steiner borrows four requirements from contract law: a clear yes to a specific thing, something given back, people able to properly agree, and an aim that stays within the rules."
+  },
+  "reflection": { "prompt": "Think of something you half promised this week without naming the actual piece. What's the one specific thing you could say out loud instead, and would you actually keep it?" },
+  "next": null
+}

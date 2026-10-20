@@ -1,0 +1,138 @@
+{
+  "slot": "1.L1",
+  "setting": "Relationships",
+  "title": "Two Coffees",
+  "world": 1,
+  "worldName": "Being Noticed",
+  "week": 1,
+  "weekName": "Being Noticed",
+  "mechanic": "Choice-story",
+  "concept": "Extra practice: the same nod-hunger idea from 1.1, in a setting where the stakes are a little different, choosing what to say, not just naming an idea.",
+  "bookTerm": "Strokes",
+  "bookIdea": "Berne's term for any unit of recognition. A positive stroke says I see you; people will take a negative one over none at all.",
+  "bookSource": "Games People Play, ch. 1",
+  "opener": {
+    "setting": "Thursday, 8:05am. Halden, the small kitchen by the lifts. Clara is already there, two mugs out, before you've said a word.",
+    "lines": [
+      { "who": "Clara", "text": "“I made you one too. You looked like you needed it.”", "cue": "already holding it out, not quite meeting your eyes" },
+      { "who": "Omar", "text": "“...Oh. Thanks.”", "cue": "taking it, a beat too long before he says anything else" }
+    ],
+    "ask": "Clara made this small and easy to wave off. Is it a nod worth naming, or is naming it making too much of two coffees?"
+  },
+  "rounds": [
+    {
+      "level": "Spot",
+      "label": "Spot, round 1",
+      "intro": "A nod doesn't have to be loud to count. Some of the clearest ones arrive looking like nothing at all.",
+      "items": [
+        {
+          "type": "pick",
+          "who": "Clara",
+          "text": "“I made you one too. You looked like you needed it.”",
+          "cue": "two mugs, before he's said a word",
+          "options": ["A nod worth naming", "Just being polite"],
+          "answer": 0,
+          "why": "She noticed something about him before he said anything, and acted on it unprompted. That's a nod with real content, not a script a stranger would run.",
+          "traps": {
+            "1": "Just being polite. Politeness is handing someone a mug because there's a spare one going. This is different: she looked at him, then made a second coffee."
+          },
+          "example": "Office canteen, 1:10pm. A colleague says, “I saved you the window seat, you said you hate glare on your laptop.” Nobody asked her to remember that."
+        },
+        {
+          "type": "pick",
+          "who": "Omar",
+          "text": "“...Oh. Thanks.”",
+          "cue": "a beat too long before he says anything else",
+          "options": ["Received it", "Deflected it"],
+          "answer": 0,
+          "why": "He took the mug and didn't wave it off. The pause isn't a deflection, it's him noticing the nod landed somewhere real.",
+          "traps": {
+            "1": "Deflected it. A deflection sounds like “oh, you didn't have to” or changing the subject fast. He didn't do either; he just paused."
+          },
+          "example": "A friend says, “You looked tired yesterday, so I texted ahead.” You say, “...yeah. Thanks for that,” and let it sit for a second before moving on."
+        },
+        {
+          "type": "pick",
+          "who": "You",
+          "text": "Watching this from the doorway, waiting for the kettle.",
+          "cue": "neither of them has noticed you yet",
+          "options": ["This reads as more than a work favour", "This reads as exactly a work favour, nothing more"],
+          "answer": 0,
+          "why": "Work favours don't usually come pre-emptive and specific to the person's mood. The content of the nod (noticing, then acting on it unasked) is what makes it read as more.",
+          "traps": {
+            "1": "Exactly a work favour. A work favour is covering someone's shift or grabbing the printout they forgot. This one required noticing a mood, which colleagues don't usually track."
+          },
+          "example": "Compare: “I grabbed an extra coffee since I was already up” (a work favour) against “I made you one too, you looked like you needed it” (noticing a person, not just a gap)."
+        }
+      ]
+    },
+    {
+      "level": "Play",
+      "label": "Play, the kitchen",
+      "intro": "Omar has the mug in hand. The kettle's still going. Clara's already half-turned back to the counter, leaving him an easy exit if he wants one.",
+      "items": [
+        {
+          "type": "pick",
+          "who": "Clara",
+          "text": "“Anyway. Big day. You've got the client call at eleven, right?”",
+          "cue": "half-turned back to the counter, giving him an easy exit",
+          "options": ["Take the exit, talk about the call", "Say something easy and warm about the coffee first", "Joke it off: “Careful, people will talk”"],
+          "answer": 1,
+          "why": "Naming it plainly, without drama, lets the nod land and still leaves the morning easy: “Hey. This was a kind thing to do, actually.” Clara stops half-turning. “...Yeah. Well. You looked like you needed it.” Then, lighter: “Your call's at eleven, by the way.”",
+          "traps": {
+            "0": "Taking the exit closes the moment cleanly, and nobody's embarrassed, but the nod sits there unacknowledged, same as it did last time she did this.",
+            "2": "It sounds light and safe, but joking turns her genuine nod into a bit. Clara laughs, too quickly, and is already moving to her desk. The kitchen feels colder than it did a minute ago."
+          },
+          "example": "A friend leaves you an exit after doing something kind (“anyway, forget it”); taking the joke instead of naming the kindness is the same small flinch in a different room."
+        },
+        {
+          "type": "pick",
+          "who": "Omar",
+          "text": "Later that morning, at his desk, deciding whether to say anything more about it at all.",
+          "cue": "the client call is in twenty minutes; this isn't urgent, which is exactly why it's easy to drop",
+          "options": ["Let it go, today's full anyway", "Send a short message: thanks again for this morning"],
+          "answer": 1,
+          "why": "A short, low-stakes follow-up tells her the nod landed somewhere real without turning it into a bigger conversation than either of them is ready for.",
+          "traps": {
+            "0": "Letting it go is the socially smooth choice, and nothing goes wrong today. It also means the only two people who know something real happened both decide to act like it didn't."
+          },
+          "example": "Replying “that actually helped, thank you” to a quiet favour the next day keeps it small, and still says it mattered."
+        }
+      ]
+    },
+    {
+      "level": "Analyse",
+      "label": "Analyse, the gap",
+      "intro": "Time for the book's word. On the social level, this was two mugs and a reminder about a meeting. What was actually moving underneath it?",
+      "items": [
+        {
+          "type": "pick",
+          "who": "You",
+          "text": "At the social level: a coffee and a scheduling reminder. At the psychological level, what's the real volley?",
+          "cue": "the gap between what was said and what it cost her to say nothing further",
+          "options": [
+            "A straightforward, functional exchange with nothing underneath it.",
+            "A nod offered carefully, small enough to retract if it isn't wanted.",
+            "Clara testing whether Omar is reliable before asking for anything real."
+          ],
+          "answer": 1,
+          "why": "The coffee is sized to be deniable, easy to wave off as nothing, which is exactly what makes it a genuine but careful nod. If he'd ignored it, she could have treated it as just a mug.",
+          "traps": {
+            "0": "A straightforward exchange. If that were true, she wouldn't have needed a reason (“you looked like you needed it”) or moved to change the subject right after.",
+            "2": "Testing his reliability. Nothing in the scene is a test with a pass or fail; it's a small offer, not an audition."
+          },
+          "example": "The two-track version: the social line is the coffee and the meeting time; the psychological line is “I noticed you, and I'm not sure that's allowed to matter here.”"
+        }
+      ]
+    }
+  ],
+  "debrief": {
+    "nadia": "Not every nod announces itself. The quiet, deniable ones are often the realest, because the person giving it left themselves an exit in case you didn't want it. Noticing it out loud, gently, is its own small kind of courage.",
+    "bookTerm": "Strokes",
+    "bookNote": "The books call this a stroke: any unit of recognition, Berne's word for it. This one is positive, unconditional (about Omar, not about anything he did that morning), and deliberately small enough to retract."
+  },
+  "reflection": {
+    "prompt": "When did someone offer you something small and deniable this week, the kind of nod you could have waved off? What did you actually do with it?"
+  },
+  "next": null
+}

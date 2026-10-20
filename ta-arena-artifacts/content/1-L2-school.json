@@ -1,0 +1,161 @@
+{
+  "slot": "1.L2",
+  "setting": "School & College",
+  "title": "The Register",
+  "world": 1,
+  "worldName": "Being Noticed",
+  "week": 1,
+  "weekName": "Being Noticed",
+  "mechanic": "Choice-story",
+  "concept": "Extra practice: the same nod-hunger idea from 1.1, in a room too full for anyone to get noticed without asking.",
+  "bookTerm": "Strokes",
+  "bookIdea": "Berne's term for any unit of recognition. A positive stroke says I see you; people will take a negative one over none at all.",
+  "bookSource": "Games People Play, ch. 1",
+  "opener": {
+    "setting": "Tuesday, 7:32pm. Room 14 at the community college, the pottery studio. Sam is still two minutes into his excuse about the bus before he notices nobody has stopped to listen.",
+    "lines": [
+      { "who": "Sam", "text": "“Sorry, sorry, the 46 just didn't show, I ran the whole of Carrow Street.”", "cue": "coat half off, bag already slipping from one shoulder" },
+      { "who": "Mr Lindsey", "text": "“Wedge your clay, Sam. We started without you.”", "cue": "not looking up from the next table" },
+      { "who": "Will", "text": "“Budge up, there's a wheel free next to me.”", "cue": "already shifting his stool over before Sam's finished explaining" }
+    ],
+    "ask": "Nobody paused for him, and two of these three lines still managed to say he'd arrived. Can you tell which one didn't?"
+  },
+  "rounds": [
+    {
+      "level": "Spot",
+      "label": "Spot, round 1",
+      "intro": "A nod doesn't always look like one. In a room this full, most of them are easy to miss unless you're actually looking.",
+      "items": [
+        {
+          "type": "pick",
+          "who": "Mr Lindsey",
+          "text": "“Wedge your clay, Sam. We started without you.”",
+          "cue": "not looking up, already moving to the next table",
+          "options": ["A nod, even if it's a thin one", "Not a nod, only a telling off"],
+          "answer": 0,
+          "why": "He used Sam's name and handed him something to do straightaway. Being folded back into the room, even briskly, is a nod. He didn't dwell on the lateness or on Sam.",
+          "traps": {
+            "1": "A telling off would need him to stay on the lateness, maybe ask where Sam had got to. He mentions it once and moves straight on to the clay."
+          },
+          "example": "A football coach shouts “Fifteen more, you, with the yellow bib,” without any warmth in his voice. Still a nod. He knows exactly who's wearing the yellow bib."
+        },
+        {
+          "type": "pick",
+          "who": "Will",
+          "text": "“Budge up, there's a wheel free next to me.”",
+          "cue": "already shifting his stool over before Sam's finished explaining",
+          "options": ["A nod offered before he had to ask for it", "Just making room, nothing about Sam in particular"],
+          "answer": 0,
+          "why": "Will moved before anyone asked, and he chose the spot next to Sam specifically. Making space for a latecomer is one thing. Choosing where you want them to sit is another.",
+          "traps": {
+            "1": "Making room would look the same no matter who walked in late. Will is already looking at Sam and shifting his own stool, not just clearing a gap for whoever showed up."
+          },
+          "example": "On a packed train, a stranger pulls their bag off the seat before you've even asked. Small, but it was done for you, not for the carriage in general."
+        },
+        {
+          "type": "pick",
+          "who": "You",
+          "text": "Nobody at the next table looks up when Sam finally sits down. The chatter and the radio carry on exactly as they were.",
+          "cue": "three others already elbow deep in their own clay",
+          "options": ["A cold nod", "Nothing at all"],
+          "answer": 1,
+          "why": "A cold nod would still need someone to register him somehow, a glance, a lifted chin. This table does neither. The evening carries on as if the chair were still empty.",
+          "traps": {
+            "0": "A cold nod needs some sign he was seen, however small. Nobody at that table so much as glanced over."
+          },
+          "example": "Walking into a waiting room where everyone's on their phone, and nobody looks up when the door goes. Nothing happened, and that's the whole of what happened."
+        },
+        {
+          "type": "pick",
+          "who": "Mr Lindsey",
+          "text": "“Sam, wasn't it? You missed the start, but you've got the hang of this.”",
+          "cue": "stopping at his table on the way past, properly looking at the bowl this time",
+          "options": ["A nod worth something, because he went back for the name", "Just the kind of thing a teacher says to everyone"],
+          "answer": 0,
+          "why": "He didn't only comment on the bowl. He went back for the name first, which means Sam had actually registered somewhere in a room Lindsey was managing all evening.",
+          "traps": {
+            "1": "If it were said to everyone, it wouldn't need the name attached, or the detail about missing the start. This one was aimed, not general."
+          },
+          "example": "A manager saying “good catch” to the room is warmer than silence. One who adds your name and names exactly what you caught is doing more with the same handful of words."
+        }
+      ]
+    },
+    {
+      "level": "Play",
+      "label": "Play, the studio",
+      "intro": "Sam's got the clay and the time. The real question tonight is whether he waits to be noticed or asks for it outright.",
+      "items": [
+        {
+          "type": "pick",
+          "who": "Mr Lindsey",
+          "text": "“Right, let's see what everyone's got. Shout if you want a look.”",
+          "cue": "moving table to table with a clipboard, not stopping long at any one wheel",
+          "options": ["Say nothing and hope he reaches Sam's table anyway", "Call out: “Could you check mine? I think I've overdone the base.”", "Wave and smile so he notices without having to ask"],
+          "answer": 1,
+          "why": "Naming the actual thing he wants looked at gives Lindsey something to respond to. In a room this size, the people who get noticed are mostly the ones who asked for something specific.",
+          "traps": {
+            "0": "Waiting hopes a man with fourteen other wheels to get to happens to land on Sam's by chance. Some evenings he will. Most evenings he won't, not because Sam wasn't worth it, but because nobody asked.",
+            "2": "A wave without a word is easy to read as fine, carry on, and easy to walk past. Fishing for a nod silently is harder than it looks, and it usually doesn't work."
+          },
+          "example": "In a busy pharmacy, naming the exact question, does this need to be taken with food, gets you an answer faster than hovering near the counter looking unsure."
+        },
+        {
+          "type": "pick",
+          "who": "Will",
+          "text": "“Yours actually looks like a bowl. Mine looks like it's been in a fight.”",
+          "cue": "holding his own clay up, grinning, genuinely pleased for Sam",
+          "options": ["“Oh, it's nothing, beginner's luck.”", "“Thanks. Took me three goes to get the wall even.”", "“Yours has got character though.”"],
+          "answer": 1,
+          "why": "Taking the compliment plainly, with one true detail added, lets it land and gives Will something real back. It keeps the moment warm without either of them having to perform about it.",
+          "traps": {
+            "0": "Waving it off as luck quietly argues with what Will just said. He gets told his own read on things was wrong, which can feel like a small rebuff even meant as modesty.",
+            "2": "Turning it straight onto Will's bowl is kind, but it skips past the thing he actually said about Sam's. It dodges the nod rather than taking it."
+          },
+          "example": "Someone says “that's a great photo,” and the reply “thanks, I waited twenty minutes for the light” keeps the compliment and adds something true, instead of “oh, it's nothing really.”"
+        },
+        {
+          "type": "pick",
+          "who": "Mr Lindsey",
+          "text": "“Same time next week. Bring an apron if you've got one, the clay doesn't come out of good jumpers.”",
+          "cue": "wiping down the wheel, talking to the room in general on his way to the sink",
+          "options": ["Leave quietly, he was talking to everyone, not Sam specifically", "“Actually, could you look at my base next week? I never got round to asking.”", "“Thanks, see you next week!” (said brightly on the way out)"],
+          "answer": 1,
+          "why": "Naming one specific thing he wants looked at turns a general announcement back into a one-to-one moment. A room can't really answer an announcement. A person can answer a question.",
+          "traps": {
+            "0": "Leaving quietly costs nothing, and it keeps Sam exactly as unnoticed as the room's own line left him.",
+            "2": "A bright goodbye is friendly, but it's aimed at the room the same way Lindsey's line was. Two general lines passing each other isn't a nod, it's just noise with good manners."
+          },
+          "example": "At the end of a meeting that closes with any final thoughts, everyone, asking one direct question gets you an answer. Smiling and saying great, thanks all on the way out does not."
+        }
+      ]
+    },
+    {
+      "level": "Analyse",
+      "label": "Analyse, the gap",
+      "items": [
+        {
+          "type": "pick",
+          "who": "You",
+          "text": "Across the evening, one nod came easily, Will's crack about the bowls, and two took asking, Lindsey, both times. What explains the difference?",
+          "options": ["Will simply likes Sam more than Lindsey does", "A nod comes easier from someone with one person in view, and harder from someone minding a whole room; asking plainly closes the gap either way", "Pottery happens to be a friendlier subject than most"],
+          "answer": 1,
+          "why": "Will had one person in his eye line the whole evening. Lindsey had fifteen wheels and one evening to get round them all. The quieter nod never meant less interest, it meant Sam had to ask for it instead of waiting for it to arrive.",
+          "traps": {
+            "0": "Liking has no evidence behind it here. Lindsey wasn't cold to Sam, he was stretched thin across a full room.",
+            "2": "Pottery isn't doing the work. The same gap between one person's attention and a room's would show up in any class, any team, any kitchen."
+          },
+          "example": "A shop assistant with one customer gives a longer answer than one with a queue out the door. It's rarely about who they'd rather help."
+        }
+      ]
+    }
+  ],
+  "debrief": {
+    "nadia": "A full room doesn't mean nobody noticed you. It usually means you'll have to ask instead of wait. Sam asked twice tonight, plainly, and got a real answer back both times. That isn't needy, it's just how a nod gets found when the room is busy.",
+    "bookTerm": "Strokes",
+    "bookNote": "The books call this a stroke: any sign that someone registers you. A busy room still has them to give. They just take more asking for."
+  },
+  "reflection": {
+    "prompt": "Think of somewhere this week with too many people and too little time: a class, a queue, a team meeting. Did you wait for a nod there, or ask for one?"
+  },
+  "next": null
+}

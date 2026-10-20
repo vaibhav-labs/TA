@@ -1,0 +1,169 @@
+{
+  "slot": "2.L1",
+  "setting": "Relationships",
+  "title": "The Second Coffee",
+  "world": 2,
+  "worldName": "Who's Talking",
+  "week": 2,
+  "weekName": "Who's Talking",
+  "mechanic": "Diagnose",
+  "concept": "After this one you can hear which voice is answering, even when the question underneath is softer than a work problem.",
+  "plainWord": "a voice",
+  "bookTerm": "Ego state",
+  "bookIdea": "Each person carries three such voices: one copied from the people who raised them, one left over from their own early years, and one that deals with whatever is actually in front of them. The books call this the ego-state model.",
+  "bookSource": "TA Today, ch. 2; Games People Play, ch. 1",
+  "opener": {
+    "setting": "Saturday, 10:15am, three weeks after the two coffees. The Corner Table, the seat by the window. Clara got there first and has been keeping the other chair empty for a while.",
+    "lines": [
+      { "who": "Clara", "text": "“I wasn't sure you'd actually come, outside work. We can just call it a quick tea if that's easier.”", "cue": "straightening a napkin she hasn't used, half out of her chair already" },
+      { "who": "Omar", "text": "“I came on my day off. I'm not leaving in the first five minutes.”", "cue": "staying exactly where he is, two mugs already ordered" }
+    ],
+    "ask": "Listen to the words, the tone and how each of them is sitting. Which voice answered her, and what in Clara's own line gave away the one asking?"
+  },
+  "rounds": [
+    {
+      "level": "Spot",
+      "label": "Spot, round 1",
+      "intro": "<b>How this one works:</b> you hear a line and name the voice behind it. The tone and the posture matter as much as the words.",
+      "items": [
+        {
+          "type": "pick",
+          "who": "Clara",
+          "text": "“I wasn't sure you'd actually come, outside work. We can just call it a quick tea if that's easier.”",
+          "cue": "straightening a napkin she hasn't used, half out of her chair already",
+          "options": ["The Boss", "The Pilot", "The Kid"],
+          "answer": 2,
+          "why": "She asks without quite asking, and builds herself an exit before anyone has said no. That is the Kid, small and pre-emptive, ready to retreat the moment this looks unwanted.",
+          "traps": {
+            "0": "The Boss would hand down a rule about the meeting itself, something like “we're not doing this properly if you can't commit an hour.” There is no rule here, only an offer to shrink the moment.",
+            "1": "The Pilot would simply say what she wants and leave it there. Instead she builds an exit before he has even sat down properly, which is not a plain read of the moment."
+          },
+          "example": "A first date, a woman arriving early: “We don't have to make this a whole thing, we can just grab one coffee and go.” She is giving both of them a way out before either has said anything is wrong."
+        },
+        {
+          "type": "pick",
+          "who": "Omar",
+          "text": "“I came on my day off. I'm not leaving in the first five minutes.”",
+          "cue": "staying exactly where he is, two mugs already ordered",
+          "options": ["The Boss", "The Pilot", "The Kid"],
+          "answer": 1,
+          "why": "He names a plain fact about what he actually did and stays put. No verdict on her, no apology for himself. That is the Pilot, dealing with what is in front of him.",
+          "traps": {
+            "0": "The Boss would correct her for offering the exit: “Don't say things like that, you'll put me off.” That is a rule about her behaviour, not a statement of his own.",
+            "2": "The Kid would match her nerves, something like “Oh, is that what you want? Sorry, we can keep it short.” Instead he holds his ground without flinching."
+          },
+          "example": "A friend hedges an invitation, “no pressure, we can skip it.” The other person answers, “I cleared my evening for this,” and stays seated. The second line is a fact, not a feeling."
+        },
+        {
+          "type": "pick",
+          "who": "Clara, a beat later",
+          "text": "“Right. Don't make this into something. He only had an hour spare.”",
+          "cue": "quick, under her breath, not quite loud enough for him to catch",
+          "options": ["The Boss", "The Pilot", "The Kid"],
+          "answer": 0,
+          "why": "A rule aimed at herself, cutting the moment down to size before she can want it too much. A telling-off doesn't need an audience; it works just as well turned inward.",
+          "traps": {
+            "1": "The Pilot would check the actual time: “he said an hour, so we've got until half past.” That is a fact she could use. Instead the line is a verdict on what she is allowed to feel.",
+            "2": "The Kid would say it out loud, hoping someone would contradict her: “sorry, I know this is probably nothing.” She says it only to herself, flat and final, which is the Boss's register, not the Kid's plea."
+          },
+          "example": "A woman getting ready for a second date, catching herself in the mirror: “Don't get excited. It's one dinner.” The line is a rule, delivered to herself, before anything has even started."
+        },
+        {
+          "type": "pick",
+          "who": "You, at a table across the room",
+          "text": "Watching the two of them from two tables over, pretending the specials board is more interesting than it is.",
+          "cue": "neither of them has noticed you yet",
+          "options": ["Already more than careful colleagues meeting for tea", "Still exactly what two careful colleagues look like outside work"],
+          "answer": 0,
+          "why": "Colleagues meeting for tea don't usually need an exit built in before they've ordered, and they don't usually stay once it's offered. Both of those things happened in under a minute.",
+          "traps": {
+            "1": "Two careful colleagues would have ordered, talked about something ordinary, and left on time. Here, one of them tried to make the whole thing deniable and the other refused the exit outright."
+          },
+          "example": "Compare two colleagues grabbing a quick tea between meetings, checking their watches twice, against two people who show up on a day off and stay once an exit is offered and declined."
+        }
+      ]
+    },
+    {
+      "level": "Play",
+      "label": "Play, the Saturday",
+      "intro": "<b>Harder now.</b> The words alone won't tell you enough. Watch the tone against the words, and what the hands are doing while the mouth says something else.",
+      "items": [
+        {
+          "type": "pick",
+          "who": "Clara",
+          "text": "“Anyway. This doesn't have to be a whole conversation. We can just have tea and talk about nothing.”",
+          "cue": "tone studiedly light, ears gone pink, both hands wrapped around a mug she hasn't touched",
+          "options": ["The Boss", "The Pilot", "The Kid"],
+          "answer": 2,
+          "why": "The words sound practical, almost like a plan, but the tone and the untouched mug say otherwise. This is still the Kid, now wearing a sensible sentence as cover, asking for permission to want this without having to say so.",
+          "traps": {
+            "0": "The Boss would lay down a flatter rule aimed at him, something like “we're not making this into a thing.” There's no verdict here, just a hopeful shrink of the moment.",
+            "1": "The Pilot's words alone could pass for this, which is the trap. A plan doesn't usually come with pink ears and an untouched mug. The tone is doing work the words are trying to hide."
+          },
+          "example": "A phone call where someone says “it's fine, don't worry about it,” in a voice climbing half an octave higher than usual. The words say calm. Everything else says otherwise."
+        },
+        {
+          "type": "pick",
+          "who": "Omar",
+          "text": "“You don't have to make it nothing. It isn't nothing to me either.”",
+          "cue": "still, voice even, finally meeting her eyes",
+          "options": ["The Boss", "The Pilot", "The Kid"],
+          "answer": 1,
+          "why": "He corrects her, which can sound like a rule, but there's no verdict on who she is in it, only a plain fact about what's true for him right now. That's the Pilot, naming the actual situation instead of letting the deniable version stand.",
+          "traps": {
+            "0": "The Boss would make the correction a judgement: “you always do this, you always shrink things.” That's a verdict on her character. His line only states what's true for him.",
+            "2": "The Kid would hedge it, something like “well, maybe it's not nothing, I don't know, sorry.” He says it once, plainly, and doesn't take it back."
+          },
+          "example": "One friend downplays a falling-out: “it's not a big deal.” The other says, “it is to me, and I'd rather say so than pretend otherwise.” The second line corrects without scoring a point."
+        },
+        {
+          "type": "pick",
+          "who": "Clara",
+          "text": "“...Okay. It isn't nothing to me either.”",
+          "cue": "half a beat behind him, but she says it anyway, hands finally still around the mug",
+          "options": ["The Boss", "The Pilot", "The Kid"],
+          "answer": 1,
+          "why": "No sorry first, no exit built in, no joke to soften the landing. She states the same plain fact he just risked, a beat late but without flinching. That's the Pilot, arriving late to the conversation but arriving.",
+          "traps": {
+            "0": "The Boss would turn an admission into a rule for next time: “well, we should have just said so from the start.” That would close the moment down instead of meeting it.",
+            "2": "The Kid would need the apology first: “sorry, I know I made it weird, but yes.” She drops the apology this time and just answers."
+          },
+          "example": "After a long pause, someone finally says “I missed you too,” without qualifying it or laughing it off first. The pause is real. So is the plain answer that follows it."
+        }
+      ]
+    },
+    {
+      "level": "Analyse",
+      "label": "Analyse, the gap",
+      "items": [
+        {
+          "type": "pick",
+          "who": "You",
+          "text": "On the surface, two people had tea on a Saturday and talked about an hour he had free. Underneath, three different voices took turns answering the same worry of hers. What actually changed between her first line and her last?",
+          "cue": "the gap between the easy exit she offered at the start and the plain answer she gave at the end",
+          "options": [
+            "Nothing changed. It was ordinary small talk from the first line to the last.",
+            "Her self-correcting voice lost, for one line, to the one that just says what's true, and he met it the same way instead of turning it into a bigger moment than it needed to be.",
+            "Omar's plain talk was really a rule about how she ought to behave, dressed up as honesty."
+          ],
+          "answer": 1,
+          "why": "She opened with an exit built in and a private telling-off to shrink the moment. By the end she gave the same fact he had, plainly, without the apology in front of it. That isn't a mood swing, it's one voice handing over to another, for one line at least.",
+          "traps": {
+            "0": "Ordinary small talk doesn't come with a half-built exit at the start and a plain, unguarded admission at the end. Something moved between those two lines.",
+            "2": "A rule about her behaviour would sound like “you shouldn't say things like that.” His line only says what's true for him. There's no verdict on her in it, which is exactly why she could answer it without a flinch."
+          },
+          "example": "A two-line version of the same shift: at the start, “it's probably nothing, forget I said it,” at the end, “it mattered, actually.” The second line costs more and says less at the same time."
+        }
+      ]
+    }
+  ],
+  "debrief": {
+    "nadia": "Clara spent the first minute making the moment small enough to survive a no. Omar spent his not letting her. That isn't a rescue, it's one steady voice refusing to shrink things alongside her. Notice how much of that conversation happened in the tone and the hands, not the words.",
+    "bookTerm": "Ego state",
+    "bookNote": "The books call these ego states, Parent, Adult and Child: real, observable ways of feeling, thinking and acting, not performances put on for the room. The same three voices that sort out a broken glass also sort out a hard thing to say out loud."
+  },
+  "reflection": {
+    "prompt": "Think of a time you offered someone an exit before they'd even said no. Which voice built that exit, and what would the plain version of the sentence have sounded like?"
+  },
+  "next": null
+}

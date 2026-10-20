@@ -1,0 +1,149 @@
+{
+  "slot": "7.L2",
+  "setting": "Relationships",
+  "title": "Not the Tea",
+  "world": 7,
+  "worldName": "Free to Choose",
+  "week": 7,
+  "weekName": "Free to Choose",
+  "mechanic": "Choice-story",
+  "concept": "After this one you can give a personal yes a reason to hold, and keep it standing when the person who asked for it tries to take it back out of fear.",
+  "plainWord": "the green light",
+  "bookTerm": "Permission, protection and potency",
+  "bookIdea": "Steiner describes a permission as a yes, with a reason the person can accept, that frees them from an old rule, and says it only works if the giver also protects them through the fear that follows and has the potency, the giver's own strength, to stand behind it.",
+  "bookSource": "Scripts People Live, ch. 21",
+  "opener": {
+    "setting": "Friday, 6:40pm, The Corner Table, near the window. Clara has barely touched her tea.",
+    "lines": [
+      { "who": "Clara", "text": "“Can I say something and you tell me if it's stupid? Actually, forget it.”", "cue": "already half out of the question, cup turning in her hands" },
+      { "who": "Omar", "text": "“Say it. I won't think it's stupid.”", "cue": "not looking up from his coffee, but not leaving either" }
+    ],
+    "ask": "Which parts of a safe yes does Omar give here, and which part is still his to learn?"
+  },
+  "rounds": [
+    {
+      "level": "Spot",
+      "label": "Spot, round 1",
+      "intro": "A yes that holds has three parts, and all three are the giver's to bring. The green light is the yes itself, with a reason the other person can accept. The safety net is being there when the fear arrives. The backbone is the strength to keep the yes standing when it gets pushed against.",
+      "items": [
+        {
+          "type": "pick",
+          "who": "Omar",
+          "text": "“Say it. I want to hear it, whatever it turns out to be.”",
+          "cue": "cup down, phone face down on the table",
+          "options": ["The green light", "The safety net", "The backbone"],
+          "answer": 0,
+          "why": "That's the yes itself, the invitation to actually say the thing, with a reason she can believe. A green light that comes with a real reason is one someone can actually use.",
+          "traps": {
+            "1": "The safety net. Nothing here says what happens afterwards if it goes badly. This line is only the invitation.",
+            "2": "The backbone. Nobody has pushed back on anything yet, so there's nothing here to hold against."
+          },
+          "example": "Driving lesson, Saturday, 9:00am.<br>Learner: “Can I try the roundabout?”<br>Instructor: “Yes. You've read three of them perfectly already today.”"
+        },
+        {
+          "type": "pick",
+          "who": "Omar",
+          "text": "“If it comes out wrong, or I say something stupid back, we're still having tea on Friday. That's not going anywhere.”",
+          "cue": "quiet, not looking away",
+          "options": ["The green light", "The safety net", "The backbone"],
+          "answer": 1,
+          "why": "This is the net. It says what happens if the moment wobbles, so the fear that comes after saying something real has somewhere safe to land.",
+          "traps": {
+            "0": "The green light. The invitation to speak was already given earlier. This line is about what happens if it goes badly.",
+            "2": "The backbone. Nobody is pushing against anything here yet. This is about catching a fall, not holding a line."
+          },
+          "example": "Open mic night, the back room, Thursday.<br>Friend: “If you forget the words halfway through, I'll be right at the front mouthing them at you.”<br>Performer: “Okay. That actually helps.”"
+        },
+        {
+          "type": "pick",
+          "who": "Omar",
+          "text": "“You did say it, and I'm not letting you take it back just because it's gone quiet for a second.”",
+          "cue": "to Clara, steady, not raising his voice",
+          "options": ["The green light", "The safety net", "The backbone"],
+          "answer": 2,
+          "why": "Someone is pushing against the moment, here Clara's own nerves trying to pull it back, and Omar holds the ground they've reached instead of letting the first wobble undo it. A yes that folds at the first doubt was never really a yes to lean on.",
+          "traps": {
+            "0": "The green light. The invitation to speak was given earlier. This is about keeping it standing once it's been given.",
+            "1": "The safety net. A net catches a fall that's already happened. This is about not letting the whole thing be pulled away."
+          },
+          "example": "Swimming pool steps, Saturday.<br>Girl: “Actually, maybe I don't want to jump.”<br>Coach: “You climbed up here because you wanted to. I'm still right below you.”"
+        }
+      ]
+    },
+    {
+      "level": "Play",
+      "label": "Play, the week in motion",
+      "intro": "Monday comes, and the easy Friday feeling doesn't. Watch what Omar says when the fear turns up, and what he notices about himself the second time.",
+      "items": [
+        {
+          "type": "pick",
+          "who": "Clara",
+          "text": "“Forget what I said Friday. It was the tea talking.”",
+          "cue": "not meeting his eyes by the lifts, Monday morning",
+          "options": [
+            "“Fair enough, let's leave it there.”",
+            "“It wasn't the tea. And I'm glad you said it, so don't take it back on my account.”",
+            "“Ha, yeah, don't worry about it.”"
+          ],
+          "answer": 1,
+          "why": "Omar gives her something to hold onto and says plainly that Friday still stands, exactly when the Monday nerves try to pull it back. That's him keeping his word steady when it's tested, not only when it was easy to say over tea.",
+          "traps": {
+            "0": "“Fair enough.” It sounds like respecting her wish, but it drops the whole thing the first time it gets hard, and Clara learns that what she says on a quiet evening doesn't survive a weekday.",
+            "2": "“Don't worry about it.” It's kind in tone, but it treats Friday as a joke, which is the same as taking it back for her."
+          },
+          "example": "Book group, the morning after.<br>Member: “Ignore what I said last night about the ending, I'd had two glasses of wine.”<br>Host: “You weren't wrong, though. I'm glad you said it.”"
+        },
+        {
+          "type": "pick",
+          "who": "Clara",
+          "text": "“You never actually said you wanted this. You just... didn't leave.”",
+          "cue": "stirring her tea, point-blank",
+          "options": [
+            "“I'm not good at saying things. You know that about me.”",
+            "“Fair. I want this. I should have just said that on Friday instead of waiting for you to ask twice.”",
+            "“Does it matter? I'm here, aren't I?”"
+          ],
+          "answer": 1,
+          "why": "This is the one small shift in Omar: noticing that his usual, plain way of asking isn't the way everyone can ask, and saying the plain thing out loud for once, instead of expecting her to read his staying as the answer. It isn't a fix of the habit, just one time he catches it.",
+          "traps": {
+            "0": "“I'm not good at saying things.” It's honest, but it hands the work back to her again, the same thing that made her ask the question in the first place.",
+            "2": "“Does it matter? I'm here.” Being there is real, but it's still him assuming his showing up should be legible without him saying so, the exact blind spot she just named."
+          },
+          "example": "Shared office, Thursday.<br>Colleague: “You never actually said thank you, you just kept bringing me coffee.”<br>Colleague: “Fair. Thank you. I should have just said that.”"
+        }
+      ]
+    },
+    {
+      "level": "Analyse",
+      "label": "Analyse, explain it",
+      "intro": "Time for the book's words. Steiner calls the three parts permission, protection and potency.",
+      "items": [
+        {
+          "type": "pick",
+          "who": "Clara",
+          "text": "“Forget what I said Friday. It was the tea talking.” Omar told her plainly it wasn't, and that the yes still stood.",
+          "cue": "Monday morning, by the lifts. Which explanation fits?",
+          "options": [
+            "Potency was missing until Monday. Clara needed to find her own nerve, and once she did, the yes held.",
+            "Protection is what Omar gave on Monday. Steiner says the fear often arrives after the step is taken, not before it, and this is Omar staying close to what he said before that fear could win.",
+            "Nothing here needs explaining. This was just an ordinary case of someone having second thoughts, and Steiner's terms only apply inside a formal helping relationship."
+          ],
+          "answer": 1,
+          "why": "Steiner puts potency in the giver, not the receiver, so it isn't about Clara's nerve. What happened on Monday is Omar supplying protection: staying present for the fear that showed up once the risk had already been taken, exactly when Steiner says it tends to arrive.",
+          "traps": {
+            "0": "Potency missing, and it's Clara's nerve. Steiner means the giver's own strength to stand behind a yes, not the other person's courage. Omar had already said the words; Monday is him holding them.",
+            "2": "Nothing needs explaining. Steiner's three parts describe what makes any permission hold, inside or outside a formal arrangement, and Monday morning is exactly that shape: a yes under pressure to be taken back."
+          },
+          "example": "Climbing wall, Tuesday evening.<br>Instructor: “You're allowed to be scared now. That's normal, and it's why I'm still holding the rope.”<br>Climber: “Okay. Good.”"
+        }
+      ]
+    }
+  ],
+  "debrief": {
+    "nadia": "Omar still isn't someone who volunteers the soft stuff easily, and Monday morning didn't change that in him for good. It changed it once. Clara let a yes land without going back to earn it first, which is the only part of this that was really new. Neither of them needs to be finished for that to count.",
+    "bookTerm": "Permission, protection and potency",
+    "bookNote": "The books call these permission, protection and potency. Steiner's permission frees someone from an old rule, protection means the giver stays close while the fear that follows arrives, and potency is the giver's own strength to match that old rule. Protection was first set out by Patricia Crossman."
+  },
+  "reflection": { "prompt": "Think of a real yes you gave this week, even a small one. Did you give it a reason to hold, stay close when the fear turned up afterwards, and hold it if someone tried to take it back? Which part, if any, did you skip?" },
+  "next": null
+}

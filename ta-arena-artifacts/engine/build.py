@@ -28,7 +28,9 @@ TA = os.path.dirname(ENGINE)
 ALLOWED_TAGS = ("b", "i", "br")
 TAG_RE = re.compile(r"<[^<>]*>")
 TAG_PARSE_RE = re.compile(r"^<\s*(/?)\s*([A-Za-z][A-Za-z0-9]*)\s*(/?)\s*>$")
-SLOT_RE = re.compile(r"^([1-7])\.([1-6])$")
+SLOT_RE = re.compile(r"^([1-7])\.([1-6]|L[1-9]\d*)$")
+LIBRARY_SUB_RE = re.compile(r"^L[1-9]\d*$")
+SETTINGS = {"Home & Flatmates", "Work", "Family", "Relationships", "School & College", "Friends & Community"}
 LEVELS = ("Spot", "Play", "Analyse")
 LEVEL_COUNTS = {"Spot": (3, 5), "Play": (2, 3), "Analyse": (1, 2)}
 ITEM_TYPES = ("pick", "scene", "sort", "counter")
@@ -355,6 +357,10 @@ def check_item(p, path, it):
 # ---------- game checks ----------
 
 def expected_next(m):
+    """None means slot.next must be null: either 7.6 (the last campaign game) or a
+    library bonus slot (an "N.Lk" id), which sits outside the 1->42 chain entirely."""
+    if LIBRARY_SUB_RE.match(m.group(2)):
+        return None
     w, n = int(m.group(1)), int(m.group(2))
     if (w, n) == (7, 6):
         return None
@@ -373,15 +379,21 @@ def validate_game(g, p):
     slot = g.get("slot")
     m = SLOT_RE.match(slot) if isinstance(slot, str) else None
     if not m:
-        p.err("slot", f"must look like '1.1' (got {slot!r})")
+        p.err("slot", f"must look like '1.1' or a library bonus id like '1.L1' (got {slot!r})")
     else:
+        is_library = bool(LIBRARY_SUB_RE.match(m.group(2)))
         if g.get("world") != int(m.group(1)):
             p.err("world", f"must be {m.group(1)} to match slot {slot}")
         want = expected_next(m)
         if want is None and g.get("next") is not None:
-            p.err("next", "must be null, because 7.6 is the last game")
+            reason = "library bonus games sit outside the chain" if is_library else "7.6 is the last game"
+            p.err("next", f"must be null, because {reason}")
         elif want is not None and g.get("next") != want:
             p.err("next", f"must be {want!r} (the next slot in order), got {g.get('next')!r}")
+        if is_library:
+            need_str(p, g, "setting", "")
+            if isinstance(g.get("setting"), str) and g["setting"] not in SETTINGS:
+                p.err("setting", f"must be one of {sorted(SETTINGS)}, got {g['setting']!r}")
     for key in ("title", "worldName", "weekName", "mechanic", "concept",
                 "bookTerm", "bookIdea", "bookSource"):
         need_str(p, g, key, "")
@@ -663,15 +675,19 @@ ARROW = ('<svg class="arrow" viewBox="0 0 20 30" aria-hidden="true" focusable="f
 LEADS = f'<div class="leads"><span>leads to</span>{ARROW}</div>'
 
 
-def chip_html(slot, games, nav):
-    """One game chip: slot number, title (the link text), and the Boss label or Opening soon."""
+def chip_html(slot, games, nav, library=False):
+    """One game chip: slot number (or an Extra tag for a library bonus game), title (the
+    link text), the Boss/Extra label or Opening soon, and a data-setting attribute used by
+    the per-world setting filter."""
     g = games.get(slot, {})
     entry = nav["slots"].get(slot, {})
     title = g.get("title") or entry.get("title") or f"Game {slot}"
     url = safe_url(entry.get("url"))
-    is_boss = slot.endswith(f".{BOSS_SLOT}")
-    tag = '<span class="boss-tag">Boss</span>' if is_boss else ""
-    cls = "chip boss" if is_boss else "chip"
+    is_boss = (not library) and slot.endswith(f".{BOSS_SLOT}")
+    tag = '<span class="boss-tag">Boss</span>' if is_boss else ('<span class="lib-tag">Extra</span>' if library else "")
+    cls = "chip boss" if is_boss else ("chip lib" if library else "chip")
+    setting = g.get("setting")
+    set_attr = f' data-setting="{html.escape(setting, quote=True)}"' if isinstance(setting, str) and setting else ""
     if url:
         link = f'<a href="{html.escape(url, quote=True)}">{plain(title)}</a>'
         state = ""
@@ -679,11 +695,30 @@ def chip_html(slot, games, nav):
         cls += " soon"
         link = f'<span class="gtitle" role="link" aria-disabled="true">{plain(title)}</span>'
         state = '<span class="state">Opening soon</span>'
-    return f'<li class="{cls}"><span class="slot">{slot}</span>{link}{tag}{state}</li>'
+    label = "Extra" if library else slot
+    return f'<li class="{cls}"{set_attr}><span class="slot">{label}</span>{link}{tag}{state}</li>'
+
+
+def library_slots_for(n, games):
+    """Library bonus slots for world n (ids like '1.L1'), in authored order."""
+    pat = re.compile(rf"^{n}\.L(\d+)$")
+    found = [(int(pat.match(s).group(1)), s) for s in games if pat.match(s)]
+    return [s for _, s in sorted(found)]
 
 
 def world_html(n, w, games, nav):
-    chips = "\n    ".join(chip_html(f"{n}.{k}", games, nav) for k in range(1, 7))
+    campaign_slots = [f"{n}.{k}" for k in range(1, 7)]
+    lib_slots = library_slots_for(n, games)
+    all_slots = campaign_slots + lib_slots
+    chips = "\n    ".join(chip_html(s, games, nav, library=(s in lib_slots)) for s in all_slots)
+    settings_present = sorted({games[s]["setting"] for s in all_slots
+                                if isinstance(games.get(s, {}).get("setting"), str)})
+    filter_html = ""
+    if settings_present:
+        buttons = ['<button type="button" class="setfil active" data-set="">All</button>']
+        buttons += [f'<button type="button" class="setfil" data-set="{html.escape(s, quote=True)}">{plain(s)}</button>'
+                    for s in settings_present]
+        filter_html = f'  <div class="setfilters" role="group" aria-label="Filter by setting">{"".join(buttons)}</div>\n'
     name, rest = split_boss(w["boss"])
     boss = f"<strong>{plain(name)}</strong>: {plain(rest)}" if name else plain(w["boss"])
     prev_a = (f'<a class="prev" href="#world-{n-1}">← {plain(INTRO_NAMES[n-1])}</a>' if n > 1
@@ -699,6 +734,7 @@ def world_html(n, w, games, nav):
         f'  <div class="box"><span class="label">Why it comes here</span>{plain(w["why"])}</div>\n'
         f'  <div class="box"><span class="label">After this world you can</span>{plain(w["can"])}.</div>\n'
         f'  <p class="boss-line">Final challenge: {boss}</p>\n'
+        f'{filter_html}'
         f'  <ol class="chips">\n    {chips}\n  </ol>\n'
         f'  <nav class="worldnav" aria-label="Worlds">{prev_a}{next_a}</nav>\n'
         "</section>")

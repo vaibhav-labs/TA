@@ -135,6 +135,15 @@
   .chip.soon { background: var(--surface); }
   .chip.boss { background: color-mix(in srgb, var(--wc) 12%, var(--surface)); border-color: var(--wc); }
   .chip .boss-tag::before, .chip .state::before { width: 1.1em; height: 1.1em; }
+  .lib-tag { flex: none; margin-left: 46px; font-family: "IBM Plex Mono", monospace; font-size: 10.5px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; border-radius: 999px; padding: 3px 9px; color: var(--wc); background: color-mix(in srgb, var(--wc) 16%, var(--surface)); border: 1px solid color-mix(in srgb, var(--wc) 50%, transparent); }
+  .chip.lib { border-left-style: dashed; }
+
+  .setfilters { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 14px; }
+  .setfil { font-family: "IBM Plex Mono", monospace; font-size: 12px; font-weight: 600; letter-spacing: 0.02em; color: var(--text-dim); background: var(--surface); border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 999px; padding: 8px 14px; min-height: 36px; cursor: pointer; }
+  .setfil:hover { color: var(--text); border-color: rgba(255, 255, 255, 0.3); }
+  .setfil:focus-visible { outline: 3px solid var(--wc); outline-offset: 2px; }
+  .setfil.active { color: #080a10; background: var(--wc); border-color: var(--wc); }
+  .chip[hidden] { display: none; }
 
   .worldnav { display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
   .worldnav a { font-family: "IBM Plex Mono", monospace; font-size: 12.5px; font-weight: 600; text-decoration: none; color: var(--text); background: var(--surface-2); border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 999px; padding: 10px 16px; min-height: 44px; display: inline-flex; align-items: center; }
@@ -195,13 +204,16 @@
   <div class="box"><span class="label">Why it comes here</span>This world comes first because the rest of the game is built on small moments between people. Strokes are the first thing to notice.</div>
   <div class="box"><span class="label">After this world you can</span>tell a warm nod from a cold one, and notice what a day with almost none costs you.</div>
   <p class="boss-line">Final challenge: <strong>The Stroke Economy</strong>: break the five unwritten rules people use to hand out nods, and say who benefits from them</p>
+  <div class="setfilters" role="group" aria-label="Filter by setting"><button type="button" class="setfil active" data-set="">All</button><button type="button" class="setfil" data-set="Family">Family</button><button type="button" class="setfil" data-set="Friends &amp; Community">Friends &amp; Community</button><button type="button" class="setfil" data-set="Home &amp; Flatmates">Home &amp; Flatmates</button><button type="button" class="setfil" data-set="Relationships">Relationships</button><button type="button" class="setfil" data-set="School &amp; College">School &amp; College</button><button type="button" class="setfil" data-set="Work">Work</button></div>
   <ol class="chips">
-    <li class="chip"><span class="slot">1.1</span><a href="https://vaibhav-labs.github.io/TA/arena/1-1.html">Spinal Cord</a></li>
-    <li class="chip"><span class="slot">1.2</span><a href="https://vaibhav-labs.github.io/TA/arena/1-2.html">Stroke Sorter</a></li>
-    <li class="chip"><span class="slot">1.3</span><a href="https://vaibhav-labs.github.io/TA/arena/1-3.html">Hi–Hi</a></li>
-    <li class="chip"><span class="slot">1.4</span><a href="https://vaibhav-labs.github.io/TA/arena/1-4.html">The Party</a></li>
-    <li class="chip"><span class="slot">1.5</span><a href="https://vaibhav-labs.github.io/TA/arena/1-5.html">PTA Three Ways</a></li>
-    <li class="chip boss"><span class="slot">1.6</span><a href="https://vaibhav-labs.github.io/TA/arena/1-6.html">Boss: The Stroke Economy</a><span class="boss-tag">Boss</span></li>
+    <li class="chip" data-setting="Home &amp; Flatmates"><span class="slot">1.1</span><a href="https://vaibhav-labs.github.io/TA/arena/1-1.html">Spinal Cord</a></li>
+    <li class="chip" data-setting="Home &amp; Flatmates"><span class="slot">1.2</span><a href="https://vaibhav-labs.github.io/TA/arena/1-2.html">Stroke Sorter</a></li>
+    <li class="chip" data-setting="Home &amp; Flatmates"><span class="slot">1.3</span><a href="https://vaibhav-labs.github.io/TA/arena/1-3.html">Hi–Hi</a></li>
+    <li class="chip" data-setting="Work"><span class="slot">1.4</span><a href="https://vaibhav-labs.github.io/TA/arena/1-4.html">The Party</a></li>
+    <li class="chip" data-setting="Family"><span class="slot">1.5</span><a href="https://vaibhav-labs.github.io/TA/arena/1-5.html">PTA Three Ways</a></li>
+    <li class="chip boss" data-setting="Friends &amp; Community"><span class="slot">1.6</span><a href="https://vaibhav-labs.github.io/TA/arena/1-6.html">Boss: The Stroke Economy</a><span class="boss-tag">Boss</span></li>
+    <li class="chip lib" data-setting="Relationships"><span class="slot">Extra</span><a href="https://vaibhav-labs.github.io/TA/arena/1-L1.html">Two Coffees</a><span class="lib-tag">Extra</span></li>
+    <li class="chip lib" data-setting="School &amp; College"><span class="slot">Extra</span><a href="https://vaibhav-labs.github.io/TA/arena/1-L2.html">The Register</a><span class="lib-tag">Extra</span></li>
   </ol>
   <nav class="worldnav" aria-label="Worlds"><a class="prev" href="#home">← The map</a><a class="next" href="#world-2">Who’s Talking →</a></nav>
 </section>
@@ -213,13 +225,16 @@
   <div class="box"><span class="label">Why it comes here</span>This world comes second because once you can see the small moments between people, the next question is who is talking. The same words can come from any of the three voices.</div>
   <div class="box"><span class="label">After this world you can</span>name which voice is talking, from the words, the tone and the posture.</div>
   <p class="boss-line">Final challenge: <strong>The Contaminated Adult</strong>: spot a Boss leak or a Kid leak in a sensible-sounding room, and bring it back to facts</p>
+  <div class="setfilters" role="group" aria-label="Filter by setting"><button type="button" class="setfil active" data-set="">All</button><button type="button" class="setfil" data-set="Family">Family</button><button type="button" class="setfil" data-set="Friends &amp; Community">Friends &amp; Community</button><button type="button" class="setfil" data-set="Home &amp; Flatmates">Home &amp; Flatmates</button><button type="button" class="setfil" data-set="Relationships">Relationships</button><button type="button" class="setfil" data-set="School &amp; College">School &amp; College</button><button type="button" class="setfil" data-set="Work">Work</button></div>
   <ol class="chips">
-    <li class="chip"><span class="slot">2.1</span><a href="https://vaibhav-labs.github.io/TA/arena/2-1.html">Who Said That</a></li>
-    <li class="chip"><span class="slot">2.2</span><a href="https://vaibhav-labs.github.io/TA/arena/2-2.html">Five Faces</a></li>
-    <li class="chip"><span class="slot">2.3</span><a href="https://vaibhav-labs.github.io/TA/arena/2-3.html">Egogram</a></li>
-    <li class="chip"><span class="slot">2.4</span><a href="https://vaibhav-labs.github.io/TA/arena/2-4.html">Four Ways to Know</a></li>
-    <li class="chip"><span class="slot">2.5</span><a href="https://vaibhav-labs.github.io/TA/arena/2-5.html">Little Professor</a></li>
-    <li class="chip boss"><span class="slot">2.6</span><a href="https://vaibhav-labs.github.io/TA/arena/2-6.html">Boss: The Contaminated Adult</a><span class="boss-tag">Boss</span></li>
+    <li class="chip" data-setting="Home &amp; Flatmates"><span class="slot">2.1</span><a href="https://vaibhav-labs.github.io/TA/arena/2-1.html">Who Said That</a></li>
+    <li class="chip" data-setting="Work"><span class="slot">2.2</span><a href="https://vaibhav-labs.github.io/TA/arena/2-2.html">Five Faces</a></li>
+    <li class="chip" data-setting="Home &amp; Flatmates"><span class="slot">2.3</span><a href="https://vaibhav-labs.github.io/TA/arena/2-3.html">Egogram</a></li>
+    <li class="chip" data-setting="Work"><span class="slot">2.4</span><a href="https://vaibhav-labs.github.io/TA/arena/2-4.html">Four Ways to Know</a></li>
+    <li class="chip" data-setting="Family"><span class="slot">2.5</span><a href="https://vaibhav-labs.github.io/TA/arena/2-5.html">Little Professor</a></li>
+    <li class="chip boss" data-setting="Friends &amp; Community"><span class="slot">2.6</span><a href="https://vaibhav-labs.github.io/TA/arena/2-6.html">Boss: The Contaminated Adult</a><span class="boss-tag">Boss</span></li>
+    <li class="chip lib" data-setting="Relationships"><span class="slot">Extra</span><a href="https://vaibhav-labs.github.io/TA/arena/2-L1.html">The Second Coffee</a><span class="lib-tag">Extra</span></li>
+    <li class="chip lib" data-setting="School &amp; College"><span class="slot">Extra</span><a href="https://vaibhav-labs.github.io/TA/arena/2-L2.html">The Tuesday Class</a><span class="lib-tag">Extra</span></li>
   </ol>
   <nav class="worldnav" aria-label="Worlds"><a class="prev" href="#world-1">← Being Noticed</a><a class="next" href="#world-3">Back and Forth →</a></nav>
 </section>
@@ -231,13 +246,16 @@
   <div class="box"><span class="label">Why it comes here</span>This world comes third because you need to know the three voices first. Only then can you tell where a line starts and where it lands.</div>
   <div class="box"><span class="label">After this world you can</span>draw the arrow for any line, and say whether the reply matches it or cuts across it.</div>
   <p class="boss-line">Final challenge: <strong>The Salesman</strong>: find the sting in a friendly sales line, and answer both of its targets</p>
+  <div class="setfilters" role="group" aria-label="Filter by setting"><button type="button" class="setfil active" data-set="">All</button><button type="button" class="setfil" data-set="Family">Family</button><button type="button" class="setfil" data-set="Friends &amp; Community">Friends &amp; Community</button><button type="button" class="setfil" data-set="Home &amp; Flatmates">Home &amp; Flatmates</button><button type="button" class="setfil" data-set="Relationships">Relationships</button><button type="button" class="setfil" data-set="School &amp; College">School &amp; College</button><button type="button" class="setfil" data-set="Work">Work</button></div>
   <ol class="chips">
-    <li class="chip"><span class="slot">3.1</span><a href="https://vaibhav-labs.github.io/TA/arena/3-1.html">Draw the Arrow</a></li>
-    <li class="chip"><span class="slot">3.2</span><a href="https://vaibhav-labs.github.io/TA/arena/3-2.html">Keep It Going</a></li>
-    <li class="chip"><span class="slot">3.3</span><a href="https://vaibhav-labs.github.io/TA/arena/3-3.html">Cross It</a></li>
-    <li class="chip"><span class="slot">3.4</span><a href="https://vaibhav-labs.github.io/TA/arena/3-4.html">Cuff Links</a></li>
-    <li class="chip"><span class="slot">3.5</span><a href="https://vaibhav-labs.github.io/TA/arena/3-5.html">The Barn</a></li>
-    <li class="chip boss"><span class="slot">3.6</span><a href="https://vaibhav-labs.github.io/TA/arena/3-6.html">Boss: The Salesman</a><span class="boss-tag">Boss</span></li>
+    <li class="chip" data-setting="Home &amp; Flatmates"><span class="slot">3.1</span><a href="https://vaibhav-labs.github.io/TA/arena/3-1.html">Draw the Arrow</a></li>
+    <li class="chip" data-setting="Work"><span class="slot">3.2</span><a href="https://vaibhav-labs.github.io/TA/arena/3-2.html">Keep It Going</a></li>
+    <li class="chip" data-setting="Home &amp; Flatmates"><span class="slot">3.3</span><a href="https://vaibhav-labs.github.io/TA/arena/3-3.html">Cross It</a></li>
+    <li class="chip" data-setting="Home &amp; Flatmates"><span class="slot">3.4</span><a href="https://vaibhav-labs.github.io/TA/arena/3-4.html">Cuff Links</a></li>
+    <li class="chip" data-setting="Relationships"><span class="slot">3.5</span><a href="https://vaibhav-labs.github.io/TA/arena/3-5.html">The Barn</a></li>
+    <li class="chip boss" data-setting="Friends &amp; Community"><span class="slot">3.6</span><a href="https://vaibhav-labs.github.io/TA/arena/3-6.html">Boss: The Salesman</a><span class="boss-tag">Boss</span></li>
+    <li class="chip lib" data-setting="Family"><span class="slot">Extra</span><a href="https://vaibhav-labs.github.io/TA/arena/3-L1.html">The Letter Drawer</a><span class="lib-tag">Extra</span></li>
+    <li class="chip lib" data-setting="School &amp; College"><span class="slot">Extra</span><a href="https://vaibhav-labs.github.io/TA/arena/3-L2.html">More or Less Done</a><span class="lib-tag">Extra</span></li>
   </ol>
   <nav class="worldnav" aria-label="Worlds"><a class="prev" href="#world-2">← Who’s Talking</a><a class="next" href="#world-4">Conversation Traps →</a></nav>
 </section>
@@ -249,13 +267,18 @@
   <div class="box"><span class="label">Why it comes here</span>This world comes fourth because once you can follow a line and its reply, you can notice when the same exchange keeps coming back. A repeating exchange is a trap, and this world gives each one a name.</div>
   <div class="box"><span class="label">After this world you can</span>tell a trap from real talk by listening for the hook, the switch and what the trap pays.</div>
   <p class="boss-line">Final challenge: <strong>Why Don’t You, Yes But</strong>: step out of a loop of yes-buts without leaving the room</p>
+  <div class="setfilters" role="group" aria-label="Filter by setting"><button type="button" class="setfil active" data-set="">All</button><button type="button" class="setfil" data-set="Family">Family</button><button type="button" class="setfil" data-set="Friends &amp; Community">Friends &amp; Community</button><button type="button" class="setfil" data-set="Home &amp; Flatmates">Home &amp; Flatmates</button><button type="button" class="setfil" data-set="Relationships">Relationships</button><button type="button" class="setfil" data-set="School &amp; College">School &amp; College</button><button type="button" class="setfil" data-set="Work">Work</button></div>
   <ol class="chips">
-    <li class="chip"><span class="slot">4.1</span><a href="https://vaibhav-labs.github.io/TA/arena/4-1.html">Is It a Game?</a></li>
-    <li class="chip"><span class="slot">4.2</span><a href="https://vaibhav-labs.github.io/TA/arena/4-2.html">Formula G</a></li>
-    <li class="chip"><span class="slot">4.3</span><a href="https://vaibhav-labs.github.io/TA/arena/4-3.html">Life Games</a></li>
-    <li class="chip"><span class="slot">4.4</span><a href="https://vaibhav-labs.github.io/TA/arena/4-4.html">Home Games</a></li>
-    <li class="chip"><span class="slot">4.5</span><a href="https://vaibhav-labs.github.io/TA/arena/4-5.html">Room Games</a></li>
-    <li class="chip boss"><span class="slot">4.6</span><a href="https://vaibhav-labs.github.io/TA/arena/4-6.html">Boss: Why Don’t You–Yes But</a><span class="boss-tag">Boss</span></li>
+    <li class="chip" data-setting="Home &amp; Flatmates"><span class="slot">4.1</span><a href="https://vaibhav-labs.github.io/TA/arena/4-1.html">Is It a Game?</a></li>
+    <li class="chip" data-setting="Home &amp; Flatmates"><span class="slot">4.2</span><a href="https://vaibhav-labs.github.io/TA/arena/4-2.html">Formula G</a></li>
+    <li class="chip" data-setting="Home &amp; Flatmates"><span class="slot">4.3</span><a href="https://vaibhav-labs.github.io/TA/arena/4-3.html">Life Games</a></li>
+    <li class="chip" data-setting="Home &amp; Flatmates"><span class="slot">4.4</span><a href="https://vaibhav-labs.github.io/TA/arena/4-4.html">Home Games</a></li>
+    <li class="chip" data-setting="Home &amp; Flatmates"><span class="slot">4.5</span><a href="https://vaibhav-labs.github.io/TA/arena/4-5.html">Room Games</a></li>
+    <li class="chip boss" data-setting="Friends &amp; Community"><span class="slot">4.6</span><a href="https://vaibhav-labs.github.io/TA/arena/4-6.html">Boss: Why Don’t You–Yes But</a><span class="boss-tag">Boss</span></li>
+    <li class="chip lib" data-setting="Work"><span class="slot">Extra</span><a href="https://vaibhav-labs.github.io/TA/arena/4-L1.html">Just Let Me Look</a><span class="lib-tag">Extra</span></li>
+    <li class="chip lib" data-setting="Family"><span class="slot">Extra</span><a href="https://vaibhav-labs.github.io/TA/arena/4-L2.html">The Go-Between</a><span class="lib-tag">Extra</span></li>
+    <li class="chip lib" data-setting="Relationships"><span class="slot">Extra</span><a href="https://vaibhav-labs.github.io/TA/arena/4-L3.html">The Blue Cup</a><span class="lib-tag">Extra</span></li>
+    <li class="chip lib" data-setting="School &amp; College"><span class="slot">Extra</span><a href="https://vaibhav-labs.github.io/TA/arena/4-L4.html">Three Good Ideas</a><span class="lib-tag">Extra</span></li>
   </ol>
   <nav class="worldnav" aria-label="Worlds"><a class="prev" href="#world-3">← Back and Forth</a><a class="next" href="#world-5">Under the Surface →</a></nav>
 </section>
@@ -267,13 +290,16 @@
   <div class="box"><span class="label">Why it comes here</span>This world comes fifth because you can only find the real feeling once you have spotted the trap that is covering it.</div>
   <div class="box"><span class="label">After this world you can</span>tell a real feeling, which finishes something, from a stand-in feeling, which never does.</div>
   <p class="boss-line">Final challenge: <strong>The Discount Matrix</strong>: see the kind-sounding line that keeps a trap going, and say what a real step would look like</p>
+  <div class="setfilters" role="group" aria-label="Filter by setting"><button type="button" class="setfil active" data-set="">All</button><button type="button" class="setfil" data-set="Family">Family</button><button type="button" class="setfil" data-set="Friends &amp; Community">Friends &amp; Community</button><button type="button" class="setfil" data-set="Home &amp; Flatmates">Home &amp; Flatmates</button><button type="button" class="setfil" data-set="Relationships">Relationships</button><button type="button" class="setfil" data-set="School &amp; College">School &amp; College</button><button type="button" class="setfil" data-set="Work">Work</button></div>
   <ol class="chips">
-    <li class="chip"><span class="slot">5.1</span><a href="https://vaibhav-labs.github.io/TA/arena/5-1.html">Real or Racket</a></li>
-    <li class="chip"><span class="slot">5.2</span><a href="https://vaibhav-labs.github.io/TA/arena/5-2.html">Stamp Book</a></li>
-    <li class="chip"><span class="slot">5.3</span><a href="https://vaibhav-labs.github.io/TA/arena/5-3.html">Four Levels</a></li>
-    <li class="chip"><span class="slot">5.4</span><a href="https://vaibhav-labs.github.io/TA/arena/5-4.html">Doing Nothing</a></li>
-    <li class="chip"><span class="slot">5.5</span><a href="https://vaibhav-labs.github.io/TA/arena/5-5.html">Two Halves</a></li>
-    <li class="chip boss"><span class="slot">5.6</span><a href="https://vaibhav-labs.github.io/TA/arena/5-6.html">Boss: The Discount Matrix</a><span class="boss-tag">Boss</span></li>
+    <li class="chip" data-setting="Work"><span class="slot">5.1</span><a href="https://vaibhav-labs.github.io/TA/arena/5-1.html">Real or Racket</a></li>
+    <li class="chip" data-setting="Home &amp; Flatmates"><span class="slot">5.2</span><a href="https://vaibhav-labs.github.io/TA/arena/5-2.html">Stamp Book</a></li>
+    <li class="chip" data-setting="Family"><span class="slot">5.3</span><a href="https://vaibhav-labs.github.io/TA/arena/5-3.html">Four Levels</a></li>
+    <li class="chip" data-setting="Work"><span class="slot">5.4</span><a href="https://vaibhav-labs.github.io/TA/arena/5-4.html">Doing Nothing</a></li>
+    <li class="chip" data-setting="Home &amp; Flatmates"><span class="slot">5.5</span><a href="https://vaibhav-labs.github.io/TA/arena/5-5.html">Two Halves</a></li>
+    <li class="chip boss" data-setting="Friends &amp; Community"><span class="slot">5.6</span><a href="https://vaibhav-labs.github.io/TA/arena/5-6.html">Boss: The Discount Matrix</a><span class="boss-tag">Boss</span></li>
+    <li class="chip lib" data-setting="Relationships"><span class="slot">Extra</span><a href="https://vaibhav-labs.github.io/TA/arena/5-L1.html">Still Warm</a><span class="lib-tag">Extra</span></li>
+    <li class="chip lib" data-setting="School &amp; College"><span class="slot">Extra</span><a href="https://vaibhav-labs.github.io/TA/arena/5-L2.html">The Tracker</a><span class="lib-tag">Extra</span></li>
   </ol>
   <nav class="worldnav" aria-label="Worlds"><a class="prev" href="#world-4">← Conversation Traps</a><a class="next" href="#world-6">The Story You Wrote →</a></nav>
 </section>
@@ -285,13 +311,17 @@
   <div class="box"><span class="label">Why it comes here</span>This world comes sixth because the traps add up to a plan. You need to know the traps before you can see the plan they build.</div>
   <div class="box"><span class="label">After this world you can</span>hear the rule running under a line, and read the plan a life story is following.</div>
   <p class="boss-line">Final challenge: <strong>The Script Matrix</strong>: place a life story’s rules and plan on one board, and suggest a new line that can be acted on this month</p>
+  <div class="setfilters" role="group" aria-label="Filter by setting"><button type="button" class="setfil active" data-set="">All</button><button type="button" class="setfil" data-set="Family">Family</button><button type="button" class="setfil" data-set="Friends &amp; Community">Friends &amp; Community</button><button type="button" class="setfil" data-set="Home &amp; Flatmates">Home &amp; Flatmates</button><button type="button" class="setfil" data-set="Relationships">Relationships</button><button type="button" class="setfil" data-set="School &amp; College">School &amp; College</button><button type="button" class="setfil" data-set="Work">Work</button></div>
   <ol class="chips">
-    <li class="chip"><span class="slot">6.1</span><a href="https://vaibhav-labs.github.io/TA/arena/6-1.html">OK Corral</a></li>
-    <li class="chip"><span class="slot">6.2</span><a href="https://vaibhav-labs.github.io/TA/arena/6-2.html">Hear the Driver</a></li>
-    <li class="chip"><span class="slot">6.3</span><a href="https://vaibhav-labs.github.io/TA/arena/6-3.html">Don’t</a></li>
-    <li class="chip"><span class="slot">6.4</span><a href="https://vaibhav-labs.github.io/TA/arena/6-4.html">Three Banal Scripts</a></li>
-    <li class="chip"><span class="slot">6.5</span><a href="https://vaibhav-labs.github.io/TA/arena/6-5.html">Script Process</a></li>
-    <li class="chip boss"><span class="slot">6.6</span><a href="https://vaibhav-labs.github.io/TA/arena/6-6.html">Boss: The Script Matrix</a><span class="boss-tag">Boss</span></li>
+    <li class="chip" data-setting="Friends &amp; Community"><span class="slot">6.1</span><a href="https://vaibhav-labs.github.io/TA/arena/6-1.html">OK Corral</a></li>
+    <li class="chip" data-setting="Home &amp; Flatmates"><span class="slot">6.2</span><a href="https://vaibhav-labs.github.io/TA/arena/6-2.html">Hear the Driver</a></li>
+    <li class="chip" data-setting="Family"><span class="slot">6.3</span><a href="https://vaibhav-labs.github.io/TA/arena/6-3.html">Don’t</a></li>
+    <li class="chip" data-setting="Friends &amp; Community"><span class="slot">6.4</span><a href="https://vaibhav-labs.github.io/TA/arena/6-4.html">Three Banal Scripts</a></li>
+    <li class="chip" data-setting="Family"><span class="slot">6.5</span><a href="https://vaibhav-labs.github.io/TA/arena/6-5.html">Script Process</a></li>
+    <li class="chip boss" data-setting="Friends &amp; Community"><span class="slot">6.6</span><a href="https://vaibhav-labs.github.io/TA/arena/6-6.html">Boss: The Script Matrix</a><span class="boss-tag">Boss</span></li>
+    <li class="chip lib" data-setting="Work"><span class="slot">Extra</span><a href="https://vaibhav-labs.github.io/TA/arena/6-L1.html">The Release Tell</a><span class="lib-tag">Extra</span></li>
+    <li class="chip lib" data-setting="Relationships"><span class="slot">Extra</span><a href="https://vaibhav-labs.github.io/TA/arena/6-L2.html">Nothing to Fix</a><span class="lib-tag">Extra</span></li>
+    <li class="chip lib" data-setting="School &amp; College"><span class="slot">Extra</span><a href="https://vaibhav-labs.github.io/TA/arena/6-L3.html">Half the Reading</a><span class="lib-tag">Extra</span></li>
   </ol>
   <nav class="worldnav" aria-label="Worlds"><a class="prev" href="#world-5">← Under the Surface</a><a class="next" href="#world-7">Free to Choose →</a></nav>
 </section>
@@ -303,13 +333,17 @@
   <div class="box"><span class="label">Why it comes here</span>This world comes last because once you can see your plan, you can change it. The worlds before this one help you see. This one helps you act.</div>
   <div class="box"><span class="label">After this world you can</span>help without rescuing, make clear agreements, and keep a hard conversation honest.</div>
   <p class="boss-line">Final challenge: <strong>After Games, What?</strong>: keep a candid conversation real for six turns, without rescuing or blaming anyone</p>
+  <div class="setfilters" role="group" aria-label="Filter by setting"><button type="button" class="setfil active" data-set="">All</button><button type="button" class="setfil" data-set="Family">Family</button><button type="button" class="setfil" data-set="Friends &amp; Community">Friends &amp; Community</button><button type="button" class="setfil" data-set="Home &amp; Flatmates">Home &amp; Flatmates</button><button type="button" class="setfil" data-set="Relationships">Relationships</button><button type="button" class="setfil" data-set="School &amp; College">School &amp; College</button><button type="button" class="setfil" data-set="Work">Work</button></div>
   <ol class="chips">
-    <li class="chip"><span class="slot">7.1</span><a href="https://vaibhav-labs.github.io/TA/arena/7-1.html">Help or Rescue</a></li>
-    <li class="chip"><span class="slot">7.2</span><a href="https://vaibhav-labs.github.io/TA/arena/7-2.html">The Contract</a></li>
-    <li class="chip"><span class="slot">7.3</span><a href="https://vaibhav-labs.github.io/TA/arena/7-3.html">Three P’s</a></li>
-    <li class="chip"><span class="slot">7.4</span><a href="https://vaibhav-labs.github.io/TA/arena/7-4.html">Despair to Laughter</a></li>
-    <li class="chip"><span class="slot">7.5</span><a href="https://vaibhav-labs.github.io/TA/arena/7-5.html">Awareness, Spontaneity, Intimacy</a></li>
-    <li class="chip boss"><span class="slot">7.6</span><a href="https://vaibhav-labs.github.io/TA/arena/7-6.html">After Games, What?</a><span class="boss-tag">Boss</span></li>
+    <li class="chip" data-setting="Home &amp; Flatmates"><span class="slot">7.1</span><a href="https://vaibhav-labs.github.io/TA/arena/7-1.html">Help or Rescue</a></li>
+    <li class="chip" data-setting="Home &amp; Flatmates"><span class="slot">7.2</span><a href="https://vaibhav-labs.github.io/TA/arena/7-2.html">The Contract</a></li>
+    <li class="chip" data-setting="Work"><span class="slot">7.3</span><a href="https://vaibhav-labs.github.io/TA/arena/7-3.html">Three P’s</a></li>
+    <li class="chip" data-setting="Home &amp; Flatmates"><span class="slot">7.4</span><a href="https://vaibhav-labs.github.io/TA/arena/7-4.html">Despair to Laughter</a></li>
+    <li class="chip" data-setting="Home &amp; Flatmates"><span class="slot">7.5</span><a href="https://vaibhav-labs.github.io/TA/arena/7-5.html">Awareness, Spontaneity, Intimacy</a></li>
+    <li class="chip boss" data-setting="Friends &amp; Community"><span class="slot">7.6</span><a href="https://vaibhav-labs.github.io/TA/arena/7-6.html">After Games, What?</a><span class="boss-tag">Boss</span></li>
+    <li class="chip lib" data-setting="Family"><span class="slot">Extra</span><a href="https://vaibhav-labs.github.io/TA/arena/7-L1.html">Three Unopened Envelopes</a><span class="lib-tag">Extra</span></li>
+    <li class="chip lib" data-setting="Relationships"><span class="slot">Extra</span><a href="https://vaibhav-labs.github.io/TA/arena/7-L2.html">Not the Tea</a><span class="lib-tag">Extra</span></li>
+    <li class="chip lib" data-setting="School &amp; College"><span class="slot">Extra</span><a href="https://vaibhav-labs.github.io/TA/arena/7-L3.html">The Sign-Up Sheet</a><span class="lib-tag">Extra</span></li>
   </ol>
   <nav class="worldnav" aria-label="Worlds"><a class="prev" href="#world-6">← The Story You Wrote</a><a class="next" href="#home">Back to the map</a></nav>
 </section>
@@ -331,6 +365,23 @@
   }
   window.addEventListener("hashchange", route);
   route();
+
+  // Setting filter: click a pill to show only that world's chips in that setting.
+  document.addEventListener("click", function (e) {
+    var btn = e.target.closest(".setfil");
+    if (!btn) return;
+    var group = btn.closest(".setfilters");
+    var want = btn.getAttribute("data-set") || "";
+    Array.prototype.forEach.call(group.querySelectorAll(".setfil"), function (b) {
+      b.classList.toggle("active", b === btn);
+    });
+    var list = group.nextElementSibling; // the <ol class="chips"> right after the filter row
+    if (!list) return;
+    Array.prototype.forEach.call(list.querySelectorAll("li.chip"), function (li) {
+      var s = li.getAttribute("data-setting") || "";
+      li.hidden = !!want && s !== want;
+    });
+  });
 })();
 </script>
 <script>if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('sw.js',{scope:'/TA/arena/'}).catch(function(){});});}</script>

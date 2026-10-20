@@ -1,0 +1,169 @@
+{
+  "slot": "5.L2",
+  "setting": "School & College",
+  "title": "The Tracker",
+  "world": 5,
+  "worldName": "Under the Surface",
+  "week": 5,
+  "weekName": "Under the Surface",
+  "mechanic": "Ladder",
+  "concept": "After this one you can name which part of a problem a line is making smaller, and say what a real step would look like, even when the problem is your own homework.",
+  "bookTerm": "Discounting",
+  "bookIdea": "Discounting is ignoring part of a situation without realising it, and it can shrink a problem at one of four levels: that it exists, that it matters, that it can change, or that you personally can do anything about it.",
+  "bookSource": "TA Today, ch. 1, 17 and 18; Scripts People Live, ch. 9",
+  "opener": {
+    "setting": "Tuesday, 7:05pm. The adult education centre, room 4. Six chairs in a horseshoe, the projector humming. Sam has come straight from work for the money skills course, three weeks in.",
+    "lines": [
+      { "who": "Mr Doyle", "text": "“Sam, did you bring last week's tracker?”", "cue": "pen already out, not unkind about it" },
+      { "who": "Sam", "text": "“Ha, the tracker. Yeah, it's around somewhere. I'll have it next week, honestly.”", "cue": "patting pockets that don't have it, already smiling past the question" }
+    ],
+    "ask": "Sam is missing the same thing for the second week running. Which part of the problem is each person in the room making smaller, and how?"
+  },
+  "rounds": [
+    {
+      "level": "Spot",
+      "label": "Spot, round 1",
+      "intro": "Each line makes one part of a problem smaller. Pick the part the line is shrinking.",
+      "items": [
+        {
+          "type": "pick",
+          "who": "Sam",
+          "text": "“Nothing to write down, really. I didn't spend anything odd last week, so there was nothing there to track.”",
+          "cue": "already reaching for his bag, like the question's answered",
+          "options": ["The spending problem isn't there at all", "The spending problem can't be changed", "I can't do anything about the spending"],
+          "answer": 0,
+          "why": "He says there was nothing to note, which denies the week had anything worth looking at in the first place. That's the first level of shrinking: a problem made so small it stops existing.",
+          "traps": {
+            "1": "'Can't be changed' would treat spending as fixed in place, something nobody could ever get a grip on. The talk would move to whether a tracker can ever work, and nothing about last week's actual spending would get asked.",
+            "2": "'I can't do anything about it' would put the whole weight on Sam's own power. He'd be let off the sheet entirely, since the question becomes what he's capable of, not what he spent."
+          },
+          "example": "A gym changing room, Monday.<br>Member: “Nothing to log really, I didn't train hard enough to need the sheet.”<br>His friend: “You did the full session though.”"
+        },
+        {
+          "type": "pick",
+          "who": "Connie",
+          "text": "“I'm two pounds over most weeks. It's only a couple of pounds, it's not like it matters.”",
+          "cue": "laughing, folding the handout into a square",
+          "options": ["The problem doesn't matter much", "The problem isn't there at all", "The problem can't be changed"],
+          "answer": 0,
+          "why": "She admits the two pounds, so she isn't denying it exists. She makes it small a different way, by saying it doesn't matter. That's the second level: something real, filed as not worth bothering with.",
+          "traps": {
+            "1": "'Isn't there at all' would mean Connie is denying the overspend, but she's just told the room the exact figure. The talk would be about whether she's mistaken, not about the two pounds.",
+            "2": "'Can't be changed' would turn a couple of pounds into a law of nature. Mr Doyle would end up arguing the impossible instead of asking what she bought."
+          },
+          "example": "A book club chat, Thursday.<br>Member: “I'm a chapter behind again, it's only one chapter, nobody's counting.”<br>Host: “I am. We vote on the ending Friday.”"
+        },
+        {
+          "type": "pick",
+          "who": "Yusuf",
+          "text": "“My wages come in different each month. There's no version of this sheet that fits a wage that never stays the same.”",
+          "cue": "shrugging, closing the laptop lid",
+          "options": ["The problem can't be changed", "The problem doesn't matter much", "I can't do anything about it"],
+          "answer": 0,
+          "why": "He grants that his pay is uneven, a real problem, so he isn't denying it or waving it off. He shrinks it by treating the sheet, and the problem it's for, as something that simply can't work for someone in his position. That's the third level.",
+          "traps": {
+            "1": "'Doesn't matter much' would make an uneven wage sound minor, but Yusuf is explaining it in detail, which isn't how someone talks about something they think is small.",
+            "2": "'I can't do anything about it' would put the gap in Yusuf himself rather than in the sheet. He's actually arguing the method is wrong for anyone in his position, not that he personally lacks the ability."
+          },
+          "example": "A taxi rank, Friday night.<br>Driver: “Fares are never the same two nights running. No point trying to budget round something that moves like that.”"
+        },
+        {
+          "type": "pick",
+          "who": "Sam",
+          "text": "“I get what the tracker's for. I'm just not someone who can stick to this sort of thing. Never have been.”",
+          "cue": "pushing the blank sheet back across the table",
+          "options": ["I can't do anything about it", "The problem isn't there at all", "The problem can't be changed"],
+          "answer": 0,
+          "why": "He doesn't deny the money trouble, and he doesn't say the tracker's pointless. He shrinks his own part: he's the kind of person who can't do this, never has been. That's the fourth level, the one that keeps him from starting at all.",
+          "traps": {
+            "1": "'Isn't there at all' would mean Sam thinks there's no money problem to look at, but he's just agreed the tracker has a point. The talk would be about whether tracking matters, not about Sam filling anything in.",
+            "2": "'Can't be changed' would blame the sheet itself. Sam would be arguing the method is broken rather than naming what's stopping him from using it."
+          },
+          "example": "A choir rehearsal, Wednesday.<br>Singer: “I know the part, I'm just not someone who can hold a harmony. Never could.”<br>Conductor: “You held it on Tuesday.”"
+        }
+      ]
+    },
+    {
+      "level": "Play",
+      "label": "Play, the week after",
+      "intro": "Harder now. All four parts of the problem are on the table, and each line can seem to fit more than one. Pick the part it's working hardest to shrink.",
+      "items": [
+        {
+          "type": "pick",
+          "who": "Sam",
+          "text": "“I've always been hopeless with money. Runs in the family, Mum's exactly the same. A sheet's not going to change that about me.”",
+          "cue": "sliding the tracker under his notebook, not opening it",
+          "options": [
+            "The problem isn't there at all",
+            "The problem doesn't matter much",
+            "The problem can't be changed",
+            "I personally can't do anything about it"
+          ],
+          "answer": 3,
+          "why": "He doesn't deny the money trouble, and he isn't calling it trivial. He puts the unchangeable part on himself: hopeless, runs in the family, something fixed in who he is rather than in the sheet. That's the personal-ability level, the one that keeps him from opening the notebook at all.",
+          "traps": {
+            "0": "This would mean Sam thinks there's no money problem. But 'hopeless with money' is him naming one directly.",
+            "1": "This would treat the money trouble as minor. 'Hopeless' isn't a word anyone uses for something small.",
+            "2": "This would blame the sheet or the method. The line isn't about whether a sheet could work for anyone, it's about what Sam is."
+          },
+          "example": "A driving test waiting room, Saturday.<br>Learner: “I've never been able to parallel park. Runs in the family. No instructor's going to fix that.”"
+        },
+        {
+          "type": "pick",
+          "who": "Connie",
+          "text": "“My week's never the same twice. Shifts change, the kids' club changes. There's no version of a tracker that fits a week like mine.”",
+          "cue": "turning the blank sheet face down",
+          "options": [
+            "The problem isn't there at all",
+            "The problem doesn't matter much",
+            "The problem can't be changed",
+            "I personally can't do anything about it"
+          ],
+          "answer": 2,
+          "why": "She isn't denying her spending varies, and she clearly minds, she's explaining it in detail. She puts the unchangeable part on the method itself: no tracker could ever fit a week like hers. That's the changeability level, aimed at the tool rather than at her.",
+          "traps": {
+            "0": "This would mean nothing in her week ever changes, which is the opposite of what she's describing.",
+            "1": "This would make the mismatch sound minor, but she's spent the whole turn explaining why it matters.",
+            "3": "This would put the gap in Connie's own ability, but she's arguing the format is wrong for her situation, not that she personally lacks something."
+          },
+          "example": "A seasonal farm shop, Tuesday.<br>Worker: “Hours change every week depending on the crop. No rota template's ever going to hold that.”"
+        }
+      ]
+    },
+    {
+      "level": "Analyse",
+      "label": "Analyse, explain it",
+      "items": [
+        {
+          "type": "pick",
+          "who": "Mr Doyle",
+          "text": "Sam, pushing the blank sheet to the end of the table: “It's not like missing one more week is going to matter, is it? Nobody's checking that closely.” Which level of discounting is that, and what would a real step look like?",
+          "cue": "sliding the register aside, giving the question room",
+          "options": [
+            "Existence. He says there's no gap in the tracker at all. A real step would be to check the sheet against his bank app before he answers.",
+            "Significance. He says missing one more week doesn't matter much. A real step would be to fill in tonight's numbers from memory before he leaves the room, even half right.",
+            "Change possibilities. He says the tracker itself can never work for him. A real step would be to ask for a shorter version with three lines instead of ten.",
+            "Personal abilities. He says he has no power to keep up with it. A real step would be to set one phone reminder for Sunday night and see if that's enough."
+          ],
+          "answer": 1,
+          "why": "Plain words first: he's making a missed week look small. The books call this discounting, and this is the significance level, the one that says a gap doesn't matter much. A real step treats tonight's gap as worth closing now, roughly, rather than waiting for a tidier week that never comes.",
+          "traps": {
+            "0": "Existence would say there's no gap to fill, but Sam isn't denying the sheet is blank, he's saying the blank doesn't count.",
+            "2": "Change possibilities would turn the tracker into something broken by design. The talk would move to the format instead of tonight's numbers, and nothing would get written down either way.",
+            "3": "Personal abilities would make this about what Sam can manage generally, rather than about the size of tonight's gap. He'd be let off filling anything in, since the sheet would already be lost before he tried."
+          },
+          "example": "A library return desk, Thursday.<br>Reader: “It's only two days late, nobody's going to mind that.”<br>Librarian: “It's fine, but the fine's already on the account. Pay it today and it won't grow.”"
+        }
+      ]
+    }
+  ],
+  "debrief": {
+    "nadia": "Every line in that room made some part of the tracker smaller, and each one picked a different spot to do it in. Once you can say which part is shrinking, the next question is almost always the same one: what's one small, real thing that could happen before next Tuesday?",
+    "bookTerm": "Discounting",
+    "bookNote": "The books call this discounting: ignoring part of a problem without realising it, at one of four levels, which are that it exists, that it matters, that it can change, or that you can do anything about it."
+  },
+  "reflection": {
+    "prompt": "Which part of something did you make smaller this week: whether it existed, whether it mattered, whether it could change, or whether you personally could do anything about it?"
+  },
+  "next": null
+}

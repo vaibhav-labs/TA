@@ -1,0 +1,133 @@
+{
+  "slot": "4.L1",
+  "setting": "Work",
+  "title": "Just Let Me Look",
+  "world": 4,
+  "worldName": "Conversation Traps",
+  "week": 4,
+  "weekName": "Conversation Traps",
+  "mechanic": "Choice-story",
+  "concept": "After this one you can spot when someone offers to take a task off your hands in a way that has already decided you cannot manage it, and name what was actually yours once the favour turns into something you have to answer for.",
+  "bookTerm": "I'm Only Trying to Help You",
+  "bookIdea": "Berne's name for a game where someone offers rescue in a way that is built to need retelling, so the helper gets to feel hard done by rather than simply having helped.",
+  "bookSource": "Games People Play, ch. 8",
+  "opener": {
+    "setting": "Wednesday, 4:50pm. Halden, the team room. The client sheet is open on Clara's laptop, and the deadline is tomorrow morning at nine.",
+    "lines": [
+      { "who": "Daniel", "text": "“Let me take this off your plate for twenty minutes. You've got the standup prep as well.”", "cue": "already reaching for the laptop before she's answered" },
+      { "who": "Clara", "text": "“It's nearly there, I only need to check the totals.”", "cue": "hand still on the trackpad" }
+    ],
+    "ask": "Daniel's offer sounds like relief before a hard deadline. Is it a hand up, or the opening move of something longer?"
+  },
+  "rounds": [
+    {
+      "level": "Spot",
+      "label": "Spot, round 1",
+      "intro": "A hand up and a takeover can start with the exact same sentence. The difference shows up a little later, once the work has actually changed hands.",
+      "items": [
+        {
+          "type": "pick",
+          "who": "Daniel",
+          "text": "“Let me take this off your plate for twenty minutes. You've got the standup prep as well.”",
+          "cue": "already reaching for the laptop before she's answered",
+          "options": ["A plain offer, sized to what's actually left", "An offer that's already decided she can't manage both"],
+          "answer": 1,
+          "why": "He hasn't asked what she needs or how far along she is. He's already moving towards the laptop and naming a reason she should hand it over, before she's said a word.",
+          "traps": {
+            "0": "A plain offer would usually wait for an answer, something like “want a hand with the totals.” This one is already in motion."
+          },
+          "example": "A colleague says, “Want me to proof the slide before the call?” and waits. A different colleague starts editing it while he's still asking."
+        },
+        {
+          "type": "pick",
+          "who": "Clara",
+          "text": "“It's nearly there, I only need to check the totals.”",
+          "cue": "hand still on the trackpad",
+          "options": ["Holding onto the work", "Already handing it over"],
+          "answer": 0,
+          "why": "She names exactly what's left, one specific task, and her hand hasn't left the laptop. That's someone keeping hold of a job, not stepping back from it.",
+          "traps": {
+            "1": "Handing it over would sound like stepping back, sliding the laptop towards him. She hasn't moved yet, and she's said what's left in one sentence."
+          },
+          "example": "Asked if she needs help, a colleague says, “Just the last paragraph, I've got it,” and keeps typing."
+        },
+        {
+          "type": "pick",
+          "who": "Daniel",
+          "text": "“Don't worry about the totals, I'll run them myself. You've got enough going on.”",
+          "cue": "already pulling the laptop closer",
+          "options": ["A generous favour with nothing attached", "The moment the help turns into the whole job"],
+          "answer": 1,
+          "why": "The twenty minutes he offered has quietly become the totals, and now the laptop is moving towards him before she's agreed to any of it.",
+          "traps": {
+            "0": "A favour with nothing attached would stop where it started, at the one thing she asked for help with. This has already grown past that."
+          },
+          "example": "A flatmate offers to carry one bag up the stairs, then is halfway through unpacking the whole shop before anyone's said yes."
+        }
+      ]
+    },
+    {
+      "level": "Play",
+      "label": "Play, the standup",
+      "intro": "The hand up and the handover look the same from across the room. Watch what happens once he actually has the laptop, and the next morning, once the room is listening.",
+      "items": [
+        {
+          "type": "pick",
+          "who": "Clara",
+          "text": "“Alright. You take it, I'll go sit in on the call instead.”",
+          "cue": "pushing the laptop the rest of the way across the desk",
+          "options": ["Let him carry the whole thing alone, say thanks and go to the call", "Say you'll look at it together before it goes out, and stay for ten minutes", "Take it back, say you'd rather just finish it yourself"],
+          "answer": 1,
+          "why": "Staying in the room for ten minutes keeps this as help, not a handover. It's harder for a favour to turn into the whole job if the person it belongs to is still there watching it happen.",
+          "traps": {
+            "0": "Leaving him to it feels like relief for twenty minutes, but it also hands him everything he needs to say later that she couldn't finish it on her own.",
+            "2": "Taking it straight back might be fair, but said right after he's already reaching for it, it reads as a small fight over the laptop rather than a boundary."
+          },
+          "example": "A friend offers to drive you to the station and you stay in the room while they check the timings, rather than leaving them to sort the whole trip alone."
+        },
+        {
+          "type": "pick",
+          "who": "Daniel",
+          "text": "“I ended up redoing most of it last night. Good thing I looked.”",
+          "cue": "said to the whole standup, not to Clara",
+          "options": ["Let it pass, say thanks, and move on to the next item", "Say plainly, to the room, what was already finished before he took it over", "Say back, just as publicly, that he always does this"],
+          "answer": 1,
+          "why": "A short, true correction, said to the same room that heard the story, puts the record straight without attacking him. It keeps what actually happened on the table while it's still fresh enough to matter.",
+          "traps": {
+            "0": "Letting it pass is the easiest thing to do in one meeting, but it leaves his version as the only one the room heard.",
+            "2": "Matching him in front of everyone turns a quiet correction into a public argument, which hands him something to defend instead of a fact to simply agree with."
+          },
+          "example": "A manager tells a client, “I had to rebuild the whole report myself,” and a colleague says, lightly, “Most of it was already done, I just hadn't sent the final version yet.”"
+        }
+      ]
+    },
+    {
+      "level": "Analyse",
+      "label": "Analyse, explain it",
+      "intro": "Time to look at the whole exchange, not just one line of it.",
+      "items": [
+        {
+          "type": "pick",
+          "who": "You",
+          "text": "At the surface, Daniel finished a sheet nobody asked him to finish alone. What was actually moving underneath it?",
+          "cue": "the gap between offering a hand and needing credit for one",
+          "options": ["A straightforward favour between colleagues under deadline pressure.", "A favour that was always going to end with the room hearing how much it cost him.", "Clara testing, on the sly, whether Daniel can be trusted with something real."],
+          "answer": 1,
+          "why": "He moved first, named a reason she should let go of it, then made sure the standup heard the fix the next morning. That order only makes sense if the telling was part of the plan from the start.",
+          "traps": {
+            "0": "A straightforward favour wouldn't need an audience the next day. If it were only about the sheet, he'd have mentioned it to Clara, not the room.",
+            "2": "Nothing in the exchange suggests Clara set up any kind of test. She only wanted ten more minutes to finish her own totals."
+          },
+          "example": "A neighbour waters your plants while you're away, then tells the whole building how close they came to dying before he stepped in."
+        }
+      ]
+    }
+  ],
+  "debrief": {
+    "nadia": "A hand up and a takeover can sound exactly the same in the first sentence. The difference tends to show up later: does the helper stay in the room with you, or do they need an audience to hear how much it cost them. Naming what was actually yours, plainly and without heat, is usually enough to put it back.",
+    "bookTerm": "I'm Only Trying to Help You",
+    "bookNote": "The books call this I'm Only Trying to Help You, a game where someone offers rescue in a way that's built to fail or to need retelling, so the helper gets to feel hard done by rather than simply having helped."
+  },
+  "reflection": { "prompt": "Think of a time this week someone offered to take something off your hands. Did it stay help, or did it turn into something you had to answer for afterwards?" },
+  "next": null
+}

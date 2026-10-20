@@ -1,0 +1,204 @@
+{
+  "slot": "3.L2",
+  "setting": "School & College",
+  "title": "More or Less Done",
+  "world": 3,
+  "worldName": "Back and Forth",
+  "week": 3,
+  "weekName": "Back and Forth",
+  "mechanic": "Two-track",
+  "concept": "After this one you can hear the second chat running under a plain one in a classroom or group project, and answer the plain line and the worry underneath it in a single reply.",
+  "plainWord": "double-talk",
+  "bookTerm": "Duplex transaction",
+  "bookIdea": "A duplex transaction runs on four voices at once: a plain exchange on the surface, usually between two Pilots, and a second exchange running underneath it between two Kids. Berne's own example is a flirtation, and he notes that the underneath exchange is the one that decides the outcome.",
+  "bookSource": "Games People Play, ch. 2",
+  "opener": {
+    "setting": "Tuesday, 7:35pm. The adult education centre, room four. Four weeks into the budgeting course you and Sam joined together. Connie's chair is already turned towards yours.",
+    "lines": [
+      { "who": "Connie", "text": "“Did you get the spreadsheet done? I only did about half.”", "cue": "laptop open, the screen angled slightly away" },
+      { "who": "Sam", "text": "“Only half? I did... most of it. Think.”", "cue": "scrolling fast, hoping something appears on the screen" }
+    ],
+    "ask": "On top, it's a plain chat about homework. Is a second chat running underneath, and if there is, what is it actually saying?"
+  },
+  "rounds": [
+    {
+      "level": "Spot",
+      "label": "Spot, round 1",
+      "intro": "<b>How this one works:</b> you read a short exchange between two people in the course. On top, it's usually a plain chat about the spreadsheet or the worksheet. Some exchanges have a second chat running underneath, one Kid talking to another, or hiding something from the room. Tap what the underneath chat is saying, or say there is none.",
+      "items": [
+        {
+          "type": "pick",
+          "who": "Connie and Sam, at the back table",
+          "text": "Connie: “Did you get the spreadsheet done? I only did about half.” Sam: “Only half? I did... most of it. Think.”",
+          "cue": "neither one turns a laptop round to show the other",
+          "prompt": "On top, two Pilots are talking about homework. What are the two Kids saying underneath?",
+          "options": [
+            "Sam: I'm behind and hoping it doesn't show. Connie: so am I, and I'd rather say half than admit the real number.",
+            "Sam and Connie: each one wants to look cleverer than the other.",
+            "Connie: the spreadsheet was too hard. Sam: he does not care either way."
+          ],
+          "answer": 0,
+          "why": "Neither one turns a screen round, and both answers dodge the real figure. Underneath the plain chat about the spreadsheet, Sam's Kid is hiding how little he's done, and Connie's Kid is doing something close to the same thing, naming half before anyone can ask her the true number. Two voices besides the ones talking about the spreadsheet are doing the real work here.",
+          "traps": {
+            "1": "Nothing in the tone is competitive. Both are quiet about their own progress rather than trying to outshine the other.",
+            "2": "The spreadsheet being hard would be a complaint, and this isn't one. Sam's hedge, “think,” says more about his nerve than about the task."
+          },
+          "example": "A changing room before a work presentation, two colleagues: “Did you finish the slides?” “Mostly.” “Me too, mostly.”<br>Neither says how far behind they actually are."
+        },
+        {
+          "type": "pick",
+          "who": "Yusuf and Sam, across the table",
+          "text": "Yusuf: “Is this the one with the interest rates, or the next page?” Sam: “Next page, I think. Hang on.”",
+          "cue": "Yusuf's pen taps the margin, Sam is already flipping",
+          "prompt": "Is a second chat running under this one?",
+          "options": [
+            "No, it is two Pilots sorting out a worksheet.",
+            "Yes, Yusuf is testing whether Sam has actually done the reading.",
+            "Yes, two Kids are each hoping the other finds the page first."
+          ],
+          "answer": 0,
+          "why": "Yusuf asks a fact and Sam gives one. Nothing in either voice points anywhere else, so a plain matched exchange between two Pilots is the whole of it. Hearing a second chat in every line would be its own kind of mistake.",
+          "traps": {
+            "1": "Nothing suggests a test. Yusuf's eyes are on his own page, not watching to catch Sam out.",
+            "2": "Neither one is stalling. Sam flips straight to the answer, and the exchange ends when it arrives."
+          },
+          "example": "A train platform, one passenger to another: “Is this the platform for the morning train?” “Yes, it's due in five.”<br>The question is a question and the answer is an answer. There is no second chat to hear."
+        },
+        {
+          "type": "pick",
+          "who": "Sam, to Priestley, when she asks who wants to walk the group through their spreadsheet first",
+          "text": "“I'll go. Mine's basically done, more or less.”",
+          "cue": "hand half up before she finishes the question, his screen still mostly blank",
+          "prompt": "On top, it's a volunteer for the order. What is Sam's Kid saying underneath?",
+          "options": [
+            "Notice me, and please don't look too closely at what I've actually finished.",
+            "I want to get it over with so I can leave early.",
+            "I don't trust Connie to go first."
+          ],
+          "answer": 0,
+          "why": "His hand goes up before the facts do, and “more or less” is carrying a lot of weight. Underneath the plain volunteering, his Kid is reaching for a nod, the way he always does, hoping the blank screen doesn't get noticed before the credit does.",
+          "traps": {
+            "1": "Nothing about leaving early is in the scene. The volunteering is about being seen, not about the clock.",
+            "2": "Sam says nothing about Connie at all here. The scramble is about his own screen, not hers."
+          },
+          "example": "A team meeting, a junior colleague offers to present first with the slides still unfinished: “I'll go, I'm nearly there.”<br>The hand goes up faster than the work is ready."
+        }
+      ]
+    },
+    {
+      "level": "Play",
+      "label": "Play, the course",
+      "intro": "<b>Now you answer.</b> When a second chat is running underneath, pick the reply that answers the plain top line and the Kid underneath it. When nothing is underneath, a plain answer is the whole job.",
+      "items": [
+        {
+          "type": "pick",
+          "who": "Connie, chair turned towards yours",
+          "text": "“Did you get the spreadsheet done? I only did about half.”",
+          "cue": "laptop angled slightly away from you",
+          "prompt": "On top it's the spreadsheet. Underneath, Connie's Kid is hoping she isn't the only one behind. Which reply answers both?",
+          "options": [
+            "I only did about half too. Let's swap what we've got before Priestley comes round.",
+            "Oh, I finished it ages ago, it wasn't that hard.",
+            "Half's better than nothing, don't worry about it."
+          ],
+          "answer": 0,
+          "why": "The top line gets a plain answer about the spreadsheet, and the underneath gets the thing Connie's Kid actually needed, which is to find out she isn't the only one behind. Swapping work answers the task and the worry in one go.",
+          "traps": {
+            "1": "That answers the spreadsheet and leaves the underneath worse off. Connie now feels like the only one behind, which is exactly what her Kid was hoping wasn't true.",
+            "2": "Kind words about the fraction done miss the real question. Connie wasn't after reassurance about halves, she was checking whether she's alone in this."
+          },
+          "example": "A changing room before a work presentation, a colleague says: “Did you finish the slides? I only got halfway.” “Me too, let's compare notes before the room fills up.”<br>The reply answers the slides and the worry about being the only one behind."
+        },
+        {
+          "type": "pick",
+          "who": "Sam, hand half up, screen still mostly blank",
+          "text": "“I'll go. Mine's basically done, more or less.”",
+          "cue": "Priestley is already looking round the room for a volunteer",
+          "prompt": "On top it's a volunteer. Underneath, Sam's Kid wants to be noticed without the blank screen showing. Which reply answers both?",
+          "options": [
+            "Go on then, show us what you've got.",
+            "Actually, can I go first? I want to get mine out of the way.",
+            "Take a minute, Sam. I'll go first and you can follow once you've caught up."
+          ],
+          "answer": 2,
+          "why": "The top line gets answered, someone goes first and the order is settled. The underneath gets answered too. Sam gets a minute without being made to stand up with an empty screen, and he's still noticed without anything being checked too closely.",
+          "traps": {
+            "0": "That takes the volunteer at his word and sends the empty screen straight to the front of the room. The top gets dealt with and the underneath gets caught out.",
+            "1": "Taking the slot for yourself answers the top line by swapping it, but it leaves Sam's Kid exactly where it started, with the same screen and less time left to fix it."
+          },
+          "example": "A team stand-up, a junior offers to demo first though the feature isn't finished: “Take five minutes, I'll go first and hand over once you're ready.”<br>The order still gets settled, and nobody gets caught out in front of the room."
+        },
+        {
+          "type": "pick",
+          "who": "Priestley, holding up a worksheet",
+          "text": "“Did everyone bring a calculator, or does someone need to share?”",
+          "cue": "already counting hands around the room",
+          "prompt": "Nothing is underneath this one. Which reply fits?",
+          "options": [
+            "I've got one, thanks.",
+            "You always ask that like we're children.",
+            "I think Sam needs a bit of comfort more than a calculator right now."
+          ],
+          "answer": 0,
+          "why": "The question is only a question, and a plain answer from the Pilot is the right size for it. Reading a second chat into a calculator check would answer something nobody actually said.",
+          "traps": {
+            "1": "That's a verdict built from nothing in the line. It turns a practical check into a row over nothing.",
+            "2": "That drags Sam into a question that was never about him, and answers a worry Priestley never raised."
+          },
+          "example": "A school gate, a teacher asks the group: “Does everyone have their water bottle?” “Yes, thanks.”<br>The question is a question, so the plain answer is the whole of it."
+        }
+      ]
+    },
+    {
+      "level": "Analyse",
+      "label": "Analyse, explain it",
+      "items": [
+        {
+          "type": "pick",
+          "who": "Priestley, during the break, as you glance over at Sam's screen",
+          "text": "Count the voices in the first exchange, Connie and Sam about the spreadsheet. On top, two Pilots. Underneath, two Kids.",
+          "prompt": "How many voices are talking, and which ones decide whether either of them actually owns up to being behind?",
+          "options": [
+            "Four voices, and the two Kids underneath decide",
+            "Three voices, and the Pilots on top decide",
+            "Two voices, since the underneath is never said aloud"
+          ],
+          "answer": 0,
+          "why": "Both Connie and Sam are speaking twice at once, a plain Pilot chat about the spreadsheet on top, and a Kid-to-Kid chat underneath, each one hoping not to be the only one caught out. That is four voices. The Pilots look like they're running the exchange, but it's the Kids who decide whether either of them owns up to being behind.",
+          "traps": {
+            "1": "Three voices is the kind of double-talk where only one side carries a hidden message. Here both Connie and Sam have one, so the count is four.",
+            "2": "Not being said aloud doesn't mean it isn't there. The underneath chat is the reason neither of them turns a laptop round."
+          },
+          "example": "A changing room, two colleagues before a presentation: “Did you finish the slides?” “Mostly.” “Me too, mostly.”<br>Two Pilots on top, two Kids underneath, four voices. Neither admits the real number."
+        },
+        {
+          "type": "pick",
+          "who": "You, thinking back over the break",
+          "text": "Sam's line to Priestley, “I'll go, mine's basically done, more or less,” got a reply that gave him a minute before he had to show the screen.",
+          "prompt": "Why did that work better than taking him at his word?",
+          "options": [
+            "It answered the plain volunteering and gave his underneath worry some room, without anyone pretending the blank screen wasn't there.",
+            "It worked because Sam never actually wanted to go first.",
+            "It worked because Priestley would have noticed the blank screen anyway."
+          ],
+          "answer": 0,
+          "why": "The reply didn't argue with the top line, someone still goes first, and it didn't ignore the underneath, a minute to catch up, with no one making a show of the blank screen. Answering both at once is what let Sam keep his footing and still get the order sorted.",
+          "traps": {
+            "1": "Sam did want to go first. That's what his Kid was reaching for. The problem was the blank screen underneath, not the wanting.",
+            "2": "What Priestley might have noticed isn't the point. The point is the reply that was actually given, and why it worked better than the alternatives."
+          },
+          "example": "A cricket club, a junior says “I'll bat first, I don't mind.” A teammate replies, “Pad up, I'll open with you.”<br>The order still happens, and nobody is left exposed alone at the crease."
+        }
+      ]
+    }
+  ],
+  "debrief": {
+    "nadia": "Half of what got said in that room was plain, and half of it was carrying something underneath: a worry about being the only one behind, a hand going up before the work was ready. Answer the plain line, and let your reply carry the underneath too, when there's one to carry. Not every question needs a second reading, though. Sometimes a calculator really is just a calculator.",
+    "bookTerm": "Duplex transaction",
+    "bookNote": "The books call this a duplex transaction: four voices at once, a plain exchange on the surface and a second one running underneath it, and the underneath exchange is usually the one that decides how the evening actually goes."
+  },
+  "reflection": {
+    "prompt": "Think of a plain exchange this week, in a class, a group chat or a queue, that had something else running under it. What was the underneath actually asking for, and did your reply answer it?"
+  },
+  "next": null
+}

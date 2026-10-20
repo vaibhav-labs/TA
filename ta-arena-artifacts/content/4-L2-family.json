@@ -1,0 +1,134 @@
+{
+  "slot": "4.L2",
+  "setting": "Family",
+  "title": "The Go-Between",
+  "world": 4,
+  "worldName": "Conversation Traps",
+  "week": 4,
+  "weekName": "Conversation Traps",
+  "mechanic": "Choice-story",
+  "concept": "After this one you can spot when someone hands you a complaint to carry to a person they haven't actually spoken to, and pass it back before you're standing in the middle of it.",
+  "bookTerm": "Let's You and Him Fight",
+  "bookIdea": "Berne's name for a game where one person stirs up a disagreement between two others and steps back to watch, without having to risk the disagreement themselves.",
+  "bookSource": "Games People Play, ch. 6",
+  "opener": {
+    "setting": "Sunday, 3pm. Apartment 1A, Gran's kitchen. The kettle has just gone off, and the radio is on low in the corner.",
+    "lines": [
+      { "who": "Gran", "text": "“Your mother hasn't rung me all week. I don't mind, I'm sure she's busy.”", "cue": "stirring her tea slowly, eyes on the cup" },
+      { "who": "You", "text": "“I'm sure she'll call soon, Gran.”", "cue": "reaching for the biscuit tin, not quite meeting her eyes" },
+      { "who": "Gran", "text": "“You could mention it to her. You two talk all the time.”", "cue": "pushing the tin towards you instead of taking one herself" }
+    ],
+    "ask": "Gran's line sounds like a small complaint about being forgotten. Is it only that, or has she already handed you a job to do with it?"
+  },
+  "rounds": [
+    {
+      "level": "Spot",
+      "label": "Spot, round 1",
+      "intro": "A complaint about someone who isn't in the room can sound like nothing more than a passing comment. Some of them come with a job attached.",
+      "items": [
+        {
+          "type": "pick",
+          "who": "Gran",
+          "text": "“Your mother hasn't rung me all week. I don't mind, I'm sure she's busy.”",
+          "cue": "stirring her tea, eyes on the cup",
+          "options": ["A small, passing complaint", "An opening move aimed at someone who isn't here to answer it"],
+          "answer": 1,
+          "why": "She's naming a grievance about Mum to you, not to Mum. That's already a complaint with nowhere to land except through whoever hears it next.",
+          "traps": {
+            "0": "A passing complaint would stop there, with nothing more asked of you. This one keeps going, towards a job she wants doing."
+          },
+          "example": "A colleague says, “Nobody on this team ever checks my work,” to you specifically, in a corridor, rather than raising it in the meeting where the people she means can hear it."
+        },
+        {
+          "type": "pick",
+          "who": "You",
+          "text": "“I'm sure she'll call soon, Gran.”",
+          "cue": "reaching for the biscuit tin, not meeting her eyes",
+          "options": ["Staying out of it", "Already agreeing there's something to answer for"],
+          "answer": 1,
+          "why": "Reassuring her that Mum will call accepts the idea that Mum is behind on something, which puts you in the middle before you've decided to be.",
+          "traps": {
+            "0": "Staying out of it would sound more like, “that's between you two,” which doesn't take a side on whether Mum owes a call."
+          },
+          "example": "Told “nobody ever thanks me for the rota,” a flatmate says, “I'm sure they will,” without noticing he's just agreed something's owed."
+        },
+        {
+          "type": "pick",
+          "who": "Gran",
+          "text": "“You could mention it to her. You two talk all the time.”",
+          "cue": "pushing the tin towards you instead of taking one herself",
+          "options": ["A reasonable, low-stakes suggestion", "The complaint arriving with your name on the delivery"],
+          "answer": 1,
+          "why": "She's not asking you to listen any more, she's asking you to carry it. The job has moved from “hear this” to “say this to someone else for me.”",
+          "traps": {
+            "0": "A reasonable suggestion would leave the choice with you. This one assumes you'll do it, because you “talk all the time.”"
+          },
+          "example": "An uncle says, “You could tell your cousin the car needs to come back by Friday, you'll see her before I do,” handing over a message he could easily send himself."
+        }
+      ]
+    },
+    {
+      "level": "Play",
+      "label": "Play, the week in motion",
+      "intro": "Later the same afternoon. The complaint is on its way to the person it was actually about, whether anyone meant it to be or not.",
+      "items": [
+        {
+          "type": "pick",
+          "who": "Gran",
+          "text": "“You could just mention it to her, you two talk all the time.”",
+          "cue": "pushing the tin towards you, not asking",
+          "options": ["Agree to pass it on: “I'll mention it to her.”", "Hand it back: “Tell her yourself, Gran, she's your daughter.”", "Defend Mum straight away: “She's not ignoring you, Gran.”"],
+          "answer": 1,
+          "why": "Handing the complaint back to the person who can actually answer it closes the loop before it reaches Mum through you. It's Gran's call to make, not yours to deliver.",
+          "traps": {
+            "0": "Agreeing to pass it on sounds kind and costs nothing today, but it makes you the one who delivers Gran's complaint, and whatever Mum says back will come through you as well.",
+            "2": "Defending Mum argues a case she hasn't been told is open, against a complaint that wasn't made to her, which keeps you standing exactly in the middle of it."
+          },
+          "example": "Asked to tell a neighbour the bins were left out again, you say, “That's worth mentioning to them directly, you'll get a straighter answer than I can give you.”"
+        },
+        {
+          "type": "pick",
+          "who": "Mum",
+          "text": "“Your Gran says I never call. Did she say that, or are you just repeating it?”",
+          "cue": "phone pressed to her ear, something clattering in the background",
+          "options": ["Apologise for saying anything: “Sorry, I shouldn't have said it.”", "Say exactly what happened: “Gran mentioned it to me. I didn't say I agreed.”", "Get annoyed back: “I'm not getting in the middle of this.”"],
+          "answer": 1,
+          "why": "Being precise about what actually happened, you repeated a complaint, you didn't make one, takes you out of a fight that was never yours to start with.",
+          "traps": {
+            "0": "Apologising accepts a charge that isn't fair. You didn't raise the complaint, you only carried it, and saying sorry for that muddles the two.",
+            "2": "Refusing to get in the middle is reasonable in principle, but said sharply in this moment it sounds like brushing off Mum's hurt rather than simply stepping back from a disagreement that isn't yours."
+          },
+          "example": "Asked by one friend why you told another she was annoyed, you say, “She told me that herself, I only passed it along,” rather than apologising or shutting the question down."
+        }
+      ]
+    },
+    {
+      "level": "Analyse",
+      "label": "Analyse, explain it",
+      "intro": "One more look at the whole afternoon, start to finish.",
+      "items": [
+        {
+          "type": "pick",
+          "who": "You",
+          "text": "At the surface, it was tea with Gran and a phone call with Mum. What was actually moving between the three of you?",
+          "cue": "the complaint that travelled further than Gran meant to send it, or further than she let herself notice",
+          "options": ["A string of separate, unrelated conversations about being busy.", "Gran's complaint reaching Mum through you, without Gran ever raising it with her directly.", "Mum and Gran both testing which of them you'll take the side of."],
+          "answer": 1,
+          "why": "Gran raised the complaint with you, not with Mum. The only way it reached Mum at all was through what you repeated, which is the actual shape of what happened, whatever anyone meant by it.",
+          "traps": {
+            "0": "If these were separate, unrelated conversations, the same complaint wouldn't have turned up word for word in both of them.",
+            "2": "Nothing in the afternoon shows either of them setting up a test. Gran found it easier to say it to you than to Mum, that's all."
+          },
+          "example": "A flatmate complains about another flatmate's mess only ever to you, never to them directly, and somehow you end up explaining it to both sides before the week is out."
+        }
+      ]
+    }
+  ],
+  "debrief": {
+    "nadia": "Some complaints arrive looking like a small comment and leave as a job you didn't agree to take on. The surest way out is the plainest one: hand the complaint back to whoever it's actually about, and let the two of them have the conversation that was always theirs to have.",
+    "bookTerm": "Let's You and Him Fight",
+    "bookNote": "The books call this Let's You and Him Fight, a game where one person starts a disagreement between two others and steps back from it, so the risk of the disagreement falls on everyone except the person who started it."
+  },
+  "reflection": { "prompt": "Think of a complaint about someone that was handed to you to pass on this week. Did you carry it, or hand it back to the person it belonged to?" },
+  "next": null
+}

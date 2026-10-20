@@ -117,6 +117,15 @@
   .chip.soon { background: var(--surface); }
   .chip.boss { background: color-mix(in srgb, var(--wc) 12%, var(--surface)); border-color: var(--wc); }
   .chip .boss-tag::before, .chip .state::before { width: 1.1em; height: 1.1em; }
+  .lib-tag { flex: none; margin-left: 46px; font-family: "IBM Plex Mono", monospace; font-size: 10.5px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; border-radius: 999px; padding: 3px 9px; color: var(--wc); background: color-mix(in srgb, var(--wc) 16%, var(--surface)); border: 1px solid color-mix(in srgb, var(--wc) 50%, transparent); }
+  .chip.lib { border-left-style: dashed; }
+
+  .setfilters { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 14px; }
+  .setfil { font-family: "IBM Plex Mono", monospace; font-size: 12px; font-weight: 600; letter-spacing: 0.02em; color: var(--text-dim); background: var(--surface); border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 999px; padding: 8px 14px; min-height: 36px; cursor: pointer; }
+  .setfil:hover { color: var(--text); border-color: rgba(255, 255, 255, 0.3); }
+  .setfil:focus-visible { outline: 3px solid var(--wc); outline-offset: 2px; }
+  .setfil.active { color: #080a10; background: var(--wc); border-color: var(--wc); }
+  .chip[hidden] { display: none; }
 
   .worldnav { display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
   .worldnav a { font-family: "IBM Plex Mono", monospace; font-size: 12.5px; font-weight: 600; text-decoration: none; color: var(--text); background: var(--surface-2); border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 999px; padding: 10px 16px; min-height: 44px; display: inline-flex; align-items: center; }
@@ -172,6 +181,23 @@
   }
   window.addEventListener("hashchange", route);
   route();
+
+  // Setting filter: click a pill to show only that world's chips in that setting.
+  document.addEventListener("click", function (e) {
+    var btn = e.target.closest(".setfil");
+    if (!btn) return;
+    var group = btn.closest(".setfilters");
+    var want = btn.getAttribute("data-set") || "";
+    Array.prototype.forEach.call(group.querySelectorAll(".setfil"), function (b) {
+      b.classList.toggle("active", b === btn);
+    });
+    var list = group.nextElementSibling; // the <ol class="chips"> right after the filter row
+    if (!list) return;
+    Array.prototype.forEach.call(list.querySelectorAll("li.chip"), function (li) {
+      var s = li.getAttribute("data-setting") || "";
+      li.hidden = !!want && s !== want;
+    });
+  });
 })();
 </script>
 </body>

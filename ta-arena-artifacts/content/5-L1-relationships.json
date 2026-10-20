@@ -1,0 +1,149 @@
+{
+  "slot": "5.L1",
+  "setting": "Relationships",
+  "title": "Still Warm",
+  "world": 5,
+  "worldName": "Under the Surface",
+  "week": 5,
+  "weekName": "Under the Surface",
+  "mechanic": "Diagnose",
+  "concept": "After this one you can tell a real feeling, which finishes something, from a stand-in feeling, which just keeps the moment going without landing anywhere.",
+  "bookTerm": "Racket feeling",
+  "bookIdea": "A racket feeling is a substitute feeling, learned early, shown in place of the real one, and it never resolves the situation it turns up in.",
+  "bookSource": "TA Today, ch. 1 and 21; Scripts People Live, ch. 1",
+  "opener": {
+    "setting": "Friday, 6:40pm. The Corner Table, near closing. Months since two mugs in the Halden kitchen, and they still get tea here most Fridays. Tonight the project folder sits closed between them.",
+    "lines": [
+      { "who": "Clara", "text": "“I know we said this was about the handover. It isn't really about the handover.”", "cue": "turning her cup twice, not drinking from it" },
+      { "who": "Omar", "text": "“...Right. Go on, then.”", "cue": "sitting back, giving her the room to say it" }
+    ],
+    "ask": "Clara is about to say something real. Watch for the moment either of them swaps it for something smaller and safer."
+  },
+  "rounds": [
+    {
+      "level": "Spot",
+      "label": "Spot, round 1",
+      "intro": "Each line shows a feeling. Some land and finish there. Some are a stand-in for something else, and they go nowhere.",
+      "items": [
+        {
+          "type": "pick",
+          "who": "Clara",
+          "text": "“Ha, forget it, it's nothing. I'm being silly.”",
+          "cue": "already laughing, reaching for her coat",
+          "options": ["A real feeling: it finishes something", "A stand-in feeling: it fixes nothing"],
+          "answer": 1,
+          "why": "The laugh arrives before she's said the actual thing, and it's aimed at closing the moment rather than at anything that's happened yet. A real feeling needs something to attach to. This one is covering whatever she was about to say, so it fixes nothing.",
+          "traps": {
+            "0": "Taking the laugh at face value lets the evening end here, folder closed, coats on. Whatever Clara meant to say stays unsaid, and Friday ends exactly like the Fridays before it."
+          },
+          "example": "A school gate, Thursday.<br>Mum: “Ha, never mind, it's nothing.”<br>She's already walking to the car before the other parent can ask what she meant."
+        },
+        {
+          "type": "pick",
+          "who": "Clara",
+          "text": "“I like you. Not as a colleague. I've liked you a while, and I didn't know how to say it without turning it into a joke.”",
+          "cue": "cup still now, hands flat on the table",
+          "options": ["A real feeling: it finishes something", "A stand-in feeling: it fixes nothing"],
+          "answer": 0,
+          "why": "She names the thing plainly, once, with nothing left over to laugh about. Once said, it has done its work: Omar now knows exactly what she meant, which is what a real feeling does.",
+          "traps": {
+            "1": "Calling this a stand-in sends the talk looking for what she's really covering. There's nothing underneath it to find. The sentence is the whole thing."
+          },
+          "example": "A train platform, Sunday.<br>Friend: “I was hurt you didn't call. I'm not angry now, I just wanted you to know.”<br>Nothing more needs saying after that."
+        },
+        {
+          "type": "pick",
+          "who": "Omar",
+          "text": "“Oh. I... right. Do you want another tea before they close?”",
+          "cue": "already half out of his seat, eyes on the counter",
+          "options": ["A real feeling: it finishes something", "A stand-in feeling: it fixes nothing"],
+          "answer": 1,
+          "why": "He's just heard something that needed an answer, and he offers tea instead. The question isn't rude, but it doesn't touch what Clara said, so nothing is resolved by it.",
+          "traps": {
+            "0": "Treating the tea offer as the real response lets Omar off the moment entirely. Clara is left not knowing if he heard her, and the actual answer waits for some other Friday."
+          },
+          "example": "A work corridor, Tuesday.<br>Colleague: “I've been struggling since the review, if I'm honest.”<br>The other: “Shall I grab you a coffee?”<br>Nothing about the review gets answered."
+        },
+        {
+          "type": "pick",
+          "who": "Omar",
+          "text": "“Sorry. That threw me, a bit. I think I've liked you a while too, I just never worked out how to say it at work without it being strange.”",
+          "cue": "sitting back down, still, hands flat on the table now too",
+          "options": ["A real feeling: it finishes something", "A stand-in feeling: it fixes nothing"],
+          "answer": 0,
+          "why": "He names the surprise and then the actual feeling underneath it, in plain terms. Clara now has an answer. The moment has somewhere to go from here, which is what a finished feeling leaves behind.",
+          "traps": {
+            "1": "Calling this a stand-in means looking for what he's hiding behind it. There's nothing left to uncover. He has already said the thing the tea offer was avoiding."
+          },
+          "example": "A family kitchen, Saturday.<br>Son: “Sorry I snapped earlier. I was scared about the exam, that's all.”<br>His dad: “Right. Thanks for telling me.”"
+        }
+      ]
+    },
+    {
+      "level": "Play",
+      "label": "Play, the week after",
+      "intro": "Monday now. Harder to read, because both messages sound calm. Ask whether anything actually finishes once they're sent.",
+      "items": [
+        {
+          "type": "pick",
+          "who": "Clara",
+          "text": "“Hey, ignore Friday. Bit much of me. We're fine as we are, promise.”",
+          "cue": "sends it before lunch, phone straight back in her bag",
+          "options": ["A real feeling: it finishes something", "A stand-in feeling: it fixes nothing"],
+          "answer": 1,
+          "why": "This sounds settled, even kind. But Friday didn't ask for ignoring, it asked for an answer, and Clara still doesn't have one. Retreating to safe and fine is the move that's earned her approval her whole life. It keeps the peace and leaves what she actually said untouched.",
+          "traps": {
+            "0": "Taking this as finished means believing Clara wants Friday forgotten. She doesn't. She's done the thing she always does when something she's said might cost her: make herself smaller before anyone can agree with her."
+          },
+          "example": "A family WhatsApp group, Monday.<br>Cousin: “Ignore what I said at dinner, I was tired, forget it.”<br>Nobody ignores it. Nobody mentions it either."
+        },
+        {
+          "type": "pick",
+          "who": "Omar",
+          "text": "“No bother, all good. See you at standup.”",
+          "cue": "typed inside a minute, screen already back to the sprint board",
+          "options": ["A real feeling: it finishes something", "A stand-in feeling: it fixes nothing"],
+          "answer": 1,
+          "why": "Omar takes Clara's message exactly as written and moves on, which is his own habit showing up: assuming the plain reading is the true one, when what's underneath hasn't actually been asked about. Friday is still sitting there, unanswered by either of them, dressed now as settled.",
+          "traps": {
+            "0": "Reading this as finished closes the whole thing on a text neither of them meant fully. Friday stays where it is: real, said out loud once, and now buried under two tidy messages."
+          },
+          "example": "A flat-share group chat, Wednesday.<br>Flatmate: “Ignore my message, I was annoyed, it's fine now.”<br>The other: “Cool, no worries.”<br>Neither one brings up what the annoyance was actually about."
+        }
+      ]
+    },
+    {
+      "level": "Analyse",
+      "label": "Analyse, explain it",
+      "items": [
+        {
+          "type": "pick",
+          "who": "Nadia",
+          "text": "“Clara tells Omar to ignore Friday, and Omar says no bother. Which reading fits, and what would a real version of Friday's feeling do now?”",
+          "cue": "wiping the next table along, not looking up",
+          "options": [
+            "A racket feeling: a stand-in shown in place of the real one, which never finishes anything. A real version would mean one of them saying out loud that Friday still stands, and asking the other to answer it properly.",
+            "An authentic feeling: calm counts as real, so a settled, friendly message is a finished feeling whatever it covers.",
+            "A racket feeling, because Clara always says the easy thing. The feeling itself has nothing to do with it."
+          ],
+          "answer": 0,
+          "why": "Plain words first: both of them have reached for something smaller and safer than what Friday actually was. The books call this a racket feeling, and the test is whether the feeling finishes the situation. Two tidy texts have not answered what either of them actually feels, so nothing here has finished.",
+          "traps": {
+            "1": "Calm is the wrong test. A racket feeling can sound perfectly settled and still fix nothing, and a real feeling can be loud and still land. Calling this authentic takes the tone for the answer, and Friday stays unresolved under a layer of politeness.",
+            "2": "Blaming Clara's character sends the talk to a person instead of a pattern. Omar's reply did the same thing in his own register, so the pattern is shared, not a trait of hers alone."
+          },
+          "example": "A cricket club clubhouse, Sunday.<br>Member: “Ignore what I said about the subs, I was out of order.”<br>Treasurer: “No bother, see you next week.”<br>The subs question is still open, dressed now as closed."
+        }
+      ]
+    }
+  ],
+  "debrief": {
+    "nadia": "A feeling that finishes looks ordinary: it says the thing, and the room moves on because there's nothing left to carry. A stand-in feeling can look just as tidy, but something stays underneath it, waiting for a Friday that's braver than this one. The quick test still works: did anything actually finish, or did it just go quiet?",
+    "bookTerm": "Racket feeling",
+    "bookNote": "The books call this a racket feeling: a feeling learned early and shown in place of the real one, which never resolves the situation it turns up in."
+  },
+  "reflection": {
+    "prompt": "Where this week did you send the tidy, settled version of something instead of the real one? What was still sitting there afterwards?"
+  },
+  "next": null
+}

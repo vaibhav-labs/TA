@@ -1,0 +1,133 @@
+{
+  "slot": "4.L3",
+  "setting": "Relationships",
+  "title": "The Blue Cup",
+  "world": 4,
+  "worldName": "Conversation Traps",
+  "week": 4,
+  "weekName": "Conversation Traps",
+  "mechanic": "Choice-story",
+  "concept": "After this one you can notice when someone finds the one small flaw in an otherwise kind thing instead of simply taking it, and name the kindness without turning the flaw-finding into a bigger complaint.",
+  "bookTerm": "Blemish",
+  "bookIdea": "Berne's name for a game where a person keeps some fault close at hand, however small, so a good thing never quite has to be taken as simply good.",
+  "bookSource": "Games People Play, ch. 6",
+  "opener": {
+    "setting": "Saturday, 10am. The Corner Table, the window seat. Omar ordered Clara's tea before she'd even sat down.",
+    "lines": [
+      { "who": "Omar", "text": "“Already ordered yours. Got it right this time, I think.”", "cue": "sliding the cup across, half a smile" },
+      { "who": "Clara", "text": "“You used the blue cup. I usually get the green one.”", "cue": "looking at the cup a beat too long before she picks it up" }
+    ],
+    "ask": "Omar got the tea exactly right. Clara's answer lands on the one thing that wasn't. Is she noticing a real gap, or finding a reason not to simply enjoy it?"
+  },
+  "rounds": [
+    {
+      "level": "Spot",
+      "label": "Spot, round 1",
+      "intro": "A cup can be the one true thing wrong with an otherwise good gesture. It can also be the only thing left to find wrong with it.",
+      "items": [
+        {
+          "type": "pick",
+          "who": "Clara",
+          "text": "“You used the blue cup. I usually get the green one.”",
+          "cue": "looking at the cup a beat too long",
+          "options": ["Noticing a real gap worth mentioning", "Finding the one flaw in an otherwise kind gesture"],
+          "answer": 1,
+          "why": "The tea itself is exactly right, and the care behind ordering it ahead of time is exactly right. The cup colour is the only thing left over, and she reaches for it anyway.",
+          "traps": {
+            "0": "A real gap would be the tea itself coming out wrong, too strong, too weak, or the wrong order entirely. None of that happened here."
+          },
+          "example": "Given a surprise dinner cooked just the way they like it, someone comments on the pattern on the plate instead of the food."
+        },
+        {
+          "type": "pick",
+          "who": "Omar",
+          "text": "“Oh. Sorry, I didn't realise. I'll remember the green one.”",
+          "cue": "already reaching to swap it, deflated",
+          "options": ["A reasonable adjustment to new information", "Quietly apologising for something that was never actually wrong"],
+          "answer": 1,
+          "why": "He's already treating the cup as a mistake to fix, rather than naming that the part that mattered, getting her tea exactly right, was the real thing that happened here.",
+          "traps": {
+            "0": "A reasonable adjustment would sound lighter than this, more like noting it for next time. Here the warmth of the moment is already draining out of him."
+          },
+          "example": "Thanked for a gift with a single comment about the wrapping, the giver starts apologising for the paper instead of simply being thanked for the gift."
+        },
+        {
+          "type": "pick",
+          "who": "Clara",
+          "text": "“It's fine. It's just tea.”",
+          "cue": "picking up the blue cup anyway, not quite looking at him",
+          "options": ["A genuine shrug, letting the whole thing go", "Covering over a moment she's already made smaller, without taking any of it back"],
+          "answer": 1,
+          "why": "She's drinking the tea, so the complaint was never really about the cup. Saying “it's fine” papers over what she just did instead of undoing it.",
+          "traps": {
+            "0": "A genuine shrug usually comes with something warm alongside it, a thank you, a smile. This one arrives flat, straight after the correction."
+          },
+          "example": "Someone says “it's nothing” about a comment that visibly changed the mood of the room a second earlier, without taking any of it back."
+        }
+      ]
+    },
+    {
+      "level": "Play",
+      "label": "Play, the week in motion",
+      "intro": "A little later, the same morning. The tea is nearly finished, and the moment that was meant to be nice is still sitting there, unclaimed.",
+      "items": [
+        {
+          "type": "pick",
+          "who": "You",
+          "text": "Deciding what to say next, with the blue cup still between you on the table.",
+          "cue": "the half smile from earlier long gone",
+          "options": ["Say the warm thing now, late is better than never: “You got it exactly right, the colour's nothing.”", "Stay on the logistics: “I'll ask if they even do a green one next time.”", "Let the subject drop and talk about something else entirely"],
+          "answer": 0,
+          "why": "Naming what he actually got right, even a little late, puts the moment back where it belonged instead of leaving the cup as the last word on it.",
+          "traps": {
+            "1": "Staying on the logistics agrees that the cup is the thing worth solving, which is exactly where the flaw-finding wanted the conversation to end up.",
+            "2": "Letting the subject drop avoids the discomfort, but it also avoids saying the true thing, that he got it right, so the gesture never actually gets received by either of you."
+          },
+          "example": "Told a thoughtful gift came in the wrong box, a friend says, “The box doesn't matter, you knew exactly what I wanted,” instead of offering to find a better box."
+        },
+        {
+          "type": "pick",
+          "who": "Omar",
+          "text": "“I don't know why I bother getting it exactly right. You'll find something anyway.”",
+          "cue": "a half laugh that doesn't reach his eyes",
+          "options": ["Let it go again, it's only tea, nothing worth a conversation", "Name the pattern lightly: “You do this with every nice thing, you know.”", "Say it plainly and warmly: “You don't have to find the flaw. I'm not going anywhere over a cup.”"],
+          "answer": 2,
+          "why": "Saying plainly what he actually means, warmly and without turning it into a verdict on her, gives Clara room to receive something without needing to find what's wrong with it first.",
+          "traps": {
+            "0": "Letting it go again feels easy, but this is the third time, and saying nothing teaches both of them that finding a flaw is the price of being given something nice.",
+            "1": "Naming the pattern lightly sounds harmless, but “you do this with every nice thing” lands as a verdict on her character, and now she has a new target to find fault with instead of the cup."
+          },
+          "example": "After weeks of a partner finding small faults in every kind gesture, the other says, warmly, “You don't have to find something wrong with it. I like doing this for you.”"
+        }
+      ]
+    },
+    {
+      "level": "Analyse",
+      "label": "Analyse, explain it",
+      "intro": "One more look across the whole morning.",
+      "items": [
+        {
+          "type": "pick",
+          "who": "You",
+          "text": "At the surface, it was a cup of tea and a comment about its colour. What was actually moving underneath it, week after week?",
+          "cue": "the pattern that only ever shows up when something has gone right",
+          "options": ["A straightforward preference about cup colour that Omar should simply remember.", "Clara protecting herself from a kindness landing fully, by finding something, anything, slightly wrong with it.", "Omar quietly testing how much Clara will put up with before she complains."],
+          "answer": 1,
+          "why": "The same small complaint turns up every time something goes right between them, never when something goes wrong. That pattern says more about what's being avoided than any single cup colour does.",
+          "traps": {
+            "0": "A straightforward preference would be solved once he remembered the green cup. Instead the objection keeps finding a new detail to land on each time.",
+            "2": "Nothing in the morning shows Omar setting up any kind of test. He's the one trying, each time, to get something right for her."
+          },
+          "example": "Complimented on a well cooked meal, someone replies “the sauce was a touch thin,” every single time, whatever was actually served."
+        }
+      ]
+    }
+  ],
+  "debrief": {
+    "nadia": "Some people keep a small fault close at hand so a good thing never quite has to count as good. The cup was never really the point. Naming the actual kindness out loud, even a little late, is usually what finally lets it land.",
+    "bookTerm": "Blemish",
+    "bookNote": "The books call this Blemish, a game where a person holds onto some small fault, often a trivial one, so that praise, affection or a kind gesture never has to be accepted as simply, wholly good."
+  },
+  "reflection": { "prompt": "Think of a kind thing someone did for you this week. Did you take it as it was, or did you find the one detail that wasn't quite right?" },
+  "next": null
+}

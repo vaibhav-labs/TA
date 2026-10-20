@@ -1,0 +1,168 @@
+{
+  "slot": "2.L2",
+  "setting": "School & College",
+  "title": "The Tuesday Class",
+  "world": 2,
+  "worldName": "Who's Talking",
+  "week": 2,
+  "weekName": "Who's Talking",
+  "mechanic": "Diagnose",
+  "concept": "After this one you can hear which voice is talking in a room full of near-strangers, not just at home.",
+  "plainWord": "a voice",
+  "bookTerm": "Ego state",
+  "bookIdea": "Each person carries three such voices, one borrowed from whoever raised them, one left over from being young, and one that deals with whatever is actually in front of them right now. The books call this the ego-state model.",
+  "bookSource": "TA Today, ch. 2; Games People Play, ch. 1",
+  "opener": {
+    "setting": "Tuesday, 19:00, the adult education centre, room four. Six weeks into a budgeting course Sam talked you into joining, and Sam has already missed two sessions.",
+    "lines": [
+      { "who": "Sam", "text": "“I've got it, I promise, I'll have the worksheet done by next week, definitely, cross my heart.”", "cue": "talking fast, not looking at the tutor, already reaching for his bag" },
+      { "who": "Priestley, the tutor", "text": "“Sam, you said that about last week's worksheet too.”", "cue": "not unkind, just stating it, pen still on the register" }
+    ],
+    "ask": "Listen to what each of them says and how they say it. Which voice is making the promise, and which one is just reading the room as it actually is?"
+  },
+  "rounds": [
+    {
+      "level": "Spot",
+      "label": "Spot, round 1",
+      "intro": "<b>How this one works:</b> you hear a line and name the voice behind it. In a classroom the tells are the same ones you already know from home.",
+      "items": [
+        {
+          "type": "pick",
+          "who": "Sam",
+          "text": "“I've got it, I promise, I'll have the worksheet done by next week, definitely, cross my heart.”",
+          "cue": "talking fast, not looking at the tutor, already reaching for his bag",
+          "options": ["The Boss", "The Pilot", "The Kid"],
+          "answer": 2,
+          "why": "Too many promises for one worksheet, and none of them come with a plan. That's the Kid, trying to make the room feel better about him before anyone has actually asked for anything.",
+          "traps": {
+            "0": "The Boss would hand out a rule to himself, something like “I should have started this on Sunday.” There's no rule here, only a flood of reassurance nobody asked for.",
+            "1": "The Pilot would say what's actually true: “I haven't started it, I can get an hour in on Thursday.” Instead the plan is missing and the promising is doing all the work."
+          },
+          "example": "A group project, someone late with their slide: “It's basically done, I'll send it tonight, I swear.” The slide isn't done. The promise is doing the job the slide should be doing."
+        },
+        {
+          "type": "pick",
+          "who": "Priestley, the tutor",
+          "text": "“Sam, you said that about last week's worksheet too.”",
+          "cue": "not unkind, just stating it, pen still on the register",
+          "options": ["The Boss", "The Pilot", "The Kid"],
+          "answer": 1,
+          "why": "A fact, stated once, with no edge on it. That's the Pilot, naming what actually happened last week instead of letting the new promise stand unchecked.",
+          "traps": {
+            "0": "The Boss would make it a verdict: “you never finish anything, do you.” That would judge Sam rather than simply note the pattern.",
+            "2": "The Kid would soften it into an apology on Sam's behalf: “oh, don't worry about it, these things happen.” Priestley does neither; the line just names what's true."
+          },
+          "example": "A coach to a player who keeps promising to stretch before training: “You said that last week as well.” No anger in it, just the fact on the table."
+        },
+        {
+          "type": "pick",
+          "who": "Fern, a classmate",
+          "text": "“Honestly, some of us actually do the worksheet. It's not hard.”",
+          "cue": "arms folded, not looking at Sam either",
+          "options": ["The Boss", "The Pilot", "The Kid"],
+          "answer": 0,
+          "why": "A rule about who tries and who doesn't, delivered as a verdict on Sam specifically. A plain fact wouldn't need the word honestly in front of it, or the folded arms.",
+          "traps": {
+            "1": "The Pilot would just report her own position: “I did mine on Sunday, it took twenty minutes.” That's a fact about her. Fern's line is a judgement about Sam.",
+            "2": "The Kid would make herself small instead: “sorry, I just meant mine was easy, I don't know.” Fern isn't shrinking here, she's handing down a ruling."
+          },
+          "example": "A group chat after someone misses a deadline: “Some of us manage to read the brief properly.” The sentence sounds like a fact about reading. It is really a verdict about the person who didn't."
+        },
+        {
+          "type": "pick",
+          "who": "You, a row behind Sam",
+          "text": "Watching Sam's knee go under the desk, and hearing Fern's chair creak as she turns a little further away.",
+          "cue": "the register is still open on Priestley's desk",
+          "options": ["Sam is about to try harder, now that he's been caught out", "Sam is about to promise harder, which is not the same thing"],
+          "answer": 1,
+          "why": "A knee going under a desk and a bigger promise are not the sound of someone about to do the work. They're the sound of someone trying to buy another week of goodwill the same way he always has.",
+          "traps": {
+            "0": "Trying harder would look like getting the worksheet out now, or asking Priestley a real question about it. Instead the promise just gets bigger while the worksheet stays in the bag."
+          },
+          "example": "A flatmate who's missed the rent twice says “I'll definitely have it by Friday this time,” with more enthusiasm than the last two times put together. The enthusiasm is new. The plan isn't."
+        }
+      ]
+    },
+    {
+      "level": "Play",
+      "label": "Play, after the register",
+      "intro": "<b>Harder now.</b> A promise can borrow the shape of a plan. Check what's actually in it, not just the day it names.",
+      "items": [
+        {
+          "type": "pick",
+          "who": "Priestley, the tutor",
+          "text": "“Bring what you've got on Thursday, even half done. I'd rather see the half than another promise.”",
+          "cue": "closing the register, already moving to the next name",
+          "options": ["The Boss", "The Pilot", "The Kid"],
+          "answer": 1,
+          "why": "A specific ask, with a reason attached, and no verdict on Sam's character. That's the Pilot again, offering something more useful than either a rule or a soothing word.",
+          "traps": {
+            "0": "The Boss would make it a condition with a threat in it: “bring it Thursday or you're out of the group.” There's no threat here, only a plainer ask.",
+            "2": "The Kid would let the promise stand unchallenged, something like “oh, I'm sure it'll be fine, don't worry.” This line refuses the easy reassurance instead."
+          },
+          "example": "A manager to someone who keeps promising a finished report: “Send me the draft as it is on Friday, not the version in your head.” The ask is for something real, not for more reassurance."
+        },
+        {
+          "type": "pick",
+          "who": "Sam",
+          "text": "“Right, okay, half done, Thursday, no problem, I'll just stay up and get the whole thing finished properly instead.”",
+          "cue": "words fast and bright, already not listening to the actual ask",
+          "options": ["The Boss", "The Pilot", "The Kid"],
+          "answer": 2,
+          "why": "It sounds like a plan because it has a day attached to it, but Sam has just upgraded the ask Priestley actually made into a bigger promise nobody wanted. That reflex, making the promise grow past the size of the problem, is the Kid at work.",
+          "traps": {
+            "0": "The Boss would set a rule for himself out loud: “I'm not doing this again next week.” There's no self-rule here, only an escalating promise.",
+            "1": "The Pilot would simply agree to the actual ask: “okay, I'll bring the half I've got.” Sam instead promises more than was asked for, which is a tell, not a plan."
+          },
+          "example": "Asked to bring one dish to a dinner, someone says “no, I'll do three courses, don't worry about anything else.” Nobody asked for three courses. The promise is bigger than the problem, which is the point."
+        },
+        {
+          "type": "pick",
+          "who": "You, outside the centre",
+          "text": "Sam is already talking about the three courses, or rather, the whole worksheet, before you've said a word on the walk home.",
+          "cue": "deciding whether to tell Sam what Priestley actually asked for, or let the bigger promise stand",
+          "options": ["Let it go, he'll sort it out himself", "Say the plain version back to him: bring what you've got, that's all that was asked"],
+          "answer": 1,
+          "why": "Repeating the actual, smaller ask back to him gives Sam something true to hold onto instead of the promise he's already built and probably can't keep. It's a plain fact, handed over once.",
+          "traps": {
+            "0": "Letting it go feels easier tonight, and nothing goes wrong on the walk home. Next Tuesday, though, Sam shows up with nothing again and a new, bigger promise instead."
+          },
+          "example": "A friend overcommits to hosting an entire dinner. Saying “just bring the one dish you said you would” hands them back something they can actually do."
+        }
+      ]
+    },
+    {
+      "level": "Analyse",
+      "label": "Analyse, the gap",
+      "items": [
+        {
+          "type": "pick",
+          "who": "You",
+          "text": "Sam promised a finished worksheet, twice, and finished neither. Priestley asked for half, once, plainly. What does the gap between those two kinds of talking actually tell you?",
+          "cue": "the register closed, the worksheet still folded in Sam's bag",
+          "options": [
+            "Nothing. Sam just needs to try harder next week.",
+            "Priestley's plain ask was a smaller, more honest offer than Sam's big promise, and smaller offers are usually the ones that actually get kept.",
+            "Priestley was really telling Sam off, in a gentler voice than usual."
+          ],
+          "answer": 1,
+          "why": "A promise sized to impress the room and a fact sized to the actual task are not the same kind of talking. The smaller one came with a real plan attached. The bigger one came with nothing but more words.",
+          "traps": {
+            "0": "Sam has tried harder, loudly, every week so far. The trying isn't the problem. The size of the promise compared to the size of the plan is.",
+            "2": "A telling-off would carry a verdict on Sam's character, something like “you never finish anything.” Priestley's ask had no verdict in it, only a smaller, doable request."
+          },
+          "example": "Two replies to a missed deadline: “I'll have the whole thing, better than ever, by tomorrow,” against “send me the two pages you've got, that's enough for now.” The second one is usually the one that actually shows up."
+        }
+      ]
+    }
+  ],
+  "debrief": {
+    "nadia": "Sam's promises keep getting bigger because a bigger promise feels like it buys more time than a small, honest one does. Priestley's small asks are the ones that actually move anything. Notice, this week, which size of promise you make when you're the one who's behind.",
+    "bookTerm": "Ego state",
+    "bookNote": "The books call this the ego-state model: three real, observable ways of being, not costumes anyone puts on for a classroom. Sam's rush of reassurance and Priestley's plain ask came from two of those three, and the worksheet still isn't finished either way."
+  },
+  "reflection": {
+    "prompt": "Think of a promise you made this week that was bigger than what was actually asked of you. Which voice made it, and what would the smaller, truer version have sounded like?"
+  },
+  "next": null
+}
