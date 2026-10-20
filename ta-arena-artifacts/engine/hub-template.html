@@ -195,7 +195,7 @@
     if (!list) return;
     Array.prototype.forEach.call(list.querySelectorAll("li.chip"), function (li) {
       var s = li.getAttribute("data-setting") || "";
-      li.hidden = !!want && s !== want;
+      li.hidden = !!want && s.split("|").indexOf(want) < 0;
     });
   });
 })();

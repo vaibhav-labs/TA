@@ -743,7 +743,8 @@ def chip_html(slot, games, nav, library=False):
     tag = '<span class="boss-tag">Boss</span>' if is_boss else ('<span class="lib-tag">Extra</span>' if library else "")
     cls = "chip boss" if is_boss else ("chip lib" if library else "chip")
     setting = g.get("setting")
-    set_attr = f' data-setting="{html.escape(setting, quote=True)}"' if isinstance(setting, str) and setting else ""
+    all_sets = [x for x in [setting] + [m.get("setting") for m in (g.get("moreStories") or [])] if isinstance(x, str) and x]
+    set_attr = f' data-setting="{html.escape("|".join(all_sets), quote=True)}"' if all_sets else ""
     if url:
         link = f'<a href="{html.escape(url, quote=True)}">{plain(title)}</a>'
         state = ""
@@ -765,10 +766,12 @@ def library_slots_for(n, games):
 def world_html(n, w, games, nav):
     campaign_slots = [f"{n}.{k}" for k in range(1, 7)]
     lib_slots = library_slots_for(n, games)
+    lib_slots = [x for x in lib_slots if safe_url((nav.get('slots', {}).get(x) or {}).get('url'))]  # skip extras that have no page yet
     all_slots = campaign_slots + lib_slots
     chips = "\n    ".join(chip_html(s, games, nav, library=(s in lib_slots)) for s in all_slots)
-    settings_present = sorted({games[s]["setting"] for s in all_slots
-                                if isinstance(games.get(s, {}).get("setting"), str)})
+    settings_present = sorted({x for s in all_slots
+                                for x in [games.get(s, {}).get("setting")] + [m.get("setting") for m in (games.get(s, {}).get("moreStories") or [])]
+                                if isinstance(x, str) and x})
     filter_html = ""
     if settings_present:
         buttons = ['<button type="button" class="setfil active" data-set="">All</button>']

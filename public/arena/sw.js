@@ -1,5 +1,5 @@
 // Bump VERSION on every deploy that changes content.
-const CACHE = "arena-v8";
+const CACHE = "arena-v9";
 const ASSETS = ["./", "./1-1.html", "./1-2.html", "./1-3.html", "./1-4.html", "./1-5.html", "./1-6.html", "./1-L1.html", "./1-L2.html", "./2-1.html", "./2-2.html", "./2-3.html", "./2-4.html", "./2-5.html", "./2-6.html", "./2-L1.html", "./2-L2.html", "./3-1.html", "./3-2.html", "./3-3.html", "./3-4.html", "./3-5.html", "./3-6.html", "./3-L1.html", "./3-L2.html", "./4-1.html", "./4-2.html", "./4-3.html", "./4-4.html", "./4-5.html", "./4-6.html", "./4-L1.html", "./4-L2.html", "./4-L3.html", "./4-L4.html", "./5-1.html", "./5-2.html", "./5-3.html", "./5-4.html", "./5-5.html", "./5-6.html", "./5-L1.html", "./5-L2.html", "./6-1.html", "./6-2.html", "./6-3.html", "./6-4.html", "./6-5.html", "./6-6.html", "./6-L1.html", "./6-L2.html", "./6-L3.html", "./7-1.html", "./7-2.html", "./7-3.html", "./7-4.html", "./7-5.html", "./7-6.html", "./7-L1.html", "./7-L2.html", "./7-L3.html", "./index.html", "./manifest.json"];
 self.addEventListener("install", (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll(ASSETS)));
