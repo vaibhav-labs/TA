@@ -101,6 +101,22 @@
           ]
         }
       ]
+    },
+    "L3": {
+      "fields": [
+        {
+          "type": "text",
+          "label": "After the guests leave, Alisha is alone in the kitchen with six things on the counter - the dishes, the leftovers, the kids' bags for tomorrow, the recycling, Rohan's shirt, a card she hasn't written - and nobody assigned her any of them. In under 80 words, name the Con and the Payoff of Harried: what does Alisha get from carrying a list nobody gave her, and what would the Switch look like if it came?",
+          "maxWords": 80,
+          "rubric": ["Con", "Switch", "Payoff", "martyr", "overload", "accusation"]
+        },
+        {
+          "type": "text",
+          "label": "Maya starts clearing plates without being asked. In under 50 words: why might that still feed Harried instead of ending it, and what's the one question Maya could ask instead that would actually test whether the list is as fixed as it looks?",
+          "maxWords": 50,
+          "rubric": ["feed", "antithesis", "ask", "delegate", "genuine", "hand back"]
+        }
+      ]
     }
   },
   "echoAfterHours": 96,

@@ -186,10 +186,10 @@
     }
   ],
   "debrief": {
-    "nadia": "Most help feels kind for a day. Saving shows up later, as a bill nobody agreed to and a person who never learned to pay it. Ask whether they asked. Ask whether you want to be doing it, and who ends up carrying the bigger half.",
+    "nadia": "Most help feels kind on the day you give it. Saving shows up weeks later, as a bill nobody signed and a person who never got the chance to learn what it costs. Before your hands move, ask who asked and whether you actually want to. Then ask whose half you are quietly taking.",
     "bookTerm": "Rescue",
     "bookNote": "The books call this a rescue. Steiner's two signs of one are doing something for someone that you don't want to do and putting in more than half of the effort. He adds that you should not help without a request, and he counts holding back what you want from someone as a rescue too."
   },
-  "reflection": { "prompt": "What did you do for someone this week that nobody asked for, and what did they do with it?" },
+  "reflection": { "prompt": "What did you do for someone this week that nobody asked for? What did it cost you, and what did they never get the chance to learn for themselves?" },
   "next": "7.2"
 }

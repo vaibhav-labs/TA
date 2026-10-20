@@ -147,8 +147,8 @@ export function Level() {
           </div>
 
           <div className="text-[15px] leading-relaxed text-slate-200">
-            TA Arena is still early: only one level, <span className="font-bold text-white">3-3 &ldquo;Cross It&rdquo;</span>,
-            is fully playable right now. The rest of the map is the plan for what's coming, not something you can play yet.
+            Only one level, <span className="font-bold text-white">3-3 &ldquo;Cross It&rdquo;</span>, is fully playable
+            right now. The rest of the map is the plan for what's coming, not something you can play yet.
           </div>
 
           {stub.concepts.length > 0 && (

@@ -1,7 +1,7 @@
 // Bump this version string on every deploy that changes page content.
 // Service workers only get re-checked when this file's own bytes change,
 // so an unchanged version here means installed/cached clients never see updates.
-const CACHE = "first-transaction-v2";
+const CACHE = "first-transaction-v3";
 const ASSETS = [
   "./index.html",
   "./01-strokes.html",

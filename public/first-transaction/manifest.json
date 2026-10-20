@@ -1,7 +1,7 @@
 {
-  "name": "First Transaction",
-  "short_name": "First Transaction",
-  "description": "A five-game introduction to Transactional Analysis for people who've never heard of it.",
+  "name": "you : first transaction",
+  "short_name": "you",
+  "description": "Five 3-minute games about the hidden rules of everyday conversation.",
   "start_url": "/TA/first-transaction/index.html",
   "scope": "/TA/first-transaction/",
   "display": "standalone",

@@ -92,6 +92,26 @@
           ]
         }
       ]
+    },
+    "L3": {
+      "fields": [
+        {
+          "type": "vector",
+          "label": "Draw the vectors for Marcus's stimulus and the common-shape reply, then for Grant's stimulus and the rarer-shape reply.",
+          "pairs": [
+            { "label": "Marcus's stimulus", "from": "A", "to": "A" },
+            { "label": "Practiced common-shape reply", "from": "C", "to": "P" },
+            { "label": "Grant's stimulus", "from": "P", "to": "C" },
+            { "label": "Practiced rarer-shape reply", "from": "A", "to": "A" }
+          ]
+        },
+        {
+          "type": "text",
+          "label": "In under 55 words: the common shape and the rarer shape are mirror images of each other. Name what's mirrored, and say why Nadia calls the rarer one the one that gets used at work and in therapy both.",
+          "maxWords": 55,
+          "rubric": ["mirror", "Child to Parent", "Parent to Child", "Adult", "crosses", "breaks the loop"]
+        }
+      ]
     }
   },
   "echoAfterHours": 168,

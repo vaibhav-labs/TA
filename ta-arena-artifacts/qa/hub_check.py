@@ -37,8 +37,7 @@ STATS_JS = """() => {
     chipLinks: document.querySelectorAll('li.chip a[href]').length,
     disabledChips: document.querySelectorAll('[aria-disabled="true"]').length,
     bossChips: document.querySelectorAll('li.chip.boss').length,
-    stops: document.querySelectorAll('nav.route a[href^="#world-"]').length,
-    leads: document.querySelectorAll('.leads').length,
+    stops: document.querySelectorAll('nav.worldnav a[href^="#world-"]').length,
     h1: (document.querySelector('h1') || {}).textContent,
     h2Count: document.querySelectorAll('h2').length,
     worldH2: [...document.querySelectorAll('section.world h2')].map(h => h.textContent),
@@ -64,13 +63,13 @@ def main():
                 failures.append(f"{label}: {s['worldSections']} world sections, want 7")
             if s["chips"] != 42 or s["chipLinks"] + s["disabledChips"] != 42:
                 failures.append(f"{label}: chips {s['chips']}, links {s['chipLinks']}, disabled {s['disabledChips']}")
-            if s["stops"] != 7 or s["leads"] != 6 or s["bossChips"] != 7:
-                failures.append(f"{label}: stops {s['stops']}, leads {s['leads']}, boss chips {s['bossChips']}")
+            if s["stops"] != 7 or s["bossChips"] != 7:
+                failures.append(f"{label}: stops {s['stops']}, boss chips {s['bossChips']}")
 
             jumps = []
             for n in range(1, 8):
                 page.evaluate("window.scrollTo(0, 0)")
-                page.click(f'nav.route a[href="#world-{n}"]')
+                page.click(f'nav.worldnav a[href="#world-{n}"]')
                 top = page.evaluate(f"document.getElementById('world-{n}').getBoundingClientRect().top")
                 hashv = page.evaluate("location.hash")
                 at_bottom = page.evaluate("window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 2")

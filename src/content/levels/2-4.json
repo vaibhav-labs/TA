@@ -11,7 +11,7 @@
     "L1": {
       "npc": "Noah",
       "expression": "tense",
-      "line": "I'm so sorry, I'll fix it right now, I promise, it won't happen again—",
+      "line": "I'm so sorry, I'll fix it right now, I promise, it won't happen again...",
       "cues": [
         "voice high and fast, shoulders hunched (behavioural)",
         "coworkers immediately start reassuring him like he's fragile (social)",
@@ -34,7 +34,7 @@
         {
           "npc": "Noah",
           "expression": "tense",
-          "line": "I'm so sorry, I'll fix it right now, I promise, it won't happen again—",
+          "line": "I'm so sorry, I'll fix it right now, I promise, it won't happen again...",
           "cues": ["high, fast voice", "shoulders hunched"],
           "egoState": "AC",
           "options": [
@@ -96,7 +96,7 @@
   "echoAfterHours": 72,
   "echo": {
     "setting": "72 hours later: Dana catches herself over-apologizing to a barista for a wrong order.",
-    "line": "Oh my god, I'm so sorry, that's totally my fault, I should have said it clearer—",
+    "line": "Oh my god, I'm so sorry, that's totally my fault, I should have said it clearer...",
     "shape": "same four-diagnoses shape as L1, turned on the player"
   }
 }

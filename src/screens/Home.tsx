@@ -70,15 +70,13 @@ export function Home() {
       <header className="flex flex-col gap-3">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2.5">
-            <span className="w-9 h-9 rounded-xl bg-ta-yellow text-slate-950 font-black text-lg flex items-center justify-center shadow-[0_0_16px_rgba(255,252,0,0.5)] border border-yellow-200">
-              TA
-            </span>
             <div>
-              <h1 className="text-[24px] font-black tracking-tight leading-none bg-gradient-to-r from-white via-slate-100 to-ta-yellow bg-clip-text text-transparent">
-                TA ARENA
+              <h1 className="font-display italic text-[30px] font-medium tracking-tight leading-none text-white">
+                you
+                <span className="text-ta-yellow drop-shadow-[0_0_10px_rgba(255,252,0,0.85)]">.</span>
               </h1>
               <span className="text-[11px] font-mono uppercase tracking-widest text-slate-400">
-                Transactional Mastery
+                42 games about how we talk
               </span>
             </div>
           </div>
@@ -128,12 +126,13 @@ export function Home() {
         <section className="ta-fade rounded-2xl border border-ta-yellow/40 bg-gradient-to-br from-ta-yellow/15 via-slate-900 to-slate-950 p-4 flex flex-col gap-2.5 shadow-xl backdrop-blur-md">
           <div className="flex items-center gap-2 text-ta-yellow font-bold text-[15px]">
             <span>⚡</span>
-            <span>Welcome to the Arena of Real Conversations</span>
+            <span>Every scene here is really about you</span>
           </div>
           <div className="text-[14px] leading-relaxed text-slate-200">
-            Transactional Analysis is the psychological decoding of what really happens when two people talk.
-            Step into authentic scenarios, recognize the subconscious ego states, break repetitive game traps,
-            and master autonomy.
+            These aren't stories about strangers. Each one is a moment you've already lived: the flatmate who goes
+            quiet instead of saying what's wrong, the colleague who jokes past every real question. Play it as
+            yourself. Somewhere around World 5, you'll start catching the pattern in your own week, not just on
+            screen.
           </div>
         </section>
       )}

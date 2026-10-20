@@ -154,6 +154,22 @@
           ]
         }
       ]
+    },
+    "L3": {
+      "fields": [
+        {
+          "type": "text",
+          "label": "Her partner comes into the kitchen and asks, 'You've been quiet all evening - you okay?' The reply already rising is 'Yeah, fine, just tired' - the exact word Marcus used three times over dinner at L1. Name the banal script that word protects here, and the sex-role training that makes 'fine' the easiest thing to reach for.",
+          "maxWords": 70,
+          "rubric": ["Lovelessness", "fine", "discount", "sex-role script", "Natural Child", "feelings", "trained"]
+        },
+        {
+          "type": "text",
+          "label": "Write the one specific, true sentence Zara could say instead of 'fine' - something her Pig Parent would call too much, and something her partner could actually do something with.",
+          "maxWords": 40,
+          "rubric": ["specific", "concrete", "feeling", "need", "ask", "true"]
+        }
+      ]
     }
   },
   "echoAfterHours": 72,

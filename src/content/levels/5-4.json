@@ -68,6 +68,22 @@
           ]
         }
       ]
+    },
+    "L3": {
+      "fields": [
+        {
+          "type": "text",
+          "label": "Name the passive behavior in Rosita's \"Sure, I'll take it! No problem at all\" in under 50 words, and explain why this one specifically is the easiest of the four to mistake for simple willingness to help.",
+          "maxWords": 50,
+          "rubric": ["overadaptation", "discounts", "own wants", "assumed wish", "stroked as helpfulness"]
+        },
+        {
+          "type": "text",
+          "label": "The echo shows Troy catching himself giving his own manager the same instant, cheerful yes. In under 60 words, write the one question Troy could ask himself in that exact moment to interrupt it, the way the best L2 line interrupted Rosita's.",
+          "maxWords": 60,
+          "rubric": ["pause", "actual workload", "own wants", "before agreeing", "overadaptation", "check"]
+        }
+      ]
     }
   },
   "echoAfterHours": 24,

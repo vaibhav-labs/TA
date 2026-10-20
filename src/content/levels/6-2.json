@@ -113,6 +113,22 @@
           ]
         }
       ]
+    },
+    "L3": {
+      "fields": [
+        {
+          "type": "text",
+          "label": "The second Caleb's fix is confirmed, Dana's pen is already tapping the next line on the agenda - she hasn't actually looked at his screen yet. Name the driver she just caught herself running, and the one specific tell that gave it away.",
+          "maxWords": 60,
+          "rubric": ["Hurry Up", "pen tapping", "driver", "own", "tell", "half-second"]
+        },
+        {
+          "type": "text",
+          "label": "Write the allower Dana could give herself in that exact second, the same kind she offered Omar and Caleb - something she could actually do, not just a feeling to adopt.",
+          "maxWords": 40,
+          "rubric": ["allower", "take the time", "specific", "concrete", "pause"]
+        }
+      ]
     }
   },
   "echoAfterHours": 30,

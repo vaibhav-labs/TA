@@ -164,6 +164,6 @@
     "bookTerm": "Contract",
     "bookNote": "The books call this a contract. Steiner borrows four requirements from contract law: mutual consent, something given in return, parties able to agree, and an aim that is lawful."
   },
-  "reflection": { "prompt": "Is there a deal you are in this week where one of you gives and the other only takes? What could the other side give back?" },
+  "reflection": { "prompt": "Is there a deal you are in this week where one of you gives and the other only takes? What could the other side give back, and have you ever actually said so out loud?" },
   "next": "7.3"
 }

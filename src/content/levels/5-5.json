@@ -67,6 +67,30 @@
           ]
         }
       ]
+    },
+    "L3": {
+      "fields": [
+        {
+          "type": "vector",
+          "label": "Draw the vectors for Troy's opening line, and for Jules's best L2 response.",
+          "pairs": [
+            { "label": "Troy's opening", "from": "P", "to": "C" },
+            { "label": "Jules's best response", "from": "A", "to": "A" }
+          ]
+        },
+        {
+          "type": "text",
+          "label": "In under 50 words: name which two ego states Troy was supplying before Jules spoke up, which one Jules was left with, and why the fact that both felt comfortable with it was part of the problem, not proof it was fine.",
+          "maxWords": 50,
+          "rubric": ["Parent", "Adult", "Child", "symbiosis", "comfort", "three ego states"]
+        },
+        {
+          "type": "text",
+          "label": "The echo shows a different teammate deferring to Troy the exact same way, a month later. In under 60 words, explain why one caching-layer conversation with Jules doesn't fix the pattern Troy falls into with everyone else.",
+          "maxWords": 60,
+          "rubric": ["pattern", "Troy's habit", "each relationship", "separately", "invites", "Parent and Adult"]
+        }
+      ]
     }
   },
   "echoAfterHours": 96,

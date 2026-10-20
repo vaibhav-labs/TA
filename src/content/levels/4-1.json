@@ -68,6 +68,22 @@
           ]
         }
       ]
+    },
+    "L3": {
+      "fields": [
+        {
+          "type": "text",
+          "label": "Thirty days later, right on schedule, the thread lights up again: \"Hey, so... you won't believe this, but...\" In under 70 words, what would Theo's next line have to contain for this to be the same pattern running again, rather than a genuinely new, one-off problem that just needs the payment plan adjusted?",
+          "maxWords": 70,
+          "rubric": ["repeat", "Switch", "Payoff", "structure", "one-off", "pattern"]
+        },
+        {
+          "type": "text",
+          "label": "Noor's stomach drops before she's even opened the message. In under 50 words: what does she risk by answering the text she's already expecting, instead of the one that's actually sitting unread on her screen?",
+          "maxWords": 50,
+          "rubric": ["assume", "react", "Adult", "diagnose", "prediction", "structure, not feeling"]
+        }
+      ]
     }
   },
   "echoAfterHours": 720,

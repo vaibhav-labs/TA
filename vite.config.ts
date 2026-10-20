@@ -24,9 +24,9 @@ export default defineConfig({
         globIgnores: ["first-transaction/**", "arena/**"],
       },
       manifest: {
-        name: "TA Arena",
-        short_name: "TA Arena",
-        description: "A Transactional Analysis mastery game across seven worlds.",
+        name: "you",
+        short_name: "you",
+        description: "42 small games about how we talk, why we clash, and how to break the pattern.",
         theme_color: "#000000",
         background_color: "#000000",
         display: "standalone",

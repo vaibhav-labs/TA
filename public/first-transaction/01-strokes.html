@@ -258,7 +258,7 @@
 
 <div class="stage">
   <div class="masthead">
-    <div class="series">First Transaction <small>· Game 1 of 5</small></div>
+    <div class="series">you : first transaction <small>· Game 1 of 5</small></div>
     <a class="tag" href="./index.html">← All games</a>
   </div>
 
@@ -275,23 +275,23 @@
     {
       label: "Round 1 · Spot the Stroke",
       items: [
-        { scene: `<span class="who">A neighbor</span> passes you on the street, smiles, and says: "Nice day!"`,
+        { scene: `<span class="who">A neighbor</span> you've only ever waved at slows his dog to a stop on the sidewalk and looks right at you: "Nice day, isn't it?"`,
           options: ["Warm Fuzzy (positive stroke)", "Cold Prickly (negative stroke)", "Not even a stroke"],
           answer: 0,
           why: "A smile plus a friendly word is a <b>positive stroke</b>: a small unit of recognition that says “I see you.”" },
-        { scene: `Same neighbor, same street. Except today they <span class="who">walk straight past you like you're not there</span>.`,
+        { scene: `Same neighbor, same sidewalk, same dog. Except today his eyes never leave his phone, and he <span class="who">walks straight past like you're not there</span>.`,
           options: ["Warm Fuzzy (positive stroke)", "Cold Prickly (negative stroke)", "Not even a stroke"],
           answer: 2,
           why: "No eye contact, no word, no nod. That's <b>zero strokes</b>, the one option with nothing in it at all, and most people find it the worst of the three." },
-        { scene: `You get a one-line email from a coworker: "Huh. <span class="who">It was a nice day until you showed up.</span>"`,
+        { scene: `An email lands at 9:02am, subject line blank, one sentence from a coworker: "Huh. <span class="who">It was a nice day until you showed up.</span>"`,
           options: ["Warm Fuzzy (positive stroke)", "Cold Prickly (negative stroke)", "Not even a stroke"],
           answer: 1,
           why: "Painful, but it's still recognition: someone noticed you enough to say something. That makes it a <b>negative stroke</b>, not nothing." },
-        { scene: `<span class="who">The boss</span> slams the door, points at the clock, and snaps: "Late again! This won't do!"`,
+        { scene: `<span class="who">The boss</span> shoves the door open hard enough to rattle the blinds and jabs a finger at the clock: "Late again! This won't do!"`,
           options: ["Warm Fuzzy (positive stroke)", "Cold Prickly (negative stroke)"],
           answer: 1,
-          why: "Unpleasant, pointed, personal: a classic <b>Cold Prickly</b>." },
-        { scene: `<span class="who">An old friend</span>, across the street, locks eyes with you for a second, then looks away and keeps walking, saying nothing.`,
+          why: "Pointed and personal: a classic <b>Cold Prickly</b>." },
+        { scene: `<span class="who">An old friend</span>, across the street, locks eyes with you a beat too long for an accident. Then the eyes drop to the curb, and the walking never breaks stride. Not a word.`,
           options: ["Warm Fuzzy (positive stroke)", "Cold Prickly (negative stroke)", "Not even a stroke"],
           answer: 2,
           why: "Eye contact without any acknowledgment still lands as being ignored. <b>No stroke</b> changed hands." },
@@ -308,7 +308,7 @@
         { scene: `"I love you."`,
           options: ["Conditional (for something you did)", "Unconditional (for who you are)"],
           answer: 1,
-          why: "Nothing earned it. It's about your <b>existence</b>, not your performance. That's <b>unconditional</b>." },
+          why: "Nothing in it was earned. It lands on who you <b>are</b>, with no task attached to it at all. That's <b>unconditional</b>." },
         { scene: `"I love how you fixed that for me."`,
           options: ["Conditional (for something you did)", "Unconditional (for who you are)"],
           answer: 0,
@@ -316,11 +316,11 @@
         { scene: `"You're an idiot."`,
           options: ["Conditional (for something you did)", "Unconditional (for who you are)"],
           answer: 1,
-          why: "The trap: negative strokes can be unconditional too. This one isn't about a mistake; it's aimed at <b>who you supposedly are</b>." },
+          why: "The trap: negative strokes can be unconditional too. This one skips the mistake entirely and goes straight for <b>who you supposedly are</b>." },
         { scene: `"That was a careless way to handle it."`,
           options: ["Conditional (for something you did)", "Unconditional (for who you are)"],
           answer: 0,
-          why: "Criticizes the <b>act</b>, not the person. Still conditional, and much easier to hear and fix than the unconditional version." },
+          why: "Criticizes the <b>act</b> and leaves the person alone. Still conditional, and much easier to hear and fix than the unconditional version." },
       ],
       closing: {
         stamp: "ok",
@@ -332,18 +332,18 @@
       label: "Round 3 · The Witch's Rules",
       intro: `Psychologist <b>Claude Steiner</b> told it as a fable: everyone used to carry a bottomless bag of Warm Fuzzies to give away free, until a witch convinced the town the bag might run dry. So the town quietly adopted five rules for rationing strokes. See if you can catch which rule each scene below is obeying.`,
       items: [
-        { scene: `Someone says "you look great today." You reply: "Oh, this old thing? It's nothing."`,
+        { scene: `A colleague catches you by the coffee machine and says "you look great today." You wave it off: "Oh, this old thing? It's nothing."`,
           options: ["Don't give strokes", "Don't ask for strokes", "Don't accept strokes you want", "Don't give yourself strokes"],
           answer: 2,
           why: "You wanted that stroke and deflected it anyway. That's <b>“Don't accept strokes if you want them.”</b>" },
-        { scene: `You finish a genuinely hard project. Alone at your desk, you think it, but won't let yourself say, even silently, "I did that well."`,
+        { scene: `You finish a genuinely hard project at 11pm, cursor blinking on the last line of the report. The thought forms, <i>I did that well</i>, and you shut the laptop before you let yourself finish it, even silently.`,
           options: ["Don't give strokes", "Don't ask for strokes", "Don't reject unwanted strokes", "Don't give yourself strokes"],
           answer: 3,
           why: "Self-praise feels like bragging, so you skip it: <b>“Don't give yourself strokes.”</b>" },
-        { scene: `You're worn out and could really use a hand tonight. You say nothing and hope someone notices.`,
+        { scene: `You're running on fumes by Wednesday and what you actually need is someone to take one thing off your plate tonight. You clear your throat once. That's the whole ask. You wait for someone to notice anyway.`,
           options: ["Don't give strokes", "Don't ask for strokes", "Don't accept strokes", "Don't give yourself strokes"],
           answer: 1,
-          why: "Needing attention and not asking for it directly: <b>“Don't ask for strokes when you need them.”</b>" },
+          why: "Needing attention and hoping it arrives unasked: <b>“Don't ask for strokes when you need them.”</b>" },
       ],
       closing: {
         stamp: "cross",
@@ -481,7 +481,7 @@
       ${progressHTML()}
       <div class="end-badge">Case closed</div>
       <h1 style="font-size:22px;">A stroke is just a unit of &ldquo;I see you.&rdquo;</h1>
-      <p class="feedback">Positive or negative, conditional or unconditional, it's still the thing we're all quietly rationed on. The skill isn't finding more strokes out in the world. It's noticing which of the five rules you're already following without having agreed to them.</p>
+      <p class="feedback">Positive or negative, conditional or unconditional, it's still the thing we're all quietly rationed on. The real skill is noticing which of the five rules you're already following without ever having agreed to them, more than it is finding extra strokes out in the world.</p>
       <div class="nextbar" style="margin-top:18px;">
         <button class="next" id="nextBtn">Next game: Who's Talking? →</button>
       </div>

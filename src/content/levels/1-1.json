@@ -125,6 +125,24 @@
           ]
         }
       ]
+    },
+    "L3": {
+      "fields": [
+        {
+          "type": "vector",
+          "label": "Draw the vectors for Agnes's \"no hands for holding\" rule, and for Elena's honest answer at the end of the week.",
+          "pairs": [
+            { "label": "Agnes's rule (feed, change, move to the next crib)", "from": "CP", "to": "AC" },
+            { "label": "Elena's honest answer (\"stopped crying, stopped reaching\")", "from": "A", "to": "A" }
+          ]
+        },
+        {
+          "type": "text",
+          "label": "In under 50 words: why does writing \"settled in nicely\" instead of \"withdrawn\" erase the one signal that could get Teo help?",
+          "maxWords": 50,
+          "rubric": ["withdrawal", "apathy", "quiet isn't calm", "late sign", "stimulus-hunger", "record"]
+        }
+      ]
     }
   },
   "echoAfterHours": 72,

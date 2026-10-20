@@ -115,7 +115,7 @@
           "npc": "Sana",
           "expression": "neutral",
           "line": "I keep trying to fix things with my sister but nothing works. What would you do?",
-          "cues": ["direct ask for advice", "old \"Why Don't You—Yes, But\" shape"],
+          "cues": ["direct ask for advice", "old \"Why Don't You - Yes, But\" shape"],
           "egoState": "C",
           "options": [
             {

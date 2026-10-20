@@ -125,7 +125,7 @@
 
 <div class="stage">
   <div class="masthead">
-    <div class="series">First Transaction <small>· Game 5 of 5</small></div>
+    <div class="series">you : first transaction <small>· Game 5 of 5</small></div>
     <a class="tag" href="./index.html">← All games</a>
   </div>
   <div class="card" id="card"></div>
@@ -140,7 +140,7 @@
   const ROUND1 = {
     label: "Round 1 · Which corner is this?",
     items: [
-      { scene: `<span class="who">Your boss</span> hands you a stack of papers: "I've marked points for your action, see to these and report back, please." You check with yourself, feel competent and fine about it, and say: "Right, I'll do that."`,
+      { scene: `<span class="who">Your boss</span> hands you a stack of papers: "I've marked points for your action, see to these and report back, please." You skim the top page. It's manageable, so you say: "Right, I'll do that."`,
         answer: 0,
         why: "You see yourself as capable and her as fair. That's <b>I'm OK, You're OK</b>. The two of you are simply getting on with the job: <b>Get-On-With</b>.",
         example: `You, checking in with a direct report during a tight week: "I know this is a lot, can you get me the draft by Thursday?" They say "yes, I've got it," and you both move on, each trusting the other is capable.`,
@@ -152,13 +152,13 @@
       { scene: `<span class="who">Jim</span>, a coworker, corners you again to complain. Your stomach tightens. Without really deciding to, you mumble "sorry, have to go to the bathroom" and bolt.`,
         answer: 1,
         why: "You've decided, without noticing you decided, that you can't cope and he's fine. That's <b>I'm not-OK, You're OK</b>: <b>Get-Away-From</b>, running on autopilot.",
-        example: `Jim starts in on his usual complaint at your desk. Your jaw tightens, you say "sorry, gotta run," and leave before he finishes a sentence, relieved once you're clear of him, but never deciding any of that on purpose.`,
+        example: `Jim starts in on his usual complaint at your desk. Your jaw tightens. You say "sorry, gotta run" and leave before he finishes the sentence, relieved once you're clear of him, though you never decided any of that on purpose.`,
         traps: {
           0: "Get-On-With would mean calmly engaging Jim as an equal, confident you can handle the conversation. Here your stomach tightens and you flee without deciding to. That's not calm cooperation.",
           2: "Get-Rid-Of needs you to think <i>Jim's</i> the problem and act to shut him down. Here you don't challenge him at all. You escape, and your own account still rates him as fine, just someone you can't deal with.",
           3: "Get-Nowhere-With needs both of you written off as hopeless. Here it's only your own coping that's in doubt, not whether a conversation with Jim could ever work." },
       },
-      { scene: `<span class="who">Your assistant</span> admits he forgot to send a printing job and missed the deadline. You go red, snap "What do you do? You sort this out right now!", and think afterward: "Can't trust anybody unless I do it myself."`,
+      { scene: `<span class="who">Your assistant</span> admits he forgot to send a printing job and missed the deadline. You go red and snap, "What do you do? You sort this out right now!" Afterward you think: "Can't trust anybody unless I do it myself."`,
         answer: 2,
         why: "You come out fine in your own account; he's the one who's not-OK. That's <b>I'm OK, You're not-OK</b>: <b>Get-Rid-Of</b>.",
         example: `A teammate ships a bug to production. You fire back "how did you not catch this?" in front of the group, then tell yourself afterward you're the only one who checks things properly around here.`,
@@ -188,7 +188,7 @@
         options: ["Yes, same position, just worded more politely", "No, it's the same operation (Get-Away-From), chosen on purpose from Adult"],
         answer: 1,
         why: "Identical operation, completely different engine. Done with awareness, walking away isn't proof you're not-OK. It's just a boundary. The position becomes a trap only when you slide into it <i>without</i> choosing." },
-      { scene: `Same missed deadline. This time: "I'm frustrated, and I need this fixed today." You say it firmly, without the snarl, without going red, and you don't privately conclude anything about trusting people in general.`,
+      { scene: `Same missed deadline. This time: "I'm frustrated, and I need this fixed today." You say it firmly, no snarl and no going red. Afterward, you don't privately conclude anything about trusting people in general.`,
         q: "Is this move, being firm, automatically \"I'm OK, You're not-OK\"?",
         options: ["Yes, firmness always means you've written the other person off", "No, firmness with Adult awareness isn't the same as scripty Get-Rid-Of"],
         answer: 1,
@@ -311,7 +311,7 @@
       ${progressHTML()}
       <div class="end-badge">Series complete</div>
       <h1 style="font-size:22px;">A life position is a decision wearing a mood's disguise.</h1>
-      <p class="feedback">Most of us settled into one of these four corners early, long before we could have argued about it, and we've been quietly collecting "evidence" for it ever since, mostly through the very operations in this game. None of the four is the villain. The useful move isn't permanent residence in "I'm OK, You're OK." It's running any of the four on purpose, from Adult, instead of sliding into one from habit.</p>
+      <p class="feedback">Most of us settled into one of these four corners early, long before we could have argued about it, and we've been quietly collecting "evidence" for it ever since, mostly through the very operations in this game. None of the four is the villain. The useful move is running any of them on purpose, from Adult, rather than sliding into one from old habit, even "I'm OK, You're OK," which turns scripty the moment it stops being a choice.</p>
       <p class="feedback" style="font-weight:600; margin-bottom:6px;">You've now played all five:</p>
       <ul class="recap">
         <li><span class="n">1</span><span>Strokes (why any recognition beats none)</span></li>

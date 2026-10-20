@@ -67,6 +67,22 @@
           ]
         }
       ]
+    },
+    "L3": {
+      "fields": [
+        {
+          "type": "text",
+          "label": "Name the mechanism behind Rosita's blow-up, in under 50 words, using the book term for what she was doing all week instead of speaking up - and explain why the size of her reaction, not the file request, is the actual signal.",
+          "maxWords": 50,
+          "rubric": ["trading stamp", "stamp", "saved up", "cash-in", "mismatch", "size"]
+        },
+        {
+          "type": "text",
+          "label": "Troy's \"ok\" option instead apologizes and drops it. In under 60 words, write what Rosita's stamp book most likely looks like by the following Friday if Troy takes that option every time she blows up.",
+          "maxWords": 60,
+          "rubric": ["stamps", "collecting", "unaddressed", "builds again", "cash-in", "pattern repeats"]
+        }
+      ]
     }
   },
   "echoAfterHours": 72,

@@ -126,6 +126,22 @@
           ]
         }
       ]
+    },
+    "L3": {
+      "fields": [
+        {
+          "type": "text",
+          "label": "Back at the bar, later the same night, Karan leans toward someone new: \"Hey, you're actually interesting, not like the others here - actually, never mind, I don't think you'd get it.\" He's gone before she can answer. In under 80 words, name the come-on and the rebuff, and say what payoff Karan collects by starting something only to end it himself.",
+          "maxWords": 80,
+          "rubric": ["Rapo", "come-on", "rebuff", "Switch", "Payoff", "reject"]
+        },
+        {
+          "type": "text",
+          "label": "Four rooms, one week: the bar, the therapist's office, the corner store, the porch. In under 50 words, which Switch would have been hardest for you to feel coming if you'd been in the room, and what's the one cue you'd watch for next time?",
+          "maxWords": 50,
+          "rubric": ["Switch", "cue", "diagnose", "pattern", "notice"]
+        }
+      ]
     }
   },
   "echoAfterHours": 48,

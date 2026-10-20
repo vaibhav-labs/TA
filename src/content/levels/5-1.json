@@ -67,6 +67,22 @@
           ]
         }
       ]
+    },
+    "L3": {
+      "fields": [
+        {
+          "type": "text",
+          "label": "If Priya had said \"That sounds exhausting, take it easy today\" instead, write in under 50 words what would have happened to the deploy script problem - and whether Arjun's racket feeling would still be sitting there next retro.",
+          "maxWords": 50,
+          "rubric": ["racket feeling", "deploy script", "unresolved", "comfort", "stroke", "next retro"]
+        },
+        {
+          "type": "text",
+          "label": "Arjun's tone barely changes between the racket line and the deploy script admission. In under 60 words, explain what actually marks the second one as authentic rather than racket, since the bitterness is still there.",
+          "maxWords": 60,
+          "rubric": ["authentic", "names the problem", "specific", "resolves", "racket", "recycled"]
+        }
+      ]
     }
   },
   "echoAfterHours": 24,

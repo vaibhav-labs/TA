@@ -126,6 +126,24 @@
           ]
         }
       ]
+    },
+    "L3": {
+      "fields": [
+        {
+          "type": "vector",
+          "label": "Draw the vectors for Dev's compliment, and for Rosita's best (accepting) reply.",
+          "pairs": [
+            { "label": "Dev's compliment (\"you trained them well\")", "from": "NP", "to": "C" },
+            { "label": "Rosita's best (accepting) reply", "from": "A", "to": "A" }
+          ]
+        },
+        {
+          "type": "text",
+          "label": "In under 50 words: why does \"eh, they're easy tables, not me\" count as the stroke filter at work, even though nothing in it is dishonest?",
+          "maxWords": 50,
+          "rubric": ["stroke filter", "discount", "self-image", "doesn't land", "deflect", "stroke quotient"]
+        }
+      ]
     }
   },
   "echoAfterHours": 24,

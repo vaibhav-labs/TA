@@ -98,6 +98,25 @@
           ]
         }
       ]
+    },
+    "L3": {
+      "fields": [
+        {
+          "type": "vector",
+          "label": "Draw the vectors for Rohit's opening ask, Priya's reply across beats one to five, and her reply in beat six.",
+          "pairs": [
+            { "label": "Rohit's opening ask", "from": "AC", "to": "NP" },
+            { "label": "Priya's reply, beats one to five", "from": "NP", "to": "AC" },
+            { "label": "Priya's reply, beat six", "from": "A", "to": "A" }
+          ]
+        },
+        {
+          "type": "text",
+          "label": "In under 60 words: rule 1 says a complementary loop can run forever. Why did this one run for five straight beats, and what changed in the sixth?",
+          "maxWords": 60,
+          "rubric": ["complementary", "Nurturing Parent", "Adapted Child", "Adult", "rule 1", "invited his own judgment"]
+        }
+      ]
     }
   },
   "echoAfterHours": 18,
